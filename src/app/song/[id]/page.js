@@ -1,8 +1,8 @@
 "use client"
 import { DataContext } from '@/app/context/DataContext'
 import React, { useContext } from 'react'
-import CircleCard from './CircleCard'
-import Card from './Card'
+import CircleCard from '../../../components/CircleCard'
+import Card from '../../../components/Card'
 
 const Song = () => {
   const {songData} = useContext(DataContext)
@@ -16,7 +16,7 @@ const Song = () => {
             content
         </div>
         <CircleCard />
-        <Card item={songData}/>
+        <Card item={songData}/> 
 
     </div>
   )

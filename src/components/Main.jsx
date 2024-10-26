@@ -1,12 +1,13 @@
 import Card from "./Card"
-import Song from "./Song"
+import CircleCard from "./CircleCard"
+import Song from "../app/song/[id]/page"
 
 const Main = () =>{
     return(
         <>
-            <Song/>
             <div>
-                
+                <h2>Main </h2>
+                <CircleCard/>
             </div>
         </>
     )

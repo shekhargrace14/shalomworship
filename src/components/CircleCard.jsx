@@ -1,6 +1,5 @@
 "use client";
 import { DataContext } from "@/app/context/DataContext";
-import Image from "next/image";
 import React, { useContext } from "react";
 import Card from "./Card";
 

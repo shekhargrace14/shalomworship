@@ -4,14 +4,18 @@ import { FaEye, FaHeart } from "react-icons/fa"
 import Image from "next/image";
 import { useContext } from "react";
 import { DataContext } from "@/app/context/DataContext";
+import CircleCard from "@/components/CircleCard";
 
-const Song = () =>{
+const Song = ({params}) =>{
     const { songData } = useContext(DataContext);
     console.log(songData);
     if (!songData || songData.length === 0) {
       return <p>No Song...</p>;
     }
-    let item = songData[1]
+    let item = songData[params.id]
+    console.log("params",params.id)
+    // console.log("params",typeof(params))
+    console.log("params Number",Number(params))
     return(
         <>
             <div>
@@ -25,6 +29,7 @@ const Song = () =>{
 
                     <div className='md:w-8/12 grid'>
                         <h1 className='md:text-2xl text-xl font-semibold'>{item.title}</h1>
+                        <h1 className='md:text-2xl text-xl font-semibold'>{item.id}</h1>
                         <p className='sm:line-clamp-2' dangerouslySetInnerHTML={{ __html: item.artist }} />
                         <p>Band : {item.band}</p>
                         {/* <p className='flex items-center gap-1 '><FaUser /> {item.author}</p> */}
@@ -45,23 +50,12 @@ const Song = () =>{
                     <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
                     <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
                     <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.content }} />
                     <div className='border-t-[1px] border-b-[1px] border-gray p-2 my-4 flex justify-end gap-4'>
                         <span className='flex items-center gap-2' ><FaEye /> {item.views} </span>
                         <span className='flex items-center gap-2' ><FaHeart /> {item.likes} </span>
                     </div>
                     {/* <RelatedBlogs /> */}
+                    <CircleCard/>
                 </section>
                     {/* <aside className='lg:w-3/12 w-full  '>
                         <Category/>

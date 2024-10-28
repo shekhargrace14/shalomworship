@@ -1,6 +1,7 @@
+"use client";
 import React from 'react'
 import { FaUser } from 'react-icons/fa'
-import { Link } from 'next/link'
+import Link from 'next/link';
 import Image from 'next/image'
 
 const Card = ({item }) => {
@@ -17,7 +18,7 @@ const Card = ({item }) => {
 
                 <div className='w-full md:w-1/2 lg:w-full p-2'>
 
-                    {/* <Link to={`/song/${item.id}`}> */}
+                    <Link href={`/song/${item.id}`}>
                         <div className=''>
 
                             <h3 className='line-clamp-2 text-lg mb-2 '>{item.title}</h3>
@@ -26,7 +27,7 @@ const Card = ({item }) => {
                             {/* <div className='line-clamp-2' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
                         </div>
 
-                    {/* </Link> */}
+                    </Link>
                     <p className='text-xs flex items-center gap-1'><FaUser /> {item.author}</p>
                     <p className='text-xs'>{item.published_date}</p>
                 </div>

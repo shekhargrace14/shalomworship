@@ -24,9 +24,7 @@ const Song = ({params}) =>{
                     <div className='flex items-center md:w-4/12 h-full '>
                         {/* <iframe width="100%" height="215" src={songData.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
                         <Image src={item.image} alt={item.title || "Song Image"} width={700} height={500} />
-
                     </div>
-
                     <div className='md:w-8/12 grid'>
                         <h1 className='md:text-2xl text-xl font-semibold'>{item.title}</h1>
                         <h1 className='md:text-2xl text-xl font-semibold'>{item.id}</h1>

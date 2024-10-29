@@ -12,7 +12,7 @@ const Sidebar = () => {
       ];
   return (
     <div>
-      <nav className=" lg:container mx-auto  p-4  h-[100vh] w-4/12" >
+      <nav className=" lg:container mx-auto  p-4  h-[100vh] " >
         <div>
           <Link href="/">
             {/* <img className='cursor-pointer' src={logo} alt='logo' /> */}

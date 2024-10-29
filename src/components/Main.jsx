@@ -6,7 +6,7 @@ const Main = () =>{
         <>
             <div>
                 <h2>Main </h2>
-                <Songpage />
+                {/* <Songpage /> */}
                 <CircleCard/>
 
             </div>

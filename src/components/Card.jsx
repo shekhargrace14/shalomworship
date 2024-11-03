@@ -16,13 +16,13 @@ const Card = ({item }) => {
                     <Image src={item.image} alt={item.title || "Song Image"} width={700} height={500} />
                 </div>
 
-                <div className='w-full md:w-1/2 lg:w-full p-2'>
+                <div className='w-full md:w-1/2 lg:w-full py-2'>
 
                     <Link href={`/song/${item.id}`}>
                         <div className=''>
 
                             <h3 className='line-clamp-2 text-lg mb-2 '>{item.title}</h3>
-                            {/* <p className='flex items-center gap-1'>{item.artist}</p> */}
+                            <p className='flex items-center gap-1'>{item.id}</p>
                             <p className=' line-clamp-2' dangerouslySetInnerHTML={{ __html: item.artist }} />
                             {/* <div className='line-clamp-2' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
                         </div>

@@ -33,7 +33,6 @@ export default function RootLayout({ children }) {
             <div className="w-3/12 hidden md:block">
               <Sidebar />
             </div>
-
             <div className="md:w-9/12 w-full">
               <Header />
               <main>

@@ -15,7 +15,7 @@ const CircleCard = () => {
       CircleCard
         <section className='w-full my-4'>
           <div className='grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4'>
-            {songData.slice(80).map(item => (
+            {songData.map(item => (
               <Card key={item.id} item={item} />
             ))}
           </div>

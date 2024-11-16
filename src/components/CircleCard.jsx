@@ -1,6 +1,6 @@
 "use client";
 import { DataContext } from "@/app/context/DataContext";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Card from "./Card";
 
 const CircleCard = () => {
@@ -9,7 +9,6 @@ const CircleCard = () => {
   if (!songData || songData.length === 0) {
     return <p>No Song...</p>;
   }
-
   return (
     <>
         <section className='w-full my-4'>

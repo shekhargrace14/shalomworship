@@ -1,7 +1,8 @@
 "use client"; 
 
 import { createContext, useState, useEffect } from "react";
-import data from "../data/blogData"; 
+import data from "../data/data"; 
+// import data from "../data/blogData"; 
 
 // Create the context
 const DataContext = createContext(null); 

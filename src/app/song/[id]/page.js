@@ -69,7 +69,7 @@ const Song = ({ params }) => {
                                 <FaHeart /> {item.likes}{" "}
                             </span>
                         </div>
-                        <CircleCard />
+                        {/* <CircleCard /> */}
                     </section>
                 </main>
             </div>

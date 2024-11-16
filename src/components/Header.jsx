@@ -1,16 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosSearch, IoMdHome } from "react-icons/io";
 import Search from "./Search";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const [searchInput, setSearchInput]=useState([])
+  const [searchInput, setSearchInput]=useState()
   const handleInputChange = (event) => {
-    setSearchInput(event.target.value);
+      setSearchInput(event.target.value);
   };
+
+  const pathname = usePathname();
+  useEffect(() =>{
+    setSearchInput("")
+  },[pathname])
   return (
-    <div className="relative">
+    <div className="relative ">
       <header className="py-2 bg-black text-white  relative flex justify-between items-center gap-4 ">
         <Link href="/">
           <IoMdHome className="text-4xl" />
@@ -30,7 +36,9 @@ const Header = () => {
           <button className="px-4 py-2 rounded-full">Log In</button>
         </div>
       </header>
-      <Search className="absolute top-[1px] " data={searchInput}/>
+      <div  className="absolute bottom-[-2] ">
+        <Search data={searchInput}/>
+      </div>
     </div>
   );
 };

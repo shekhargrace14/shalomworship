@@ -33,30 +33,22 @@ const Song = ({ params }) => {
                             <h1 className="md:text-2xl text-xl font-semibold">
                                 {item.title}
                             </h1>
-                            <h1 className="md:text-2xl text-xl font-semibold">{item.id}</h1>
+                            <h1 className="md:text-2xl text-xl font-semibold">{item.category}</h1>
                             <p
                                 className="sm:line-clamp-2"
                                 dangerouslySetInnerHTML={{ __html: item.artist }}
                             />
                             <p>Band : {item.band}</p>
+                            <div className="flex gap-4">
+                                <p>Author : {item.author.name}</p>
+                                <p>Published : {item.published_date}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <main className="lg:flex lg:container mx-auto  p-4 gap-4">
                     <section className="lg:w-12/12 w-full">
                         <h2 className="text-xl mb-2 font-semibold">{item.title}</h2>
-                        <div
-                            className="flex items-center gap-1"
-                            dangerouslySetInnerHTML={{ __html: item.content }}
-                        />
-                        <div
-                            className="flex items-center gap-1"
-                            dangerouslySetInnerHTML={{ __html: item.content }}
-                        />
-                        <div
-                            className="flex items-center gap-1"
-                            dangerouslySetInnerHTML={{ __html: item.content }}
-                        />
                         <div
                             className="flex items-center gap-1"
                             dangerouslySetInnerHTML={{ __html: item.content }}

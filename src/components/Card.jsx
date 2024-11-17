@@ -23,12 +23,12 @@ const Card = ({item }) => {
 
                             <h3 className='line-clamp-2 text-lg mb-2 '>{item.title}</h3>
                             <p className='flex items-center gap-1'>{item.id}</p>
-                            <p className=' line-clamp-2' dangerouslySetInnerHTML={{ __html: item.artist }} />
+                            {/* <p className=' line-clamp-2' dangerouslySetInnerHTML={{ __html: item.artist }} /> */}
                             {/* <div className='line-clamp-2' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
                         </div>
 
                     </Link>
-                    <p className='text-xs flex items-center gap-1'><FaUser /> {item.author}</p>
+                    <p className='text-xs flex items-center gap-1'><FaUser /> {item.author.name}</p>
                     <p className='text-xs'>{item.published_date}</p>
                 </div>
                 {/* <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}

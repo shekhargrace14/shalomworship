@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useContext } from "react";
 import { DataContext } from "@/app/context/DataContext";
 import CircleCard from "@/components/CircleCard";
+import Head from "next/head";
 
 const Song = ({ params }) => {
     const { songData } = useContext(DataContext);
@@ -18,10 +19,18 @@ const Song = ({ params }) => {
 
     return (
         <>
+        <Head>
+        <title>{item.title}</title>
+        <meta name="description" content={item.excerpt} />
+        <meta property="og:title" content={item.title} />
+        <meta property="og:description" content={item.excerpt} />
+        <meta property="og:image" content={item.image} />
+        <meta property="og:url" content={`https://www.shalomworship.com/blog/${item.slug}`} />
+      </Head>
             <div>
-                <div className="bg-gray-800">
-                    <div className=" lg:container mx-auto  py-4  gap-4 md:flex gap-4 text-white">
-                        <div className="flex items-center md:w-4/12 h-full ">
+                <div className="bg-gray-800 rounded">
+                    <div className=" lg:container mx-auto  p-2  gap-4 md:flex gap-4 text-white ">
+                        <div className="flex items-center md:w-4/12 h-full rounded overflow-hidden ">
                             <Image
                                 src={item.image}
                                 alt={item.title || "Song Image"}
@@ -33,7 +42,6 @@ const Song = ({ params }) => {
                             <h1 className="md:text-2xl text-xl font-semibold">
                                 {item.title}
                             </h1>
-                            <h1 className="md:text-2xl text-xl font-semibold">{item.category}</h1>
                             <p
                                 className="sm:line-clamp-2"
                                 dangerouslySetInnerHTML={{ __html: item.artist }}

@@ -25,7 +25,7 @@
 
     },
     {
-        "id": 1,
+        "id": 2,
         "seo": {
             "keywords": ["worship", "love", "Gautam Kumar", "Christian songs"],
             "meta_description": "Welcome back to Found, where we get the stories behind the startups. This week, our old friend Darrell Etherington joins Becca Szkutak to talk with Professor Esther Rodriguez-Villegas from Acurable...",
@@ -47,6 +47,31 @@
         "likes": 100,
         "views": 1000,
         "credits":"https://www.youtube.com/@NationsofWorship"
+    },
+    {
+        "id": 3,
+        "seo": {
+            "keywords": ["worship", "love", "Gautam Kumar", "Christian songs"],
+            "meta_description": "Welcome back to Found, where we get the stories behind the startups. This week, our old friend Darrell Etherington joins Becca Szkutak to talk with Professor Esther Rodriguez-Villegas from Acurable...",
+            "slug":"praise-lyrics",
+            "excerpt":"excerpt"
+        },
+        "title": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
+        "image": "https://img.youtube.com/vi/f2oxGYpuLkw/maxresdefault.jpg",
+        "video": "https://youtu.be/kw-FIy8Shk0",
+        "category": "worship",
+        "creator":"Elevation Worship",
+        "artist": ["Steven Furtick", "Chandler Moore", "Brandon Lake", "Pat Barrett", "Cody Carnes", "Chris Brown"],
+        "author": {
+            "@type": "Person",
+            "l": "Admin",
+            "image": "author1.jpg"
+        },
+        "published_date": "September 6, 2024",
+        "content": "Let everything that has breath <br> Praise the Lord<br> Praise the Lord <br> <br> I’ll praise in the valley<br> Praise on the mountain<br> I’ll praise when I’m sure<br> Praise when I’m doubting<br> <br> I’ll praise when outnumbered<br> Praise when surrounded<br> Cause praise is the waters<br> My enemies drown in<br> <br> As long as I’m breathing<br> I’ve got a reason to<br> <br> Praise the Lord<br> Oh my soul<br> Praise the Lord<br> Oh my soul<br> <br> I’ll praise when I feel it<br> I’ll praise when I don’t<br> I’ll praise cause I know<br> You’re still in control<br> <br> My praise is a weapon<br> It’s more than a sound<br> My praise is the shout<br> That brings Jericho down<br> <br> Praise the Lord<br> Oh my soul<br> Praise the Lord<br> Oh my soul<br> I won’t be quiet<br> My God is alive<br> How could I keep it inside<br> Praise the Lord oh my soul<br> <br> I’ll praise cause You’re sovereign<br> Praise cause You reign<br> Praise cause You rose and defeated the grave<br> <br> I’ll praise cause You’re faithful<br> Praise cause You’re true<br> Praise cause there’s nobody greater than You",
+       "likes": 100,
+        "views": 1000,
+        "credits":"https://www.youtube.com/channel/UCSf-NCzjwcnXErUBW_qeFvA"
     }
     
 ]

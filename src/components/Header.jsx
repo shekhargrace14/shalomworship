@@ -12,7 +12,12 @@ const Header = () => {
   };
   const [search,setSearch] = useState(true)
   const searchToggle = () =>{
-    searchInput(false)
+    // if(handleInputChange.event.target.value >= 1){
+
+    //   setSearch(search)
+    // }else{
+      setSearch(!search)
+    // }
   }
   const pathname = usePathname();
   useEffect(() =>{
@@ -24,18 +29,21 @@ const Header = () => {
         <Link href="/">
           <IoMdHome className="text-4xl" />
         </Link>
-        <div className=" lg:w-[10px] sm:mw-fit flex items-center bg-slate-600 border-gray-100 border-1 rounded py-2 px-1">
+        <div className="  flex items-center bg-slate-600 border-gray-100 border-1 rounded py-2 px-1">
+        {/* <div className=" lg:w-full sm:mw-fit flex items-center bg-slate-600 border-gray-100 border-1 rounded py-2 px-1"> */}
           <input
             type="text"
-            className="px-4 bg-transparent outline-none border-none border-collapse sm:block hidden"
+            // className="px-4 bg-transparent outline-none border-none border-collapse sm:block hidden"
+            className={`w-full px-4 bg-transparent outline-none border-none border-collapse ${search ? "hidden" : "sm:block"}`}
             placeholder="Search "
             value={searchInput}
             onChange={handleInputChange}
+
             
           />
           <IoIosSearch className="text-2xl" onClick={searchToggle}/>
         </div>
-        <div className="flex items-center gap-4 hidden">
+        <div className="flex items-center gap-4 sm:block hidden">
           {/* <button className="px-4 py-2 rounded-full">Sign In</button> */}
           {/* <button className="px-4 py-2 rounded-full">Log In</button> */}
         </div>

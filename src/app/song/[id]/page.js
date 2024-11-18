@@ -13,8 +13,8 @@ const Song = ({ params }) => {
     if (!songData || songData.length === 0) {
         return <p>No Song...</p>;
     }
-    // let item = songData[params.id];
-    let item = songData.find(s=>s.id==params.id)
+    // let item = songData[params.slug];
+    let item = songData.find(s=>s.seo.slug==params.id)
     console.log("params", params.id);
 
     return (

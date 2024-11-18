@@ -25,7 +25,7 @@ const Search = ({ data }) => {
         <div>
           {searchData.length > 0 ? (
             searchData.map(item => (
-              <Link href={`/song/${item.id}`} key={item.id}>  
+              <Link href={`/song/${item.seo.slug}`} key={item.id}>  
               <div  className="bg-gray-800 mb-4">
                 <div className="lg:container mx-auto py-4 gap-4 md:flex text-white">
                   <div className="flex items-center md:w-4/12 h-full">

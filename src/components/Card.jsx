@@ -18,18 +18,19 @@ const Card = ({item }) => {
 
                 <div className='w-full md:w-1/2 lg:w-full py-2'>
 
-                    <Link href={`/song/${item.id}`}>
+                    <Link href={`/song/${item.seo.slug}`}>
                         <div className=''>
-
-                            <h3 className='line-clamp-2 text-lg mb-2 '>{item.title}</h3>
-                            <p className='flex items-center gap-1'>{item.id}</p>
-                            {/* <p className=' line-clamp-2' dangerouslySetInnerHTML={{ __html: item.artist }} /> */}
+                            <h3 className='line-clamp-1 text-lg mb-2 '>{item.title}</h3>
+                            {/* <p className='flex items-center gap-1'>{item.id}</p> */}
+                            <p className=' line-clamp-1' dangerouslySetInnerHTML={{ __html: item.artist }} />
                             {/* <div className='line-clamp-2' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
                         </div>
 
                     </Link>
-                    <p className='text-xs flex items-center gap-1'><FaUser /> {item.author.name}</p>
-                    <p className='text-xs'>{item.published_date}</p>
+                    <div className="flex gap-2 mt-2">
+                        <p className='text-xs flex items-center gap-1'><FaUser /> {item.author.name}</p>
+                        <p className='text-xs'>{item.published_date}</p>
+                    </div>
                 </div>
                 {/* <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
 

@@ -28,9 +28,9 @@ const Sidebar = () => {
           <IoMdAdd className="text-2xl" />
           </div>
         <div className="column my-4 p-4 bg-[#1f1f1f] rounded-lg">
-          <h4>Create Your First Playlist</h4>
-          <p>Its easy we will help you</p>
-          <button >Create Playlist</button>
+          <h4>Create Your First Playlist : Coming soon</h4>
+          <p>Coming soon</p>
+          <button >Coming soon</button>
         </div>
 
       </nav>

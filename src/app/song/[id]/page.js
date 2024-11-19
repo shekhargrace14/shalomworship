@@ -30,27 +30,33 @@ const Song = ({ params }) => {
       </Head>
             <div>
                 <div className="bg-gray-800 rounded">
-                    <div className=" lg:container mx-auto  p-2  gap-4 md:flex gap-4 text-white ">
-                        <div className="flex items-center md:w-4/12 h-full rounded overflow-hidden sm:lg-0 mb-4">
+                    <div className=" lg:container mx-auto  p-4 md:flex gap-4 text-white ">
+                        <div className="bg-red-300 flex items-center md:w-4/12 h-full rounded overflow-hidden sm:lg-0 lg:mb-0 mb-4 ">
+
                             <Image
                                 src={item.image}
                                 alt={item.title || "Song Image"}
-                                width={700}
-                                height={500}
+                                width={700} 
+                                height={1000}
+                                className="bg-red-300  h-full w-full object-cover "
                             />
                         </div>
                         <div className="md:w-8/12 grid">
-                            <h1 className="md:text-2xl text-xl font-semibold">
+                            <h1 className="md:text-6xl md:mt-12 mb-2 text-4xl font-semibold">
                                 {item.title}
                             </h1>
-                            <p
+                            <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20">
+                                <p className="font-bold leading-none">{item.creator} -</p>
+                                
+                                {item.artists.map((artist)=>(<p key={artist.i} className="font-light text-sm leading-none">{artist},</p> ))}
+                            </div>
+                            {/* <p
                                 className="sm:line-clamp-2"
                                 dangerouslySetInnerHTML={{ __html: item.artist }}
-                            />
-                            <p>Band : {item.band}</p>
-                            <div className="flex gap-4">
-                                <p>Author : {item.author.name}</p>
-                                <p>Published : {item.published_date}</p>
+                            /> */}
+                            <div className="flex gap-4 text-sm mt-2">
+                                {/* <p>Author : {item.author.name}</p> */}
+                                <p>{item.published_date}</p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +68,6 @@ const Song = ({ params }) => {
                             className="flex items-center gap-1"
                             dangerouslySetInnerHTML={{ __html: item.content }}
                         />
-
                         <div className="border-t-[1px] border-b-[1px] border-gray p-2 my-4 flex justify-between gap-4">
                             <div className="flex gap-4">
                                 <span className="flex items-center gap-2">

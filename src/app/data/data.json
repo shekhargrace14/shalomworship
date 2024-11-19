@@ -7,11 +7,12 @@
             "slug":"Maine-Dhundha-Ye-Sara-Jaha",
             "excerpt":"excerpt"
         },
-        "title": "Maine Dhundha Ye Sara Jaha",
+        "title": "Tere Jaisa",
         "image": "https://img.youtube.com/vi/n7PWDkmtigc/maxresdefault.jpg",
         "video": "https://www.youtube.com/watch?v=n7PWDkmtigc",
         "category": "worship",
-        "artist": ["Gautam Kumar"],
+        "creator":"Gautam Kumar",
+        "artists": ["Gautam Kumar"],
         "author": {
             "@type": "Person",
             "l": "Admin",
@@ -32,11 +33,12 @@
             "slug":"Hazaaron-Zubane-Lyrics",
             "excerpt":"excerpt"
         },
-        "title": "Hazaaron Zubane Lyrics Ft. Amit Kamble, Prakruthi Angelina & Hemant Sharma",
+        "title": "Hazaaron Zubane",
         "image": "https://img.youtube.com/vi/kw-FIy8Shk0/maxresdefault.jpg",
         "video": "https://youtu.be/kw-FIy8Shk0",
         "category": "worship",
-        "artist": ["Nations of Worship", " Amit Kamble","Prakruthi Angelina","Hemant Sharma"],
+        "creator":"Nations of Worship",
+        "artists": [" Amit Kamble", "Prakruthi Angelina","Hemant Sharma"],
         "author": {
             "@type": "Person",
             "l": "Admin",
@@ -52,16 +54,16 @@
         "id": 3,
         "seo": {
             "keywords": ["worship", "love", "Gautam Kumar", "Christian songs"],
-            "meta_description": "Welcome back to Found, where we get the stories behind the startups. This week, our old friend Darrell Etherington joins Becca Szkutak to talk with Professor Esther Rodriguez-Villegas from Acurable...",
+            "meta_description": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
             "slug":"praise-lyrics",
             "excerpt":"excerpt"
         },
-        "title": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
+        "title": "Praise",
         "image": "https://img.youtube.com/vi/f2oxGYpuLkw/maxresdefault.jpg",
         "video": "https://youtu.be/kw-FIy8Shk0",
         "category": "worship",
         "creator":"Elevation Worship",
-        "artist": ["Steven Furtick", "Chandler Moore", "Brandon Lake", "Pat Barrett", "Cody Carnes", "Chris Brown"],
+        "artists": ["Steven Furtick", "Chandler Moore", "Brandon Lake", "Pat Barrett", "Cody Carnes", "Chris Brown"],
         "author": {
             "@type": "Person",
             "l": "Admin",

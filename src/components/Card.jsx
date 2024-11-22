@@ -8,7 +8,9 @@ const Card = ({item }) => {
 
     return (
         <>  
-            <div className='   lg:block md:flex gap-2 items-[space-between] '>
+            <Link href={`/song/${item.seo.slug}`}>
+
+            <div className='   lg:block md:flex gap-2 items-[space-between] hover:bg-[#121212] p-3 rounded-lg'>
                 {/* <iframe width="100%" height="auto" src={item.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
                 <div className='w-full md:w-1/2 lg:w-full rounded-lg overflow-hidden'>
                     {/* <iframe width="100%" height="215" src={item.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
@@ -18,23 +20,23 @@ const Card = ({item }) => {
 
                 <div className='w-full md:w-1/2 lg:w-full py-2'>
 
-                    <Link href={`/song/${item.seo.slug}`}>
                         <div className=''>
-                            <h3 className='line-clamp-1 text-lg mb-2 '>{item.title}</h3>
+                            <h3 className='line-clamp-1 text-lg mb-1 '>{item.title}</h3>
                             {/* <p className='flex items-center gap-1'>{item.id}</p> */}
-                            <p className=' line-clamp-1' dangerouslySetInnerHTML={{ __html: item.artist }} />
+                            <p className=' line-clamp-1 text-sm leading-none' dangerouslySetInnerHTML={{ __html: item.creator }} />
                             {/* <div className='line-clamp-2' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
                         </div>
 
-                    </Link>
-                    <div className="flex gap-2 mt-2">
+                    {/* <div className="flex gap-2 mt-2">
                         <p className='text-xs flex items-center gap-1'><FaUser /> {item.author.name}</p>
                         <p className='text-xs'>{item.published_date}</p>
-                    </div>
+                    </div> */}
                 </div>
                 {/* <div className='flex items-center gap-1' dangerouslySetInnerHTML={{ __html: item.lyrics }} /> */}
 
             </div>
+            </Link>
+
 
         </>
     )

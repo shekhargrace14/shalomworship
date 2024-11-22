@@ -29,7 +29,7 @@ const Song = ({ params }) => {
         <meta property="og:url" content={`https://www.shalomworship.com/blog/${item.slug}`} />
       </Head>
             <div>
-                <div className="bg-gray-800 rounded">
+                <div className="bg-[#121212] rounded">
                     <div className=" lg:container mx-auto  p-4 md:flex gap-4 text-white ">
                         <div className="bg-yellow-300 flex items-center md:w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 mb-4 ">
 
@@ -54,7 +54,7 @@ const Song = ({ params }) => {
                                 className="sm:line-clamp-2"
                                 dangerouslySetInnerHTML={{ __html: item.artist }}
                             /> */}
-                            <div className="flex gap-4 text-sm mt-2">
+                            <div className="flex gap-4 text-sm mt-0">
                                 {/* <p>Author : {item.author.name}</p> */}
                                 <p>{item.published_date}</p>
                             </div>

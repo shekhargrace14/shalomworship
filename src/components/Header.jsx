@@ -7,14 +7,15 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [searchInput, setSearchInput]=useState()
+  // const [searchState, setSearchState]=useState() 
   const handleInputChange = (event) => {
       setSearchInput(event.target.value);
+      // setSearchState(event.target.value)
   };
   const [search,setSearch] = useState(true)
   const searchToggle = () =>{
-    // if(handleInputChange.event.target.value >= 1){
-
-    //   setSearch(search)
+    // if(searchState => 1){
+      // setSearch(search)
     // }else{
       setSearch(!search)
     // }
@@ -29,7 +30,7 @@ const Header = () => {
         <Link href="/">
           <IoMdHome className="text-4xl" />
         </Link>
-        <div className="  flex items-center bg-slate-600 border-gray-100 border-1 rounded py-2 px-1">
+        <div className="  flex items-center bg-[#121212] border-gray-100 border-1 rounded py-2 px-1">
         {/* <div className=" lg:w-full sm:mw-fit flex items-center bg-slate-600 border-gray-100 border-1 rounded py-2 px-1"> */}
           <input
             type="text"

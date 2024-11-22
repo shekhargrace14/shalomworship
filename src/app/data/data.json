@@ -75,5 +75,30 @@
         "views": 1000,
         "credits":"https://www.youtube.com/channel/UCSf-NCzjwcnXErUBW_qeFvA"
     }
-    
+    ,
+    {
+        "id": 4,
+        "seo": {
+            "keywords": ["worship", "love", "Gautam Kumar", "Christian songs"],
+            "meta_description": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
+            "slug":"Dhanyawad-ke-saath",
+            "excerpt":"excerpt"
+        },
+        "title": "Dhanyawad ke saath",
+        "image": "https://img.youtube.com/vi/WtGfN9YZjMQ/maxresdefault.jpg",
+        "video": "https://youtu.be/WtGfN9YZjMQ",
+        "category": "worship",
+        "creator":"Sheldon Bhangera",
+        "artists": ["Sheldon Bhangera"],
+        "author": {
+            "@type": "Person",
+            "l": "Admin",
+            "image": "author1.jpg"
+        },
+        "published_date": "September 6, 2024",
+        "content": "Chorus<br> Dhanyawad ke saath stuti gaoonga<br> Hey yeeshu mere Khuda<br> Upkaar terehai beshumaar<br> Koti koti stuti dhanyawad<br><br> Verse 1<br> Yogyata se badke diya hai<br> Apnidaya se tune mujhe<br> Mangne se zyaada mila mujhe<br> Aabhaari hun prabhu mai<br> <br>Chorus<br> Dhanyawad ke saath stuti gaoonga<br> Hey yeeshu mere Khuda<br> Upkaar terehai beshumaar<br> Koti koti stuti dhanyawad<br> <br> Verse 2<br> Tuhai sacha zinda khuda<br> Tujh par hi bharosa mera<br> Seva poori karke paoon inaam<br> Prabhu aisa do vardaan<br><br> Chorus<br> Dhanyawad ke saath stuti gaoonga<br> Hey yeeshu mere Khuda<br> Upkaar terehai beshumaar<br> Koti koti stuti dhanyawad<br> ",
+        "likes": 100,
+        "views": 1000,
+        "credits":"https://www.youtube.com/@SheldonBangera"
+    }
 ]

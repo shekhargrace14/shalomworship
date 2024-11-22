@@ -79,7 +79,7 @@
     {
         "id": 4,
         "seo": {
-            "keywords": ["worship", "love", "Gautam Kumar", "Christian songs"],
+            "keywords": ["Dhanyawad ke saath", "Sheldon Bhangera", "Gautam Kumar", "Christian songs"],
             "meta_description": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
             "slug":"Dhanyawad-ke-saath",
             "excerpt":"excerpt"
@@ -100,5 +100,31 @@
         "likes": 100,
         "views": 1000,
         "credits":"https://www.youtube.com/@SheldonBangera"
+    },
+    {
+        "id": 5,
+        "seo": {
+            "keywords": ["Prarthana-kare", "Amit Kamble", "Christian songs"],
+            "meta_description": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
+            "slug":"Prarthana-kare",
+            "excerpt":"excerpt"
+        },
+        "title": "Prarthana kare",
+        "image": "https://img.youtube.com/vi/7oNrcrahq44/maxresdefault.jpg",
+        "video": "https://youtu.be/7oNrcrahq44",
+        "category": "worship",
+        "creator":"Amit Kamble",
+        "artists": ["Amit Kamble"],
+        "laguage": "hindi",
+        "author": {
+            "@type": "Person",
+            "l": "Admin",
+            "image": "author1.jpg"
+        },
+        "published_date": "September 6, 2024",
+        "content": "Chorus<br> Prarthna kare aradhna kare,<br> Wo aacha hai sabse bhala hai (X2)<br> Chutkara paaye humesha (X2)<br><br>  Verse 1<br> Mangoge tumhe milega,<br> dhundoge tum paaooge<br> Khatkhatao khulengi<br> swarg ki aashishe<br> paao tum usse aabhi.(X2)<br><br> Chorus<br> Prarthna kare aradhna kare,<br> Wo aacha hai sabse bhala hai (X2)<br> Chutkara paaye humesha (X2)<br> <br> Verse 2<br> Prarthna karo nirantar,<br> prarthna karo vishwas se<br> Dharmi jan ki prarthna<br> vishwas ki prarthna<br> kholti hai sare bandhan ko<br> <br> Chorus<br> Prarthna kare aradhna kare,<br> Wo aacha hai sabse bhala hai (X2)<br> Chutkara paaye humesha (X2)<br>",
+        "likes": 100,
+        "views": 1000,
+        "credits":"https://www.youtube.com/@AmitKambleMinistries"
     }
 ]

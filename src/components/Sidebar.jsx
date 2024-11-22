@@ -11,16 +11,11 @@ const Sidebar = () => {
         
       ];
   return (
-    <div>
-      <nav className=" lg:container mx-auto  p-4  h-[100vh] " >
+    <div className=" lg:container mx-auto  p-4   h-[100%]  bg-[#121212] rounded ">
+      <nav className=" lg:container mx-auto  " >
         <div>
-          <Link href="/">
-            {/* <img className='cursor-pointer' src={logo} alt='logo' /> */}
-            {/* <img className='cursor-pointer' src="" alt='logo'  onClick={()=> !toggleMenu ? setMenuOpen(true)   : setMenuOpen(false)  } /> */}
-            SW
-          </Link>
         </div>
-        <div className="column flex items-center justify-between mt-8">
+        <div className="column flex items-center justify-between ">
           <div className="flex items-center gap-2">
             <LuLibrary className="text-2xl" />
             <p>Your Library</p> 

@@ -1,10 +1,12 @@
+"use client";
+
 import CircleCard from "./CircleCard"
+import Search from "./Search"
 
 const Main = () =>{
     return(
         <>
-            <div>
-                <h2>Main </h2>
+            <div className="min-h-full p-2">
                 {/* <Songpage /> */}
                 <CircleCard/>
 

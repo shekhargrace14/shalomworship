@@ -32,10 +32,10 @@ export default function RootLayout({ children }) {
         <DataProvider>
           <Header />
           <div className="flex gap-4 ">
-            <div className="w-3/12 hidden lg:block">
+            <div className="hidden md:block  md:w-4/12 lg:w-3/12  ">
               <Sidebar />
             </div>
-            <div className="lg:w-9/12 w-full bg-[#121212] rounded">
+            <div className="w-full md:w-8/12 lg:w-9/12 bg-[#121212] rounded-lg">
               <main>
                 {children}
               </main>

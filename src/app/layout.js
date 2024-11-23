@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       >
         <DataProvider>
           <Header />
-          <div className="flex gap-4 ">
+          <div className="flex gap-2 ">
             <div className="hidden md:block  md:w-4/12 lg:w-3/12  ">
               <Sidebar />
             </div>

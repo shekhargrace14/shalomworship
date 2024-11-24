@@ -18,7 +18,7 @@ const Sidebar = () => {
  
 
   return (
-      <nav className="p-4 h-[100%]  bg-[#121212] rounded-lg ">
+      <nav className="p-4 h-full w-fit bg-[#121212] rounded-lg">
         <Artists/>
 
         {/* <div className="column flex items-center justify-between ">

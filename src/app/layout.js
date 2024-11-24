@@ -23,16 +23,18 @@ export const metadata = {
   canonical:"Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God."
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <DataProvider>
           <Header />
           <div className="flex gap-2 ">
-            <div className="hidden md:block  md:w-4/12 lg:w-3/12  ">
+            <div className="hidden md:block  md:w-4/12 lg:w-3/12 rounded-lg">
               <Sidebar />
             </div>
             <div className="w-full md:w-8/12 lg:w-9/12 bg-[#121212] rounded-lg">

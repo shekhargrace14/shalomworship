@@ -23,14 +23,14 @@ const Search = ({ data }) => {
   if (!data) return null; // Don't render anything if no search query
 
   return (
-    <div className="">
-      <section className="w-full flex  gap-2 my-4">
-        <div>
+  
+      <section className="mt-4">
+      {/* <section className="mt-4 max-h-full overflow-hidden p-2 bg-[#375b83]"> */}
           {searchData.length > 0 ? (
             searchData.map((item) => (
               <Link href={`/song/${item.seo.slug}`} key={item.id}>
                 <div className="bg-[#1f1f1f] rounded-lg hover:bg-[#121212]">
-                  <div className=" lg:container mx-auto  p-4 flex gap-4 text-white ">
+                  <div className=" lg:container mx-auto  p-2 flex gap-4 text-white ">
                     <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
                       <Image
                         src={item.image}
@@ -57,9 +57,7 @@ const Search = ({ data }) => {
               <p className="text-white text-center">No results found. </p>
             </div>
           )}
-        </div>
       </section>
-    </div>
   );
 };
 

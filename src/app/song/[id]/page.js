@@ -8,6 +8,7 @@ import CircleCard from "@/components/CircleCard";
 import Head from "next/head";
 import Link from "next/link";
 
+
 const Song = ({ params }) => {
   const { songData } = useContext(DataContext);
   console.log(songData);
@@ -87,4 +88,7 @@ const Song = ({ params }) => {
     </>
   );
 };
+
+
+
 export default Song;

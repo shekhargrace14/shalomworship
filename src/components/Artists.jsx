@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Artist = ({ data }) => {
   const { songData } = useContext(DataContext);
   const urlSlug = usePathname()
-  console.log("urlSlug",urlSlug)
+  // console.log("urlSlug",urlSlug)
   return (
     <section className="w-full flex flex-col-reverse gap-2">
       {songData.length > 0 ? (

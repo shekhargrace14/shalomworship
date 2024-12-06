@@ -21,7 +21,9 @@ const Header = () => {
         {/* </Link> */}
 
       </div>
-
+      <Link href="/songDB">
+        <div className="">  SongDB</div>
+      </Link>
       <div className="hidden lg:block md:w-4/12"></div>
     </header>
   );

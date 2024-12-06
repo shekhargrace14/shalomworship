@@ -10,7 +10,7 @@
         "title": "Tere Jaisa",
         "image": "https://img.youtube.com/vi/n7PWDkmtigc/maxresdefault.jpg",
         "video": "https://www.youtube.com/watch?v=n7PWDkmtigc",
-        "category": "worship",
+        "category": ["worship"],
         "creator":"Gautam Kumar",
         "artists": ["Gautam Kumar"],
         "author": {
@@ -22,7 +22,7 @@
         "content": "(Chorus)<br>Maine Dhundha Ye Sara Jahan,<br>Tere Jaisa Na Koi Mila – 2<br>Jaise Tune Kiya Hai Kshama,<br>Tere Jaisa Na Koi Mila – 2<br>Maine Dhundha Ye Sara Jahan,<br>Tere Jaisa Na Koi Mila<br><br> Verse 1 <br>Paapo Ka Tha Karz Mujhpe Jo Bhari,<br>Dukho Me Zindagi Guzari Thi Saari<br><br>Mere Gunaho Se Mujhko Bachane,<br>Tune Khuda Apni Zindagi Thi Wari – 2 <br><br> Tune Kar Di Hai Kimat Ada,<br>Tere Jaisa Na Koi Mila<br><br>   Maine Dhundha Ye Sara Jahan,<br>Tere Jaisa Na Koi Mila <br><br>Verse 2 <br>Duniya Ke Aage Duhaai Bahut Di,<br>Aansu Ke Bin Na Mila Mujhko Kuchh Bhi<br><br> Tujhko Mila Jab Mai Tab Tujhko Jana,<br>Tab Tere Aage Jo Maine Dua Ki – 2<br><br> Tune Sun Li Hai Meri Dua,<br>Tere Jaisa Na Koi Mila<br><br> Maine Dhundha Ye Sara Jahan,<br>Tere Jaisa Na Koi Mila",
         "likes": 100,
         "views": 1000,
-        "credits":"https://www.youtube.com/channel/UCztjQvNWY9XH1jgI-_ZaU0A"
+        "credits":"ok   "
 
     },
     {

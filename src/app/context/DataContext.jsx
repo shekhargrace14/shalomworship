@@ -30,8 +30,6 @@ const DataProvider = ({ children }) => {
   }, []);
   console.log(songData)
 
-
-
   return (
     <DataContext.Provider value={{ songData }}>
       {children}

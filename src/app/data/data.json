@@ -51,7 +51,7 @@
         "credits":"https://www.youtube.com/@NationsofWorship"
     },
     {
-        "id": 300,
+        "id": 3,
         "seo": {
             "keywords": ["worship", "love", "Gautam Kumar", "Christian songs"],
             "meta_description": "Praise lyrics feat. Brandon Lake, Chris Brown & Chandler Moore, Elevation Worship",
@@ -166,7 +166,7 @@
         "video": "https://youtu.be/jIyibvTj3U0",
         "category": "worship",
         "creator":"FGAG Worship",
-        "artists": ["Sammy Thangiah"," Amit Kamble"],
+        "artists": ["Sammy Thangiah","Amit Kam"],
         "laguage": "hindi",
         "author": {
             "@type": "Person",

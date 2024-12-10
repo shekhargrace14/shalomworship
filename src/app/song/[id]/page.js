@@ -9,6 +9,27 @@ import Head from "next/head";
 import Link from "next/link";
 
 
+
+// Fetching data for the specific song
+// export async function generateMetadata({ params }) {
+//   const data = await fetch("https://shalomworship.vercel.app/api/song").then(res => res.json());
+//   console.log(data, "data fetch")
+//   const songData = data;
+//   return {
+//     title: songData.title,
+//     description: songData.excerpt,
+//     openGraph: {
+//       title: songData.title,
+//       description: songData.excerpt,
+//       // url: `https://www.shalomworship.com//${songData.seo.slug}`,
+//       images: [{ url: songData.image }],
+//     },
+//   };
+// }
+
+
+
+
 const Song = ({ params }) => {
   const { songData } = useContext(DataContext);
   console.log(songData);

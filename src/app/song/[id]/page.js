@@ -10,22 +10,23 @@ import Link from "next/link";
 
 
 
-// Fetching data for the specific song
-// export async function generateMetadata({ params }) {
-//   const data = await fetch("https://shalomworship.vercel.app/api/song").then(res => res.json());
-//   console.log(data, "data fetch")
-//   const songData = data;
-//   return {
-//     title: songData.title,
-//     description: songData.excerpt,
-//     openGraph: {
-//       title: songData.title,
-//       description: songData.excerpt,
-//       // url: `https://www.shalomworship.com//${songData.seo.slug}`,
-//       images: [{ url: songData.image }],
-//     },
-//   };
-// }
+// Dynamic Metadata Generation
+export async function generateMetadata({ params }) {
+  const res = await fetch(`https://shalomworship.vercel.app/api/song/${params.id}`);
+  const song = await res.json();
+
+  return {
+    title: song.title,
+    description: song.excerpt,
+    openGraph: {
+      title: song.title,
+      description: song.excerpt,
+      url: `https://www.shalomworship.com/blog/${song.seo.slug}`,
+      images: [{ url: song.image }],
+    },
+  };
+}
+
 
 
 
@@ -42,17 +43,7 @@ const Song = ({ params }) => {
 
   return (
     <>
-      <Head>
-        <title>{item.title}</title>
-        <meta name="description" content={item.excerpt} />
-        <meta property="og:title" content={item.title} />
-        <meta property="og:description" content={item.excerpt} />
-        <meta property="og:image" content={item.image} />
-        <meta
-          property="og:url"
-          content={`https://www.shalomworship.com/blog/${item.slug}`}
-        />
-      </Head>
+
       <div>
         <div className="bg-[#1f1f1f] rounded-lg">
           <div className=" lg:container mx-auto  p-4 md:flex gap-4 text-white ">

@@ -28,7 +28,7 @@ const DataProvider = ({ children }) => {
         console.error("Error fetching song data:", error);
       });
   }, []);
-  console.log(songData)
+  // console.log(songData)
 
   return (
     <DataContext.Provider value={{ songData }}>

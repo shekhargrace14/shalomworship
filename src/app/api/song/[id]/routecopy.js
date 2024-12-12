@@ -29,7 +29,7 @@ export async function GET(request,context) {
 // console.log("First Item ID:", firstItemId);
 
     // Find the song by ID
-    const song = songData.find((item) => item.seo.slug == songId);
+    const song = songData.find((item) => item._id == songId);
     // console.log(song,"-----------------------------",songId )
     if (!song) {
       return NextResponse.json({

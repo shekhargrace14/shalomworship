@@ -39,7 +39,7 @@ export async function GET(request,context) {
       });
     }
 
-    console.log(song, "Filtered song");
+    // console.log(song, "Filtered song");
 
     return NextResponse.json({
       result: song,

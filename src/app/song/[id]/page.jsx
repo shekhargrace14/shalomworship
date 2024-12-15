@@ -2,36 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 
 
-export async function generateMetadata({ params }) {
-  const res = await fetch(`https://shalomworship.vercel.app/api/song/${params.id}`);
-
-  if (!res.ok) {
-    // Handle error: log, return fallback metadata, or throw an error
-    console.error(`Failed to fetch metadata: ${res.status} ${res.statusText}`);
-    return {
-      title: "Song Not Found",
-      description: "The song could not be retrieved.",
-    };
-  }
-
-  const song = await res.json();
-
-  return {
-    title: song.title,
-    description: song.excerpt,
-    openGraph: {
-      title: song.title,
-      description: song.excerpt,
-      // url: `https://www.shalomworship.com/blog/${song.params.id}`,
-      images: [{ url: song.image }],
-    },
-  };
-}
-
-const Song = async ({ params }) => {
-  console.log(params.id, "params");
+async function fetchSongData(params) {
   const res = await fetch(
-    `https://shalomworship.vercel.app/api/song/${params.id}`
+    `https://shalomworship.vercel.app/api/song/${params}`
   );
   const data = await res.json();
   const songData = await data.result;
@@ -39,17 +12,33 @@ const Song = async ({ params }) => {
   if (!songData) {
     return <p>No Song Found...</p>;
   }
+  return songData
+}
+
+export async function generateMetadata({ params }) {
+  const song =await fetchSongData(params.id)
+
+
+  return {
+    title: song.title,
+    description: song.excerpt,
+    openGraph: {
+      title: song.title,
+      description: song.excerpt,
+      url: `https://www.shalomworship.com/blog/${song.seo.slug}`,
+      images: [{ url: song.image }],
+    },
+  };
+}
+
+
+const Song = async ({ params }) => {
+  console.log(params.id, "params");
+  const songData =await fetchSongData(params.id)
+  
 
   return (
     <div className="bg-[#1f1f1f] rounded-lg overflow-hidden">
-      <Head>
-        <title>{songData.title}</title>
-        {/* <meta name="description" content={description || 'Find the lyrics and chords of this song'} /> */}
-        {/* <meta name="keywords" content={`song, lyrics, chords, ${title}`} /> */}
-        {/* <meta property="og:title" content={title} /> */}
-        {/* <meta property="og:description" content={description || 'Discover amazing worship songs.'} /> */}
-        {/* <meta property="og:type" content="article" /> */}
-      </Head>
       <div className="md:flex gap-4 p-4 text-white w-full bg-[#121212]">
         <div className=" sm:flex items-center gap-2 w-full ">
           <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden">

@@ -15,7 +15,7 @@ const Sidebar = () => {
     { pageName: "Services", path: "/services" },
   ];
 
- 
+
 
   return (
       <nav className="p-4 h-full w-fit bg-[#121212] rounded-lg">

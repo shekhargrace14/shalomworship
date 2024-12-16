@@ -8,6 +8,7 @@ import { IoIosSearch, IoMdAdd, IoMdClose } from "react-icons/io";
 import { LuLibrary } from "react-icons/lu";
 import Search from "./Search";
 import Artists from "./Artists";
+import Category from "./Category";
 
 const Sidebar = () => {
   const menu = [
@@ -20,7 +21,9 @@ const Sidebar = () => {
   return (
       <nav className="p-4 h-[90vh] w-fit bg-[#121212] rounded-lg  overflow-y-auto custom-scrollbar">
         {/* <div className=" rounded-lg absolute overflow-scroll"> */}
+          <Category/>
           <Artists/>
+          
           
         {/* </div> */}
       </nav>

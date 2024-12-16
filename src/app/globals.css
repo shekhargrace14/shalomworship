@@ -25,3 +25,22 @@ body {
     text-wrap: balance;
   }
 }
+
+/* scroll bar css start  */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f600; /* Track color */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #36383e; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4b5563; /* Hover color */
+}
+  
+
+
+/* scroll bar css ends  */

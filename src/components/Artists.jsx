@@ -14,7 +14,7 @@ const Artist = ({ data }) => {
         songData.map((item) => (
           <Link href={`/song/${item.seo.slug}`} key={item.id}>
             {/* <div className={`${item.seo.slug}={"/song/"${urlSlug}{} ? bg-[#c06767] : bg-[rgb(47,209,74)] rounded-lg hover:bg-[rgb(18,18,18)]`}> */}
-            <div className="bg-[#1f1f1f] rounded-lg hover:bg-[rgb(18,18,18)]">
+            <div className=" rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000]">
               <div className=" lg:container mx-auto  p-2 md:flex gap-4 text-white ">
                 <div className="bg-gray-300 flex items-center md:w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 mb-4 ">
                   <Image

@@ -8,7 +8,7 @@ import Search from "./Search"
 const Main = () =>{
     return(
         <>
-            <div className="min-h-full p-2">
+            <div className=" p-2  h-[90vh] overflow-y-auto custom-scrollbar ">
                 {/* <Songpage /> */}
                 <CircleCard/>
                 <br/>

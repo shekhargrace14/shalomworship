@@ -22,10 +22,11 @@ export async function generateMetadata({ params }) {
   return {
     title: song.title,
     description: song.excerpt,
+    keywords:song.seo.keywords,
     openGraph: {
       title: song.title,
       description: song.excerpt,
-      url: `https://www.shalomworship.com/blog/${song.seo.slug}`,
+      url: `https://www.shalomworship.com/song/${song.seo.slug}`,
       images: [{ url: song.image }],
     },
   };
@@ -38,8 +39,8 @@ const Song = async ({ params }) => {
   
 
   return (
-    <div className="bg-[#1f1f1f] rounded-lg overflow-hidden">
-      <div className="md:flex gap-4 p-4 text-white w-full bg-[#121212]">
+    <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
+      <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
         <div className=" sm:flex items-center gap-2 w-full ">
           <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden">
             <Image
@@ -65,7 +66,7 @@ const Song = async ({ params }) => {
           </div>
         </div>
       </div>
-      <main className="lg:container mx-auto p-4">
+      <main className="mx-auto p-4">
         <section className="w-full">
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}

@@ -24,12 +24,12 @@ const Search = ({ data }) => {
 
   return (
   
-      <section className="mt-4">
+      <section className="mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#000000]">
       {/* <section className="mt-4 max-h-full overflow-hidden p-2 bg-[#375b83]"> */}
           {searchData.length > 0 ? (
             searchData.map((item) => (
               <Link href={`/song/${item.seo.slug}`} key={item.id}>
-                <div className="bg-[#1f1f1f] rounded-lg hover:bg-[#121212]">
+                <div className="bg-[#1f1f1f] rounded-lg hover:bg-[#121212] gap-2">
                   <div className=" lg:container mx-auto  p-2 flex gap-4 text-white ">
                     <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
                       <Image

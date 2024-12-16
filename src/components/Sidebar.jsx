@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
       <nav className="p-4 h-[90vh] w-fit bg-[#121212] rounded-lg  overflow-y-auto custom-scrollbar">
         {/* <div className=" rounded-lg absolute overflow-scroll"> */}
-          <Category/>
+          {/* <Category/> */}
           <Artists/>
           
           

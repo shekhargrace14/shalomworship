@@ -14,8 +14,8 @@ const DisplayOne = ({ data }) => {
         <Link href={`/song/${item.seo.slug}`} key={item.id}>
           {/* <div className={`${item.seo.slug}={"/song/"${urlSlug}{} ? bg-[#c06767] : bg-[rgb(47,209,74)] rounded-lg hover:bg-[rgb(18,18,18)]`}> */}
           <div className="bg-[#1f1f1f] rounded-lg hover:bg-[rgb(18,18,18)]">
-            <div className=" lg:container mx-auto md:flex  text-white ">
-              <div className="bg-gray-300 flex items-center md:w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 mb-4 ">
+            <div className=" lg:container mx-auto flex  text-white ">
+              <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title || "Song Image"}
@@ -24,7 +24,7 @@ const DisplayOne = ({ data }) => {
                   height={100}
                 />
               </div>
-              <div className="md:w-8/12 grid p-2">
+              <div className="w-8/12 grid p-2">
                 <h3 className="line-clamp-1 text-base">
                   {item.title}
                 </h3>

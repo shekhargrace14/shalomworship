@@ -12,9 +12,6 @@ const Main = () =>{
                 {/* <Songpage /> */}
                 <CircleCard/>
                 <br/>
-                <br/>
-                <br/>
-                <br/>
                 <DisplayOne/>
 
             </div>

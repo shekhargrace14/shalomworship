@@ -48,7 +48,7 @@ const Song = async ({ params }) => {
               alt={songData.title || "Song Image"}
               width={200}
               height={100}
-              className="bg-red-300 object-cover h-full"
+              className="bg-red-300 object-cover h-full w-full"
             />
 
           </div>

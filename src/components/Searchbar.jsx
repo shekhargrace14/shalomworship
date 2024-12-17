@@ -1,23 +1,11 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { IoIosClose, IoIosSearch } from "react-icons/io";
 import Search from "./Search";
-import { usePathname } from "next/navigation";
 
 const Searchbar = () => {
-  const [searchInput, setSearchInput] = useState();
-  const handleInputChange = (event) => {
-    setSearchInput(event.target.value);
-  };
-  const [search, setSearch] = useState(true);
-  const searchToggle = () => {
-    setSearch(!search);
-  };
-  const pathname = usePathname();
-  useEffect(() => {
-    setSearchInput("");
-  }, [pathname]);
+  const [searchInput, setSearchInput] = useState("");
+  const handleInputChange = (event) => setSearchInput(event.target.value);
 
   return (
     <>
@@ -30,17 +18,17 @@ const Searchbar = () => {
           value={searchInput}
           onChange={handleInputChange}
         />
-        {searchInput<=1 ? 
-        <IoIosSearch className="text-2xl" onClick={searchToggle} />
-        :
-        <IoIosClose
-          className="text-2xl cursor-pointer"
-          onClick={() => setSearchInput("")}
-        />
-      }
+        {searchInput <= 1 ? (
+          <IoIosSearch className="text-2xl" />
+        ) : (
+          <IoIosClose
+            className="text-2xl cursor-pointer"
+            onClick={() => setSearchInput("")}
+          />
+        )}
       </div>
       <div className="absolute z-20 md:top-8 top-12 right-0 w-full">
-        <Search data={searchInput} />
+        <Search searchInput={searchInput} />
       </div>
     </>
   );

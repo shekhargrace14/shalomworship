@@ -1,53 +1,29 @@
+import { connectionStr } from "@/lib/db";
+import { Song } from "@/lib/model/songs";
+import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
-export async function GET(request,context) {
+export const dynamic = "force-dynamic";
+
+export async function GET(_, { params }) {
   try {
-    // Extracting the song ID from the request URL
-    const url = new URL(request.url);
-    // const songId = url.searchParams.get("id");
-    const songId = context.params.id
-    // console.log(songId,"ksjfkjsdkfjaskdfjkasjf")
+    await mongoose.connect(connectionStr);
+    const data = await Song.findById(params.id);
 
-    // if (!songId) {
-    //   return NextResponse.json({
-    //     result: null,
-    //     success: false,
-    //     error: "Song ID is required",
-    //   });
-    // }
-
-    // Fetch the song data
-    const response = await fetch("https://www.shalomworship.com/api/song");
-    const jsonData = await response.json();
-    
-    // Access the `result` key, if it exists
-    const songData = jsonData.result;
-    
-    // console.log(Array.isArray(songData), songData, "Song Data");
-    // console.log(songData[2].id, "Song Data");
-    const firstItemId = songData[0]?._id; // Use optional chaining to avoid errors
-// console.log("First Item ID:", firstItemId);
-
-    // Find the song by ID
-    const song = songData.find((item) => item.seo.slug == songId);
-    // console.log(song,"-----------------------------",songId )
-    if (!song) {
+    if (!data) {
       return NextResponse.json({
         result: null,
         success: false,
         error: "Song not found",
       });
     }
-
-    // console.log(song, "Filtered song");
+    mongoose.disconnect();
 
     return NextResponse.json({
-      result: song,
+      result: data,
       success: true,
     });
   } catch (error) {
-    console.error("Error fetching song data:", error);
-
     return NextResponse.json({
       result: null,
       success: false,

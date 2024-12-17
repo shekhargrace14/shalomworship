@@ -1,13 +1,11 @@
 "use client";
-import React from "react";
-import { FaUser } from "react-icons/fa";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const Card = ({ item }) => {
   return (
     <>
-      <Link href={`/song/${item.seo.slug}`}>
+      <Link href={`/song/${item.id}_${item.seo.slug}`}>
         <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg">
           {/* <iframe width="100%" height="auto" src={item.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
           <div className="rounded-lg overflow-hidden h-5/6">

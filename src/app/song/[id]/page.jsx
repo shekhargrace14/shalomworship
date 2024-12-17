@@ -1,47 +1,37 @@
+import { fetchServerSongById, fetchServerSongs } from "@/actions/song";
+import parse from "html-react-parser";
 import Image from "next/image";
 
-async function fetchSongData(params) {
-  try {
-    const res = await fetch(`https://www.shalomworship.com/api/song/${params}`);
-    if (!res.ok) {
-      throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
-    }
-    const data = await res.json();
-    return data?.result || null;
-  } catch (error) {
-    console.error("Error fetching song data:", error);
-    return null; // Return null to prevent further issues
-  }
-}
+export const revalidate = 60 * 60 * 24 * 7;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
-  const song = await fetchSongData(params.id);
-  console.log(params.id, "params  ppppppppppppppppppppppp");
-
-  if (!song) {
-    return {
-      title: "Song Not Found",
-      description: "The requested song could not be found.",
-    };
-  }
-  const Keywords = song.seo?.keywords?.join(", ") || "";
-
+  const song = await fetchServerSongById(params.id.split("_")[0]);
+  const data = song.result;
+  const Keywords = data?.seo?.keywords?.join(", ") || "";
   return {
-    title: song.title || "Untitled Song",
-    description: song.excerpt || "No description available",
+    title: data?.title || "Untitled Song",
+    description: data?.seo?.excerpt || "No description available",
     keywords: Keywords, // Reuse the 'keywords' variable
     openGraph: {
-      title: song.title || "Untitled Song",
-      description: song.excerpt || "No description available",
-      url: `https://www.shalomworship.com/song/${song.seo?.slug}`,
-      images: [{ url: song.image || "/default-image.jpg" }],
+      title: data?.title || "Untitled Song",
+      description: data?.seo?.excerpt || "No description available",
+      url: `https://www.shalomworship.com/song/${data?.seo?.slug}`,
+      images: [{ url: data?.image || "/default-image.jpg" }],
     },
   };
 }
 
+export async function generateStaticParams() {
+  const songs = await fetchServerSongs();
+  return songs.result
+    .slice(0, 10)
+    .map((song) => ({ id: `${song.id}_${song.seo?.slug}` || "" }));
+}
+
 const Song = async ({ params }) => {
-  const songData = await fetchSongData(params.id);
-  if (!songData)
+  const songData = await fetchServerSongById(params.id.split("_")[0]);
+  if (!songData.success)
     return <p className="text-white">No Song Found in page song...</p>;
 
   return (
@@ -50,8 +40,8 @@ const Song = async ({ params }) => {
         <div className=" sm:flex items-center gap-2 w-full ">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#e32f2f] ">
             <Image
-              src={songData.image || "/default-image.jpg"}
-              alt={songData.title || "Song Image"}
+              src={songData.result.image || "/default-image.jpg"}
+              alt={songData.result.title || "Song Image"}
               width={200}
               height={100}
               className="bg-red-300 object-cover h-full w-full"
@@ -59,39 +49,40 @@ const Song = async ({ params }) => {
             />
           </div>
           <div className="sm:w-8/12 grid">
-            <h1 className="text-4xl font-semibold mb-2">{songData.title}</h1>
+            <h1 className="text-4xl font-semibold mb-2">
+              {songData.result.title}
+            </h1>
             <div className="flex gap-2 items-baseline flex-wrap">
-              <p className="font-bold leading-4">{songData.creator} -</p>
-              {songData.artists && songData.artists.length > 0 ? (
-                songData.artists.length > 1 ? (
-                  songData.artists.map((artist, index) => (
+              <p className="font-bold leading-4">{songData.result.creator} -</p>
+              {songData.result.artists && songData.result.artists.length > 0 ? (
+                songData.result.artists.length > 1 ? (
+                  songData.result.artists.map((artist, index) => (
                     <span key={index} className="font-light text-sm leading-4">
                       {artist}
-                      {index < songData.artists.length - 1 ? ", " : ""}
+                      {index < songData.result.artists.length - 1 ? ", " : ""}
                     </span>
                   ))
                 ) : (
                   <p className="font-light text-sm leading-4">
-                    {songData.artists[0]}
+                    {songData.result.artists[0]}
                   </p>
                 )
               ) : (
                 <p className="font-light text-sm leading-4">Unknown Artist</p>
               )}
             </div>
-            <p className="text-sm mt-2">{songData.published_date}</p>
-            <p className="text-sm mt-2">{songData.category}</p>
+            <p className="text-sm mt-2">{songData.result.published_date}</p>
+            <p className="text-sm mt-2">{songData.result.category}</p>
           </div>
         </div>
       </div>
       <main className="mx-auto p-4">
         <section className="w-full">
-          <div dangerouslySetInnerHTML={{ __html: songData.content }} />
-          {/* <div >{songData.content }</div> */}
+          <div>{parse(songData.result.content)}</div>
           <p className="my-8">
             Credits -
-            <a href={songData.credits} target="_blank">
-              {songData.creator}
+            <a href={songData.result.credits} target="_blank">
+              {songData.result.creator}
             </a>
           </p>
         </section>

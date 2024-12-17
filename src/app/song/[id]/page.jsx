@@ -2,18 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 
 async function fetchSongData(params) {
-  const res = await fetch(`https://www.shalomworship.com/api/song/${params}`);
-  const data = await res.json();
-  const songData = await data.result;
-  // console.log(songData, "songData");
-  if (!songData) {
-    return <p>No Song Found...</p>;
-  }
-  console.log(songData, "songDatasongDatasongDatasongDatasongDatasongData");
+  try{
 
-  return songData;
+    const res = await fetch(`https://www.shalomworship.com/api/song/${params}`);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
+    }
+    const data = await res.json();
+    return data?.result || null;
+  } catch(error){
+    console.error("Error fetching song data:", error);
+    return null; // Return null to prevent further issues
+  }
 }
-// fetchSongData("hazaaron-zubane")
 
 export async function generateMetadata({ params }) {
   const song = await fetchSongData(params.id);

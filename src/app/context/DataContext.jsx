@@ -18,7 +18,7 @@ const DataProvider = ({ children }) => {
 
 
   useEffect(() => {
-    fetch("https://shalomworship.com/api/song")
+    fetch("https://www.shalomworship.com/api/song")
       .then((res) => res.json())
       .then((data) => {
         let okdata = data.result

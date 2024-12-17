@@ -12,7 +12,7 @@ const Artist = ({ data }) => {
     <section className="w-full flex flex-col-reverse gap-2">
       {songData.length > 0 ? (
         songData.map((item) => (
-          <Link href={`/song/${item.seo.slug}`} key={item.id}>
+          <Link href={`/song/${item.seo.slug}`} key={item.slug}>
             {/* <div className={`${item.seo.slug}={"/song/"${urlSlug}{} ? bg-[#c06767] : bg-[rgb(47,209,74)] rounded-lg hover:bg-[rgb(18,18,18)]`}> */}
             <div className=" rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000]">
               <div className=" lg:container mx-auto  p-2 md:flex gap-4 text-white ">
@@ -23,6 +23,7 @@ const Artist = ({ data }) => {
                     width={700}
                     className="bg-gray-300 object-cover h-full"
                     height={100}
+                    priority={100}
                   />
                 </div>
                 <div className="md:w-8/12 grid">

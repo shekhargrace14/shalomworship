@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   return {
     title: song.title || "Untitled Song",
     description: song.excerpt || "No description available",
-    keywords: song.seo?.keywords?.join(", ") || "",
+    keywords: Keywords, // Reuse the 'keywords' variable
     openGraph: {
       title: song.title || "Untitled Song",
       description: song.excerpt || "No description available",
@@ -43,8 +43,7 @@ export async function generateMetadata({ params }) {
 
 const Song = async ({ params }) => {
   const songData = await fetchSongData(params.id);
-  // console.log(songData, "songDatasongDatasongDatasongDatasongDatasongDatasongData");
-  if (!songData) return <p className="text-white">No Song Found...</p>;
+  if (!songData) return <p className="text-white">No Song Found in page song...</p>;
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
@@ -65,7 +64,7 @@ const Song = async ({ params }) => {
             <h1 className="text-4xl font-semibold mb-2">{songData.title}</h1>
             <div className="flex gap-2 items-baseline flex-wrap">
               <p className="font-bold leading-4">{songData.creator} -</p>
-              {songData.artists?.length > 0 ? (
+              {songData.artists?.length > 1 ? (
                 songData.artists.map((artist, index) => (
                   <p key={index} className="font-light text-sm leading-4">
                     {artist}

@@ -5,7 +5,7 @@ const songModel = new mongoose.Schema({
     category:Array,
     content:String,
     creator:Array,
-    credits:Array,
+    credits:String,
     excerpt:String,
     image:String,
     keywords:Array,

@@ -72,7 +72,7 @@ const Song = async ({ params }) => {
                   </p>
                 ))
               ) : (
-                <p className="font-light text-sm leading-4">Unknown Artist</p>
+                <p className="font-light text-sm leading-4">{songData.artists[0]}</p>
               )}
             </div>
             <p className="text-sm mt-2">{songData.published_date}</p>

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const songModel = new mongoose.Schema({
-    artists:String,
+    artists:Array,
     author:Object,
     category:Array,
     content:String,

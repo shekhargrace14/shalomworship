@@ -76,7 +76,7 @@ const Song = async ({ params }) => {
       </div>
       <main className="mx-auto p-4">
         <section className="w-full">
-          {/* <div dangerouslySetInnerHTML={{ __html: songData.content }} /> */}
+          <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}
           <p className="my-8">
             Credits -

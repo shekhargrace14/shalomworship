@@ -4,7 +4,7 @@ import Image from "next/image";
 
 async function fetchSongData(params) {
   const res = await fetch(
-    `https://shalomworship.vercel.app/api/song/${params}`
+    `https://shalomworship.com/api/song/${params}`
   );
   const data = await res.json();
   const songData = await data.result;

@@ -19,17 +19,23 @@ export async function generateMetadata({ params }) {
   const song = await fetchSongData(params.id);
   console.log(params.id, "params  ppppppppppppppppppppppp");
 
+  if (!song) {
+    return {
+      title: "Song Not Found",
+      description: "The requested song could not be found.",
+    };
+  }
   const Keywords = song.seo?.keywords?.join(", ") || "";
 
   return {
-    title: song.title,
-    description: song.excerpt,
-    keywords: song.Keywords,
+    title: song.title || "Untitled Song",
+    description: song.excerpt || "No description available",
+    keywords: song.seo?.keywords?.join(", ") || "",
     openGraph: {
-      title: song.title,
-      description: song.excerpt,
-      url: `https://www.shalomworship.com/song/${song.seo.slug}`,
-      images: [{ url: song.image }],
+      title: song.title || "Untitled Song",
+      description: song.excerpt || "No description available",
+      url: `https://www.shalomworship.com/song/${song.seo?.slug}`,
+      images: [{ url: song.image || "/default-image.jpg" }],
     },
   };
 }

@@ -8,7 +8,7 @@ const DisplayOne = ({ data }) => {
   const { songData } = useContext(DataContext);
   const urlSlug = usePathname()
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
     {songData.length > 0 ? (
       songData.map((item) => (
         <Link href={`/song/${item.seo.slug}`} key={item.id}>
@@ -24,13 +24,13 @@ const DisplayOne = ({ data }) => {
                   height={100}
                 />
               </div>
-              <div className="w-8/12 grid p-2">
+              <div className="w-8/12 flex items-center p-2">
                 <h3 className="line-clamp-1 text-base">
                   {item.title}
                 </h3>
-                <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20">
-                  <p className="leading-none text-sm">{item.creator}</p>
-                </div>
+                {/* <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20"> */}
+                  {/* <p className="leading-none text-sm font-thin ">{item.creator}</p> */}
+                {/* </div> */}
               </div>
             </div>
           </div>

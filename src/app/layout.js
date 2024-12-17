@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
             <div className="hidden md:block  md:w-4/12 lg:w-3/12 rounded-lg  ">
               <Sidebar />
             </div>
-            <div className="w-full md:w-8/12 lg:w-9/12 bg-[#121212] rounded-lg">
+            <div className="w-full md:w-8/12 lg:w-9/12 bg-gradient-to-b from-[#1f1f1f] to-[#000000] rounded-lg">
               <main>
                 {children}
               </main>

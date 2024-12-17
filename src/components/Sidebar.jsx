@@ -19,7 +19,7 @@ const Sidebar = () => {
 
 
   return (
-      <nav className="p-4 h-[90vh] w-fit bg-[#121212] rounded-lg  overflow-y-auto custom-scrollbar">
+      <nav className="p-2 mx-2 h-[90vh] w-fit bg-[#121212] rounded-lg  overflow-y-auto custom-scrollbar">
         {/* <div className=" rounded-lg absolute overflow-scroll"> */}
           {/* <Category/> */}
           <Artists/>

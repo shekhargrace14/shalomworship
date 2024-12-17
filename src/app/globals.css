@@ -40,7 +40,8 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #4b5563; /* Hover color */
 }
-  
-
 
 /* scroll bar css ends  */
+.h1-text-shadow  {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}

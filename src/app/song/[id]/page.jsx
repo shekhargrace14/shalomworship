@@ -72,9 +72,7 @@ const Song = async ({ params }) => {
         <section className="w-full">
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}
-          <a href={songData.credits} target="_blank">
-            <p className="my-8">Credits - {songData.creator}</p>
-          </a>
+            <p className="my-8">Credits -<a href={songData.credits} target="_blank">{songData.creator}</a></p>
         </section>
       </main>
     </div>

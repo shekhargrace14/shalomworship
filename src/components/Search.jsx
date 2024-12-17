@@ -24,7 +24,7 @@ const Search = ({ data }) => {
 
   return (
   
-      <section className="mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#000000]">
+      <section className=" mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#000000]">
       {/* <section className="mt-4 max-h-full overflow-hidden p-2 bg-[#375b83]"> */}
           {searchData.length > 0 ? (
             searchData.map((item) => (

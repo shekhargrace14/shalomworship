@@ -1,37 +1,33 @@
-import Head from "next/head";
 import Image from "next/image";
 
 
-async function fetchSongData(params) {
-  const res = await fetch(
-    `https://www.shalomworship.com/api/song/${params}`
-  );
-  const data = await res.json();
-  const songData = await data.result;
-  // console.log(songData, "songData");
-  if (!songData) {
-    return <p>No Song Found...</p>;
+async function fetchSongData(id) {
+  try {
+    const res = await fetch(`https://www.shalomworship.com/api/song/${id}`);
+    const data = await res.json();
+    return data?.result || null;
+  } catch (error) {
+    console.error("Error fetching song data:", error);
+    return null;
   }
-  return songData
 }
 
 export async function generateMetadata({ params }) {
-  const song =await fetchSongData(params.id)
-
+  const song = await fetchSongData(params.id);
+  if (!song) return { title: "Song Not Found", description: "" };
 
   return {
-    title: song.title,
-    description: song.excerpt,
-    keywords:song.seo.keywords,
+    title: song.title || "Untitled Song",
+    description: song.excerpt || "No description available",
+    keywords: song.seo?.keywords || [],
     openGraph: {
-      title: song.title,
-      description: song.excerpt,
-      url: `https://www.shalomworship.com/song/${song.seo.slug}`,
-      images: [{ url: song.image }],
+      title: song.title || "Untitled Song",
+      description: song.excerpt || "No description available",
+      url: `https://www.shalomworship.com/song/${song.seo?.slug}`,
+      images: [{ url: song.image || "/default-image.jpg" }],
     },
   };
 }
-
 
 const Song = async ({ params }) => {
   // console.log(params.id, "params");
@@ -56,12 +52,12 @@ const Song = async ({ params }) => {
             <h1 className="text-4xl font-semibold mb-2">{songData.title}</h1>
             <div className="flex gap-2 items-baseline flex-wrap">
               <p className="font-bold leading-4">{songData.creator} -</p>
-              {songData.artists.map((artist, index) => (
+              {/* {songData.artists.map((artist, index) => (
                 <p key={index} className="font-light text-sm leading-4 ">
                   {artist}
                   {index < artist.length - 1 ? "," : ""}
                 </p>
-              ))}
+              ))} */}
             </div>
             <p className="text-sm mt-2">{songData.published_date}</p>
             <p className="text-sm mt-2">{songData.category}</p>

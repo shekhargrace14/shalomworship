@@ -16,18 +16,13 @@ const Sidebar = () => {
     { pageName: "Services", path: "/services" },
   ];
 
-
-
   return (
-      <nav className="p-2 mx-2 h-[90vh] w-fit bg-[#121212] rounded-lg  overflow-y-auto custom-scrollbar">
-        {/* <div className=" rounded-lg absolute overflow-scroll"> */}
-          {/* <Category/> */}
-          <Artists/>
-          
-          
-        {/* </div> */}
-      </nav>
-    );
+    <nav className="w-full p-2 mx-2 h-[90vh] bg-[#121212] rounded-lg  overflow-y-auto custom-scrollbar">
+      {/* <div className=" rounded-lg absolute overflow-scroll"> */}
+        {/* <Category/> */}
+        <Artists/>   
+      {/* </div> */}
+    </nav>
+  );
 };
-
 export default Sidebar;

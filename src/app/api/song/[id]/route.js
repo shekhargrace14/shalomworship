@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-
+export const dynamic = "force-dynamic";
 export async function GET(request,context) {
   try {
     // Extracting the song ID from the request URL

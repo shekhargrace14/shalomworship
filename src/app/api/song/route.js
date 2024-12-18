@@ -4,6 +4,8 @@ import { Song } from "@/app/lib/model/songs";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
     let data = [];
     try{ 

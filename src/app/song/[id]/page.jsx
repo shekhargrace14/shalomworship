@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+export const dynamic = "force-dynamic";
 async function fetchSongData(params) {
   try {
     const res = await fetch(`https://www.shalomworship.com/api/song/${params}`);

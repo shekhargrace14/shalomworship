@@ -9,14 +9,14 @@ async function fetchSongData(params) {
     const data = await res.json();
     return data?.result || null;
   } catch (error) {
-    console.error("Error fetching song data:", error);
+    // console.error("Error fetching song data:", error);
     return null; // Return null to prevent further issues
   }
 }
 
 export async function generateMetadata({ params }) {
   const song = await fetchSongData(params._id);
-  console.log(params.id, "params  ppppppppppppppppppppppp");
+  // console.log(params.id, "params  ppppppppppppppppppppppp");
 
   if (!song) {
     return {
@@ -48,7 +48,7 @@ const Song = async ({ params }) => {
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
       <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
         <div className=" sm:flex items-center gap-2 w-full ">
-          <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#e32f2f] ">
+          <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
             <Image
               src={songData.image || "/default-image.jpg"}
               alt={songData.title || "Song Image"}
@@ -59,33 +59,33 @@ const Song = async ({ params }) => {
             />
           </div>
           <div className="sm:w-8/12 grid">
-            <h1 className="text-4xl font-semibold mb-2">{songData.title}</h1>
+            <h1 className="text-4xl font-semibold mb-2 text-white">{songData.title}</h1>
             <div className="flex gap-2 items-baseline flex-wrap">
-              <p className="font-bold leading-4">{songData.creator} -</p>
+              <p className="font-bold leading-4 text-white">{songData.creator} -</p>
               {songData.artists && songData.artists.length > 0 ? (
                 songData.artists.length > 1 ? (
                   songData.artists.map((artist, index) => (
-                    <span key={index} className="font-light text-sm leading-4">
+                    <span key={index} className="font-light text-sm leading-4 text-white">
                       {artist}
                       {index < songData.artists.length - 1 ? ", " : ""}
                     </span>
                   ))
                 ) : (
-                  <p className="font-light text-sm leading-4">
+                  <p className="font-light text-sm leading-4 text-white">
                     {songData.artists[0]}
                   </p>
                 )
               ) : (
-                <p className="font-light text-sm leading-4">Unknown Artist</p>
+                <p className="font-light text-sm leading-4 text-white">Unknown Artist</p>
               )}
             </div>
-            <p className="text-sm mt-2">{songData.published_date}</p>
-            <p className="text-sm mt-2">{songData.category}</p>
+            <p className="text-sm mt-2 text-white">{songData.published_date}</p>
+            <p className="text-sm mt-2 text-white">{songData.category}</p>
           </div>
         </div>
       </div>
       <main className="mx-auto p-4">
-        <section className="w-full">
+        <section className="w-full text-white">
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}
           <p className="my-8">

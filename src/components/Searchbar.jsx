@@ -10,6 +10,8 @@ const Searchbar = () => {
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
   };
+  console.log(searchInput);
+  
   const [search, setSearch] = useState(true);
   const searchToggle = () => {
     setSearch(!search);
@@ -40,7 +42,7 @@ const Searchbar = () => {
       }
       </div>
       <div className="absolute z-20 md:top-8 top-12 right-0 w-full">
-        <Search data={searchInput} />
+        <Search searchInput={searchInput} />
       </div>
     </>
   );

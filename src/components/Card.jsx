@@ -23,9 +23,9 @@ const Card = ({ item }) => {
 
           <div className="w-full lg:w-full py-2">
             <div className="">
-              <h3 className="line-clamp-1 text-1xl mb-1 ">{item.title}</h3>
+              <h3 className="line-clamp-1 text-1xl mb-1 text-white">{item.title}</h3>
               <p
-                className=" line-clamp-1 text-sm leading-none"
+                className=" line-clamp-1 text-sm leading-none text-white"
                 dangerouslySetInnerHTML={{ __html: item.creator }}
               />
             </div>

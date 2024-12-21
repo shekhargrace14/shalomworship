@@ -5,41 +5,47 @@ import Image from "next/image";
 import Link from "next/link";
 import { useGetSongs } from "@/app/reactQuery/query";
 
-const Search = ({ data }) => {
-  const songData = useGetSongs()
+const Search = ({ searchInput }) => {
+  // const songData = useGetSongs()
+  const { data: songData, isLoading, isError } = useGetSongs();
+  
+  console.log(songData,'songData.result');
   // const { songData } = useContext(DataContext);
+  
 
   const [searchData, setSearchData] = useState([]);
 
   useEffect(() => {
-    if (songData.data?.result) {
+    if (searchInput?.trim()) {
       setSearchData(
-        songData?.data?.result.filter(
+        songData?.result.filter(
           (item) =>
-            item.title.toLowerCase().includes(data?.toLowerCase()) ||
-            item.content.toLowerCase().includes(data?.toLowerCase())
+            item.title.toLowerCase().includes(searchInput?.toLowerCase()) ||
+            item.content.toLowerCase().includes(searchInput?.toLowerCase())
         )
       );
     }
-  }, []);
+  }, [searchInput, songData]);
+ 
+  
 
-  if (!data) return null; // Don't render anything if no search query
+  if (!searchInput) return null; // Don't render anything if no search query
 
   return (
   
-      <section className=" mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#000000]">
+      <section className=" mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#121212]">
       {/* <section className="mt-4 max-h-full overflow-hidden p-2 bg-[#375b83]"> */}
           {searchData.length > 0 ? (
             searchData.map((item) => (
-              <Link href={`/song/${item.seo.slug}`} key={item.id}>
-                <div className="bg-[#1f1f1f] rounded-lg hover:bg-[#121212] gap-2">
+              <Link href={`/song/${item.seo.slug}`} key={item._id}>
+                <div className="bg-[#121212] rounded-lg hover:bg-[#3b3b3b] gap-2">
                   <div className=" lg:container mx-auto  p-2 flex gap-4 text-white ">
                     <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
                       <Image
                         src={item.image}
                         alt={item.title || "Song Image"}
                         width={700}
-                        className="bg-gray-300 object-cover h-full"
+                        className="bg-gray-800 object-cover h-full"
                         height={100}
                       />
                     </div>

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-const url = "http://localhost:3000";
-// const url = "https://www.shalomworship.com";
+// const url = "http://localhost:3000";
+const url = "https://www.shalomworship.com";
 
 const fetchSongs = async () => {
   // const res = await fetch('https://fakestoreapi.com/products');

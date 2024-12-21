@@ -17,8 +17,8 @@ export async function GET(request,context) {
     // }
 
     // Fetch the song data
-    const songurl = "http://localhost:3000";
-    // const url = "https://www.shalomworship.com";
+    // const songurl = "http://localhost:3000";
+    const songurl = "https://www.shalomworship.com";
     const response = await fetch(`${songurl}/api/song`);
     const jsonData = await response.json();
     

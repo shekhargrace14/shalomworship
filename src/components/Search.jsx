@@ -9,7 +9,7 @@ const Search = ({ searchInput }) => {
   // const songData = useGetSongs()
   const { data: songData, isLoading, isError } = useGetSongs();
   
-  console.log(songData,'songData.result');
+  // console.log(songData,'songData.result');
   // const { songData } = useContext(DataContext);
   
 

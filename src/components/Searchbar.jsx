@@ -10,7 +10,7 @@ const Searchbar = () => {
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
   };
-  console.log(searchInput);
+  // console.log(searchInput);
   
   const [search, setSearch] = useState(true);
   const searchToggle = () => {

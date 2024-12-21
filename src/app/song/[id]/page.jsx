@@ -15,8 +15,8 @@ async function fetchSongData(params) {
 }
 
 export async function generateMetadata({ params }) {
-  const song = await fetchSongData(params._id);
-  // console.log(params.id, "params  ppppppppppppppppppppppp");
+  // console.log(params.id, "params  generateMetadata");
+  const song = await fetchSongData(params.id);
 
   if (!song) {
     return {
@@ -28,11 +28,11 @@ export async function generateMetadata({ params }) {
 
   return {
     title: song.title || "Untitled Song",
-    description: song.excerpt || "No description available",
+    description: song.meta_description || "No description available",
     keywords: Keywords, // Reuse the 'keywords' variable
     openGraph: {
       title: song.title || "Untitled Song",
-      description: song.excerpt || "No description available",
+      description: song.meta_description || "No description available",
       url: `https://www.shalomworship.com/song/${song.seo?.slug}`,
       images: [{ url: song.image || "/default-image.jpg" }],
     },
@@ -40,7 +40,9 @@ export async function generateMetadata({ params }) {
 }
 
 const Song = async ({ params }) => {
-  const songData = await fetchSongData(params.id);
+  const id = await params.id;
+  const songData = await fetchSongData(id);
+  // console.log(id," id of song page params")
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
 

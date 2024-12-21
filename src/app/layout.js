@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Main from "@/components/Main";
 import Footer from "@/components/Footer";
+import { QueryProvider } from "./reactQuery/query-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,6 @@ const geistMono = localFont({
 //   canonical:"Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God."
 // };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -31,9 +31,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <DataProvider>
+        {/* <DataProvider> */}
+          <QueryProvider>
           <Header />
-          <div className="flex gap-2 ">
+          <div className="flex gap-4 ">
             <div className="w-full hidden md:block  md:w-4/12 lg:w-3/12 rounded-lg  ">
               <Sidebar />
             </div>
@@ -44,7 +45,8 @@ export default function RootLayout({ children }) {
               {/* <Footer /> */}
             </div>
           </div>
-        </DataProvider>
+        {/* </DataProvider> */}
+        </QueryProvider>
       </body>
     </html>
   );

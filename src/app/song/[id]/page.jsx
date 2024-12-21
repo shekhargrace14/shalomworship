@@ -15,7 +15,7 @@ async function fetchSongData(params) {
 }
 
 export async function generateMetadata({ params }) {
-  const song = await fetchSongData(params.id);
+  const song = await fetchSongData(params._id);
   console.log(params.id, "params  ppppppppppppppppppppppp");
 
   if (!song) {
@@ -54,7 +54,7 @@ const Song = async ({ params }) => {
               alt={songData.title || "Song Image"}
               width={200}
               height={100}
-              className="bg-red-300 object-cover h-full w-full"
+              className="bg-gray-800 object-cover h-full w-full"
               priority={100}
             />
           </div>

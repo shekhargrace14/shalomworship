@@ -17,7 +17,7 @@ const Header = () => {
 
       <div className="md:relative w-10/12 sm:w-8/12 lg:w-5/12">
         {/* <Link href="/search"> */}
-          <Searchbar/>
+            <Searchbar/>
         {/* </Link> */}
 
       </div>

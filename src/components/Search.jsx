@@ -3,22 +3,25 @@ import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "@/app/context/DataContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useGetSongs } from "@/app/reactQuery/query";
 
 const Search = ({ data }) => {
-  const { songData } = useContext(DataContext);
+  const songData = useGetSongs()
+  // const { songData } = useContext(DataContext);
+
   const [searchData, setSearchData] = useState([]);
 
   useEffect(() => {
-    if (songData) {
+    if (songData.data?.result) {
       setSearchData(
-        songData.filter(
+        songData?.data?.result.filter(
           (item) =>
             item.title.toLowerCase().includes(data?.toLowerCase()) ||
             item.content.toLowerCase().includes(data?.toLowerCase())
         )
       );
     }
-  }, [data, songData]);
+  }, []);
 
   if (!data) return null; // Don't render anything if no search query
 

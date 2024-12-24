@@ -11,7 +11,7 @@ const CircleCard = () => {
     
   // })
   // const { songData } = useContext(DataContext);
-  console.log(songData, "songdata");
+  // console.log(songData, "songdata");
   if (!songData || songData.length === 0) {
     return <p>No Song...</p>;
   }

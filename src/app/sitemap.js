@@ -9,7 +9,7 @@ export default async function generateSitemap() {
     const posts = await fetchSongs();
     const postsUrls =
       posts.result?.map((post) => ({
-        url: `${baseUrl}/song/${post._id}`,
+        url: `${baseUrl}/song/${post.seo.slug}`,
         lastModified: new Date().toISOString(),
       })) ?? [];
 

@@ -1,7 +1,9 @@
 import { fetchSongs } from "@/app/reactQuery/query";
 
-export async function generateSitemap() {
+export default async function generateSitemap() {
   const baseUrl = "https://www.shalomworship.com";
+  // const baseUrl = "http://localhost:3000";
+
 
   try {
     const posts = await fetchSongs();

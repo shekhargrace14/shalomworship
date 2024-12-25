@@ -4,7 +4,7 @@ const url = "https://www.shalomworship.com";
 
 const fetchSongs = async () => {
   // const res = await fetch('https://fakestoreapi.com/products');
-  const res = await fetch( `${url}/api/song/`);
+  const res = await fetch( `${url}/api/song`);
   
   return await res.json();
 };

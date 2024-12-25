@@ -6,6 +6,7 @@ import Sidebar from "@/components/Sidebar";
 import Main from "@/components/Main";
 import Footer from "@/components/Footer";
 import { QueryProvider } from "./reactQuery/query-provider";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,11 +29,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
+      <GoogleAnalytics gaId="G-H4QZJK5XEN" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <DataProvider> */}
+        {/* <DataProvider> */}    
           <QueryProvider>
           <Header />
           <div className="flex gap-4 ">

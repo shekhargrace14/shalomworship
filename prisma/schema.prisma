@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model song {
+  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  content         String
+  image           String
+  like            Int
+  title           String
+  video           String
+  view            Int
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  // SEO
+  slug            String
+  keyword         String[]
+  metaDescription String
+  excerpt         String
+  author          author?        @relation(fields: [authorId], references: [id])
+  authorId        String?        @db.ObjectId
+  artist          SongArtist[] // Explicit relation
+  genre           SongGenre[] // Explicit relation
+  category        SongCategory[] // Explicit relation
+
+  @@index([slug])
+}
+
+model author {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  image     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  song      song[]
+}
+
+model artist {
+  id        String       @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  link      String?
+  image     String
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  song      SongArtist[] // Explicit relation
+}
+
+model genre {
+  id        String      @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  image     String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  song      SongGenre[] // Explicit relation
+}
+
+model category {
+  id        String         @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  image     String
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  song      SongCategory[] // Explicit relation
+}
+
+// Intermediate table for song-artist many-to-many
+model SongArtist {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  songId   String @db.ObjectId
+  artistId String @db.ObjectId
+  song     song   @relation(fields: [songId], references: [id])
+  artist   artist @relation(fields: [artistId], references: [id])
+}
+
+// Intermediate table for song-genre many-to-many
+model SongGenre {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  songId  String @db.ObjectId
+  genreId String @db.ObjectId
+  song    song   @relation(fields: [songId], references: [id])
+  genre   genre  @relation(fields: [genreId], references: [id])
+}
+
+// Intermediate table for song-genre many-to-many
+model SongCategory {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  songId     String   @db.ObjectId
+  categoryId String   @db.ObjectId
+  song       song     @relation(fields: [songId], references: [id])
+  category   category @relation(fields: [categoryId], references: [id])
+}

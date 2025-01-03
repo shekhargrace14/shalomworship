@@ -1,8 +1,12 @@
 import Image from "next/image";
+
+export const revalidate = 60 * 60 * 24 * 7;
 export const dynamic = "force-dynamic";
 async function fetchSongData(params) {
+  const songurl = "http://localhost:3000";
+  // const songurl = "https://www.shalomworship.com";
   try {
-    const res = await fetch(`https://www.shalomworship.com/api/song/${params}`);
+    const res = await fetch(`${songurl}/api/song/${params}`);
     if (!res.ok) {
       throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
     }
@@ -27,11 +31,11 @@ export async function generateMetadata({ params }) {
   const Keywords = song.seo?.keywords?.join(", ") || "";
 
   return {
-    title: song.title || "Untitled Song",
+    title: song.title + " lyrics" || "Untitled Song",
     description: song.meta_description || "No description available",
     keywords: Keywords, // Reuse the 'keywords' variable
     openGraph: {
-      title: song.title || "Untitled Song",
+      title: song.title + "lyrics" || "Untitled Song",
       description: song.meta_description || "No description available",
       url: `https://www.shalomworship.com/song/${song.seo?.slug}`,
       images: [{ url: song.image || "/default-image.jpg" }],
@@ -41,8 +45,8 @@ export async function generateMetadata({ params }) {
 
 const Song = async ({ params }) => {
   const id = await params.id;
+  console.log(id," id of song page params")
   const songData = await fetchSongData(id);
-  // console.log(id," id of song page params")
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
 
@@ -61,7 +65,7 @@ const Song = async ({ params }) => {
             />
           </div>
           <div className="sm:w-8/12 grid">
-            <h1 className="text-4xl font-semibold mb-2 text-white">{songData.title}</h1>
+            <h1 className="text-4xl font-semibold mb-2 text-white">{songData.title} </h1>
             <div className="flex gap-2 items-baseline flex-wrap">
               <p className="font-bold leading-4 text-white">{songData.creator} -</p>
               {songData.artists && songData.artists.length > 0 ? (
@@ -91,7 +95,7 @@ const Song = async ({ params }) => {
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}
           <p className="my-8">
-            Credits -
+            Credits -  &nbsp;
             <a href={songData.credits} target="_blank">
               {songData.creator}
             </a>

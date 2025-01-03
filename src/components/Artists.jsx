@@ -20,10 +20,10 @@ const Artist = () => {
     <section className="w-full flex flex-col-reverse gap-2">
       {songData?.result?.length > 0 ? (
         songData.result.map((item) => (
-          <Link key={item._id} href={`/song/${item.seo.slug}`} >
+          <Link key={item.id} href={`/song/${item.slug}`} >
             <div
               className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${
-                urlSlug.includes(item.seo.slug) ? "bg-[#2e2a2a]" : "bg-[rgb(0,0,0)]"
+                urlSlug.includes(item.slug) ? "bg-[#2e2a2a]" : "bg-[rgb(0,0,0)]"
               }`}
             >
               <div className="lg:container mx-auto p-2 md:flex gap-4 text-white">
@@ -41,6 +41,8 @@ const Artist = () => {
                   <h3 className="line-clamp-1 text-base">{item.title}</h3>
                   <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20">
                     <p className="leading-none text-sm">{item.creator}</p>
+                    <p className="font-bold leading-4 text-white">{item.creator} -</p>
+
                   </div>
                 </div>
               </div>

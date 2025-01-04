@@ -14,35 +14,35 @@ async function fetchSongData(id) {
     const data = await res.json();
     return data?.result || null;
   } catch (error) {
-    // console.error("Error fetching song data:", error);
+    console.error("Error fetching song data:", error.message); // Log specific error messages
     return null; // Return null to prevent further issues
   }
 }
 
-export async function generateMetadata({ id }) {
-  // console.log(params.id, "params  generateMetadata");
-  const song = await fetchSongData(id);
+// export async function generateMetadata({ id }) {
+//   // console.log(params.id, "params  generateMetadata");
+//   const song = await fetchSongData(id);
 
-  if (!song) {
-    return {
-      title: "Song Not Found",
-      description: "The requested song could not be found.",
-    };
-  }
-  const Keywords = song?.keywords?.join(", ") || "";
+//   if (!song) {
+//     return {
+//       title: "Song Not Found",
+//       description: "The requested song could not be found.",
+//     };
+//   }
+//   const Keywords = song?.keywords?.join(", ") || "";
 
-  return {
-    title: song.title + " lyrics" || "Untitled Song",
-    description: song.meta_description || "No description available",
-    keywords: Keywords, // Reuse the 'keywords' variable
-    openGraph: {
-      title: song.title + "lyrics" || "Untitled Song",
-      description: song.meta_description || "No description available",
-      url: `https://www.shalomworship.com/song/${song?.slug}`,
-      images: [{ url: song.image || "/default-image.jpg" }],
-    },
-  };
-}
+//   return {
+//     title: song.title + " lyrics" || "Untitled Song",
+//     description: song.meta_description || "No description available",
+//     keywords: Keywords, // Reuse the 'keywords' variable
+//     openGraph: {
+//       title: song.title + "lyrics" || "Untitled Song",
+//       description: song.meta_description || "No description available",
+//       url: `https://www.shalomworship.com/song/${song?.slug}`,
+//       images: [{ url: song.image || "/default-image.jpg" }],
+//     },
+//   };
+// }
 
 const Song = async ({ params }) => {
   const id = await params.id;

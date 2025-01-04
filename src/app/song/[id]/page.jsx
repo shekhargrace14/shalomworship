@@ -2,11 +2,12 @@ import Image from "next/image";
 
 export const revalidate = 60 * 60 * 24 * 7;
 export const dynamic = "force-dynamic";
-async function fetchSongData(params) {
-  const songurl = "http://localhost:3000";
-  // const songurl = "https://www.shalomworship.com";
+
+async function fetchSongData(id) {
+  // const songurl = "http://localhost:3000";
+  const songurl = "https://www.shalomworship.com";
   try {
-    const res = await fetch(`${songurl}/api/song/${params}`);
+    const res = await fetch(`${songurl}/api/song/${id}`);
     if (!res.ok) {
       throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
     }
@@ -18,9 +19,9 @@ async function fetchSongData(params) {
   }
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ id }) {
   // console.log(params.id, "params  generateMetadata");
-  const song = await fetchSongData(params.id);
+  const song = await fetchSongData(id);
 
   if (!song) {
     return {

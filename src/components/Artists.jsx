@@ -13,14 +13,18 @@ const Artist = () => {
   }
 
   if (isError) {
-    return <p className="text-white text-center">Something went wrong. Please try again later.</p>;
+    return (
+      <p className="text-white text-center">
+        Something went wrong. Please try again later.
+      </p>
+    );
   }
 
   return (
     <section className="w-full flex flex-col-reverse gap-2">
       {songData?.result?.length > 0 ? (
         songData.result.map((item) => (
-          <Link key={item.id} href={`/song/${item.slug}`} >
+          <Link key={item.id} href={`/song/${item.slug}`}>
             <div
               className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${
                 urlSlug.includes(item.slug) ? "bg-[#2e2a2a]" : "bg-[rgb(0,0,0)]"
@@ -39,10 +43,12 @@ const Artist = () => {
                 </div>
                 <div className="md:w-8/12 grid">
                   <h3 className="line-clamp-1 text-base">{item.title}</h3>
-                  <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20">
-                    <p className="leading-none text-sm">{item.creator}</p>
-                    <p className="font-bold leading-4 text-white">{item.creator} -</p>
-
+                  <div className=" flex flex-wrap gap-2 items-baseline sm:line-clamp-20">
+                    {item.artist.map((artistItem, index) => (
+                      <p key={index} className="leading-none text-sm">
+                        {artistItem.artist.name}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>

@@ -29,7 +29,7 @@ export async function generateMetadata({ id }) {
       description: "The requested song could not be found.",
     };
   }
-  const Keywords = song.seo?.keywords?.join(", ") || "";
+  const Keywords = song?.keywords?.join(", ") || "";
 
   return {
     title: song.title + " lyrics" || "Untitled Song",
@@ -38,7 +38,7 @@ export async function generateMetadata({ id }) {
     openGraph: {
       title: song.title + "lyrics" || "Untitled Song",
       description: song.meta_description || "No description available",
-      url: `https://www.shalomworship.com/song/${song.seo?.slug}`,
+      url: `https://www.shalomworship.com/song/${song?.slug}`,
       images: [{ url: song.image || "/default-image.jpg" }],
     },
   };

@@ -68,7 +68,7 @@ const Song = async ({ params }) => {
           </div>
           <div className="sm:w-8/12 grid">
             <h1 className="text-4xl font-semibold mb-2 text-white">{songData.title} </h1>
-            <div className="flex gap-2 items-baseline flex-wrap">
+            {/* <div className="flex gap-2 items-baseline flex-wrap">
               <p className="font-bold leading-4 text-white">{songData.creator} -</p>
               {songData.artists && songData.artists.length > 0 ? (
                 songData.artists.length > 1 ? (
@@ -86,7 +86,7 @@ const Song = async ({ params }) => {
               ) : (
                 <p className="font-light text-sm leading-4 text-white">Unknown Artist</p>
               )}
-            </div>
+            </div> */}
             <p className="text-sm mt-2 text-white">{songData.published_date}</p>
             <p className="text-sm mt-2 text-white">{songData.category}</p>
           </div>

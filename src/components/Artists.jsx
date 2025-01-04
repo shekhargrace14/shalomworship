@@ -43,13 +43,13 @@ const Artist = () => {
                 </div>
                 <div className="md:w-8/12 grid">
                   <h3 className="line-clamp-1 text-base">{item.title}</h3>
-                  <div className=" flex flex-wrap gap-2 items-baseline sm:line-clamp-20">
+                  {/* <div className=" flex flex-wrap gap-2 items-baseline sm:line-clamp-20">
                     {item.artist.map((artistItem, index) => (
                       <p key={index} className="leading-none text-sm">
                         {artistItem.artist.name}
                       </p>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -26,7 +26,7 @@ const Card = ({ item }) => {
               <h3 className="line-clamp-1 text-1xl mb-1 text-white">{item.title}</h3>
               <p
                 className=" line-clamp-1 text-sm leading-none text-white"
-                dangerouslySetInnerHTML={{ __html: item.creator }}
+                dangerouslySetInnerHTML={{ __html: item.artist }}
               />
             </div>
           </div>

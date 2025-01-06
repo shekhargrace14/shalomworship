@@ -22,7 +22,7 @@ const fetchSongById = (id) => {
 
 const useGetSongById = (id) => {
   return useQuery({
-    queryKey: ["song", id],
+    queryKey: ["songs", id],
     queryFn: async () => await songbyidServerAction(id),
   });
 };

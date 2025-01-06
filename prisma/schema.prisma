@@ -24,6 +24,8 @@ model song {
   excerpt         String
   author          author?        @relation(fields: [authorId], references: [id])
   authorId        String?        @db.ObjectId
+  creator         artist?        @relation(fields: [creatorId], references: [id])
+  creatorId       String?        @db.ObjectId
   artist          SongArtist[] // Explicit relation
   genre           SongGenre[] // Explicit relation
   category        SongCategory[] // Explicit relation
@@ -48,6 +50,7 @@ model artist {
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
   song      SongArtist[] // Explicit relation
+  creator   song[]
 }
 
 model genre {

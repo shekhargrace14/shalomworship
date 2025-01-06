@@ -6,7 +6,7 @@ import Search from "./Search";
 import { usePathname } from "next/navigation";
 
 const Searchbar = () => {
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState();
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
   };
@@ -28,8 +28,8 @@ const Searchbar = () => {
           type="text"
           className=" w-[95%] px-4 bg-transparent outline-none border-none border-collapse "
           // className={`w-full px-4 bg-transparent outline-none border-none border-collapse ${search ? "hidden" : "sm:block"}`}
-          placeholder="Search"
-          defaultValue={searchInput}
+          placeholder="Search "
+          value={searchInput}
           onChange={handleInputChange}
         />
         {searchInput<=1 ? 

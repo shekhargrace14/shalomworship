@@ -1,3 +1,4 @@
+import { fetchSongById} from "@/app/reactQuery/query";
 import Image from "next/image";
 
 export const revalidate = 604800;
@@ -6,18 +7,20 @@ export const dynamic = "force-dynamic";
 
 async function fetchSongData(id) {
   // const songurl = "http://localhost:3000";
-  const songurl = "https://www.shalomworship.com";
-  try {
-    const res = await fetch(`${songurl}/api/song/${id}`);
-    if (!res.ok) {
-      throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
-    }
-    const data = await res.json();
-    return data?.result || null;
-  } catch (error) {
-    console.error("Error fetching song data:", error.message); // Log specific error messages
-    return null; // Return null to prevent further issues
-  }
+  // const songurl = "https://www.shalomworship.com";
+  // try {
+    // const res = await fetch(`${songurl}/api/song/${id}`);
+    const res =  fetchSongById(id)
+    console.log(res, "res result")
+    // if (!res.ok) {
+    //   throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
+    // }
+    const data = res;
+    return data || null;
+  // } catch (error) {
+  //   console.error("Error fetching song data:", error.message); // Log specific error messages
+  //   return null; // Return null to prevent further issues
+  // }
 }
 
 // export async function generateMetadata({ id }) {

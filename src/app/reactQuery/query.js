@@ -12,7 +12,7 @@ const fetchSongs =  () => {
 const useGetSongs = () => {
   return useQuery({
     queryKey: ["songs"],
-    queryFn: fetchSongs,
+    queryFn: songServerAction(),
   });
 };
 const fetchSongById = (id) => {
@@ -23,7 +23,7 @@ const fetchSongById = (id) => {
 const useGetSongById = (id) => {
   return useQuery({
     queryKey: ["song", id],
-    queryFn: async () => await fetchSongById(id),
+    queryFn: songbyidServerAction(id),
   });
 };
 

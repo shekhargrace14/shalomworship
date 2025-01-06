@@ -7,7 +7,7 @@ import { useGetSongs } from "@/app/reactQuery/query";
 const Artist = () => {
   const songData = useGetSongs();
   const urlSlug = usePathname();
-  // console.log(songData)
+  // console.log(songData.data, "artist log")
 
   return (
     <section className="w-full flex flex-col-reverse gap-2">

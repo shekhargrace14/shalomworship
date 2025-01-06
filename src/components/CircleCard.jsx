@@ -1,6 +1,5 @@
 "use client";
-import { DataContext } from "@/app/context/DataContext";
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Card from "./Card";
 import { useGetSongs } from "@/app/reactQuery/query";
 import { songServerAction } from "@/app/actions/song";
@@ -12,7 +11,7 @@ const CircleCard = () => {
   // {
     
   // })
-  // const { songData } = useContext(DataContext);
+
   // console.log(songData.data, "songdata");
   if (!songData || songData.length === 0) {
     return <p>No Song...</p>;

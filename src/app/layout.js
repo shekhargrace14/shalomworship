@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { DataProvider } from "./context/DataContext";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Main from "@/components/Main";
@@ -33,7 +32,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <DataProvider> */}    
+  
           <QueryProvider>
           <Header />
           <div className="flex gap-4 ">
@@ -47,7 +46,7 @@ export default function RootLayout({ children }) {
               {/* <Footer /> */}
             </div>
           </div>
-        {/* </DataProvider> */}
+
         </QueryProvider>
       </body>
     </html>

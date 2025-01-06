@@ -1,11 +1,9 @@
-import { DataContext } from '@/app/context/DataContext';
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
-import React, { useContext } from 'react'
+import React from 'react'
 
 const DisplayOne = ({ data }) => {
-  const { songData } = useContext(DataContext);
   const urlSlug = usePathname()
   return (
     <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">

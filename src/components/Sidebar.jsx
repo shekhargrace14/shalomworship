@@ -1,14 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoIosSearch, IoMdAdd, IoMdClose } from "react-icons/io";
-import { LuLibrary } from "react-icons/lu";
-import Search from "./Search";
+import React from "react";
+
 import Artists from "./Artists";
-import Category from "./Category";
 
 const Sidebar = () => {
   const menu = [

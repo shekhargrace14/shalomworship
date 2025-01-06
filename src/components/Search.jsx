@@ -1,6 +1,5 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import { DataContext } from "@/app/context/DataContext";
 import Image from "next/image";
 import Link from "next/link";
 import { useGetSongs } from "@/app/reactQuery/query";
@@ -10,7 +9,7 @@ const Search = ({ searchInput }) => {
   const { data: songData, isLoading, isError } = useGetSongs();
   
   // console.log(songData,'songData.result');
-  // const { songData } = useContext(DataContext);
+
   
 
   const [searchData, setSearchData] = useState([]);

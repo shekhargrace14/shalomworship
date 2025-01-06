@@ -49,8 +49,8 @@ async function fetchSongData(id) {
 // }
 
 const Song = async ({ params }) => {
-  const id = await params.id;
-  console.log(id," id of song page params")
+  const id = params.id;
+  // console.log(id," id of song page params")
   const songData = await fetchSongData(id);
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;

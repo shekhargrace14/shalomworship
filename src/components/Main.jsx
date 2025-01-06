@@ -1,10 +1,7 @@
 "use client";
 
-import Artist from "./Artists";
 import Banner from "./Banner";
 import CircleCard from "./CircleCard"
-import DisplayOne from "./DisplayOne";
-import Search from "./Search"
 
 const Main = () =>{
     return(

@@ -4,9 +4,7 @@ import prisma from "../lib/prisma"
 
 export  async function songServerAction(){
     try{
-        const song = await prisma.song.findMany()
-    
-        return song
+        return await prisma.song.findMany()
     }catch(error){
         console.error("Error in songServerAction ",error)
         return []

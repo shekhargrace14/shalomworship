@@ -4,15 +4,15 @@ import { songbyidServerAction } from "../actions/songbyid";
 // const url = "http://localhost:3000";
 const url = "https://www.shalomworship.com";
 
-const fetchSongs =  () => {
+const fetchSongs = () => {
   // const res = await fetch('https://fakestoreapi.com/products');
-  const res = songServerAction()
-  return  res
+  const res = songServerAction();
+  return res;
 };
 const useGetSongs = () => {
   return useQuery({
     queryKey: ["songs"],
-    queryFn: ()=> songServerAction(),
+    queryFn: songServerAction,
   });
 };
 const fetchSongById = (id) => {
@@ -23,7 +23,7 @@ const fetchSongById = (id) => {
 const useGetSongById = (id) => {
   return useQuery({
     queryKey: ["song", id],
-    queryFn: ()=>songbyidServerAction(id),
+    queryFn: async () => await songbyidServerAction(id),
   });
 };
 

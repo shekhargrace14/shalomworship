@@ -23,9 +23,9 @@ async function fetchSongData(id) {
 
 export async function generateMetadata({ params }) {
   const id = params.id;
-  console.log(params.id, "params  generateMetadata");
+  // console.log(params.id, "params  generateMetadata");
   const song = await fetchSongData(id);
-  console.log(song, "song  generateMetadata");
+  // console.log(song, "song  generateMetadata");
 
   if (!song) {
     return {

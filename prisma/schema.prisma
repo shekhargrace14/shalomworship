@@ -30,7 +30,7 @@ model song {
   genre           SongGenre[] // Explicit relation
   category        SongCategory[] // Explicit relation
 
-  @@index([slug])
+  @@unique([slug])
 }
 
 model author {

@@ -11,7 +11,7 @@ async function fetchSongData(id) {
   // try {
     // const res = await fetch(`${songurl}/api/song/${id}`);
     const res =  fetchSongById(id)
-    console.log(res, "res result")
+    // console.log(res, "res result")
     // if (!res.ok) {
     //   throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
     // }

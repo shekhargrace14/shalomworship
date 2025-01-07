@@ -6,7 +6,7 @@ import Search from "./Search";
 import { usePathname } from "next/navigation";
 
 const Searchbar = () => {
-  const [searchInput, setSearchInput] = useState();
+  const [searchInput, setSearchInput] = useState("");
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
   };

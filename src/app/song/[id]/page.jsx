@@ -6,8 +6,6 @@ export const revalidate = 604800;
 export const dynamic = "force-dynamic";
 
 async function fetchSongData(id) {
-  // const songurl = "http://localhost:3000";
-  // const songurl = "https://www.shalomworship.com";
   // try {
     // const res = await fetch(`${songurl}/api/song/${id}`);
     const res =  fetchSongById(id)
@@ -23,30 +21,33 @@ async function fetchSongData(id) {
   // }
 }
 
-// export async function generateMetadata({ id }) {
-//   // console.log(params.id, "params  generateMetadata");
-//   const song = await fetchSongData(id);
+export async function generateMetadata({ params }) {
+  const id = params.id;
+  console.log(params.id, "params  generateMetadata");
+  const song = await fetchSongData(id);
+  console.log(song, "song  generateMetadata");
 
-//   if (!song) {
-//     return {
-//       title: "Song Not Found",
-//       description: "The requested song could not be found.",
-//     };
-//   }
-//   const Keywords = song?.keywords?.join(", ") || "";
+  if (!song) {
+    return {
+      title: "Song Not Found",
+      description: "The requested song could not be found.",
+    };
+  }
+  const Keywords = song?.keyword?.join(", ") || "";
 
-//   return {
-//     title: song.title + " lyrics" || "Untitled Song",
-//     description: song.meta_description || "No description available",
-//     keywords: Keywords, // Reuse the 'keywords' variable
-//     openGraph: {
-//       title: song.title + "lyrics" || "Untitled Song",
-//       description: song.meta_description || "No description available",
-//       url: `https://www.shalomworship.com/song/${song?.slug}`,
-//       images: [{ url: song.image || "/default-image.jpg" }],
-//     },
-//   };
-// }
+  return {
+    title: song.title + " " +"lyrics" || "Untitled Song",
+    description: song.metaDescription || "No description available",
+    keywords: Keywords, // Reuse the 'keywords' variable
+   
+    openGraph: {
+      title: song.title + " lyrics" || "Untitled Song",
+      description: song.metaDescription || "No description available",
+      url: `https://www.shalomworship.com/song/${song?.slug}`,
+      images: [{ url: song.image || "/default-image.jpg" }],
+    },
+  };
+}
 
 const Song = async ({ params }) => {
   const id = params.id;

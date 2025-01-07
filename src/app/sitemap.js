@@ -1,16 +1,18 @@
-import { fetchSongs } from "@/app/reactQuery/query";
+// import { fetchSongs } from "@/app/reactQuery/query";
+
+import { songServerAction } from "./actions/song";
+import { fetchSongs } from "./reactQuery/query";
 
 export default async function generateSitemap() {
-  const baseUrl = "https://www.shalomworship.com";
-  // const baseUrl = "http://localhost:3000";
-
+  const baseUrl = process.env.BASE_URL || "https://www.shalomworship.com";
 
   try {
     const posts = await fetchSongs();
+
     const postsUrls =
-      posts.result?.map((post) => ({
-        url: `${baseUrl}/song/${post.seo.slug}`,
-        lastModified: new Date().toISOString(),
+      posts?.map((post) => ({
+        url: `${baseUrl}/song/${post.slug}`,
+        lastModified: post.lastModified || new Date().toISOString(),
       })) ?? [];
 
     return [
@@ -21,7 +23,8 @@ export default async function generateSitemap() {
       ...postsUrls,
     ];
   } catch (error) {
-    console.error("Error generating sitemap:", error);
+    console.error("Error generating sitemap:", error.message, error.stack);
+
     return [
       {
         url: baseUrl,

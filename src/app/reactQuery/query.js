@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { songServerAction } from "../actions/song";
 import { songbyidServerAction } from "../actions/songbyid";
-// const url = "http://localhost:3000";
-const url = "https://www.shalomworship.com";
 
-const fetchSongs =   () => {
-  // const res = await fetch('https://fakestoreapi.com/products');
-  const res = songServerAction()
-  return  res
+
+const fetchSongs = async () => {
+  const res = await songServerAction();
+  return res;
 };
+
+
 const useGetSongs = () => {
   return useQuery({
     queryKey: ["songs"],

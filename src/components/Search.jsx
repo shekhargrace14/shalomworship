@@ -36,7 +36,7 @@ const Search = ({ searchInput }) => {
       {/* <section className="mt-4 max-h-full overflow-hidden p-2 bg-[#375b83]"> */}
           {searchData.length > 0 ? (
             searchData.map((item) => (
-              <Link href={`/song/${item.id}`} key={item.id}>
+              <Link href={`/song/${item.slug}`} key={item.id}>
                 <div className="bg-[#121212] rounded-lg hover:bg-[#3b3b3b] gap-2">
                   <div className=" lg:container mx-auto  p-2 flex gap-4 text-white ">
                     <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">

@@ -13,7 +13,7 @@ const Artist = () => {
     <section className="w-full flex flex-col-reverse gap-2">
       {songData?.data?.length > 0 ? (
         songData.data.map((item) => (
-          <Link key={item.id} href={`/song/${item.id}`}>
+          <Link key={item.id} href={`/song/${item.slug}`}>
             <div
               className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${
                 urlSlug.includes(item.slug) ? "bg-[#2e2a2a]" : "bg-[rgb(0,0,0)]"

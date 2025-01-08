@@ -1,4 +1,4 @@
-import { fetchSongById} from "@/app/reactQuery/query";
+import { fetchSongById } from "@/app/reactQuery/query";
 import Image from "next/image";
 
 export const revalidate = 604800;
@@ -7,14 +7,14 @@ export const dynamic = "force-dynamic";
 
 async function fetchSongData(id) {
   // try {
-    // const res = await fetch(`${songurl}/api/song/${id}`);
-    const res =  fetchSongById(id)
-    // console.log(res, "res result")
-    // if (!res.ok) {
-    //   throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
-    // }
-    const data = res;
-    return data || null;
+  // const res = await fetch(`${songurl}/api/song/${id}`);
+  const res = fetchSongById(id);
+  // console.log(res, "page res result")
+  // if (!res.ok) {
+  //   throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
+  // }
+  const data = res;
+  return data || null;
   // } catch (error) {
   //   console.error("Error fetching song data:", error.message); // Log specific error messages
   //   return null; // Return null to prevent further issues
@@ -36,10 +36,10 @@ export async function generateMetadata({ params }) {
   const Keywords = song?.keyword?.join(", ") || "";
 
   return {
-    title: song.title + " " +"lyrics" || "Untitled Song",
+    title: song.title + " " + "lyrics" || "Untitled Song",
     description: song.metaDescription || "No description available",
     keywords: Keywords, // Reuse the 'keywords' variable
-   
+
     openGraph: {
       title: song.title + " lyrics" || "Untitled Song",
       description: song.metaDescription || "No description available",
@@ -71,28 +71,68 @@ const Song = async ({ params }) => {
             />
           </div>
           <div className="sm:w-8/12 grid">
-            <h1 className="text-4xl font-semibold mb-2 text-white">{songData.title} </h1>
-            {/* <div className="flex gap-2 items-baseline flex-wrap">
-              <p className="font-bold leading-4 text-white">{songData.creator} -</p>
-              {songData.artists && songData.artists.length > 0 ? (
-                songData.artists.length > 1 ? (
-                  songData.artists.map((artist, index) => (
-                    <span key={index} className="font-light text-sm leading-4 text-white">
-                      {artist}
-                      {index < songData.artists.length - 1 ? ", " : ""}
+            <h1 className="text-4xl font-semibold mb-2 text-white">
+              {songData.title}{" "}
+            </h1>
+
+            <div className="flex gap-2 items-baseline flex-wrap">
+              {songData.creator.name} -
+              {songData.artist && songData.artist.length > 0 ? (
+                songData.artist.length > 1 ? (
+                  songData.artist.map((artist, index) => (
+                    <span
+                      key={index}
+                      className="font-light text-sm leading-4 text-white"
+                    >
+                      {artist.artist.name}
+                      {index < songData.artist.length - 1 ? ", " : ""}
                     </span>
                   ))
                 ) : (
                   <p className="font-light text-sm leading-4 text-white">
-                    {songData.artists[0]}
+                    {songData.artist[0].artist.name}
                   </p>
                 )
               ) : (
-                <p className="font-light text-sm leading-4 text-white">Unknown Artist</p>
+                <p className="font-light text-sm leading-4 text-white">
+                  Unknown Artist
+                </p>
               )}
-            </div> */}
-            <p className="text-sm mt-2 text-white">{songData.published_date}</p>
-            <p className="text-sm mt-2 text-white">{songData.category}</p>
+            </div>
+
+            <div className="flex gap-2 items-baseline flex-wrap">
+
+
+              {songData.category && songData.category.length > 0 ? (
+                songData.category.length > 1 ? (
+                  songData.category.map((category, index) => (
+                    <span
+                      key={index}
+                      className="font-light text-sm leading-4 text-white"
+                    >
+                      {category.category.name}
+                      {index < songData.category.length - 1 ? ", " : ""}
+                    </span>
+                  ))
+                ) : (
+                  <p className="font-light text-sm leading-4 text-white">
+                    {songData.category[0].category.name}
+                  </p>
+                )
+              ) : (
+                <p className="font-light text-sm leading-4 text-white">
+                  Unknown category
+                </p>
+              )}
+
+              <p className="text-sm mt-2 text-white">
+                {new Date(songData.createdAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -101,9 +141,9 @@ const Song = async ({ params }) => {
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}
           <p className="my-8">
-            Credits -  &nbsp;
-            <a href={songData.credits} target="_blank">
-              {songData.creator}
+            Credits - &nbsp;
+            <a href={songData.creator.link} target="_blank">
+              {songData.creator.name}
             </a>
           </p>
         </section>

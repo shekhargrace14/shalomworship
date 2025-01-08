@@ -7,10 +7,10 @@ import { useGetSongs } from "@/app/reactQuery/query";
 const Artist = () => {
   const songData = useGetSongs();
   const urlSlug = usePathname();
-  // console.log(songData.data, "artist log")
+  console.log(songData.data, "artist log")
 
   return (
-    <section className="w-full flex flex-col-reverse gap-2">
+    <section className="w-full flex flex-col gap-2">
       {songData?.data?.length > 0 ? (
         songData.data.map((item) => (
           <Link key={item.id} href={`/song/${item.slug}`}>
@@ -32,6 +32,8 @@ const Artist = () => {
                 </div>
                 <div className="md:w-8/12 grid">
                   <h3 className="line-clamp-1 text-base">{item.title}</h3>
+                  <h3 className="line-clamp-1 text-base">{item.creator.name}</h3>
+
                   {/* <div className=" flex flex-wrap gap-2 items-baseline sm:line-clamp-20">
                     {item.artist.map((artistItem, index) => (
                       <p key={index} className="leading-none text-sm">

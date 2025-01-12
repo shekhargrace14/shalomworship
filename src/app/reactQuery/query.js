@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { songServerAction } from "../actions/song";
-import  songById  from "../actions/songById";
+import { songByIdAction } from "../actions/songByIdAction";
 import { songBySlug } from "../actions/songBySlug";
 import { artistServerAction } from "../actions/artist";
 import { artistBySlug } from "../actions/artistBySlug";
@@ -22,14 +22,14 @@ const useGetSongs = () => {
 // Song By Id
 
 const fetchSongById = async (id) => {
-  const res = await songById(id);
+  const res = await songByIdAction(id);
   return res;
 };
 
 const useGetSongById = (id) => {
   return useQuery({
     queryKey: ["songs", id],
-    queryFn: async () => await songById(id),
+    queryFn: async () => await songByIdAction(id),
   });
 };
 

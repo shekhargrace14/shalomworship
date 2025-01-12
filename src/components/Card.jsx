@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Card = ({ item }) => {
-  // console.log(item.id, "card item")
+  // console.log(item.slug, "card item")
   return (
     
     <>
-      <Link href={`/song/${item.id}`}>
+      <Link href={`/song/${item.slug}`}>
         <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image

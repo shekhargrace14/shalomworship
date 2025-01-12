@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { songServerAction } from "../actions/song";
-import { songbyidServerAction } from "../actions/songbyid";
+import { songById } from "../actions/songById";
+import { songBySlug } from "../actions/songBySlug";
 import { artistServerAction } from "../actions/artist";
 import { categorySeverAction } from "../actions/category";
-import { artistByIdServerAction } from "../actions/artistById";
+import { artistBySlug } from "../actions/artistBySlug";
 
 
 const fetchSongs = async () => {
@@ -18,18 +19,35 @@ const useGetSongs = () => {
     queryFn: songServerAction,
   });
 };
+
+// Song By Id
+
 const fetchSongById = async (id) => {
-  const res = await songbyidServerAction(id);
+  const res = await songById(id);
   return res;
 };
-
 
 const useGetSongById = (id) => {
   return useQuery({
     queryKey: ["songs", id],
-    queryFn: async () => await songbyidServerAction(id),
+    queryFn: async () => await songById(id),
   });
 };
+
+// Song By Slug
+
+const fetchSongBySlug = async (songSlug) => {
+  const res = await songBySlug(songSlug);
+  return res;
+};
+
+const useGetSongBySlug = (songSlug) => {
+  return useQuery({
+    queryKey: ["songs", songSlug],
+    queryFn: async () => await songBySlug(songSlug),
+  });
+};
+
 
 // artist 
 const fetchArtists = async () =>{
@@ -44,15 +62,15 @@ const useGetArtists = () =>{
   })
 }
 
-const fetchArtistById = (id) =>{
-  const res = artistByIdServerAction(id)
+const fetchArtistBySlug = (artistSlug) =>{
+  const res = artistBySlug(artistSlug)
   return res;
 }
 
-const useGetArtistById = (id) =>{
+const useGetArtistBySlug = (artistSlug) =>{
   return useQuery({
     queryKey:["artist"],
-    queryFn : async ()=> await artistByIdServerAction(id)
+    queryFn : async ()=> await artistBySlug(artistSlug)
   })
 }
 // creator
@@ -71,4 +89,10 @@ const useGetCategories = () =>{
 
 
 
-export { fetchSongById, fetchSongs, useGetSongById, useGetSongs, fetchArtists, useGetArtists, fetchCategories, useGetCategories, fetchArtistById, useGetArtistById};
+export { 
+  fetchSongById, fetchSongs, 
+  fetchSongBySlug, useGetSongBySlug,
+  useGetSongById, useGetSongs, 
+  fetchArtists, useGetArtists, 
+  fetchCategories, useGetCategories, 
+  fetchArtistBySlug, useGetArtistBySlug};

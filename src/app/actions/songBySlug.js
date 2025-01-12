@@ -2,10 +2,10 @@
 
 import prisma from "../lib/prisma";
 
-export async function songById(id) {
+export async function songBySlug(songSlug) {
   try {
     const song =  prisma.song.findUnique({
-      where: { id : id },
+      where: { slug : songSlug },
       include: {
         author: true,
         creator: true,

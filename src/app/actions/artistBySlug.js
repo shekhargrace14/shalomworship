@@ -2,11 +2,11 @@
 
 import prisma from "../lib/prisma"
 
-export async function artistByIdServerAction(id) {
+export async function artistBySlug(artistslug) {
     try{
         return await prisma.artist.findMany({
             where:{
-                id:id
+                slug: artistslug
             },
             include: {
               song: true, // Fetch all songs related to the artist

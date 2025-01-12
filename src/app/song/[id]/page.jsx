@@ -1,4 +1,4 @@
-import { fetchSongById, useGetSongById } from "@/app/reactQuery/query";
+import { fetchSongById, fetchSongBySlug, useGetSongById } from "@/app/reactQuery/query";
 import CardBox from "@/components/CardBox";
 import CreatorSongs from "@/components/CreatorSongs";
 import Processor from "@/components/Processor";
@@ -11,7 +11,7 @@ export const revalidate = 604800;
 export const dynamic = "force-dynamic";
 
 async function fetchSongData(id) {
-  const res = fetchSongById(id);
+  const res = await fetchSongBySlug(id);
   // console.log(res, "page res result");
 
   const data = res;
@@ -56,8 +56,8 @@ export async function generateMetadata({ params }) {
 
 const Song = async ({ params }) => {
   const id = await params.id;
+  // console.log(id, " id of song page params");
   const songData = await fetchSongData(id);
-  // console.log(songData, " id of song page params");
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
 
@@ -71,7 +71,7 @@ const Song = async ({ params }) => {
     }
   });
   // console.log(artists, " artists of song page params");
-  // console.log(creators, " creators of song page params");
+  console.log(creators, " creators of song page params");
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
@@ -102,7 +102,7 @@ const Song = async ({ params }) => {
             <div>
               {creators.length > 0 ? (
                 creators.map((creator, index) => (
-                  <Link key={index} href={`/artist/${creator.id}`}>
+                  <Link key={index} href={`/artist/${creator.slug}`}>
 
                   <span
                     className="font-semibold text-base leading-4 text-white underline"
@@ -123,7 +123,7 @@ const Song = async ({ params }) => {
 
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
-                  <Link key={index} href={`/artist/${artist.id}`}>
+                  <Link key={index} href={`/artist/${artist.slug}`}>
                   <span
                     
                     className="font-light text-sm leading-4 text-white underline"
@@ -204,7 +204,7 @@ const Song = async ({ params }) => {
         </section>
         <h3 className="sm:text-xl text-base font-semibold mb-2 mt-8 text-white">
           Song You May Like from &nbsp; 
-          <Link className="underline" href={`/artist/${creators[0].id}`}>
+          <Link className="underline" href={`/artist/${creators[0].slug}`}>
             {creators[0].name}
           </Link>
           

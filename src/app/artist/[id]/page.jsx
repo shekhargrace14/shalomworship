@@ -1,15 +1,15 @@
-import { fetchArtistById, useGetArtistById } from "@/app/reactQuery/query";
+import { fetchArtistBySlug, useGetArtistById } from "@/app/reactQuery/query";
 import Processor from "@/components/Processor";
 import Image from "next/image";
 
 const Page = async ({ params }) => {
-  const id = params.id;
-  const artistData = await fetchArtistById(id);
+  const artistSlug = params.id;
+  const artistData = await fetchArtistBySlug(artistSlug);
   const data = artistData[0];
 
   // console.log(artistData, "artistData artist page data");
-  // console.log(data.song, "artist page data");
-  // console.log(id, "artist page id");
+  console.log(data.song, "artist song page data");
+  console.log(artistSlug, "artist page id");
   return (
     <>
       {/* hello {data.name} */}
@@ -39,7 +39,7 @@ const Page = async ({ params }) => {
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-0 ">
             {data.song.map((item) => (
               <div key={item.songId}>
-                <Processor params={item.songId} />
+                <Processor item={item.songId} />
               </div>
             ))}
           </div>

@@ -1,12 +1,13 @@
-import { fetchSongById } from "@/app/reactQuery/query"
+import { fetchSongById, fetchSongBySlug } from "@/app/reactQuery/query"
 import Card from "./Card"
 
 
 
-export default async function Processor({params}){
-    // console.log(params,"Processor log props")
-    const song = await fetchSongById(params)
-    // console.log(song,"Processor log song")
+export default async function Processor({item}){
+    // const slug = slug
+    console.log(item,"Processor log props")
+    const song = await fetchSongById(item)
+    console.log(song,"Processor log song")
 
     return(
         <>

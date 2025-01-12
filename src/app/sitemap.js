@@ -8,7 +8,7 @@ export default async function generateSitemap() {
 
   try {
     const posts = await fetchSongs();
-    // const artists = await fetchArtists();
+    const artists = await fetchArtists();
     // const categories = await fetchCategories();
     
 
@@ -18,11 +18,11 @@ export default async function generateSitemap() {
         lastModified: post.lastModified || new Date().toISOString(),
       })) ?? [];
 
-    // const artistsUrls =
-    //   artists?.map((artist) => ({
-    //     url: `${baseUrl}/artist/${artist.slug}`,
-    //     lastModified: artist.lastModified || new Date().toISOString(),
-    //   })) ?? [];
+    const artistsUrls =
+      artists?.map((artist) => ({
+        url: `${baseUrl}/artist/${artist.slug}`,
+        lastModified: artist.lastModified || new Date().toISOString(),
+      })) ?? [];
 
       // const categoriesUrls =
       // categories?.map((category) => ({
@@ -36,7 +36,7 @@ export default async function generateSitemap() {
         lastModified: new Date().toISOString(),
       },
       ...postsUrls,
-      // ...artistsUrls,
+      ...artistsUrls,
       // ...categoriesUrls,
     ];
   } catch (error) {

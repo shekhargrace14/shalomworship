@@ -16,7 +16,7 @@ const Artist = () => {
           ?.slice()
           .reverse()
           .map((item) => (
-            <Link key={item.id} href={`/artist/${item.id}`}>
+            <Link key={item.id} href={`/artist/${item.slug}`}>
               <div key={item.id}>
                 <div
                   className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${

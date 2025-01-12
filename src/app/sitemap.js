@@ -1,8 +1,6 @@
 // import { fetchSongs } from "@/app/reactQuery/query";
 
-import { songServerAction } from "./actions/song";
-import { fetchArtists, fetchCategories, fetchSongs } from "./reactQuery/query";
-
+import { fetchArtists, fetchSongs } from "./reactQuery/query";
 export default async function generateSitemap() {
   const baseUrl = process.env.BASE_URL || "https://www.shalomworship.com";
 

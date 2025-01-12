@@ -1,5 +1,5 @@
 
-import { useGetCategory } from "@/app/reactQuery/query";
+// import { useGetCategory } from "@/app/reactQuery/query";
 import Link from "next/link";
 
 
@@ -26,14 +26,14 @@ const Category=()=>{
     return(
         <>
             <h2>Category</h2>
-            <ul>
+            {/* <ul>
 
                 {categories.data?.map((item)=>(
                     <Link href={`/song/${item.name}`} key={item.id}>
                         <li key={item.id} className=" rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000]">{item.name}</li>
                     </Link>
                 ))}
-            </ul>
+            </ul> */}
 
         </>
     )

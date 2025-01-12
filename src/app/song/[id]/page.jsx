@@ -1,8 +1,5 @@
-import { fetchSongById, fetchSongBySlug, useGetSongById } from "@/app/reactQuery/query";
-import CardBox from "@/components/CardBox";
+import { fetchSongBySlug} from "@/app/reactQuery/query";
 import CreatorSongs from "@/components/CreatorSongs";
-import Processor from "@/components/Processor";
-// import CircleCard from "@/components/CircleCard";
 import Image from "next/image";
 import Link from "next/link";
 

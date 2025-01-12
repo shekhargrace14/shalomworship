@@ -1,9 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { IoIosClose, IoIosSearch, IoMdHome } from "react-icons/io";
-import Search from "./Search";
-import { usePathname } from "next/navigation";
+import { IoMdHome } from "react-icons/io";
 import Searchbar from "./Searchbar";
 
 const Header = () => {

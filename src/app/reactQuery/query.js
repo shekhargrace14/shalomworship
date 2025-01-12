@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { songServerAction } from "../actions/song";
-import { songById } from "../actions/songById";
 import { songBySlug } from "../actions/songBySlug";
 import { artistServerAction } from "../actions/artist";
-import { categorySeverAction } from "../actions/category";
 import { artistBySlug } from "../actions/artistBySlug";
+import { songById } from "../actions/songById";
 
 
 const fetchSongs = async () => {
@@ -74,18 +73,9 @@ const useGetArtistBySlug = (artistSlug) =>{
   })
 }
 // creator
-// category
 
-const fetchCategories = async () =>{
-  const res = await categorySeverAction()
-  return res;
-}
-const useGetCategories = () =>{
-  return useQuery({
-    queryKey : ["categories"],
-    queryFn : categorySeverAction,
-  })
-}
+
+
 
 
 
@@ -94,5 +84,4 @@ export {
   fetchSongBySlug, useGetSongBySlug,
   useGetSongById, useGetSongs, 
   fetchArtists, useGetArtists, 
-  fetchCategories, useGetCategories, 
   fetchArtistBySlug, useGetArtistBySlug};

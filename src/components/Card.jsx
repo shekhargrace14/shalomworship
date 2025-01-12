@@ -5,7 +5,19 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Card = ({ item }) => {
-  // console.log(item.slug, "card item")
+  // console.log(item, "card item")
+
+  const artists = [];
+  const creators = [];
+  item.artist.forEach((item) => {
+    if (item.isCreator) {
+      creators.push(item.artist);
+    } else {
+      artists.push(item.artist);
+    }
+  });
+  // console.log(artists, " artists of song page params");
+  // console.log(creators, " creators of song page params");
   return (
     
     <>
@@ -22,7 +34,7 @@ const Card = ({ item }) => {
           <div className="w-full lg:w-full py-2">
             <div className="">
               <h3 className="line-clamp-1 text-1xl mb-1 text-white">{item.title}</h3>
-              <p className=" line-clamp-1 text-sm leading-none text-white">{item.creator?.name}</p>
+              <p className=" line-clamp-1 text-sm leading-none text-white">{creators[0].name}</p>
             </div>
           </div>
         </div>

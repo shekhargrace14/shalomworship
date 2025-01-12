@@ -4,7 +4,7 @@ import prisma from "../lib/prisma"
 
 export  async function songServerAction(){
     try{
-        return await await prisma.song.findMany({
+        return await prisma.song.findMany({
             include: {
               author: true,
               creator: true,

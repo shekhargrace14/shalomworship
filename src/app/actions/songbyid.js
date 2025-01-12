@@ -4,8 +4,8 @@ import prisma from "../lib/prisma";
 
 export async function songbyidServerAction(id) {
   try {
-    const song = await prisma.song.findUnique({
-      where: { slug: id },
+    const song =  prisma.song.findUnique({
+      where: { id : id },
       include: {
         author: true,
         creator: true,
@@ -28,7 +28,7 @@ export async function songbyidServerAction(id) {
     });
 
     if (!song) {
-      console.warn(`Song with slug "${slug}" not found.`);
+      console.warn(`Song with slug "" not found.`);
       return null;
     }
 

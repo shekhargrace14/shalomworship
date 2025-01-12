@@ -11,8 +11,8 @@ model song {
   id              String         @id @default(auto()) @map("_id") @db.ObjectId
   title           String
   content         String
-  image           String
-  video           String
+  image           String?
+  video           String?
   view            Int
   like            Int
   createdAt       DateTime       @default(now())
@@ -21,7 +21,7 @@ model song {
   slug            String
   keyword         String[]
   metaDescription String
-  excerpt         String
+  excerpt         String?
   author          author?        @relation(fields: [authorId], references: [id])
   authorId        String?        @db.ObjectId
   creator         artist?        @relation(fields: [creatorId], references: [id])
@@ -46,7 +46,8 @@ model artist {
   id        String       @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   link      String?
-  image     String
+  image     String?
+  slug      String?
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
   song      SongArtist[] // Explicit relation
@@ -66,6 +67,7 @@ model category {
   id        String         @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   image     String
+  slug      String?
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
   song      SongCategory[] // Explicit relation
@@ -73,11 +75,13 @@ model category {
 
 // Intermediate table for song-artist many-to-many
 model SongArtist {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  songId   String @db.ObjectId
-  artistId String @db.ObjectId
-  song     song   @relation(fields: [songId], references: [id])
-  artist   artist @relation(fields: [artistId], references: [id])
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  songId    String   @db.ObjectId
+  artistId  String   @db.ObjectId
+  isCreator Boolean? @default(false)
+  isArtist  Boolean? @default(true)
+  song      song     @relation(fields: [songId], references: [id])
+  artist    artist   @relation(fields: [artistId], references: [id])
 }
 
 // Intermediate table for song-genre many-to-many

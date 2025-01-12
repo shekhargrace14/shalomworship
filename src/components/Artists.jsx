@@ -2,50 +2,51 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { useGetSongs } from "@/app/reactQuery/query";
+import { useGetArtists } from "@/app/reactQuery/query";
 
 const Artist = () => {
-  const songData = useGetSongs();
+  const artistData = useGetArtists();
   const urlSlug = usePathname();
-  console.log(songData.data, "artist log")
+  // console.log(artistData.data, "ArtistData log")  
 
   return (
     <section className="w-full flex flex-col gap-2">
-      {songData?.data?.length > 0 ? (
-        songData.data.map((item) => (
-          <Link key={item.id} href={`/song/${item.slug}`}>
-            <div
-              className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${
-                urlSlug.includes(item.slug) ? "bg-[#2e2a2a]" : "bg-[rgb(0,0,0)]"
-              }`}
-            >
-              <div className="lg:container mx-auto p-2 md:flex gap-4 text-white">
-                <div className="bg-gray-300 flex items-center md:w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 mb-4">
-                  <Image
-                    src={item.image}
-                    alt={item.title || "Song Image"}
-                    width={700}
-                    height={100}
-                    className="bg-gray-300 object-cover h-full"
-                    priority
-                  />
-                </div>
-                <div className="md:w-8/12 grid">
-                  <h3 className="line-clamp-1 text-base">{item.title}</h3>
-                  <h3 className="line-clamp-1 text-base">{item.creator.name}</h3>
-
-                  {/* <div className=" flex flex-wrap gap-2 items-baseline sm:line-clamp-20">
-                    {item.artist.map((artistItem, index) => (
-                      <p key={index} className="leading-none text-sm">
-                        {artistItem.artist.name}
-                      </p>
-                    ))}
-                  </div> */}
+      {artistData?.data?.length > 0 ? (
+        artistData.data
+          ?.slice()
+          .reverse()
+          .map((item) => (
+            <Link key={item.id} href={`/artist/${item.id}`}>
+              <div key={item.id}>
+                <div
+                  className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${
+                    urlSlug.includes(item.slug)
+                      ? "bg-[#2e2a2a]"
+                      : "bg-[rgb(0,0,0)]"
+                  }`}
+                >
+                  <div className="lg:container mx-auto p-2 md:flex gap-4">
+                    <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0 mb-4">
+                      <Image
+                        src={item?.image}
+                        alt={item?.title || "Song Image"}
+                        width={80}
+                        height={80}
+                        className="bg-gray-300 object-cover h-full"
+                        priority
+                      />
+                    </div>
+                    <div className="md:w-8/12 grid items-center">
+                      <h3 className="line-clamp-1 font-semibold text-base">
+                        {item.name}
+                      </h3>
+                      <h3 className="line-clamp-1 text-sm">Artist</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))
+            </Link>
+          ))
       ) : (
         <p className="text-white text-center">No results found.</p>
       )}

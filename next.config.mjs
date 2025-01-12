@@ -3,13 +3,25 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'techcrunch.com', // Correct hostname
+        protocol: "https",
+        hostname: "yt3.googleusercontent.com",
       },
       {
-          protocol: 'https',
-          hostname: 'img.youtube.com', // Correct hostname
-      }
+        protocol: "https",
+        hostname: "yt3.ggpht.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.google.com",
+      },
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+      },
     ],
   },
 };

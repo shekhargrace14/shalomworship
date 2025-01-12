@@ -1,28 +1,25 @@
-import { fetchSongById } from "@/app/reactQuery/query";
+import { fetchSongById, useGetSongById } from "@/app/reactQuery/query";
+import CardBox from "@/components/CardBox";
+import CreatorSongs from "@/components/CreatorSongs";
+import Processor from "@/components/Processor";
+// import CircleCard from "@/components/CircleCard";
 import Image from "next/image";
+import Link from "next/link";
 
 export const revalidate = 604800;
 
 export const dynamic = "force-dynamic";
 
 async function fetchSongData(id) {
-  // try {
-  // const res = await fetch(`${songurl}/api/song/${id}`);
   const res = fetchSongById(id);
-  // console.log(res, "page res result")
-  // if (!res.ok) {
-  //   throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
-  // }
+  // console.log(res, "page res result");
+
   const data = res;
   return data || null;
-  // } catch (error) {
-  //   console.error("Error fetching song data:", error.message); // Log specific error messages
-  //   return null; // Return null to prevent further issues
-  // }
 }
 
 export async function generateMetadata({ params }) {
-  const id = params.id;
+  const id = await params.id;
   // console.log(params.id, "params  generateMetadata");
   const song = await fetchSongData(id);
   // console.log(song, "song  generateMetadata");
@@ -39,22 +36,42 @@ export async function generateMetadata({ params }) {
     title: song.title + " " + "lyrics" || "Untitled Song",
     description: song.metaDescription || "No description available",
     keywords: Keywords, // Reuse the 'keywords' variable
-
+    robots:
+      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    alternates: {
+      canonical: `https://www.shalomworship.com/song/${encodeURIComponent(
+        song?.slug
+      )}`,
+    },
     openGraph: {
       title: song.title + " lyrics" || "Untitled Song",
       description: song.metaDescription || "No description available",
-      url: `https://www.shalomworship.com/song/${song?.slug}`,
+      url: `https://www.shalomworship.com/song/${encodeURIComponent(
+        song?.slug
+      )}`,
       images: [{ url: song.image || "/default-image.jpg" }],
     },
   };
 }
 
 const Song = async ({ params }) => {
-  const id = params.id;
-  // console.log(id," id of song page params")
+  const id = await params.id;
   const songData = await fetchSongData(id);
+  // console.log(songData, " id of song page params");
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
+
+  const artists = [];
+  const creators = [];
+  songData.artist.forEach((item) => {
+    if (item.isCreator) {
+      creators.push(item.artist);
+    } else {
+      artists.push(item.artist);
+    }
+  });
+  // console.log(artists, " artists of song page params");
+  // console.log(creators, " creators of song page params");
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
@@ -70,39 +87,60 @@ const Song = async ({ params }) => {
               priority={100}
             />
           </div>
+
           <div className="sm:w-8/12 grid">
             <h1 className="text-4xl font-semibold mb-2 text-white">
               {songData.title}{" "}
             </h1>
 
+            {/* ////////////////////////////////////////////////////////////////////////////// */}
+            
+            {/* ////////////////////////////////////////////////////////////////////////////// */}
+
             <div className="flex gap-2 items-baseline flex-wrap">
-              {songData.creator.name} -
-              {songData.artist && songData.artist.length > 0 ? (
-                songData.artist.length > 1 ? (
-                  songData.artist.map((artist, index) => (
-                    <span
-                      key={index}
-                      className="font-light text-sm leading-4 text-white"
+
+            <div>
+              {creators.length > 0 ? (
+                creators.map((creator, index) => (
+                  <Link key={index} href={`/artist/${creator.id}`}>
+
+                  <span
+                    className="font-semibold text-base leading-4 text-white underline"
                     >
-                      {artist.artist.name}
-                      {index < songData.artist.length - 1 ? ", " : ""}
-                    </span>
-                  ))
-                ) : (
-                  <p className="font-light text-sm leading-4 text-white">
-                    {songData.artist[0].artist.name}
-                  </p>
-                )
+                    {creator.name}
+                    {index < creators.length - 1 ? ", " : ""}
+                  </span>
+                    </Link>
+                ))
+              ) : (
+                <p className="font-semibold text-sm leading-4 text-white ">
+                  No creator specified
+                </p>
+              )}
+            </div>
+
+                -
+
+              {artists.length > 0 ? (
+                artists.map((artist, index) => (
+                  <Link key={index} href={`/artist/${artist.id}`}>
+                  <span
+                    
+                    className="font-light text-sm leading-4 text-white underline"
+                    >
+                    {artist.name}
+                    {index < artists.length - 1 ? ", " : ""}
+                  </span>
+                    </Link>
+                ))
               ) : (
                 <p className="font-light text-sm leading-4 text-white">
-                  Unknown Artist
+                  
                 </p>
               )}
             </div>
 
             <div className="flex gap-2 items-baseline flex-wrap">
-
-
               {songData.category && songData.category.length > 0 ? (
                 songData.category.length > 1 ? (
                   songData.category.map((category, index) => (
@@ -124,7 +162,7 @@ const Song = async ({ params }) => {
                   Unknown category
                 </p>
               )}
-
+              &bull;
               <p className="text-sm mt-2 text-white">
                 {new Date(songData.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -138,15 +176,49 @@ const Song = async ({ params }) => {
       </div>
       <main className="mx-auto p-4">
         <section className="w-full text-white">
+          <h2 className="text-1xl font-semibold mb-2 text-white">
+            {songData.title} lyrics
+          </h2>
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
           {/* <div >{songData.content }</div> */}
-          <p className="my-8">
-            Credits - &nbsp;
-            <a href={songData.creator.link} target="_blank">
-              {songData.creator.name}
-            </a>
-          </p>
+          <div className="flex gap-2 items-baseline flex-wrap my-4">
+            {creators.length > 0 ? (
+              creators.map((creator, index) => (
+                <span
+                  key={index}
+                  className="text-base font-semibold leading-4 text-white"
+                >
+                  Credits - &nbsp;
+                  <Link href={creator.link} target="_blank">
+                    {creator.name}
+                    {index < creators.length - 1 ? ", " : ""}
+                  </Link>
+                </span>
+              ))
+            ) : (
+              <p className="font-light text-sm leading-4 text-white">
+                No creator specified
+              </p>
+            )}
+          </div>
         </section>
+        <h3 className="sm:text-xl text-base font-semibold mb-2 mt-8 text-white">
+          Song You May Like from &nbsp; 
+          <Link className="underline" href={`/artist/${creators[0].id}`}>
+            {creators[0].name}
+          </Link>
+          
+        </h3>
+
+        {creators.length > 0 ? (
+          creators.map((creator, index) => (
+            <CreatorSongs key={index} params={creator} />
+          ))
+        ) : (
+          <p className="font-light text-sm leading-4 text-white">
+            No creator specified
+          </p>
+        )}
       </main>
     </div>
   );

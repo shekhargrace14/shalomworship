@@ -5,9 +5,9 @@ import Card from "./Card"
 
 export default async function Processor({item}){
     // const slug = slug
-    console.log(item,"Processor log props")
+    // console.log(item,"Processor log props")
     const song = await fetchSongById(item)
-    console.log(song,"Processor log song")
+    // console.log(song,"Processor log song")
 
     return(
         <>

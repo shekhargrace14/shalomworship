@@ -10,8 +10,8 @@ const CreatorSongs = async ({ params }) => {
   const artistData = await fetchArtistBySlug(slug);
   const data = artistData[0];
 
-  console.log(slug, "artist page slug");
-  console.log(data.song, "artist.song  data");
+  // console.log(slug, "artist page slug");
+  // console.log(data.song, "artist.song  data");
     // console.log(params, "CreatorSongs params");
     
   // console.log(artistData, "artistData artist page data");

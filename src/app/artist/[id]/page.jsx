@@ -8,8 +8,8 @@ const Page = async ({ params }) => {
   const data = artistData[0];
 
   // console.log(artistData, "artistData artist page data");
-  console.log(data.song, "artist song page data");
-  console.log(artistSlug, "artist page id");
+  // console.log(data.song, "artist song page data");
+  // console.log(artistSlug, "artist page id");
   return (
     <>
       {/* hello {data.name} */}

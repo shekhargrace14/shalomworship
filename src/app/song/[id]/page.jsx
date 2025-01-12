@@ -71,7 +71,7 @@ const Song = async ({ params }) => {
     }
   });
   // console.log(artists, " artists of song page params");
-  console.log(creators, " creators of song page params");
+  // console.log(creators, " creators of song page params");
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">

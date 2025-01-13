@@ -53,7 +53,7 @@ const Search = ({ searchInput }) => {
                         {item.title}
                       </h3>
                       <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20">
-                        <p className="leading-none">{item.creator.name}</p>
+                        {/* <p className="leading-none">{item.creator.name}</p> */}
                       </div>
                     </div>
                   </div>

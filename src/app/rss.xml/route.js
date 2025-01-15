@@ -36,7 +36,7 @@ export async function GET() {
     <item>
       <title>${post.title} </title>
       <link>${baseUrl}/song/${post.slug}</link>
-      <description>${post.metaDescription}</description>
+      <description>${post.title}</description>
       <pubDate>${new Date(post.createdAt).toUTCString()}</pubDate>
       <guid>${baseUrl}/song/${post.slug}</guid>
     </item>`

@@ -38,7 +38,7 @@ export async function GET() {
       <link>${baseUrl}/song/${post.slug}</link>
       <description>${post.metaDescription}</description>
       <pubDate>${new Date(post.createdAt).toUTCString()}</pubDate>
-      <guid>${post.slug}</guid>
+      <guid>${baseUrl}/song/${post.slug}</guid>
     </item>`
       )
       .join("")}

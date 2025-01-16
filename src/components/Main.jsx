@@ -8,7 +8,7 @@ const Main = () =>{
         <>
             <div className=" p-2  h-[90vh] overflow-y-auto custom-scrollbar ">
                 {/* <Songpage /> */}
-                <Banner/>
+                {/* <Banner/> */}
                 <CircleCard/>
                 <br/>
                 {/* <DisplayOne/> */}

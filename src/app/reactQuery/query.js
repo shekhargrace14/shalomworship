@@ -4,6 +4,8 @@ import { songByIdAction } from "../actions/songByIdAction";
 import { songBySlug } from "../actions/songBySlug";
 import { artistServerAction } from "../actions/artist";
 import { artistBySlug } from "../actions/artistBySlug";
+import { category } from "../actions/category";
+import { categoryBySlug } from "../actions/categoryBySlug";
 
 
 const fetchSongs = async () => {
@@ -72,11 +74,39 @@ const useGetArtistBySlug = (artistSlug) =>{
     queryFn : async ()=> await artistBySlug(artistSlug)
   })
 }
-// creator
+// Category
+const fetchCategory = async () =>{
+  const res = await category()
+  return res;
+}
+
+const useGetCategory = () =>{
+  return useQuery({
+    queryKey : ["category"],
+    queryFn: category,
+  })
+}
+
+const fetchCategoryBySlug = (categorySlug) =>{
+  const res = categoryBySlug(categorySlug)
+  return res;
+}
+
+const useGetCategoryBySlug = (categorySlug) =>{
+  return useQuery({
+    queryKey:["artist"],
+    queryFn : async ()=> await categoryBySlug(categorySlug)
+  })
+}
+
+
+
 
 export { 
   fetchSongById, fetchSongs, 
   fetchSongBySlug, useGetSongBySlug,
   useGetSongById, useGetSongs, 
   fetchArtists, useGetArtists, 
-  fetchArtistBySlug, useGetArtistBySlug};
+  fetchArtistBySlug, useGetArtistBySlug,
+  fetchCategory, useGetCategory, fetchCategoryBySlug, useGetCategoryBySlug,
+};

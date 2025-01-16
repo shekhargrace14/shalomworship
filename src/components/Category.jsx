@@ -2,21 +2,23 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { useGetArtists } from "@/app/reactQuery/query";
+import { useGetArtists, useGetCategory } from "@/app/reactQuery/query";
 
 const Artist = ({toggleMenu}) => {
-  const artistData = useGetArtists();
+  // const artistData = useGetArtists();
+  const categoryData = useGetCategory();
+
   const urlSlug = usePathname();
-  // console.log(artistData.data, "ArtistData log")  
+  console.log(categoryData.data, "categoryData log")  
 
   return (
     <section className="w-full flex flex-col gap-2">
-      {artistData?.data?.length > 0 ? (
-        artistData.data
+      {categoryData?.data?.length > 0 ? (
+        categoryData.data
           ?.slice()
           .reverse()
           .map((item) => (
-            <Link key={item.id} href={`/artist/${item.slug}`} onClick={toggleMenu}>
+            <Link key={item.id} href={`/category/${item.slug}`} onClick={toggleMenu}>
               <div key={item.id}>
                 <div
                   className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${
@@ -25,22 +27,23 @@ const Artist = ({toggleMenu}) => {
                       : "bg-[rgb(0,0,0)]"
                   }`}
                 >
-                  <div className="lg:container mx-auto p-2 flex gap-4">
-                    <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0">
+                  <div className="lg:container mx-auto p-2 md:flex gap-4">
+                    {/* <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0 mb-4">
                       <Image
                         src={item?.image}
                         alt={item?.title || "Song Image"}
-                        width={60}
-                        height={60}
-                        className=" object-cover h-full"
+                        width={80}
+                        height={80}
+                        className="bg-gray-300 object-cover h-full"
                         priority
                       />
-                    </div>
-                    <div className="md:w-10/12 flex flex-col justify-center">
-                      <h3 className="line-clamp-1 font-semibold text-base">
+                    </div> */}
+                    <div className="flex gap-2 items-center justify-between">
+                      <h3 className="line-clamp-1 text-sm">
                         {item.name}
                       </h3>
-                      <p className=" text-sm">Artist</p>
+                      <p className=" text-sm">({item.song.length})</p>
+                      {/* <h3 className="line-clamp-1 text-sm">Artist</h3> */}
                     </div>
                   </div>
                 </div>

@@ -74,11 +74,11 @@ const redirects = [
     destination: '/song/new',
     permanent: true,
   },
-//   {
-//     source: '/old',
-//     destination: '/song/new',
-//     permanent: true,
-//   },
+  {
+    source: '/lahoo-lyrics-yeshua-ministries-production-cameron-mendes?amp=1',
+    destination: '/song/lahoo-yeshua-ministries',
+    permanent: true,
+  },
 //   {
 //     source: '/old',
 //     destination: '/song/new',

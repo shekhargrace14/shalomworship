@@ -1,6 +1,13 @@
-import { fetchArtistBySlug, useGetArtistById } from "@/app/reactQuery/query";
+import { fetchArtistBySlug, fetchArtists, useGetArtistById } from "@/app/reactQuery/query";
 import Processor from "@/components/Processor";
 import Image from "next/image";
+
+export async function generateStaticParams() {
+  const artsits = await fetchArtists(); // Fetch all songs from your data source
+  return artsits.map(artsit => ({
+    id: artsit.id.toString(), // Convert to string if necessary
+  }));
+}
 
 const Page = async ({ params }) => {
   const artistSlug = params.id;

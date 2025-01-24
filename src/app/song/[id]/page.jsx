@@ -1,11 +1,19 @@
-import { fetchSongBySlug} from "@/app/reactQuery/query";
+import { fetchSongBySlug, fetchSongs} from "@/app/reactQuery/query";
 import CreatorSongs from "@/components/CreatorSongs";
+import { MetaData } from "@/components/MetaData";
 import Image from "next/image";
 import Link from "next/link";
 
 export const revalidate = 604800;
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
+
+export async function generateStaticParams() {
+  const songs = await fetchSongs(); // Fetch all songs from your data source
+  return songs.map(song => ({
+    id: song.id.toString(), // Convert to string if necessary
+  }));
+}
 
 async function fetchSongData(id) {
   const res = await fetchSongBySlug(id);
@@ -14,41 +22,8 @@ async function fetchSongData(id) {
   const data = res;
   return data || null;
 }
-
 export async function generateMetadata({ params }) {
-  const id = await params.id;
-  // console.log(params.id, "params  generateMetadata");
-  const song = await fetchSongData(id);
-  // console.log(song, "song  generateMetadata");
-
-  if (!song) {
-    return {
-      title: "Song Not Found",
-      description: "The requested song could not be found.",
-    };
-  }
-  const Keywords = song?.keyword?.join(", ") || "";
-
-  return {
-    title: song.title + " " + "lyrics" || "Untitled Song",
-    description: song.metaDescription || "No description available",
-    keywords: Keywords, // Reuse the 'keywords' variable
-    robots:
-      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    alternates: {
-      canonical: `https://www.shalomworship.com/song/${encodeURIComponent(
-        song?.slug
-      )}`,
-    },
-    openGraph: {
-      title: song.title + " lyrics" || "Untitled Song",
-      description: song.metaDescription || "No description available",
-      url: `https://www.shalomworship.com/song/${encodeURIComponent(
-        song?.slug
-      )}`,
-      images: [{ url: song.image || "/default-image.jpg" }],
-    },
-  };
+  return await MetaData({params})
 }
 
 const Song = async ({ params }) => {

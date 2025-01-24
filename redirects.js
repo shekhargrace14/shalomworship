@@ -69,11 +69,11 @@ const redirects = [
     destination: '/song/maa-ke-samaan',
     permanent: true,
   },
-//   {
-//     source: '/old',
-//     destination: '/song/new',
-//     permanent: true,
-//   },
+  {
+    source: '/post/shukriya',
+    destination: '/song/shukriya-tera-amit-kamble',
+    permanent: true,
+  },
 //   {
 //     source: '/old',
 //     destination: '/song/new',

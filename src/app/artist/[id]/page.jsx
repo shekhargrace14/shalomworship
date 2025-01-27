@@ -15,8 +15,17 @@ const Page = async ({ params }) => {
   const data = artistData[0];
 
   // console.log(artistData, "artistData artist page data");
-  // console.log(data.song, "artist song page data");
+  console.log(data?.song, "artist song page data");
   // console.log(artistSlug, "artist page id");
+
+  if (!artistData || artistData.length === 0) {
+    console.error(`No artist found for slug: ${artistSlug}`);
+    return (
+      <p className="text-white text-center">
+        Sorry, no artist was found for this ID.
+      </p>
+    );
+  }
   return (
     <>
       {/* hello {data.name} */}
@@ -41,12 +50,12 @@ const Page = async ({ params }) => {
             </div>
           </div>
         </div>
-          <h2 className="text-xl font-semibold m-4 text-white">Songs from {data.name || "Artist"}</h2>
+          <h2 className="text-xl font-semibold m-4 text-white">Songs from {data?.name || "Artist"}</h2>
         <section className="w-full">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-0 ">
-            {data.song.map((item) => (
+            {data?.song.map((item) => (
               <div key={item.songId}>
-                <Processor item={item.songId} />
+                <Processor item={item?.songId} />
               </div>
             ))}
           </div>

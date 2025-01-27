@@ -2,12 +2,12 @@ import { fetchArtistBySlug, fetchArtists, useGetArtistById } from "@/app/reactQu
 import Processor from "@/components/Processor";
 import Image from "next/image";
 
-export async function generateStaticParams() {
-  const artsits = await fetchArtists(); // Fetch all songs from your data source
-  return artsits.map(artsit => ({
-    id: artsit.id.toString(), // Convert to string if necessary
-  }));
-}
+// export async function generateStaticParams() {
+//   const artsits = await fetchArtists(); // Fetch all songs from your data source
+//   return artsits.map(artsit => ({
+//     id: artsit.id.toString(), // Convert to string if necessary
+//   }));
+// }
 
 const Page = async ({ params }) => {
   const artistSlug = params.id;
@@ -25,8 +25,8 @@ const Page = async ({ params }) => {
           <div className=" flex items-center gap-4 w-full ">
             <div className="h-full w-3/12 md:2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
               <Image
-                src={data.image || "/default-image.jpg"}
-                alt={data.title || "Song Image"}
+                src={data?.image || "/default-image.jpg"}
+                alt={data?.title || "Song Image"}
                 width={200}
                 height={100}
                 className="bg-gray-800 object-cover h-full w-full"
@@ -35,13 +35,13 @@ const Page = async ({ params }) => {
             </div>
             <div className="sm:w-10/12 grid">
               <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-white">
-                {data.name}{" "}
+                {data?.name || "Artist"}
               </h1>
               <p className="text-sm  text-white">Artist</p>
             </div>
           </div>
         </div>
-          <h2 className="text-xl font-semibold m-4 text-white">Songs from {data.name}{" "}</h2>
+          <h2 className="text-xl font-semibold m-4 text-white">Songs from {data.name || "Artist"}</h2>
         <section className="w-full">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-0 ">
             {data.song.map((item) => (

@@ -34,7 +34,7 @@ const Card = ({ item }) => {
           <div className="w-full lg:w-full py-2">
             <div className="">
               <h3 className="line-clamp-1 text-1xl mb-1 text-white">{item.title}</h3>
-              <p className=" line-clamp-1 text-sm leading-none text-white">{creators[0].name}</p>
+              <p className=" line-clamp-1 text-sm leading-none text-white">{creators[0]?.name}</p>
             </div>
           </div>
         </div>

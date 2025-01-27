@@ -74,12 +74,12 @@ const Song = async ({ params }) => {
             <div>
               {creators.length > 0 ? (
                 creators.map((creator, index) => (
-                  <Link key={index} href={`/artist/${creator.slug}`}>
+                  <Link key={index} href={`/artist/${creator?.slug}`}>
 
                   <span
                     className="font-semibold text-base leading-4 text-white underline"
                     >
-                    {creator.name}
+                    {creator?.name}
                     {index < creators.length - 1 ? ", " : ""}
                   </span>
                     </Link>
@@ -95,12 +95,12 @@ const Song = async ({ params }) => {
 
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
-                  <Link key={index} href={`/artist/${artist.slug}`}>
+                  <Link key={index} href={`/artist/${artist?.slug}`}>
                   <span
                     
                     className="font-light text-sm leading-4 text-white underline"
                     >
-                    {artist.name}
+                    {artist?.name}
                     {index < artists.length - 1 ? ", " : ""}
                   </span>
                     </Link>
@@ -120,13 +120,13 @@ const Song = async ({ params }) => {
                       key={index}
                       className="font-light text-sm leading-4 text-white"
                     >
-                      {category.category.name}
+                      {category?.category.name}
                       {index < songData.category.length - 1 ? ", " : ""}
                     </span>
                   ))
                 ) : (
                   <p className="font-light text-sm leading-4 text-white">
-                    {songData.category[0].category.name}
+                    {songData.category[0]?.category.name}
                   </p>
                 )
               ) : (
@@ -176,8 +176,8 @@ const Song = async ({ params }) => {
         </section>
         <h3 className="sm:text-xl text-base font-semibold mb-2 mt-8 text-white">
           Song You May Like from &nbsp; 
-          <Link className="underline" href={`/artist/${creators[0].slug}`}>
-            {creators[0].name}
+          <Link className="underline" href={`/artist/${creators[0]?.slug}`}>
+            {creators[0]?.name}
           </Link>
           
         </h3>

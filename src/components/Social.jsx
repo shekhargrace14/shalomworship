@@ -4,8 +4,8 @@ import React from "react";
 
 const Social = () => {
   return (
-    <Link href="https://whatsapp.com/channel/0029Vaz9S3ULSmbinqpGry21" target="_blank">
-    <div className="py-4 flex items-center gap-2">
+    <div >
+      <Link href="https://whatsapp.com/channel/0029Vaz9S3ULSmbinqpGry21" target="_blank" className="w-fit py-4 flex items-center gap-2">
       <Image
         src="/whatsapp.png"
         alt={"Whatsapp"}
@@ -18,8 +18,8 @@ const Social = () => {
         <p>Join the Whatsapp Channel</p> 
         <p className="underline">Click here to Join</p>
       </div>
-    </div>
     </Link>
+    </div>
   );
 };
 

@@ -150,7 +150,7 @@ const Song = async ({ params }) => {
       </div>
       <main className="mx-auto p-4 relative">
         <div className="absolute right-2 top-[12px]">
-          <ShareButton/>
+          <ShareButton title={songData.title}/>
         </div>
         <section className="w-full text-white">
           <h2 className="text-2xl font-semibold mb-2 text-white">

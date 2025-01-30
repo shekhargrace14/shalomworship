@@ -2,13 +2,13 @@
 
 import { Share2 } from "lucide-react";
 
-export default function ShareButton() {
+export default function ShareButton({title}) {
   const handleShare = async () => {
     if (typeof window !== "undefined" && navigator.share) {
       try {
         await navigator.share({
-          title: "Check this out!",
-          text: "I found this amazing content!",
+          title: {title},
+          // text: "I found this amazing content!",
           url: window.location.href,
         });
       } catch (error) {

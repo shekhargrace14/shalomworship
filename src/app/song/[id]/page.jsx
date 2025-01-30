@@ -1,6 +1,7 @@
 import { fetchSongBySlug, fetchSongs} from "@/app/reactQuery/query";
 import CreatorSongs from "@/components/CreatorSongs";
 import { MetaData } from "@/components/MetaData";
+import ShareButton from "@/components/ShareButton";
 import Social from "@/components/Social";
 import Image from "next/image";
 import Link from "next/link";
@@ -147,7 +148,10 @@ const Song = async ({ params }) => {
           </div>
         </div>
       </div>
-      <main className="mx-auto p-4">
+      <main className="mx-auto p-4 relative">
+        <div className="absolute right-2 top-[12px]">
+          <ShareButton/>
+        </div>
         <section className="w-full text-white">
           <h2 className="text-2xl font-semibold mb-2 text-white">
             {songData.title} lyrics

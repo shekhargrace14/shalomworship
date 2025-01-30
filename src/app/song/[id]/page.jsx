@@ -1,6 +1,7 @@
 import { fetchSongBySlug, fetchSongs} from "@/app/reactQuery/query";
 import CreatorSongs from "@/components/CreatorSongs";
 import { MetaData } from "@/components/MetaData";
+import Social from "@/components/Social";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -148,7 +149,7 @@ const Song = async ({ params }) => {
       </div>
       <main className="mx-auto p-4">
         <section className="w-full text-white">
-          <h2 className="text-1xl font-semibold mb-2 text-white">
+          <h2 className="text-2xl font-semibold mb-2 text-white">
             {songData.title} lyrics
           </h2>
           <div dangerouslySetInnerHTML={{ __html: songData.content }} />
@@ -174,6 +175,7 @@ const Song = async ({ params }) => {
             )}
           </div>
         </section>
+        <Social/>
         <h3 className="sm:text-xl text-base font-semibold mb-2 mt-8 text-white">
           Song You May Like from &nbsp; 
           <Link className="underline" href={`/artist/${creators[0]?.slug}`}>

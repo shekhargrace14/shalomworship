@@ -53,5 +53,4 @@ const Artist = ({toggleMenu}) => {
     </section>
   );
 };
-
 export default Artist;

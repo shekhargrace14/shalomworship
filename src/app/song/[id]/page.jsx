@@ -1,4 +1,4 @@
-import { fetchSongBySlug, fetchSongs} from "@/app/reactQuery/query";
+import { fetchSongBySlug, fetchSongs } from "@/app/reactQuery/query";
 import CreatorSongs from "@/components/CreatorSongs";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
@@ -12,7 +12,7 @@ export const revalidate = 604800;
 
 export async function generateStaticParams() {
   const songs = await fetchSongs(); // Fetch all songs from your data source
-  return songs.map(song => ({
+  return songs.map((song) => ({
     id: song.id.toString(), // Convert to string if necessary
   }));
 }
@@ -25,7 +25,7 @@ async function fetchSongData(id) {
   return data || null;
 }
 export async function generateMetadata({ params }) {
-  return await MetaData({params})
+  return await MetaData({ params });
 }
 
 const Song = async ({ params }) => {
@@ -68,49 +68,38 @@ const Song = async ({ params }) => {
             </h1>
 
             {/* ////////////////////////////////////////////////////////////////////////////// */}
-            
+
             {/* ////////////////////////////////////////////////////////////////////////////// */}
 
             <div className="flex gap-2 items-baseline flex-wrap">
-
-            <div>
-              {creators.length > 0 ? (
-                creators.map((creator, index) => (
-                  <Link key={index} href={`/artist/${creator?.slug}`}>
-
-                  <span
-                    className="font-semibold text-base leading-4 text-white underline"
-                    >
-                    {creator?.name}
-                    {index < creators.length - 1 ? ", " : ""}
-                  </span>
+              <div>
+                {creators.length > 0 ? (
+                  creators.map((creator, index) => (
+                    <Link key={index} href={`/artist/${creator?.slug}`}>
+                      <span className="font-semibold text-base leading-4 text-white underline">
+                        {creator?.name}
+                        {index < creators.length - 1 ? ", " : ""}
+                      </span>
                     </Link>
-                ))
-              ) : (
-                <p className="font-semibold text-sm leading-4 text-white ">
-                  No creator specified
-                </p>
-              )}
-            </div>
-
-                -
-
+                  ))
+                ) : (
+                  <p className="font-semibold text-sm leading-4 text-white ">
+                    No creator specified
+                  </p>
+                )}
+              </div>
+              -
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
                   <Link key={index} href={`/artist/${artist?.slug}`}>
-                  <span
-                    
-                    className="font-light text-sm leading-4 text-white underline"
-                    >
-                    {artist?.name}
-                    {index < artists.length - 1 ? ", " : ""}
-                  </span>
-                    </Link>
+                    <span className="font-light text-sm leading-4 text-white underline">
+                      {artist?.name}
+                      {index < artists.length - 1 ? ", " : ""}
+                    </span>
+                  </Link>
                 ))
               ) : (
-                <p className="font-light text-sm leading-4 text-white">
-                  
-                </p>
+                <p className="font-light text-sm leading-4 text-white"></p>
               )}
             </div>
 
@@ -120,15 +109,21 @@ const Song = async ({ params }) => {
                   songData.category.map((category, index) => (
                     <span
                       key={index}
-                      className="font-light text-sm leading-4 text-white"
+                      className="font-light text-sm leading-4 text-white underline"
                     >
-                      {category?.category.name}
+                      <Link href={`/category/${category?.category.slug}`}>
+                        {category?.category.name}
+                      </Link>
                       {index < songData.category.length - 1 ? ", " : ""}
                     </span>
                   ))
                 ) : (
-                  <p className="font-light text-sm leading-4 text-white">
-                    {songData.category[0]?.category.name}
+                  <p className="font-light text-sm leading-4 text-white underline">
+                    <Link
+                      href={`/category/${songData.category[0]?.category.slug}`}
+                    >
+                      {songData.category[0]?.category.name}
+                    </Link>
                   </p>
                 )
               ) : (
@@ -150,7 +145,7 @@ const Song = async ({ params }) => {
       </div>
       <main className="mx-auto p-4 relative">
         <div className="absolute right-2 top-[12px]">
-          <ShareButton title={songData.title}/>
+          <ShareButton title={songData.title} />
         </div>
         <section className="w-full text-white">
           <h2 className="text-2xl font-semibold mb-2 text-white">
@@ -179,13 +174,12 @@ const Song = async ({ params }) => {
             )}
           </div>
         </section>
-        <Social/>
+        <Social />
         <h3 className="sm:text-xl text-base font-semibold mb-2 mt-8 text-white">
-          Song You May Like from &nbsp; 
+          Song You May Like from &nbsp;
           <Link className="underline" href={`/artist/${creators[0]?.slug}`}>
             {creators[0]?.name}
           </Link>
-          
         </h3>
 
         {creators.length > 0 ? (

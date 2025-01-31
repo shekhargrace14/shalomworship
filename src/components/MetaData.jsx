@@ -4,13 +4,13 @@ export async function MetaData({ params }) {
   const slug = await params.id;
   // console.log(params.id, "params  generateMetadata");
 //   const song = await fetchSongData(id);
-  const song = await fetchSongBySlug(slug);
+  const song = await fetchSongBySlug(slug); 
 
 //   console.log(song, "song  generateMetadata");
 
   if (!song) {
     return {
-      title: "Song Not Found",
+      title: "Page Not Found",
       description: "The requested song could not be found.",
     };
   }

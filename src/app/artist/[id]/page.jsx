@@ -1,4 +1,5 @@
 import { fetchArtistBySlug, fetchArtists, useGetArtistById } from "@/app/reactQuery/query";
+import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
 import Image from "next/image";
 
@@ -7,6 +8,10 @@ export async function generateStaticParams() {
   return artsits.map(artsit => ({
     id: artsit.id.toString(), // Convert to string if necessary
   }));
+}
+
+export async function generateMetadata({ params }) {
+  return await MetaData({params})
 }
 
 const Page = async ({ params }) => {

@@ -26,7 +26,16 @@ async function fetchSongData(id) {
   return data || null;
 }
 export async function generateMetadata({ params }) {
-  return await MetaData({ params });
+  const slugParams = await params.id;
+  const song = await fetchSongBySlug(slugParams); 
+  const title = await song?.title + " " + "lyrics"
+  const keyword = await song?.keyword
+  const metaDescription = await song?.metaDescription
+  const slug = await song?.slug
+  const image = await song?.image
+  // console.log(title);
+  
+  return await MetaData({ title,keyword,metaDescription,slug,image });
 }
 
 const Song = async ({ params }) => {

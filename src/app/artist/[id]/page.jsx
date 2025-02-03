@@ -11,7 +11,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  return await MetaData({params})
+  const slugParams = await params.id;
+  const artist = await fetchArtistBySlug(slugParams); 
+  // console.log(artist[0]);
+  const title = await artist[0]?.name
+  const keyword = ["Yeshu"]
+  // const metaDescription = await artist[0].metaDescription
+  const slug = await artist[0]?.slug
+  console.log(slug);
+  const image = await artist[0]?.image
+  
+  return await MetaData({ title,slug,image,keyword });
 }
 
 const Page = async ({ params }) => {

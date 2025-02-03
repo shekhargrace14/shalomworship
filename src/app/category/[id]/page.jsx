@@ -1,4 +1,5 @@
 import { fetchCategory, fetchCategoryBySlug } from "@/app/reactQuery/query";
+import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
 
 export async function generateStaticParams() {
@@ -7,6 +8,22 @@ export async function generateStaticParams() {
     id: category.id.toString(), // Convert to string if necessary
   }));
 }
+
+export async function generateMetadata({ params }) {
+  const slugParams = await params.id;
+  const category = await fetchCategoryBySlug(slugParams); 
+  const title = await category[0]?.name + " " + "Category"
+
+  // console.log(category[0]);
+  // const keyword = await song.keyword
+  // const metaDescription = await song.metaDescription
+  const slug = await category[0]?.slug
+  const image = await category[0]?.image
+
+  
+  return await MetaData({ title,slug,image });
+}
+
 
 const Page = async ({ params }) => {
   const categorySlug = params.id;

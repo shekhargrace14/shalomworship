@@ -1,4 +1,5 @@
 import { fetchSongBySlug, fetchSongs } from "@/app/reactQuery/query";
+import Ad1 from "@/components/Ad1";
 import CreatorSongs from "@/components/CreatorSongs";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
@@ -144,6 +145,7 @@ const Song = async ({ params }) => {
         </div>
       </div>
       <main className="mx-auto p-4 relative">
+        <Ad1/>
         <div className="absolute right-2 top-[12px]">
           <ShareButton title={songData.title} />
         </div>

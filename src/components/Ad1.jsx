@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 const Ad1 = () => {
-  return (
-    // <div></div>
-    <amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-7686801812294972"
-     data-ad-slot="5838281506"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
-  )
-}
+  useEffect(() => {
+    // Load Google AdSense script
+    const script = document.createElement('script');
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-export default Ad1
+    // Initialize the ad
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);
+
+  return (
+    <ins className="adsbygoogle"
+         style={{ display: 'block' }}
+         data-ad-client="ca-pub-7686801812294972"
+         data-ad-slot="5838281506"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  );
+};
+
+export default Ad1;

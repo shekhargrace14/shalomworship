@@ -9,8 +9,10 @@ const Ad1 = () => {
     script.async = true;
     document.body.appendChild(script);
 
-    // Initialize the ad
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // Initialize the ad only if the script hasn't been loaded before
+    if (!window.adsbygoogle || !window.adsbygoogle.loaded) {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
   }, []);
 
   return (

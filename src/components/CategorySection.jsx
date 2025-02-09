@@ -10,8 +10,8 @@ const CategorySection = ({number}) => {
   // console.log(categories.data, "categories");
 
   return (
-    <div>
-      <section className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4 rounded-lg">
+    <div className="py-2">
+      <section className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 rounded-lg">
         {categories.data?.slice(number).map((category, index) => (
           <CategoryCard key={index} category={category} />
         ))}

@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 const page = () => {
   return (
-    < div className=' h-[90vh] overflow-y-auto custom-scrollbar'>
+    < div className=' h-[90vh] overflow-y-auto custom-scrollbar p-2'>
 
     <Menu/>
     <CategorySection/>

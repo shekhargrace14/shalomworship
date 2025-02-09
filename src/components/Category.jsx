@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useGetArtists, useGetCategory } from "@/app/reactQuery/query";
 
-const Artist = ({toggleMenu}) => {
+const Category = ({toggleMenu}) => {
   // const artistData = useGetArtists();
   const categoryData = useGetCategory();
 
@@ -57,4 +57,4 @@ const Artist = ({toggleMenu}) => {
   );
 };
 
-export default Artist;
+export default Category;

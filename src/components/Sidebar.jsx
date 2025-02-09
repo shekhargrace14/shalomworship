@@ -7,8 +7,8 @@ import { IoIosArrowDown, IoIosArrowUp, IoMdHome } from "react-icons/io";
 import Link from "next/link";
 
 const Sidebar = ({ toggleMenu }) => {
-  const [artistsOpen, setArtistsOpen] = useState(false);
-  const [categoryOpen, setCategoryOpen] = useState(false);
+  const [artistsOpen, setArtistsOpen] = useState(true);
+  const [categoryOpen, setCategoryOpen] = useState(true);
 
   const toggleArtists = () => {
     setArtistsOpen((prevOpen) => !prevOpen);

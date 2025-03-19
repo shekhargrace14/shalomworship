@@ -9,7 +9,7 @@ const Category = ({toggleMenu}) => {
   const categoryData = useGetCategory();
 
   const urlSlug = usePathname();
-  console.log(categoryData.data, "categoryData log")  
+  // console.log(categoryData.data, "categoryData log")  
 
   return (
     <section className="w-full flex flex-col gap-2">

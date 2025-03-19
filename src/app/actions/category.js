@@ -10,6 +10,6 @@ export async function category() {
               },
         })
     }catch(error){
-        console.log(error,"error from artist server action")
+        console.log(error,"error from category server action")
     }
 }

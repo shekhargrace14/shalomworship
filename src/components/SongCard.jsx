@@ -22,7 +22,7 @@ const SongCard = ({ item }) => {
     
     <>
       <Link href={`/song/${item.slug}`}>
-        <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg">
+        <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image
               src={item.image}

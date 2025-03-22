@@ -1,6 +1,7 @@
 import { fetchSongBySlug, fetchSongs } from "@/app/reactQuery/query";
 import Ad1 from "@/components/Ad1";
 import CreatorSongs from "@/components/CreatorSongs";
+import Menu from "@/components/Menu";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
 import Social from "@/components/Social";
@@ -59,6 +60,9 @@ const Song = async ({ params }) => {
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
+      <div className="p-4 pb-0 bg-[#1f1f1f]">
+        <Menu/>
+      </div>
       <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
         <div className=" sm:flex items-center gap-2 w-full ">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
@@ -155,7 +159,7 @@ const Song = async ({ params }) => {
       </div>
         <Ad1/>
       <main className="mx-auto p-4 pt-8 relative">
-        <div className="absolute right-2 top-[12px]">
+        <div className="absolute right-2 sm:top-[12px] top-[-8px]">
           <ShareButton title={songData.title} />
         </div>
         <section className="w-full text-white">
@@ -186,12 +190,12 @@ const Song = async ({ params }) => {
           </div>
         </section>
         <Social />
-        <h3 className="sm:text-xl text-base font-semibold mb-2 mt-8 text-white">
+        <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
           Song You May Like from &nbsp;
           <Link className="underline" href={`/artist/${creators[0]?.slug}`}>
             {creators[0]?.name}
           </Link>
-        </h3>
+        </h2>
 
         {creators.length > 0 ? (
           creators.map((creator, index) => (

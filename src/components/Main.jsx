@@ -11,7 +11,7 @@ import CategorySection from "./CategorySection";
 const Main = () =>{
     return(
         <>
-            <div className=" p-2  h-[90vh] overflow-y-auto custom-scrollbar ">
+            <div className=" p-4  h-[90vh] overflow-y-auto custom-scrollbar ">
                 <Menu/>
                 <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline"> <Link href={"/song"}>Trending songs</Link> </h2>
                 <TrendingSection number={"-8"} />

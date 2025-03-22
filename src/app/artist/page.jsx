@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 const page = () => {
   return (
-    <div className=" h-[90vh] overflow-y-auto custom-scrollbar p-2">
+    <div className=" h-[90vh] overflow-y-auto custom-scrollbar p-4">
       <Menu />
       <ArtistSection />
     </div>

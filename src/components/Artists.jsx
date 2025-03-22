@@ -28,7 +28,8 @@ const Artist = ({toggleMenu}) => {
                   <div className="lg:container mx-auto p-2 flex gap-4">
                     <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0">
                       <Image
-                        src={item?.image || "https://drive.google.com/uc?export=view&id=19Vm_Qd_6F_ehN5SE2jkUYpnk7TMNwM1g"}
+                        // src="/user.png"
+                        src={item?.image || "/user.png"}
                         alt={item?.title || "Artist Name" }
                         width={60}
                         height={60}

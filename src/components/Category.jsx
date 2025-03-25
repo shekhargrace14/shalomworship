@@ -39,10 +39,10 @@ const Category = ({toggleMenu}) => {
                       />
                     </div> */}
                     <div className="flex gap-2 items-center justify-between">
-                      <h3 className="line-clamp-1 text-sm">
+                      <h3 className="line-clamp-1 text-sm text-white">
                         {item.name}
                       </h3>
-                      <p className=" text-sm">({item.song.length})</p>
+                      <p className=" text-sm text-white">({item.song.length})</p>
                       {/* <h3 className="line-clamp-1 text-sm">Artist</h3> */}
                     </div>
                   </div>

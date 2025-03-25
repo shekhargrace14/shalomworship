@@ -35,12 +35,12 @@ export default function RootLayout({ children }) {
      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
   
           <QueryProvider>
           <Header />
-          <div className="flex gap-4 ">
+          <div className="flex gap-4 bg-black ">
             <div className="w-full hidden md:block  md:w-4/12 lg:w-3/12 rounded-lg  ">
               <Sidebar />
             </div>

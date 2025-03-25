@@ -38,10 +38,10 @@ const Artist = ({toggleMenu}) => {
                       />
                     </div>
                     <div className="md:w-10/12 flex flex-col justify-center">
-                      <h3 className="line-clamp-1 font-semibold text-base">
+                      <h3 className="line-clamp-1 font-semibold text-base text-white">
                         {item.name}
                       </h3>
-                      <p className=" text-sm">Artist</p>
+                      <p className=" text-sm text-white">Artist</p>
                     </div>
                   </div>
                 </div>

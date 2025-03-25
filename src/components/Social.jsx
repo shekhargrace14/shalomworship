@@ -15,8 +15,8 @@ const Social = () => {
         priority={100}
       /> 
       <div>
-        <p>Join the Whatsapp Channel</p> 
-        <p className="underline">Click here to Join</p>
+        <p className="text-white">Join the Whatsapp Channel</p> 
+        <p className="underline text-white">Click here to Join</p>
       </div>
     </Link>
     </div>

@@ -25,9 +25,9 @@ const Sidebar = ({ toggleMenu }) => {
       </Link>
       <section>
         <div className="flex justify-between w-full bg-[rgb(0,0,0)] gap-4 rounded-lg px-4 py-2" onClick={toggleArtists}>
-          <p className="text-base font-semibold">Artist</p>
+          <p className="text-base font-semibold text-white">Artist</p>
           <span
-            className="text-xl"
+            className="text-xl text-white"
             
             role="button"
             aria-expanded={artistsOpen}
@@ -49,9 +49,9 @@ const Sidebar = ({ toggleMenu }) => {
       </section>
       <section>
         <div className="flex justify-between w-full bg-[rgb(0,0,0)] gap-4 rounded-lg px-4 py-2" onClick={toggleCategory}>
-          <p className="text-base font-semibold ">Category</p>
+          <p className="text-base font-semibold text-white ">Category</p>
           <span
-            className="text-xl"
+            className="text-xl text-white"
             
             role="button"
             aria-expanded={categoryOpen}

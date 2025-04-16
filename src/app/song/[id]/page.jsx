@@ -29,7 +29,7 @@ async function fetchSongData(id) {
 export async function generateMetadata({ params }) {
   const slugParams = await params.id;
   const song = await fetchSongBySlug(slugParams); 
-  const title = await song?.title + " " + "lyrics"
+  const title = await song?.title + " " ;
   const keyword = await song?.keyword
   const metaDescription = await song?.metaDescription
   const slug = await song?.slug

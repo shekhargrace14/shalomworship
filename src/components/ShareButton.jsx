@@ -27,8 +27,9 @@ export default function ShareButton() {
     //   Share
     // </button>
     // <div >
-    <div onClick={handleShare} className=" bg-[#212121] p-2  rounded-full cursor-pointer">
-      <Share2  />
+    // <div onClick={handleShare} className=" bg-[#212121] p-2  rounded-full cursor-pointer">
+    <div onClick={handleShare} className=" cursor-pointer">
+      <Share2 className="w-4 h-4"  />
     </div>
     // </div>
   );

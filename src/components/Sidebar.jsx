@@ -24,7 +24,7 @@ const Sidebar = ({ toggleMenu }) => {
         <IoMdHome onClick={toggleMenu}  />
       </Link>
       <section>
-        <div className="flex justify-between w-full bg-[rgb(0,0,0)] gap-4 rounded-lg px-4 py-2" onClick={toggleArtists}>
+        {/* <div className="flex justify-between w-full bg-[rgb(0,0,0)] gap-4 rounded-lg px-4 py-2" onClick={toggleArtists}>
           <p className="text-base font-semibold text-white">Artist</p>
           <span
             className="text-xl text-white"
@@ -35,10 +35,10 @@ const Sidebar = ({ toggleMenu }) => {
           >
             {!artistsOpen ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </span>
-        </div>
+        </div> */}
 
         {artistsOpen && <Category /> ? (
-          <div className="h-[60vh]  overflow-y-auto custom-scrollbar px-4 mt-2">
+          <div className="h-[100vh]  overflow-y-auto custom-scrollbar px-4 mt-2">
             <Artists toggleMenu={toggleMenu} />
           </div>
         ) : (
@@ -47,7 +47,7 @@ const Sidebar = ({ toggleMenu }) => {
         {/* <div className="pl-4 pt-2"> */}
         {/* </div> */}
       </section>
-      <section>
+      {/* <section>
         <div className="flex justify-between w-full bg-[rgb(0,0,0)] gap-4 rounded-lg px-4 py-2" onClick={toggleCategory}>
           <p className="text-base font-semibold text-white ">Category</p>
           <span
@@ -69,9 +69,8 @@ const Sidebar = ({ toggleMenu }) => {
         ) : (
           ""
         )}
-        {/* <div className="pl-4 pt-2"> */}
-        {/* </div> */}
-      </section>
+
+      </section> */}
     </nav>
   );
 };

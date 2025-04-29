@@ -28,15 +28,15 @@ async function fetchSongData(id) {
 }
 export async function generateMetadata({ params }) {
   const slugParams = await params.id;
-  const song = await fetchSongBySlug(slugParams); 
-  const title = await song?.title + " " ;
-  const keyword = await song?.keyword
-  const metaDescription = await song?.metaDescription
-  const slug = await song?.slug
-  const image = await song?.image
+  const song = await fetchSongBySlug(slugParams);
+  const title = (await song?.title) + " ";
+  const keyword = await song?.keyword;
+  const metaDescription = await song?.metaDescription;
+  const slug = await song?.slug;
+  const image = await song?.image;
   // console.log(title);
-  
-  return await MetaData({ title,keyword,metaDescription,slug,image });
+
+  return await MetaData({ title, keyword, metaDescription, slug, image });
 }
 
 const Song = async ({ params }) => {
@@ -61,7 +61,7 @@ const Song = async ({ params }) => {
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
       <div className="p-4 pb-0 bg-[#1f1f1f]">
-        <Menu/>
+        <Menu />
       </div>
       <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
         <div className=" sm:flex items-center gap-2 w-full ">
@@ -117,7 +117,7 @@ const Song = async ({ params }) => {
               )}
             </div>
 
-            <div className="flex gap-2 items-baseline flex-wrap">
+            <div className="flex gap-2 items-baseline flex-wrap items-center" >
               {songData.category && songData.category.length > 0 ? (
                 songData.category.length > 1 ? (
                   songData.category.map((category, index) => (
@@ -138,7 +138,7 @@ const Song = async ({ params }) => {
                     >
                       {songData.category[0]?.category.name}
                     </Link>
-                  </p>
+                  </p>~~~
                 )
               ) : (
                 <p className="font-light text-sm leading-4 text-white">
@@ -153,15 +153,18 @@ const Song = async ({ params }) => {
                   day: "numeric",
                 })}
               </p>
+              <div className=" ">
+                <ShareButton title={songData.title} />
+              </div>
             </div>
           </div>
         </div>
       </div>
-        <Ad1/>
+      <Ad1 />
       <main className="mx-auto p-4 pt-8 relative">
-        <div className="absolute right-2 sm:top-[12px] top-[-8px]">
+        {/* <div className="absolute right-2 sm:top-[12px] top-[-8px]">
           <ShareButton title={songData.title} />
-        </div>
+        </div> */}
         <section className="w-full text-white">
           <h2 className="text-2xl font-semibold mb-2 text-white">
             {songData.title} lyrics
@@ -206,6 +209,8 @@ const Song = async ({ params }) => {
             No creator specified
           </p>
         )}
+
+        {/* song by category  */}
       </main>
     </div>
   );

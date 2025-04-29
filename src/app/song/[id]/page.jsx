@@ -138,7 +138,7 @@ const Song = async ({ params }) => {
                     >
                       {songData.category[0]?.category.name}
                     </Link>
-                  </p>~~~
+                  </p>
                 )
               ) : (
                 <p className="font-light text-sm leading-4 text-white">

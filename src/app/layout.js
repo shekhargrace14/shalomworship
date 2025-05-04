@@ -21,8 +21,9 @@ const geistMono = localFont({
 export const metadata = {
   title: "Shalom Worship",
   description: "Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God.",
-  keywords:"Worship song lyrics, gospil song lyrics, christian song lyrics",
-  canonical:"Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God."
+  keywords: "Worship song lyrics, gospil song lyrics, christian song lyrics",
+  canonical: "Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God.",
+  manifest: '/manifest.json'
 };
 
 export default function RootLayout({ children }) {
@@ -30,15 +31,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GoogleAnalytics gaId="G-H4QZJK5XEN" />
       <head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"
-     crossorigin="anonymous"></script>
-     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"
+          crossorigin="anonymous"></script>
+        <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <meta name="theme-color" content="#000000" />
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-  
-          <QueryProvider>
+
+        <QueryProvider>
           <Header />
           <div className="flex gap-4 bg-black ">
             <div className="w-full hidden md:block  md:w-4/12 lg:w-3/12 rounded-lg  ">

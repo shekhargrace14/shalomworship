@@ -1,7 +1,15 @@
-/** @type {import('next').NextConfig} */
+// @ts-check
 
+import createPWA from 'next-pwa';
 import redirects from './redirects.js';
 
+const withPWA = createPWA({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+});
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
     return redirects;
@@ -33,4 +41,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPWA(nextConfig);

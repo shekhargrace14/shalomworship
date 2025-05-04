@@ -6,7 +6,7 @@ export async function artistBySlug(artistslug) {
     try{
         return await prisma.artist.findMany({
             where:{
-                slug: artistslug
+                id: artistslug
             },
             include: {
               song: true, // Fetch all songs related to the artist

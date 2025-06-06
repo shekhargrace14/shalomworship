@@ -3,6 +3,7 @@ import React from "react";
 import { FaUser } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import slugify from "slugify";
 
 const Card = ({ item }) => {
   // console.log(item, "card item")
@@ -18,10 +19,13 @@ const Card = ({ item }) => {
   });
   // console.log(artists, " artists of song page params");
   // console.log(creators, " creators of song page params");
+
+  const slug = slugify(`${item.title}`, { lower: true});
+  
   return (
     
     <>
-      <Link href={`/song/${item.slug}`}>
+      <Link href={`/song/${slug}-${item.id}`}>
         <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { IoIosClose, IoIosSearch } from "react-icons/io";
-import Search from "./Search";
+import Search from "../ui/Search";
 import { usePathname } from "next/navigation";
 
 const Searchbar = () => {

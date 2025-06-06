@@ -1,5 +1,5 @@
 import { fetchSongById, fetchSongBySlug } from "@/app/reactQuery/query"
-import Card from "./Card"
+import Card from "./ui/Card"
 
 
 

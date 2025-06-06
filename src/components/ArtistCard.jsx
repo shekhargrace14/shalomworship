@@ -3,13 +3,16 @@ import React from "react";
 import { FaUser } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import slugify from "slugify";
 
 const ArtsitCard = ({ item }) => {
+
+  const slug = slugify(`${item.name}`, {lower: true,}) 
 
   return (
     
     <>
-      <Link href={`/artist/${item.slug}`}>
+      <Link href={`/artist/${slug}-${item.id}`}>
         <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg ">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image

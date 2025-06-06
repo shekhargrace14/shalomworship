@@ -1,4 +1,4 @@
-import { fetchArtistBySlug, fetchArtists, useGetArtistById } from "@/app/reactQuery/query";
+import { fetchArtistById, fetchArtistBySlug, fetchArtists, useGetArtistById } from "@/app/reactQuery/query";
 import Menu from "@/components/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
@@ -12,8 +12,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const slugParams = await params.id;
-  const artist = await fetchArtistBySlug(slugParams);
+    const slugAndId = await params.slugAndId; // this is the [slugAndId] part
+  const id = slugAndId.split('-').pop(); // extract id from slug-id
+  
+
+
+
+  const artist = await fetchArtistById(id);
   // console.log(artist[0]);
   const title = await artist[0]?.name
   const keyword = ["Yeshu"]
@@ -26,11 +31,15 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
-  const artistSlug = params.id;
-  const artistData = await fetchArtistBySlug(artistSlug);
+
+  const slugAndId = params.slugAndId; // this is the [slugAndId] part
+  const id = slugAndId.split('-').pop(); // extract id from slug-id
+
+  console.log(id, "artistData artist page data");
+
+  const artistData = await fetchArtistById(id);
   const data = artistData[0];
 
-  // console.log(artistData, "artistData artist page data");
   console.log(data?.song, "artist song page data");
   // console.log(artistSlug, "artist page id");
 

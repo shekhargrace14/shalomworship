@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import ArtistCard from "./ArtistCard";
-import { useGetArtists, useGetSongs } from "@/app/reactQuery/query";
+import { useGetArtists} from "@/app/reactQuery/query";
 
 const ArtistSection = ({number}) => {
   const artists = useGetArtists();
-  // console.log(artists.data, "ArtistSection")
+  // console.log(artists, "ArtistSection")
 
   return (
     <>

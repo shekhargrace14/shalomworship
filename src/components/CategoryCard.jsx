@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const CategoryCard = ({ category }) => {
-  console.log(category);
+  // console.log(category);
 
   return (
     <>

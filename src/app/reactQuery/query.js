@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { songServerAction } from "../actions/song";
-import { songByIdAction } from "../actions/songByIdAction";
+import { songById } from "../actions/songById";
 import { songBySlug } from "../actions/songBySlug";
-import { artistServerAction } from "../actions/artist";
+import { artists} from "../actions/artists";
 import { artistBySlug } from "../actions/artistBySlug";
 import { category } from "../actions/category";
 import { categoryBySlug } from "../actions/categoryBySlug";
+import { artistById } from "../actions/artistById";
 
 
 const fetchSongs = async () => {
@@ -24,14 +25,14 @@ const useGetSongs = () => {
 // Song By Id
 
 const fetchSongById = async (id) => {
-  const res = await songByIdAction(id);
+  const res = await songById(id);
   return res;
 };
 
 const useGetSongById = (id) => {
   return useQuery({
     queryKey: ["songs", id],
-    queryFn: async () => await songByIdAction(id),
+    queryFn: async () => await songById(id),
   });
 };
 
@@ -52,14 +53,14 @@ const useGetSongBySlug = (songSlug) => {
 
 // artist 
 const fetchArtists = async () =>{
-  const res = await artistServerAction()
+  const res = await artists()
   return res;
 }
 
 const useGetArtists = () =>{
   return useQuery({
     queryKey : ["artists"],
-    queryFn: artistServerAction,
+    queryFn: async ()=> await artists(),
   })
 }
 
@@ -74,6 +75,21 @@ const useGetArtistBySlug = (artistSlug) =>{
     queryFn : async ()=> await artistBySlug(artistSlug)
   })
 }
+
+const fetchArtistById = (id) =>{
+  const res = artistById(id)
+  return res;
+
+}
+const useGetArtistById = (id) =>{
+  return useQuery({
+    queryKey:["artist", id],
+    queryFn : async ()=> await artistById(id)
+  })
+}
+
+
+
 // Category
 const fetchCategory = async () =>{
   const res = await category()
@@ -106,7 +122,10 @@ export {
   fetchSongById, fetchSongs, 
   fetchSongBySlug, useGetSongBySlug,
   useGetSongById, useGetSongs, 
+
   fetchArtists, useGetArtists, 
   fetchArtistBySlug, useGetArtistBySlug,
+  fetchArtistById, useGetArtistById,
+
   fetchCategory, useGetCategory, fetchCategoryBySlug, useGetCategoryBySlug,
 };

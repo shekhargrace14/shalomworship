@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Card from "./Card";
 import { useGetSongs } from "@/app/reactQuery/query";
 import TrendingCard from "./TrendingCard";
 const TrendingSection = ({number}) => {

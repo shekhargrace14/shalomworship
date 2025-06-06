@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { IoMdClose, IoMdHome } from "react-icons/io";
-import Searchbar from "./Searchbar";
+import Searchbar from "../shared/Searchbar";
 import { FaHamburger } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
 import { useState } from "react";

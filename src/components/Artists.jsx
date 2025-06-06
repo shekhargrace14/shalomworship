@@ -3,11 +3,13 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { useGetArtists } from "@/app/reactQuery/query";
+import slugify from "slugify";
 
 const Artist = ({toggleMenu}) => {
   const artistData = useGetArtists();
   const urlSlug = usePathname();
   // console.log(artistData.data, "ArtistData log")  
+  
 
   return (
     <section className="w-full flex flex-col gap-2">
@@ -16,7 +18,7 @@ const Artist = ({toggleMenu}) => {
           ?.slice()
           .reverse()
           .map((item) => (
-            <Link key={item.id} href={`/artist/${item.slug}`} onClick={toggleMenu}>
+            <Link key={item.id} href={`/artist/${slugify(item.name,{lower:true})}-${item.id}`} onClick={toggleMenu}>
               <div key={item.id}>
                 <div
                   className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${

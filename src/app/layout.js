@@ -1,9 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
+import Header from "@/components/layout/Header";
+import Sidebar from "@/components/layout/Sidebar";
 import Main from "@/components/Main";
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
 import { QueryProvider } from "./reactQuery/query-provider";
 import { GoogleAnalytics } from '@next/third-parties/google'
 

@@ -3,7 +3,7 @@
 import prisma from "../../lib/prisma";
 
 
-export async function songByIdAction(id) {
+export async function songById(id) {
   try {
     const song =  prisma.song.findUnique({
       where: { id : id },

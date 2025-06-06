@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Artists from "./Artists";
-import Category from "./Category"; // Ensure this is correctly imported
+import Artists from "../Artists";
+import Category from "../Category"; // Ensure this is correctly imported
 import { IoIosArrowDown, IoIosArrowUp, IoMdHome } from "react-icons/io";
 import Link from "next/link";
 

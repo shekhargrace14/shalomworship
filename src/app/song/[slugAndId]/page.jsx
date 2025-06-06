@@ -1,15 +1,19 @@
-import { fetchSongBySlug, fetchSongs } from "@/app/reactQuery/query";
+import { fetchSongById, fetchSongBySlug, fetchSongs } from "@/app/reactQuery/query";
 import Ad1 from "@/components/Ad1";
 import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/Menu";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
-import Social from "@/components/Social";
+import Social from "@/components/ui/Social";
 import Image from "next/image";
 import Link from "next/link";
+import slugify from "slugify";
+
+
+
 
 export const revalidate = 604800;
-
+  
 // export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
@@ -20,28 +24,76 @@ export async function generateStaticParams() {
 }
 
 async function fetchSongData(id) {
-  const res = await fetchSongBySlug(id);
-  // console.log(res, "page res result");
+  // const res = await fetchSongBySlug(id);
+  const res = await fetchSongById(id);"use client";
+
+
+const SongCard = ({ item }) => {
+  // console.log(item, "card item")
+  const artists = [];
+  const creators = [];
+  item.artist.forEach((item) => {
+    if (item.isCreator) {
+      creators.push(item.artist);
+    } else {
+      artists.push(item.artist);
+    }
+  });
+  // console.log(artists, " artists of song page params");
+  // console.log(creators, " creators of song page params");\
+  const slug = slugify(`${item.title}`, {lower: true})
+  return (
+    <>
+      <Link href={`/song/${item.id}-${slug}`}>
+        <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg">
+          <div className="rounded-lg overflow-hidden h-5/6">
+            <Image
+              src={item.image}
+              alt={item.title || "Song Image"}
+              width={700}
+              height={500}
+            />
+          </div>
+          <div className="w-full lg:w-full py-2">
+            <div className="">
+              <h3 className="line-clamp-1 text-1xl font-semibold mb-1 text-white">{item.title}</h3>
+              <p className=" line-clamp-1 text-sm leading-none text-[#b3b3b3]">{creators[0]?.name}</p>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </>
+  );
+}
+
+  console.log(res, "song page res result");
 
   const data = res;
   return data || null;
 }
 export async function generateMetadata({ params }) {
-  const slugParams = await params.id;
-  const song = await fetchSongBySlug(slugParams);
+  const slugAndId = params.slugAndId; // this is the [slugAndId] part
+  const id = slugAndId.split('-').pop(); // extract id from slug-id
+  
+  // const slugParams = await params.id;
+  const song = await fetchSongById(id);
   const title = (await song?.title) + " ";
   const keyword = await song?.keyword;
   const metaDescription = await song?.metaDescription;
   const slug = await song?.slug;
-  const image = await song?.image;
+  const image = await song?.image; 
   // console.log(title);
 
   return await MetaData({ title, keyword, metaDescription, slug, image });
 }
 
 const Song = async ({ params }) => {
-  const id = await params.id;
-  // console.log(id, " id of song page params");
+  const slugAndId = params.slugAndId; // this is the [slugAndId] part
+  const id = slugAndId.split('-').pop(); // extract id from slug-id
+
+  // const id = await params.id;
+  console.log(id, " id of song page params");
+  // console.log(slug, " slug of song page params");
   const songData = await fetchSongData(id);
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
@@ -56,7 +108,7 @@ const Song = async ({ params }) => {
     }
   });
   // console.log(artists, " artists of song page params");
-  // console.log(creators, " creators of song page params");
+  // console.log(creators[0].id, " creators of song page params");
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
@@ -89,7 +141,7 @@ const Song = async ({ params }) => {
               <div>
                 {creators.length > 0 ? (
                   creators.map((creator, index) => (
-                    <Link key={index} href={`/artist/${creator?.slug}`}>
+                    <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`}>
                       <span className="font-semibold text-base leading-4 text-white underline">
                         {creator?.name}
                         {index < creators.length - 1 ? ", " : ""}
@@ -105,7 +157,7 @@ const Song = async ({ params }) => {
               -
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
-                  <Link key={index} href={`/artist/${artist?.slug}`}>
+                  <Link key={index} href={`/artist/${slugify(artist?.name,{ lower: true })}-${artist?.id}`}>
                     <span className="font-light text-sm leading-4 text-white underline">
                       {artist?.name}
                       {index < artists.length - 1 ? ", " : ""}
@@ -195,7 +247,9 @@ const Song = async ({ params }) => {
         <Social />
         <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
           Song You May Like from &nbsp;
-          <Link className="underline" href={`/artist/${creators[0]?.slug}`}>
+          {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}
+          <Link className="underline" href={`/artist/${creators[0]?.id}-${slugify(creators[0]?.name, { lower: true })}`}>
+
             {creators[0]?.name}
           </Link>
         </h2>

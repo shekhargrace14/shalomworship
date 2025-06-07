@@ -12,7 +12,7 @@ import slugify from "slugify";
 
 
 
-export const revalidate = 604800;
+export const revalidate = 60;
   
 // export const dynamic = "force-dynamic";
 

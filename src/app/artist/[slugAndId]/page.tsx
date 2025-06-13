@@ -3,44 +3,43 @@ import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
 import { fetchArtistById, fetchArtists } from "@/lib/query/query";
 import Image from "next/image";
+import slugify from "slugify";
 
 export async function generateStaticParams() {
-  const artsits = await fetchArtists(); // Fetch all songs from your data source
-  return artsits.map(artsit => ({
-    id: artsit.id.toString(), // Convert to string if necessary
-  }));
+  const artists = await fetchArtists(); // Fetch all songs from your data source
+  return artists.map(artist => {
+    const slug = slugify(`${artist.name}`, { lower: true }) + '-' + artist.id.toString();
+    // console.log(slug, ""); // Log the slug here
+    return { slug };
+  });
 }
 
-export async function generateMetadata({ params }:any) {
-    const slugAndId = await params.slugAndId; // this is the [slugAndId] part
+export async function generateMetadata({ params }: any) {
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId.split('-').pop(); // extract id from slug-id
-  
-
-
-
   const artist = await fetchArtistById(id);
   // console.log(artist[0]);
   const title = artist && artist[0]?.name
   const keyword = ["Yeshu"]
-  // const metaDescription = await artist[0].metaDescription
+  // const metaDescription = await artist[0]?.metaDescription
   const slug = artist && artist[0]?.slug
-  console.log(slug);
+  // console.log(slug);
   const image = artist && artist[0]?.image
 
-  return await MetaData({ title, slug, image, keyword });
+  // return await MetaData({ title, slug, image, keyword, metaDescription });
 }
 
-const Page = async ({ params }:any) => {
+const Page = async ({ params }: any) => {
 
   const slugAndId = params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId.split('-').pop(); // extract id from slug-id
 
-  console.log(id, "artistData artist page data");
+  // console.log(id, "artistData artist page data");
 
   const artistData = await fetchArtistById(id);
   const data = artistData && artistData[0];
 
-  console.log(data?.song, "artist song page data");
+  // console.log(data?.song, "artist song page data");
   // console.log(artistSlug, "artist page id");
 
   if (!artistData || artistData.length === 0) {

@@ -16,12 +16,29 @@ export const revalidate = 60;
 
 export async function generateStaticParams() {
   const songs = await fetchSongs(); // Fetch all songs from your data source
-  return songs.map((song) => ({
-    id: song.id.toString(), // Convert to string if necessary
-  }));
+  return songs.map(song => {
+    const slug = slugify(`${song.title}`, { lower: true }) + '-' + song.id.toString();
+    // console.log(slug, ""); // Log the slug here
+    return { slug };
+  });
 }
+export async function generateMetadata({ params }: any) {
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
+  const id = slugAndId.split('-').pop(); // extract id from slug-id
 
-async function fetchSongData({id}:any) {
+  // const slugParams = await params.id;
+  const song = await fetchSongById(id);
+  const title = (await song?.title) + " ";
+  const keyword = await song?.keyword;
+  const metaDescription = await song?.metaDescription;
+  const slug = slugify(`${song?.title}`, { lower: true }) + '-' + song?.id.toString();
+
+  const image = await song?.image;
+  // console.log(title);
+
+  return await MetaData({ title, keyword, metaDescription, slug, image });
+}
+async function fetchSongData({ id }: any) {
   // const res = await fetchSongBySlug(id);
   const res = await fetchSongById(id); "use client";
 
@@ -31,7 +48,7 @@ async function fetchSongData({id}:any) {
     isCreator: boolean;
   }
 
-  const SongCard = ({ item }:any) => {
+  const SongCard = ({ item }: any) => {
     // console.log(item, "card item")
     const artists: { name: string; id: string; link: string }[] = [];
     const creators: { name: string; id: string; link: string }[] = [];
@@ -74,24 +91,10 @@ async function fetchSongData({id}:any) {
   const data = res;
   return data || null;
 }
-export async function generateMetadata({ params }:any) {
+
+
+const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId.split('-').pop(); // extract id from slug-id
-
-  // const slugParams = await params.id;
-  const song = await fetchSongById(id);
-  const title = (await song?.title) + " ";
-  const keyword = await song?.keyword;
-  const metaDescription = await song?.metaDescription;
-  const slug = await song?.slug;
-  const image = await song?.image;
-  // console.log(title);
-
-  return await MetaData({ title, keyword, metaDescription, slug, image });
-}
-
-const Song = async ({ params }:any) => {
-  const slugAndId =await params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId?.split('-').pop(); // extract id from slug-id
 
   if (!id) {
@@ -101,12 +104,12 @@ const Song = async ({ params }:any) => {
   // const id = await params.id;
   console.log(id, " id of song page params");
   // console.log(slug, " slug of song page params");
-  const songData = await fetchSongData( {id});
+  const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
 
-  const artists:any[] = [];
-  const creators:any[] = [];
+  const artists: any[] = [];
+  const creators: any[] = [];
   songData.artist.forEach((item) => {
     if (item.isCreator) {
       creators.push(item.artist);

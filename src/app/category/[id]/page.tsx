@@ -3,15 +3,18 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
 import { fetchCategory, fetchCategoryBySlug } from "@/lib/query/query";
+import slugify from "slugify";
 
 export async function generateStaticParams() {
   const categories = await fetchCategory(); // Fetch all songs from your data source
-  return (categories ?? []).map(category => ({
-    id: category.id.toString(), // Convert to string if necessary
-  }));
+  return (categories ?? []).map(category => {
+    const slug = category?.slug;
+    // console.log(slug, ""); // Log the slug here
+    return { slug };
+  });
 }
 
-export async function generateMetadata({ params}:any) {
+export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
   const category = await fetchCategoryBySlug(slugParams);
   const title = (category?.[0]?.name ?? "Unknown") + " " + "Category"
@@ -24,7 +27,7 @@ export async function generateMetadata({ params}:any) {
 }
 
 
-const Page = async ({ params }:any) => {
+const Page = async ({ params }: any) => {
   const categorySlug = params.id;
   const categoryData = await fetchCategoryBySlug(categorySlug);
   const data = categoryData?.[0];

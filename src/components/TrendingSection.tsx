@@ -7,7 +7,7 @@ import { useGetSongs } from "@/lib/query/query";
 
 const TrendingSection:React.FC<any> = ({number}) => {
   const songData = useGetSongs()
-  console.log(songData.data, "TrendingSection")
+  // console.log(songData.data, "TrendingSection")
   // if (!songData || songData.length === 0) {
   //   return <p>No Song...</p>;
   // }

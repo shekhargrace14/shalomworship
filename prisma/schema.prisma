@@ -8,28 +8,31 @@ datasource db {
 }
 
 model song {
-  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  id              String          @id @default(auto()) @map("_id") @db.ObjectId
   title           String
   content         String
   lines           Json?
+  Key             String?
+  bpm             Int?                                                                                
   image           String?
   video           String?
   view            Int
   like            Int
-  createdAt       DateTime       @default(now())
-  updatedAt       DateTime       @updatedAt
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
   // SEO
   slug            String
   keyword         String[]
   metaDescription String
   excerpt         String?
-  author          author?        @relation(fields: [authorId], references: [id])
-  authorId        String?        @db.ObjectId
-  creator         artist?        @relation(fields: [creatorId], references: [id])
-  creatorId       String?        @db.ObjectId
+  author          author?         @relation(fields: [authorId], references: [id])
+  authorId        String?         @db.ObjectId
+  creator         artist?         @relation(fields: [creatorId], references: [id])
+  creatorId       String?         @db.ObjectId
   artist          SongArtist[] // Explicit relation
   genre           SongGenre[] // Explicit relation
   category        SongCategory[] // Explicit relation
+  scripture       SongScripture[] // Explicit relation
 
   @@unique([slug])
 }
@@ -74,6 +77,16 @@ model category {
   song      SongCategory[] // Explicit relation
 }
 
+model scripture {
+  id        String          @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  image     String
+  slug      String?
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  song      SongScripture[] // Explicit relation
+}
+
 // Intermediate table for song-artist many-to-many
 model SongArtist {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -101,4 +114,13 @@ model SongCategory {
   categoryId String   @db.ObjectId
   song       song     @relation(fields: [songId], references: [id])
   category   category @relation(fields: [categoryId], references: [id])
+}
+
+// Intermediate table for song-genre many-to-many
+model SongScripture {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  songId      String    @db.ObjectId
+  scriptureId String    @db.ObjectId
+  song        song      @relation(fields: [songId], references: [id])
+  scripture   scripture @relation(fields: [scriptureId], references: [id])
 }

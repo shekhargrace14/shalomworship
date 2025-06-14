@@ -2,7 +2,7 @@
 
 import prisma from "../db";
 
-export  async function songServerAction(){
+export  async function songs(){
     try{
         return await prisma.song.findMany({
             include: {

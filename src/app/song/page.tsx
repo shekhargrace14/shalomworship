@@ -10,11 +10,12 @@ export async function generateStaticParams() {
   }));
 }
 
-const page = () => {
+const page = async () => {
+  const songs = await fetchSongs();
   return (
     <div className=' h-[90vh] overflow-y-auto custom-scrollbar p-4'>
       <Menu />
-      <SongSection />
+      <SongSection songs={songs} />
     </div>
   );
 };

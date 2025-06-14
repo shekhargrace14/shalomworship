@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { songServerAction } from "../actions/song";
+import { songs } from "../actions/song";
 import { songById } from "../actions/songById";
 import { songBySlug } from "../actions/songBySlug";
 import { artists } from "../actions/artists";
@@ -10,7 +10,7 @@ import { categoryBySlug } from "../actions/categoryBySlug";
 
 
 const fetchSongs = async () => {
-  const res = await songServerAction();
+  const res = await songs();
   return res;
 };
 
@@ -18,7 +18,7 @@ const fetchSongs = async () => {
 const useGetSongs = () => {
   return useQuery({
     queryKey: ["songs"],
-    queryFn: songServerAction,
+    queryFn: async () => await songs(),
   });
 };
 

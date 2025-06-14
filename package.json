@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@analytics/google-analytics": "^1.1.0",
+    "@next/third-parties": "^15.3.3",
     "@prisma/client": "^6.9.0",
     "@tanstack/react-query": "^5.80.6",
     "@tanstack/react-query-devtools": "^5.80.6",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/router": "^0.0.1-beta.53",
     "@tanstack/virtual-core": "^3.13.10",
+    "analytics": "^0.8.16",
     "geist": "^1.4.2",
     "next": "15.3.3",
     "react": "^19.0.0",

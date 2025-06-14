@@ -1,4 +1,4 @@
-"use client";
+
 import slugify from "slugify";
 import React from "react";
 import { FaUser } from "react-icons/fa";

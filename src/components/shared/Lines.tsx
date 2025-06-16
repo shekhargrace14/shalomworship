@@ -3,8 +3,14 @@ import React, { useState } from 'react'
 import ChordTable from './ChordTable';
 // import ChordTable from '../ChordTable'
 
-const Lines = ({id}:{id:string}) => {
-    const [activeTab, setActiveTab] = useState<"chords" | "lyrics">("chords");
+type LinesProps = {
+  id: string;
+  song: any; // Replace 'any' with the correct type if you have it
+};
+
+const Lines = ({id ,song}: LinesProps) => {
+    const [activeTab, setActiveTab] = useState<"chords" | "lyrics">("chords");4
+    console.log("song", song)
   return (
     <>
     <div className="inline-flex p-1 gap-4 mb-8">
@@ -29,7 +35,7 @@ const Lines = ({id}:{id:string}) => {
         Lyrics
       </button>
     </div>
-        <div><ChordTable id={id} isChord={activeTab==="chords"}/></div>
+        <div><ChordTable id={id} isChord={activeTab==="chords"} songData={song} /></div>
     </>
   )
 }

@@ -12,7 +12,7 @@ model song {
   title           String
   content         String
   lines           Json?
-  Key             String?
+  key             String?
   bpm             Int?                                                                                
   image           String?
   video           String?

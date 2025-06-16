@@ -19,7 +19,7 @@ const Header = () => {
           <IoMdHome />
         </Link>
       </div>
-      <div className="w-4/12 md:hidden ">
+      <div className="w-2/12 md:hidden ">
         <div className="text-3xl  " onClick={toggleMenu}>
           {!menuOpen ? <IoMenuSharp  />:<IoMdClose className="absolute z-20 top-3" />}
         </div>

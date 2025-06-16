@@ -14,26 +14,30 @@ type Song = { title?: string; key: string; lines: ChordLyric[][] };
 type ChordTableProps = {
   id: string
   isChord: boolean
+  songData?: Song | null; // Optional song prop for initial data
 }
 
-const ChordTable: React.FC<ChordTableProps> = ({ id, isChord }) => {
+const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
   // console.log(id, "table id");
-  // console.log(isChord, "table isChord");
+  console.log(songData, "table songData");
   const [song, setSong] = useState<Song | null>(null);
   const [shift, setShift] = useState(0);
   // console.log(song, "localSong");
 
   useEffect(() => {
     async function fetchSong() {
-      const singleSong = await fetchSongById(id);
+      // const singleSong = await fetchSongById(id);
+      const singleSong = await songData 
+      // console.log(singleSong, " singleSong fetched song");
+
       if (singleSong) {
         const formattedSong: Song = {
           title: singleSong.title,
-          key: singleSong.Key || 'C', // provide a default key if missing
+          key: singleSong.key || 'C', // provide a default key if missing
           lines: (singleSong.lines as ChordLyric[][]) || []
         };
         setSong(formattedSong);
-        console.log(formattedSong, " singleSong fetched song");
+        // console.log(formattedSong, " singleSong fetched song");
       }
     }
     fetchSong();
@@ -41,7 +45,7 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord }) => {
 
 
 
-  console.log(song?.key, "table song");
+  // console.log(song?.key, "table song");
 
 
   // useEffect(() => {

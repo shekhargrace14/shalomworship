@@ -61,7 +61,7 @@ const Search = ({ searchInput }: { searchInput: string }) => {
                       />
                     </div>
                     <div className="w-6/12 grid">
-                      <h3 className="line-clamp-1 md:text-xl text-xl font-semibold">
+                      <h3 className="line-clamp-1 md:text-xl text-base font-semibold">
                         {item.title}
                       </h3>
                       <div className="flex gap-2 items-baseline flex-wrap sm:line-clamp-20">

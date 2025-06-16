@@ -233,7 +233,7 @@ const Song = async ({ params }: any) => {
         {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
 
-            <Lines id={songData.id} />
+            <Lines id={songData.id} song={songData}/>
           ) : (
 
             <section className="w-full text-white">

@@ -19,7 +19,7 @@ type ChordTableProps = {
 
 const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
   // console.log(id, "table id");
-  console.log(songData, "table songData");
+  // console.log(songData, "table songData");
   const [song, setSong] = useState<Song | null>(null);
   const [shift, setShift] = useState(0);
   // console.log(song, "localSong");

@@ -28,7 +28,7 @@ const Searchbar = () => {
           type="text"
           className=" w-[95%] px-4 bg-transparent outline-none border-none border-collapse "
           // className={`w-full px-4 bg-transparent outline-none border-none border-collapse ${search ? "hidden" : "sm:block"}`}
-          placeholder="Search "
+          placeholder="Search Song Artist Category"
           value={searchInput}
           onChange={handleInputChange}
         />

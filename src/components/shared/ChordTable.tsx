@@ -64,11 +64,11 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
 
         <div className="mb-8 flex gap-4 items-center">
           <button onClick={() => setShift(shift - 1)} className="px-3 py-1 bg-gray-200 text-black rounded">-</button>
-          <span>Transpose: {fromKey} → {toKey}</span>
+          <span className='text-white'>Transpose: {fromKey} → {toKey}</span>
           <button onClick={() => setShift(shift + 1)} className="px-3 py-1 bg-gray-200 text-black rounded">+</button>
         </div>
       )}
-      <h2 className="text-2xl font-semibold mb-4">{song.title}{isChord ? " Chords" : " Lyrics"}</h2>
+      <h2 className="text-2xl font-semibold mb-4 text-white">{song.title}{isChord ? " Chords" : " Lyrics"}</h2>
 
       <table className="table-auto border-collapse">
         <tbody>
@@ -82,14 +82,14 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
                   {isChord && (
                     <tr className='mb-2'>
                       {transposedChords.map((chord: string, i: number) => (
-                      <td key={i} className="font-bold text-left">{chord}</td>
+                      <td key={i} className="font-bold text-left text-white">{chord}</td>
                       ))}
                     </tr>
                   )}
 
                   <tr>
                     {line.map((item, i) => (
-                      <td key={i} className="text-left">{item.lyrics}&nbsp;</td>
+                      <td key={i} className="text-left text-white">{item.lyrics}&nbsp;</td>
                     ))}
                   </tr>
                 </div>

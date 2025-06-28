@@ -10,23 +10,23 @@ type LinesProps = {
 
 const Lines = ({id ,song}: LinesProps) => {
     const [activeTab, setActiveTab] = useState<"chords" | "lyrics">("chords");4
-    console.log("song", song)
+    // console.log("song", song)
   return (
     <>
     <div className="inline-flex p-1 gap-4 mb-8">
       <button
         onClick={() => setActiveTab("chords")}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border-1 border-white ${
+        className={`px-4 py-2 rounded-full text-sm text-gray-400 font-medium transition-all duration-200 border-1 border-white  ${
           activeTab === "chords"
-            ? "bg-white text-black"
-            : "text-white-500 hover:bg-white hover:text-black"
+            ? "bg-white text-gray"
+            : "text-white-500 hover:bg-white hover:text-gray"
         }`}
       >
         Chords
       </button>
       <button
         onClick={() => setActiveTab("lyrics")}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border-1 border-white ${   
+        className={`px-4 py-2 rounded-full text-sm text-gray-400 font-medium transition-all duration-200 border-1 border-white  ${   
           activeTab === "lyrics"
             ? "bg-white text-black"
             : "text-white-500 hover:bg-white hover:text-black "

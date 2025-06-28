@@ -4,6 +4,8 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
 import Lines from "@/components/shared/Lines";
+import PlayButton from "@/components/ui/Play";
+import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
 import { fetchSongById, fetchSongs } from "@/lib/query/query";
 import Image from "next/image";
@@ -96,13 +98,14 @@ async function fetchSongData({ id }: any) {
 const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId?.split('-').pop(); // extract id from slug-id
+  
 
   if (!id) {
     return <p className="text-white">Invalid song ID.</p>;
   }
 
   // const id = await params.id;
-  console.log(id, " id of song page params");
+  // console.log(id, " id of song page params");
   // console.log(slug, " slug of song page params");
   const songData = await fetchSongData({ id });
   if (!songData)
@@ -226,6 +229,12 @@ const Song = async ({ params }: any) => {
         </div>
       </div>
       {/* <Ad1 /> */}
+      <PlayButton
+        audioUrl="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        title={songData.title}
+        artist={creators[0]?.name || artists[0]?.name || "Unknown Artist"}
+        image={songData.image || "/default-image.jpg"}
+      />
       <main className="mx-auto p-4 pt-8 relative">
         {/* <div className="absolute right-2 sm:top-[12px] top-[-8px]">
           <ShareButton title={songData.title} />

@@ -5,6 +5,7 @@ import { QueryProvider } from "@/lib/query/query-provider";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import BottomPlayer from "@/components/layout/BottomPlayer";
 
 
 
@@ -33,10 +34,10 @@ export default function RootLayout({
      crossOrigin="anonymous"></script>
      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
       </head>
-      <body className="antialiased bg-black">
+      <body className="antialiased bg-black ">
         <QueryProvider>
             <Header />
-            <div className="flex flex-1 gap-4 ">
+            <div className="flex flex-1 gap-4 bg-black">
               <aside className="w-full hidden md:block md:w-4/12 lg:w-3/12 rounded-lg">
                 <Sidebar />
               </aside>
@@ -44,6 +45,7 @@ export default function RootLayout({
                 {children}
               </main>
           </div>
+          <BottomPlayer />
         </QueryProvider>
       </body>
     </html>

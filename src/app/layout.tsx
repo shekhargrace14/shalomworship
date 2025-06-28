@@ -5,7 +5,7 @@ import { QueryProvider } from "@/lib/query/query-provider";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import BottomPlayer from "@/components/layout/BottomPlayer";
+// import BottomPlayer from "@/components/layout/BottomPlayer";
 
 
 
@@ -45,7 +45,7 @@ export default function RootLayout({
                 {children}
               </main>
           </div>
-          <BottomPlayer />
+          {/* <BottomPlayer /> */}
         </QueryProvider>
       </body>
     </html>

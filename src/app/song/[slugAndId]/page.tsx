@@ -229,12 +229,12 @@ const Song = async ({ params }: any) => {
         </div>
       </div>
       {/* <Ad1 /> */}
-      <PlayButton
+      {/* <PlayButton
         audioUrl="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
         title={songData.title}
         artist={creators[0]?.name || artists[0]?.name || "Unknown Artist"}
         image={songData.image || "/default-image.jpg"}
-      />
+      /> */}
       <main className="mx-auto p-4 pt-8 relative">
         {/* <div className="absolute right-2 sm:top-[12px] top-[-8px]">
           <ShareButton title={songData.title} />
@@ -242,7 +242,7 @@ const Song = async ({ params }: any) => {
         {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
 
-            <Lines id={songData.id} song={songData}/>
+            <Lines id={songData.id} song={songData} isChords={!!songData.isChords}/>
           ) : (
 
             <section className="w-full text-white">

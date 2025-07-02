@@ -98,7 +98,7 @@ async function fetchSongData({ id }: any) {
 const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId?.split('-').pop(); // extract id from slug-id
-  
+
 
   if (!id) {
     return <p className="text-white">Invalid song ID.</p>;
@@ -120,19 +120,22 @@ const Song = async ({ params }: any) => {
       artists.push(item.artist);
     }
   });
-  // console.log(artists, " artists of song page params");
+  console.log(songData, " colors of song page params");
   // console.log(creators[0].id, " creators of song page params");
+
+  
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
-      <div className="p-4 pb-0 bg-[#1f1f1f]">
+      <div
+        // className={`md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-${songData.color} to-[#000000]`}
+        className="md:flex gap-4 p-4 flex-col text-white w-full"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, ${songData.color}, #00000080)`
+        }}
+      >
         <Menu />
-      </div>
-      {/* <section className="p-4 bg-[#1f1f1f]">
-          <ChordTable id="6778cedcb965402bde0996e5"/>
-        </section> */}
-      <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
-        <div className=" sm:flex items-center gap-2 w-full ">
+        <div className=" sm:flex items-center gap-2 w-full mt-2">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
             <Image
               src={songData.image || "/default-image.jpg"}
@@ -145,7 +148,7 @@ const Song = async ({ params }: any) => {
           </div>
 
           <div className="sm:w-8/12 grid">
-            <h1 className="text-4xl font-semibold mb-2 text-white">
+            <h1 className="text-4xl font-semibold mb-2 mt-2 text-white">
               {songData.title}{" "}
             </h1>
 
@@ -214,7 +217,7 @@ const Song = async ({ params }: any) => {
                 </p>
               )}
               &bull;
-              <p className="text-sm md:mt-0 mt-2 text-white">
+              <p className="text-sm  text-white">
                 {new Date(songData.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
@@ -235,14 +238,14 @@ const Song = async ({ params }: any) => {
         artist={creators[0]?.name || artists[0]?.name || "Unknown Artist"}
         image={songData.image || "/default-image.jpg"}
       /> */}
-      <main className="mx-auto p-4 pt-8 relative">
+      <main className="mx-auto p-4 pt-4 relative">
         {/* <div className="absolute right-2 sm:top-[12px] top-[-8px]">
           <ShareButton title={songData.title} />
         </div> */}
         {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
 
-            <Lines id={songData.id} song={songData} isChords={!!songData.isChords}/>
+            <Lines id={songData.id} song={songData} isChords={!!songData.isChords} />
           ) : (
 
             <section className="w-full text-white">

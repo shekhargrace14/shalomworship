@@ -10,7 +10,7 @@ type LinesProps = {
 };
 
 const Lines = ({id ,song, isChords}: LinesProps) => {
-  console.log(isChords,"ischords on line page")
+  // console.log(isChords,"ischords on line page")
     const [activeTab, setActiveTab] = useState<"chords" | "lyrics">("chords");
     // console.log("song", song)
   return (

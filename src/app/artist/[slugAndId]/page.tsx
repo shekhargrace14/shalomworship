@@ -61,7 +61,7 @@ const Page = async ({ params }: any) => {
           <div className=" flex items-center gap-4 w-full ">
             <div className="h-full w-3/12 md:2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
               <Image
-                src={data?.image || "/user.png"}
+                src={data?.image || "https://drive.google.com/uc?export=view&id=19Vm_Qd_6F_ehN5SE2jkUYpnk7TMNwM1g"}
                 alt={data?.name || "Artist Image"}
                 width={200}
                 height={100}

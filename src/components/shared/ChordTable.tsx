@@ -78,9 +78,9 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
 
             return (
               <React.Fragment key={idx} >
-                <div className='mb-3'>
+                <div className={` ${isChord} ? mb-3 : "" `}>
                   {isChord && (
-                    <tr className='mb-2'>
+                    <tr className=''>
                       {transposedChords.map((chord: string, i: number) => (
                       <td key={i} className="font-bold text-left text-white">{chord}</td>
                       ))}

@@ -3,24 +3,26 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import { fetchArtists, fetchCategory } from "@/lib/query/query";
 import React from "react";
+import { Metadata } from "next";  
+import { MetaDataProps } from "@/types";
 
 
-export async function generateStaticParams() {
-  const categories = await fetchCategory(); // Fetch all categories from your data source
-  return categories?.map((category) => ({
-    id: category.id.toString(), // Convert to string if necessary
-  }));
-}
 
 
-export async function generateMetadata() {
+export function generateMetadata(): MetaDataProps {
   const title = "Artists";
   const slug = "artists";
   const description = "Explore various artists and their works on Shalom Worship.";
   const image = "";
   const keyword = ["Artists", "Shalom Worship"];
 
-    return await MetaData({ title, slug, image, keyword, description });
+  return {
+    title,
+    slug,
+    image,
+    keyword,
+    metaDescription: description,
+  };
 
 }
 

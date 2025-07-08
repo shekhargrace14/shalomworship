@@ -14,3 +14,11 @@ export type Song = {
   lines: ChordLyric[][];
   // Add other properties if needed
 };
+
+export type MetaDataProps = {
+  title: string
+  slug: string
+  keyword?: string[]
+  metaDescription?: string
+  image?: string
+}

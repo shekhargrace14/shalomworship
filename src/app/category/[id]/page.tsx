@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
   const category = await fetchCategoryBySlug(slugParams);
-  const title = (category?.[0]?.name ?? "Unknown") + " " + "Category"
+  const title = (category?.[0]?.name ?? "Unknown") 
 
   const slug = await category?.[0]?.slug ?? ''
   const image = await category?.[0]?.image ?? ''
@@ -34,7 +34,7 @@ const Page = async ({ params }: any) => {
 
   //   console.log(categorySlug, "category page id");
   //   console.log(categoryData, "categoryData  page data");
-  //   console.log(data.song, "categoryData song page data");
+    console.log(data?.song, "categoryData song page data");
   return (
     <>
       <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">

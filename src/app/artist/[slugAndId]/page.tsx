@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: any) {
   // console.log(slug);
   const image = artist && artist[0]?.image
 
-  // return await MetaData({ title, slug, image, keyword, metaDescription });
+  return await MetaData({ title, slug, image, keyword});
 }
 
 const Page = async ({ params }: any) => {

@@ -35,4 +35,5 @@ export default async function Home() {
   );
 }
 
+
 export const revalidate = 86400; // once every 24 hours

@@ -12,7 +12,10 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
-
+interface ArtistItem {
+  artist: { name: string; id: string; link: string };
+  isCreator: boolean;
+}
 
 export async function generateStaticParams() {
   const songs = await fetchSongs(); // Fetch all songs from your data source
@@ -26,9 +29,21 @@ export async function generateMetadata({ params }: any) {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId.split('-').pop(); // extract id from slug-id
 
+
   // const slugParams = await params.id;
   const song = await fetchSongById(id);
-  const title = (await song?.title) + " ";
+  // const title = (await song?.title) + " " + "by " + (await song?.artist[0]?.artist?.name) || "Unknown Song";
+  const mainArtists = song?.artist?.filter((a) => a.isArtist) || [];
+
+const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
+
+const title =
+  (song?.title || "Unknown Title") +
+  " by " +
+  (artistNames || "Unknown Artist") +
+  " from " +
+  (song?.artist?.[0]?.artist?.name || "Unknown Source");
+
   const keyword = await song?.keyword;
   const metaDescription = await song?.metaDescription;
   const slug = slugify(`${song?.title}`, { lower: true }) + '-' + song?.id.toString();
@@ -36,17 +51,12 @@ export async function generateMetadata({ params }: any) {
   const image = await song?.image;
   // console.log(title);
 
-  return await MetaData({ title, keyword, metaDescription, slug, image });
+  return await MetaData({ title, keyword, metaDescription, slug, image }); 
+  
 }
 async function fetchSongData({ id }: any) {
   // const res = await fetchSongBySlug(id);
   const res = await fetchSongById(id); "use client";
-
-
-  interface ArtistItem {
-    artist: { name: string; id: string; link: string };
-    isCreator: boolean;
-  }
 
   const SongCard = ({ item }: any) => {
     // console.log(item, "card item")
@@ -59,8 +69,8 @@ async function fetchSongData({ id }: any) {
         artists.push(item.artist);
       }
     });
-    // console.log(artists, " artists of song page params");
-    // console.log(creators, " creators of song page params");\
+    console.log(artists, " artists of song page params");
+    console.log(creators, " creators of song page params");
     const slug = slugify(`${item.title}`, { lower: true })
     return (
       <>
@@ -118,10 +128,10 @@ const Song = async ({ params }: any) => {
       artists.push(item.artist);
     }
   });
-  console.log(songData, " colors of song page params");
+  // console.log(songData, " colors of song page params");
   // console.log(creators[0].id, " creators of song page params");
 
-  
+
 
   return (
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">

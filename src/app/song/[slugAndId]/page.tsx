@@ -1,4 +1,4 @@
-// import Ad1 from "@/components/Ad1";
+
 import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
@@ -12,9 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
-// export const revalidate = 60;
 
-// export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const songs = await fetchSongs(); // Fetch all songs from your data source

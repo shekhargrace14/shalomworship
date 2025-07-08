@@ -8,6 +8,8 @@ import TrendingSection from "@/components/TrendingSection";
 import { fetchArtists, fetchCategory, fetchSongs, useGetSongs } from "@/lib/query/query";
 import Link from "next/link";
 
+export const revalidate = 86400; // once every 24 hours
+
 export default async function Home() {
   const [songs, artists, categories] = await Promise.all([
     fetchSongs(),

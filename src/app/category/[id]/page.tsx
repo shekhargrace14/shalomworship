@@ -14,6 +14,7 @@ export async function generateStaticParams() {
   });
 }
 
+
 export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
   const category = await fetchCategoryBySlug(slugParams);

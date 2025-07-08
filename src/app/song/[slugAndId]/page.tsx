@@ -285,7 +285,7 @@ const Song = async ({ params }: any) => {
         <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
           Song You May Like from &nbsp;
           {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}
-          <Link className="underline" href={`/artist/${creators[0]?.id}-${slugify(creators[0]?.name, { lower: true })}`}>
+          <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
 
             {creators[0]?.name}
           </Link>

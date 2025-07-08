@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
-export const revalidate = 60;
+// export const revalidate = 60;
 
 // export const dynamic = "force-dynamic";
 

@@ -9,7 +9,6 @@ export async function generateStaticParams() {
   const categories = await fetchCategory(); // Fetch all songs from your data source
   return (categories ?? []).map(category => {
     const slug = category?.slug;
-    // console.log(slug, ""); // Log the slug here
     return { slug };
   });
 }

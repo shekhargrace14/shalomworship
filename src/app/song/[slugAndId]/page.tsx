@@ -32,17 +32,25 @@ export async function generateMetadata({ params }: any) {
 
   // const slugParams = await params.id;
   const song = await fetchSongById(id);
+  console.log(song, " song of song page params");
   // const title = (await song?.title) + " " + "by " + (await song?.artist[0]?.artist?.name) || "Unknown Song";
   const mainArtists = song?.artist?.filter((a) => a.isArtist) || [];
+  const creatorArtists = song?.artist?.filter((a) => a.isCreator) || [];
+  console.log(mainArtists, " mainArtists of song page params");
+  console.log(creatorArtists, " creatorArtists of song page params");
 
-const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
+  const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
+  const creatorNames = creatorArtists.map((a) => a.artist?.name).join(", ");
 
-const title =
-  (song?.title || "Unknown Title") +
-  " by " +
-  (artistNames || "Unknown Artist") +
-  " from " +
-  (song?.artist?.[0]?.artist?.name || "Unknown Source");
+
+  const title =
+    (song?.title || "Unknown Title") +
+    " by " +
+    (artistNames || "Unknown Artist") +
+    " from " +
+    
+    (creatorNames || "Unknown Creator");
+
 
   const keyword = await song?.keyword;
   const metaDescription = await song?.metaDescription;
@@ -51,8 +59,8 @@ const title =
   const image = await song?.image;
   // console.log(title);
 
-  return await MetaData({ title, keyword, metaDescription, slug, image }); 
-  
+  return await MetaData({ title, keyword, metaDescription, slug, image });
+
 }
 async function fetchSongData({ id }: any) {
   // const res = await fetchSongBySlug(id);

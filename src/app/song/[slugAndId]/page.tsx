@@ -45,11 +45,9 @@ export async function generateMetadata({ params }: any) {
 
   const title =
     (song?.title || "Unknown Title") +
-    " by " +
-    (artistNames || "Unknown Artist") +
-    " from " +
+    (mainArtists.length > 0 ? " by " + artistNames : "") +
+    (creatorArtists.length > 0 ? " from " + creatorNames : "") 
     
-    (creatorNames || "Unknown Creator");
 
 
   const keyword = await song?.keyword;

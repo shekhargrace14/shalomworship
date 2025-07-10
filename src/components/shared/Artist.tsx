@@ -7,6 +7,7 @@ import slugify from "slugify";
 import { useGetArtists } from "@/lib/query/query";
 // import { useGetArtistBySlug } from "@/lib/query/query";
 import { ArtistType } from "@/types";
+import Avatar from "../ui/Avatar";
 
 
 
@@ -34,7 +35,7 @@ const Artist = ({ artists }: { artists: ArtistType[] }) => {
               >
                 <div className="lg:container mx-auto p-2 flex gap-4">
                   <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0">
-                    <Image
+                    {/* <Image
                       // src="/user.png"
                       src={item?.image || "/user.png"}
                       alt={item?.name || "Artist Name"}
@@ -42,7 +43,8 @@ const Artist = ({ artists }: { artists: ArtistType[] }) => {
                       height={60}
                       className=" object-cover h-full"
                       priority
-                    />
+                    /> */}
+                    <Avatar src={item?.image} alt={item?.name} size={55}/>
                   </div>
                   <div className="md:w-10/12 flex flex-col justify-center">
                     <h3 className="line-clamp-1 font-semibold text-base text-white">

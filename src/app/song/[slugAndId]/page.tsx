@@ -143,13 +143,13 @@ const Song = async ({ params }: any) => {
     <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
       <div
         // className={`md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-${songData.color} to-[#000000]`}
-        className="flex gap-4 p-4 pb-0 flex-col text-white w-full"
+        className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
         style={{
           backgroundImage: `linear-gradient(to bottom, ${songData.color}, #00000080)`
         }}
       >
         <Menu />
-        <div className=" sm:flex items-center gap-2 w-full">
+        <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
             <Image
               src={songData.image || "/default-image.jpg"}
@@ -162,13 +162,9 @@ const Song = async ({ params }: any) => {
           </div>
 
           <div className="sm:w-8/12 grid">
-            <h1 className="text-4xl font-semibold mb-2 mt-2 text-white">
+            <h1 className="text-3xl md:text-4xl font-semibold mb-2 mt-2 text-white">
               {songData.title}{" "}
             </h1>
-
-            {/* ////////////////////////////////////////////////////////////////////////////// */}
-
-            {/* ////////////////////////////////////////////////////////////////////////////// */}
 
             <div className="flex gap-2 items-baseline flex-wrap">
               <div>

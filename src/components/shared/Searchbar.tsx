@@ -26,7 +26,7 @@ const Searchbar = () => {
       <div className=" flex items-center bg-[#1f1f1f]  rounded-lg py-2 px-4">
         <input
           type="text"
-          className=" w-[95%] px-4 bg-transparent outline-none border-none border-collapse "
+          className=" w-[95%]  bg-transparent outline-none border-none border-collapse "
           // className={`w-full px-4 bg-transparent outline-none border-none border-collapse ${search ? "hidden" : "sm:block"}`}
           placeholder="Song, Artist, Category"
           value={searchInput}

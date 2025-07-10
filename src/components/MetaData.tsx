@@ -24,7 +24,7 @@ export const MetaData = ({ title, keyword, metaDescription, slug, image }: any) 
       )}`,
     },
     openGraph: {
-      title: title + " lyrics" || "Untitled Song",
+      title: title,
       description: metaDescription || "No description available",
       url: `https://www.shalomworship.com/song/${encodeURIComponent(
         slug

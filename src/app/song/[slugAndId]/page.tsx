@@ -4,6 +4,7 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
 import Lines from "@/components/shared/Lines";
+import Avatar from "@/components/ui/Avatar";
 import PlayButton from "@/components/ui/Play";
 import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
@@ -46,8 +47,8 @@ export async function generateMetadata({ params }: any) {
   const title =
     (song?.title || "Unknown Title") +
     (mainArtists.length > 0 ? " by " + artistNames : "") +
-    (creatorArtists.length > 0 ? " from " + creatorNames : "") 
-    
+    (creatorArtists.length > 0 ? " from " + creatorNames : "")
+
 
 
   const keyword = await song?.keyword;
@@ -161,33 +162,33 @@ const Song = async ({ params }: any) => {
             />
           </div>
 
-          <div className="sm:w-8/12 grid">
+          <div className="sm:w-8/12 grid gap-2">
             <h1 className="text-3xl md:text-4xl font-semibold mb-2 mt-2 text-white">
               {songData.title}{" "}
             </h1>
 
-            <div className="flex gap-2 items-baseline flex-wrap">
-              <div>
-                {creators.length > 0 ? (
-                  creators.map((creator, index) => (
-                    <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`}>
-                      <span className="font-semibold text-base leading-4 text-white underline">
-                        {creator?.name}
-                        {index < creators.length - 1 ? ", " : ""}
-                      </span>
-                    </Link>
-                  ))
-                ) : (
-                  <p className="font-semibold text-sm leading-4 text-white ">
-                    No creator specified
-                  </p>
-                )}
-              </div>
-              -
+
+              {creators.length > 0 ? (
+                creators.map((creator, index) => (
+                  <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
+                    <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} />
+                    <span className="font-semibold text-lg leading-4 text-white ">
+                      {creator?.name}
+                      {index < creators.length - 1 ? ", " : ""}
+                    </span>
+                  </Link>
+                ))
+              ) : (
+                <p className="font-semibold text-sm leading-4 text-white ">
+                  No creator specified
+                </p>
+              )}
+            <div className="flex gap-2">
+              
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
                   <Link key={index} href={`/artist/${slugify(artist?.name, { lower: true })}-${artist?.id}`}>
-                    <span className="font-light text-sm leading-4 text-white underline">
+                    <span className="font-light text-sm leading-4 text-white underline ">
                       {artist?.name}
                       {index < artists.length - 1 ? ", " : ""}
                     </span>
@@ -196,7 +197,7 @@ const Song = async ({ params }: any) => {
               ) : (
                 <p className="font-light text-sm leading-4 text-white"></p>
               )}
-            </div>
+            </div> 
 
             <div className="flex gap-2 flex-wrap items-center" >
               {songData.category && songData.category.length > 0 ? (

@@ -17,6 +17,7 @@ model song {
   bpm             Int?
   image           String?
   video           String?
+  videoId         String?
   audio           String?
   color           String?
   view            Int

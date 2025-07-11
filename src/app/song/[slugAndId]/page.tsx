@@ -8,6 +8,7 @@ import Avatar from "@/components/ui/Avatar";
 import PlayButton from "@/components/ui/Play";
 import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { fetchSongById, fetchSongs } from "@/lib/query/query";
 import Image from "next/image";
 import Link from "next/link";
@@ -125,11 +126,11 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
-  console.log(songData.artist, "song artist ")
+  console.log(songData.videoId, "song videoId  ")
 
   const artists: any[] = [];
   const creators: any[] = [];
-  songData.artist.forEach((item) => { 
+  songData.artist.forEach((item) => {
     const a = item.artist
     if (item.isCreator) {
       creators.push(a);
@@ -156,14 +157,21 @@ const Song = async ({ params }: any) => {
         <Menu />
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
-            <Image
-              src={songData.image || "/default-image.jpg"}
-              alt={songData.title || "Song Image"}
-              width={200}
-              height={100}
-              className="bg-gray-800 object-cover h-full w-full"
-              priority={true}
-            />
+            {songData.videoId ?
+
+              <YouTubeEmbed videoId={songData.videoId} title={songData.title} />
+              :
+              <Image
+                src={songData.image || "/default-image.jpg"}
+                alt={songData.title || "Song Image"}
+                width={200}
+                height={100}
+                className="bg-gray-800 object-cover h-full w-full"
+                priority={true}
+              />
+
+            }
+
           </div>
 
           <div className="sm:w-8/12 grid gap-2">

@@ -14,7 +14,7 @@ import Link from "next/link";
 import slugify from "slugify";
 
 interface ArtistItem {
-  artist: { name: string; id: string; link: string };
+  artist: { name: string; id: string; link: string; type: string; };
   isCreator: boolean;
 }
 
@@ -33,12 +33,12 @@ export async function generateMetadata({ params }: any) {
 
   // const slugParams = await params.id;
   const song = await fetchSongById(id);
-  console.log(song, " song of song page params");
+  // console.log(song, " song of song page params");
   // const title = (await song?.title) + " " + "by " + (await song?.artist[0]?.artist?.name) || "Unknown Song";
   const mainArtists = song?.artist?.filter((a) => a.isArtist) || [];
   const creatorArtists = song?.artist?.filter((a) => a.isCreator) || [];
-  console.log(mainArtists, " mainArtists of song page params");
-  console.log(creatorArtists, " creatorArtists of song page params");
+  // console.log(mainArtists, " mainArtists of song page params");
+  // console.log(creatorArtists, " creatorArtists of song page params");
 
   const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
   const creatorNames = creatorArtists.map((a) => a.artist?.name).join(", ");
@@ -125,18 +125,22 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
+  console.log(songData.artist, "song artist ")
 
   const artists: any[] = [];
   const creators: any[] = [];
-  songData.artist.forEach((item) => {
+  songData.artist.forEach((item) => { 
+    const a = item.artist
     if (item.isCreator) {
-      creators.push(item.artist);
-    } else {
-      artists.push(item.artist);
+      creators.push(a);
+    }
+    if (item.artist?.type === "individual") {
+      artists.push(a);
     }
   });
-  // console.log(songData, " colors of song page params");
-  // console.log(creators[0].id, " creators of song page params");
+
+  console.log(artists, " artists of song page params");
+  console.log(creators[0].id, " creators of song page params");
 
 
 
@@ -168,36 +172,36 @@ const Song = async ({ params }: any) => {
             </h1>
 
 
-              {creators.length > 0 ? (
-                creators.map((creator, index) => (
-                  <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
-                    <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} />
-                    <span className="font-semibold text-lg leading-4 text-white ">
-                      {creator?.name}
-                      {index < creators.length - 1 ? ", " : ""}
-                    </span>
-                  </Link>
-                ))
-              ) : (
-                <p className="font-semibold text-sm leading-4 text-white ">
-                  No creator specified
-                </p>
-              )}
-            <div className="flex gap-2">
-              
+            {creators.length > 0 ? (
+              creators.map((creator, index) => (
+                <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
+                  <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} />
+                  <span className="font-semibold text-lg leading-4 text-white ">
+                    {creator?.name}
+                    {index < creators.length - 1 ? ", " : ""}
+                  </span>
+                </Link>
+              ))
+            ) : (
+              <p className="font-semibold text-sm leading-4 text-white ">
+                No creator specified
+              </p>
+            )}
+            <div className=" flex flex-wrap gap-2">
+
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
                   <Link key={index} href={`/artist/${slugify(artist?.name, { lower: true })}-${artist?.id}`}>
-                    <span className="font-light text-sm leading-4 text-white underline ">
+                    <div className="font-light text-sm leading-4 text-white underline ">
                       {artist?.name}
                       {index < artists.length - 1 ? ", " : ""}
-                    </span>
+                    </div>
                   </Link>
                 ))
               ) : (
                 <p className="font-light text-sm leading-4 text-white"></p>
               )}
-            </div> 
+            </div>
 
             <div className="flex gap-2 flex-wrap items-center" >
               {songData.category && songData.category.length > 0 ? (

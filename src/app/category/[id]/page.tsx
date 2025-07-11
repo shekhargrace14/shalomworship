@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
   const category = await fetchCategoryBySlug(slugParams);
-  const title = (category?.[0]?.name ?? "Unknown") 
+  const title = (category?.[0]?.name ?? "Unknown")
 
   const slug = await category?.[0]?.slug ?? ''
   const image = await category?.[0]?.image ?? ''
@@ -31,17 +31,21 @@ const Page = async ({ params }: any) => {
   const categorySlug = params.id;
   const categoryData = await fetchCategoryBySlug(categorySlug);
   const data = categoryData?.[0];
+  const color = categoryData?.[0]?.color ?? "#121212"; // fallback color
+  console.log(color, "category page color");
 
-  //   console.log(categorySlug, "category page id");
   //   console.log(categoryData, "categoryData  page data");
-    console.log(data?.song, "categoryData song page data");
+
+  console.log(data?.song, "categoryData song page data");
   return (
     <>
       <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
-        <div className="p-4 pb-0 bg-[#1f1f1f]">
+
+        <div className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, ${color}, #00000080)`
+          }}>
           <Menu />
-        </div>
-        <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
           <div className=" flex items-center gap-4 w-full ">
             <div className="sm:w-8/12 grid">
               <h1 className="sm:text-4xl text-4xl font-semibold mb-1 text-white">

@@ -11,7 +11,19 @@ export async function songById(id:string) {
         creator: true,
         artist: {
           include: {
-            artist: true,
+            artist: {
+              select: {
+        id: true,
+        name: true,
+        slug: true,
+        image: true,
+        type: true, // ✅ Add this to get the artist classification
+        link: true,
+        color: true,
+        createdAt: true,
+        updatedAt: true,
+      }
+            }
           },
         },
         genre: {

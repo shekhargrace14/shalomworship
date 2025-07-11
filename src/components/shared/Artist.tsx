@@ -6,12 +6,25 @@ import Link from "next/link";
 import slugify from "slugify";
 import { useGetArtists } from "@/lib/query/query";
 // import { useGetArtistBySlug } from "@/lib/query/query";
-import { ArtistType } from "@/types";
+// import { ArtistProps } from "@/types";
 import Avatar from "../ui/Avatar";
 
+type ArtistProps = {
+  artists: {
+    id: string;
+    name: string;
+    type: "individual" | "band" | "label" | "channel" | null;
+    link: string | null;
+    image: string | null;
+    slug: string | null;
+    color: string | null;
+    createdAt: Date;
+    updatedAt: Date;
+  }[];
+};
 
 
-const Artist = ({ artists }: { artists: ArtistType[] }) => {
+const Artist = ({ artists }: ArtistProps) => {
   // const artistData = useGetArtistById(id);
   // const artistData = useGetArtists();
   const urlSlug = usePathname();
@@ -48,7 +61,7 @@ const Artist = ({ artists }: { artists: ArtistType[] }) => {
                   </div>
                   <div className="md:w-10/12 flex flex-col justify-center">
                     <h3 className="line-clamp-1 font-semibold text-base text-white">
-                      {item.name}
+                      {item?.name}
                     </h3>
                     <p className=" text-sm text-white">Artist</p>
                   </div>

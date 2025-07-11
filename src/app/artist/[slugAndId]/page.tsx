@@ -38,9 +38,12 @@ const Page = async ({ params }: any) => {
 
   const artistData = await fetchArtistById(id);
   const data = artistData && artistData[0];
+  console.log(artistData, "artist page id");
 
-  // console.log(data?.song, "artist song page data");
-  // console.log(artistSlug, "artist page id");
+const color = artistData?.[0]?.color ?? "#121212"; // fallback color
+  
+
+  console.log(color, "artist color page data");
 
   if (!artistData || artistData.length === 0) {
     // console.error(`No artist found for slug: ${artistSlug}`);
@@ -54,22 +57,23 @@ const Page = async ({ params }: any) => {
     <>
       {/* hello {data.name} */}
       <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
-        <div className="p-4 pb-0 bg-[#1f1f1f]">
+        <div         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, ${color}, #00000080)`
+        }}>
           <Menu />
-        </div>
-        <div className="md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-[#1f1f1f] to-[#000000]">
           <div className=" flex items-center gap-4 w-full ">
-            <div className="h-full w-3/12 md:2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
+            <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
               <Image
                 src={data?.image || "https://drive.google.com/uc?export=view&id=19Vm_Qd_6F_ehN5SE2jkUYpnk7TMNwM1g"}
                 alt={data?.name || "Artist Image"}
-                width={200}
+                width={150}
                 height={100}
                 className="bg-gray-800 object-cover h-full w-full"
                 priority={true}
               />
             </div>
-            <div className="sm:w-10/12 grid">
+            <div className="sm:w-10/12 grid ">
               <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-white">
                 {data?.name || "Artist"}
               </h1>

@@ -1,7 +1,8 @@
-export type ArtistType = {
+export type ArtistProps = {
   id: string;
   name: string;
   image: string | null;
+  type:string ;
 };
 
 

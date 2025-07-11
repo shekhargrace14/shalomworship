@@ -58,6 +58,7 @@ model author {
 model artist {
   id        String       @id @default(auto()) @map("_id") @db.ObjectId
   name      String
+  type      ArtistType? // <-- NEW: Enum to classify artist
   link      String?
   image     String?
   slug      String?
@@ -66,6 +67,13 @@ model artist {
   updatedAt DateTime     @updatedAt
   song      SongArtist[] // Explicit relation
   creator   song[]
+}
+
+enum ArtistType {
+  individual
+  band
+  label
+  channel
 }
 
 model genre {

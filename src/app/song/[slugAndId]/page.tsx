@@ -200,7 +200,7 @@ const Song = async ({ params }: any) => {
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
                   <Link key={index} href={`/artist/${slugify(artist?.name, { lower: true })}-${artist?.id}`}>
-                    <div className="font-light text-sm leading-4 text-white underline ">
+                    <div className=" text-base leading-4 text-white ">
                       {artist?.name}
                       {index < artists.length - 1 ? ", " : ""}
                     </div>
@@ -217,7 +217,7 @@ const Song = async ({ params }: any) => {
                   songData.category.map((category, index) => (
                     <span
                       key={index}
-                      className="font-light text-sm leading-4 text-white underline"
+                      className="font-light text-sm leading-4 text-white"
                     >
                       <Link href={`/category/${category?.category.slug}`}>
                         {category?.category.name}

@@ -226,7 +226,7 @@ const Song = async ({ params }: any) => {
                     </span>
                   ))
                 ) : (
-                  <p className="font-light text-sm leading-4 text-white underline">
+                  <p className="font-light text-sm leading-4 text-white ">
                     <Link
                       href={`/category/${songData.category[0]?.category.slug}`}
                     >

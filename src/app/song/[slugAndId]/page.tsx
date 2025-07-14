@@ -15,7 +15,7 @@ import Link from "next/link";
 import slugify from "slugify";
 
 interface ArtistItem {
-  artist: { name: string; id: string; link: string; type: string; };
+  artist: { name: string; id: string; link: string; type: string; isArtist:string; };
   isCreator: boolean;
 }
 
@@ -126,7 +126,7 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
-  console.log(songData.videoId, "song videoId  ")
+  console.log(songData.artist, "song artist ")
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -135,7 +135,7 @@ const Song = async ({ params }: any) => {
     if (item.isCreator) {
       creators.push(a);
     }
-    if (item.artist?.type === "individual") {
+    if (item.artist?.type === "individual" && item.isArtist === true) {
       artists.push(a);
     }
   });

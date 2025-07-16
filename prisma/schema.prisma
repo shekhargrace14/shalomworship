@@ -43,7 +43,6 @@ model song {
   album     SongAlbum[]
   season    SongSeason[]
 
-  @@unique([slug])
 }
 
 model author {

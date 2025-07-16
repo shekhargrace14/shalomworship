@@ -4,7 +4,7 @@ import prisma from "../db";
 
 export async function songBySlug(songSlug:string) {
   try {
-    const song =  prisma.song.findUnique({
+    const song =  prisma.song.findMany({
       where: { slug : songSlug },
       include: {
         author: true,

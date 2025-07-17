@@ -28,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
-        <GoogleAnalytics gaId="G-H4QZJK5XEN" />
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-H4QZJK5XEN" />
+        )}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"

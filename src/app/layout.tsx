@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords: "Worship song lyrics, gospel song lyrics, christian song lyrics",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.shalomworship.com/"),
   icons: {
-    icon: "/White_favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
         />
         <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js" />
         {/* ✅ No need to repeat the favicon <link> here if defined in metadata.icons */}
-        <link rel="icon" href="/White_favicon.ico" type="image/x-icon" sizes="any" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
       </head>
       <body className="antialiased bg-black ">
         <QueryProvider>

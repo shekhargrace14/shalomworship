@@ -65,6 +65,7 @@ model artist {
   color     String?
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
+  seasons   season[]
   song      SongArtist[] // Explicit relation
   creator   song[]
 }
@@ -127,6 +128,8 @@ model season {
   color     String?
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
+  artist    artist    @relation(fields: [artistId], references: [id])
+  artistId  String      @db.ObjectId
   song      SongSeason[]
 }
 

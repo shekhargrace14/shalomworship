@@ -141,7 +141,7 @@ const Song = async ({ params }: any) => {
   });
 
   console.log(artists, " artists of song page params");
-  console.log(creators[0].id, " creators of song page params");
+  console.log(creators[0]?.id, " creators of song page params");
 
 
 

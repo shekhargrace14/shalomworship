@@ -10,6 +10,7 @@ export async function artistById(id:string) {
             },
             include: {
               song: true, // Fetch all songs related to the artist
+            //   season:true,
             },
         })
     }catch(error){

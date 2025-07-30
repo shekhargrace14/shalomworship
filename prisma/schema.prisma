@@ -36,12 +36,14 @@ model song {
   creator   artist? @relation(fields: [creatorId], references: [id])
   creatorId String? @db.ObjectId
 
+  season    season? @relation(fields: [seasonId], references: [id])
+  seasonId String? @db.ObjectId
+
   artist    SongArtist[] // Explicit relation
   genre     SongGenre[] // Explicit relation
   category  SongCategory[] // Explicit relation
   scripture SongScripture[] // Explicit relation
   album     SongAlbum[]
-  season    SongSeason[]
 
 }
 
@@ -65,7 +67,7 @@ model artist {
   color     String?
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
-  seasons   season[]
+  season    season[]
   song      SongArtist[] // Explicit relation
   creator   song[]
 }
@@ -111,7 +113,7 @@ model scripture {
 
 model album {
   id        String      @id @default(auto()) @map("_id") @db.ObjectId
-  name      String
+  title      String
   image     String
   slug      String
   color     String?
@@ -122,7 +124,7 @@ model album {
 
 model season {
   id        String       @id @default(auto()) @map("_id") @db.ObjectId
-  name      String
+  title      String
   image     String
   slug      String
   color     String?
@@ -130,7 +132,7 @@ model season {
   updatedAt DateTime     @updatedAt
   artist    artist    @relation(fields: [artistId], references: [id])
   artistId  String      @db.ObjectId
-  song      SongSeason[]
+  song      song[]
 }
 
 // Intermediate table for SongArtist many-to-many
@@ -179,10 +181,10 @@ model SongAlbum {
   album   album  @relation(fields: [albumId], references: [id])
 }
 
-model SongSeason {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  songId   String @db.ObjectId
-  seasonId String @db.ObjectId
-  song     song   @relation(fields: [songId], references: [id])
-  season   season @relation(fields: [seasonId], references: [id])
-}
+// model SongSeason {
+//   id       String @id @default(auto()) @map("_id") @db.ObjectId
+//   songId   String @db.ObjectId
+//   seasonId String @db.ObjectId
+//   song     song   @relation(fields: [songId], references: [id])
+//   season   season @relation(fields: [seasonId], references: [id])
+// }

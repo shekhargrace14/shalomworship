@@ -7,6 +7,7 @@ import { artistBySlug } from "../actions/artistBySlug";
 import { artistById } from "../actions/artistById";
 import { category } from "../actions/category";
 import { categoryBySlug } from "../actions/categoryBySlug";
+import { season } from "../actions/season";
 
 
 const fetchSongs = async () => {
@@ -115,7 +116,19 @@ const useGetCategoryBySlug = (categorySlug:string) =>{
   })
 }
 
+// ------------------------- season ----------------------------
 
+export const fetchSeason = async () =>{
+  const res = await season()
+  return res;
+}
+
+export const useGetSeason = () =>{
+  return useQuery({
+    queryKey:["season"],
+    queryFn: season,
+  })
+}
 
 
 export { 

@@ -1,32 +1,25 @@
 [
-  [{"chord": "", "lyrics": "Verse 1:"}],
-  [{"chord": "E", "lyrics": "Abraham Ka Prabhu"}],
-  [{"chord": "G#m", "lyrics": "Isahaak Ka Prabhu"}],
-  [{"chord": "F#m", "lyrics": "Yakub Ka Prabhu Tu Mera"},{"chord": "B", "lyrics": "Hai"}],
-  
+  [{"chord": "", "lyrics": "Verse 1"}],
+  [{"chord": "", "lyrics": "Anugrah Ka Tere Prabhu,"}],
+  [{"chord": "", "lyrics": "Kaise Mai Varnan Karun!"}],
+  [{"chord": "", "lyrics": "Samjh se pare tera Prem,"}],
+  [{"chord": "", "lyrics": "Kaise Bakhan me Karun."}],
   [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Chorus:"}],
-  [{"chord": "", "lyrics": "Tu"},{"chord": "E", "lyrics": "Kabhi Na Chodega "}],
-  
-  [{"chord": "", "lyrics": "Tu"},{"chord":"G#m", "lyrics": "Kabhi Na Thukrayega"}],
-  [{"chord": "", "lyrics": "Tu "},{"chord":"F#m", "lyrics": "Mera Hai,"},{"chord": "", "lyrics": "Tu "},{"chord": "B", "lyrics": "Mera Hai"}],
-  
+  [{"chord": "", "lyrics": "Chorus"}],
+  [{"chord": "", "lyrics": "Teri Daya Ka Jo Pehna Hoon Taaj,"}],
+  [{"chord": "", "lyrics": "Mai Gaaun Utha Ke Aawaz"}],
+  [{"chord": "", "lyrics": "Mai Jo Kuch Bhi Aaj Hoon,"}],
+  [{"chord": "", "lyrics": "Tere Anugrah Se Hoon."}],
   [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 2:"}],
-  [{"chord": "", "lyrics": "Jiske"},{"chord": "Asus2", "lyrics": "Haath Mein Mera Kal"}],
-  [{"chord": "", "lyrics": "Jiske"},{"chord": "G#m", "lyrics": "Haath Mein Mera Aaj"}],
-  [{"chord": "", "lyrics": "Aur"},{"chord": "F#m", "lyrics": "Aane Wala Kal, Woh "},{"chord": "B", "lyrics": "Mera Hai"}],
-
+  [{"chord": "", "lyrics": "Verse 2"}],
+  [{"chord": "", "lyrics": "Tera Fazal Aye Khuda,"}],
+  [{"chord": "", "lyrics": "Marne Se Jo Mai Bacha"}],
+  [{"chord": "", "lyrics": "Sada Ki Wo Maut Hata,"}],
+  [{"chord": "", "lyrics": "Tune diya Jivan Naya"}],
   [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Bridge:"}],
-  [{"chord": "Asus2", "lyrics": "Nadiya Mujhe Dubaa Na Sakey"}],
-  [{"chord": "C#m", "lyrics": "Agni Mujhe Jalaa Na Sakey"}],
-  [{"chord": "", "lyrics": "Mera"},{"chord": "F#m", "lyrics": "Haath Jo Tuney Thama"},{"chord": "B", "lyrics":  "Hai"}],
-  
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 3:"}],
-  [{"chord": "", "lyrics": "Jo"},{"chord": "E", "lyrics": "Aadi Mein Tha,"}],
-  [{"chord": "", "lyrics": "Jo"},{"chord": "G#m", "lyrics": "Shabd Khuda Sang Tha"}],
-  [{"chord": "", "lyrics": "Woh"},{"chord": "F#m", "lyrics": "Shabd Khuda Hi Tha,"}],
-  [{"chord": "", "lyrics": "Woh"},{"chord": "B", "lyrics": "Mera Hai"},{"chord": "", "lyrics": "Woh Mera"},{"chord": "E", "lyrics": "Hai"}]
+  [{"chord": "", "lyrics": "Verse 3"}], 
+  [{"chord": "", "lyrics": "Na Mere Koi Goon Se,"}],
+  [{"chord": "", "lyrics": "Na Meri Aachiyon se"}],
+  [{"chord": "", "lyrics": "Sab Kuch Hai Mujhko Mila"}],
+  [{"chord": "", "lyrics": "Tere Anugrah Hi se"}]
 ]

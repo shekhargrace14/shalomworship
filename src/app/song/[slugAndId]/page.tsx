@@ -1,4 +1,6 @@
 
+import Category from "@/components/category";
+import CategoryCard from "@/components/CategoryCard";
 import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
@@ -9,13 +11,16 @@ import PlayButton from "@/components/ui/Play";
 import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import { category } from "@/lib/actions/category";
 import { fetchSongById, fetchSongs } from "@/lib/query/query";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
+import formatArtists from "@/utils/formatArtists";
+
 interface ArtistItem {
-  artist: { name: string; id: string; link: string; type: string; isArtist:string; };
+  artist: { name: string; id: string; link: string; type: string; isArtist: string; };
   isCreator: boolean;
 }
 
@@ -39,16 +44,19 @@ export async function generateMetadata({ params }: any) {
   const mainArtists = song?.artist?.filter((a) => a.isArtist) || [];
   const creatorArtists = song?.artist?.filter((a) => a.isCreator) || [];
   // console.log(mainArtists, " mainArtists of song page params");
-  // console.log(creatorArtists, " creatorArtists of song page params");
+  console.log(creatorArtists, " creatorArtists of song page params");
 
-  const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
-  const creatorNames = creatorArtists.map((a) => a.artist?.name).join(", ");
+  // const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
+  const creatorNames = creatorArtists.map((a) => a.artist?.name).join(", ");  
 
+  const artistNames = formatArtists(mainArtists.map((a) => a.artist?.name));
+  // const formatedCreatorNames = formatArtists(creatorNames);
 
   const title =
     (song?.title || "Unknown Title") +
-    (mainArtists.length > 0 ? " by " + artistNames : "") +
-    (creatorArtists.length > 0 ? " from " + creatorNames : "")
+    (song?.isChords ? " Chords & Lyrics" : " Lyrics") +
+    (mainArtists.length > 0 ? " - " + artistNames   : "") +
+    (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
 
 
 
@@ -126,7 +134,7 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
-  console.log(songData.artist, "song artist ")
+  console.log(songData, "song  ")
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -140,8 +148,8 @@ const Song = async ({ params }: any) => {
     }
   });
 
-  console.log(artists, " artists of song page params");
-  console.log(creators[0]?.id, " creators of song page params");
+  // console.log(artists, " artists of song page params");
+  // console.log(creators[0]?.id, " creators of song page params");
 
 
 
@@ -171,15 +179,11 @@ const Song = async ({ params }: any) => {
               />
 
             }
-
           </div>
-
           <div className="sm:w-8/12 grid gap-2">
             <h1 className="text-3xl md:text-4xl font-semibold mb-2 mt-2 text-white">
               {songData.title}{" "}
             </h1>
-
-
             {creators.length > 0 ? (
               creators.map((creator, index) => (
                 <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
@@ -267,7 +271,6 @@ const Song = async ({ params }: any) => {
         </div> */}
         {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
-
             <Lines id={songData.id} song={songData} isChords={!!songData.isChords} />
           ) : (
 
@@ -278,10 +281,8 @@ const Song = async ({ params }: any) => {
               <div dangerouslySetInnerHTML={{ __html: songData.content }} />
             </section>
           )
-
         }
         <section className="w-full text-white">
-
           {/* <div >{songData.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">
             {creators.length > 0 ? (
@@ -325,6 +326,19 @@ const Song = async ({ params }: any) => {
         )}
 
         {/* song by category  */}
+        {/* <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
+          Song based on categories &nbsp;
+          <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
+
+            {songData.category.map((category,index)=>(
+              <div key={index}>
+              <p>{category.category.slug}</p>
+              <Category slug={category.category.slug}/>
+              </div>
+
+            ))}
+          </Link>
+        </h2> */}
       </main>
     </div>
   );

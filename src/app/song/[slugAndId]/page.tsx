@@ -181,7 +181,7 @@ const Song = async ({ params }: any) => {
             }
           </div>
           <div className="sm:w-8/12 grid gap-2">
-            <h1 className="text-3xl md:text-4xl font-semibold mb-2 mt-2 text-white">
+            <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-white">
               {songData.title}{" "}
             </h1>
             {creators.length > 0 ? (
@@ -275,7 +275,7 @@ const Song = async ({ params }: any) => {
           ) : (
 
             <section className="w-full text-white">
-              <h2 className="text-2xl font-semibold mb-2 text-white">
+              <h2 className="text-xl md:text-2xl font-semibold mb-2 text-white">
                 {songData.title} lyrics
               </h2>
               <div dangerouslySetInnerHTML={{ __html: songData.content }} />

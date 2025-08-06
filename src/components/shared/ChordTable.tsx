@@ -68,7 +68,7 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
           <button onClick={() => setShift(shift + 1)} className="px-3 py-1 bg-gray-200 text-black rounded">+</button>
         </div>
       )}
-      <h2 className="text-2xl font-semibold mb-4 text-white">{song.title}{isChord ? " Chords" : " Lyrics"}</h2>
+      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-white">{song.title}{isChord ? " Chords" : " Lyrics"}</h2>
 
       <table className="table-auto border-collapse">
         <tbody>
@@ -78,7 +78,7 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
 
             return (
               <React.Fragment key={idx} >
-                <div className={` ${isChord} ? mb-3 : "" `}>
+                <div className={` ${isChord} ? mb-1 : "" `}>
                   {isChord && (
                     <tr className=''>
                       {transposedChords.map((chord: string, i: number) => (

@@ -4,8 +4,8 @@ import React from "react";
 
 const Social = () => {
   return (
-    <div >
-      <Link href="https://whatsapp.com/channel/0029Vaz9S3ULSmbinqpGry21" target="_blank" className="w-fit py-4 flex items-center gap-2">
+    <div className="bg-[#40C351] py-2 px-4 inline-block rounded">
+      <Link href="https://whatsapp.com/channel/0029Vaz9S3ULSmbinqpGry21" target="_blank" className="w-fit flex items-center gap-2">
       <Image
         src="/whatsapp.png"
         alt={"Whatsapp"}
@@ -15,8 +15,8 @@ const Social = () => {
         priority={true}
       /> 
       <div>
-        <p className="text-white">Join the Whatsapp Channel</p> 
-        <p className="underline text-white">Click here to Join</p>
+        <p className="text-white shadow-2xl">Get the latest Songs Update. <span className="underline">Join</span></p> 
+        <p className="underline text-white"></p>
       </div>
     </Link>
     </div>

@@ -1,35 +1,67 @@
-[
-  [{"chord": "", "lyrics": "Intro"}],
-  [{"chord": "", "lyrics": "Tere jaisa kaun hain"}],
-  [{"chord": "", "lyrics": "Jo mera bhala kare"}],
-  [{"chord": "", "lyrics": "Mera bharosa sirf tujhpar prabhu"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 1"}],
-
-
-  [{"chord": "", "lyrics": "Mere jeevan ka swami"}],
-  [{"chord": "", "lyrics": "Adhaar bana tu prabhuji"}],
-  [{"chord": "", "lyrics": "Tu nahi toh mera jeevan"}],
-  [{"chord": "", "lyrics": "Vyarth ho… jayega"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Chorus"}],
-
-  [{"chord": "", "lyrics": "Elshadai aaradhana"}],
-  [{"chord": "", "lyrics": "Elohim aaradhana"}],
-  [{"chord": "", "lyrics": "Adonai aaradhana"}],
-  [{"chord": "", "lyrics": "Yeshua aaradhana"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 2"}],
-
-  [{"chord": "", "lyrics": "Bechaini mein mujhe paakar"}],
-  [{"chord": "", "lyrics": "Aansu mere poche tune"}],
-  [{"chord": "", "lyrics": "Aakhoan ki putli jaise"}],
-  [{"chord": "", "lyrics": "Jeevan bhar sambhala mujhe"}],
+  [
+    [{"chord": "", "lyrics": "Chorus:"}],
+    [{"chord": "", "lyrics": "Jo haqtala ke parde me rahta"}],
+    [{"chord": "", "lyrics": "Wo qaadir-e-mutlaq ke saaye me (x2)"}],
     [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 3"}],
+    [{"chord": "", "lyrics": "Sukoonat karega (x4)"}],
+      [{"chord": "", "lyrics": "Jo haqtala ke parde me rahta"}],
+    [{"chord": "", "lyrics": ""}],
 
-  [{"chord": "", "lyrics": "Mrityu ke raaste par"}],
-  [{"chord": "", "lyrics": "Tute dil ko liye khadaa tha"}],
-  [{"chord": "", "lyrics": "Changa karne waala bankar"}],
-  [{"chord": "", "lyrics": "Mujhe naya jeevan diya"}]
-]
+    [{"chord": "", "lyrics": "Verse 1:"}],
+    [{"chord": "", "lyrics": "Raat ki haibat, na din ke wo teer"}],
+    [{"chord": "", "lyrics": "Chhu bhi na paayein tujhko, wo hai kareeb (x2)"}],
+    [{"chord": "", "lyrics": ""}],
+    [{"chord": "", "lyrics": "Har aafaton se chhudhanewala"}],
+    [{"chord": "", "lyrics": "Mushkil me sath nibhanewala (x2)"}],
+
+    [{"chord": "", "lyrics": "Wo kaayam rahega (x4)"}],
+      [{"chord": "", "lyrics": "Jo haqtala ke parde me rahta"}],
+    [{"chord": "", "lyrics": ""}],
+    
+    [{"chord": "", "lyrics": "Verse 2:"}],
+    [{"chord": "", "lyrics": "Sayyad ke, fande se wo"}],
+    [{"chord": "", "lyrics": "Mohlik vabaa se, chhudhayega wo (x2)"}],
+    [{"chord": "", "lyrics": ""}],
+    [{"chord": "", "lyrics": "Pankhon me apne chhupanewala"}],
+    [{"chord": "", "lyrics": "Hathon se apne bachanewala (x2)"}],
+
+    [{"chord": "", "lyrics": "Tere sang rahega (x4)"}],
+      [{"chord": "", "lyrics": "Jo haqtala ke parde me rahta"}],
+    [{"chord": "", "lyrics": ""}],
+    
+    [{"chord": "", "lyrics": "Verse 3:"}],
+    [{"chord": "", "lyrics": "Raahon me teri, hifaazat kare"}],
+    [{"chord": "", "lyrics": "Thes na lagne dega, paaon ko tere (x2)"}],
+    [{"chord": "", "lyrics": ""}],
+
+    [{"chord": "", "lyrics": "Farishte teri sab raahon me"}],
+    [{"chord": "", "lyrics": "Tujhe aage peechhe se ghere rahenge (x2)"}],
+
+    [{"chord": "", "lyrics": "Aisa wo karega (x4)"}],
+    [{"chord": "", "lyrics": "Jo haqtala ke parde me rahta"}],
+    [{"chord": "", "lyrics": ""}],
+    
+    [{"chord": "", "lyrics": "Verse 4:"}],
+    [{"chord": "", "lyrics": "Dil jo lagaya, tune khuda se"}],
+    [{"chord": "", "lyrics": "Tujhko bachaye, har ek vabaa se (x2)"}],
+    [{"chord": "", "lyrics": ""}],
+
+    [{"chord": "", "lyrics": "Us Yeshu naam ko jab bhi pukaro"}],
+    [{"chord": "", "lyrics": "Prabhu Yeshu naam ko jab bhi pukaro"}],
+    [{"chord": "", "lyrics": ""}],
+
+    [{"chord": "", "lyrics": "Tumhari sunega, sang rahega"}],
+    [{"chord": "", "lyrics": "Tumko chhuda ke, izzat wo dega"}],
+    [{"chord": "", "lyrics": ""}],
+    
+    [{"chord": "", "lyrics": "Mushkil ghadi me, sang rahega"}],
+    [{"chord": "", "lyrics": "Har ek ghati ko, pura karega"}],
+    [{"chord": "", "lyrics": ""}],
+
+    [{"chord": "", "lyrics": "Hath pakad ke, sang chalega"}],
+    [{"chord": "", "lyrics": "Muraaden tumhari, wo puri karega"}],
+    [{"chord": "", "lyrics": ""}],
+
+    [{"chord": "", "lyrics": "Umra daraaz tumko karega"}],
+    [{"chord": "", "lyrics": "Umra daraaz tumko karega"}]
+  ]

@@ -214,7 +214,6 @@ const Song = async ({ params }: any) => {
                 <p className="font-light text-sm leading-4 text-white"></p>
               )}
             </div>
-
             <div className="flex gap-2 flex-wrap items-center" >
               {songData.category && songData.category.length > 0 ? (
                 songData.category.length > 1 ? (
@@ -273,7 +272,6 @@ const Song = async ({ params }: any) => {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
             <Lines id={songData.id} song={songData} isChords={!!songData.isChords} />
           ) : (
-
             <section className="w-full text-white">
               <h2 className="text-xl md:text-2xl font-semibold mb-2 text-white">
                 {songData.title} lyrics
@@ -307,12 +305,12 @@ const Song = async ({ params }: any) => {
         </section>
         <Social />
         <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
-          Song You May Like from &nbsp;
+          Popular songs &nbsp;
           {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}
-          <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
+          {/* <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
 
             {creators[0]?.name}
-          </Link>
+          </Link> */}
         </h2>
 
         {creators.length > 0 ? (

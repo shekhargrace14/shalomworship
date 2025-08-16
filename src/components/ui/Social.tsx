@@ -15,7 +15,7 @@ const Social = () => {
         priority={true}
       /> 
       <div>
-        <p className="text-white shadow-2xl">Get the latest Songs Update. <span className="underline">Join</span></p> 
+        <p className="text-white ">Get the latest Songs Update. <span className="underline">Join</span></p> 
         <p className="underline text-white"></p>
       </div>
     </Link>

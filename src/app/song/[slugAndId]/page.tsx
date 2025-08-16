@@ -74,43 +74,43 @@ async function fetchSongData({ id }: any) {
   // const res = await fetchSongBySlug(id);
   const res = await fetchSongById(id); "use client";
 
-  const SongCard = ({ item }: any) => {
-    // console.log(item, "card item")
-    const artists: { name: string; id: string; link: string }[] = [];
-    const creators: { name: string; id: string; link: string }[] = [];
-    item.artist.forEach((item: ArtistItem) => {
-      if (item.isCreator) {
-        creators.push(item.artist);
-      } else {
-        artists.push(item.artist);
-      }
-    });
-    console.log(artists, " artists of song page params");
-    console.log(creators, " creators of song page params");
-    const slug = slugify(`${item.title}`, { lower: true })
-    return (
-      <>
-        <Link href={`/song/${item.id}-${slug}`}>
-          <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg">
-            <div className="rounded-lg overflow-hidden h-5/6">
-              <Image
-                src={item.image}
-                alt={item.title || "Song Image"}
-                width={700}
-                height={500}
-              />
-            </div>
-            <div className="w-full lg:w-full py-2">
-              <div className="">
-                <h3 className="line-clamp-1 text-1xl font-semibold mb-1 text-white">{item.title}</h3>
-                <p className=" line-clamp-1 text-sm leading-none text-[#b3b3b3]">{creators[0]?.name}</p>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </>
-    );
-  }
+  // const SongCard = ({ item }: any) => {
+  //   // console.log(item, "card item")
+  //   const artists: { name: string; id: string; link: string }[] = [];
+  //   const creators: { name: string; id: string; link: string }[] = [];
+  //   item.artist.forEach((item: ArtistItem) => {
+  //     if (item.isCreator) {
+  //       creators.push(item.artist);
+  //     } else {
+  //       artists.push(item.artist);
+  //     }
+  //   });
+  //   console.log(artists, " artists of song page params");
+  //   console.log(creators, " creators of song page params");
+  //   const slug = slugify(`${item.title}`, { lower: true })
+  //   return (
+  //     <>
+  //       <Link href={`/song/${item.id}-${slug}`}>
+  //         <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg">
+  //           <div className="rounded-lg overflow-hidden h-5/6">
+  //             <Image
+  //               src={item.image}
+  //               alt={item.title || "Song Image"}
+  //               width={700}
+  //               height={500}
+  //             />
+  //           </div>
+  //           <div className="w-full lg:w-full py-2">
+  //             <div className="">
+  //               <h3 className="line-clamp-1 text-1xl font-semibold mb-1 text-white">{item.title}</h3>
+  //               <p className=" line-clamp-1 text-sm leading-none text-[#b3b3b3]">{creators[0]?.name}</p>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </Link>
+  //     </>
+  //   );
+  // }
 
   // console.log(res, "song page res result");
 

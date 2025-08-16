@@ -31,12 +31,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 /* scroll bar css start  */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px; /* Width of the scrollbar */
@@ -59,6 +53,10 @@ body {
 
 
 @layer utilities {
+
+  .text-balance {
+    text-wrap: balance;
+  }
   .custom-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -84,7 +82,7 @@ body {
     border-radius: 0;
   }
   .h3{
-    @apply text-2xl my-4
+    @apply  text-lg font-semibold md:text-2xl m-0 md:my-4
   }
 }
 

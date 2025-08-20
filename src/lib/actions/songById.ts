@@ -14,7 +14,7 @@ export async function songById(id:string) {
             artist: {
               select: {
         id: true,
-        name: true,
+        title: true,
         slug: true,
         image: true,
         type: true, // ✅ Add this to get the artist classification

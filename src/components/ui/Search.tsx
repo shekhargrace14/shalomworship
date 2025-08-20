@@ -4,24 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { useGetSongs } from "@/lib/query/query";
+// import { Song } from "@/types";
 
+export type Song = {
+  id: string;
+  title: string;
+  content: string;
+  image: string | null;
+  author?: { id: string; image: string; title: string } | null;
+  creator?: { id: string; image: string | null; title: string } | null;
+};
 const Search = ({ searchInput }: { searchInput: string }) => {
   // const songData = useGetSongs()
   const { data: songData, isLoading, isError } = useGetSongs();
   
   // console.log(songData,'songData.result');
 
-  
-
-  interface Song {
-    id: string;
-    title: string;
-    content: string;
-    image: string | null;
-    author?: { id: string; image: string; name: string } | null;
-    creator?: { id: string; image: string | null; name: string } | null;
-  }
-  
   const [searchData, setSearchData] = useState<Song[]>([]);
 
   useEffect(() => {

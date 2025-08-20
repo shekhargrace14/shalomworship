@@ -3,7 +3,7 @@ import ArtistCard from "./ArtistCard";
 
 type Artist = {
   id: string;
-  name: string;
+  title: string;
   image: string;
 };
 

@@ -7,7 +7,7 @@ import slugify from "slugify";
 
 const ArtsitCard = ({ item }:any) => {
 
-  const slug = slugify(`${item.name}`, {lower: true,}) 
+  const slug = slugify(`${item.title}`, {lower: true,}) 
 
   return (
     
@@ -26,7 +26,7 @@ const ArtsitCard = ({ item }:any) => {
           </div>
           <div className="w-full lg:w-full py-2">
             <div className="">
-              <h3 className="line-clamp-1 text-1xl mb-1 font-semibold text-white">{item.name}</h3>
+              <h3 className="line-clamp-1 text-1xl mb-1 font-semibold text-white">{item.title}</h3>
               <p className="text-sm text-[#b3b3b3]">Artist</p>
             </div>
           </div>

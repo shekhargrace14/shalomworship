@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
   const category = await fetchCategoryBySlug(slugParams);
-  const title = (category?.[0]?.name ?? "Unknown")
+  const title = (category?.[0]?.title ?? "Unknown")
 
   const slug = await category?.[0]?.slug ?? ''
   const image = await category?.[0]?.image ?? ''
@@ -49,13 +49,13 @@ const Page = async ({ params }: any) => {
           <div className=" flex items-center gap-4 w-full ">
             <div className="sm:w-8/12 grid">
               <h1 className="sm:text-4xl text-4xl font-semibold mb-1 text-white">
-                {data?.name}{" "}
+                {data?.title}{" "}
               </h1>
               <p className="text-sm  text-white">Category</p>
             </div>
           </div>
         </div>
-        <h2 className="text-xl font-semibold m-4 text-white">Songs on {data?.name}{" "}Category</h2>
+        <h2 className="text-xl font-semibold m-4 text-white">Songs on {data?.title}{" "}Category</h2>
         <section className="w-full">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-0 ">
             {data?.song.map((item) => (

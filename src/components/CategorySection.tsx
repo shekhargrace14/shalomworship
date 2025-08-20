@@ -3,7 +3,7 @@ import CategoryCard from "./CategoryCard";
 
 type Category = {
   id: string;
-  name: string;
+  title: string;
   image: string;
 };
 const CategorySection: React.FC<any> = ({number, categories,}) => {

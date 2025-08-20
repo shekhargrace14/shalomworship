@@ -4,13 +4,14 @@ import { FaUser } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import slugify from "slugify";
+import Avatar from "./Avatar";
 
 const Card: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
 
-  const artists: { name: string }[] = [];
-  const creators: { name: string }[] = [];
-  item.artist.forEach((item: { isCreator: boolean; artist: { name: string } }) => {
+  const artists: { title: string; image?: string }[] = [];
+  const creators: { title: string; image?: string }[] = [];
+  item.artist.forEach((item: { isCreator: boolean; artist: { title: string; image?: string } }) => {
     if (item.isCreator) {
       creators.push(item.artist);
     } else {
@@ -18,7 +19,7 @@ const Card: React.FC<any> = ({ item }) => {
     }
   });
   // console.log(artists, " artists of song page params");
-  // console.log(creators, " creators of song page params");
+  console.log(creators, " creators of song page params");
 
   const slug = slugify(`${item.title}`, { lower: true});
   
@@ -36,9 +37,14 @@ const Card: React.FC<any> = ({ item }) => {
             />
           </div>
           <div className="w-full lg:w-full py-2">
-            <div className="">
-              <h3 className="line-clamp-1 text-1xl mb-1 text-white">{item.title}</h3>
-              <p className=" line-clamp-1 text-sm leading-none text-white">{creators[0]?.name}</p>
+            <div className="flex items-center gap-2">
+                  <Avatar src={creators[0]?.image || "/default-avatar.jpg"} size={34} />
+                  <div>
+
+              <h3 className="line-clamp-1 text-1xl  text-white">{item.title}</h3>
+
+              <p className=" line-clamp-1 text-sm leading-none text-gray-400">{creators[0]?.title}</p>
+                  </div>
             </div>
           </div>
         </div>

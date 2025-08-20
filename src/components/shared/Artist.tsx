@@ -12,7 +12,7 @@ import Avatar from "../ui/Avatar";
 type ArtistProps = {
   artists: {
     id: string;
-    name: string;
+    title: string;
     type: "individual" | "band" | "label" | "channel" | null;
     link: string | null;
     image: string | null;
@@ -38,7 +38,7 @@ const Artist = ({ artists }: ArtistProps) => {
           ?.slice()
           .reverse()
           .map((item) => (
-            <Link key={item.id} href={`/artist/${slugify(item.name, { lower: true })}-${item.id}`}>
+            <Link key={item.id} href={`/artist/${slugify(item.title, { lower: true })}-${item.id}`}>
 
               <div
                 className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${urlSlug.includes(item.id)
@@ -57,11 +57,11 @@ const Artist = ({ artists }: ArtistProps) => {
                       className=" object-cover h-full"
                       priority
                     /> */}
-                    <Avatar src={item?.image} alt={item?.name} size={55}/>
+                    <Avatar src={item?.image} alt={item?.title} size={55}/>
                   </div>
                   <div className="md:w-10/12 flex flex-col justify-center">
                     <h3 className="line-clamp-1 font-semibold text-base text-white">
-                      {item?.name}
+                      {item?.title}
                     </h3>
                     <p className=" text-sm text-white">Artist</p>
                   </div>

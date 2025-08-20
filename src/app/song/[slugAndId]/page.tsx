@@ -20,7 +20,7 @@ import slugify from "slugify";
 import formatArtists from "@/utils/formatArtists";
 
 interface ArtistItem {
-  artist: { name: string; id: string; link: string; type: string; isArtist: string; };
+  artist: { title: string; id: string; link: string; type: string; isArtist: string; };
   isCreator: boolean;
 }
 
@@ -47,9 +47,9 @@ export async function generateMetadata({ params }: any) {
   console.log(creatorArtists, " creatorArtists of song page params");
 
   // const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
-  const creatorNames = creatorArtists.map((a) => a.artist?.name).join(", ");  
+  const creatorNames = creatorArtists.map((a) => a.artist?.title).join(", ");  
 
-  const artistNames = formatArtists(mainArtists.map((a) => a.artist?.name));
+  const artistNames = formatArtists(mainArtists.map((a) => a.artist?.title));
   // const formatedCreatorNames = formatArtists(creatorNames);
 
   const title =
@@ -71,48 +71,8 @@ export async function generateMetadata({ params }: any) {
 
 }
 async function fetchSongData({ id }: any) {
-  // const res = await fetchSongBySlug(id);
+
   const res = await fetchSongById(id); "use client";
-
-  // const SongCard = ({ item }: any) => {
-  //   // console.log(item, "card item")
-  //   const artists: { name: string; id: string; link: string }[] = [];
-  //   const creators: { name: string; id: string; link: string }[] = [];
-  //   item.artist.forEach((item: ArtistItem) => {
-  //     if (item.isCreator) {
-  //       creators.push(item.artist);
-  //     } else {
-  //       artists.push(item.artist);
-  //     }
-  //   });
-  //   console.log(artists, " artists of song page params");
-  //   console.log(creators, " creators of song page params");
-  //   const slug = slugify(`${item.title}`, { lower: true })
-  //   return (
-  //     <>
-  //       <Link href={`/song/${item.id}-${slug}`}>
-  //         <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg">
-  //           <div className="rounded-lg overflow-hidden h-5/6">
-  //             <Image
-  //               src={item.image}
-  //               alt={item.title || "Song Image"}
-  //               width={700}
-  //               height={500}
-  //             />
-  //           </div>
-  //           <div className="w-full lg:w-full py-2">
-  //             <div className="">
-  //               <h3 className="line-clamp-1 text-1xl font-semibold mb-1 text-white">{item.title}</h3>
-  //               <p className=" line-clamp-1 text-sm leading-none text-[#b3b3b3]">{creators[0]?.name}</p>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </Link>
-  //     </>
-  //   );
-  // }
-
-  // console.log(res, "song page res result");
 
   const data = res;
   return data || null;
@@ -167,7 +127,7 @@ const Song = async ({ params }: any) => {
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
             {songData.videoId ?
 
-              <YouTubeEmbed videoId={songData.videoId} title={songData.title} />
+              <YouTubeEmbed videoId={songData.videoId} title={songData?.title} />
               :
               <Image
                 src={songData.image || "/default-image.jpg"}
@@ -186,10 +146,10 @@ const Song = async ({ params }: any) => {
             </h1>
             {creators.length > 0 ? (
               creators.map((creator, index) => (
-                <Link key={index} href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
+                <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
                   <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} />
                   <span className="font-semibold text-lg leading-4 text-white ">
-                    {creator?.name}
+                    {creator?.title}
                     {index < creators.length - 1 ? ", " : ""}
                   </span>
                 </Link>
@@ -203,9 +163,9 @@ const Song = async ({ params }: any) => {
 
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
-                  <Link key={index} href={`/artist/${slugify(artist?.name, { lower: true })}-${artist?.id}`}>
+                  <Link key={index} href={`/artist/${slugify(artist?.title, { lower: true })}-${artist?.id}`}>
                     <div className=" text-base leading-4 text-white ">
-                      {artist?.name}
+                      {artist?.title}
                       {index < artists.length - 1 ? ", " : ""}
                     </div>
                   </Link>
@@ -223,7 +183,7 @@ const Song = async ({ params }: any) => {
                       className="font-light text-sm leading-4 text-white"
                     >
                       <Link href={`/category/${category?.category.slug}`}>
-                        {category?.category.name}
+                        {category?.category.title}
                       </Link>
                       {index < songData.category.length - 1 ? ", " : ""}
                     </span>
@@ -233,7 +193,7 @@ const Song = async ({ params }: any) => {
                     <Link
                       href={`/category/${songData.category[0]?.category.slug}`}
                     >
-                      {songData.category[0]?.category.name}
+                      {songData.category[0]?.category.title}
                     </Link>
                   </p>
                 )
@@ -283,6 +243,7 @@ const Song = async ({ params }: any) => {
         <section className="w-full text-white">
           {/* <div >{songData.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">
+            
             {creators.length > 0 ? (
               creators.map((creator, index) => (
                 <span
@@ -291,7 +252,7 @@ const Song = async ({ params }: any) => {
                 >
                   Credits - &nbsp;
                   <Link href={creator.link} target="_blank">
-                    {creator.name}
+                    {creator.title}
                     {index < creators.length - 1 ? ", " : ""}
                   </Link>
                 </span>

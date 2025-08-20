@@ -25,7 +25,6 @@ export function generateMetadata(): MetaDataProps {
   };
 
 }
-
 const page = async () => {
   const artists = await fetchArtists();
 

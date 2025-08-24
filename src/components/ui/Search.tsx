@@ -74,20 +74,26 @@ const Search = ({ searchInput }: { searchInput: string }) => {
           {results.length > 0 ? (
             results.map(item => (
               <Link
-                href={`/${item.type}/${slugify(item.title, { lower: true })}-${item.id}`}
+                href={
+                  item.type === "category"
+                    ? `/category/${slugify(item.title, { lower: true })}`
+                    : `/${item.type}/${slugify(item.title, { lower: true })}-${item.id}`
+
+
+                }
                 key={item.type + item.id}
               >
                 <div className="bg-[#121212] rounded-lg hover:bg-[#3b3b3b] gap-2">
                   <div className="lg:container mx-auto p-2 flex gap-4 text-white ">
                     <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
-                    {!item.image ? "" :
-                      <Image
-                        src={item.image || '/default-song-image.jpg'}
-                        alt={item.title || "Image"}
-                        width={700}
-                        className="bg-gray-800 object-cover h-full"
-                        height={100}
-                      />
+                      {!item.image ? "" :
+                        <Image
+                          src={item.image || '/default-song-image.jpg'}
+                          alt={item.title || "Image"}
+                          width={700}
+                          className="bg-gray-800 object-cover h-full"
+                          height={100}
+                        />
                       }
                     </div>
                     <div className="w-6/12 grid">

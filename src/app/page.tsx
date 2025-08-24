@@ -18,7 +18,7 @@ export default async function Home() {
       <div className=" p-4  h-[90vh] overflow-y-auto custom-scrollbar ">
         <Menu />
         <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Trending Songs</Link> </h2>
-        <SongSection number={"-10"} songs={songs} />
+        <SongSection number={"-8"} songs={songs} />
         {/* <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Chords</Link> </h2> */}
         {/* <SongSection number={"-10"} songs={songs} chords="true" /> */}
         <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/category"}>Category</Link></h2>

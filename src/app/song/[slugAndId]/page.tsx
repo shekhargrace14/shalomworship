@@ -203,13 +203,13 @@ const Song = async ({ params }: any) => {
                 </p>
               )}
               &bull;
-              <p className="text-sm  text-white">
+              {/* <p className="text-sm  text-white">
                 {new Date(songData.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
-              </p>
+              </p> */}
               <div className=" ">
                 <ShareButton title={songData.title} />
               </div>

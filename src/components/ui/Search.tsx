@@ -19,6 +19,7 @@ type SearchResult = {
   id: string;
   title: string;
   image: string | null;
+  // color:string |null;
 };
 
 const filterAll = (
@@ -36,7 +37,7 @@ const filterAll = (
       type: "song" as const,
       id: song.id,
       title: song.title,
-      image: song.image,
+      image: song.image
     }));
 
   const artistResults: SearchResult[] = artists
@@ -55,21 +56,24 @@ const filterAll = (
       id: category.id,
       title: category.title,
       image: category.image,
+      // color:category.color,
     }));
-
-  return [...songResults, ...artistResults, ...categoryResults];
-};
-
-const Search = ({ searchInput }: { searchInput: string }) => {
-  const { data: songs } = useGetSongs();
-  const { data: artists } = useGetArtists();
-  const { data: categories } = useGetCategory();
+    return [...songResults, ...artistResults, ...categoryResults];
+  };
+  
+  const Search = ({ searchInput }: { searchInput: string }) => {
+    const { data: songs } = useGetSongs();
+    const { data: artists } = useGetArtists();
+    const { data: categories } = useGetCategory();
+    // console.log(songs[2]?.color)
+    // console.log(artists[2]?.color)
+    // console.log(categories[2]?.color)
 
   const results = filterAll(searchInput, songs, artists, categories);
 
   return (
     <>
-      {searchInput.trim() ? (
+      {searchInput?.trim() ? (
         <section className="mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#121212]">
           {results.length > 0 ? (
             results.map(item => (
@@ -85,19 +89,20 @@ const Search = ({ searchInput }: { searchInput: string }) => {
               >
                 <div className="bg-[#121212] rounded-lg hover:bg-[#3b3b3b] gap-2">
                   <div className="lg:container mx-auto p-2 flex gap-4 text-white ">
-                    <div className="bg-gray-300 flex items-center w-4/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
-                      {!item.image ? "" :
+                    <div className=" flex items-center justify-center w-4/12 md:w-3/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
+                    {/* {!item.image ? {item?.color} : */}
+                      {!item.image ? "":
                         <Image
                           src={item.image || '/default-song-image.jpg'}
                           alt={item.title || "Image"}
-                          width={700}
-                          className="bg-gray-800 object-cover h-full"
+                          width={500}
+                          className="w-fit h-fit md:h-20 bg-gray-800 object-cover "
                           height={100}
                         />
                       }
                     </div>
-                    <div className="w-6/12 grid">
-                      <h2 className="line-clamp-1 text-lg md:text-2xl font-semibold">
+                    <div className="w-6/12 flex flex-col  justify-center ">
+                        <h2 className="line-clamp-1 text-base md:text-base font-medium">
                         {item.title}
                       </h2>
                       <span className="text-xs text-gray-400">{item.type}</span>

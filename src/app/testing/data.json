@@ -1,37 +1,120 @@
 [
-  [{"chord": "", "lyrics": "Verse 1"}],
-  [{"chord": "", "lyrics": "Vazhi Therinjum Naa Tholanji ponen"}],
-  [{"chord": "", "lyrics": "Paadha puriyama bayandhu ninnen"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Nooru perae thedi neenga pogala"}],
-  [{"chord": "", "lyrics": "Tholaindhu pona ennai theadi vandhinga"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Chorus"}],
-  [{"chord": "", "lyrics": "Neer Enna Marakala"}],
-  [{"chord": "", "lyrics": "Ennai vittu vilagala"}],
-  [{"chord": "", "lyrics": "Yekkamulla kannala yengi dha ninninga"}],
-  [{"chord": "", "lyrics": "Neer Enna verukala"}],
-  [{"chord": "", "lyrics": "Thalli thooram pogala"}],
-  [{"chord": "", "lyrics": "Kaal kadakka enakaga"}],
-  [{"chord": "", "lyrics": "Kadai thaandi vandhinga"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 2"}],
-  [{"chord": "", "lyrics": "Sirandhadhellam kootathil irukka"}],
-  [{"chord": "", "lyrics": "Tharam izhandha ennai thedi vandhadhu yen"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Enna theduvadha neenga niruthala"}],
-  [{"chord": "", "lyrics": "Unga anbukku oru Ellai illa"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Puthiya thuvakkam enakku thandhinga"}],
-  [{"chord": "", "lyrics": "Unga tholin meedhu sumandhu vandheenga"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 3"}],
-  [{"chord": "", "lyrics": "Kalleriyum kootathin munne"}],
-  [{"chord": "", "lyrics": "En aadharavai nindravar neerae"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "En Karam pidithu thookineer"}],
-  [{"chord": "", "lyrics": "Enna karaigal ellam neekineer"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Um pillaiyaga maatrivitterae"}],
-  [{"chord": "", "lyrics": "Ennai thalladha thagappan neerae"}]
+  [{ "chord": "", "lyrics": "Intro" }],
+  [
+    { "chord": "", "lyrics": "Tu Na " },
+    { "chord": "Em", "lyrics": "Badle, Jaisa Tha" },
+    { "chord": "D", "lyrics": "Waisa Hi " },
+    { "chord": "C", "lyrics": "Hai" }
+  ],
+  [
+    { "chord": "", "lyrics": "Chahe" },
+    { "chord": "Am", "lyrics": "Badle, Mere" },
+    { "chord": " G", "lyrics": "Halaat" }
+  ],
+  [
+    { "chord": "", "lyrics": "Tu" },
+    { "chord": "Em", "lyrics": "Kareeb Mere," },
+    { "chord": "D", "lyrics": "Hamesha Hi" },
+    { "chord": "C", "lyrics": "Hai" }
+  ],
+  [
+    { "chord": "", "lyrics": "Tu" },
+    { "chord": "Am", "lyrics": "Jaane Meri Har" },
+    { "chord": " G", "lyrics": "Baat" }
+  ],
+  [{ "chord": "", "lyrics": "" }],
+  [{ "chord": "C", "lyrics": "Sthir Hain Wayde Tere," }],
+  [
+    { "chord": "D", "lyrics": "Adbhut" },
+    { "chord": "Em", "lyrics": "Teri Yojnayen" }
+  ],
+  [
+    { "chord": "C", "lyrics": "Mere Liye, Na Badle" },
+    { "chord": "G/D", "lyrics": "Kabhi (x2)" }
+  ],
+  [{ "chord": "", "lyrics": "" }],
+  [{ "chord": "", "lyrics": "Chorus" }],
+  [
+    { "chord": "G", "lyrics": "Peedhi Se Peedhi Tak," },
+    { "chord": "D", "lyrics": "Rozana, Har Waqt" }
+  ],
+  [
+    { "chord": "", "lyrics": "Tu" },
+    { "chord": "Em", "lyrics": "Wafadar Hai, Mere" },
+    { "chord": "C", "lyrics": "Prabhu, (x2)" }
+  ],
+  [{ "chord": "", "lyrics": "Yeshu" }],
+  [{ "chord": "", "lyrics": "" }],
+
+  [{ "chord": "", "lyrics": "Verse" }],
+  [
+    { "chord": "C", "lyrics": "Ek Peedhi Dusri Se," },
+    { "chord": "", "lyrics": "Tere Sab" },
+    { "chord": "D", "lyrics": "Kaam Batayen" }
+  ],
+
+  [{ "chord": "Em", "lyrics": "Tere Log, Teri Mahima" }],
+  [{ "chord": "C", "lyrics": "Hamesha Gaate Jayen (x2)" }],
+  [{ "chord": "", "lyrics": "" }],
+
+  [
+    { "chord": "", "lyrics": "Ek" },
+    { "chord": "Am", "lyrics": "Pita Se Aulaad Tak," }
+  ],
+  [{ "chord": "Bm", "lyrics": "Aur Uski Aulaad Tak" }],
+
+  [{ "chord": "C", "lyrics": "Teri Aashishen" }],
+  [{ "chord": "Am", "lyrics": "Khudawand" }],
+  [{ "chord": "D", "lyrics": "Bas Yun Hi Badhti Jayen" }],
+  [{ "chord": "", "lyrics": "" }],
+
+  [
+    { "chord": "", "lyrics": "You Are" },
+    { "chord": "G", "lyrics": "God Of Generations" }
+  ],
+  [
+    { "chord": "", "lyrics": "From" },
+    { "chord": "D", "lyrics": "Generations To Generations" }
+  ],
+  [
+    { "chord": "", "lyrics": "Lord You " },
+    { "chord": "C", "lyrics": "Are, Yes You Are " },
+    { "chord": "D", "lyrics": "Are (x2)" }
+  ],
+  [{ "chord": "", "lyrics": "" }],
+  [{ "chord": "G", "lyrics": "Abraham Se Isaac Tak," }],
+  [
+    { "chord": "", "lyrics": "Isaac" },
+    { "chord": "D", "lyrics": "Se Yakub Tak" }
+  ],
+
+  [
+    { "chord": "", "lyrics": "Yakub " },
+    { "chord": "E", "lyrics": "Se Ham Tak," }
+  ],
+  [
+    { "chord": "", "lyrics": "Wafadar" },
+    { "chord": "C", "lyrics": "Tu (x2)" }
+  ],
+  [{ "chord": "", "lyrics": "" }],
+  [{ "chord": "", "lyrics": "Bridge" }],
+  [
+    { "chord": "Em", "lyrics": "Tera Prem, Aur" },
+    { "chord": "C", "lyrics": "Bhalai," }
+  ],
+
+  [
+    { "chord": "", "lyrics": "Teri" },
+    { "chord": "G", "lyrics": "Karuna, Aur" },
+    { "chord": "D", "lyrics": "Sachchai" }
+  ],
+  [
+    { "chord": "Em", "lyrics": "Hai Ham Par, Hamare" },
+    { "chord": "C", "lyrics": "Ghar Par," }
+  ],
+
+  [
+    { "chord": "G", "lyrics": "Prabhu Tune" },
+    { "chord": "E", "lyrics": "Thehrayi (x4)" }
+  ]
 ]

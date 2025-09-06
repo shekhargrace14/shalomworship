@@ -240,7 +240,7 @@ const Song = async ({ params }: any) => {
             </section>
           )
         }
-        <section className="w-full text-white">
+        <section className="w-full text-white mt-12">
           {/* <div >{songData.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">
             

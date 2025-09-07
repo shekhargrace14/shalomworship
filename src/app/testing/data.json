@@ -1,120 +1,30 @@
 [
-  [{ "chord": "", "lyrics": "Intro" }],
-  [
-    { "chord": "", "lyrics": "Tu Na " },
-    { "chord": "Em", "lyrics": "Badle, Jaisa Tha" },
-    { "chord": "D", "lyrics": "Waisa Hi " },
-    { "chord": "C", "lyrics": "Hai" }
-  ],
-  [
-    { "chord": "", "lyrics": "Chahe" },
-    { "chord": "Am", "lyrics": "Badle, Mere" },
-    { "chord": " G", "lyrics": "Halaat" }
-  ],
-  [
-    { "chord": "", "lyrics": "Tu" },
-    { "chord": "Em", "lyrics": "Kareeb Mere," },
-    { "chord": "D", "lyrics": "Hamesha Hi" },
-    { "chord": "C", "lyrics": "Hai" }
-  ],
-  [
-    { "chord": "", "lyrics": "Tu" },
-    { "chord": "Am", "lyrics": "Jaane Meri Har" },
-    { "chord": " G", "lyrics": "Baat" }
-  ],
-  [{ "chord": "", "lyrics": "" }],
-  [{ "chord": "C", "lyrics": "Sthir Hain Wayde Tere," }],
-  [
-    { "chord": "D", "lyrics": "Adbhut" },
-    { "chord": "Em", "lyrics": "Teri Yojnayen" }
-  ],
-  [
-    { "chord": "C", "lyrics": "Mere Liye, Na Badle" },
-    { "chord": "G/D", "lyrics": "Kabhi (x2)" }
-  ],
-  [{ "chord": "", "lyrics": "" }],
-  [{ "chord": "", "lyrics": "Chorus" }],
-  [
-    { "chord": "G", "lyrics": "Peedhi Se Peedhi Tak," },
-    { "chord": "D", "lyrics": "Rozana, Har Waqt" }
-  ],
-  [
-    { "chord": "", "lyrics": "Tu" },
-    { "chord": "Em", "lyrics": "Wafadar Hai, Mere" },
-    { "chord": "C", "lyrics": "Prabhu, (x2)" }
-  ],
-  [{ "chord": "", "lyrics": "Yeshu" }],
-  [{ "chord": "", "lyrics": "" }],
+  [{"chord": "", "lyrics": "Pre-Chorus"}],
+  [{"chord": "", "lyrics": "Mere Viruddh Uthne Wali,"}],
+  [{"chord": "", "lyrics": "Har Chaal Ko Bhalaai Mein Badlega Wo"}],
+  [{"chord": "", "lyrics": "Socha Nahin Aise Kaamon Ko"}],
+  [{"chord": "", "lyrics": "Karega Yeshu Mere Liye – (2)"}],
 
-  [{ "chord": "", "lyrics": "Verse" }],
-  [
-    { "chord": "C", "lyrics": "Ek Peedhi Dusri Se," },
-    { "chord": "", "lyrics": "Tere Sab" },
-    { "chord": "D", "lyrics": "Kaam Batayen" }
-  ],
-
-  [{ "chord": "Em", "lyrics": "Tere Log, Teri Mahima" }],
-  [{ "chord": "C", "lyrics": "Hamesha Gaate Jayen (x2)" }],
-  [{ "chord": "", "lyrics": "" }],
-
-  [
-    { "chord": "", "lyrics": "Ek" },
-    { "chord": "Am", "lyrics": "Pita Se Aulaad Tak," }
-  ],
-  [{ "chord": "Bm", "lyrics": "Aur Uski Aulaad Tak" }],
-
-  [{ "chord": "C", "lyrics": "Teri Aashishen" }],
-  [{ "chord": "Am", "lyrics": "Khudawand" }],
-  [{ "chord": "D", "lyrics": "Bas Yun Hi Badhti Jayen" }],
-  [{ "chord": "", "lyrics": "" }],
-
-  [
-    { "chord": "", "lyrics": "You Are" },
-    { "chord": "G", "lyrics": "God Of Generations" }
-  ],
-  [
-    { "chord": "", "lyrics": "From" },
-    { "chord": "D", "lyrics": "Generations To Generations" }
-  ],
-  [
-    { "chord": "", "lyrics": "Lord You " },
-    { "chord": "C", "lyrics": "Are, Yes You Are " },
-    { "chord": "D", "lyrics": "Are (x2)" }
-  ],
-  [{ "chord": "", "lyrics": "" }],
-  [{ "chord": "G", "lyrics": "Abraham Se Isaac Tak," }],
-  [
-    { "chord": "", "lyrics": "Isaac" },
-    { "chord": "D", "lyrics": "Se Yakub Tak" }
-  ],
-
-  [
-    { "chord": "", "lyrics": "Yakub " },
-    { "chord": "E", "lyrics": "Se Ham Tak," }
-  ],
-  [
-    { "chord": "", "lyrics": "Wafadar" },
-    { "chord": "C", "lyrics": "Tu (x2)" }
-  ],
-  [{ "chord": "", "lyrics": "" }],
-  [{ "chord": "", "lyrics": "Bridge" }],
-  [
-    { "chord": "Em", "lyrics": "Tera Prem, Aur" },
-    { "chord": "C", "lyrics": "Bhalai," }
-  ],
-
-  [
-    { "chord": "", "lyrics": "Teri" },
-    { "chord": "G", "lyrics": "Karuna, Aur" },
-    { "chord": "D", "lyrics": "Sachchai" }
-  ],
-  [
-    { "chord": "Em", "lyrics": "Hai Ham Par, Hamare" },
-    { "chord": "C", "lyrics": "Ghar Par," }
-  ],
-
-  [
-    { "chord": "G", "lyrics": "Prabhu Tune" },
-    { "chord": "E", "lyrics": "Thehrayi (x4)" }
-  ]
+  [{"chord": "", "lyrics": ""}],
+  [{"chord": "", "lyrics": "Chorus"}],
+  [{"chord": "", "lyrics": "Vaidon Ka Saccha Khuda"}],
+  [{"chord": "", "lyrics": "Jo Kahe, Wo Kare Poora"}],
+  [{"chord": "", "lyrics": "Mere Jeevan Mein"}],
+  [{"chord": "", "lyrics": "Uski Yojana Karega Wo Poora"}],
+  
+  [{"chord": "", "lyrics": ""}],
+  [{"chord": "", "lyrics": "Stanza 1"}],
+  [{"chord": "", "lyrics": "Dhanya Hai Khuda "}],
+  [{"chord": "", "lyrics": "Mere Jeevan Ke Liye"}],
+  [{"chord": "", "lyrics": "Mujhe Bairy Ke Jaal Se Chhuda Liya"}],
+  [{"chord": "", "lyrics": "Chaal Uska Viphal Hua"}],
+  [{"chord": "", "lyrics": "Bach Nikla Uske Phande Se Main"}],
+  
+  [{"chord": "", "lyrics": ""}],
+  [{"chord": "", "lyrics": "Stanza 2"}],
+  [{"chord": "", "lyrics": "Parmeshwar Se Prem "}],
+  [{"chord": "", "lyrics": "Karne Waallon Ke Liye"}],
+  [{"chord": "", "lyrics": "Sab Baatein Hoti Hain, Bhalaai Ke Liye"}],
+  [{"chord": "", "lyrics": "Chhoti Badi Har Baat Mein"}],
+  [{"chord": "", "lyrics": "Yeshu Ki Mahima Ko Dekhunga Main"}]
 ]

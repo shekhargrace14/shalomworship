@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { useGetArtists } from "@/lib/query/query";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 // import { useGetArtistBySlug } from "@/lib/query/query";
 // import { ArtistProps } from "@/types";
 

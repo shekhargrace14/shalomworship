@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import slugify from "slugify";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 
 const Card: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")

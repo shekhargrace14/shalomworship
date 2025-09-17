@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { useGetArtists, useGetCategory, useGetSongs } from "@/lib/query/query";
+import { Input } from "./input";
 
 export type Song = {
   id: string;
@@ -74,7 +75,7 @@ const filterAll = (
   return (
     <>
       {searchInput?.trim() ? (
-        <section className="mt-4 h-[90vh] overflow-y-auto custom-scrollbar bg-[#121212]">
+        <section className="bg-card rounded-md max-h-[86vh] overflow-y-auto custom-scrollbar ">
           {results.length > 0 ? (
             results.map(item => (
               <Link
@@ -82,13 +83,11 @@ const filterAll = (
                   item.type === "category"
                     ? `/category/${slugify(item.title, { lower: true })}`
                     : `/${item.type}/${slugify(item.title, { lower: true })}-${item.id}`
-
-
                 }
                 key={item.type + item.id}
               >
-                <div className="bg-[#121212] rounded-lg hover:bg-[#3b3b3b] gap-2">
-                  <div className="lg:container mx-auto p-2 flex gap-4 text-white ">
+                <div className="bg-card gap-2">
+                  <div className="lg:container mx-auto p-2 flex gap-4 text-foreground">
                     <div className=" flex items-center justify-center w-4/12 md:w-3/12 rounded overflow-hidden sm:lg-0 md:mb-0 ">
                     {/* {!item.image ? {item?.color} : */}
                       {!item.image ? "":
@@ -101,19 +100,19 @@ const filterAll = (
                         />
                       }
                     </div>
-                    <div className="w-6/12 flex flex-col  justify-center ">
-                        <h2 className="line-clamp-1 text-base md:text-base font-medium">
+                    <div className="w-6/12 flex flex-col justify-center ">
+                        <h2 className="line-clamp-1 text-foreground text-base md:text-base font-medium">
                         {item.title}
                       </h2>
-                      <span className="text-xs text-gray-400">{item.type}</span>
+                      <span className="text-xs text-foreground">{item.type}</span>
                     </div>
                   </div>
                 </div>
               </Link>
             ))
           ) : (
-            <div className="rounded min-w-full px-4 py-2 text-white bg-red-500 ">
-              <p className="text-white text-center">No results found. </p>
+            <div className="rounded min-w-full px-4 py-2 text-foreground bg-destructive ">
+              <p className="text-foreground text-center">No results found. </p>
             </div>
           )}
         </section>

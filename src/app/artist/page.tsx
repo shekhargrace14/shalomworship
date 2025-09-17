@@ -29,7 +29,7 @@ const page = async () => {
   const artists = await fetchArtists();
 
   return (
-    <div className=" h-[90vh] overflow-y-auto custom-scrollbar p-4">
+    <div className="p-4">
       <Menu />
       <ArtistSection artists={artists} />
     </div>

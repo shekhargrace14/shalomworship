@@ -1,5 +1,6 @@
 "use client";
 
+import { Share2 } from "lucide-react";
 import { IoShareSocialOutline } from "react-icons/io5";
 interface ShareButtonProps {
   title: string;
@@ -33,7 +34,8 @@ export default function ShareButton({ title }: ShareButtonProps) {
     // <div >
     // <div onClick={handleShare} className=" bg-[#212121] p-2  rounded-full cursor-pointer">
     <div onClick={handleShare} className=" cursor-pointer">
-      <IoShareSocialOutline className="w-4 h-4"  />
+      {/* <IoShareSocialOutline className="w-4 h-4"  /> */}
+      <Share2 size={16} className="text-foreground"/>
     </div>
     // </div>
   );

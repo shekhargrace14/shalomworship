@@ -44,7 +44,7 @@ export default function RootLayout({
         {/* ✅ No need to repeat the favicon <link> here if defined in metadata.icons */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
       </head>
-      <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 bg-background">
+      <body className="antialiased  grid grid-cols-12 grid-rows-12 bg-gray-500 ">
         <QueryProvider>
           <ThemeProvider
             attribute="class"
@@ -52,16 +52,20 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              <div className="col-span-12 row-span-1 md:row-span-1 bg=red-400">
+              <div className="col-span-12 row-span-1">
                 <Header />
+                {/* <div className="bg-green-500">green lorem green lorem green lorem</div> */}
               </div>
-              <aside className="hidden md:block col-span-0 md:col-span-3 row-span-10 md:row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
+              <aside className="col-span-3 row-span-10 rounded-lg">
                 <Sidebar />
+                {/* <div className="bg-blue-500">blue</div> */}
+
               </aside>
-              <main className="col-span-12  md:col-span-9 row-span-11 md:row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
+              <main className="col-span-9 row-span-10 rounded-lg">
                 {children}
+                {/* <div className="bg-pink-500">pink</div> */}
               </main>
-          </ThemeProvider>  
+          </ThemeProvider>
           {/* <BottomPlayer /> */}
         </QueryProvider>
       </body>

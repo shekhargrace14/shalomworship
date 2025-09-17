@@ -3,6 +3,7 @@
 "use client";
 import { fetchSongById } from '@/lib/query/query';
 import { getKeyByShift, transposeChord } from '@/utils/transpose';
+import { Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 // import { transposeChord, getKeyByShift } from '../utils/nashville';
 // import { transposeChord, getKeyByShift } from '../utils/transpose';
@@ -63,15 +64,15 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
       {isChord && (
 
         <div className="mb-8 flex gap-4 items-center">
-          <button onClick={() => setShift(shift - 1)} className="px-3 py-1 bg-gray-200 text-black rounded">-</button>
-          <span className='text-white'>Transpose: {fromKey} → {toKey}</span>
-          <button onClick={() => setShift(shift + 1)} className="px-3 py-1 bg-gray-200 text-black rounded">+</button>
+          <button onClick={() => setShift(shift - 1)} className="px-3 py-1 text-base bg-gray-200 text-black rounded cursor-pointer"><Plus size={14}/></button>
+          <span className='text-foreground'>Transpose: {fromKey} → {toKey}</span>
+          <button onClick={() => setShift(shift + 1)} className="px-3 py-1 text-base bg-gray-200 text-black rounded cursor-pointer"><Minus size={14}/></button>
         </div>
       )}
-      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-white">{song.title}{isChord ? " Chords" : " Lyrics"}</h2>
+      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-foreground">{song.title}{isChord ? " Chords" : " Lyrics"}</h2>
 
-      <table className="table-auto border-collapse">
-        <tbody>
+      <table className="table-auto border-collapse ">
+        <tbody className='text-foreground'>
           {song.lines.map((line, idx) => {
             const originalChords = line.map(item => item.chord);
             const transposedChords = transposeChord(originalChords, fromKey, toKey);
@@ -82,14 +83,14 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
                   {isChord && (
                     <tr className=''>
                       {transposedChords.map((chord: string, i: number) => (
-                      <td key={i} className="font-bold text-left text-white">{chord}</td>
+                      <td key={i} className="font-bold text-left text-foreground">{chord}</td>
                       ))}
                     </tr>
                   )}
 
                   <tr>
                     {line.map((item, i) => (
-                      <td key={i} className="text-left text-white">{item.lyrics}&nbsp;</td>
+                      <td key={i} className="text-left text-foreground">{item.lyrics}&nbsp;</td>
                     ))}
                   </tr>
                 </div>

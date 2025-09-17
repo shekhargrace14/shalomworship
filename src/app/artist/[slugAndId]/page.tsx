@@ -48,7 +48,7 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
   if (!artistData || artistData.length === 0) {
     // console.error(`No artist found for slug: ${artistSlug}`);
     return (
-      <p className="text-white text-center">Name
+      <p className="text-foreground text-center">Name
         Sorry, no artist was found for this ID.
       </p>
     );
@@ -56,34 +56,34 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
   return (
     <>
       {/* hello {data.name} */}
-      <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
+      <div className="bg-background  rounded-lg ">
         <div         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
         style={{
-          backgroundImage: `linear-gradient(to bottom, ${color}, #00000080)`
+          backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
         }}>
           <Menu />
           <div className=" flex items-center gap-4 w-full ">
-            <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
+            <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
               <Image
                 src={data?.image || "https://drive.google.com/uc?export=view&id=19Vm_Qd_6F_ehN5SE2jkUYpnk7TMNwM1g"}
                 alt={data?.title || "Artist Image"}
                 width={150}
                 height={100}
-                className="bg-gray-800 object-cover h-full w-full"
+                className="bg-card object-cover h-full w-full"
                 priority={true}
               />
             </div>
             <div className="sm:w-10/12 grid ">
-              <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-white">
+              <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-foreground">
                 {data?.title || "Artist"}
               </h1>
-              <p className="text-sm  text-white">Artist</p>
+              <p className="text-sm  text-foreground">Artist</p>
             </div>
           </div>
         </div>
-        <h2 className="text-xl font-semibold m-4 text-white">Songs from {data?.title || "Artist"}</h2>
-        <section className="w-full">
-          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-0 ">
+        <h2 className="text-xl font-semibold m-4 text-foreground">Songs from {data?.title || "Artist"}</h2>
+        <section className="w-full px-4">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 ">
             {data?.song.map((item) => (
               <div key={item.songId}>
                 <Processor item={item?.songId} />

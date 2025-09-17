@@ -12,20 +12,20 @@ export default async function Home() {
     fetchArtists(),
     fetchCategory()
   ]);
-  console.log(songs)
+  // console.log(songs)
   return (
     <>
-      <div className=" p-4  h-[90vh] overflow-y-auto custom-scrollbar ">
+      <div className=" p-4 overflow-y-auto custom-scrollbar ">
         <Menu />
-        <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Trending Songs</Link> </h2>
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Trending Songs</Link> </h2>
         <SongSection number={"-8"} songs={songs} />
         {/* <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Chords</Link> </h2> */}
         {/* <SongSection number={"-10"} songs={songs} chords="true" /> */}
-        <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/category"}>Category</Link></h2>
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/category"}>Category</Link></h2>
         <CategorySection number={"-10"} categories={categories} />
-        <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"><Link href={"/artist"}>Your Favorite Artist</Link></h2>
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"><Link href={"/artist"}>Your Favorite Artist</Link></h2>
         <ArtistSection number={"-6"} artists={artists} />
-        <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Latest Song</Link></h2>
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Latest Song</Link></h2>
         <TrendingSection number={"-6"} songs={songs}/>
         <br />
 

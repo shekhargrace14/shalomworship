@@ -13,7 +13,7 @@ const ArtsitCard = ({ item }:any) => {
     
     <>
       <Link href={`/artist/${slug}-${item.id}`}>
-        <div className=" sm:hover:bg-[#1f1f1f] sm:p-2 rounded-lg ">
+        <div className="bg-card rounded-lg ">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image
               // src="/user.png"
@@ -24,10 +24,10 @@ const ArtsitCard = ({ item }:any) => {
               className="rounded-lg"
             />
           </div>
-          <div className="w-full lg:w-full py-2">
+          <div className="w-full p-2">
             <div className="">
-              <h3 className="line-clamp-1 text-1xl mb-1 font-semibold text-white">{item.title}</h3>
-              <p className="text-sm text-[#b3b3b3]">Artist</p>
+              <h3 className="line-clamp-1 text-1xl mb-1 font-semibold text-foreground">{item.title}</h3>
+              <p className="text-sm text-foreground">Artist</p>
             </div>
           </div>
         </div>

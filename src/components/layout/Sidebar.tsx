@@ -13,12 +13,12 @@ const Sidebar = async () => {
   // console.log(artists, "sidebar")
   return (
     // <nav className=" w-full flex gap-2 flex-col p-2 mx-2 h-[90vh]  bg-[#121212] rounded-lg overflow-y-auto custom-scrollbar ">
-    <nav className=" w-full flex gap-2 flex-col mx-2  bg-[#121212] rounded-lg ">
+    <nav className=" w-full flex gap-2 flex-col  bg-background rounded-lg ">
       <Link href="/" className="text-3xl block md:hidden">
         <IoMdHome />
       </Link>
       <section>
-        <div className="h-[90vh]  overflow-y-auto custom-scrollbar px-2 mt-2">
+        <div className="px-2 mt-2">
           <Artist artists={artists} />
         </div>
       </section>

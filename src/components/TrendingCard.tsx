@@ -26,7 +26,7 @@ const TrendingCard = ({ item }: any) => {
     <>  
       {/* <Link href={`/song/${item.id}-${slug}`}> */}
       <Link href={`/song/${slug}-${item.id}`}>
-        <div className=" bg-[#262b30]  rounded-lg flex justify-between gap-2">
+        <div className=" bg-card  rounded-lg flex justify-between gap-2">
           <div className="rounded-lg overflow-hidden ">
             <Image
               src={item.image}
@@ -36,7 +36,7 @@ const TrendingCard = ({ item }: any) => {
             />
           </div>
           <div className="w-full p-2 flex items-center">
-              <h3 className="line-clamp-1 text-sm font-bold text-white">{item.title}</h3>
+              <h3 className="line-clamp-1 text-sm font-bold text-foreground">{item.title}</h3>
           </div>
         </div>
       </Link>

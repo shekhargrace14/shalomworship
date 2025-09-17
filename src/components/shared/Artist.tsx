@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { useGetArtists } from "@/lib/query/query";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 // import { useGetArtistBySlug } from "@/lib/query/query";
 // import { ArtistProps } from "@/types";
-import Avatar from "../ui/Avatar";
 
 type ArtistProps = {
   artists: {
@@ -41,29 +41,28 @@ const Artist = ({ artists }: ArtistProps) => {
             <Link key={item.id} href={`/artist/${slugify(item.title, { lower: true })}-${item.id}`}>
 
               <div
-                className={`rounded-lg hover:bg-gradient-to-l from-[#121212] to-[#000000] ${urlSlug.includes(item.id)
-                    ? "bg-[#2e2a2a]"
-                    : "bg-[rgb(0,0,0)]"
+                className={`rounded-lg bg-card ${urlSlug.includes(item.id)
+                  ? "bg-[#2e2a2a]"
+                  : "bg-[rgb(0,0,0)]"
                   }`}
               >
                 <div className="lg:container mx-auto p-2 flex gap-4">
                   <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0">
-                    {/* <Image
-                      // src="/user.png"
+                    <Image
                       src={item?.image || "/user.png"}
-                      alt={item?.name || "Artist Name"}
+                      alt={item?.title || "Artist Name"}
                       width={60}
                       height={60}
                       className=" object-cover h-full"
                       priority
-                    /> */}
-                    <Avatar src={item?.image} alt={item?.title} size={55}/>
+                    />
+
                   </div>
                   <div className="md:w-10/12 flex flex-col justify-center">
-                    <h3 className="line-clamp-1 font-semibold text-base text-white">
+                    <h3 className="line-clamp-1 font-semibold text-base text-card-foreground">
                       {item?.title}
                     </h3>
-                    <p className=" text-sm text-white">Artist</p>
+                    <p className=" text-sm text-card-foreground">Artist</p>
                   </div>
                 </div>
               </div>

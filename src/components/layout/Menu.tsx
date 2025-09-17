@@ -13,7 +13,7 @@ const Menu = () => {
     <div className="  rounded-lg flex gap-2">
       {menuItems.map((menuItem, index) => (
         <Link href={menuItem.link} key={index}>
-            <p className="hover:bg-[#444444] bg-[#34343450] px-3  py-1 rounded-xl  text-sm text-white">{menuItem.title}</p>
+            <p className="bg-card/60 px-3  py-1 rounded-md  text-sm text-foreground ">{menuItem.title}</p>
         </Link>
       ))}
     </div>

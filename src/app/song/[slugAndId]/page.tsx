@@ -6,7 +6,6 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
 import Lines from "@/components/shared/Lines";
-import Avatar from "@/components/ui/Avatar";
 import PlayButton from "@/components/ui/Play";
 import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
@@ -16,6 +15,7 @@ import { fetchSongById, fetchSongs } from "@/lib/query/query";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 import formatArtists from "@/utils/formatArtists";
 
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: any) {
   console.log(creatorArtists, " creatorArtists of song page params");
 
   // const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
-  const creatorNames = creatorArtists.map((a) => a.artist?.title).join(", ");  
+  const creatorNames = creatorArtists.map((a) => a.artist?.title).join(", ");
 
   const artistNames = formatArtists(mainArtists.map((a) => a.artist?.title));
   // const formatedCreatorNames = formatArtists(creatorNames);
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: any) {
   const title =
     (song?.title || "Unknown Title") +
     (song?.isChords ? " Chords & Lyrics" : " Lyrics") +
-    (mainArtists.length > 0 ? " - " + artistNames   : "") +
+    (mainArtists.length > 0 ? " - " + artistNames : "") +
     (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
 
 
@@ -114,19 +114,17 @@ const Song = async ({ params }: any) => {
 
 
   return (
-    <div className="bg-[#000000]  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
+    <div className="bg-background  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
       <div
-        // className={`md:flex gap-4 p-4 text-white w-full bg-gradient-to-b from-${songData.color} to-[#000000]`}
         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
         style={{
-          backgroundImage: `linear-gradient(to bottom, ${songData.color}, #00000080)`
+          backgroundImage: `linear-gradient(to bottom, ${songData.color}, transparent)`
         }}
       >
         <Menu />
         <div className=" sm:flex items-center gap-4 w-full">
-          <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-[#121212] ">
+          <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
             {songData.videoId ?
-
               <YouTubeEmbed videoId={songData.videoId} title={songData?.title} />
               :
               <Image
@@ -141,21 +139,26 @@ const Song = async ({ params }: any) => {
             }
           </div>
           <div className="sm:w-8/12 grid gap-2">
-            <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-white">
+            <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
               {songData.title}{" "}
             </h1>
             {creators.length > 0 ? (
               creators.map((creator, index) => (
                 <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
-                  <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} />
-                  <span className="font-semibold text-lg leading-4 text-white ">
+                  {/* <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} /> */}
+                  <Avatar>
+                    <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+
+                  <span className="font-semibold text-lg leading-4 text-foreground ">
                     {creator?.title}
                     {index < creators.length - 1 ? ", " : ""}
                   </span>
                 </Link>
               ))
             ) : (
-              <p className="font-semibold text-sm leading-4 text-white ">
+              <p className="font-semibold text-sm leading-4 text-foreground ">
                 No creator specified
               </p>
             )}
@@ -164,14 +167,14 @@ const Song = async ({ params }: any) => {
               {artists.length > 0 ? (
                 artists.map((artist, index) => (
                   <Link key={index} href={`/artist/${slugify(artist?.title, { lower: true })}-${artist?.id}`}>
-                    <div className=" text-base leading-4 text-white ">
+                    <div className=" text-base leading-4 text-foreground ">
                       {artist?.title}
                       {index < artists.length - 1 ? ", " : ""}
                     </div>
                   </Link>
                 ))
               ) : (
-                <p className="font-light text-sm leading-4 text-white"></p>
+                <p className="font-light text-sm leading-4 text-foreground"></p>
               )}
             </div>
             <div className="flex gap-2 flex-wrap items-center" >
@@ -180,7 +183,7 @@ const Song = async ({ params }: any) => {
                   songData.category.map((category, index) => (
                     <span
                       key={index}
-                      className="font-light text-sm leading-4 text-white"
+                      className="font-light text-sm leading-4 text-foreground"
                     >
                       <Link href={`/category/${category?.category.slug}`}>
                         {category?.category.title}
@@ -189,7 +192,7 @@ const Song = async ({ params }: any) => {
                     </span>
                   ))
                 ) : (
-                  <p className="font-light text-sm leading-4 text-white ">
+                  <p className="font-light text-sm leading-4 text-foreground ">
                     <Link
                       href={`/category/${songData.category[0]?.category.slug}`}
                     >
@@ -198,7 +201,7 @@ const Song = async ({ params }: any) => {
                   </p>
                 )
               ) : (
-                <p className="font-light text-sm leading-4 text-white">
+                <p className="font-light text-sm leading-4 text-foreground">
                   Unknown category
                 </p>
               )}
@@ -232,23 +235,23 @@ const Song = async ({ params }: any) => {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
             <Lines id={songData.id} song={songData} isChords={!!songData.isChords} />
           ) : (
-            <section className="w-full text-white">
-              <h2 className="text-xl md:text-2xl font-semibold mb-2 text-white">
+            <section className="w-full text-foreground">
+              <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
                 {songData.title} lyrics
               </h2>
               <div dangerouslySetInnerHTML={{ __html: songData.content }} />
             </section>
           )
         }
-        <section className="w-full text-white mt-12">
+        <section className="w-full text-foreground mt-12">
           {/* <div >{songData.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">
-            
+
             {creators.length > 0 ? (
               creators.map((creator, index) => (
                 <span
                   key={index}
-                  className="text-base font-semibold leading-4 text-white"
+                  className="text-base font-semibold leading-4 text-foreground"
                 >
                   Credits - &nbsp;
                   <Link href={creator.link} target="_blank">
@@ -258,14 +261,14 @@ const Song = async ({ params }: any) => {
                 </span>
               ))
             ) : (
-              <p className="font-light text-sm leading-4 text-white">
+              <p className="font-light text-sm leading-4 text-foreground">
                 No creator specified
               </p>
             )}
           </div>
         </section>
         <Social />
-        <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
+        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">
           Popular songs &nbsp;
           {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}
           {/* <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
@@ -279,7 +282,7 @@ const Song = async ({ params }: any) => {
             <CreatorSongs key={index} params={creator} />
           ))
         ) : (
-          <p className="font-light text-sm leading-4 text-white">
+          <p className="font-light text-sm leading-4 text-foreground">
             No creator specified
           </p>
         )}

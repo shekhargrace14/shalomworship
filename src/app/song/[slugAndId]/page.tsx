@@ -18,6 +18,7 @@ import slugify from "slugify";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 import formatArtists from "@/utils/formatArtists";
+import { Dot } from "lucide-react";
 
 interface ArtistItem {
   artist: { title: string; id: string; link: string; type: string; isArtist: string; };
@@ -205,7 +206,7 @@ const Song = async ({ params }: any) => {
                   Unknown category
                 </p>
               )}
-              &bull;
+              <Dot className="text-foreground" />
               {/* <p className="text-sm  text-white">
                 {new Date(songData.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",

@@ -1,5 +1,10 @@
-import { Prisma, song,artist, category } from "@prisma/client";
+import { Prisma, song, artist, category } from "@prisma/client";
 
+// Generic API response
+export type ApiResponse<T> = {
+  success: boolean;
+  data: T;
+};
 
 export type ArtistProps = artist;
 // export type ArtistProps = {
@@ -14,12 +19,14 @@ export type ChordLyric = { chord: string; lyrics: string };
 // export type SongType = song; 
 export type Song = {
   id: string;
+  _id: string;
   title: string;
   lines: ChordLyric[][];
-    content: string;
-    image: string | null;
-    author?: { id: string; image: string; title: string } | null;
-    creator?: { id: string; image: string | null; title: string } | null;
+  createdAt: string;
+  content: string;
+  image: string | null;
+  author?: { id: string; image: string; title: string } | null;
+  creator?: { id: string; image: string | null; title: string } | null;
 };
 
 export type CategoryType = category;

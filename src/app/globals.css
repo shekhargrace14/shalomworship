@@ -155,7 +155,6 @@
   }
 }
 
-
 /* ------------------------------------ */
 
 /* scroll bar css start  */
@@ -178,3 +177,12 @@
 /* bg-[#1f1f1f] */
 /* bg-[#121212] */
 /* hover:bg-[#3b3b3b] */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

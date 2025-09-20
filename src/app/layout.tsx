@@ -16,7 +16,7 @@ export const inter = Inter({
 export const metadata: Metadata = {
   title: "Shalom Worship",
   description: "Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God.",
-  keywords: "Worship song lyrics, gospel song lyrics, christian song lyrics",
+  keywords: "Worship song lyrics, gospel song chords, christian song lyrics",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.shalomworship.com/"),
   icons: {
     icon: "/favicon.ico",
@@ -44,7 +44,7 @@ export default function RootLayout({
         {/* ✅ No need to repeat the favicon <link> here if defined in metadata.icons */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
       </head>
-      <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 bg-background">
+      <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 gap-x-4 bg-background">
         <QueryProvider>
           <ThemeProvider
             attribute="class"
@@ -58,7 +58,7 @@ export default function RootLayout({
               <aside className="hidden md:block col-span-0 md:col-span-3 row-span-10 md:row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
                 <Sidebar />
               </aside>
-              <main className="col-span-12  md:col-span-9 row-span-11 md:row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
+              <main className="col-span-12  md:col-span-9 row-span-11 md:row-span-11 rounded-lg overflow-auto custom-scrollbar">
                 {children}
               </main>
           </ThemeProvider>  

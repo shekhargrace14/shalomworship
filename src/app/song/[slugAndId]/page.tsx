@@ -19,6 +19,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 
 import formatArtists from "@/utils/formatArtists";
 import { Dot } from "lucide-react";
+import { FAQ } from "@/components/FAQ";
 
 interface ArtistItem {
   artist: { title: string; id: string; link: string; type: string; isArtist: string; };
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: any) {
   const mainArtists = song?.artist?.filter((a) => a.isArtist) || [];
   const creatorArtists = song?.artist?.filter((a) => a.isCreator) || [];
   // console.log(mainArtists, " mainArtists of song page params");
-  console.log(creatorArtists, " creatorArtists of song page params");
+  // console.log(creatorArtists, " creatorArtists of song page params");
 
   // const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
   const creatorNames = creatorArtists.map((a) => a.artist?.title).join(", ");
@@ -58,7 +59,6 @@ export async function generateMetadata({ params }: any) {
     (song?.isChords ? " Chords & Lyrics" : " Lyrics") +
     (mainArtists.length > 0 ? " - " + artistNames : "") +
     (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
-
 
 
   const keyword = await song?.keyword;
@@ -95,7 +95,7 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
-  console.log(songData, "song  ")
+  // console.log(songData, "song  ")
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -149,7 +149,7 @@ const Song = async ({ params }: any) => {
                   {/* <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} /> */}
                   <Avatar>
                     <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarFallback>SW</AvatarFallback>
                   </Avatar>
 
                   <span className="font-semibold text-lg leading-4 text-foreground ">
@@ -269,6 +269,13 @@ const Song = async ({ params }: any) => {
           </div>
         </section>
         <Social />
+        {/* <FAQ
+          title={songData.title}  
+          artist={artists}
+          category={creators}
+          scripture={creators}
+          meaning={songData.title}  
+        /> */}
         <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">
           Popular songs &nbsp;
           {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}

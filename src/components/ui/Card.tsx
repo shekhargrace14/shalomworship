@@ -19,7 +19,7 @@ const Card: React.FC<any> = ({ item }) => {
     }
   });
   // console.log(artists, " artists of song page params");
-  console.log(creators, " creators of song page params");
+  // console.log(creators, " creators of song page params");
 
   const slug = slugify(`${item.title}`, { lower: true });
 
@@ -42,7 +42,7 @@ const Card: React.FC<any> = ({ item }) => {
               {/* <Avatar src={creators[0]?.image || "/default-avatar.jpg"} size={34} /> */}
               <Avatar>
                 <AvatarImage src={creators[0]?.image || "/default-avatar.jpg"} />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarFallback>SW</AvatarFallback>
               </Avatar>
               <div>
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>

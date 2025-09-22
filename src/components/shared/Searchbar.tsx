@@ -43,7 +43,7 @@ const Searchbar = () => {
         />
       }
       </div>
-      <div className="absolute z-20 top-12 md:top-6  right-0 w-full">
+      <div className="absolute z-20 top-12 md:top-6 lg:top-10  right-0 w-full">
         <Search searchInput={searchInput} />
         {/* <SearchCopy/> */}
       </div>

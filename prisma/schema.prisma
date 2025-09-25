@@ -13,6 +13,7 @@ model song {
   content         String
   lines           Json?
   isChords        Boolean? @default(false)
+  isTranslation   Boolean? @default(false)
   key             String?
   bpm             Int?
   image           String?

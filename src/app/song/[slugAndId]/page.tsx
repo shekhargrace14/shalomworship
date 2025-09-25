@@ -234,7 +234,7 @@ const Song = async ({ params }: any) => {
         </div> */}
         {
           songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
-            <Lines id={songData.id} song={songData} isChords={!!songData.isChords} />
+            <Lines id={songData.id} song={songData} isChords={!!songData.isChords} isTranslations={!!songData.isTranslation} />
           ) : (
             <section className="w-full text-foreground">
               <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">

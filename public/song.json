@@ -1,0 +1,32 @@
+{
+  "_id": "68d2c5175b940c4c8b89ba27",
+  "title": "test",
+  "key": "B",
+  "lines": [
+    [
+      {
+        "label": "Verse 1",
+        "chords": [],
+        "lyrics": { "en": "", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "chord": "B", "nashville": "6mm", "space": 8 },
+          { "chord": "F#", "nashville": "5", "space": 10 },
+          { "chord": "G#m", "nashville": "5", "space": 12 },
+          { "chord": "E", "nashville": "6m" }
+        ],
+        "lyrics": {
+          "en": "Tunee Kiya Khaali Apne Aap Ko,",
+          "hi": "तूने किया खाली अपने आप को,"
+        },
+        "translation": {
+          "en": "This is the meaning",
+          "hi": "यह अर्थ है"
+        }
+      }
+    ]
+  ]
+}

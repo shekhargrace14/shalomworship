@@ -1,4 +1,4 @@
-db.genre.updateMany(
-  {},
-  { $rename: { "name": "title" } }
+db.getCollection("song").updateMany(
+  { isTranslation: { $type: "string" } }, 
+  { $set: { isTranslation: false } }
 )

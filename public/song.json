@@ -1,0 +1,267 @@
+{
+  "_id": "68d2c5175b940c4c8b89ba27",
+  "title": "praise test",
+  "key": "A",
+  "isTranslation": false,
+  "chords": true,
+  "version": "version_3",
+  "lines": [
+    [
+      {
+        "label": "Intro",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": null }],
+        "lyrics": { "en": "Let everything", "hi": "," }
+      },
+
+      {
+        "chords": [
+          { "root": "", "number": null, "quality": "", "space": null }
+        ],
+        "lyrics": { "en": "That has breath", "hi": "," }
+      },
+      {
+        "chords": [
+          { "root": "", "number": null, "quality": "", "space": null }
+        ],
+        "lyrics": { "en": "Praise the Lord", "hi": "," }
+      },
+      {
+        "chords": [
+          { "root": "", "number": null, "quality": "", "space": null }
+        ],
+        "lyrics": { "en": "Praise the Lord", "hi": "," }
+      },
+      {
+        "label": "Verse 1",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
+        "lyrics": { "en": "I'll praise in the valley", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 4, "quality": "", "space": 5 },
+          { "root": "A", "number": 1, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "Praise on the mountain", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "E", "number": 5, "quality": "", "space": 10 }],
+        "lyrics": { "en": "I'll praise when I'm sure", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 4, "quality": "", "space": 5 },
+          { "root": "A", "number": 1, "quality": "", "space": 20 }
+        ],
+        "lyrics": { "en": "Praise when I'm doubting", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
+        "lyrics": { "en": "I'll praise when outnumbered", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 4, "quality": "", "space": 5 },
+          { "root": "A", "number": 1, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "Praise when surrounded", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "E", "number": 5, "quality": "", "space": 15 },
+          { "root": "D", "number": 4, "quality": "", "space": 20 }
+        ],
+        "lyrics": { "en": "Cause praise is the waters", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 25 }],
+        "lyrics": { "en": "My enemies drown in", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "Pre-Chorus",
+        "chords": [{ "root": "E", "number": 5, "quality": "", "space": 5 }],
+        "lyrics": { "en": "As long as I'm breathing", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "D", "number": 4, "quality": "", "space": null }],
+        "lyrics": { "en": "I've got a reason to", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "Chorus",
+        "chords": [
+          { "root": "F#", "number": 6, "quality": "m", "space": null },
+          { "root": "D", "number": 4, "quality": "", "space": 1 },
+          { "root": "A", "number": 1, "quality": "", "space": 5 },
+          { "root": "E", "number": 5, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "Pra-ise the Lord oh my soul", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "F#", "number": 6, "quality": "m", "space": null },
+          { "root": "D", "number": 4, "quality": "", "space": 1 },
+          { "root": "A", "number": 1, "quality": "", "space": 5 },
+          { "root": "E", "number": 5, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "Pra-ise the Lord oh my soul", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "F#", "number": 6, "quality": "m", "space": null }
+        ],
+        "lyrics": { "en": "I won’t be quiet", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "D", "number": 4, "quality": "", "space": 2 }],
+        "lyrics": { "en": "My God is alive", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "A", "number": 1, "quality": "", "space": null },
+          { "root": "E", "number": 5, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "How could I keep it inside", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "Verse 2",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
+        "lyrics": { "en": "I'll praise when I feel it", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 4, "quality": "", "space": 10 },
+          { "root": "A", "number": 1, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "I'll praise when I don't", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "E", "number": 5, "quality": "", "space": 10 },
+          { "root": "D", "number": 4, "quality": "", "space": 18 }
+        ],
+        "lyrics": { "en": "I'll praise 'cause I know", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 30 }],
+        "lyrics": { "en": "You're still in control", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+
+      {
+        "label": "",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 15 }],
+        "lyrics": { "en": "Cause my praise is a weapon", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 4, "quality": "", "space": 10 },
+          { "root": "A", "number": 1, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "It's more than a sound", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "E", "number": 5, "quality": "", "space": 10 },
+          { "root": "D", "number": 4, "quality": "", "space": 18 }
+        ],
+        "lyrics": { "en": "My praise is the shout", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 40 }],
+        "lyrics": { "en": "That brings Jericho down", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "Bridge",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
+        "lyrics": { "en": "I'll praise cause You're sovereign", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "B", "number": 2, "quality": "m", "space": null }],
+        "lyrics": { "en": "Praise cause You reign", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "C#", "number": 3, "quality": "m", "space": null }
+        ],
+        "lyrics": { "en": "Praise cause You rose", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "D", "number": 4, "quality": "", "space": 12 }],
+        "lyrics": { "en": "And defeated the grave", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
+        "lyrics": { "en": "I'll praise cause You're faithful", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+
+      {
+        "label": "",
+        "chords": [{ "root": "B", "number": 2, "quality": "m", "space": null }],
+        "lyrics": { "en": "Praise cause You're true", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "C#", "number": 3, "quality": "m", "space": null }
+        ],
+        "lyrics": { "en": "Praise cause there's nobody", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "D", "number": 4, "quality": "", "space": null }],
+        "lyrics": { "en": "Greater than You", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      }
+    ]
+  ]
+}

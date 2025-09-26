@@ -13,6 +13,8 @@ model song {
   content         String
   lines           Json?
   isChords        Boolean? @default(false)
+  isTranslation   Boolean? @default(false)
+  version         VersionType? @default(version_1)
   key             String?
   bpm             Int?
   image           String?
@@ -46,15 +48,6 @@ model song {
   album     SongAlbum[]
 }
 
-model author {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  title     String
-  image     String
-  color     String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  song      song[]
-}
 
 model artist {
   id        String       @id @default(auto()) @map("_id") @db.ObjectId
@@ -70,12 +63,25 @@ model artist {
   song      SongArtist[] // Explicit relation
   creator   song[]
 }
-
+model author {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  image     String
+  color     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  song      song[]
+}
 enum ArtistType {
   individual
   band
   label
   channel
+}
+enum VersionType {
+  version_1
+  version_2
+  version_3
 }
 
 model genre {

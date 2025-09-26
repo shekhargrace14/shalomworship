@@ -5,7 +5,7 @@ import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
-import Lines from "@/components/shared/Lines";
+import Lines from "@/components/shared/LinesVersion2";
 import PlayButton from "@/components/ui/Play";
 import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
@@ -20,6 +20,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 import formatArtists from "@/utils/formatArtists";
 import { Dot } from "lucide-react";
 import { FAQ } from "@/components/FAQ";
+import LinesVersion3 from "@/components/shared/LinesVersion3";
+import LinesVersion2 from "@/components/shared/LinesVersion2";
 
 interface ArtistItem {
   artist: { title: string; id: string; link: string; type: string; isArtist: string; };
@@ -232,9 +234,32 @@ const Song = async ({ params }: any) => {
         {/* <div className="absolute right-2 sm:top-[12px] top-[-8px]">
           <ShareButton title={songData.title} />
         </div> */}
-        {
-          songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
-            <Lines id={songData.id} song={songData} isChords={!!songData.isChords} />
+        {songData.version === "version_1" ? <div>
+          <section className="w-full text-foreground">
+            <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
+              {songData.title} lyrics
+            </h2>
+            <div dangerouslySetInnerHTML={{ __html: songData.content }} />
+          </section>
+        </div> : null}
+        {songData.version === "version_2" ? <LinesVersion2
+          id={songData.id}
+          song={songData}
+          isChords={!!songData.isChords}
+        /> : null}
+        {songData.version === "version_3" ? <LinesVersion3
+          id={songData.id}
+          song={songData}
+          isChords={!!songData.isChords}
+          isTranslations={!!songData.isTranslation}
+        /> : null}
+        {/* {songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
+            <Lines
+              id={songData.id}
+              song={songData}
+              isChords={!!songData.isChords}
+              version={songData.version || "version_1"}
+            />
           ) : (
             <section className="w-full text-foreground">
               <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
@@ -243,7 +268,7 @@ const Song = async ({ params }: any) => {
               <div dangerouslySetInnerHTML={{ __html: songData.content }} />
             </section>
           )
-        }
+        } */}
         <section className="w-full text-foreground mt-12">
           {/* <div >{songData.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">

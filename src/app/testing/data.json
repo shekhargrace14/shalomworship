@@ -1,39 +1,22 @@
 [
-  [{"chord": "", "lyrics": "Verse 1"}],
-  [{"chord": "", "lyrics": "You Picked Up All My Ashes"}],
-  [{"chord": "", "lyrics": "Planted Flowers In Their Place"}],
-  [{"chord": "", "lyrics": "Took My Hell And Gave Me Heaven In Exchange"}],
-  [{"chord": "", "lyrics": "For All You've Done To Save Me"}],
-  [{"chord": "", "lyrics": "For The Way You Loved Me First"}],
-  [{"chord": "", "lyrics": "Here's My Broken Hallelujah In Return"}],
-
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Chorus"}],
-
-  [{"chord": "", "lyrics": "I Give You My Heart,"}],
-  [{"chord": "", "lyrics": "Give You My Heart"}],
-  [{"chord": "", "lyrics": "Give You My Heart (x2)"}],
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Fully Yours, Set Apart"}],
-  [{"chord": "", "lyrics": "This Is All You’ve Ever Wanted From The Start"}],
-  [{"chord": "", "lyrics": "I Give You My Heart"}],
-
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Verse 2"}],
-
-  [{"chord": "", "lyrics": "You Have Covered Me With Mercy"}],
-  [{"chord": "", "lyrics": "I Can Come Just As I Am"}],
-  [{"chord": "", "lyrics": "So I Throw Myself Completely In Your Hands"}],
-
-  [{"chord": "", "lyrics": ""}],
-  [{"chord": "", "lyrics": "Bridge"}],
-
-  [{"chord": "", "lyrics": "Praise The One Who Loved Me First"}],
-  [{"chord": "", "lyrics": "And Gave Me Grace I Don't Deserve"}],
-  [{"chord": "", "lyrics": "Now Flowers Spring Up From The Barren Dirt"}],
-  [{"chord": "", "lyrics": "Hallelujah"}],
-  [{"chord": "", "lyrics": "Praise The One Who Heard My Cry"}],
-  [{"chord": "", "lyrics": "And Raised Me Up And Saved My Life"}],
-  [{"chord": "", "lyrics": "For All My Days With Everything Inside"}],
-  [{"chord": "", "lyrics": "Hallelujah (x2)"}]
+  {
+    "label": "Intro",
+    "chords": [],
+    "lyrics": { "en": "", "hi": "" },
+    "translation": { "en": "", "hi": "" }
+  },
+  {
+    "label": "",
+    "chords": [
+      { "chord": "A", "nashville": "1", "space": 1 }
+    ],
+    "lyrics": {
+      "en": "Let everything ",
+      "hi": ","
+    },
+    "translation": {
+      "en": "This is the meaning",
+      "hi": "यह अर्थ है"
+    }
+  }
 ]

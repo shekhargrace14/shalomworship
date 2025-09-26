@@ -18,7 +18,7 @@ type ChordTableProps = {
   songData?: Song | null; // Optional song prop for initial data
 }
 
-const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
+const ChordTableVersion2: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
   // console.log(id, "table id");
   // console.log(songData, "table songData");
   const [song, setSong] = useState<Song | null>(null);
@@ -103,4 +103,4 @@ const ChordTable: React.FC<ChordTableProps> = ({ id, isChord,songData }) => {
     </div>
   );
 };
-export default ChordTable;
+export default ChordTableVersion2;

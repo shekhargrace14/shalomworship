@@ -3,13 +3,14 @@ import { getKeyByShift, transposeChord } from '@/utils/transpose';
 import { ChevronRight, Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
-type ChordItem = { root: string; number: number; quality: string; space: number; };
+type ChordItem = { root: string; number: number | string; quality: string; space: number; };
 
 type chordLyric = {
   label: string;
   chords: ChordItem[];
   lyrics: { en: string; hi?: string };
   translation: { en: string; hi?: string };
+  break?: string;
 };
 
 type Song = { title?: string; key: string; lines: chordLyric[][] };
@@ -71,18 +72,22 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
       )}
 
       <h2 className="text-xl md:text-2xl font-semibold mb-4 text-foreground">
-        {song.title} {isChord ? "Chords" : "Lyrics"}
+        {song.title}{" "}
+        {isChord
+          ? "Chords"
+          : isNashville
+            ? "Number Chart"
+            : "Lyrics"}
       </h2>
-      <div className="space-y-6 font-mono">
+      <div className="space-y-6 font-mono grid grid-cols-1 lg:grid-cols-2 items-start">
         {song.lines.map((section, sectionIdx) => (
           <div key={sectionIdx} className="mb-6">
             {section.map((line, lineIdx) => (
               <div key={lineIdx} className="flex flex-col items-start">
+
                 {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
-
-
                 {isNashville && Array.isArray(line.chords) && line.chords.length > 0 && (
-                  <div className="whitespace-pre flex">
+                  <div className="whitespace-pre flex flex-wrap">
                     {line.chords.map((c, i) => (
                       // <span key={i} className=" flex">
                       //   <p className=" min-w-8 block text-foreground font-normal ">{c.nashville.main}</p>
@@ -111,7 +116,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 {/* Chords row */}
 
                 {isChord && Array.isArray(line.chords) && line.chords.length > 0 && (
-                  <div className="whitespace-pre flex">
+                  <div className="whitespace-pre flex flex-wrap">
                     {line.chords.map((c, i) => (
                       <span key={i} className="flex">
                         {addSpaces(c.space)}
@@ -130,7 +135,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
 
                     ))}
                   </div>
-                )}  
+                )}
                 {/* Lyrics row */}
                 <span>{line.lyrics.en}</span>
                 {/* <span>{line.lyrics.hi}</span> */}
@@ -139,6 +144,25 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 {isTranslation && line.translation?.en && (
                   <span className="text-sm text-muted-foreground">{line.translation.en}</span>
                 )}
+
+                {line.break && <span className="font-semibold mb-4"></span>}
+              </div>
+            ))}
+          </div>
+        ))}
+        {
+          
+        }
+        {song.lines.map((section, sectionIdx) => (
+          <div key={sectionIdx} className="">
+            {section.map((line, lineIdx) => (
+              <div key={lineIdx} className="flex flex-col items-start ">
+                <p>{line.lyrics.hi}</p>
+                {isTranslation && line.translation?.en && (
+                  <span className="text-sm text-muted-foreground">{line.translation.en}</span>
+                )}
+                {line.break && <span className="font-semibold mb-4"></span>}
+
               </div>
             ))}
           </div>

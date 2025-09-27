@@ -1,265 +1,249 @@
 {
-  "_id": "68d2c5175b940c4c8b89ba27",
-  "title": "praise test",
-  "key": "A",
+  "_id": "68c1d008f158be37678854f2",
+  "title": "Vandana v",
+  "key": "F",
   "isTranslation": false,
   "chords": true,
   "version": "version_3",
   "lines": [
     [
       {
-        "label": "Intro",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": null }],
-        "lyrics": { "en": "Let everything", "hi": "," }
+        "label": "Verse 1",
+        "chords": [
+          { "root": "F", "number": 1, "quality": "", "space": 10 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 33 },
+          { "root": "F", "number": 1, "quality": "", "space": 25 }
+        ],
+        "lyrics": {
+          "en": "A thousand generations falling down in worship",
+          "hi": ""
+        },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 6, "quality": "m", "space": 7 },
+          { "root": "C", "number": 5, "quality": "", "space": 25 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 20 }
+        ],
+        "lyrics": { "en": "To sing the song of ages to the Lamb", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "F", "number": 1, "quality": "", "space": 2 }],
+        "lyrics": { "en": "And all who've gone before us", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "Bb", "number": 4, "quality": "", "space": 10 }],
+        "lyrics": { "en": "And all who will believe", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 6, "quality": "m", "space": 10 },
+          { "root": "C", "number": 5, "quality": "", "space": 25 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "Will sing the song of ages to the Lamb", "hi": "" },
+        "translation": { "en": "", "hi": "" },
+        "break": true
+      },
+      {
+        "label": "Pre-Chorus 1",
+        "chords": [
+          { "root": "Bb", "number": 4, "quality": "", "space": 10 },
+          { "root": "D", "number": 6, "quality": "m", "space": 20 }
+        ],
+        "lyrics": { "en": "Your Name is the highest", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "C", "number": 5, "quality": "", "space": 10 }],
+        "lyrics": { "en": "Your Name is the greatest", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 6, "quality": "m", "space": 10 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 40 }
+        ],
+        "lyrics": { "en": "Your Name stands above them all", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "Bb", "number": 4, "quality": "", "space": 10 },
+          { "root": "D", "number": 6, "quality": "m", "space": 20 }
+        ],
+        "lyrics": { "en": "All thrones and dominions", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "C", "number": 5, "quality": "", "space": 10 }],
+        "lyrics": { "en": "All powers and positions", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 6, "quality": "m", "space": 10 },
+          { "root": "G", "number": 2, "quality": "m", "space": 40 }
+        ],
+        "lyrics": { "en": "Your Name stands above them all", "hi": "" },
+        "translation": { "en": "", "hi": "" },
+        "break": true
       },
 
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": { "en": "That has breath", "hi": "," }
-      },
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": { "en": "Praise the Lord", "hi": "," }
-      },
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": { "en": "Praise the Lord", "hi": "," }
-      },
-      {
-        "label": "Verse 1",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
-        "lyrics": { "en": "I'll praise in the valley", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "D", "number": 4, "quality": "", "space": 5 },
-          { "root": "A", "number": 1, "quality": "", "space": 15 }
-        ],
-        "lyrics": { "en": "Praise on the mountain", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "E", "number": 5, "quality": "", "space": 10 }],
-        "lyrics": { "en": "I'll praise when I'm sure", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "D", "number": 4, "quality": "", "space": 5 },
-          { "root": "A", "number": 1, "quality": "", "space": 20 }
-        ],
-        "lyrics": { "en": "Praise when I'm doubting", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
-        "lyrics": { "en": "I'll praise when outnumbered", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "D", "number": 4, "quality": "", "space": 5 },
-          { "root": "A", "number": 1, "quality": "", "space": 15 }
-        ],
-        "lyrics": { "en": "Praise when surrounded", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "E", "number": 5, "quality": "", "space": 15 },
-          { "root": "D", "number": 4, "quality": "", "space": 20 }
-        ],
-        "lyrics": { "en": "Cause praise is the waters", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 25 }],
-        "lyrics": { "en": "My enemies drown in", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "Pre-Chorus",
-        "chords": [{ "root": "E", "number": 5, "quality": "", "space": 5 }],
-        "lyrics": { "en": "As long as I'm breathing", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "D", "number": 4, "quality": "", "space": null }],
-        "lyrics": { "en": "I've got a reason to", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
       {
         "label": "Chorus",
         "chords": [
-          { "root": "F#", "number": 6, "quality": "m", "space": null },
-          { "root": "D", "number": 4, "quality": "", "space": 1 },
-          { "root": "A", "number": 1, "quality": "", "space": 5 },
-          { "root": "E", "number": 5, "quality": "", "space": 15 }
+          { "root": "Bb", "number": 4, "quality": "", "space": 35 },
+          { "root": "D", "number": 6, "quality": "m", "space": 1 },
+          { "root": "C", "number": 5, "quality": "", "space": 1 }
         ],
-        "lyrics": { "en": "Pra-ise the Lord oh my soul", "hi": "" },
+        "lyrics": { "en": "And the angels cry ho-o-ly", "hi": "" },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "F#", "number": 6, "quality": "m", "space": null },
-          { "root": "D", "number": 4, "quality": "", "space": 1 },
-          { "root": "A", "number": 1, "quality": "", "space": 5 },
-          { "root": "E", "number": 5, "quality": "", "space": 15 }
+          { "root": "F/A", "number": "1/3", "quality": "", "space": 25 },
+          { "root": "D", "number": 6, "quality": "m", "space": 5 }
         ],
-        "lyrics": { "en": "Pra-ise the Lord oh my soul", "hi": "" },
+        "lyrics": { "en": "All creation cries ho-ly", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "G", "number": 2, "quality": "m", "space": 35 }],
+        "lyrics": { "en": "You are lifted high ", "hi": "" },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "F#", "number": 6, "quality": "m", "space": null }
+          { "root": "C", "number": 5, "quality": "", "space": 8 },
+          { "root": "F", "number": 1, "quality": "", "space": 15 }
         ],
-        "lyrics": { "en": "I won’t be quiet", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "D", "number": 4, "quality": "", "space": 2 }],
-        "lyrics": { "en": "My God is alive", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "A", "number": 1, "quality": "", "space": null },
-          { "root": "E", "number": 5, "quality": "", "space": 15 }
-        ],
-        "lyrics": { "en": "How could I keep it inside", "hi": "" },
-        "translation": { "en": "", "hi": "" }
+        "lyrics": { "en": "Ho-ly, holy for-ever", "hi": "" },
+        "translation": { "en": "", "hi": "" },
+        "break": true
       },
       {
         "label": "Verse 2",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
-        "lyrics": { "en": "I'll praise when I feel it", "hi": "" },
+        "chords": [
+          { "root": "F", "number": 1, "quality": "", "space": null },
+          { "root": "Bb", "number": 4, "quality": "", "space": 45 },
+          { "root": "F", "number": 1, "quality": "", "space": 25 }
+        ],
+        "lyrics": {
+          "en": "If you've been forgiven and if you've been redeemed",
+          "hi": ""
+        },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "D", "number": 4, "quality": "", "space": 10 },
-          { "root": "A", "number": 1, "quality": "", "space": 15 }
+          { "root": "D", "number": 6, "quality": "m", "space": 5 },
+          { "root": "C", "number": 5, "quality": "", "space": 20 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 20 }
         ],
-        "lyrics": { "en": "I'll praise when I don't", "hi": "" },
+        "lyrics": { "en": "Sing the song forever to the Lamb", "hi": "" },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "E", "number": 5, "quality": "", "space": 10 },
-          { "root": "D", "number": 4, "quality": "", "space": 18 }
+          { "root": "F", "number": 1, "quality": "", "space": null },
+          { "root": "Bb", "number": 4, "quality": "", "space": 45 },
+          { "root": "F", "number": 1, "quality": "", "space": 25 }
         ],
-        "lyrics": { "en": "I'll praise 'cause I know", "hi": "" },
+        "lyrics": {
+          "en": "If you walk in freedom and if you bear His Name",
+          "hi": ""
+        },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 30 }],
-        "lyrics": { "en": "You're still in control", "hi": "" },
+        "chords": [
+          { "root": "D", "number": 6, "quality": "m", "space": 5 },
+          { "root": "C", "number": 5, "quality": "", "space": 25 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 10 }
+        ],
+        "lyrics": { "en": "Sing the song for-ever to the Lamb", "hi": "" },
         "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [
+          { "root": "D", "number": 6, "quality": "m", "space": 5 },
+          { "root": "C", "number": 5, "quality": "", "space": 25 },
+          { "root": "Bb", "number": 4, "quality": "", "space": 15 }
+        ],
+        "lyrics": { "en": "We'll sing the song forever and amen", "hi": "" },
+        "translation": { "en": "", "hi": "" },
+        "break": true
       },
 
       {
-        "label": "",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 15 }],
-        "lyrics": { "en": "Cause my praise is a weapon", "hi": "" },
+        "label": "Chorus 2",
+        "chords": [
+          { "root": "Bb", "number": 4, "quality": "", "space": 35 },
+          { "root": "D", "number": 6, "quality": "m", "space": 1 },
+          { "root": "C", "number": 5, "quality": "", "space": 1 }
+        ],
+        "lyrics": { "en": "Hear Your people sing ho-o-ly", "hi": "" },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "D", "number": 4, "quality": "", "space": 10 },
-          { "root": "A", "number": 1, "quality": "", "space": 15 }
+          { "root": "F/A", "number": "1/3", "quality": "", "space": 30 },
+          { "root": "D", "number": 6, "quality": "m", "space": 5 }
         ],
-        "lyrics": { "en": "It's more than a sound", "hi": "" },
+        "lyrics": { "en": "To the King of Kings ho-ly", "hi": "" },
+        "translation": { "en": "", "hi": "" }
+      },
+      {
+        "label": "",
+        "chords": [{ "root": "G", "number": 2, "quality": "m", "space": 35 }],
+        "lyrics": { "en": "You will always be ", "hi": "" },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "E", "number": 5, "quality": "", "space": 10 },
-          { "root": "D", "number": 4, "quality": "", "space": 18 }
+          { "root": "C", "number": 5, "quality": "", "space": 8 },
+          { "root": "F", "number": 1, "quality": "", "space": 15 }
         ],
-        "lyrics": { "en": "My praise is the shout", "hi": "" },
-        "translation": { "en": "", "hi": "" }
+        "lyrics": { "en": "Ho-ly, holy for-ever", "hi": "" },
+        "translation": { "en": "", "hi": "" },
+        "break": true
       },
       {
-        "label": "",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 40 }],
-        "lyrics": { "en": "That brings Jericho down", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "Bridge",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
-        "lyrics": { "en": "I'll praise cause You're sovereign", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "B", "number": 2, "quality": "m", "space": null }],
-        "lyrics": { "en": "Praise cause You reign", "hi": "" },
+        "label": "Tag",
+        "chords": [{ "root": "G", "number": 2, "quality": "m", "space": 35 }],
+        "lyrics": { "en": "You will always be ", "hi": "" },
         "translation": { "en": "", "hi": "" }
       },
       {
         "label": "",
         "chords": [
-          { "root": "C#", "number": 3, "quality": "m", "space": null }
+          { "root": "C", "number": 5, "quality": "", "space": 8 },
+          { "root": "F", "number": 1, "quality": "", "space": 15 }
         ],
-        "lyrics": { "en": "Praise cause You rose", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "D", "number": 4, "quality": "", "space": 12 }],
-        "lyrics": { "en": "And defeated the grave", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "A", "number": 1, "quality": "", "space": 10 }],
-        "lyrics": { "en": "I'll praise cause You're faithful", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-
-      {
-        "label": "",
-        "chords": [{ "root": "B", "number": 2, "quality": "m", "space": null }],
-        "lyrics": { "en": "Praise cause You're true", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "C#", "number": 3, "quality": "m", "space": null }
-        ],
-        "lyrics": { "en": "Praise cause there's nobody", "hi": "" },
-        "translation": { "en": "", "hi": "" }
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "D", "number": 4, "quality": "", "space": null }],
-        "lyrics": { "en": "Greater than You", "hi": "" },
+        "lyrics": { "en": "Ho-ly, holy for-ever", "hi": "" },
         "translation": { "en": "", "hi": "" }
       }
     ]

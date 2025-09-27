@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import ChordTable from './ChordTableVersion2';
-import ChordTableCopy from './ChordTableVersion3';
 import ChordTableVersion2 from './ChordTableVersion2';
 // import ChordTable from '../ChordTable'
 

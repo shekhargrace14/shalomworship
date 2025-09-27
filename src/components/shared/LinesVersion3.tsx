@@ -1,85 +1,95 @@
 "use client"
 import React, { useState } from 'react'
-import ChordTable from './ChordTableVersion2';
-import ChordTableCopy from './ChordTableVersion3';
 import ChordTableVersion3 from './ChordTableVersion3';
-// import ChordTable from '../ChordTable'
 
 type LinesProps = {
   id: string;
-  song: any; // Replace 'any' with the correct type if you have it
+  song: any;
   isChords: boolean;
   isTranslations: boolean;
 };
 
 const LinesVersion3 = ({ id, song, isChords, isTranslations }: LinesProps) => {
   const [activeTab, setActiveTab] = useState<"chords" | "nashville" | "lyrics" | "translation">("chords");
-    // console.log("song", song)
+
+  // Single toggle function for all tabs
+  const toggleTab = (tab: "chords" | "nashville" | "lyrics" | "translation") => {
+    setActiveTab(activeTab === tab ? "lyrics" : tab);
+  };
+
+  // Helper function to determine if a tab is active
+  const isTabActive = (tab: string) => activeTab === tab;
+
   return (
-<>
+    <>
       <div className="inline-flex gap-4 mb-4">
         {isChords && (
           <div className="inline-flex gap-4">
             {/* Lyrics */}
             <button
-              onClick={() => setActiveTab("lyrics")}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${activeTab === "lyrics"
+              onClick={() => toggleTab("lyrics")}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${
+                isTabActive("lyrics")
                   ? "bg-white text-black"
                   : "bg-background text-foreground hover:bg-white hover:text-black"
-                }`}
+              }`}
             >
-              Lyrics
+              Lyrics 
+              {/* {isTabActive("lyrics") ? "On" : "Off"} */}
             </button>
+            
             {/* Chords */}
             <button
-              onClick={() => setActiveTab("chords")}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${activeTab === "chords"
+              onClick={() => toggleTab("chords")}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${
+                isTabActive("chords")
                   ? "bg-white text-black"
                   : "bg-background text-foreground hover:bg-white hover:text-black"
-                }`}
+              }`}
             >
-              Chords
+              Chords 
+              {/* {isTabActive("chords") ? "On" : "Off"} */}
             </button>
 
             {/* Nashville */}
             <button
-              onClick={() => setActiveTab("nashville")}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${activeTab === "nashville"
+              onClick={() => toggleTab("nashville")}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${
+                isTabActive("nashville")
                   ? "bg-white text-black"
                   : "bg-background text-foreground hover:bg-white hover:text-black"
-                }`}
+              }`}
             >
-              Nashville
+              Nashville 
+              {/* {isTabActive("nashville") ? "On" : "Off"} */}
             </button>
-
-
           </div>
         )}
 
         {/* Translation */}
         {isTranslations && (
           <button
-            onClick={() => setActiveTab("translation")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${activeTab === "translation"
+            onClick={() => toggleTab("translation")}
+            className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border border-border cursor-pointer ${
+              isTabActive("translation")
                 ? "bg-white text-black"
                 : "bg-background text-foreground hover:bg-white hover:text-black"
-              }`}
+            }`}
           >
-            Translation
+            Translation 
+            {/* {isTabActive("translation") ? "On" : "Off"} */}
           </button>
         )}
       </div>
 
       {/* Pass flags to ChordTable */}
-     
-        <ChordTableVersion3
-          id={id}
-          songData={song}
-          isChord={activeTab === "chords" && isChords}
-          isNashville={activeTab === "nashville" && isChords}
-          isTranslation={activeTab === "translation" && isTranslations}
-        />
-      
+      <ChordTableVersion3
+        id={id}
+        songData={song}
+        isChord={isTabActive("chords") && isChords}
+        isNashville={isTabActive("nashville") && isChords}
+        isTranslation={isTabActive("translation") && isTranslations}
+      />
     </>
   )
 }

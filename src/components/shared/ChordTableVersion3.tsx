@@ -157,6 +157,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
           <div key={sectionIdx} className="">
             {section.map((line, lineIdx) => (
               <div key={lineIdx} className="flex flex-col items-start ">
+                {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
                 <p>{line.lyrics.hi}</p>
                 {isTranslation && line.translation?.en && (
                   <span className="text-sm text-muted-foreground">{line.translation.en}</span>

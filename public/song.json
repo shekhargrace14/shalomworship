@@ -1,194 +1,205 @@
 {
   "_id": "67861a904a380bbf080a364f",
   "title": "Vandana v",
-  "key": "F",
-  "isTranslation": true,
-  "chords": false,
+  "key": "E",
+  "isTranslation": false,
+  "chords": true,
   "version": "version_3",
   "language": "ta",
   "lines": [
 [
   {
-    "lyrics": {
-      "ta": "உம் கரங்களின் உள்ளாய் என்னை சுமந்திடும் அன்பால்",
-      "en": "Um Karangalin Ullaai Ennai Sumanthidum Anbaal"
+    "label": "VERSE",
+    "chords": [
+      { "root": "E", "number": 1, "quality": "", "space": null },
+      { "root": "A/E", "number": "4/1", "quality": "", "space": 20 }
+    ],
+    "lyrics": { 
+      "en": "You Know Me Lord", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Within Your hands, You carry me with love"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "ஒரு குறை இல்லையே, ஒரு குறை இல்லையே, என் வாழ்விலே",
-      "en": "Oru Kurai Illaye, Oru Kurai Illaye, En Vaalvile"
+    "chords": [
+      { "root": "B/E", "number": "5/1", "quality": "", "space": null },
+            { "root": "E", "number": 1, "quality": "", "space": 23 }
+    ],
+    "lyrics": { 
+      "en": "All Of My Life Is Yours", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "No lack at all, no lack at all, in my life"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "என் இன்பத்திலும் துன்பத்திலும் நம்பிக்கை ஒன்றே",
-      "en": "En Inbathilum Thunbathilum Nambikai Ondre"
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
+    "lyrics": { 
+      "en": "I Lay My Love At Your Feet", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "In my joy and in my sorrow, my trust remains the same"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "உன்னதரின் மறைவிலே வந்தடைவேனே",
-      "en": "Unnatharin Maraivile Vanthadaivene"
+    "chords": [{ "root": "E/G#", "number": "1/3", "quality": "", "space": 10   }],
+    "lyrics": { 
+      "en": "My Friend And My King", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "I find refuge in the shadow of the Most High"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "அங்கே சுகம் உண்டு, பலன் உண்டு, ஜீவன் உள்ளதே",
-      "en": "Ange Sugam Undu, Belan Undu, Jeevan Ullathe"
+    "chords": [
+      { "root": "F#", "number": "2", "quality": "m", "space": 10 },
+      { "root": "B", "number": "5", "quality": "", "space": 25 }
+    ],
+
+    "lyrics": { 
+      "en": "Your Voice, It Stills My Heart", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "There, I find peace, strength, and life everlasting"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "கன்மலயம் கிறிஸ்து என்றால் – அற்புதமே",
-      "en": "Kanmalayam Christhu Endral – Arputhamee"
+    "label": "PRE-CHORUS",
+ "chords": [
+      { "root": "A/C#", "number": "3/6", "quality": "", "space": 23 },
+      { "root": "B/D#", "number": "5/7", "quality": "", "space": 10 },
+      { "root": "E", "number": 1, "quality": "", "space": 15 }
+    ],
+    "lyrics": { 
+      "en": "You’re The One, Who Holds My Hand", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "If Christ is my rock, it is a marvelous thing!"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "தேவனால் கூடாத அதிசயமான காரியம் ஒன்றுண்டோ?",
-      "en": "Thevanal Koodatha Athisayamana Kaariyam Ondrundo?"
+    "chords": [
+            { "root": "G#", "number": "3", "quality": "sus", "space": 23 },
+      { "root": "G#/B#", "number": "3/5", "quality": "", "space": 10 },
+      { "root": "C#", "number": 6, "quality": "m", "space": 10 }
+    ],
+    "lyrics": { 
+      "en": "You’re The One, Who Walks Beside Me", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Is there anything too marvellous that my God cannot do?"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "அலைகளும் சேராக அலுகையின் காலம் கலைந்திடும் மேகம் போல்",
-      "en": "Alaigalum Seeraaga Alugayin Kaalam Kalainthidum Megam Pol"
+    "chords": [
+            { "root": "F#", "number": 2, "quality": "m", "space": 23 },
+      { "root": "B", "number": 5, "quality": "sus", "space": 10 },
+      { "root": "B", "number": 5, "quality": "", "space": 10 }
+    ],
+    "lyrics": { 
+      "en": "You Gave It All, To Draw Me Close", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Like waves that soothe every storm, this season of sorrow will pass like drifting clouds."
-    }
+    "translation": { "en": "", "hi": "" },
+    "break": "break"
   },
   {
-    "lyrics": {
-      "ta": "மலைகளை போலாக தடைகள் வந்து எதிரே நின்றாலும்",
-      "en": "Malaigalai Polaaga Thadaigal Vanthu Ethire Nindralum"
+    "label": "CHORUS",
+    "chords": [
+      { "root": "E", "number": 1, "quality": "", "space": 10 },
+      { "root": "B/D#", "number": "5/7", "quality": "", "space": 5 }
+    ],
+    "lyrics": { 
+      "en": "Here I Am, Standing In Your Sanctuary", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Even if obstacles stand against me like mighty mountains"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "அதைவிட மேலாக ஆண்டவர் ஏசு என் அருகிலே நின்றால்",
-      "en": "Athaivida Melaga Aandavar Easu En Arugile Nindraal"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "With Outstretched Hands, Drinking In Your Glory", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Greater than them all, the Lord Jesus stands by my side"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "என் கவலைகள் எல்லாம்",
-      "en": "En Kavalaigal Ellam"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Where Your Love Overwhelms And Joy Overflows", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "All my worries"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "ஒரு சுமை இல்லையே, ஒரு சுமை இல்லையே, என் வாழ்விலே",
-      "en": "Oru Sumai Illaye, Oru Sumai Illaye, En Vaalvile"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Here’s All Of Me, Take All Of Me", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Are no burden at all, no burden at all, in my life"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "உம் கரங்களின் உள்ளாய்",
-      "en": "Um Karangalin Ullaai"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Here I Am, Dwelling In Our Secret Place", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Within Your hands"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "என்னை சுமந்திடும் அன்பால்",
-      "en": "Ennai Sumanthidum Anbaal"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "All My Days, I Long To See Your Face", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "You carry me with love"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "ஒரு குறை இல்லையே, ஒரு குறை இல்லையே, என் வாழ்விலே",
-      "en": "Oru Kurai Illaye, Oru Kurai Illaye, En Vaalvile"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "As The World Fades Away, Our Hearts In Embrace", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "No lack at all, no lack at all, in my life"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "உம்மை விடா வேறே நன்மை எதும் இல்லையே",
-      "en": "Ummai Vida Vere Nanmai Ethum Illaye"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "It’s You, All I Want Is You, Oh To Be With You", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "There is no greater blessing than You"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "பெரும் புகழ் கானம் எல்லாம் சேரும் உம்மையே",
-      "en": "Perum Pugal Gaanam Ellam Serum Ummaye"
+    "label": "BRIDGE",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Lord I Give You My Heart", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "All glory and honor belong to You alone"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "யார் போனாலும் ஒரு வார்த்தையே தேற்றும் கானம்",
-      "en": "Yaar Ponaalum Oru Vaarthaye Thetrum Gaanam"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Where Can I Go, From Your Presence", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "No matter who may leave, one word from You is enough to comfort me"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "என்னை காத்திடும் நேற்றும் நாளையும்",
-      "en": "Ennai Kaathidum Netrum Naalayum"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Lord I Surrender My All", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "You protect me yesterday, today, and forever"
-    }
+    "translation": { "en": "", "hi": "" }
   },
   {
-    "lyrics": {
-      "ta": "தலைமுறையும் போற்றும் நாதன் ஏசு ராஜனே",
-      "en": "Thalaimuraiyum Potrum Naathan Easu Rajanee"
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { 
+      "en": "Just To Be Here, To Be With You (To Be With You)", 
+      "hi": "" 
     },
-    "translation": {
-      "en": "Generations will praise You, Lord Jesus, my King"
-    }
+    "translation": { "en": "", "hi": "" }
   }
 ]
+
 
 
   ]

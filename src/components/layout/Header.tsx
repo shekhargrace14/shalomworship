@@ -8,6 +8,7 @@ import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Image from "next/image";
 import { ModeToggle } from "../ModeToggle";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -28,7 +29,12 @@ const Header = () => {
       </div>
       {/* <Link href="/songDB"><div className="">  SongDB</div></Link> */}
       {/* <div className="hidden lg:block md:w-4/12 "> */}
-      <div className="md:w-4/12 flex justify-end">
+      <div className="md:w-4/12 flex justify-end gap-4">
+      <Button variant="outline" asChild>
+        <Link href="/request">
+        Request Song
+        </Link>
+        </Button>
         <ModeToggle />
 
       </div>

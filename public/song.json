@@ -5,165 +5,188 @@
   "isTranslation": true,
   "chords": false,
   "version": "version_3",
+  "language": "ta",
   "lines": [
-    [
+[
   {
-    "label": "Verse 1",
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "Tune Kiya Khaali Apne Aap Ko",
-      "hi": "तूने किया खाली अपने आप को"
+      "ta": "உம் கரங்களின் உள்ளாய் என்னை சுமந்திடும் அன்பால்",
+      "en": "Um Karangalin Ullaai Ennai Sumanthidum Anbaal"
     },
-    "translation": { "en": "You Emptied Yourself" }
+    "translation": {
+      "en": "Within Your hands, You carry me with love"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Chodi Sari Mahima", "hi": "छोड़ी सारी महिमा" },
-    "translation": { "en": "Left All Glory Behind" }
+    "lyrics": {
+      "ta": "ஒரு குறை இல்லையே, ஒரு குறை இல்லையே, என் வாழ்விலே",
+      "en": "Oru Kurai Illaye, Oru Kurai Illaye, En Vaalvile"
+    },
+    "translation": {
+      "en": "No lack at all, no lack at all, in my life"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Hokar Khuda Kiya Shunya Apne Aap Ko", "hi": "होकर खुदा किया शून्य अपने आप को" },
-    "translation": { "en": "Becoming God, You Made Yourself Nothing" }
+    "lyrics": {
+      "ta": "என் இன்பத்திலும் துன்பத்திலும் நம்பிக்கை ஒன்றே",
+      "en": "En Inbathilum Thunbathilum Nambikai Ondre"
+    },
+    "translation": {
+      "en": "In my joy and in my sorrow, my trust remains the same"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Bana Manushaya Saaman", "hi": "बना मनुष्य सामान" },
-    "translation": { "en": "Became Like A Human Being" }
+    "lyrics": {
+      "ta": "உன்னதரின் மறைவிலே வந்தடைவேனே",
+      "en": "Unnatharin Maraivile Vanthadaivene"
+    },
+    "translation": {
+      "en": "I find refuge in the shadow of the Most High"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ban Gaya Daas Saaman", "hi": "बन गया दास सामान" },
-    "translation": { "en": "Became A Servant" }
+    "lyrics": {
+      "ta": "அங்கே சுகம் உண்டு, பலன் உண்டு, ஜீவன் உள்ளதே",
+      "en": "Ange Sugam Undu, Belan Undu, Jeevan Ullathe"
+    },
+    "translation": {
+      "en": "There, I find peace, strength, and life everlasting"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Mrityu Sahi, Haan Mrityu Krus Ki", "hi": "मृत्यु सही, हाँ मृत्यु क्रूस की" },
-    "translation": { "en": "Death Yes, Yes The Death Of The Cross" }
+    "lyrics": {
+      "ta": "கன்மலயம் கிறிஸ்து என்றால் – அற்புதமே",
+      "en": "Kanmalayam Christhu Endral – Arputhamee"
+    },
+    "translation": {
+      "en": "If Christ is my rock, it is a marvelous thing!"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Aur Hua Sabse Mahaan", "hi": "और हुआ सबसे महान" },
-    "translation": { "en": "And Became The Greatest" },
-    "break": "break"
-  },
-
-  {
-    "label": "Chorus",
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tu Raaj Kare, Tu Raaj Kare", "hi": "तू राज करे, तू राज करे" },
-    "translation": { "en": "You Shall Reign, You Shall Reign" }
+    "lyrics": {
+      "ta": "தேவனால் கூடாத அதிசயமான காரியம் ஒன்றுண்டோ?",
+      "en": "Thevanal Koodatha Athisayamana Kaariyam Ondrundo?"
+    },
+    "translation": {
+      "en": "Is there anything too marvellous that my God cannot do?"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tu Raaj Kare, Saari Duniya Pe", "hi": "तू राज करे, सारी दुनिया पे" },
-    "translation": { "en": "You Shall Reign Over The Whole World" }
+    "lyrics": {
+      "ta": "அலைகளும் சேராக அலுகையின் காலம் கலைந்திடும் மேகம் போல்",
+      "en": "Alaigalum Seeraaga Alugayin Kaalam Kalainthidum Megam Pol"
+    },
+    "translation": {
+      "en": "Like waves that soothe every storm, this season of sorrow will pass like drifting clouds."
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ghutne Tike, Sare Ghutne Tike,", "hi": "घुटने टिके, सारे घुटने टिके," },
-    "translation": { "en": "Kneel Down, All Kneel Down," }
+    "lyrics": {
+      "ta": "மலைகளை போலாக தடைகள் வந்து எதிரே நின்றாலும்",
+      "en": "Malaigalai Polaaga Thadaigal Vanthu Ethire Nindralum"
+    },
+    "translation": {
+      "en": "Even if obstacles stand against me like mighty mountains"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ghutne Tike, Yeshu Naam Ke Liye", "hi": "घुटने टिके, येशु नाम के लिए" },
-    "translation": { "en": "Kneel Down, For The Name Of Jesus" },
-    "break": "break"
-  },
-
-  {
-    "label": "Verse 2",
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Aasmaanoin Mein Hai Sthir Tera Singhaasan", "hi": "आसमानों में है स्थिर तेरा सिंहासन" },
-    "translation": { "en": "In The Heavens, Your Throne Is Firm" }
+    "lyrics": {
+      "ta": "அதைவிட மேலாக ஆண்டவர் ஏசு என் அருகிலே நின்றால்",
+      "en": "Athaivida Melaga Aandavar Easu En Arugile Nindraal"
+    },
+    "translation": {
+      "en": "Greater than them all, the Lord Jesus stands by my side"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Parakrami Khuda", "hi": "पराक्रमी खुदा" },
-    "translation": { "en": "Mighty God" }
+    "lyrics": {
+      "ta": "என் கவலைகள் எல்லாம்",
+      "en": "En Kavalaigal Ellam"
+    },
+    "translation": {
+      "en": "All my worries"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Mahima Se, Ab Faile Tera Shaasan", "hi": "महिमा से, अब फैले तेरा शासन" },
-    "translation": { "en": "Now Your Rule Spreads Through Glory" }
+    "lyrics": {
+      "ta": "ஒரு சுமை இல்லையே, ஒரு சுமை இல்லையே, என் வாழ்விலே",
+      "en": "Oru Sumai Illaye, Oru Sumai Illaye, En Vaalvile"
+    },
+    "translation": {
+      "en": "Are no burden at all, no burden at all, in my life"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Kadmoin Pe Saara Jahaan", "hi": "कदमों पे सारा जहान" },
-    "translation": { "en": "The Whole World At Your Feet" }
+    "lyrics": {
+      "ta": "உம் கரங்களின் உள்ளாய்",
+      "en": "Um Karangalin Ullaai"
+    },
+    "translation": {
+      "en": "Within Your hands"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Sajde Mein Har Insaan", "hi": "सजदे में हर इंसान" },
-    "translation": { "en": "Every Person In Worship" }
+    "lyrics": {
+      "ta": "என்னை சுமந்திடும் அன்பால்",
+      "en": "Ennai Sumanthidum Anbaal"
+    },
+    "translation": {
+      "en": "You carry me with love"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Vadh Jo Hua, Nirdosh Memna", "hi": "वध जो हुआ, निर्दोष मेमन" },
-    "translation": { "en": "What Happened To The Innocent Lamb" }
+    "lyrics": {
+      "ta": "ஒரு குறை இல்லையே, ஒரு குறை இல்லையே, என் வாழ்விலே",
+      "en": "Oru Kurai Illaye, Oru Kurai Illaye, En Vaalvile"
+    },
+    "translation": {
+      "en": "No lack at all, no lack at all, in my life"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tera Hai Saaradikhar", "hi": "तेरा है सारादिखर" },
-    "translation": { "en": "It Is Your Fullness" }
-  },
-
-  {
-    "label": "Chorus",
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tu Raaj Kare, Tu Raaj Kare", "hi": "तू राज करे, तू राज करे" },
-    "translation": { "en": "You Shall Reign, You Shall Reign" }
+    "lyrics": {
+      "ta": "உம்மை விடா வேறே நன்மை எதும் இல்லையே",
+      "en": "Ummai Vida Vere Nanmai Ethum Illaye"
+    },
+    "translation": {
+      "en": "There is no greater blessing than You"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tu Raaj Kare, Saari Duniya Pe", "hi": "तू राज करे, सारी दुनिया पे" },
-    "translation": { "en": "You Shall Reign Over The Whole World" }
+    "lyrics": {
+      "ta": "பெரும் புகழ் கானம் எல்லாம் சேரும் உம்மையே",
+      "en": "Perum Pugal Gaanam Ellam Serum Ummaye"
+    },
+    "translation": {
+      "en": "All glory and honor belong to You alone"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ghutne Tike, Sare Ghutne Tike,", "hi": "घुटने टिके, सारे घुटने टिके," },
-    "translation": { "en": "Kneel Down, All Kneel Down," }
+    "lyrics": {
+      "ta": "யார் போனாலும் ஒரு வார்த்தையே தேற்றும் கானம்",
+      "en": "Yaar Ponaalum Oru Vaarthaye Thetrum Gaanam"
+    },
+    "translation": {
+      "en": "No matter who may leave, one word from You is enough to comfort me"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ghutne Tike, Yeshu Naam Ke Liye", "hi": "घुटने टिके, येशु नाम के लिए" },
-    "translation": { "en": "Kneel Down, For The Name Of Jesus" },
-    "break": "break"
-  },
-
-  {
-    "label": "Bridge",
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Kal Aaj Aur Sarvada", "hi": "कल आज और सर्वदा" },
-    "translation": { "en": "Yesterday, Today And Forever" }
+    "lyrics": {
+      "ta": "என்னை காத்திடும் நேற்றும் நாளையும்",
+      "en": "Ennai Kaathidum Netrum Naalayum"
+    },
+    "translation": {
+      "en": "You protect me yesterday, today, and forever"
+    }
   },
   {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Yeshu Tu Hi Hai Khuda", "hi": "येशु तू ही है खुदा" },
-    "translation": { "en": "Jesus, You Alone Are God" },
-    "break": "break"
-  },
-
-  {
-    "label": "Chorus",
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tu Raaj Kare, Tu Raaj Kare", "hi": "तू राज करे, तू राज करे" },
-    "translation": { "en": "You Shall Reign, You Shall Reign" }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Tu Raaj Kare, Saari Duniya Pe", "hi": "तू राज करे, सारी दुनिया पे" },
-    "translation": { "en": "You Shall Reign Over The Whole World" }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ghutne Tike, Sare Ghutne Tike,", "hi": "घुटने टिके, सारे घुटने टिके," },
-    "translation": { "en": "Kneel Down, All Kneel Down," }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": { "en": "Ghutne Tike, Yeshu Naam Ke Liye", "hi": "घुटने टिके, येशु नाम के लिए" },
-    "translation": { "en": "Kneel Down, For The Name Of Jesus" }
+    "lyrics": {
+      "ta": "தலைமுறையும் போற்றும் நாதன் ஏசு ராஜனே",
+      "en": "Thalaimuraiyum Potrum Naathan Easu Rajanee"
+    },
+    "translation": {
+      "en": "Generations will praise You, Lord Jesus, my King"
+    }
   }
 ]
 

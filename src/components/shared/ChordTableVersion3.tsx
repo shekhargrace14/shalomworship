@@ -13,7 +13,7 @@ type chordLyric = {
   break?: string;
 };
 
-type Song = { title?: string; key: string; lines: chordLyric[][] };
+type Song = { title?: string; language?: string; key: string; lines: chordLyric[][] };
 
 type ChordTableProps = {
   id: string;
@@ -39,6 +39,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
       if (singleSong) {
         const formattedSong: Song = {
           title: singleSong.title,
+          language: singleSong.language,
           key: singleSong.key || 'C',
           lines: singleSong.lines || []
         };
@@ -56,6 +57,8 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
 
   // helper to create spaces
   const addSpaces = (count: number) => '\u00A0'.repeat(count);
+
+  const language = song.language
 
   return (
     <div>
@@ -158,7 +161,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
             {section.map((line, lineIdx) => (
               <div key={lineIdx} className="flex flex-col items-start ">
                 {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
-                <p>{line.lyrics.hi}</p>
+                <p>{line.lyrics[language as keyof typeof line.lyrics]}</p>
                 {isTranslation && line.translation?.en && (
                   <span className="text-sm text-muted-foreground">{line.translation.en}</span>
                 )}

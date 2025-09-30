@@ -22,7 +22,7 @@ const LinesVersion3 = ({ id, song, isChords, isTranslations }: LinesProps) => {
 
   return (
     <>
-      <div className="inline-flex gap-4 mb-4">
+      <div className="w-full inline-flex gap-4 mb-4 overflow-x-auto ">
         {isChords && (
           <div className="inline-flex gap-4">
             {/* Lyrics */}

@@ -14,6 +14,7 @@ model song {
   lines           Json?
   isChords        Boolean? @default(false)
   isTranslation   Boolean? @default(false)
+  language        LanguageType? @default(en)
   version         VersionType? @default(version_1)
   key             String?
   bpm             Int?
@@ -22,15 +23,17 @@ model song {
   videoId         String?
   audio           String?
   color           String?
-  view            Int
-  like            Int
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
   // SEO
   slug            String
   keyword         String[]
   metaDescription String
   excerpt         String?
+
+  view            Int
+  like            Int
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
 
   author   author? @relation(fields: [authorId], references: [id])
   authorId String? @db.ObjectId
@@ -83,7 +86,17 @@ enum VersionType {
   version_2
   version_3
 }
-
+enum LanguageType {
+  en
+  hi
+  ne
+  pa
+  ta
+  te
+  ur
+  ml
+  kn
+}
 model genre {
   id        String      @id @default(auto()) @map("_id") @db.ObjectId
   title     String

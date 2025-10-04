@@ -17,7 +17,9 @@ model song {
   language        LanguageType? @default(en)
   version         VersionType? @default(version_1)
   key             String?
-  bpm             Int?
+  bpm             String?
+  time            String?
+  tempo           TempoType?
   image           String?
   video           String?
   videoId         String?
@@ -96,6 +98,15 @@ enum LanguageType {
   ur
   ml
   kn
+}
+
+enum TempoType {
+  largo       // very slow
+  adagio      // slow
+  andante     // walking pace
+  moderato    // medium
+  allegro     // fast
+  presto      // very fast
 }
 model genre {
   id        String      @id @default(auto()) @map("_id") @db.ObjectId

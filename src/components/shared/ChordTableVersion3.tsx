@@ -153,10 +153,10 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
             ))}
           </div>
         ))}
-        {
-          
-        }
-        {song.lines.map((section, sectionIdx) => (
+    {/* second section */}
+    {
+      song.language !== "en" ? 
+      (song.lines.map((section, sectionIdx) => (
           <div key={sectionIdx} className="">
             {section.map((line, lineIdx) => (
               <div key={lineIdx} className="flex flex-col items-start ">
@@ -170,7 +170,12 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
               </div>
             ))}
           </div>
-        ))}
+        )))
+       : 
+       
+      ""
+    }
+        
       </div>
     </div>
   );

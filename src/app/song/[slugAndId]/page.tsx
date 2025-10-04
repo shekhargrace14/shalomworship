@@ -57,14 +57,60 @@ export async function generateMetadata({ params }: any) {
   // const formatedCreatorNames = formatArtists(creatorNames);
 
   const title =
-    (song?.title || "Unknown Title") +
-    (song?.isChords ? " Chords & Lyrics" : " Lyrics") +
+    (song?.title || "Song Title") +
+    (song?.isChords ? " Lyrics, Chords & Nashville numbers" : " Lyrics") +
     (mainArtists.length > 0 ? " - " + artistNames : "") +
     (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
 
-
   const keyword = await song?.keyword;
-  const metaDescription = await song?.metaDescription;
+  // const metaDescription = await song?.metaDescription;
+
+   const metaDescription = (() => {
+  let desc = `${song?.title || "Unknown Song"}`;
+
+  // Language mention
+  if (song?.language && song.language !== "en") {
+    const langMap: Record<string, string> = {
+      hi: "Hindi",
+      ne: "Nepali",
+      pa: "Punjabi",
+      ta: "Tamil",
+      te: "Telugu",
+      ur: "Urdu",
+      ml: "Malayalam",
+      kn: "Kannada",
+    };
+    desc += ` ${langMap[song.language] || ""}`;
+  }
+
+  desc += " lyrics";
+
+  // Chords
+  if (song?.isChords) desc += " with chords, Nashville numbers";
+
+  // Translation
+  if (song?.isTranslation) desc += " and translation";
+
+  // Nashville number (if in JSON lines)
+  // if (song?.lines?.some((line: any) =>
+  //     line.chords?.some((c: any) => c.number))) {
+  //   desc += ", Nashville numbers";
+  // }
+
+  // Category
+  // if (song?.category?.length) {
+  //   const catNames = song.category.map((c: any) => c.name).join(", ");
+  //   desc += `. Category: ${catNames}`;
+  // }
+  if (song?.metaDescription) desc += " | "+song?.metaDescription;;
+
+  desc += " | Shalom Worship";
+
+  return desc;
+})();
+
+
+
   const slug = slugify(`${song?.title}`, { lower: true }) + '-' + song?.id.toString();
 
   const image = await song?.image;

@@ -2,355 +2,173 @@
   "_id": "67861a904a380bbf080a364f",
   "title": "Vandana v",
   "key": "E",
-  "isTranslation": false,
-  "chords": true,
+  "isTranslation": true,
+  "chords": false,
   "version": "version_3",
   "language": "ta",
   "lines": [
 [
   {
-    "label": "VERSE",
-    "chords": [
-      { "root": "E", "number": 1, "quality": "", "space": null },
-      { "root": "A/E", "number": "4/1", "quality": "", "space": 20 }
-    ],
-    "lyrics": { 
-      "en": "You Know Me Lord", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "label": "Verse 1",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Hum Milkar Aaye", "hi": "हम मिलकर आये" },
+    "translation": { "en": "We Have Come Together" }
   },
   {
-    "chords": [
-      { "root": "B/E", "number": "5/1", "quality": "", "space": null },
-            { "root": "E", "number": 1, "quality": "", "space": 23 }
-    ],
-    "lyrics": { 
-      "en": "All Of My Life Is Yours", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Huzuri Ke Chahne Vaale", "hi": "हुज़ूरी के चाहने वाले" },
+    "translation": { "en": "Lovers Of Your Presence" }
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
-    "lyrics": { 
-      "en": "I Lay My Love At Your Feet", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Teri Rooh Ke Chalaye", "hi": "तेरी रूह के चलाये" },
+    "translation": { "en": "Led By Your Spirit" }
   },
   {
-    "chords": [{ "root": "E/G#", "number": "1/3", "quality": "", "space": 10   }],
-    "lyrics": { 
-      "en": "My Friend And My King", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Jaayein Duniya Mein", "hi": "जायें दुनिया में" },
+    "translation": { "en": "We Go Into The World" },
+"break"    :"break"
   },
   {
-    "chords": [
-      { "root": "F#", "number": "2", "quality": "m", "space": 10 },
-      { "root": "B", "number": "5", "quality": "", "space": 25 }
-    ],
-
-    "lyrics": { 
-      "en": "Your Voice, It Stills My Heart", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Tarana Ye Lekar", "hi": "तराना ये लेकर" },
+    "translation": { "en": "Carrying This Song" }
   },
   {
-    "label": "PRE-CHORUS",
- "chords": [
-      { "root": "A/C#", "number": "4/6", "quality": "", "space": 23 },
-      { "root": "B/D#", "number": "5/7", "quality": "", "space": 10 },
-      { "root": "E", "number": 1, "quality": "", "space": 15 }
-    ],
-    "lyrics": { 
-      "en": "You’re The One, Who Holds My Hand", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Rajyo Ko Hum Sunaye", "hi": "राज्यों को हम सुनाये" },
+    "translation": { "en": "We Will Proclaim To Nations" }
   },
   {
-    "chords": [
-            { "root": "G#", "number": "3", "quality": "sus", "space": 23 },
-      { "root": "G#/B#", "number": "3/5", "quality": "", "space": 10 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 10 }
-    ],
-    "lyrics": { 
-      "en": "You’re The One, Who Walks Beside Me", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Koi Sandhey Nahi Hai", "hi": "कोई संदेह नहीं है" },
+    "translation": { "en": "There Is No Doubt" }
   },
   {
-    "chords": [
-            { "root": "F#", "number": 2, "quality": "m", "space": 23 },
-      { "root": "B", "number": 5, "quality": "sus", "space": 10 },
-      { "root": "B", "number": 5, "quality": "", "space": 10 }
-    ],
-    "lyrics": { 
-      "en": "You Gave It All, To Draw Me Close", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" },
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Kalisiya Kahe", "hi": "कलीसिया कहे" },
+    "translation": { "en": "The Church Declares" },
     "break": "break"
   },
+  {
+    "label": "Chorus",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Hai Yakeen", "hi": "है यकीन" },
+    "translation": { "en": "There Is Faith" }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Ye Hogi", "hi": "ये होगी" },
+    "translation": { "en": "There Will Be" }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Bedaari Se Bhari Peedhi", "hi": "बेदारी से भरी पीढ़ी" },
+    "translation": { "en": "A Generation Full Of Awakening" },
+    "break": "break"
 
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Jab Maange", "hi": "जब माँगे" },
+    "translation": { "en": "When They Ask" }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Jab Dhunde", "hi": "जब ढूंढे" },
+    "translation": { "en": "When They Seek" }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Baarish Karta Hai Uddhar Ki", "hi": "बारिश करता है उद्धार की" },
+    "translation": { "en": "He Pours The Rain Of Salvation" },
+    "break": "break"
 
-
-  {
-    "label": "CHORUS",
-    "chords": [
-      { "root": "E", "number": 1, "quality": "", "space": 15 },
-      { "root": "B/D#", "number": "5/7", "quality": "", "space": 35 }
-    ],
-    "lyrics": { 
-      "en": "Here I Am, Standing In Your Sanctuary", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
   },
   {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m", "space": 40 }],
-    "lyrics": { 
-      "en": "With Outstretched Hands,", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Jis Sansaar Se Tujhe Pyaar", "hi": "जिस संसार से तुझे प्यार" },
+    "translation": { "en": "The World That Loves You" }
   },
   {
-    "chords": [{ "root": "G#", "number": 3, "quality": "m", "space": 35 }],
-    "lyrics": { 
-      "en": "Drinking In Your Glory", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Stuti Kare", "hi": "स्तुति करे" },
+    "translation": { "en": "Will Worship" }
   },
   {
-    "chords": [
-      { "root": "A", "number": 4, "quality": "", "space": 25 },
-      { "root": "B/A", "number": "5/4", "quality": "", "space": 20 }
-  ],
-    "lyrics": { 
-      "en": "Where Your Love Overwhelms", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Har Jaati Aur Har Zubaan", "hi": "हर जाति और हर ज़ुबान" },
+    "translation": { "en": "Every Tribe And Every Tongue" }
   },
   {
-    "chords": [
-      { "root": "G#", "number": 3, "quality": "m", "space": 15 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 15 }
-    ],
-    "lyrics": { 
-      "en": "And Joy Overflows", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
-  },
-  {
-    "chords": [
-      { "root": "F#", "number": 2, "quality": "m", "space": 15 },
-      { "root": "B", "number": 5, "quality": "sus", "space": 20 },
-      { "root": "B", "number": 5, "quality": "", "space": 15 }
-    ],
-    "lyrics": { 
-      "en": "Here’s All Of Me, Take All Of Me", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" },
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Sajda Kare", "hi": "सजदा करे" },
+    "translation": { "en": "Will Bow Down" },
     "break": "break"
   },
-
-
-
-
-
-
   {
-        "chords": [
-      { "root": "E", "number": 1, "quality": "", "space": 15 },
-      { "root": "B/D#", "number": "5/7", "quality": "", "space": 35 }
-    ],
-    "lyrics": { 
-      "en": "Here I Am, Dwelling In Our Secret Place", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "label": "Verse 2",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Hum Milkar Aaye", "hi": "हम मिलकर आये" },
+    "translation": { "en": "We Have Come Together" }
   },
   {
-    "chords": [
-      { "root": "C#", "number": 6, "quality": "m", "space": 15 }
-  ],
-    "lyrics": { 
-      "en": "All My Days,", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Namra Dil Tere Saamne", "hi": "नम्र दिल तेरे सामने" },
+    "translation": { "en": "With A Humble Heart Before You" }
   },
   {
-    "chords": [
-      { "root": "G#", "number": 3, "quality": "m", "space": 30 },
-      { "root": "E/G#", "number": "1/3", "quality": "", "space": 10 }
-  ],
-    "lyrics": { 
-      "en": "I Long To See Your Face", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Tohbah Hai Mann Mein", "hi": "तौबह है मन में" },
+    "translation": { "en": "Repentance Is In The Heart" }
   },
   {
-    "chords": [ { "root": "A", "number": 4, "quality": "", "space": 25 },
-      { "root": "B/A", "number": "5/4", "quality": "", "space": 20 }],
-    "lyrics": { 
-      "en": "As The World Fades Away,", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Dua Hai Rajya Aaye", "hi": "दुआ है राज्य आये" },
+    "translation": { "en": "Prayer Is For The Kingdom To Come" }
   },
   {
-    "chords": [{ "root": "G#", "number": 3, "quality": "m", "space": 15 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 15 }],
-    "lyrics": { 
-      "en": "Our Hearts In Embrace", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Tera Rajya Aaye", "hi": "तेरा राज्य आये" },
+    "translation": { "en": "Your Kingdom Come" },
+    "break": "break"
   },
   {
-    "chords": [{ "root": "F#", "number": 2, "quality": "m", "space": 15 },
-      { "root": "B", "number": 5, "quality": "sus", "space": 20 }],
-    "lyrics": { 
-      "en": "It’s You, All I Want Is You,", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "label": "Bridge",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Sab Stuti Kare", "hi": "सब स्तुति करे" },
+    "translation": { "en": "Let Everyone Worship" }
   },
   {
-    "chords": [{ "root": "E", "number": 1, "quality": "", "space": 30 }],
-    "lyrics": { 
-      "en": "Oh To Be With You", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {
-    "label": "BRIDGE",
-    "chords": [
-      { "root": "A", "number": 4, "quality": "", "space": null },
-      { "root": "B/A", "number": "3/4", "quality": "", "space": 35 }
-    ],
-    "lyrics": { 
-      "en": "Lord I Give You My Heart", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Sukhi Hadiyan Jee Uthe", "hi": "सूखी हड्डियां जी उठे" },
+    "translation": { "en": "Dry Bones Come To Life" }
   },
   {
-    "chords": [
-      { "root": "G#", "number": 3, "quality": "m", "space": 20 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 25 },
-      { "root": "B", "number": 5, "quality": "", "space": 5 }
-    ],
-    "lyrics": { 
-      "en": "Where Can I Go, From Your Presence", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Ye Geet Badhta Rahe", "hi": "ये गीत बढ़ता रहे" },
+    "translation": { "en": "This Song Keeps Rising" }
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null },
-      { "root": "B/A", "number": "3/4", "quality": "", "space": 40 }],
-    "lyrics": { 
-      "en": "Lord I Surrender My All", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
-  },
-  {
-    "chords": [{ "root": "G#", "number": 3, "quality": "m", "space": 10 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 25 },
-      { "root": "B", "number": 5, "quality": "", "space": 5 }],
-    "lyrics": {
-      "en": "Just To Be Here, To Be With You", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
-  },
-  {
-    "chords": [
-      { "root": "A", "number": 4, "quality": "", "space": 20 },
-      { "root": "B", "number": 5, "quality": "", "space": 5 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 5 },
-      { "root": "E/G#", "number": "1/3", "quality": "", "space": 5 }
-  ],
-    "lyrics": { 
-      "en": "(To Be With You)", 
-      "hi": "" 
-    },
-    "translation": { "en": "", "hi": "" }
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": { "en": "Yeshu Naam Ke Liye (x4)", "hi": "येशु नाम के लिये (x4)" },
+    "translation": { "en": "For The Name Of Jesus (x4)" },
+    "break": "break"
   }
 ]
 
 
-
   ]
 }
+
+
+
+
+
+
+
+
+
+
+

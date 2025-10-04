@@ -15,7 +15,7 @@ model song {
   isChords        Boolean? @default(false)
   isTranslation   Boolean? @default(false)
   language        LanguageType? @default(en)
-  version         VersionType? @default(version_1)
+  version         VersionType? @default(version_3)
   key             String?
   bpm             String?
   time            String?

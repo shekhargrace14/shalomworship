@@ -1,351 +1,312 @@
 {
   "_id": "67861a904a380bbf080a364f",
-  "title": "Vandana v",
-  "key": "Eb",
+  "title": "Song v",
+  "key": "G",
   "isTranslation": true,
   "chords": true,
   "version": "version_3",
   "language": "hi",
-  "lines": [
-[
-  {
-    "label": "Intro",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "sus4", "space": 5 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 5 },
-      { "root": "F", "number": 2, "quality": "m", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "sus4", "space": 5 }
-    ],
-    "lyrics": { "en": "", "hi": "" },
-    "translation": { "en": "" }
-  },
+    "lines": [
+  [
     {
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "sus4", "space": 5 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 5 },
-      { "root": "F", "number": 2, "quality": "m", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "sus4", "space": 5 }
-    ],
-    "lyrics": { "en": "", "hi": "" },
-    "translation": { "en": "" }
-  },
-  {
-    "label": "Verse 1",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "space": 5, "en": " Hum Milkar Aaye", "hi": "हम मिलकर आये" },
-    "translation": { "en": "We Have Come Together" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Huzuri Ke Chahne Vaale", "hi": "हुज़ूरी के चाहने वाले" },
-    "translation": { "en": "Lovers Of Your Presence" }
-  },
-  {
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "space": 5, "en": "Teri Rooh Ke Chalaye", "hi": "तेरी रूह के चलाये" },
-    "translation": { "en": "Led By Your Spirit" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": null },
-      { "root": "Ab", "number": 4, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Jaayein Duniya Mein", "hi": "जायें दुनिया में" },
-    "translation": { "en": "We Go Into The World" },
-"break"    :"break"
-  },
-  {"label": "Verse 2",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "space": 5, "en": " Tarana Ye Lekar", "hi": "तराना ये लेकर" },
-    "translation": { "en": "Carrying This Song" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Rajyo Ko Hum Sunaye", "hi": "राज्यों को हम सुनाये" },
-    "translation": { "en": "We Will Proclaim To Nations" }
-  },
-  {
-    "chords": [{ "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "", "space": 20 }],
-    "lyrics": {"space": 5, "en": "Koi Sandhey Nahi Hai", "hi": "कोई संदेह नहीं है" },
-    "translation": { "en": "There Is No Doubt" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "Kalisiya Kahe", "hi": "कलीसिया कहे" },
-    "translation": { "en": "The Church Declares" },
-    "break": "break"
-  }, {
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "sus4", "space": 5 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "", "hi": "" },
-    "translation": { "en": "" },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "(Kalisiya Kahe)", "hi": "(कलीसिया कहे)" },
-    "translation": { "en": "(The Church Declares)" },
-    "break": "break"
-  },
-  {
-    "label": "Chorus",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": 10 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Hai Yakeen Ye Hogi", "hi": "है यकीन ये होगी" },
-    "translation": { "en": "There Is Faith There Will Be" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 10 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Bedaari Se Bhari Peedhi", "hi": "बेदारी से भरी पीढ़ी" },
-    "translation": { "en": "A Generation Full Of Awakening" },
-    "break": "break"
+      "label": "Intro",
+      "chords": [
+        { "root": "G", "number": 1, "quality": "", "space": null },
+        { "root": "E", "number": 6, "quality": "m", "space": 5 }
+      ],
+      "lyrics": {
+        "en": "",
+        "hi": ""
+      },
+      "translation": {
+        "en": ""
+      }
+    },
+    {
+      "label": "",
+      "chords": [
+        { "root": "C", "number": 4, "quality": "", "space": null },
+        { "root": "A", "number": 2, "quality": "m", "space": 5 },
+        { "root": "C", "number": 4, "quality": "", "space": 5 }
+      ],
+      "lyrics": {
+        "en": "",
+        "hi": ""
+      },
+      "translation": {
+        "en": ""
+      }
+    },
+    {
+      "label": "Verse 1",
+      "chords": [
+        { "root": "G", "number": 1, "quality": "", "space": 10 },
+        { "root": "D", "number": 5, "quality": "", "space": 32 }
+      ],
+      "lyrics": {
+        "en": "Meri Kalpana Se Sundar Ho Tum",
+        "hi": "मेरी कल्पना से सुन्दर हो तुम"
+      },
+      "translation": {
+        "en": "You Are More Beautiful Than My Imagination"
+      }
+    },
+    {
+          "chords": [
+            { "root": "C", "number": 4, "quality": "", "space": 10 },
+            { "root": "G", "number": 1, "quality": "", "space": 32 }
+      ],
+      "lyrics": {
+        "en": "Meri Soch Se Bhi Behtar Ho Tum",
+        "hi": "मेरी सोच से भी बेहतर हो तुम"
+      },
+      "translation": {
+        "en": "You Are Better Than Even My Thoughts"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Pre Chorus",
+      "chords": [
+        { "root": "B", "number": 3, "quality": "m", "space": null },
+        { "root": "E", "number": 6, "quality": "m", "space": 30 }
+      ],
+      "lyrics": {
+        "en": "Meri Chattan Mera Bal Jo Ho Tum",
+        "hi": "मेरी चट्टान मेरा बल जो हो तुम"
+      },
+      "translation": {
+        "en": "You Are My Rock And My Strength"
+      }
+    },
+    {
+      "chords": [
+        { "root": "A", "number": 2, "quality": "m", "space": null },
+        { "root": "D", "number": 5, "quality": "", "space": 25 }
+      ],
+      "lyrics": {
+        "en": "Meri Ibadat Mein Bastey Ho Tum",
+        "hi": "मेरी इबादत में बस्ते हो तुम"
+      },
+      "translation": {
+        "en": "You Dwell In My Worship"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Chorus",
+      "chords": [
+        { "root": "G", "number": 1, "quality": "", "space": null },
+        { "root": "E", "number": 6, "quality": "m", "space": 12 }
+      ],
+      "lyrics": {
+        "en": "Rajaon Ke Raja Ho Tum",
+        "hi": "राजाओं के राजा हो तुम"
+      },
+      "translation": {
+        "en": "You Are The King Of Kings"
+      }
+    },
+    {
+        "chords": [
+        { "root": "A", "number": 2, "quality": "m", "space": null },
+        { "root": "D", "number": 5, "quality": "", "space": 22 }
+      ],
+      "lyrics": {
+        "en": "Saare Jahan Ke Baadshah Ho Tum (x2)",
+        "hi": "सारे जहान के बादशाह हो तुम (x2)"
+      },
+      "translation": {
+        "en": "You Are The Emperor Of The Entire World (x2)"
+      },
+      "break":"break"
 
-  },
-  {
-    "chords": [
-       { "root": "Eb", "number": 1, "quality": "", "space": 15 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Jab Maange Jab Dhunde", "hi": "जब माँगे जब ढूंढे" },
-    "translation": { "en": "When They Ask When They Seek" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 15 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Baarish Karta Hai Uddhar Ki", "hi": "बारिश करता है उद्धार की" },
-    "translation": { "en": "He Pours The Rain Of Salvation" },
-    "break": "break"
-
-  },
-  {
-    "chords": [ { "root": "Eb", "number": 1, "quality": "", "space": 15 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 15 }],
-    "lyrics": { "en": "Jis Sansaar Se Tujhe Pyaar", "hi": "जिस संसार से तुझे प्यार" },
-    "translation": { "en": "The World That Loves You" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 10 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "Stuti Kare", "hi": "स्तुति करे" },
-    "translation": { "en": "Will Worship" }
-  },
-  {
-    "chords": [
-       { "root": "Eb", "number": 1, "quality": "", "space": 15 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Har Jaati Aur Har Zubaan", "hi": "हर जाति और हर ज़ुबान" },
-    "translation": { "en": "Every Tribe And Every Tongue" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 10 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "Sajda Kare", "hi": "सजदा करे" },
-    "translation": { "en": "Will Bow Down" },
-    "break": "break"
-  },
-  {
-    "label": "Verse 2",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "space": 5 , "en": "Hum Milkar Aaye", "hi": "हम मिलकर आये" },
-    "translation": { "en": "We Have Come Together" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": null },
-      { "root": "Ab", "number": 4, "quality": "", "space": 22 }
-    ],
-    "lyrics": { "en": "Namra Dil Tere Saamne", "hi": "नम्र दिल तेरे सामने" },
-    "translation": { "en": "With A Humble Heart Before You" }
-  },
-  {
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "space": 5, "en": "Tohbah Hai Mann Mein", "hi": "तौबह है मन में" },
-    "translation": { "en": "Repentance Is In The Heart" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 15 }
-    ],
-    "lyrics": { "en": "Dua Hai Rajya Aaye", "hi": "दुआ है राज्य आये" },
-    "translation": { "en": "Prayer Is For The Kingdom To Come" },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": null },
-      { "root": "Bb", "number": 5, "quality": "sus4", "space": 5 },
-      { "root": "Bb", "number": 5, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "", "hi": "" },
-    "translation": { "en": "" },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m", "space": 10 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "Tera Rajya Aaye", "hi": "तेरा राज्य आये" },
-    "translation": { "en": "Your Kingdom Come" },
-    "break": "break"
-  },
-  {
-    "label": "Bridge",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Sab Stuti Kare", "hi": "सब स्तुति करे" },
-    "translation": { "en": "Let Everyone Worship" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 25 },
-      { "root": "/Eb", "number": "/1", "quality": "", "space": null }
-    ],
-    "lyrics": { "en": "Sukhi Hadiyan Jee Uthe", "hi": "सूखी हड्डियां जी उठे" },
-    "translation": { "en": "Dry Bones Come To Life" }
-  },
-  {
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": 30 }
-    ],
-    "lyrics": { "en": "Ye Geet Badhta Rahe", "hi": "ये गीत बढ़ता रहे" },
-    "translation": { "en": "This Song Keeps Rising" }
-  },
-  {
-    "chords": [
-      { "root": "F", "number": 2, "quality": "m7", "space": 20 },
-      { "root": "/Eb", "number": "/1", "quality": "", "space": null } 
-    ],
-    "lyrics": { "en": "Yeshu Naam Ke Liye", "hi": "येशु नाम के लिये" },
-    "translation": { "en": "For The Name Of Jesus" },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "Eb/G", "number": "1/3", "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Sab Stuti Kare", "hi": "सब स्तुति करे" },
-    "translation": { "en": "Let Everyone Worship" }
-  },
-  {
-    "chords": [
-      { "root": "Ab", "number": "4", "quality": "", "space": 10 },
-      { "root": "Bb", "number": "5", "quality": "sus4", "space": 20 }
-    ],
-    "lyrics": { "en": "Sukhi Hadiyan Jee Uthe", "hi": "सूखी हड्डियां जी उठे" },
-    "translation": { "en": "Dry Bones Come To Life" }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": "6", "quality": "m7", "space": 5 },
-      { "root": "Eb/G", "number": "1/3", "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Ye Geet Badhta Rahe", "hi": "ये गीत बढ़ता रहे" },
-    "translation": { "en": "This Song Keeps Rising" }
-  },
-  {
-    "chords": [
-            { "root": "Ab", "number": "4", "quality": "", "space": 10 },
-      { "root": "Bb", "number": "5", "quality": "sus4", "space": 5 }
-    ],
-    "lyrics": { "en": "Yeshu Naam Ke Liye", "hi": "येशु नाम के लिये" },
-    "translation": { "en": "For The Name Of Jesus" },
-    "break": "break"
-  },
-  {
-    "label": "Bridge 2",
-    "chords": [
-      { "root": "Eb", "number": 1, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Sab Stuti Kare", "hi": "सब स्तुति करे" },
-    "translation": { "en": "Let Everyone Worship" }
-  },
-  {
-    "chords": [
-      { "root": "Bb", "number": 5, "quality": "sus4", "space": 10 },
-      { "root": "F", "number": 2, "quality": "m7", "space": 10 }
-    ],
-    "lyrics": { "en": "Sukhi Hadiyan Jee Uthe", "hi": "सूखी हड्डियां जी उठे" },
-    "translation": { "en": "Dry Bones Come To Life" }
-  },
-  {
-    "chords": [
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 },
-      { "root": "Eb", "number": 1, "quality": "", "space": 20 }
-    ],
-    "lyrics": { "en": "Ye Geet Badhta Rahe", "hi": "ये गीत बढ़ता रहे" },
-    "translation": { "en": "This Song Keeps Rising" }
-  },
-  {
-    "chords": [
-      { "root": "Bb", "number": 5, "quality": "sus4", "space": 10 },
-      { "root": "F", "number": 2, "quality": "m7", "space": 5 },
-      { "root": "Ab", "number": 4, "quality": "", "space": 5 }
-    ],
-    "lyrics": { "en": "Yeshu Naam Ke Liye (x2)", "hi": "येशु नाम के लिये (x2)" },
-    "translation": { "en": "For The Name Of Jesus (x2)" },
-    "break": "break"
-  }
-]
+    },
 
 
+  {
+      "label": "Instrumental",
+      "chords": [
+        { "root": "G", "number": 1, "quality": "", "space": null },
+        { "root": "E", "number": 6, "quality": "m", "space": 5 }
+      ],
+      "lyrics": {
+        "en": "",
+        "hi": ""
+      },
+      "translation": {
+        "en": ""
+      }
+    },
+    {
+      "label": "",
+      "chords": [
+        { "root": "C", "number": 4, "quality": "", "space": null },
+        { "root": "A", "number": 2, "quality": "m", "space": 5 },
+        { "root": "C", "number": 4, "quality": "", "space": 5 }
+      ],
+      "lyrics": {
+        "en": "",
+        "hi": ""
+      },
+      "translation": {
+        "en": ""
+      }
+    },
+
+
+
+    {
+      "label": "Verse 2",
+      "chords": [
+        { "root": "G", "number": 1, "quality": "", "space": 10 },
+        { "root": "D", "number": 5, "quality": "", "space": 32 }
+      ],
+      "lyrics": {
+        "en": "Aafat Mein Baney Rahat Ho Tum",
+        "hi": "आफत में बने रहत हो तुम"
+      },
+      "translation": {
+        "en": "In Calamity, You Become Comfort"
+      }
+    },
+    {
+      "chords": [
+            { "root": "C", "number": 4, "quality": "", "space": 10 },
+            { "root": "G", "number": 1, "quality": "", "space": 32 }
+      ],
+      "lyrics": {
+        "en": "Jeevan Ki Baney Chahat Ho Tum",
+        "hi": "जीवन की बने चाहत हो तुम"
+      },
+      "translation": {
+        "en": "You Become The Desire Of Life"
+      },
+      "break": "break"
+    },
+
+
+
+  {
+      "label": "Pre Chorus",
+      "chords": [
+        { "root": "B", "number": 3, "quality": "m", "space": null },
+        { "root": "E", "number": 6, "quality": "m", "space": 30 }
+      ],
+      "lyrics": {
+        "en": "Meri Chattan Mera Bal Jo Ho Tum",
+        "hi": "मेरी चट्टान मेरा बल जो हो तुम"
+      },
+      "translation": {
+        "en": "You Are My Rock And My Strength"
+      }
+    },
+    {
+      "chords": [
+        { "root": "A", "number": 2, "quality": "m", "space": null },
+        { "root": "D", "number": 5, "quality": "", "space": 25 }
+      ],
+      "lyrics": {
+        "en": "Meri Ibadat Mein Bastey Ho Tum",
+        "hi": "मेरी इबादत में बस्ते हो तुम"
+      },
+      "translation": {
+        "en": "You Dwell In My Worship"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Chorus",
+      "chords": [
+        { "root": "G", "number": 1, "quality": "", "space": null },
+        { "root": "E", "number": 6, "quality": "m", "space": 12 }
+      ],
+      "lyrics": {
+        "en": "Rajaon Ke Raja Ho Tum",
+        "hi": "राजाओं के राजा हो तुम"
+      },
+      "translation": {
+        "en": "You Are The King Of Kings"
+      }
+    },
+    {
+        "chords": [
+        { "root": "A", "number": 2, "quality": "m", "space": null },
+        { "root": "D", "number": 5, "quality": "", "space": 22 }
+      ],
+      "lyrics": {
+        "en": "Saare Jahan Ke Baadshah Ho Tum (x2)",
+        "hi": "सारे जहान के बादशाह हो तुम (x2)"
+      },
+      "translation": {
+        "en": "You Are The Emperor Of The Entire World (x2)"
+      },
+      "break":"break"
+    },
+
+
+
+
+
+
+    {
+      "label": "Bridge",
+      "chords": [
+        { "root": "E", "number": 6, "quality": "m", "space": 3 },
+        { "root": "C", "number": 4, "quality": "", "space": 15 }    ],
+      "lyrics": {
+        "en": "Ae Mere Khuda",
+        "hi": "ऐ मेरे खुदा"
+      },
+      "translation": {
+        "en": "O My God"
+      }
+    },{
+      "chords": [
+        { "root": "A", "number": 2, "quality": "m", "space": 7 },
+        { "root": "D", "number": 5, "quality": "", "space": 12 }
+        
+      ],
+      "lyrics": {
+        "en": "Teri Mahima Ho Sada (2x)",
+        "hi": "तेरी महिमा हो सदा (2x)"
+      },
+      "translation": {
+        "en": "May Your Glory Be Forever (2x)"
+      },
+      "break":"break"
+
+    },
+    {
+      "label": "",
+      "chords": [
+        { "root": "E", "number": 6, "quality": "m", "space": null },
+        { "root": "C", "number": 4, "quality": "", "space": 3 },
+        { "root": "D", "number": 5, "quality": "", "space": 12 }
+
+      ],
+      "lyrics": {
+        "en": "Doot Gaate Tere Geet",
+        "hi": "दूत गाते तेरे गीत"
+      },
+      "translation": {
+        "en": "Angels Sing Your Songs"
+      }
+    },
+    {
+      "chords": [
+        { "root": "E", "number": 6, "quality": "m", "space": 10 },
+        { "root": "C", "number": 4, "quality": "", "space": 15 },
+        { "root": "D", "number": 5, "quality": "", "space": 15 }
+      ],
+      "lyrics": {
+        "en": "Tere Saamne Jhukta Ye Aaftab Bhi (x2)",
+        "hi": "तेरे सामने झुकता ये आफताब भी (x2)"
+      },
+      "translation": {
+        "en": "Even This Sun Bows Before You (x2)"
+      }
+    }
+  ]
   ]
 }
-
-
-
-
-
-
-
-
-
-
-

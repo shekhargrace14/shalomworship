@@ -8,305 +8,315 @@
   "language": "hi",
     "lines": [
   [
-    {
-      "label": "Intro",
-      "chords": [
-        { "root": "G", "number": 1, "quality": "", "space": null },
-        { "root": "E", "number": 6, "quality": "m", "space": 5 }
-      ],
-      "lyrics": {
-        "en": "",
-        "hi": ""
-      },
-      "translation": {
-        "en": ""
-      }
-    },
-    {
-      "label": "",
-      "chords": [
-        { "root": "C", "number": 4, "quality": "", "space": null },
-        { "root": "A", "number": 2, "quality": "m", "space": 5 },
-        { "root": "C", "number": 4, "quality": "", "space": 5 }
-      ],
-      "lyrics": {
-        "en": "",
-        "hi": ""
-      },
-      "translation": {
-        "en": ""
-      }
-    },
-    {
-      "label": "Verse 1",
-      "chords": [
-        { "root": "G", "number": 1, "quality": "", "space": 10 },
-        { "root": "D", "number": 5, "quality": "", "space": 32 }
-      ],
-      "lyrics": {
-        "en": "Meri Kalpana Se Sundar Ho Tum",
-        "hi": "मेरी कल्पना से सुन्दर हो तुम"
-      },
-      "translation": {
-        "en": "You Are More Beautiful Than My Imagination"
-      }
-    },
-    {
-          "chords": [
-            { "root": "C", "number": 4, "quality": "", "space": 10 },
-            { "root": "G", "number": 1, "quality": "", "space": 32 }
-      ],
-      "lyrics": {
-        "en": "Meri Soch Se Bhi Behtar Ho Tum",
-        "hi": "मेरी सोच से भी बेहतर हो तुम"
-      },
-      "translation": {
-        "en": "You Are Better Than Even My Thoughts"
-      },
-      "break": "break"
-    },
-    {
-      "label": "Pre Chorus",
-      "chords": [
-        { "root": "B", "number": 3, "quality": "m", "space": null },
-        { "root": "E", "number": 6, "quality": "m", "space": 30 }
-      ],
-      "lyrics": {
-        "en": "Meri Chattan Mera Bal Jo Ho Tum",
-        "hi": "मेरी चट्टान मेरा बल जो हो तुम"
-      },
-      "translation": {
-        "en": "You Are My Rock And My Strength"
-      }
-    },
-    {
-      "chords": [
-        { "root": "A", "number": 2, "quality": "m", "space": null },
-        { "root": "D", "number": 5, "quality": "", "space": 25 }
-      ],
-      "lyrics": {
-        "en": "Meri Ibadat Mein Bastey Ho Tum",
-        "hi": "मेरी इबादत में बस्ते हो तुम"
-      },
-      "translation": {
-        "en": "You Dwell In My Worship"
-      },
-      "break": "break"
-    },
-    {
-      "label": "Chorus",
-      "chords": [
-        { "root": "G", "number": 1, "quality": "", "space": null },
-        { "root": "E", "number": 6, "quality": "m", "space": 12 }
-      ],
-      "lyrics": {
-        "en": "Rajaon Ke Raja Ho Tum",
-        "hi": "राजाओं के राजा हो तुम"
-      },
-      "translation": {
-        "en": "You Are The King Of Kings"
-      }
-    },
-    {
-        "chords": [
-        { "root": "A", "number": 2, "quality": "m", "space": null },
-        { "root": "D", "number": 5, "quality": "", "space": 22 }
-      ],
-      "lyrics": {
-        "en": "Saare Jahan Ke Baadshah Ho Tum (x2)",
-        "hi": "सारे जहान के बादशाह हो तुम (x2)"
-      },
-      "translation": {
-        "en": "You Are The Emperor Of The Entire World (x2)"
-      },
-      "break":"break"
-
-    },
-
-
   {
-      "label": "Instrumental",
-      "chords": [
-        { "root": "G", "number": 1, "quality": "", "space": null },
-        { "root": "E", "number": 6, "quality": "m", "space": 5 }
-      ],
-      "lyrics": {
-        "en": "",
-        "hi": ""
-      },
-      "translation": {
-        "en": ""
-      }
+    "label": "Chorus",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Tu Ne Kiya Kaabil Nakaamiyon Mein",
+      "hi": "तू ने किया काबिल नाकामियों में"
     },
-    {
-      "label": "",
-      "chords": [
-        { "root": "C", "number": 4, "quality": "", "space": null },
-        { "root": "A", "number": 2, "quality": "m", "space": 5 },
-        { "root": "C", "number": 4, "quality": "", "space": 5 }
-      ],
-      "lyrics": {
-        "en": "",
-        "hi": ""
-      },
-      "translation": {
-        "en": ""
-      }
-    },
-
-
-
-    {
-      "label": "Verse 2",
-      "chords": [
-        { "root": "G", "number": 1, "quality": "", "space": 10 },
-        { "root": "D", "number": 5, "quality": "", "space": 32 }
-      ],
-      "lyrics": {
-        "en": "Aafat Mein Baney Rahat Ho Tum",
-        "hi": "आफत में बने रहत हो तुम"
-      },
-      "translation": {
-        "en": "In Calamity, You Become Comfort"
-      }
-    },
-    {
-      "chords": [
-            { "root": "C", "number": 4, "quality": "", "space": 10 },
-            { "root": "G", "number": 1, "quality": "", "space": 32 }
-      ],
-      "lyrics": {
-        "en": "Jeevan Ki Baney Chahat Ho Tum",
-        "hi": "जीवन की बने चाहत हो तुम"
-      },
-      "translation": {
-        "en": "You Become The Desire Of Life"
-      },
-      "break": "break"
-    },
-
-
-
-  {
-      "label": "Pre Chorus",
-      "chords": [
-        { "root": "B", "number": 3, "quality": "m", "space": null },
-        { "root": "E", "number": 6, "quality": "m", "space": 30 }
-      ],
-      "lyrics": {
-        "en": "Meri Chattan Mera Bal Jo Ho Tum",
-        "hi": "मेरी चट्टान मेरा बल जो हो तुम"
-      },
-      "translation": {
-        "en": "You Are My Rock And My Strength"
-      }
-    },
-    {
-      "chords": [
-        { "root": "A", "number": 2, "quality": "m", "space": null },
-        { "root": "D", "number": 5, "quality": "", "space": 25 }
-      ],
-      "lyrics": {
-        "en": "Meri Ibadat Mein Bastey Ho Tum",
-        "hi": "मेरी इबादत में बस्ते हो तुम"
-      },
-      "translation": {
-        "en": "You Dwell In My Worship"
-      },
-      "break": "break"
-    },
-    {
-      "label": "Chorus",
-      "chords": [
-        { "root": "G", "number": 1, "quality": "", "space": null },
-        { "root": "E", "number": 6, "quality": "m", "space": 12 }
-      ],
-      "lyrics": {
-        "en": "Rajaon Ke Raja Ho Tum",
-        "hi": "राजाओं के राजा हो तुम"
-      },
-      "translation": {
-        "en": "You Are The King Of Kings"
-      }
-    },
-    {
-        "chords": [
-        { "root": "A", "number": 2, "quality": "m", "space": null },
-        { "root": "D", "number": 5, "quality": "", "space": 22 }
-      ],
-      "lyrics": {
-        "en": "Saare Jahan Ke Baadshah Ho Tum (x2)",
-        "hi": "सारे जहान के बादशाह हो तुम (x2)"
-      },
-      "translation": {
-        "en": "You Are The Emperor Of The Entire World (x2)"
-      },
-      "break":"break"
-    },
-
-
-
-
-
-
-    {
-      "label": "Bridge",
-      "chords": [
-        { "root": "E", "number": 6, "quality": "m", "space": 3 },
-        { "root": "C", "number": 4, "quality": "", "space": 15 }    ],
-      "lyrics": {
-        "en": "Ae Mere Khuda",
-        "hi": "ऐ मेरे खुदा"
-      },
-      "translation": {
-        "en": "O My God"
-      }
-    },{
-      "chords": [
-        { "root": "A", "number": 2, "quality": "m", "space": 7 },
-        { "root": "D", "number": 5, "quality": "", "space": 12 }
-        
-      ],
-      "lyrics": {
-        "en": "Teri Mahima Ho Sada (2x)",
-        "hi": "तेरी महिमा हो सदा (2x)"
-      },
-      "translation": {
-        "en": "May Your Glory Be Forever (2x)"
-      },
-      "break":"break"
-
-    },
-    {
-      "label": "",
-      "chords": [
-        { "root": "E", "number": 6, "quality": "m", "space": null },
-        { "root": "C", "number": 4, "quality": "", "space": 3 },
-        { "root": "D", "number": 5, "quality": "", "space": 12 }
-
-      ],
-      "lyrics": {
-        "en": "Doot Gaate Tere Geet",
-        "hi": "दूत गाते तेरे गीत"
-      },
-      "translation": {
-        "en": "Angels Sing Your Songs"
-      }
-    },
-    {
-      "chords": [
-        { "root": "E", "number": 6, "quality": "m", "space": 10 },
-        { "root": "C", "number": 4, "quality": "", "space": 15 },
-        { "root": "D", "number": 5, "quality": "", "space": 15 }
-      ],
-      "lyrics": {
-        "en": "Tere Saamne Jhukta Ye Aaftab Bhi (x2)",
-        "hi": "तेरे सामने झुकता ये आफताब भी (x2)"
-      },
-      "translation": {
-        "en": "Even This Sun Bows Before You (x2)"
-      }
+    "translation": {
+      "en": "You Made Me Worthy In Failures"
     }
-  ]
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Shamil Teri Chahaton Mein",
+      "hi": "शामिल तेरी चाहतों में"
+    },
+    "translation": {
+      "en": "Included In Your Desires"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Hasil Teri Rehmaton Se Hai Sab",
+      "hi": "हासिल तेरी रहमतों से है सब"
+    },
+    "translation": {
+      "en": "Everything Is Obtained Through Your Mercies"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Kaabil Nakaamiyon Mein",
+      "hi": "काबिल नाकामियों में"
+    },
+    "translation": {
+      "en": "Worthy In Failures"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Shamil Teri Chahaton Mein",
+      "hi": "शामिल तेरी चाहतों में"
+    },
+    "translation": {
+      "en": "Included In Your Desires"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Lazim Tera Pyaar Har Lamhe Mein",
+      "hi": "लाज़िम तेरा प्यार हर लम्हे में"
+    },
+    "translation": {
+      "en": "Your Love Is Essential In Every Moment"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Verse",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Hathon Mein Zanjeeren Mujhko Baandhe Rakhti Thi",
+      "hi": "हाथों में ज़ंजीरें मुझको बांधे रखती थी"
+    },
+    "translation": {
+      "en": "Chains In Hands Used To Keep Me Bound"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Kaaton Pe Chalke Bhi Haasil Hua Na Kuch Bhi",
+      "hi": "काँटों पे चलके भी हासिल हुआ न कुछ भी"
+    },
+    "translation": {
+      "en": "Even After Walking On Thorns, Nothing Was Achieved"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Fir Aaya Tu Toh Mit Gaye Andhere",
+      "hi": "फिर आया तू तो मिट गए अंधेरे"
+    },
+    "translation": {
+      "en": "Then When You Came, The Darkness Disappeared"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Aazad Kar Diya Hai Dil Ko Mere",
+      "hi": "आज़ाद कर दिया है दिल को मेरे"
+    },
+    "translation": {
+      "en": "You Have Freed My Heart"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Tu Ne Kiya Kaabil Nakaamiyon Mein",
+      "hi": "तू ने किया काबिल नाकामियों में"
+    },
+    "translation": {
+      "en": "You Made Me Worthy In Failures"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Shamil Teri Chahaton Mein",
+      "hi": "शामिल तेरी चाहतों में"
+    },
+    "translation": {
+      "en": "Included In Your Desires"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Hasil Teri Rehmaton Se Hai Sab",
+      "hi": "हासिल तेरी रहमतों से है सब"
+    },
+    "translation": {
+      "en": "Everything Is Obtained Through Your Mercies"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Kaabil Nakaamiyon Mein",
+      "hi": "काबिल नाकामियों में"
+    },
+    "translation": {
+      "en": "Worthy In Failures"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Shamil Teri Chahaton Mein",
+      "hi": "शामिल तेरी चाहतों में"
+    },
+    "translation": {
+      "en": "Included In Your Desires"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Lazim Tera Pyaar Har Lamhe Mein",
+      "hi": "लाज़िम तेरा प्यार हर लम्हे में"
+    },
+    "translation": {
+      "en": "Your Love Is Essential In Every Moment"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Bridge",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Pyar Ka Dariya Tu",
+      "hi": "प्यार का दरिया तू"
+    },
+    "translation": {
+      "en": "You Are The River Of Love"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Jeene Ka Zariya Tu",
+      "hi": "जीने का ज़रिया तू"
+    },
+    "translation": {
+      "en": "You Are The Means Of Living"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Humrahi Mera",
+      "hi": "हमराही मेरा"
+    },
+    "translation": {
+      "en": "My Companion"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Raaho Pe Chalta Tu",
+      "hi": "राहों पे चलता तू"
+    },
+    "translation": {
+      "en": "You Walk On Paths"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Rehmat Ki Barsaaton Se Mujhko Bhigaata Hai Tu",
+      "hi": "रहमत की बरसातों से मुझको भिगाता है तू"
+    },
+    "translation": {
+      "en": "You Drench Me With Showers Of Mercy"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Teri Hi Baahon Mein Jannat Meri Hai",
+      "hi": "तेरी ही बाहों में जन्नत मेरी है"
+    },
+    "translation": {
+      "en": "My Heaven Is In Your Arms"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Fir Aaya Tu Toh Mit Gaye Andhere",
+      "hi": "फिर आया तू तो मिट गए अंधेरे"
+    },
+    "translation": {
+      "en": "Then When You Came, The Darkness Disappeared"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Aazad Kar Diya Hai Dil Ko Mere",
+      "hi": "आज़ाद कर दिया है दिल को मेरे"
+    },
+    "translation": {
+      "en": "You Have Freed My Heart"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Tu Ne Kiya Kaabil Nakaamiyon Mein",
+      "hi": "तू ने किया काबिल नाकामियों में"
+    },
+    "translation": {
+      "en": "You Made Me Worthy In Failures"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Shamil Teri Chahaton Mein",
+      "hi": "शामिल तेरी चाहतों में"
+    },
+    "translation": {
+      "en": "Included In Your Desires"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Hasil Teri Rehmaton Se Hai Sab",
+      "hi": "हासिल तेरी रहमतों से है सब"
+    },
+    "translation": {
+      "en": "Everything Is Obtained Through Your Mercies"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Kaabil Nakaamiyon Mein",
+      "hi": "काबिल नाकामियों में"
+    },
+    "translation": {
+      "en": "Worthy In Failures"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Shamil Teri Chahaton Mein",
+      "hi": "शामिल तेरी चाहतों में"
+    },
+    "translation": {
+      "en": "Included In Your Desires"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Lazim Tera Pyaar Har Lamhe Mein",
+      "hi": "लाज़िम तेरा प्यार हर लम्हे में"
+    },
+    "translation": {
+      "en": "Your Love Is Essential In Every Moment"
+    }
+  }
+]
   ]
 }

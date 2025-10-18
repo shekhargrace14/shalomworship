@@ -35,7 +35,8 @@ const Card: React.FC<any> = ({ item }) => {
               alt={item.title || "Song Image"}
               width={700}
               height={500}
-            />
+            /> 
+            {/* <YouTubeThumbnail videoId={item.videoId} alt={item.title}/> */}
           </div>
           <div className="w-full p-2">
             <div className="flex items-center gap-2">

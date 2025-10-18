@@ -16,13 +16,74 @@ export const inter = Inter({
 export const metadata: Metadata = {
   title: "Shalom Worship",
   description: "Shalom Worship is a faith-based music ministry dedicated to spreading the message of peace, hope, and salvation through heartfelt worship. Known for its soul-stirring melodies and spirit-filled lyrics, Shalom Worship brings together a community of believers to praise and glorify God.",
-  keywords: "Worship song lyrics, gospel song chords, christian song lyrics",
+  keywords: [
+  "worship song lyrics", 
+  "gospel song chords", 
+  "christian song lyrics", 
+  "shalom worship", 
+  "christian music", 
+  "worship songs", 
+  "gospel music",
+  "praise and worship",
+  "christian lyrics",
+  "church songs",
+  "biblical worship"
+],
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.shalomworship.com/"),
+  manifest: '/manifest.json',
+  themeColor: [
+  { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  { media: '(prefers-color-scheme: dark)', color: '#000000' },
+],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Shalom Worship',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title: 'Shalom Worship',
+    description: 'Faith-based music ministry spreading the message of peace, hope, and salvation through heartfelt worship',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.shalomworship.com',
+    siteName: 'Shalom Worship',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Shalom Worship',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shalom Worship',
+    description: 'Faith-based music ministry spreading the message of peace, hope, and salvation',
+    images: ['/twitter-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -43,6 +104,10 @@ export default function RootLayout({
         <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js" />
         {/* ✅ No need to repeat the favicon <link> here if defined in metadata.icons */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+
+        {/* code for PWA  */}
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <meta name="theme-color" content="#000000" />
       </head>
       <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 gap-x-4 bg-background">
         <QueryProvider>

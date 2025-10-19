@@ -21,7 +21,7 @@ const Card: React.FC<any> = ({ item }) => {
   // console.log(artists, " artists of song page params");
   // console.log(creators, " creators of song page params");
 
-  const slug = slugify(`${item.title}`, { lower: true });
+  const slug = slugify(`${item.slug}`, { lower: true });
 
   return (
 

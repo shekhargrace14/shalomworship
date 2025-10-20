@@ -7,588 +7,114 @@
   "version": "version_3",
   "language": "en",
   "lines": [
-    [
-      {
-        "label": "Intro",
-        "chords": [
-          { "root": "Db", "number": 1, "quality": "", "space": null },
-          { "root": "Ab/C", "number": "5/7", "quality": "", "space": 5 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 5 },
-          { "root": "Db", "number": 1, "quality": "", "space": 5 },
-          { "root": "Ab/C", "number": "5/7", "quality": "", "space": 5 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 5 }
-        ],
-        "lyrics": {
-          "en": ""
-        },
-        "break": "break"
-      },
-      {
-        "label": "Verse 1",
-        "chords": [
-          { "root": "Db", "number": 1, "quality": "", "space": null },
-          { "root": "Ab", "number": 5, "quality": "", "space": 10 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 10 }
-        ],
-        "lyrics": {
-          "en": "I Could Sing Your Name For All My Life"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Db", "number": 1, "quality": "", "space": null },
-          { "root": "Ab", "number": 5, "quality": "", "space": 5 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 10 }
-        ],
-        "lyrics": {
-          "space": 2,
-          "en": "And Still Find More To Love Each Time"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": null },
-          { "root": "Ab", "number": 5, "quality": "", "space": 2 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 35 }
-        ],
-        "lyrics": {
-          "space": 10,
-          "en": "Jesus Be The Name Ever On My Lips"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": null },
-          { "root": "Ab", "number": 5, "quality": "", "space": 2 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 40 }
-        ],
-        "lyrics": {
-          "space": 10,
-          "en": "Sweeter Every Time That I Call On It"
-        },
-        "break": "break"
-      },
-
-      {
-        "label": "Chorus",
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 61 }],
-        "lyrics": {
-          "en": "There's Just Something 'Bout Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 61 }],
-        "lyrics": {
-          "en": "There's Just Something 'Bout Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 61 }],
-        "lyrics": {
-          "en": "There's Just Something 'Bout Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 38 }],
-        "lyrics": {
-          "en": "That Makes Me Cry Holy"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 35 }],
-        "lyrics": {
-          "en": "There Is No Other Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 35 }],
-        "lyrics": {
-          "en": "There Is No Other Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 35 }],
-        "lyrics": {
-          "en": "There Is No Other Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 30 }],
-        "lyrics": {
-          "en": "Jesus You're Worthy"
-        },
-        "break": "break"
-      },
-
-      {
-        "label": "Verse 2",
-        "chords": [
-          { "root": "Db", "number": 1, "quality": "", "space": null },
-          { "root": "Ab/C", "number": "5/7", "quality": "", "space": 12 },
-          { "root": "Eb", "number": 2, "quality": "m", "space": 10 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 15 }
-        ],
-        "lyrics": {
-          "en": "You Have Been The Friend Who Never Left"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Db", "number": 1, "quality": "", "space": null },
-          { "root": "Ab/C", "number": "5/7", "quality": "", "space": null },
-          { "root": "Eb", "number": 2, "quality": "m", "space": 10 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 15 }
-        ],
-        "lyrics": {
-          "space": 2,
-          "en": "I Won't Forget Your Faithfulness"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": null },
-          { "root": "Ab", "number": 5, "quality": "", "space": 2 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 35 }
-        ],
-        "lyrics": {
-          "space": 10,
-          "en": "Jesus Be The Name Ever On My Lips"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": null },
-          { "root": "Ab", "number": 5, "quality": "", "space": 2 },
-          { "root": "Gb", "number": 4, "quality": "", "space": 35 }
-        ],
-        "lyrics": {
-          "space": 10,
-          "en": "Sweeter Every Time That I Call On It"
-        },
-        "break": "break"
-      },
-
-      {
-        "label": "Chorus 2",
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 61 }],
-        "lyrics": {
-          "en": "There's Just Something 'Bout Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 61 }],
-        "lyrics": {
-          "en": "There's Just Something 'Bout Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 61 }],
-        "lyrics": {
-          "en": "There's Just Something 'Bout Your Name"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": 22 },
-          { "root": "Ab", "number": 5, "quality": "", "space": 5 }
-        ],
-        "lyrics": {
-          "en": "That Makes Me Cry Holy"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 35 }],
-        "lyrics": {
-          "en": "There Is No Other Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 35 }],
-        "lyrics": {
-          "en": "There Is No Other Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 35 }],
-        "lyrics": {
-          "en": "There Is No Other Name"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": 12 },
-          { "root": "Ab", "number": 5, "quality": "", "space": 5 }
-        ],
-        "lyrics": {
-          "en": "Jesus You're Worthy"
-        },
-        "break": "break"
-      },
-
-      {
-        "label": "Instrumental",
-        "chords": [
-          { "root": "Eb", "number": 2, "quality": "m", "space": null },
-          { "root": "Gb", "number": 4, "quality": "", "space": 5 },
-          { "root": "Bb", "number": 6, "quality": "m", "space": 5 },
-          { "root": "Ab", "number": 5, "quality": "", "space": 5 }
-        ],
-        "lyrics": {
-          "en": ""
-        }
-      },
-      {
-        "label": "",
-        "chords": [
-          { "root": "Eb", "number": 2, "quality": "m", "space": null },
-          { "root": "Gb", "number": 4, "quality": "", "space": 5 },
-          { "root": "Bb", "number": 6, "quality": "m", "space": 5 },
-          { "root": "Ab", "number": 5, "quality": "", "space": 5 }
-        ],
-        "lyrics": {
-          "en": ""
-        },
-        "break": "break"
-      },
-
-      {
-        "label": "Bridge",
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 20 }],
-        "lyrics": {
-          "en": "Jesus Your Name Is Like The Morning Light"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 10 }],
-        "lyrics": {
-          "en": "The One The Darkness Can't Deny"
-        }
-      },
-      {
-        "chords": [{ "root": "Bb", "number": 6, "quality": "m", "space": 10 }],
-        "lyrics": {
-          "en": "The Resurrection And The Life"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 3 }],
-        "lyrics": {
-          "en": "Jesus"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 20 }],
-        "lyrics": {
-          "en": "Jesus Your Name Can Save, Your Name Can Heal"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 10 }],
-        "lyrics": {
-          "en": "Your Name Can Make The Storm Be Still"
-        }
-      },
-      {
-        "chords": [{ "root": "Bb", "number": 6, "quality": "m", "space": 10 }],
-        "lyrics": {
-          "en": "You Never Fail, You Never Will"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 3 }],
-        "lyrics": {
-          "en": "Jesus"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 20 }],
-        "lyrics": {
-          "en": "Jesus The Bread Of Life Broken For Us"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 10 }],
-        "lyrics": {
-          "en": "The Wounded And The Worthy One"
-        }
-      },
-      {
-        "chords": [{ "root": "Bb", "number": 6, "quality": "m", "space": 10 }],
-        "lyrics": {
-          "en": "The First The Last And Soon To Come"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 3 }],
-        "lyrics": {
-          "en": "Jesus"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 20 }],
-        "lyrics": {
-          "en": "Jesus The King Who Overwhelmed The Grave"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 10 }],
-        "lyrics": {
-          "en": "The Lord Who Will Forever Reign"
-        }
-      },
-      {
-        "chords": [{ "root": "Bb", "number": 6, "quality": "m", "space": 10 }],
-        "lyrics": {
-          "en": "The Name Above All Other Names"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 3 }],
-        "lyrics": {
-          "en": "Jesus"
-        },
-        "break": "break"
-      },
-
-      {
-        "label": "Chorus 3",
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": 20 },
-          { "root": "Ab", "number": 5, "quality": "", "space": 3 }
-        ],
-        "lyrics": {
-          "en": "That Gets All The Glory (x4)"
-        },
-        "break": "break"
-      },
-
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": {
-          "en": "Oh Oh Oh"
-        }
-      },
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": {
-          "en": "Oh Oh Oh"
-        }
-      },
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": {
-          "en": "Oh Oh Oh"
-        }
-      },
-      {
-        "chords": [
-          { "root": "", "number": null, "quality": "", "space": null }
-        ],
-        "lyrics": {
-          "en": "Jesus (x2)"
-        },
-        "break": "break"
-      },
-      {
-        "label": "",
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [
-          { "root": "Bb", "number": 6, "quality": "m", "space": 20 },
-          { "root": "Ab", "number": 5, "quality": "", "space": 3 }
-        ],
-        "lyrics": {
-          "en": "That Gets All The Glory (x2)"
-        },
-        "break": "break"
-      },
-
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 42 }],
-        "lyrics": {
-          "en": "There's Healing In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 42 }],
-        "lyrics": {
-          "en": "There's Healing In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 45 }],
-        "lyrics": {
-          "en": "There's Healing In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 28 }],
-        "lyrics": {
-          "en": "It Makes Me Cry Holy"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 45 }],
-        "lyrics": {
-          "en": "There's Freedom In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 45 }],
-        "lyrics": {
-          "en": "There's Freedom In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 45 }],
-        "lyrics": {
-          "en": "There's Freedom In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 28 }],
-        "lyrics": {
-          "en": "It Makes Me Cry Holy"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 30 }],
-        "lyrics": {
-          "en": "Salvation In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 30 }],
-        "lyrics": {
-          "en": "Salvation In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 30 }],
-        "lyrics": {
-          "en": "Salvation In Your Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 28 }],
-        "lyrics": {
-          "en": "It Makes Me Cry Holy"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [{ "root": "Eb", "number": 2, "quality": "m", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Gb", "number": 4, "quality": "", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Db", "number": 1, "quality": "", "space": 25 }],
-        "lyrics": {
-          "en": "Jesus Be The Name"
-        }
-      },
-      {
-        "chords": [{ "root": "Ab", "number": 5, "quality": "", "space": 23 },
-        { "root": "Gb", "number": 4, "quality": "", "space": 5 }],
-        "lyrics": {
-          "en": "That Gets All The Glory"
-        }
-      }
-    ]
+[
+  {
+    "label": "",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "सिंहासनमा मेरो येशू सदा विराजमान हुनुहुन्छ",
+      "en": "Singhasanama Mero Yeshu Sada Virajman Hunuhunchha"
+    },
+    "translation": {
+      "en": "My Jesus Is Always Seated On The Throne"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "हाम्रा स्वरहरूले उचाल्दछौं सर्वशक्तिमान राजालाई",
+      "en": "Hamra Swarharule Uchaldachhau Sarvashaktiman Rajalai"
+    },
+    "translation": {
+      "en": "Our Voices Lift Up The Almighty King"
+    },
+    "break": "break"
+  },
+  {
+    "label": "",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "बादलमा फेरि आउनेछन् अल्फा र ओमेगा उनी",
+      "en": "Badalama Pheri Aaunechan Alpha Ra Omega Uni"
+    },
+    "translation": {
+      "en": "He Will Come Again In The Clouds, The Alpha And Omega"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "जो हुनुहुन्थ्यो हुनुहुन्छ र हुन आउनुहुनेछ अब्राहम इसाकका प्रभु",
+      "en": "Jo Hunuhunthyo Hunuhunchha Ra Hun Aaunuhunechha Abraham Isakka Prabhu"
+    },
+    "translation": {
+      "en": "Who Was, Who Is, And Who Is To Come, The Lord Of Abraham And Isaac"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "महिमाका योग्य उनी प्रतिज्ञा अनुसार लिन फेरि आउनेछन्",
+      "en": "Mahimaka Yogy Uni Pratigya Anusar Lin Pheri Aaunechan"
+    },
+    "translation": {
+      "en": "He Is Worthy Of Glory, He Will Come Again According To Promise To Take Us"
+    },
+    "break": "break"
+  },
+  {
+    "label": "",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "आराधना....... येशुलाई, आराधना.....",
+      "en": "Aradhana....... Yesulai, Aradhana....."
+    },
+    "translation": {
+      "en": "Worship....... To Jesus, Worship....."
+    },
+    "break": "break"
+  },
+  {
+    "label": "",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "स्वर्गबाट तुरही गर्जनछ सारा सृष्टि घुँडा टेक्छन्",
+      "en": "Swargabata Turahi Garjancha Sara Srishti Ghunda Tekchan"
+    },
+    "translation": {
+      "en": "The Trumpet Will Sound From Heaven, All Creation Will Kneel"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "फेरि मृत्यु हार्नेछ त्यो दिन अदोनाई याहोवे एलोहिम",
+      "en": "Pheri Mrityu Harnecha Tyo Din Adonai Yahweh Elohim"
+    },
+    "translation": {
+      "en": "Death Will Be Defeated Again That Day, Adonai Yahweh Elohim"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "महिमित शरीर लिई उठ्छौं नयाँ संसारमा हुनेछौं",
+      "en": "Mahimit Shariri Li'i Utchhau Naya Sansarama Hunechhau"
+    },
+    "translation": {
+      "en": "We Will Rise With Glorified Bodies, We Will Be In A New World"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "ne": "अनन्त राज्य गर्नुहोस् याहोवे मारानाथा",
+      "en": "Anant Rajya Garnuhos Yahweh Maranatha"
+    },
+    "translation": {
+      "en": "Reign Forever, Yahweh Maranatha"
+    }
+  }
+]
   ]
 }
-
-Intro
-
-Man ke andhere Bhi Roshan hue hai
-Ban dost aya zindagi me
-Man ke andhere Bhi Roshan hue hai
-Sawaalon me uljha To suljhaya tune
-Jawaabo ki manzil ko paar karaya
-
-Chorus
-Ye zindagi Teri hai Khuda 
-Ye zindagi Teri hai Khuda 
-Ye zindagi Teri hai Khuda 
-Hmmm Teri hai Khuda 
-
-Verse
-Haath pakad ke mujhe le chala tu
-Rehbar bana tu zindagi me 
-Haath pakad ke mujhe le chala tu
-Rehbar bana tu zindagi me 
-Saawaalo se nikala or sachhai dekhi 
-Saawaalo se nikala or sachhai dekhi 
-Jawaabo ki dori Bandhti gai
-
-
-Verse
-Mujhe chhod na tu saka
-Mujtak chala tu aaya
-Mujhe chhod na tu saka
-Mujtak chala tu aaya
-Na meri mali halat acchi thi
-Mujhe se badbu bhai aati thi
-Dukhebaaz begaaz main bigda. 
-Phir Bhi tune Milte hi gale se lagay
-
-Gale se lagaya milte hi lalese lagaya
-Gale se lagaya milte hi lalese lagaya
-
-Gale se lagaya chuma Mujhe
-Gale se lagaya chuma bhi Mujhe
-Gale se lagaya chuma bhi Mujhe

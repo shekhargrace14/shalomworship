@@ -8,7 +8,8 @@ type ChordItem = { root: string; number: number | string; quality: string; space
 type chordLyric = {
   label: string;
   chords: ChordItem[];
-  lyrics: { en: string; hi?: string; space: number };
+  indent: number;
+  lyrics: { en: string; hi?: string; };
   translation: { en: string; hi?: string };
   break?: string;
 };
@@ -141,10 +142,16 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 )}
                 {/* Lyrics row */}
                 <span>
-                  {isChord || isNashville
-                    ? addSpaces(line.lyrics.space) + line.lyrics.en
-                    : line.lyrics.en}
+                  {isChord || isNashville ? (
+                    <>
+                      {addSpaces(line.indent)}
+                      {line.lyrics[language as keyof typeof line.lyrics]}
+                    </>
+                  ) : (
+                    line.lyrics[language as keyof typeof line.lyrics]
+                  )}
                 </span>
+
                 {/* <span>{line.lyrics.hi}</span> */}
 
                 {/* Translation */}
@@ -159,13 +166,13 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
         ))}
         {/* second section */}
         {
-          song.language !== "en" ?
+          // song.language !== "en" ?
             (song.lines.map((section, sectionIdx) => (
               <div key={sectionIdx} className="">
                 {section.map((line, lineIdx) => (
                   <div key={lineIdx} className="flex flex-col items-start ">
                     {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
-                    <p>{line.lyrics[language as keyof typeof line.lyrics]}</p>
+                    <p>{line.lyrics.en}</p>
                     {isTranslation && line.translation?.en && (
                       <span className="text-sm text-muted-foreground">{line.translation.en}</span>
                     )}
@@ -175,9 +182,9 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 ))}
               </div>
             )))
-            :
+            // :
 
-            ""
+            // ""
         }
 
       </div>

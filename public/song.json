@@ -9,181 +9,56 @@
   "lines": [
     [
       {
-        "label": "Intro",
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "sus4",
-            "space": 5
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 5
-          },
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "sus4",
-            "space": 5
-          }
-        ],
-        "lyrics": {
-          "en": "",
-          "hi": ""
-        },
-        "translation": {
-          "en": ""
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "sus4",
-            "space": 5
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 5
-          },
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "sus4",
-            "space": 5
-          }
-        ],
-        "lyrics": {
-          "en": "",
-          "hi": ""
-        },
-        "translation": {
-          "en": ""
-        }
-      },
-      {
         "label": "Verse 1",
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 15
           }
         ],
-        "indent": 5,
         "lyrics": {
-          "en": "Hum Milkar Aaye",
-          "hi": "हम मिलकर आये"
-        },
-        "translation": {
-          "en": "We Have Come Together"
+          "en": "We Approach The Presence Of God"
         }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 20
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Huzuri Ke Chahne Vaale",
-          "hi": "हुज़ूरी के चाहने वाले"
-        },
-        "translation": {
-          "en": "Lovers Of Your Presence"
+          "en": "With A Humble Confident Heart"
         }
       },
       {
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 20
           }
         ],
-        "indent": 5,
         "lyrics": {
-          "en": "Teri Rooh Ke Chalaye",
-          "hi": "तेरी रूह के चलाये"
-        },
-        "translation": {
-          "en": "Led By Your Spirit"
+          "en": "Where We're Standing Now"
         }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": null
-          },
-          {
-            "root": "Ab",
-            "number": 4,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 20
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Jaayein Duniya Mein",
-          "hi": "जायें दुनिया में"
-        },
-        "translation": {
-          "en": "We Go Into The World"
+          "en": "Is Your Holy Ground"
         },
         "break": "break"
       },
@@ -191,149 +66,79 @@
         "label": "Verse 2",
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 15
           }
         ],
-        "indent": 5,
         "lyrics": {
-          "en": "Tarana Ye Lekar",
-          "hi": "तराना ये लेकर"
-        },
-        "translation": {
-          "en": "Carrying This Song"
+          "en": "We Approach The Presence Of God"
         }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 15
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Rajyo Ko Hum Sunaye",
-          "hi": "राज्यों को हम सुनाये"
-        },
-        "translation": {
-          "en": "We Will Proclaim To Nations"
+          "en": "Filled With Wonder Of Who You Are"
         }
       },
       {
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 20
           }
         ],
-        "indent": 5,
         "lyrics": {
-          "en": "Koi Sandhey Nahi Hai",
-          "hi": "कोई संदेह नहीं है"
-        },
-        "translation": {
-          "en": "There Is No Doubt"
+          "en": "In This Holy Place"
         }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 5
-          }
-        ],
-        "lyrics": {
-          "en": "Kalisiya Kahe",
-          "hi": "कलीसिया कहे"
-        },
-        "translation": {
-          "en": "The Church Declares"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "sus4",
-            "space": 5
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 5
           }
         ],
         "lyrics": {
-          "en": "",
-          "hi": ""
-        },
-        "translation": {
-          "en": ""
-        },
-        "break": "break"
+          "en": "God We Seek Your Face"
+        }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 5
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "(Kalisiya Kahe)",
-          "hi": "(कलीसिया कहे)"
-        },
-        "translation": {
-          "en": "(The Church Declares)"
+          "en": "In This Holy Place"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "We're Forever Changed"
         },
         "break": "break"
       },
@@ -341,337 +146,212 @@
         "label": "Chorus",
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 10
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 15
-          }
-        ],
-        "lyrics": {
-          "en": "Hai Yakeen Ye Hogi",
-          "hi": "है यकीन ये होगी"
-        },
-        "translation": {
-          "en": "There Is Faith There Will Be"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 10
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 15
-          }
-        ],
-        "lyrics": {
-          "en": "Bedaari Se Bhari Peedhi",
-          "hi": "बेदारी से भरी पीढ़ी"
-        },
-        "translation": {
-          "en": "A Generation Full Of Awakening"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 15
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 15
-          }
-        ],
-        "lyrics": {
-          "en": "Jab Maange Jab Dhunde",
-          "hi": "जब माँगे जब ढूंढे"
-        },
-        "translation": {
-          "en": "When They Ask When They Seek"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 15
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 15
-          }
-        ],
-        "lyrics": {
-          "en": "Baarish Karta Hai Uddhar Ki",
-          "hi": "बारिश करता है उद्धार की"
-        },
-        "translation": {
-          "en": "He Pours The Rain Of Salvation"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 15
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 15
-          }
-        ],
-        "lyrics": {
-          "en": "Jis Sansaar Se Tujhe Pyaar",
-          "hi": "जिस संसार से तुझे प्यार"
-        },
-        "translation": {
-          "en": "The World That Loves You"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 10
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 5
-          }
-        ],
-        "lyrics": {
-          "en": "Stuti Kare",
-          "hi": "स्तुति करे"
-        },
-        "translation": {
-          "en": "Will Worship"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 15
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 15
-          }
-        ],
-        "lyrics": {
-          "en": "Har Jaati Aur Har Zubaan",
-          "hi": "हर जाति और हर ज़ुबान"
-        },
-        "translation": {
-          "en": "Every Tribe And Every Tongue"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 10
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 5
-          }
-        ],
-        "lyrics": {
-          "en": "Sajda Kare",
-          "hi": "सजदा करे"
-        },
-        "translation": {
-          "en": "Will Bow Down"
-        },
-        "break": "break"
-      },
-      {
-        "label": "Verse 2",
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 20
           }
         ],
-        "indent": 5,
         "lyrics": {
-          "en": "Hum Milkar Aaye",
-          "hi": "हम मिलकर आये"
-        },
-        "translation": {
-          "en": "We Have Come Together"
+          "en": "All Glory Forever"
         }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": null
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 22
-          }
-        ],
-        "lyrics": {
-          "en": "Namra Dil Tere Saamne",
-          "hi": "नम्र दिल तेरे सामने"
-        },
-        "translation": {
-          "en": "With A Humble Heart Before You"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 20
           }
         ],
-        "indent": 5,
         "lyrics": {
-          "en": "Tohbah Hai Mann Mein",
-          "hi": "तौबह है मन में"
-        },
-        "translation": {
-          "en": "Repentance Is In The Heart"
+          "en": "Be Unto Your Name"
         }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 15
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Dua Hai Rajya Aaye",
-          "hi": "दुआ है राज्य आये"
-        },
-        "translation": {
-          "en": "Prayer Is For The Kingdom To Come"
+          "en": "Each Breath That We Take"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Was Made To Proclaim"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Forever Yahweh"
         },
         "break": "break"
       },
       {
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "sus4",
-            "space": 5
-          },
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "",
-            "space": 5
           }
         ],
         "lyrics": {
-          "en": "",
-          "hi": ""
-        },
-        "translation": {
-          "en": ""
-        },
-        "break": "break"
+          "en": "To God In The Highest"
+        }
       },
       {
         "chords": [
           {
-            "root": "F",
-            "number": 2,
-            "quality": "m",
-            "space": 10
-          },
-          {
-            "root": "Ab",
-            "number": 4,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 5
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Tera Rajya Aaye",
-          "hi": "तेरा राज्य आये"
+          "en": "Unrivalled In Fame"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "All Honour And Praise"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "All Power And Strength"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Forever Yahweh"
         },
-        "translation": {
-          "en": "Your Kingdom Come"
+        "break": "break"
+      },
+      {
+        "label": "Verse 3",
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "We Approach The Presence Of God"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Where You Are Your People Respond"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Now With Shouts Of Praise"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "All For Your Great Name"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "God We're Full Of Faith"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "All For Your Great Name"
         },
         "break": "break"
       },
@@ -679,264 +359,135 @@
         "label": "Bridge",
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 20
-          }
-        ],
-        "lyrics": {
-          "en": "Sab Stuti Kare",
-          "hi": "सब स्तुति करे"
-        },
-        "translation": {
-          "en": "Let Everyone Worship"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 25
-          },
-          {
-            "root": "/Eb",
-            "number": "/1",
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
           }
         ],
         "lyrics": {
-          "en": "Sukhi Hadiyan Jee Uthe",
-          "hi": "सूखी हड्डियां जी उठे"
-        },
-        "translation": {
-          "en": "Dry Bones Come To Life"
+          "en": "You Are Worthy To Be Praised"
         }
       },
       {
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 30
-          }
-        ],
-        "lyrics": {
-          "en": "Ye Geet Badhta Rahe",
-          "hi": "ये गीत बढ़ता रहे"
-        },
-        "translation": {
-          "en": "This Song Keeps Rising"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 20
-          },
-          {
-            "root": "/Eb",
-            "number": "/1",
+            "root": "",
+            "number": null,
             "quality": "",
             "space": null
           }
         ],
         "lyrics": {
-          "en": "Yeshu Naam Ke Liye",
-          "hi": "येशु नाम के लिये"
-        },
-        "translation": {
-          "en": "For The Name Of Jesus"
+          "en": "Be Exalted In This Place"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Yahweh"
+        }
+      },
+      {
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": "Yahweh Great I AM"
         },
         "break": "break"
       },
       {
         "chords": [
           {
-            "root": "Eb/G",
-            "number": "1/3",
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 20
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Sab Stuti Kare",
-          "hi": "सब स्तुति करे"
-        },
-        "translation": {
-          "en": "Let Everyone Worship"
+          "en": "All Consuming Holy Flame"
         }
       },
       {
         "chords": [
           {
-            "root": "Ab",
-            "number": "4",
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 10
-          },
-          {
-            "root": "Bb",
-            "number": "5",
-            "quality": "sus4",
-            "space": 20
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Sukhi Hadiyan Jee Uthe",
-          "hi": "सूखी हड्डियां जी उठे"
-        },
-        "translation": {
-          "en": "Dry Bones Come To Life"
+          "en": "You're The Fire That Won't Be Tamed"
         }
       },
       {
         "chords": [
           {
-            "root": "C",
-            "number": "6",
-            "quality": "m7",
-            "space": 5
-          },
-          {
-            "root": "Eb/G",
-            "number": "1/3",
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 20
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Ye Geet Badhta Rahe",
-          "hi": "ये गीत बढ़ता रहे"
-        },
-        "translation": {
-          "en": "This Song Keeps Rising"
+          "en": "Yahweh"
         }
       },
       {
         "chords": [
           {
-            "root": "Ab",
-            "number": "4",
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 10
-          },
-          {
-            "root": "Bb",
-            "number": "5",
-            "quality": "sus4",
-            "space": 5
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Yeshu Naam Ke Liye",
-          "hi": "येशु नाम के लिये"
-        },
-        "translation": {
-          "en": "For The Name Of Jesus"
+          "en": "Yahweh Great I AM"
         },
         "break": "break"
       },
       {
-        "label": "Bridge 2",
+        "label": "Tag",
         "chords": [
           {
-            "root": "Eb",
-            "number": 1,
+            "root": "",
+            "number": null,
             "quality": "",
-            "space": 20
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Sab Stuti Kare",
-          "hi": "सब स्तुति करे"
-        },
-        "translation": {
-          "en": "Let Everyone Worship"
+          "en": "Yahweh"
         }
       },
       {
         "chords": [
           {
-            "root": "Bb",
-            "number": 5,
-            "quality": "sus4",
-            "space": 10
-          },
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 10
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
           }
         ],
         "lyrics": {
-          "en": "Sukhi Hadiyan Jee Uthe",
-          "hi": "सूखी हड्डियां जी उठे"
-        },
-        "translation": {
-          "en": "Dry Bones Come To Life"
+          "en": "Yahweh Great I AM"
         }
-      },
-      {
-        "chords": [
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 5
-          },
-          {
-            "root": "Eb",
-            "number": 1,
-            "quality": "",
-            "space": 20
-          }
-        ],
-        "lyrics": {
-          "en": "Ye Geet Badhta Rahe",
-          "hi": "ये गीत बढ़ता रहे"
-        },
-        "translation": {
-          "en": "This Song Keeps Rising"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "Bb",
-            "number": 5,
-            "quality": "sus4",
-            "space": 10
-          },
-          {
-            "root": "F",
-            "number": 2,
-            "quality": "m7",
-            "space": 5
-          },
-          {
-            "root": "Ab",
-            "number": 4,
-            "quality": "",
-            "space": 5
-          }
-        ],
-        "lyrics": {
-          "en": "Yeshu Naam Ke Liye (x2)",
-          "hi": "येशु नाम के लिये (x2)"
-        },
-        "translation": {
-          "en": "For The Name Of Jesus (x2)"
-        },
-        "break": "break"
       }
     ]
-  ]
+  ] 

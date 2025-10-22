@@ -166,7 +166,9 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
         ))}
         {/* second section */}
         {
-          // song.language !== "en" ?
+          song.language == "en"  ?
+          ""
+           :
             (song.lines.map((section, sectionIdx) => (
               <div key={sectionIdx} className="">
                 {section.map((line, lineIdx) => (
@@ -182,9 +184,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 ))}
               </div>
             )))
-            // :
-
-            // ""
+           
         }
 
       </div>

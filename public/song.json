@@ -1,493 +1,376 @@
 {
   "_id": "67861a904a380bbf080a364f",
   "title": "Song v",
-  "key": "Db",
+  "key": "E",
   "isTranslation": false,
   "chords": true,
   "version": "version_3",
   "language": "en",
   "lines": [
-    [
-      {
-        "label": "Verse 1",
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "We Approach The Presence Of God"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "With A Humble Confident Heart"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Where We're Standing Now"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Is Your Holy Ground"
-        },
-        "break": "break"
-      },
-      {
-        "label": "Verse 2",
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "We Approach The Presence Of God"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Filled With Wonder Of Who You Are"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "In This Holy Place"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "God We Seek Your Face"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "In This Holy Place"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "We're Forever Changed"
-        },
-        "break": "break"
-      },
-      {
-        "label": "Chorus",
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "All Glory Forever"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Be Unto Your Name"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Each Breath That We Take"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Was Made To Proclaim"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Forever Yahweh"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "To God In The Highest"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Unrivalled In Fame"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "All Honour And Praise"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "All Power And Strength"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Forever Yahweh"
-        },
-        "break": "break"
-      },
-      {
-        "label": "Verse 3",
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "We Approach The Presence Of God"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Where You Are Your People Respond"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Now With Shouts Of Praise"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "All For Your Great Name"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "God We're Full Of Faith"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "All For Your Great Name"
-        },
-        "break": "break"
-      },
-      {
-        "label": "Bridge",
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "You Are Worthy To Be Praised"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Be Exalted In This Place"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Yahweh"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Yahweh Great I AM"
-        },
-        "break": "break"
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "All Consuming Holy Flame"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "You're The Fire That Won't Be Tamed"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Yahweh"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Yahweh Great I AM"
-        },
-        "break": "break"
-      },
-      {
-        "label": "Tag",
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Yahweh"
-        }
-      },
-      {
-        "chords": [
-          {
-            "root": "",
-            "number": null,
-            "quality": "",
-            "space": null
-          }
-        ],
-        "lyrics": {
-          "en": "Yahweh Great I AM"
-        }
-      }
-    ]
-  ] 
+
+[
+  {
+    "label": "Verse 1",
+    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "When I Walk Through The Valley"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "When I Walk Through The Fire"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 14 }],
+    "lyrics": {
+      "en": "I Will Be Still And Know"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "He Is God Alone"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "label": "Verse 2",
+    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "When My Soul's Tired And Weary"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": null, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "When It Feels Like The End"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 14 }],
+    "lyrics": {
+      "en": "I Will Be Confident"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "He Is Not Finished Yet"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus 1",
+    "chords": [
+      { "root": "E", "number": 1, "quality": "", "space": null }
+    ],
+    "lyrics": {
+      "en": "God Is Fighting For Us"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "He Has Won The Battle"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "A", "number": 4, "quality": "", "space": 14 }
+  ],
+    "lyrics": {
+      "en": "Have Faith And Watch Him Move"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "C#", "number": 6, "quality": "m7", "space": 15 },
+      { "root": "B", "number": 5, "quality": "", "space": 35 }
+    ],
+    "lyrics": {
+      "en": "There's Nothing That He Cannot Do"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "C#", "number": 6, "quality": "m7", "space": null },
+      { "root": "A", "number": 4, "quality": "", "space": 1 },
+      { "root": "E", "number": 1, "quality": "", "space": 8 }
+
+    ],
+    "lyrics": {
+      "en": "He Is Lord Of All"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "label": "Verse 3",
+    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Where Oh Death Is Your Triumph?"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "Where Oh Death Is Your Sting?"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 14 }],
+    "lyrics": {
+      "en": "Praise To Christ The King"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "F#", "number": 2, "quality": "m", "space": 27 },
+      { "root": "C#", "number": 6, "quality": "m", "space": 2 },
+      { "root": "B", "number": 5, "quality": "", "space": 1 }
+    ],
+    "lyrics": {
+      "en": "Who Holds The Vic - to - ry"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus 2",
+    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "God Is Fighting For Us"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "He Has Won The Battle"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space":  14 }],
+    "lyrics": {
+      "en": "Have Faith And Watch Him Move"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "C#", "number": 6, "quality": "m7", "space": 14 },
+      { "root": "B", "number": 5, "quality": "", "space": 20 }
+    ],
+    "lyrics": {
+      "en": "There's Nothing That He Cannot Do"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "B", "number": 5, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "He Is Lord"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "God Is Fighting For Us"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "He Has Won The Battle"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
+    "lyrics": {
+      "en": "Have Faith And Watch Him Move"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "C#", "number": 6, "quality": "m7", "space": 7 },
+      { "root": "B", "number": 5, "quality": "", "space": 24 }
+    ],
+    "lyrics": {
+      "en": "All Mighty And All Powerful"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "C#", "number": 6, "quality": "m7", "space": null },
+      { "root": "A", "number": 4, "quality": "", "space": 1 },
+      { "root": "E", "number": 1, "quality": "", "space": 8 }
+  ],
+    "lyrics": {
+      "en": "He Is Lord Of All"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "label": "Bridge",
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
+    "lyrics": {
+      "en": "All The Shackles Start To Break"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "All Of Hell Begins To Shake"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "At The Mention Of His Name"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+      { "root": "E", "number": 1, "quality": "sus", "space": null },
+      { "root": "E", "number": 1, "quality": "", "space": 2 }
+    ],
+    "lyrics": {
+      "en": "Je - sus"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
+    "lyrics": {
+      "en": "It Is Finished, It Is Done"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Every Battle Has Been Won"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "lyrics": {
+      "en": "Praise The One Who's Overcome"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [
+       { "root": "E", "number": 1, "quality": "sus", "space": null },
+      { "root": "E", "number": 1, "quality": "", "space": 2 }
+    ],
+    "lyrics": {
+      "en": "Jesus"
+    },
+    "translation": {
+      "en": ""
+    }
+  }
+]
+
+  ]
+
+}

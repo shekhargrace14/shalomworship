@@ -13,7 +13,7 @@ const SongSection: React.FC<any> = ({number,songs}) => {
         <section className='w-full my-2'>
           <div className='grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 '>
             {songs?.slice(number).reverse().map((item: Song) => (
-              <Card key={item.id} item={item} />
+              <Card key={item.id} item={item} type="song" />
             ))}
           </div>
         </section>

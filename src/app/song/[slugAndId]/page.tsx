@@ -160,6 +160,8 @@ const Song = async ({ params }: any) => {
   // console.log(artists, " artists of song page params");
   // console.log(creators[0]?.id, " creators of song page params");
 
+const albumTitle = songData?.album?.[0]?.album?.title || "";
+    const albumSlug = songData?.album?.[0]?.album?.slug+ "-"+ songData?.album?.[0]?.album?.id || "";
 
 
   return (
@@ -266,6 +268,14 @@ const Song = async ({ params }: any) => {
                 <ShareButton title={songData.title} />
               </div>
             </div>
+                        {songData.album && songData.album.length > 0 && (
+              <p className="text-sm">
+                Album :{" "}
+                <Link href={`/album/${albumSlug}`}>
+                  <strong> {albumTitle} </strong>
+                </Link>
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -358,28 +368,16 @@ const Song = async ({ params }: any) => {
 
         {creators.length > 0 ? (
           creators.map((creator, index) => (
-            <CreatorSongs key={index} params={creator} />
+            <>
+            <CreatorSongs key={index} params={creator.id} />
+            {/* <p>{creator.title} - {creator.id}</p> */}
+            </>
           ))
         ) : (
           <p className="font-light text-sm leading-4 text-foreground">
             No creator specified
           </p>
         )}
-
-        {/* song by category  */}
-        {/* <h2 className="text-xl font-semibold mb-2 mt-8 text-white">
-          Song based on categories &nbsp;
-          <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
-
-            {songData.category.map((category,index)=>(
-              <div key={index}>
-              <p>{category.category.slug}</p>
-              <Category slug={category.category.slug}/>
-              </div>
-
-            ))}
-          </Link>
-        </h2> */}
       </main>
     </div>
   );

@@ -7,11 +7,11 @@ import { fetchArtistBySlug } from "@/lib/query/query";
 const CreatorSongs = async ({ params }: any) => {
 
 
-  const slug = params.slug;
-  const artistData = await fetchArtistBySlug(slug);
+  const id = params;
+  const artistData = await fetchArtistBySlug(id);
   const data = artistData?.[0] ?? { song: [] };
 
-  // console.log(slug, "artist page slug");
+  console.log(id, "artist page slug");
   // console.log(data.song, "artist.song  data");
   // console.log(params, "CreatorSongs params");
 

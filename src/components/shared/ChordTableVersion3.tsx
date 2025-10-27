@@ -35,7 +35,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
       // const response = await fetch("/song.json");
       // const singleSong = await response.json();
 
-      console.log("singleSong", singleSong);
+      // console.log("singleSong", singleSong);
 
       if (singleSong) {
         const formattedSong: Song = {
@@ -60,17 +60,24 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
   const addSpaces = (count: number) => '\u00A0'.repeat(count);
 
   const language = song.language
+  const romanLanguages = ["en", "es", "fr", "de", "pt", "it", "ro", "nl"];
 
+  const isRoman = romanLanguages.includes(song.language || "en");
+
+  // console.log(isRoman, "isRoman language");
+
+  const getLyrics = (line: chordLyric, lang: string) =>
+  line.lyrics?.[lang as keyof typeof line.lyrics] || "";
   return (
     <div>
       {isChord && (
         <div className="mb-8 flex gap-4 items-center">Transpose:
           <button onClick={() => setShift(shift - 1)} className="px-3 py-1 bg-background text-foreground rounded border border-border cursor-pointer">
-            <Plus size={14} />
+            < Minus size={14} />
           </button>
           <span className="text-foreground flex items-center "> {fromKey} <ChevronRight size={18} /> {toKey}</span>
           <button onClick={() => setShift(shift + 1)} className="px-3 py-1 bg-background text-foreground rounded border border-border cursor-pointer">
-            <Minus size={14} />
+            <Plus size={14} />
           </button>
         </div>
       )}
@@ -83,20 +90,21 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
             ? "Number Chart"
             : "Lyrics"}
       </h2>
-      <div className="space-y-6 font-mono grid grid-cols-1 lg:grid-cols-2 items-start">
+        <div
+      className={`space-y-6 font-mono ${
+        isRoman ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-2"
+      } grid items-start`}
+    >
         {song.lines.map((section, sectionIdx) => (
           <div key={sectionIdx} className="mb-6">
             {section.map((line, lineIdx) => (
               <div key={lineIdx} className="flex flex-col items-start">
 
                 {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
+                {/* Nashville row */}
                 {isNashville && Array.isArray(line.chords) && line.chords.length > 0 && (
                   <div className="whitespace-pre flex flex-wrap">
                     {line.chords.map((c, i) => (
-                      // <span key={i} className=" flex">
-                      //   <p className=" min-w-8 block text-foreground font-normal ">{c.nashville.main}</p>
-                      //   {addSpaces(c.space)}
-                      // </span>
 
                       <span key={i} className="flex">
                         {addSpaces(c.space)}
@@ -129,31 +137,26 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                           <div className="w-fit text-foreground font-medium ">
                             {transposeChord([c.root], fromKey, toKey)[0]}
                           </div>
-
                           <p className="text-foreground text-xs font-medium ">
                             {c.quality}
                           </p>
                         </div>
-
                       </span>
-
                     ))}
                   </div>
                 )}
                 {/* Lyrics row */}
                 <span>
-                  {isChord || isNashville ? (
                     <>
                       {addSpaces(line.indent)}
-                      {line.lyrics[language as keyof typeof line.lyrics]}
+                      {/* {line.lyrics?.en} */}
+                      {isRoman
+                    ? getLyrics(line, song.language || "en")
+                    : getLyrics(line, "en")}
+                      {/* {line.lyrics[language as keyof typeof line.lyrics]} */}
                     </>
-                  ) : (
-                    line.lyrics[language as keyof typeof line.lyrics]
-                  )}
+                  
                 </span>
-
-                {/* <span>{line.lyrics.hi}</span> */}
-
                 {/* Translation */}
                 {isTranslation && line.translation?.en && (
                   <span className="text-sm text-muted-foreground">{line.translation.en}</span>
@@ -165,16 +168,21 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
           </div>
         ))}
         {/* second section */}
-        {
-          song.language == "en"  ?
-          ""
-           :
+        { !isRoman &&
+
             (song.lines.map((section, sectionIdx) => (
               <div key={sectionIdx} className="">
                 {section.map((line, lineIdx) => (
                   <div key={lineIdx} className="flex flex-col items-start ">
+
                     {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
-                    <p>{line.lyrics.en}</p>
+
+                    {/* lyrics row  */}
+                    {/* <p>{line.lyrics[language as keyof typeof line.lyrics]}</p> */}
+
+                    {getLyrics(line, song.language || "hi")}
+
+                    {/* Translation */}
                     {isTranslation && line.translation?.en && (
                       <span className="text-sm text-muted-foreground">{line.translation.en}</span>
                     )}

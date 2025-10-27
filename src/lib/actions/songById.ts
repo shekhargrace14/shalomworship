@@ -36,6 +36,11 @@ export async function songById(id:string) {
             category: true,
           },
         },
+         album: {
+          include: {
+            album: true,
+          },
+        },
       },
     });
 

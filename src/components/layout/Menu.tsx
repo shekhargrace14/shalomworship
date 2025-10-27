@@ -3,10 +3,11 @@ import React from "react";
 
 const Menu = () => {
   const menuItems = [
-    { title: "All", link: "/" },
+    // { title: "All", link: "/" },
     { title: "Song", link: "/song" },
     { title: "Artist", link: "/artist" },
     { title: "Category", link: "/category" },
+    { title: "Album", link: "/album" },
   ];
 
   return (

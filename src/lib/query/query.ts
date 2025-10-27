@@ -8,6 +8,8 @@ import { artistById } from "../actions/artistById";
 import { category } from "../actions/category";
 import { categoryBySlug } from "../actions/categoryBySlug";
 import { season } from "../actions/season";
+import { album } from "../actions/album";
+import { albumById } from "../actions/albumById";
 
 
 const fetchSongs = async () => {
@@ -127,6 +129,30 @@ export const useGetSeason = () =>{
   return useQuery({
     queryKey:["season"],
     queryFn: season,
+  })
+}
+// ------------------------- album ----------------------------
+
+export const fetchAlbums = async () =>{
+  const res = await album()
+  return res;
+}
+export const useGetAlbums = () =>{
+  return useQuery({
+    queryKey:["album"],
+    queryFn: album,
+  })
+}
+
+export const fetchAlbumById = (id:string) =>{
+  const res = albumById(id)
+  return res;
+}
+
+export const useGetAlbumById = (id:string) =>{
+  return useQuery({
+    queryKey:["album", id],
+    queryFn : async ()=> await albumById(id)
   })
 }
 

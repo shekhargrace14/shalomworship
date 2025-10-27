@@ -1,16 +1,18 @@
 import ArtistSection from "@/components/ArtistSection";
+import CardSection from "@/components/AlbumSection";
 import CategorySection from "@/components/CategorySection";
 import Menu from "@/components/layout/Menu";
 import SongSection from "@/components/SongSection";
 import TrendingSection from "@/components/TrendingSection";
-import { fetchArtists, fetchCategory, fetchSongs, useGetSongs } from "@/lib/query/query";
+import { fetchAlbums, fetchArtists, fetchCategory, fetchSongs, } from "@/lib/query/query";
 import Link from "next/link";
 
 export default async function Home() {
-  const [songs, artists, categories] = await Promise.all([
+  const [songs, artists, categories, album] = await Promise.all([
     fetchSongs(),
     fetchArtists(),
-    fetchCategory()
+    fetchCategory(),
+    fetchAlbums()
   ]);
   // console.log(songs)
   return (
@@ -27,6 +29,9 @@ export default async function Home() {
         <ArtistSection number={"-6"} artists={artists} />
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Latest Song</Link></h2>
         <TrendingSection number={"-6"} songs={songs}/>
+
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Album</Link></h2>
+        <CardSection number={"-6"} album={album} type="album"/>
         <br />
 
       </div>

@@ -1,10 +1,8 @@
-import ArtistSection from "@/components/ArtistSection";
 import Menu from "@/components/layout/Menu";
-import { MetaData } from "@/components/MetaData";
 import { fetchArtists, fetchCategory } from "@/lib/query/query";
 import React from "react";
-import { Metadata } from "next";  
 import { MetaDataProps } from "@/types";
+import CardSection from "@/components/AlbumSection";
 
 
 
@@ -31,7 +29,7 @@ const page = async () => {
   return (
     <div className="p-4">
       <Menu />
-      <ArtistSection artists={artists} />
+      <CardSection item={artists} />
     </div>
   );
 };

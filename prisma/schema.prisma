@@ -67,6 +67,7 @@ model artist {
   season    season[]
   song      SongArtist[] // Explicit relation
   creator   song[]
+  album     ArtistAlbum[]
 }
 model author {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -144,12 +145,14 @@ model scripture {
 model album {
   id        String      @id @default(auto()) @map("_id") @db.ObjectId
   title     String
-  image     String
+  image     String?
+  video    String?  
   slug      String
   color     String?
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
   song      SongAlbum[]
+  artist    ArtistAlbum[]
 }
 
 model season {
@@ -210,7 +213,13 @@ model SongAlbum {
   song    song   @relation(fields: [songId], references: [id])
   album   album  @relation(fields: [albumId], references: [id])
 }
-
+model ArtistAlbum {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  artistId String @db.ObjectId
+  albumId String @db.ObjectId
+  artist  artist  @relation(fields: [artistId], references: [id])
+  album   album   @relation(fields: [albumId], references: [id])
+}
 // model SongSeason {
 //   id       String @id @default(auto()) @map("_id") @db.ObjectId
 //   songId   String @db.ObjectId

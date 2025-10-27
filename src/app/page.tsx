@@ -6,6 +6,7 @@ import SongSection from "@/components/SongSection";
 import TrendingSection from "@/components/TrendingSection";
 import { fetchAlbums, fetchArtists, fetchCategory, fetchSongs, } from "@/lib/query/query";
 import Link from "next/link";
+import AlbumSection from "@/components/AlbumSection";
 
 export default async function Home() {
   const [songs, artists, categories, album] = await Promise.all([
@@ -31,7 +32,7 @@ export default async function Home() {
         <TrendingSection number={"-6"} songs={songs}/>
 
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Album</Link></h2>
-        <CardSection number={"-6"} album={album} type="album"/>
+        <AlbumSection number={"-6"} album={album} type="album"/>
         <br />
 
       </div>

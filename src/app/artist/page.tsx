@@ -3,6 +3,7 @@ import { fetchArtists, fetchCategory } from "@/lib/query/query";
 import React from "react";
 import { MetaDataProps } from "@/types";
 import CardSection from "@/components/AlbumSection";
+import ArtistSection from "@/components/ArtistSection";
 
 
 
@@ -26,10 +27,12 @@ export function generateMetadata(): MetaDataProps {
 const page = async () => {
   const artists = await fetchArtists();
 
+  // console.log(artists, "fetched artists");
+
   return (
     <div className="p-4">
       <Menu />
-      <CardSection item={artists} />
+      <ArtistSection artists={artists} />
     </div>
   );
 };

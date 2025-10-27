@@ -35,12 +35,12 @@ const Page = async ({ params }: any) => {
   const slugAndId = params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId.split('-').pop(); // extract id from slug-id
 
-  console.log(id, "albumData album page data");
+  // console.log(id, "albumData album page data");
 
   const albumData = await fetchAlbumById(id);
   const data = albumData ;
   const albumArtists = data?.artist[0].artist.title || [];
-  console.log(data, " album artists page data");
+  // console.log(data, " album artists page data");
   const slug = data?.artist[0].artist.slug+ "-"+ data?.artist[0].artist.id;
 
 // const color = albumData?.[0]?.color ?? "#121212"; 

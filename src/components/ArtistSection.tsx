@@ -9,6 +9,8 @@ type Artist = {
 
 const ArtistSection: React.FC<any> = ({number, artists}) => {
 
+  // console.log("artists in artist section", artists);
+
   return (
     <>
       <section className="w-full my-2">

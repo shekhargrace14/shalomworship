@@ -13,7 +13,7 @@ const page = async () => {
         <div>
             <div className="p-4">
                 <Menu />
-                <AlbumSection item={album} type="album"/>
+                <AlbumSection album={album} type="album"/>
                 
             </div>
 

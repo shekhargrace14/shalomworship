@@ -30,12 +30,11 @@ const Header = () => {
       {/* <Link href="/songDB"><div className="">  SongDB</div></Link> */}
       {/* <div className="hidden lg:block md:w-4/12 "> */}
       <div className="md:w-4/12 flex justify-end gap-4">
-      <Button variant="outline" asChild>
-        {/* <Link href="/contribute"> */}
-        <Link href="#">
-        Contribute
-        </Link>
-        </Button>
+        {/* <Button variant="outline" asChild>
+          <Link href="#">
+            Contribute
+          </Link>
+        </Button> */}
         <ModeToggle />
 
       </div>

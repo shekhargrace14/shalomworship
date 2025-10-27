@@ -152,7 +152,8 @@ const Song = async ({ params }: any) => {
     if (item.isCreator) {
       creators.push(a);
     }
-    if (item.artist?.type === "individual" && item.isArtist === true) {
+    // if (item.artist?.type === "individual" && item.isArtist === true) {
+    if (item.isArtist) {
       artists.push(a);
     }
   });

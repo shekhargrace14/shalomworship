@@ -67,7 +67,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
   // console.log(isRoman, "isRoman language");
 
   const getLyrics = (line: chordLyric, lang: string) =>
-  line.lyrics?.[lang as keyof typeof line.lyrics] || "";
+    line.lyrics?.[lang as keyof typeof line.lyrics] || "";
   return (
     <div>
       {isChord && (
@@ -90,11 +90,10 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
             ? "Number Chart"
             : "Lyrics"}
       </h2>
-        <div
-      className={`space-y-6 font-mono ${
-        isRoman ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-2"
-      } grid items-start`}
-    >
+      <div
+        className={`space-y-6 font-mono ${isRoman ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-2"
+          } grid items-start`}
+      >
         {song.lines.map((section, sectionIdx) => (
           <div key={sectionIdx} className="mb-6">
             {section.map((line, lineIdx) => (
@@ -109,7 +108,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                       <span key={i} className="flex">
                         {addSpaces(c.space)}
 
-                        <div className="min-w-8 flex items-start">
+                        {/* <div className="min-w-8 flex items-start">
                           <div className="w-fit text-foreground font-medium ">
                             {c.number}
                           </div>
@@ -117,6 +116,17 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                           <p className="text-foreground text-xs font-medium ">
                             {c.quality}
                           </p>
+                        </div> */}
+                        <div className="min-w-8 text-sm">
+                          <div className=" bg-card text-foreground font-medium inline-flex items-start p-[2px] px-1 rounded">
+
+                            <div className="w-fit">
+                              {c.number}
+                            </div>
+                            <p className="text-xs">
+                              {c.quality}
+                            </p>
+                          </div>
                         </div>
 
                       </span>
@@ -133,13 +143,16 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                       <span key={i} className="flex">
                         {addSpaces(c.space)}
 
-                        <div className="min-w-8 flex items-start">
-                          <div className="w-fit text-foreground font-medium ">
-                            {transposeChord([c.root], fromKey, toKey)[0]}
+                        <div className="min-w-8 text-sm">
+                          <div className=" bg-card text-foreground font-medium inline-flex items-start p-[2px] px-1 rounded">
+
+                            <div className="w-fit">
+                              {transposeChord([c.root], fromKey, toKey)[0]}
+                            </div>
+                            <p className="text-xs">
+                              {c.quality}
+                            </p>
                           </div>
-                          <p className="text-foreground text-xs font-medium ">
-                            {c.quality}
-                          </p>
                         </div>
                       </span>
                     ))}
@@ -147,15 +160,17 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 )}
                 {/* Lyrics row */}
                 <span>
-                    <>
-                      {addSpaces(line.indent)}
-                      {/* {line.lyrics?.en} */}
-                      {isRoman
-                    ? getLyrics(line, song.language || "en")
-                    : getLyrics(line, "en")}
-                      {/* {line.lyrics[language as keyof typeof line.lyrics]} */}
-                    </>
-                  
+                  <>
+                    {isChord || isNashville ?
+                      addSpaces(line.indent)
+                      : ""
+                    }
+                    {isRoman
+                      ? getLyrics(line, song.language || "en")
+                      : getLyrics(line, "en")}
+                    {/* {line.lyrics[language as keyof typeof line.lyrics]} */}
+                  </>
+
                 </span>
                 {/* Translation */}
                 {isTranslation && line.translation?.en && (
@@ -168,31 +183,31 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
           </div>
         ))}
         {/* second section */}
-        { !isRoman &&
+        {!isRoman &&
 
-            (song.lines.map((section, sectionIdx) => (
-              <div key={sectionIdx} className="">
-                {section.map((line, lineIdx) => (
-                  <div key={lineIdx} className="flex flex-col items-start ">
+          (song.lines.map((section, sectionIdx) => (
+            <div key={sectionIdx} className="">
+              {section.map((line, lineIdx) => (
+                <div key={lineIdx} className="flex flex-col items-start ">
 
-                    {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
+                  {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
 
-                    {/* lyrics row  */}
-                    {/* <p>{line.lyrics[language as keyof typeof line.lyrics]}</p> */}
+                  {/* lyrics row  */}
+                  {/* <p>{line.lyrics[language as keyof typeof line.lyrics]}</p> */}
 
-                    {getLyrics(line, song.language || "hi")}
+                  {getLyrics(line, song.language || "hi")}
 
-                    {/* Translation */}
-                    {isTranslation && line.translation?.en && (
-                      <span className="text-sm text-muted-foreground">{line.translation.en}</span>
-                    )}
-                    {line.break && <span className="font-semibold mb-4"></span>}
+                  {/* Translation */}
+                  {isTranslation && line.translation?.en && (
+                    <span className="text-sm text-muted-foreground">{line.translation.en}</span>
+                  )}
+                  {line.break && <span className="font-semibold mb-4"></span>}
 
-                  </div>
-                ))}
-              </div>
-            )))
-           
+                </div>
+              ))}
+            </div>
+          )))
+
         }
 
       </div>

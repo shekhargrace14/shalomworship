@@ -18,10 +18,9 @@ export function generateMetadata(): MetaDataProps {
 }
 
 const page = async() => {
-
-
-
+  
   const categories = await fetchCategory();
+
   return (
     <div className='p-4'>
       <Menu />

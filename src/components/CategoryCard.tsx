@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const CategoryCard = ({ category }: any) => {
-  // console.log(category);
+  // console.log(category.song.length, "category section");
 
   return (
     <>
@@ -11,6 +11,7 @@ const CategoryCard = ({ category }: any) => {
           backgroundImage: `linear-gradient(180deg, ${category?.color}, #00000080)`, // fallback to black or any second color
         }}>
           <h2 className="text-white text-base">{category.title}</h2>
+          <h2 className="text-white text-sm">{category.song.length}</h2>
 
         </div>
       </Link>

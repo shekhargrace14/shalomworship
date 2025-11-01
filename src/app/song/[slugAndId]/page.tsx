@@ -270,7 +270,7 @@ const albumTitle = songData?.album?.[0]?.album?.title || "";
               </div>
             </div>
                         {songData.album && songData.album.length > 0 && (
-              <p className="text-sm">
+              <p className="text-sm text-foreground">
                 Album :{" "}
                 <Link href={`/album/${albumSlug}`}>
                   <strong> {albumTitle} </strong>

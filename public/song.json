@@ -1,328 +1,483 @@
 {
-  "_id": "67861a904a380bbf080a364f",
+  "_id": "6905f3df122d7e175f719de1",
   "title": "Song v",
-  "key": "E",
-  "isTranslation": false,
+  "key": "Am",
+  "isTranslation": true,
   "chords": true,
   "version": "version_3",
   "language": "en",
   "lines": [
 [
   {
-    "label": "Verse 1",
-    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "chords": [
+      { "root": "A", "number": 1, "quality": "m", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 34 }
+    ],
     "lyrics": {
-      "en": "When I Walk Through The Valley"
+      "hi": "कौन है वो जो आग से बचाए",
+      "en": "Kaun Hai Wo Jo Aag Se Bachaye"
     },
     "translation": {
-      "en": ""
+      "en": "Who Is The One Who Saves From Fire"
     }
   },
   {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "chords": [ { "root": "A", "number": 1, "quality": "m", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 32 }],
     "lyrics": {
-      "en": "When I Walk Through The Fire"
+      "hi": "कौन है वो जो रास्ता बनाए",
+      "en": "Kaun Hai Wo Jo Rasta Banaye"
     },
     "translation": {
-      "en": ""
+      "en": "Who Is The One Who Makes A Way"
     }
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 14 }],
+    "chords": [
+       { "root": "A", "number": 1, "quality": "m", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 32 }
+    ],
     "lyrics": {
-      "en": "I Will Be Still And Know"
+      "hi": "कौन है वो जो आंधी रुकाए",
+      "en": "Kaun Hai Wo Jo Andhi Rukaye"
     },
     "translation": {
-      "en": ""
+      "en": "Who Is The One Who Stops The Storm"
     }
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "chords": [
+       { "root": "A", "number": 1, "quality": "m", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 36 }
+    ],
     "lyrics": {
-      "en": "He Is God Alone"
+      "hi": "कौन है वो जो अंधेरा मिटाए",
+      "en": "Kaun Hai Wo Jo Andhera Mitaye"
     },
     "translation": {
-      "en": ""
+      "en": "Who Is The One Who Removes Darkness"
     },
     "break": "break"
   },
+  {
+    "label": "Pre Chorus",
+    "chords": [{ "root": "F", "number": 6, "quality": "maj7", "space": null }],
+    "lyrics": {
+      "hi": "इतिहास को जिसने रचाया है",
+      "en": "Itihas Ko Jisne Rachaya Hai"
+    },
+    "translation": {
+      "en": "The One Who Created History"
+    }
+  },
+  {
+    "chords": [
+      { "root": "D", "number": 4, "quality": "m", "space": 5   },
+      { "root": "E", "number": 5, "quality": "", "space": 20 }
+    ],
+    "lyrics": {
+      "hi": "वो खड़ा आलम बादशाह",
+      "en": "Vo Khada Aalam Baadshah"
+    },
+    "translation": {
+      "en": "He Stands As The King Of The Universe"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus",
+    "chords": [{ "root": "A", "number": 1, "quality": "m", "space": null }],
+    "lyrics": {
+      "hi": "पहाड़िया पिघल जा",
+      "en": "Pahadiya Pighal Ja"
+    },
+    "translation": {
+      "en": "Mountains Melt Away"
+    }
+  },
+  {
+    "chords": [{ "root": "G", "number": 7, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "आफ़त तू मिट जा",
+      "en": "Aafat Tu Mit Jaa"
+    },
+    "translation": {
+      "en": "Trouble You Be Destroyed"
+    }
+  },
+  {
+    "chords": [
+      { "root": "F", "number": 6, "quality": "", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 28 }
+    ],
+    "lyrics": {
+      "hi": "येशु के शक्तिशाली नाम से",
+      "en": "Yeshu Ke Shaktishali Naam Se"
+    },
+    "translation": {
+      "en": "By Jesus' Powerful Name"
+    }
+  },
+  {
+    "chords": [{ "root": "Am", "number": 1, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "श्राप को है कुचला",
+      "en": "Shraap Ko Hai Kuchla"
+    },
+    "translation": {
+      "en": "The Curse Is Crushed"
+    }
+  },
+  {
+    "chords": [{ "root": "G", "number": 7, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "सब कुछ है बदला",
+      "en": "Sab Kuch Hai Badlaa"
+    },
+    "translation": {
+      "en": "Everything Is Changed"
+    }
+  },
+  {
+    "chords": [
+      { "root": "F", "number": 6, "quality": "", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 28 }
+    ],
+    "lyrics": {
+      "hi": "येशु के शक्तिशाली नाम से",
+      "en": "Yeshu Ke Shaktishali Naam Se"
+    },
+    "translation": {
+      "en": "By Jesus' Powerful Name"
+    },
+    "break": "break"
+  },
+
+
+
+
+
+
+
+
   {
     "label": "Verse 2",
-    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
+    "chords": [
+       { "root": "A", "number": 1, "quality": "m", "space": null },
+      { "root": "G", "number": 7, "quality": "", "space": 10 },
+      { "root": "D", "number": 4, "quality": "", "space": 22 }
+    ],
     "lyrics": {
-      "en": "When My Soul's Tired And Weary"
+      "hi": "कौन है वो जो जंग को जीताए",
+      "en": "Kaun Hai Wo Jo Jang Ko Jeetaye"
     },
     "translation": {
-      "en": ""
+      "en": "Who Is The One Who Wins The Battle"
     }
   },
   {
-    "chords": [{ "root": "C#", "number": null, "quality": "m7", "space": null }],
+    "chords": [       { "root": "A", "number": 1, "quality": "m", "space": null },
+      { "root": "G", "number": 7, "quality": "", "space": 10 },
+      { "root": "D", "number": 4, "quality": "", "space": 22 }],
     "lyrics": {
-      "en": "When It Feels Like The End"
+      "hi": "कौन है वो जो नफ़रत को मिटाए",
+      "en": "Kaun Hai Wo Jo Nafrat Ko Mitaye"
     },
     "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 14 }],
-    "lyrics": {
-      "en": "I Will Be Confident"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
-    "lyrics": {
-      "en": "He Is Not Finished Yet"
-    },
-    "translation": {
-      "en": ""
+      "en": "Who Is The One Who Removes Hatred"
     },
     "break": "break"
   },
   {
-    "label": "Chorus 1",
+    "label": "Pre Chorus",
     "chords": [
-      { "root": "E", "number": 1, "quality": "", "space": null }
-    ],
-    "lyrics": {
-      "en": "God Is Fighting For Us"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
-    "lyrics": {
-      "en": "He Has Won The Battle"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [
-      { "root": "A", "number": 4, "quality": "", "space": 14 }
-  ],
-    "lyrics": {
-      "en": "Have Faith And Watch Him Move"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [
-      { "root": "C#", "number": 6, "quality": "m7", "space": 15 },
-      { "root": "B", "number": 5, "quality": "", "space": 35 }
-    ],
-    "lyrics": {
-      "en": "There's Nothing That He Cannot Do"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [
-      { "root": "C#", "number": 6, "quality": "m7", "space": null },
-      { "root": "A", "number": 4, "quality": "", "space": 1 },
-      { "root": "E", "number": 1, "quality": "", "space": 8 }
+      { "root": "F", "number": 6, "quality": "maj7", "space": null },
+      { "root": "D", "number": 4, "quality": "", "space": 18   },
+      { "root": "D/F#", "number": "4/", "quality": "", "space": 4   }
 
     ],
     "lyrics": {
-      "en": "He Is Lord Of All"
+      "hi": "इतिहास को जिसने रचाया है",
+      "en": "Itihas Ko Jisne Rachaya Hai"
     },
     "translation": {
-      "en": ""
-    },
-    "break": "break"
-  },
-  {
-    "label": "Verse 3",
-    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
-    "lyrics": {
-      "en": "Where Oh Death Is Your Triumph?"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
-    "lyrics": {
-      "en": "Where Oh Death Is Your Sting?"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 14 }],
-    "lyrics": {
-      "en": "Praise To Christ The King"
-    },
-    "translation": {
-      "en": ""
+      "en": "The One Who Created History"
     }
   },
   {
     "chords": [
-      { "root": "F#", "number": 2, "quality": "m", "space": 27 },
-      { "root": "C#", "number": 6, "quality": "m", "space": 2 },
-      { "root": "B", "number": 5, "quality": "", "space": 1 }
+      { "root": "G", "number": 7, "quality": "", "space": 5 },
+      { "root": "E", "number": 5, "quality": "", "space": 20 }
     ],
     "lyrics": {
-      "en": "Who Holds The Vic - to - ry"
+      "hi": "वो खड़ा आलम बादशाह",
+      "en": "Vo Khada Aalam Baadshah"
     },
     "translation": {
-      "en": ""
-    },
-    "break": "break"
-  },
-  {
-    "label": "Chorus 2",
-    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
-    "lyrics": {
-      "en": "God Is Fighting For Us"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
-    "lyrics": {
-      "en": "He Has Won The Battle"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space":  14 }],
-    "lyrics": {
-      "en": "Have Faith And Watch Him Move"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [
-      { "root": "C#", "number": 6, "quality": "m7", "space": 14 },
-      { "root": "B", "number": 5, "quality": "", "space": 20 }
-    ],
-    "lyrics": {
-      "en": "There's Nothing That He Cannot Do"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "B", "number": 5, "quality": "", "space": null }],
-    "lyrics": {
-      "en": "He Is Lord"
-    },
-    "translation": {
-      "en": ""
-    },
-    "break": "break"
-  },
-  {
-    "chords": [{ "root": "E", "number": 1, "quality": "", "space": null }],
-    "lyrics": {
-      "en": "God Is Fighting For Us"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
-    "lyrics": {
-      "en": "He Has Won The Battle"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
-    "lyrics": {
-      "en": "Have Faith And Watch Him Move"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [
-      { "root": "C#", "number": 6, "quality": "m7", "space": 7 },
-      { "root": "B", "number": 5, "quality": "", "space": 24 }
-    ],
-    "lyrics": {
-      "en": "All Mighty And All Powerful"
-    },
-    "translation": {
-      "en": ""
-    }
-  },
-  {
-    "chords": [
-      { "root": "C#", "number": 6, "quality": "m7", "space": null },
-      { "root": "A", "number": 4, "quality": "", "space": 1 },
-      { "root": "E", "number": 1, "quality": "", "space": 8 }
-  ],
-    "lyrics": {
-      "en": "He Is Lord Of All"
-    },
-    "translation": {
-      "en": ""
+      "en": "He Stands As The King Of The Universe"
     },
     "break": "break"
   },
   {
     "label": "Bridge",
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
+    "chords": [{ "root": "A", "number": 1, "quality": "m", "space": null }],
     "lyrics": {
-      "en": "All The Shackles Start To Break"
+      "hi": "वही है बादशाह उसका जलाल",
+      "en": "Wahi Hai Baadshah Uska Jalaal"
+    },
+    "translation": {
+      "en": "He Is The King, His Majesty"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "उसकी हुकूमत बे-मिसाल",
+      "en": "Uski Hukumat Be-Misaal"
+    },
+    "translation": {
+      "en": "His Reign Is Incomparable"
+    }
+  },
+  {
+    "chords": [{ "root": "D", "number": 4, "quality": "", "space": 24 }],
+    "lyrics": {
+      "hi": "तख़्त पर विराजमान येशु (2)",
+      "en": "Takht Pe Virajmaan Yeshu (2)"
+    },
+    "translation": {
+      "en": "Jesus Enthroned On The Throne (2)"
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "A", "number": 1, "quality": "m", "space": null }],
+    "lyrics": {
+      "hi": "एह कब्र तेरी फतेह कहाँ",
+      "en": "Eh Kabr Teri Fateh Kahaa"
+    },
+    "translation": {
+      "en": "O Grave Where Is Your Victory"
+    }
+  },
+  {
+    "chords": [{ "root": "G", "number": 7, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "एह मौत तेरा डंक कहाँ",
+      "en": "Eh Maut Tera Dank Kahaa"
+    },
+    "translation": {
+      "en": "O Death Where Is Your Sting"
+    }
+  },
+  {
+    "chords": [{ "root": "F", "number": 6, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "तुझे तो सूली पर हराया",
+      "en": "Tu-Jhe Toh Suuli Par Haraya"
+    },
+    "translation": {
+      "en": "You Were Defeated On The Cross"
+    }
+  },
+  {
+    "chords": [{ "root": "D", "number": 4, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "येशु ने (2)",
+      "en": "Yeshu Ne (2)"
+    },
+    "translation": {
+      "en": "By Jesus (2)"
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "ज़मीन थर-थराए",
+      "en": "Zameen Thar-Tha-Raye"
+    },
+    "translation": {
+      "en": "The Earth Trembles"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "बढ़ती लहरें थम जाए",
+      "en": "Badti Laherein Thum Jaaye"
+    },
+    "translation": {
+      "en": "Rising Waves Cease"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "चीर आसमान आए येशु",
+      "en": "Cheer Asamaaan Aaye Yeshu"
+    },
+    "translation": {
+      "en": "Tearing The Sky Comes Jesus"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "ज़मीन थर-थराए",
+      "en": "Zameen Thar-Tha-Raye"
+    },
+    "translation": {
+      "en": "The Earth Trembles"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "बढ़ती लहरें थम जाए",
+      "en": "Badti Laherein Thum Jaaye"
+    },
+    "translation": {
+      "en": "Rising Waves Cease"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "चीर आसमान आए येशु",
+      "en": "Cheer Asamaaan Aaye Yeshu"
+    },
+    "translation": {
+      "en": "Tearing The Sky Comes Jesus"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "पहाड़िया पिघल जा",
+      "en": "Pahadiya Pighal Ja"
+    },
+    "translation": {
+      "en": "Mountains Melt Away"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "आफ़त तू मिट जा",
+      "en": "Aafat Tu Mit Jaa"
+    },
+    "translation": {
+      "en": "Trouble You Be Destroyed"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "येशु के शक्तिशाली नाम से",
+      "en": "Yeshu Ke Shaktishali Naam Se"
+    },
+    "translation": {
+      "en": "By Jesus' Powerful Name"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "श्राप को है कुचला",
+      "en": "Shraap Ko Hai Kuchla"
+    },
+    "translation": {
+      "en": "The Curse Is Crushed"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "सब कुछ है बदला",
+      "en": "Sab Kuch Hai Badlaa"
+    },
+    "translation": {
+      "en": "Everything Is Changed"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "येशु के शक्तिशाली नाम से",
+      "en": "Yeshu Ke Shaktishali Naam Se"
+    },
+    "translation": {
+      "en": "By Jesus' Powerful Name"
+    },
+    "break": "break"
+  },
+  {
+    "label": "Chorus Additional",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "रण गीत गाए",
+      "en": "Rana Geet Gaye"
+    },
+    "translation": {
+      "en": "Sing Battle Songs"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "शैतान को हराए",
+      "en": "Shaitan Ko Haraye"
+    },
+    "translation": {
+      "en": "Defeat Satan"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "hi": "येशु येशु येशु से",
+      "en": "Yeshu Yeshu Yeshu Se"
+    },
+    "translation": {
+      "en": "By Jesus Jesus Jesus"
+    },
+    "break": "break"
+  },
+  {
+    "label": "English Chorus",
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Dry Bones Are Rattling"
     },
     "translation": {
       "en": ""
     }
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "All Of Hell Begins To Shake"
+      "en": "No Graves Can Hold Them In"
     },
     "translation": {
       "en": ""
     }
   },
   {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "At The Mention Of His Name"
+      "en": "They're Trembling At"
     },
     "translation": {
       "en": ""
     }
   },
   {
-    "chords": [
-      { "root": "E", "number": 1, "quality": "sus", "space": null },
-      { "root": "E", "number": 1, "quality": "", "space": 2 }
-    ],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "Je - sus"
+      "en": "The Mighty Name Of Jesus"
     },
     "translation": {
       "en": ""
@@ -330,46 +485,117 @@
     "break": "break"
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": 10 }],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "It Is Finished, It Is Done"
+      "en": "Prison Walls Are Breaking Down"
     },
     "translation": {
       "en": ""
     }
   },
   {
-    "chords": [{ "root": "A", "number": 4, "quality": "", "space": null }],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "Every Battle Has Been Won"
+      "en": "Every Chain Will Hit The Ground"
     },
     "translation": {
       "en": ""
     }
   },
   {
-    "chords": [{ "root": "C#", "number": 6, "quality": "m7", "space": null }],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "Praise The One Who's Overcome"
+      "en": "They Fall Apart At"
     },
     "translation": {
       "en": ""
     }
   },
   {
-    "chords": [
-       { "root": "E", "number": 1, "quality": "sus", "space": null },
-      { "root": "E", "number": 1, "quality": "", "space": 2 }
-    ],
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
     "lyrics": {
-      "en": "Jesus"
+      "en": "The Mighty Name Of Jesus"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Oh Death You Have No Victory"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "You Fall Before The King Of Kings"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "You're Powerless At"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "The Mighty Name Of Jesus"
+    },
+    "translation": {
+      "en": ""
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "This Is Our Battle Song"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "You Can't Contain A Lion's Roar"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "The Earth Shakes At"
+    },
+    "translation": {
+      "en": ""
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "The Mighty Name Of Jesus"
     },
     "translation": {
       "en": ""
     }
   }
 ]
-
   ]
+  
 }
 

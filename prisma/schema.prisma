@@ -60,8 +60,20 @@ model artist {
   type      ArtistType? // <-- NEW: Enum to classify artist
   link      String?
   image     String?
+  isVerified Boolean? @default(false)
   slug      String?
   color     String?
+  youtube   String?
+  spotify   String?
+  appleMusic String?
+  amazonMusic String?
+  youTubeMusic String?
+  tidal     String?
+  deezer    String?
+  soundCloud String?
+  pandora   String?
+
+  
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
   season    season[]

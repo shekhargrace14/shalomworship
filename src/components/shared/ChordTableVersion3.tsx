@@ -216,5 +216,3 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
 };
 
 export default ChordTableVersion3;
-// const originalChords = section.map(item => item.chord);
-// const transposedChords = transposeChord(originalChords, fromKey, toKey);

@@ -57,8 +57,9 @@ export async function generateMetadata({ params }: any) {
   // const formatedCreatorNames = formatArtists(creatorNames);
 
   const title =
-    (song?.title || "Song Title") +
-    (song?.isChords ? " Lyrics, Chords & Nashville numbers" : " Lyrics") +
+    (song?.title  + " " + "Lyrics," || "Song Title") + 
+    (song?.isTranslation ? " Meaning" : " ") +
+    (song?.isChords ? ", Chords & Nashville numbers" : "") +
     (mainArtists.length > 0 ? " - " + artistNames : "") +
     (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
 
@@ -89,7 +90,7 @@ export async function generateMetadata({ params }: any) {
   if (song?.isChords) desc += " with chords, Nashville numbers";
 
   // Translation
-  if (song?.isTranslation) desc += " and translation";
+  if (song?.isTranslation) desc += " and meaning";
 
   // Nashville number (if in JSON lines)
   // if (song?.lines?.some((line: any) =>

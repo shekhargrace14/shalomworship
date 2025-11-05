@@ -159,7 +159,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                   </div>
                 )}
                 {/* Lyrics row */}
-                <span>
+                <span className='leading-relaxed'>
                   <>
                     {isChord || isNashville ?
                       addSpaces(line.indent)
@@ -195,7 +195,18 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                   {/* lyrics row  */}
                   {/* <p>{line.lyrics[language as keyof typeof line.lyrics]}</p> */}
 
-                  {getLyrics(line, song.language || "hi")}
+                  {/* {getLyrics(line, song.language || "hi")} */}
+
+                    {Object.entries(line.lyrics || {})
+                      .filter(([lang]) =>
+                        // Include only non-Roman languages (you can expand this list)
+                        ["hi", "ta", "te", "ml", "bn", "gu", "kn", "pa"].includes(lang)
+                      )
+                      .map(([lang, lyric]) => (
+                        <p key={lang} className="text-foreground leading-relaxed">
+                          {lyric}
+                        </p>
+                      ))}
 
                   {/* Translation */}
                   {isTranslation && line.translation?.en && (

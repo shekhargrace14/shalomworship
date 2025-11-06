@@ -200,7 +200,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                     {Object.entries(line.lyrics || {})
                       .filter(([lang]) =>
                         // Include only non-Roman languages (you can expand this list)
-                        ["hi", "ta", "te", "ml", "bn", "gu", "kn", "pa"].includes(lang)
+                        ["hi", "ta", "te", "ml", "bn", "gu", "kn", "pa","ur"].includes(lang)
                       )
                       .map(([lang, lyric]) => (
                         <p key={lang} className="text-foreground leading-relaxed">

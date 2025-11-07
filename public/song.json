@@ -1,188 +1,454 @@
 {
   "_id": "6905f3df122d7e175f719de1",
   "title": "Song v",
-  "key": "Am",
-  "isTranslation": true,
+  "key": "D",
+  "isTranslation": false,
   "chords": true,
   "version": "version_3",
   "language": "en",
   "lines": [
-[
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਮੇਰੀ ਹਾਰ ਨੂੰ ਵੀ ਜਿੱਤ ਵਿੱਚ ਬਦਲ ਦਿੰਦਾ",
-      "en": "Meri Haar Nu Vi Jitt Vich Badal Dinda"
-    },
-    "translation": {
-      "en": "He Even Turns My Defeat Into Victory"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਮੈਨੂੰ ਆਖਿਰ ਤੋਂ ਚੁੱਕ ਕਰ ਅਵਲ ਦਿੰਦਾ",
-      "en": "Mainu Aakhir To Chukk Kar Avval Dinda"
-    },
-    "translation": {
-      "en": "Lifts Me From The End And Makes Me First"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਤੇਰਾ ਡੋਲੇ ਨਾ ਈਮਾਨ ਉਹਦਾ ਵਚਨ ਕਹਿੰਦਾ",
-      "en": "Tera Dole Na Imaan Uhda Vachan Kehnda"
-    },
-    "translation": {
-      "en": "His Word Says — Your Faith Shall Never Waver"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਔਖੇ ਵੇਲਿਆਂ ਨੂੰ ਕੱਟਣ ਦਾ ਸਬਰ ਦਿੰਦਾ",
-      "en": "Aukhe Veliya Nu Kattan Da Sabar Dinda"
-    },
-    "translation": {
-      "en": "He Gives Patience To Endure The Toughest Times"
-    },
-    "break":"break"
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਹਰ ਮੁਸ਼ਕਿਲ ਵਿੱਚ ਨਾਲ ਮੇਰੇ ਖੜਦਾ ਏ",
-      "en": "Har Mushkil Vich Naal Mere Kharda Ae"
-    },
-    "translation": {
-      "en": "He Stands With Me Through Every Hardship"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਰਾਖੀ ਮੇਰੀ ਹਰ ਵੇਲੇ ਕਰਦਾ ਏ",
-      "en": "Rakhi Meri Har Vele Karda Ae"
-    },
-    "translation": {
-      "en": "He Always Protects Me"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਔਖੇ ਵੇਲਿਆਂ ਚੋ ਮੈਨੂੰ ਪੱਲ ਵਿੱਚ ਕੱਢਦਾ ਏ",
-      "en": "Aukhe Veliya Cho Mainu Pall Vich Kaddhda Ae"
-    },
-    "translation": {
-      "en": "He Pulls Me Out Of Trouble In An Instant"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਮੇਰੀ ਹਰ ਜੰਗ ਆਪੇ ਲੜਦਾ ਏ",
-      "en": "Meri Har Jang Aape Larda Ae"
-    },
-    "translation": {
-      "en": "He Himself Fights Every Battle Of Mine"
-    },
-    "break": "break"
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਦੁੱਖਾਂ ਦੇ ਸਤਾਇਆ ਨੂੰ ਦਿੰਦਾ ਏ ਦਿਲਾਸੇ",
-      "en": "Dukhan De Sataya Nu Dinda Ae Dilase"
-    },
-    "translation": {
-      "en": "He Comforts Those Tormented By Sorrow"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਰਹੇ ਜਿਹਦੇ ਨਾਲ ਸੁੱਖ ਓਹਦੇ ਆਸੇ ਪਾਸੇ",
-      "en": "Rahe Jihde Naal Sukh Ohde Aase Pase"
-    },
-    "translation": {
-      "en": "Wherever He Dwells, Peace Surrounds That Place"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਕਮਜ਼ੋਰੀਆਂ ਨੂੰ ਜ਼ੋਰ ਵਿੱਚ ਬਦਲ ਦਿੰਦਾ",
-      "en": "Kamzoriya Nu Zor Vich Badal Dinda"
-    },
-    "translation": {
-      "en": "He Turns Weaknesses Into Strength"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਮੈਨੂੰ ਆਖਿਰ ਤੋ ਚੁੱਕ ਕਰ ਅਵਲ ਦਿੰਦਾ",
-      "en": "Mainu Aakhir To Chukk Kar Avval Dinda"
-    },
-    "translation": {
-      "en": "Lifts Me From The Last And Makes Me First Again"
-    },
-    "break": "break"
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਉੱਚੀਆਂ ਨੇ ਸ਼ਾਨਾ ਕੰਮ ਓਹਦੇ ਬੇਮਿਸਾਲੀ",
-      "en": "Uchiyan Ne Shana Kamm Ohde Bemisaali"
-    },
-    "translation": {
-      "en": "His Glorious Works Are Unmatched"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਸੁਖਾਂ ਦੇ ਖਜ਼ਾਨਿਆਂ ਦਾ ਯਿਸੂ ਮੇਰਾ ਵਾਲੀ",
-      "en": "Sukhan De Khazaniyan Da Yisu Mera Vaali"
-    },
-    "translation": {
-      "en": "Jesus, My Protector, Holds Treasures Of Peace"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਜਿਹੜਾ ਮੌਤ ਨੂੰ ਵੀ ਜ਼ਿੰਦਗੀ ਚ ਬਦਲ ਦਿੰਦਾ",
-      "en": "Jihra Maut Nu Vi Zindagi Ch Badal Dinda"
-    },
-    "translation": {
-      "en": "The One Who Even Turns Death Into Life"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਮੈਨੂੰ ਆਖਿਰ ਤੋ ਚੁੱਕ ਕਰ ਅਵਲ ਦਿੰਦਾ",
-      "en": "Mainu Aakhir To Chukk Kar Avval Dinda"
-    },
-    "translation": {
-      "en": "He Lifts Me From The End And Makes Me First"
-    }
-  },
-  {
-    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
-    "lyrics": {
-      "pa": "ਮੈਨੂੰ ਆਖਿਰ ਤੋ ਚੁੱਕ ਕਰ ਅਵਲ ਦਿੰਦਾ",
-      "en": "Mainu Aakhir To Chukk Kar Avval Dinda"
-    },
-    "translation": {
-      "en": "He Lifts Me From The End And Makes Me First"
-    }
-  }
-]
-  ]
-  
-}
+    [
+      {
+        "label": "Intro",
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": null} ,
+            {"root": "G", "number": 4, "quality": "", "space": 5},
+            {"root": "D", "number": 1, "quality": "", "space": 5}
+        ],
+        "lyrics": {
+          "en": ""
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "label": "Verse 1",
+        "chords": [
+            {"root": "B", "number": 6, "quality": "m", "space": null} ,
+            {"root": "G", "number": 4, "quality": "", "space": 25},
+            {"root": "D", "number": 1, "quality": "", "space": 20}
+        ],
+        "lyrics": {
+          "en": "There Was No Way Until You Made One"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": null} ,
+            {"root": "G", "number": 4, "quality": "", "space": 23},
+            {"root": "D", "number": 1, "quality": "", "space": 8}
+        ],
+        "lyrics": {
+          "en": "Grace Upon Grace, Hallelujah"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": 25} ,
+            {"root": "G", "number": 4, "quality": "", "space": 15},
+            {"root": "D/F#", "number": "1/3", "quality": "", "space": 10}
+        ],
+        "lyrics": {
+          "en": "Even Though I Don't Deserve It, You Did It"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": 25} ,
+            {"root": "G", "number": 4, "quality": "", "space": 16},
+            {"root": "A", "number": 5, "quality": "", "space": 12}
+        ],
+        "lyrics": {
+          "en": "Even Though I Couldn't Earn It, You Give It"
+        },
+        "translation": {
+          "en": ""
+        },
+        "break": "break"
+      },
+      {
+        "label": "Chorus 1",
+        "chords": [
+                     {"root": "D", "number": 1, "quality": "", "space": null},
+                     {"root": "D", "number": 1, "quality": "maj7", "space": 26}
 
+
+        ],
+        "lyrics": {
+          "en": "Who Am I That You Keep Me On Your Mind"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "A", "number": 5, "quality": "", "space": 10},
+          {"root": "G", "number": 4, "quality": "", "space": 8}
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+           {"root": "A", "number": 5, "quality": "", "space": null},
+          {"root": "G", "number": 4, "quality": "", "space": 18}
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+            {"root": "D", "number": 1, "quality": "", "space": null},
+                     {"root": "D", "number": 1, "quality": "maj7", "space": 32}
+
+        ],
+        "lyrics": {
+          "en": "All My Life, You've Been Right Here By My Side"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+           {"root": "A", "number": 5, "quality": "", "space": 10},
+          {"root": "G", "number": 4, "quality": "", "space": 8}
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+                      {"root": "D/F#", "number": "1/3", "quality": "", "space": null},
+                      {"root": "E", "number": 2, "quality": "m", "space": 18}
+
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        },
+        "break": "break"
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+        "label": "Verse 2",
+        "chords": [
+            {"root": "B", "number": 6, "quality": "m", "space": null} ,
+            {"root": "G", "number": 4, "quality": "", "space": 15},
+            {"root": "D", "number": 1, "quality": "", "space": 15}
+        ],
+        "lyrics": {
+          "en": "Holy, Holy, There's Only One"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+            {"root": "B", "number": 6, "quality": "m", "space": null} ,
+            {"root": "G", "number": 4, "quality": "", "space": 20},
+            {"root": "D", "number": 1, "quality": "", "space": 18}
+        ],
+        
+        "lyrics": {
+          "en": "I Give You Glory For All That You've Done"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": 25} ,
+            {"root": "G", "number": 4, "quality": "", "space": 15},
+            {"root": "D/F#", "number": "1/3", "quality": "", "space": 10}
+        ],
+        "lyrics": {
+          "en": "Even Though I Don't Deserve It, You Did It"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": 25} ,
+            {"root": "G", "number": 4, "quality": "", "space": 16},
+            {"root": "A", "number": 5, "quality": "", "space": 12}
+        ],
+        "lyrics": {
+          "en": "Even Though I Couldn't Earn It, You Give It"
+        },
+        "translation": {
+          "en": ""
+        },
+        "break": "break"
+      },
+      {
+        "label": "Chorus 1",
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": ""
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      {
+        "label": "Bridge",
+        "chords": [
+          {"root": "G", "number": 4, "quality": "", "space": null},
+            {"root": "A", "number": 5, "quality": "", "space": null},
+            {"root": "D/F#", "number": "1/3", "quality": "", "space": 25}
+        ],
+        "lyrics": {
+          "en": "I-I-I, I'm Lifting Both Of My Hands"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "B", "number": 6, "quality": "m", "space": 48} ,
+            {"root": "A", "number": 5, "quality": "", "space": 16}
+        ],
+        "lyrics": {
+          "en": "You Gave Me Chance After Chance, After Chance"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+         {"root": "G", "number": 4, "quality": "", "space": null},
+            {"root": "A", "number": 5, "quality": "", "space": null},
+            {"root": "D/F#", "number": "1/3", "quality": "", "space": 25}
+        ],
+        "lyrics": {
+          "en": "And I-I-I, I'm Giving All That I Am"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+           {"root": "B", "number": 6, "quality": "m", "space": 48} ,
+            {"root": "A", "number": 5, "quality": "", "space": 22}
+        ],
+        "lyrics": {
+          "en": "Cause You Gave Me Chance After Chance, After Chance"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+        "label": "Chorus 1",
+        "chords": [
+          {
+            "root": "",
+            "number": null,
+            "quality": "",
+            "space": null
+          }
+        ],
+        "lyrics": {
+          "en": ""
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+     {
+        "label": "Chorus 2",
+        "chords": [
+                     {"root": "D", "number": 1, "quality": "", "space": null},
+                     {"root": "D", "number": 1, "quality": "maj7", "space": 26}
+
+
+        ],
+        "lyrics": {
+          "en": "I Survived And I'm Here To Testify"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+          {"root": "A", "number": 5, "quality": "", "space": 10},
+          {"root": "G", "number": 4, "quality": "", "space": 8}
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+           {"root": "A", "number": 5, "quality": "", "space": null},
+          {"root": "G", "number": 4, "quality": "", "space": 18}
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+            {"root": "D", "number": 1, "quality": "", "space": null},
+                     {"root": "D", "number": 1, "quality": "maj7", "space": 28}
+
+        ],
+        "lyrics": {
+          "en": "I’m alright if they say I’m outta my mind"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+           {"root": "A", "number": 5, "quality": "", "space": 10},
+          {"root": "G", "number": 4, "quality": "", "space": 8}
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        }
+      },
+      {
+        "chords": [
+                      {"root": "D/F#", "number": "1/3", "quality": "", "space": null},
+                      {"root": "E", "number": 2, "quality": "m", "space": 18}
+
+        ],
+        "lyrics": {
+          "en": "God, I'm Just Grateful For You"
+        },
+        "translation": {
+          "en": ""
+        },
+        "break": "break"
+      }
+
+
+
+
+
+
+
+
+
+     
+    ]
+  ]
+}

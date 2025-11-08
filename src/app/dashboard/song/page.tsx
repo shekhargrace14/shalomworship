@@ -7,21 +7,24 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { fetchSongs } from "@/lib/api/songs";
+// import { fetchSongs } from "@/lib/api/songs";
+
+import { fetchSongs } from "@/lib/query/query";
 
 import type { Song } from "@/types";
 import { Edit, Edit2 } from "lucide-react";
 import Link from "next/link";
 
 
-// This is a Next.js Server Component
 const Page = async () => {
-  const songs = await fetchSongs()
+  const data = await fetchSongs()
+  const songs = await data
   console.log(songs)
 
   return (
     <div className=''>
-      <Table>
+        song
+      {/* <Table>
         <TableCaption>A list of your songs.</TableCaption>
         <TableHeader>
           <TableRow>
@@ -49,7 +52,7 @@ const Page = async () => {
             </TableRow>
           ))}
         </TableBody>
-      </Table>
+      </Table> */}
     </div>
   );
 }

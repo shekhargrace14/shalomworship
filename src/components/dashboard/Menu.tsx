@@ -18,10 +18,10 @@ const nav = [
 
 const Menu = () => {
   return (
-    <ul>
+    <ul className='grid gap-3   pl-2'>
       {nav.map((item, i) => (
         <Link href={item.path}  key={i}>
-        <li>{item.name}</li>
+        <li className=''>{item.name}</li>
         </Link>
       ))}
     </ul>

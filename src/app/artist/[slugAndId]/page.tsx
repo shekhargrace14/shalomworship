@@ -88,7 +88,7 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
 
         <section className="w-full px-4">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 ">
-            {data?.song.map((item) => (
+            {data?.song.reverse().map((item) => (
               <div key={item.songId}>
                 <Processor item={item?.songId} type="artist" />
               </div>

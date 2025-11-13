@@ -112,6 +112,8 @@ enum LanguageType {
   ml
   kn
   es
+  mr
+  sa
 }
 
 enum TempoType {

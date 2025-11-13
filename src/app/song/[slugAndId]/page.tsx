@@ -195,6 +195,9 @@ const albumTitle = songData?.album?.[0]?.album?.title || "";
             <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
               {songData.title}{" "}
             </h1>
+            <div className="flex gap-2">
+
+            
             {creators.length > 0 ? (
               creators.map((creator, index) => (
                 <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
@@ -215,6 +218,7 @@ const albumTitle = songData?.album?.[0]?.album?.title || "";
                 No creator specified
               </p>
             )}
+            </div>
             <div className=" flex flex-wrap gap-2">
 
               {artists.length > 0 ? (

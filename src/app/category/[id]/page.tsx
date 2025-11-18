@@ -58,7 +58,7 @@ const Page = async ({ params }: any) => {
         <h2 className="text-xl font-semibold m-4 text-foreground">Songs on {data?.title}{" "}Category</h2>
         <section className="w-full px-2">
         <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2  row-span-full ">
-            {data?.song.map((item) => (
+            {data?.song?.reverse().map((item) => (
               <div key={item.songId}>
                 <Processor item={item.songId} />
               </div>

@@ -1,23 +1,47 @@
-export default function Head() {
-  const schema = {
+// components/JsonLdScript.tsx
+import { fetchSongById } from "@/lib/query/query";
+
+export default async function JsonLdScript({ id }: { id: string }) {
+  const songData = await fetchSongById(id);
+  
+  if (!songData) return null;
+
+  const artistNames = songData.artist.map(artistObj => artistObj.artist.title);
+  
+  // Build the base JSON-LD data
+  const jsonLdData: any = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Shalom Worship (TEST)",
-    url: "https://shalomworship.com/test",
-    description: "This is a static JSON-LD test to check if <head> renders correctly."
+    "@type": "MusicRecording",
+    "@id": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`,
+    "name": songData.title,
+    "description": `Lyrics for "${songData.title}" by ${artistNames.join(', ')}`,
+    "genre": "gospel",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`
+    },
+    "image": songData.image
   };
 
-  return (
-    <>
-      <title>Static Test Title</title>
-      <meta name="description" content="Static test meta description" />
+  // Add artists
+  if (artistNames.length === 1) {
+    jsonLdData.byArtist = {
+      "@type": "MusicGroup",
+      "name": artistNames[0]
+    };
+  } else if (artistNames.length > 1) {
+    jsonLdData.creator = artistNames.map(artistName => ({
+      "@type": "MusicGroup",
+      "name": artistName
+    }));
+  }
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema)
-        }}
-      />
-    </>
+
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+    />
   );
 }

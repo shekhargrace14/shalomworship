@@ -22,6 +22,8 @@ import { Dot } from "lucide-react";
 import { FAQ } from "@/components/FAQ";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
 import LinesVersion2 from "@/components/shared/LinesVersion2";
+import JsonLd from "@/components/JsonLd";
+import { Fragment } from "react";
 
 interface ArtistItem {
   artist: { title: string; id: string; link: string; type: string; isArtist: string; };
@@ -57,8 +59,8 @@ export async function generateMetadata({ params }: any) {
   // const formatedCreatorNames = formatArtists(creatorNames);
 
   const title =
-    (song?.title  + " " + "Lyrics," || "Song Title") + 
-    (song?.isTranslation ? " Meaning" : " ") +
+    (song?.title + " " + "Lyrics" || "Song Title") +
+    (song?.isTranslation ? ", Meaning" : " ") +
     (song?.isChords ? ", Chords & Nashville numbers" : "") +
     (mainArtists.length > 0 ? " - " + artistNames : "") +
     (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
@@ -66,49 +68,49 @@ export async function generateMetadata({ params }: any) {
   const keyword = await song?.keyword;
   // const metaDescription = await song?.metaDescription;
 
-   const metaDescription = (() => {
-  let desc = `${song?.title || "Unknown Song"}`;
+  const metaDescription = (() => {
+    let desc = `${song?.title || "Unknown Song"}`;
 
-  // Language mention
-  if (song?.language && song.language !== "en") {
-    const langMap: Record<string, string> = {
-      hi: "Hindi",
-      ne: "Nepali",
-      pa: "Punjabi",
-      ta: "Tamil",
-      te: "Telugu",
-      ur: "Urdu",
-      ml: "Malayalam",
-      kn: "Kannada",
-    };
-    desc += ` ${langMap[song.language] || ""}`;
-  }
+    // Language mention
+    if (song?.language && song.language !== "en") {
+      const langMap: Record<string, string> = {
+        hi: "Hindi",
+        ne: "Nepali",
+        pa: "Punjabi",
+        ta: "Tamil",
+        te: "Telugu",
+        ur: "Urdu",
+        ml: "Malayalam",
+        kn: "Kannada",
+      };
+      desc += ` ${langMap[song.language] || ""}`;
+    }
 
-  desc += " lyrics";
+    desc += " lyrics";
 
-  // Chords
-  if (song?.isChords) desc += " with chords, Nashville numbers";
+    // Chords
+    if (song?.isChords) desc += " with chords, Nashville numbers";
 
-  // Translation
-  if (song?.isTranslation) desc += " and meaning";
+    // Translation
+    if (song?.isTranslation) desc += " and meaning";
 
-  // Nashville number (if in JSON lines)
-  // if (song?.lines?.some((line: any) =>
-  //     line.chords?.some((c: any) => c.number))) {
-  //   desc += ", Nashville numbers";
-  // }
+    // Nashville number (if in JSON lines)
+    // if (song?.lines?.some((line: any) =>
+    //     line.chords?.some((c: any) => c.number))) {
+    //   desc += ", Nashville numbers";
+    // }
 
-  // Category
-  // if (song?.category?.length) {
-  //   const catNames = song.category.map((c: any) => c.name).join(", ");
-  //   desc += `. Category: ${catNames}`;
-  // }
-  if (song?.metaDescription) desc += " | "+song?.metaDescription;;
+    // Category
+    // if (song?.category?.length) {
+    //   const catNames = song.category.map((c: any) => c.name).join(", ");
+    //   desc += `. Category: ${catNames}`;
+    // }
+    if (song?.metaDescription) desc += " | " + song?.metaDescription;;
 
-  desc += " | Shalom Worship";
+    desc += " | Shalom Worship";
 
-  return desc;
-})();
+    return desc;
+  })();
 
 
 
@@ -117,7 +119,7 @@ export async function generateMetadata({ params }: any) {
   const image = await song?.image;
   // console.log(title);
 
-  return await MetaData({ title, keyword, metaDescription, slug, image });
+  return await MetaData({ title, keyword, metaDescription, slug, image, id });
 
 }
 async function fetchSongData({ id }: any) {
@@ -162,12 +164,14 @@ const Song = async ({ params }: any) => {
   // console.log(artists, " artists of song page params");
   // console.log(creators[0]?.id, " creators of song page params");
 
-const albumTitle = songData?.album?.[0]?.album?.title || "";
-    const albumSlug = songData?.album?.[0]?.album?.slug+ "-"+ songData?.album?.[0]?.album?.id || "";
+  const albumTitle = songData?.album?.[0]?.album?.title || "";
+  const albumSlug = songData?.album?.[0]?.album?.slug + "-" + songData?.album?.[0]?.album?.id || "";
 
 
   return (
+
     <div className="bg-background  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
+      <JsonLd id={id} />
       <div
         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
         style={{
@@ -197,27 +201,27 @@ const albumTitle = songData?.album?.[0]?.album?.title || "";
             </h1>
             <div className="flex gap-2">
 
-            
-            {creators.length > 0 ? (
-              creators.map((creator, index) => (
-                <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
-                  {/* <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} /> */}
-                  <Avatar>
-                    <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
-                    <AvatarFallback>SW</AvatarFallback>
-                  </Avatar>
 
-                  <span className="font-semibold text-lg leading-4 text-foreground ">
-                    {creator?.title}
-                    {index < creators.length - 1 ? ", " : ""}
-                  </span>
-                </Link>
-              ))
-            ) : (
-              <p className="font-semibold text-sm leading-4 text-foreground ">
-                No creator specified
-              </p>
-            )}
+              {creators.length > 0 ? (
+                creators.map((creator, index) => (
+                  <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
+                    {/* <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} /> */}
+                    <Avatar>
+                      <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
+                      <AvatarFallback>SW</AvatarFallback>
+                    </Avatar>
+
+                    <span className="font-semibold text-lg leading-4 text-foreground ">
+                      {creator?.title}
+                      {index < creators.length - 1 ? ", " : ""}
+                    </span>
+                  </Link>
+                ))
+              ) : (
+                <p className="font-semibold text-sm leading-4 text-foreground ">
+                  No creator specified
+                </p>
+              )}
             </div>
             <div className=" flex flex-wrap gap-2">
 
@@ -274,7 +278,7 @@ const albumTitle = songData?.album?.[0]?.album?.title || "";
                 <ShareButton title={songData.title} />
               </div>
             </div>
-                        {songData.album && songData.album.length > 0 && (
+            {songData.album && songData.album.length > 0 && (
               <p className="text-sm text-foreground">
                 Album :{" "}
                 <Link href={`/album/${albumSlug}`}>
@@ -367,17 +371,15 @@ const albumTitle = songData?.album?.[0]?.album?.title || "";
           Popular songs &nbsp;
           {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}
           {/* <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
-
             {creators[0]?.name}
           </Link> */}
         </h2>
 
         {creators.length > 0 ? (
           creators.map((creator, index) => (
-            <>
-            <CreatorSongs key={index} params={creator.id} />
-            {/* <p>{creator.title} - {creator.id}</p> */}
-            </>
+              <Fragment key={creator.id}>
+                <CreatorSongs params={creator.id} />
+              </Fragment>            
           ))
         ) : (
           <p className="font-light text-sm leading-4 text-foreground">

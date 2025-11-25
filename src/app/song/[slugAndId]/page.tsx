@@ -22,8 +22,9 @@ import { Dot } from "lucide-react";
 import { FAQ } from "@/components/FAQ";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
 import LinesVersion2 from "@/components/shared/LinesVersion2";
-import JsonLd from "@/components/JsonLd";
+// import JsonLd from "@/components/Jsonld";
 import { Fragment } from "react";
+import JsonLd from "@/components/JsonLd";
 
 interface ArtistItem {
   artist: { title: string; id: string; link: string; type: string; isArtist: string; };

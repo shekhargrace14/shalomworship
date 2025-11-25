@@ -1,7 +1,7 @@
 // components/JsonLdScript.tsx
 import { fetchSongById } from "@/lib/query/query";
 
-export default async function JsonLdScript({ id }: { id: string }) {
+export default async function JsonLd({ id }: { id: string }) {
   const songData = await fetchSongById(id);
   
   if (!songData) return null;

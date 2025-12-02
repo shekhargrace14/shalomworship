@@ -234,10 +234,4 @@ model ArtistAlbum {
   artist  artist  @relation(fields: [artistId], references: [id])
   album   album   @relation(fields: [albumId], references: [id])
 }
-// model SongSeason {
-//   id       String @id @default(auto()) @map("_id") @db.ObjectId
-//   songId   String @db.ObjectId
-//   seasonId String @db.ObjectId
-//   song     song   @relation(fields: [songId], references: [id])
-//   season   season @relation(fields: [seasonId], references: [id])
-// }
+

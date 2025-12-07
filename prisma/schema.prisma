@@ -103,17 +103,18 @@ enum VersionType {
 }
 enum LanguageType {
   en
+  es
   hi
+  kn
+  ml
+  mr
   ne
   pa
+  pt
+  sa
   ta
   te
   ur
-  ml
-  kn
-  es
-  mr
-  sa
 }
 
 enum TempoType {

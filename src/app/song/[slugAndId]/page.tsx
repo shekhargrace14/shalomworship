@@ -347,10 +347,17 @@ const Song = async ({ params }: any) => {
                   className="text-base font-semibold leading-4 text-foreground"
                 >
                   Credits - &nbsp;
-                  <Link href={creator.link} target="_blank">
-                    {creator.title}
-                    {index < creators.length - 1 ? ", " : ""}
-                  </Link>
+                  {creator.link ? (
+                    <Link href={creator.link} target="_blank">
+                      {creator.title}
+                      {index < creators.length - 1 ? ", " : ""}
+                    </Link>
+                  ) : (
+                    <>
+                      {creator.title}
+                      {index < creators.length - 1 ? ", " : ""}
+                    </>
+                  )}
                 </span>
               ))
             ) : (
@@ -378,9 +385,9 @@ const Song = async ({ params }: any) => {
 
         {creators.length > 0 ? (
           creators.map((creator, index) => (
-              <Fragment key={creator.id}>
-                <CreatorSongs params={creator.id} />
-              </Fragment>            
+            <Fragment key={creator.id}>
+              <CreatorSongs params={creator.id} />
+            </Fragment>
           ))
         ) : (
           <p className="font-light text-sm leading-4 text-foreground">

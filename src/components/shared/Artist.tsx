@@ -35,7 +35,7 @@ const Artist = ({ artists }: ArtistProps) => {
     <section className="w-full flex flex-col gap-2">
       {artists && artists.length > 0 ? (
         artists
-          ?.slice()
+          ?.slice(12)
           .reverse()
           .map((item) => (
             <Link key={item.id} href={`/artist/${slugify(item.title, { lower: true })}-${item.id}`}>
@@ -54,7 +54,7 @@ const Artist = ({ artists }: ArtistProps) => {
                       width={60}
                       height={60}
                       className=" object-cover h-full"
-                      priority
+                      priority={false} // removing this because its rendering in head
                     />
 
                   </div>

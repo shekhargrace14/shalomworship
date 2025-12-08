@@ -1,226 +1,159 @@
 // components/JsonLdScript.tsx
 import { fetchSongById } from "@/lib/query/query";
-import LanguageName from "./LanguageName";
 import { getLanguageName } from "@/utils/getLanguageName";
 
 export default async function JsonLd({ id }: { id: string }) {
   const songData = await fetchSongById(id);
   if (!songData) return null;
 
-  const artistNames = songData.artist.map(a => a.artist.title);
+  // -------- SAFE VALUES --------
+  const artistNames = songData.artist?.map(a => a.artist.title) || [];
   const primaryArtist = artistNames[0] || "Unknown Artist";
 
   const lang = songData.language ?? "en";
   const langName = getLanguageName(lang);
 
+  const safeImage = songData.image || "https://www.shalomworship.com/default-song.jpg";
+  const safeVideoId = songData.videoId || "";
+  const safeCategory = songData.category?.[0]?.category;
+  const safeAlbum = songData.album?.[0]?.album;
 
-  // Safely extract first 250 chars of lyrics in the correct language
-  function getLyricSnippet(songData: any, lang: string) {
-    if (!Array.isArray(songData.lines)) return "";
+  // -------- LYRICS SNIPPET --------
+  function getLyricSnippet(data: any, lang: string): string {
+    if (!Array.isArray(data.lines)) return "";
 
-    for (const section of songData.lines) {
+    for (const section of data.lines) {
       if (!Array.isArray(section)) continue;
 
       for (const line of section) {
         const lyric = line?.lyrics?.[lang];
-
-        // if lyric exists and is a non-empty string
-        if (typeof lyric === "string" && lyric.trim().length > 0) {
+        if (typeof lyric === "string" && lyric.trim()) {
           return lyric.slice(0, 250).trim();
         }
       }
     }
-
-    return ""; // fallback
+    return "";
   }
+
   const lyricSnippet =
     getLyricSnippet(songData, lang) ||
     getLyricSnippet(songData, "en") ||
     "";
 
-
-  // songData.lines?.[0]?.lyrics?.[lang]?.slice(0, 250)?.trim() || "";
-  // songData.excerpt || "";
-
-  const jsonLdData: any = {
+  // -------- JSON-LD DATA --------
+  const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "MusicComposition",
     "@id": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`,
+    "identifier": `${songData.slug}-${songData.id}`,
 
-    "name": songData.title,
-    "inLanguage": lang,
-    "genre": "Gospel",
-    "alternateName": `${songData.title} Lyrics in ${langName} `,
-    // "description": `${songData.title} lyrics by ${primaryArtist}. Includes chords, meaning, and details.`,
-    "description": `${songData.title} ${langName} Christian worship song by ${artistNames[0]}. Read lyrics,${songData.isChords ? " chords," : ""} translation, meaning${songData.isChords ? ", and Nashville Number Chart" : ""}.`,
+    name: songData.title,
+    inLanguage: lang,
+    alternateName: `${songData.title} Lyrics in ${langName}`,
+    genre: "Gospel",
 
-    // ---- LYRICS PREVIEW (SAFE FOR GOOGLE) ----
-    "lyrics": {
+    description: `${songData.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics${songData.isChords ? ", chords and Nashville Numbers Chart" : ""}, translation, and meaning.`,
+
+    lyrics: {
       "@type": "CreativeWork",
-      "text": lyricSnippet ? lyricSnippet + "..." : undefined
+      text: lyricSnippet ? `${lyricSnippet}...` : undefined,
     },
 
-    // ---- ARTIST / CREATOR ----
-    "lyricist": {
-      "@type": "Person",
-      "name": primaryArtist
-    },
-    "composer": {
-      "@type": "Person",
-      "name": primaryArtist
-    },
-    ...(artistNames.length === 1
-      ? {
-        byArtist: {
-          "@type": "MusicGroup",
-          "name": primaryArtist
-        }
-      }
-      : {
-        creator: artistNames.map(name => ({
-          "@type": "MusicGroup",
-          "name": name
-        }))
-      }),
+    lyricist: { "@type": "Person", name: primaryArtist },
+    composer: { "@type": "Person", name: primaryArtist },
 
-    "about": [
-      ...artistNames.map(n => ({
-        "@type": "MusicGroup",
-        "name": n
-      })),
-      {
-        "@type": "MusicGenre",
-        "name": "Gospel"
-      },
-      {
-        "@type": "Thing",
-        "name": `${langName} Christian Worship`
-      }
+    byArtist: {
+      "@type": "MusicGroup",
+      name: primaryArtist,
+    },
+
+    about: [
+      ...artistNames.map(n => ({ "@type": "MusicGroup", name: n })),
+      { "@type": "MusicGenre", name: "Gospel" },
+      { "@type": "Thing", name: `${langName} Christian Worship` },
     ],
 
-
-
-    // ---- COVER IMAGE ----
-    "image": {
+    image: {
       "@type": "ImageObject",
-      "url": songData.image,
-      "width": 1200,
-      "height": 630
+      url: safeImage,
+      width: 1200,
+      height: 630,
     },
-    "thumbnailUrl": songData.image,
+    thumbnailUrl: safeImage,
 
-    "workExample": {
-      "@type": "MusicRecording",
-      "url": `https://www.youtube.com/watch?v=${songData.videoId}`
-    },
+    workExample: safeVideoId
+      ? { "@type": "MusicRecording", url: `https://www.youtube.com/watch?v=${safeVideoId}` }
+      : undefined,
 
-    "datePublished": songData.createdAt,
-
-
-    // --- CATEGORY ------
-
-    "isPartOf": {
-      "@type": "MusicPlaylist",
-      "name": songData.category?.[0]?.category?.title || "",
-      "url": `https://www.shalomworship.com/category/${songData.category?.[0]?.category?.slug}`
-    },
-
-
-    // ---- RECORDING INFO (YouTube) ----
-    ...(songData.videoId
+    recordedAs: safeVideoId
       ? {
-        recordedAs: {
           "@type": "MusicRecording",
-          "name": `${songData.title} (Audio)`,
-          "url": `https://www.youtube.com/watch?v=${songData.videoId}`,
-          "inLanguage": lang
+          name: `${songData.title} (Audio)`,
+          url: `https://www.youtube.com/watch?v=${safeVideoId}`,
+          inLanguage: lang,
+          "identifier": `${safeVideoId}`,
         }
-      }
-      : {}),
+      : undefined,
 
-    // ---- ALBUM (if exists) ----
-    ...(songData.album?.length
+    isPartOf: safeCategory
       ? {
-        inAlbum: {
-          "@type": "MusicAlbum",
-          "name": songData.album[0].album.title,
-          "url": `https://www.shalomworship.com/album/${songData.album[0].album.slug}-${songData.album[0].album.id}`,
-          "image": {
-            "@type": "ImageObject",
-            "url": songData.album[0].album.image
-          }
+          "@type": "MusicPlaylist",
+          name: safeCategory.title,
+          url: `https://www.shalomworship.com/category/${safeCategory.slug}`,
         }
-      }
-      : {}),
+      : undefined,
 
-    // ---- MAIN PAGE ----
-    "mainEntityOfPage": {
+    inAlbum: safeAlbum
+      ? {
+          "@type": "MusicAlbum",
+          name: safeAlbum.title,
+          url: `https://www.shalomworship.com/album/${safeAlbum.slug}-${safeAlbum.id}`,
+          image: {
+            "@type": "ImageObject",
+            url: safeAlbum.image || "",
+          },
+        }
+      : undefined,
+
+    datePublished: songData.createdAt?.toISOString?.() || undefined,
+
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`
+      "@id": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`,
     },
 
-    // ---- BREADCRUMB ----
-    "breadcrumb": {
+    breadcrumb: {
       "@type": "BreadcrumbList",
-      "itemListElement": [
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Songs",
-          "item": "https://www.shalomworship.com/song"
+          position: 1,
+          name: "Songs",
+          item: "https://www.shalomworship.com/song",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": songData.title,
-          "item": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`
-        }
-      ]
+          position: 2,
+          name: songData.title,
+          item: `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`,
+        },
+      ],
     },
 
-    "keywords": songData.keyword?.join(", ") || undefined,
+    keywords: songData.keyword?.join(", ") || undefined,
 
-
-    // ---- PUBLISHER INFO ----
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "Shalom Worship",
-      "url": "https://www.shalomworship.com",
-      "logo": {
+      name: "Shalom Worship",
+      url: "https://www.shalomworship.com",
+      logo: {
         "@type": "ImageObject",
-        "url": "https://www.shalomworship.com/logo.png"
-      }
-    }
-
-    // future section 
-    // 1. Add sameAs (External links)
-    // Helps Google connect the artist or page with trusted sources.
-    // If the artist has Instagram / Spotify, add those too.
-
-    // "sameAs": [
-      // "https://www.youtube.com/watch?v=1MDS1VQnTcc"
-    // ]
-
-    // 2. Add teaches (for meaning pages)
-    // Google uses this for educational content:
-    // "teaches": "Meaning and interpretation of the Christian worship song Shukrguzar"
-
-    // 3. Add version for freshness
-    // "version": "1.0"
-
-    // 4. Add duration for music recording (if known)
-    // "duration": "PT4M12S"
-    // This strengthens MusicRecording schema.
-
-
-
-
+        url: "https://www.shalomworship.com/logo.png",
+      },
+    },
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }} />
   );
 }

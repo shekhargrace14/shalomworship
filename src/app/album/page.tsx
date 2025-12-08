@@ -8,7 +8,7 @@ const page = async () => {
     const album = await fetchAlbums();
     const songData = album[0];
 
-    console.log("album data in album page:", album);
+    // console.log("album data in album page:", album);
     return (
         <div>
             <div className="p-4">

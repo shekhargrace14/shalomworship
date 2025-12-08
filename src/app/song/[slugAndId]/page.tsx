@@ -3,7 +3,6 @@ import Category from "@/components/category";
 import CategoryCard from "@/components/CategoryCard";
 import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
-import { MetaData } from "@/components/MetaData";
 import ShareButton from "@/components/ShareButton";
 import Lines from "@/components/shared/LinesVersion2";
 import PlayButton from "@/components/ui/Play";
@@ -17,7 +16,6 @@ import Link from "next/link";
 import slugify from "slugify";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 
-import formatArtists from "@/utils/formatArtists";
 import { Dot } from "lucide-react";
 import { FAQ } from "@/components/FAQ";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
@@ -25,10 +23,17 @@ import LinesVersion2 from "@/components/shared/LinesVersion2";
 // import JsonLd from "@/components/Jsonld";
 import { Fragment } from "react";
 import JsonLd from "@/components/JsonLd";
+import { parseSlugAndId } from "@/utils/parseSlugAndId";
+import { getLanguageName } from "@/utils/getLanguageName";
+import { Metadata } from "next";
+import { buildSongMetadata } from "@/utils/seo";
 
-interface ArtistItem {
-  artist: { title: string; id: string; link: string; type: string; isArtist: string; };
-  isCreator: boolean;
+async function fetchSongData({ id }: any) {
+
+  const res = await fetchSongById(id); "use client";
+
+  const data = res;
+  return data || null;
 }
 
 export async function generateStaticParams() {
@@ -39,102 +44,24 @@ export async function generateStaticParams() {
     return { slug };
   });
 }
-export async function generateMetadata({ params }: any) {
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId.split('-').pop(); // extract id from slug-id
 
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const slugAndId = params.slugAndId;
+  const { id } = parseSlugAndId(slugAndId);
 
-  // const slugParams = await params.id;
   const song = await fetchSongById(id);
-  // console.log(song, " song of song page params");
-  // const title = (await song?.title) + " " + "by " + (await song?.artist[0]?.artist?.name) || "Unknown Song";
-  const mainArtists = song?.artist?.filter((a) => a.isArtist) || [];
-  const creatorArtists = song?.artist?.filter((a) => a.isCreator) || [];
-  // console.log(mainArtists, " mainArtists of song page params");
-  // console.log(creatorArtists, " creatorArtists of song page params");
 
-  // const artistNames = mainArtists.map((a) => a.artist?.name).join(", ");
-  const creatorNames = creatorArtists.map((a) => a.artist?.title).join(", ");
-
-  const artistNames = formatArtists(mainArtists.map((a) => a.artist?.title));
-  // const formatedCreatorNames = formatArtists(creatorNames);
-
-  const title =
-    (song?.title + " " + "Lyrics" || "Song Title") +
-    (song?.isTranslation ? ", Meaning" : " ") +
-    (song?.isChords ? ", Chords & Nashville numbers" : "") +
-    (mainArtists.length > 0 ? " - " + artistNames : "") +
-    (creatorArtists.length > 0 ? " | " + creatorNames : "") + " | Shalom Worship"
-
-  const keyword = await song?.keyword;
-  // const metaDescription = await song?.metaDescription;
-
-  const metaDescription = (() => {
-    let desc = `${song?.title || "Unknown Song"}`;
-
-    // Language mention
-    if (song?.language && song.language !== "en") {
-      const langMap: Record<string, string> = {
-        hi: "Hindi",
-        ne: "Nepali",
-        pa: "Punjabi",
-        ta: "Tamil",
-        te: "Telugu",
-        ur: "Urdu",
-        ml: "Malayalam",
-        kn: "Kannada",
-      };
-      desc += ` ${langMap[song.language] || ""}`;
-    }
-
-    desc += " lyrics";
-
-    // Chords
-    if (song?.isChords) desc += " with chords, Nashville numbers";
-
-    // Translation
-    if (song?.isTranslation) desc += " and meaning";
-
-    // Nashville number (if in JSON lines)
-    // if (song?.lines?.some((line: any) =>
-    //     line.chords?.some((c: any) => c.number))) {
-    //   desc += ", Nashville numbers";
-    // }
-
-    // Category
-    // if (song?.category?.length) {
-    //   const catNames = song.category.map((c: any) => c.name).join(", ");
-    //   desc += `. Category: ${catNames}`;
-    // }
-    if (song?.metaDescription) desc += " | " + song?.metaDescription;;
-
-    desc += " | Shalom Worship";
-
-    return desc;
-  })();
-
-
-
-  const slug = slugify(`${song?.title}`, { lower: true }) + '-' + song?.id.toString();
-
-  const image = await song?.image;
-  // console.log(title);
-
-  return await MetaData({ title, keyword, metaDescription, slug, image, id });
-
+  return buildSongMetadata({
+    song,
+    slugAndId,
+  });
 }
-async function fetchSongData({ id }: any) {
-
-  const res = await fetchSongById(id); "use client";
-
-  const data = res;
-  return data || null;
-}
-
 
 const Song = async ({ params }: any) => {
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId?.split('-').pop(); // extract id from slug-id
+  // const slugAndId = await params.slugAndId; // this is the [slugAndId] part
+  // const id = slugAndId?.split('-').pop(); // extract id from slug-id
+
+  const { id } = parseSlugAndId(params?.slugAndId);
 
 
   if (!id) {

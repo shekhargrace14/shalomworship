@@ -39,7 +39,7 @@ const Page = async ({ params }: any) => {
 
   const artistData = await fetchArtistById(id);
   const data = artistData && artistData[0];
-  console.log(data, "artist page id");
+  // console.log(data, "artist page id");
   
   // const album = artistData?.[0]?.album || [];
 const color = artistData?.[0]?.color ?? "#121212"; // fallback color

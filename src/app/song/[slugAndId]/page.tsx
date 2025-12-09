@@ -27,6 +27,7 @@ import { parseSlugAndId } from "@/utils/parseSlugAndId";
 import { getLanguageName } from "@/utils/getLanguageName";
 import { Metadata } from "next";
 import { buildSongMetadata } from "@/utils/seo";
+import CategorySongs from "@/components/CategorySongs";
 
 async function fetchSongData({ id }: any) {
 
@@ -90,10 +91,12 @@ const Song = async ({ params }: any) => {
   });
 
   // console.log(artists, " artists of song page params");
-  // console.log(creators[0]?.id, " creators of song page params");
 
   const albumTitle = songData?.album?.[0]?.album?.title || "";
   const albumSlug = songData?.album?.[0]?.album?.slug + "-" + songData?.album?.[0]?.album?.id || "";
+
+  const categories = songData?.category.map(c => c.category.slug)
+  // console.log(categories);
 
 
   return (
@@ -128,8 +131,6 @@ const Song = async ({ params }: any) => {
               {songData.title}{" "}
             </h1>
             <div className="flex gap-2">
-
-
               {creators.length > 0 ? (
                 creators.map((creator, index) => (
                   <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
@@ -195,13 +196,6 @@ const Song = async ({ params }: any) => {
                 </p>
               )}
               <Dot className="text-foreground" />
-              {/* <p className="text-sm  text-white">
-                {new Date(songData.createdAt).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p> */}
               <div className=" ">
                 <ShareButton title={songData.title} />
               </div>
@@ -217,17 +211,7 @@ const Song = async ({ params }: any) => {
           </div>
         </div>
       </div>
-      {/* <Ad1 /> */}
-      {/* <PlayButton
-        audioUrl="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-        title={songData.title}
-        artist={creators[0]?.name || artists[0]?.name || "Unknown Artist"}
-        image={songData.image || "/default-image.jpg"}
-      /> */}
       <main className="mx-auto p-4 pt-4 relative">
-        {/* <div className="absolute right-2 sm:top-[12px] top-[-8px]">
-          <ShareButton title={songData.title} />
-        </div> */}
         {songData.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
@@ -247,22 +231,6 @@ const Song = async ({ params }: any) => {
           isChords={!!songData.isChords}
           isTranslations={!!songData.isTranslation}
         /> : null}
-        {/* {songData.lines && Array.isArray(songData.lines) && songData.lines.length > 0 ? (
-            <Lines
-              id={songData.id}
-              song={songData}
-              isChords={!!songData.isChords}
-              version={songData.version || "version_1"}
-            />
-          ) : (
-            <section className="w-full text-foreground">
-              <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
-                {songData.title} lyrics
-              </h2>
-              <div dangerouslySetInnerHTML={{ __html: songData.content }} />
-            </section>
-          )
-        } */}
         <section className="w-full text-foreground mt-12">
           {/* <div >{songData.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">
@@ -302,6 +270,46 @@ const Song = async ({ params }: any) => {
           scripture={creators}
           meaning={songData.title}  
         /> */}
+        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">Songs Based on &nbsp;
+          {songData.category && songData.category.length > 0 ? (
+            songData.category.length > 1 ? (
+              songData.category.map((category, index) => (
+                <span
+                  key={index}
+                // className="font-light text-sm leading-4 text-foreground"
+                >
+                  <Link href={`/category/${category?.category.slug}`}>
+                    {category?.category.title}
+                  </Link>
+                  {index < songData.category.length - 1 ? ", " : ""}
+                </span>
+              ))
+            ) : (
+              <Link
+                href={`/category/${songData.category[0]?.category.slug}`}
+              >
+                {songData.category[0]?.category.title}
+              </Link>
+            )
+          ) : (
+            <p className="font-light text-sm leading-4 text-foreground">
+              Unknown category
+            </p>
+          )}
+        </h2>
+
+        {categories.length > 0 ? (
+          categories.map((id, index) => (
+            <Fragment key={id}>
+              <CategorySongs params={id} />
+            </Fragment>
+          ))
+        ) : (
+          <p className="font-light text-sm leading-4 text-foreground">
+            No creator specified
+          </p>
+        )}
+
         <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">
           Popular songs &nbsp;
           {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}

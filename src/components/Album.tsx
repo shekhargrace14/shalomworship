@@ -9,7 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 const Album: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
   const artists = item.artist || [];
-  console.log(artists, "album artists");
+  // console.log(artists, "album artists");
 
   const slug = slugify(`${item.slug}`, { lower: true });
 

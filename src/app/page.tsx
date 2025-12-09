@@ -7,6 +7,7 @@ import TrendingSection from "@/components/TrendingSection";
 import { fetchAlbums, fetchArtists, fetchCategory, fetchSongs, } from "@/lib/query/query";
 import Link from "next/link";
 import AlbumSection from "@/components/AlbumSection";
+import CategorySongs from "@/components/CategorySongs";
 
 export default async function Home() {
   const [songs, artists, categories, album] = await Promise.all([
@@ -20,6 +21,9 @@ export default async function Home() {
     <>
       <div className=" p-4 overflow-y-auto custom-scrollbar ">
         <Menu />
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Christmas Songs</Link> </h2>
+        <CategorySongs params={"christmas"} />
+
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Trending Songs</Link> </h2>
         <SongSection number={"-8"} songs={songs} />
         {/* <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Chords</Link> </h2> */}
@@ -29,10 +33,10 @@ export default async function Home() {
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"><Link href={"/artist"}>Your Favorite Artist</Link></h2>
         <ArtistSection number={"-6"} artists={artists} />
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Latest Song</Link></h2>
-        <TrendingSection number={"-6"} songs={songs}/>
+        <TrendingSection number={"-6"} songs={songs} />
 
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Album</Link></h2>
-        <AlbumSection number={"-6"} album={album} type="album"/>
+        <AlbumSection number={"-6"} album={album} type="album" />
         <br />
 
       </div>

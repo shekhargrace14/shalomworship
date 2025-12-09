@@ -32,11 +32,11 @@ const Page = async ({ params }: any) => {
   const categoryData = await fetchCategoryBySlug(categorySlug);
   const data = categoryData?.[0];
   const color = categoryData?.[0]?.color ?? "#121212"; // fallback color
-  console.log(color, "category page color");
+  // console.log(color, "category page color");
 
   //   console.log(categoryData, "categoryData  page data");
 
-  console.log(data?.song, "categoryData song page data");
+  // console.log(data?.song, "categoryData song page data");
   return (
     <>
       <div className="bg-background  rounded-lg">

@@ -97,6 +97,10 @@ const Song = async ({ params }: any) => {
 
   const categories = songData?.category.map(c => c.category.slug)
   // console.log(categories);
+  const language = songData.language
+    const langName = getLanguageName(language);
+
+  console.log(language, "lang")
 
 
   return (
@@ -196,9 +200,16 @@ const Song = async ({ params }: any) => {
                 </p>
               )}
               <Dot className="text-foreground" />
+              <p className="font-light text-sm leading-4 text-foreground">
+                <Link href={`/language/${language}`}>
+                {langName}
+                </Link>
+              </p>
+              <Dot className="text-foreground" />
               <div className=" ">
                 <ShareButton title={songData.title} />
               </div>
+              
             </div>
             {songData.album && songData.album.length > 0 && (
               <p className="text-sm text-foreground">
@@ -270,7 +281,7 @@ const Song = async ({ params }: any) => {
           scripture={creators}
           meaning={songData.title}  
         /> */}
-        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">Songs Based on &nbsp;
+        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">Songs Based on&nbsp;
           {songData.category && songData.category.length > 0 ? (
             songData.category.length > 1 ? (
               songData.category.map((category, index) => (

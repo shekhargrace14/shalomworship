@@ -192,6 +192,7 @@ model SongArtist {
   isArtist  Boolean? @default(true)
   song      song     @relation(fields: [songId], references: [id])
   artist    artist   @relation(fields: [artistId], references: [id])
+  createdAt       DateTime? @default(now())
 }
 
 // Intermediate table for song-genre many-to-many

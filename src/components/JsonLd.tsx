@@ -62,14 +62,18 @@ export default async function JsonLd({ id }: { id: string }) {
     lyricist: { "@type": "Person", name: primaryArtist },
     composer: { "@type": "Person", name: primaryArtist },
 
-    byArtist: {
-      "@type": "MusicGroup",
-      name: primaryArtist,
-    },
+    // byArtist: {
+    //   "@type": "MusicGroup",
+    //   name: primaryArtist,
+    // },
+    creator: artistNames.map(name => ({
+  "@type": "MusicGroup",
+  name
+})),
+
 
     about: [
       ...artistNames.map(n => ({ "@type": "MusicGroup", name: n })),
-      { "@type": "MusicGenre", name: "Gospel" },
       { "@type": "Thing", name: `${langName} Christian Worship` },
     ],
 

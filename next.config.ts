@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 import redirects from "./redirects";
 
 const withPWA = require('next-pwa')({
-  dest:'public',
-  register:true,
+  dest: 'public',
+  register: true,
   skipWaiting: true,
 })
 

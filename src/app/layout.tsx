@@ -4,7 +4,7 @@ import "./globals.css";
 import { QueryProvider } from "@/lib/query/query-provider";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
-// import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
 
@@ -80,14 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 gap-x-4 bg-background">
         {/* Google Analytics */}
         {process.env.NODE_ENV === "production" && (
-          <Script id="ga-idle" strategy="lazyOnload">
-    {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H4QZJK5XEN');
-    `}
-  </Script>
+          <GoogleAnalytics gaId="G-H4QZJK5XEN" />
         )}
 
         {/* Google Ads (Auto Ads) */}

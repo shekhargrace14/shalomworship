@@ -4,7 +4,7 @@ import "./globals.css";
 import { QueryProvider } from "@/lib/query/query-provider";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
-import { GoogleAnalytics } from '@next/third-parties/google';
+// import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
 
@@ -80,14 +80,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 gap-x-4 bg-background">
         {/* Google Analytics */}
         {process.env.NODE_ENV === "production" && (
-          <GoogleAnalytics gaId="G-H4QZJK5XEN" />
+          <Script id="ga-idle" strategy="lazyOnload">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H4QZJK5XEN');
+    `}
+  </Script>
         )}
 
         {/* Google Ads (Auto Ads) */}
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"
           crossOrigin="anonymous"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
 
         {/* REMOVE AMP — this was breaking SEO */}

@@ -84,11 +84,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
 
         {/* Google Ads (Auto Ads) */}
-        <Script
+        {/* <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"
           crossOrigin="anonymous"
           strategy="afterInteractive"
-        />
+        /> */}
 
         {/* REMOVE AMP — this was breaking SEO */}
 

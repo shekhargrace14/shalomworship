@@ -137,7 +137,7 @@ const Song = async ({ params }: any) => {
             <div className="flex gap-2">
               {creators.length > 0 ? (
                 creators.map((creator, index) => (
-                  <Link key={index} href={`/artist/${slugify(creators[0]?.title, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
+                  <Link key={index} href={`/artist/${slugify(creators[0]?.slug, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
                     {/* <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} /> */}
                     <Avatar>
                       <AvatarImage src={creator?.image || "/default-avatar.jpg"} />

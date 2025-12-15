@@ -9,7 +9,7 @@ const ArtsitCard = ({ item }:any) => {
 
   // console.log("item in artist card", item);
 
-  const slug = slugify(`${item.title}`, {lower: true,}) 
+  const slug = slugify(`${item.slug}`, {lower: true,}) 
 
   return (
     

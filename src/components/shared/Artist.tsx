@@ -38,7 +38,7 @@ const Artist = ({ artists }: ArtistProps) => {
           ?.slice(12)
           .reverse()
           .map((item) => (
-            <Link key={item.id} href={`/artist/${slugify(item.title, { lower: true })}-${item.id}`}>
+            <Link key={item.id} href={`/artist/${item.slug}-${item.id}`}>
 
               <div
                 className={`rounded-lg bg-card ${urlSlug.includes(item.id)

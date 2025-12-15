@@ -63,6 +63,8 @@ model artist {
   isVerified Boolean? @default(false)
   slug      String?
   color     String?
+  email     String?
+  instagram   String?
   youtube   String?
   spotify   String?
   appleMusic String?

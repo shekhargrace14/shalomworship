@@ -140,7 +140,7 @@ model genre {
 model category {
   id        String         @id @default(auto()) @map("_id") @db.ObjectId
   title     String
-  image     String
+  image     String?
   color     String?
   slug      String?
   createdAt DateTime       @default(now())

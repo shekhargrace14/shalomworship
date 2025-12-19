@@ -106,6 +106,7 @@ enum VersionType {
 enum LanguageType {
   en
   es
+  gu
   hi
   kn
   ml

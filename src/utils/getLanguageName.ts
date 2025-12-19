@@ -7,6 +7,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   en: "English",
   es: "Spanish",
   hi: "Hindi",
+  gu: "Gujarati",
   kn: "Kannada",
   ml: "Malayalam",
   mr: "Marathi",

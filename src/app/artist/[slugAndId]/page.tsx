@@ -1,3 +1,4 @@
+import InContentAd from "@/components/ads/InContentAd";
 import AlbumSection from "@/components/AlbumSection";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
@@ -64,6 +65,8 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
           backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
         }}>
           <Menu />
+          <InContentAd />
+          
           <div className=" flex items-center gap-4 w-full ">
             <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
               <Image

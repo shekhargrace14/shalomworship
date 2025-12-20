@@ -1,3 +1,4 @@
+import InContentAd from "@/components/ads/InContentAd";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
@@ -38,13 +39,13 @@ const Page = async ({ params }: any) => {
   // console.log(id, "albumData album page data");
 
   const albumData = await fetchAlbumById(id);
-  const data = albumData ;
+  const data = albumData;
   const albumArtists = data?.artist[0].artist.title || [];
   // console.log(data, " album artists page data");
-  const slug = data?.artist[0].artist.slug+ "-"+ data?.artist[0].artist.id;
+  const slug = data?.artist[0].artist.slug + "-" + data?.artist[0].artist.id;
 
-// const color = albumData?.[0]?.color ?? "#121212"; 
-  
+  // const color = albumData?.[0]?.color ?? "#121212"; 
+
 
   // console.log(color, "artist color page data");
 
@@ -61,10 +62,11 @@ const Page = async ({ params }: any) => {
       {/* hello {data.name} */}
       <div className="bg-background  rounded-lg ">
         <div className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
-        style={{
-          // backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
-        }}>
+          style={{
+            // backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
+          }}>
           <Menu />
+          <InContentAd />
           <div className=" flex items-center gap-4 w-full ">
             <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
               <Image
@@ -89,7 +91,7 @@ const Page = async ({ params }: any) => {
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 ">
             {data?.song.map((item) => (
               <div key={item.songId}>
-                <Processor item={item?.songId} type="album"/>
+                <Processor item={item?.songId} type="album" />
               </div>
             ))}
           </div>

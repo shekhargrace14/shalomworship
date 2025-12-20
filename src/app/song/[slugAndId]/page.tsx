@@ -28,6 +28,7 @@ import { getLanguageName } from "@/utils/getLanguageName";
 import { Metadata } from "next";
 import { buildSongMetadata } from "@/utils/seo";
 import CategorySongs from "@/components/CategorySongs";
+import InContentAd from "@/components/ads/InContentAd";
 
 async function fetchSongData({ id }: any) {
 
@@ -114,6 +115,7 @@ const Song = async ({ params }: any) => {
         }}
       >
         <Menu />
+        <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
             {songData.videoId ?

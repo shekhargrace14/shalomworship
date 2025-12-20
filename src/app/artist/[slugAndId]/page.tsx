@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: any) {
 
 const Page = async ({ params }: any) => {
 
-  const slugAndId = params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId.split('-').pop(); // extract id from slug-id
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
+  const id = await slugAndId.split('-').pop(); // extract id from slug-id
 
   // console.log(id, "artistData artist page data");
 

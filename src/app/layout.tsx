@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  themeColor: "#000000",
+  // themeColor: "#000000",
 
   viewport: {
     width: "device-width",

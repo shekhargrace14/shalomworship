@@ -28,7 +28,7 @@ const Card: React.FC<any> = ({ item }) => {
     <>
       <Link href={`/song/${slug}-${item.id}`}>
         {/* <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg"> */}
-        <div className="rounded-lg">
+        <div className="rounded-lg overflow-hidden">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image
               src={item.image}

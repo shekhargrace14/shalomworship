@@ -1,6 +1,6 @@
 // import { fetchSongs } from "@/app/reactQuery/query";
 
-import { fetchArtists, fetchSongs } from "@/lib/query/query";
+import { fetchArtists, fetchSongs, fetchCategory } from "@/lib/query/query";
 
 // import { fetchArtists, fetchSongs } from "./reactQuery/query";
 export default async function generateSitemap() {
@@ -9,26 +9,26 @@ export default async function generateSitemap() {
   try {
     const posts = await fetchSongs();
     const artists = await fetchArtists();
-    // const categories = await fetchCategories();
+    const categories = await fetchCategory();
     
 
     const postsUrls =
       posts?.map((post) => ({
-        url: `${baseUrl}/song/${post.slug}`,
+        url: `${baseUrl}/song/${post.slug}-${post.id}`,
         lastModified: post.updatedAt || new Date().toISOString(),
       })) ?? [];
 
     const artistsUrls =
       artists?.map((artist) => ({
-        url: `${baseUrl}/artist/${artist.slug}`,
+        url: `${baseUrl}/artist/${artist.slug}-${artist.id}`,
         lastModified: artist.updatedAt || new Date().toISOString(),
       })) ?? [];
 
-      // const categoriesUrls =
-      // categories?.map((category) => ({
-      //   url: `${baseUrl}/category/${category.name}`,
-      //   lastModified: category.lastModified || new Date().toISOString(),
-      // })) ?? [];
+      const categoriesUrls =
+      categories?.map((category) => ({
+        url: `${baseUrl}/category/${category.slug}`,
+        lastModified: category.updatedAt || new Date().toISOString(),
+      })) ?? [];
 
     return [
       {
@@ -37,7 +37,7 @@ export default async function generateSitemap() {
       },
       ...postsUrls,
       ...artistsUrls,
-      // ...categoriesUrls,
+      ...categoriesUrls,
     ];
   } catch (error:any) {
     console.error("Error generating sitemap:", error instanceof Error ? error.message : 'Unknown error', error instanceof Error ? error.stack : '');

@@ -24,7 +24,7 @@ export default function InContentAd() {
     >
       <ins
         className="adsbygoogle"
-        style={{ display: "block", width: "100%" }}
+        style={{ display: "block", width: "80%" }}
         data-ad-client="ca-pub-7686801812294972"   // <-- replace later
         data-ad-slot="7232236064"                   // <-- replace later
         data-ad-format="auto"

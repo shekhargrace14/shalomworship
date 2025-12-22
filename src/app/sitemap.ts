@@ -1,6 +1,7 @@
 // import { fetchSongs } from "@/app/reactQuery/query";
 
 import { fetchArtists, fetchSongs, fetchCategory } from "@/lib/query/query";
+export const dynamic = 'force-dynamic';
 
 // import { fetchArtists, fetchSongs } from "./reactQuery/query";
 export default async function generateSitemap() {

@@ -19,7 +19,7 @@ const Header = () => {
     <header className="h-full py-2 px-4 bg-background text-foreground  relative flex justify-between items-center gap-2 ">
       <div className="w-2/12 md:w-4/12 lg:w-3/12 bg-background">
         <Link href="/">
-          <Image src="/logo.png" alt="logo" width={36} height={32} className="" />
+          <Image src="/logoTemp.png" alt="logo" width={36} height={32} className="" />
         </Link>
       </div>
       <div className="md:relative w-10/12 sm:w-8/12 lg:w-5/12">

@@ -7,6 +7,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
+import PwaRegister from "./pwa-register";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </aside>
 
             <main className="col-span-12 md:col-span-9 row-span-11 rounded-lg overflow-auto custom-scrollbar">
+              <PwaRegister />
               {children}
             </main>
           </ThemeProvider>

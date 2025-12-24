@@ -45,3 +45,5 @@ export type MetaDataProps = {
   metaDescription?: string
   image?: string
 }
+
+// declare module "next-pwa";

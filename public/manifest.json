@@ -17,7 +17,21 @@
       "src": "/icons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any maskable" 
     }
-  ]
+  ],
+  "screenshots": [
+  {
+    "src": "/screenshots/desktop.png",
+    "sizes": "1280x800",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "/screenshots/mobile.png",
+    "sizes": "390x844",
+    "type": "image/png"
+  }
+]
+
 }

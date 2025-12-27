@@ -7,7 +7,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
-import PwaRegister from "./pwa-register";
+// import PwaRegister from "./pwa-register";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -33,11 +33,6 @@ export const metadata: Metadata = {
 
   // themeColor: "#000000",
 
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
 
   openGraph: {
     title: "Shalom Worship",
@@ -75,6 +70,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
@@ -104,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </aside>
 
             <main className="col-span-12 md:col-span-9 row-span-11 rounded-lg overflow-auto custom-scrollbar">
-              <PwaRegister />
+              {/* <PwaRegister /> */}
               {children}
             </main>
           </ThemeProvider>

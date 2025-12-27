@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import redirects from "./redirects";
 import withPWA from "next-pwa";
 
+const isDev = process.env.NODE_ENV === "development";
+
 const nextConfig: NextConfig = {
   async redirects() {
     return redirects;
@@ -19,8 +21,10 @@ const nextConfig: NextConfig = {
   },
 };
 
+
 export default withPWA({
   dest: "public",
   register: true,
   skipWaiting: true,
+  disable: isDev,
 })(nextConfig);

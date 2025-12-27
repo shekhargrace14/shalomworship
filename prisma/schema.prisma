@@ -27,6 +27,7 @@ model song {
   color           String?
   // SEO
   slug            String
+  about           String?
   keyword         String[]
   metaDescription String
   excerpt         String?
@@ -60,6 +61,7 @@ model artist {
   type      ArtistType? // <-- NEW: Enum to classify artist
   link      String?
   image     String?
+  about     String?
   isVerified Boolean? @default(false)
   slug      String?
   color     String?
@@ -87,6 +89,7 @@ model author {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   image     String
+  about     String?
   color     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -142,6 +145,7 @@ model category {
   id        String         @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   image     String?
+  about     String?
   color     String?
   slug      String?
   createdAt DateTime       @default(now())

@@ -221,6 +221,9 @@ const Song = async ({ params }: any) => {
                 </Link>
               </p>
             )}
+            <div className="hidden`">
+              <p className="text-sm text-foreground ">{songData.about}</p>
+            </div>
           </div>
         </div>
       </div>

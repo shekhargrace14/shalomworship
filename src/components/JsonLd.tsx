@@ -12,6 +12,7 @@ export default async function JsonLd({ id }: { id: string }) {
 
   const lang = songData.language ?? "en";
   const langName = getLanguageName(lang);
+  const key = songData.key;
 
   const safeImage = songData.image || "https://www.shalomworship.com/default-song.jpg";
   const safeVideoId = songData.videoId || "";
@@ -50,7 +51,9 @@ export default async function JsonLd({ id }: { id: string }) {
     name: songData.title,
     inLanguage: lang,
     alternateName: `${songData.title} Lyrics in ${langName}`,
+    ...(key && { "musicalKey": key }),
     genre: "Gospel",
+    iswcCode : "",
 
     description: `${songData.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics${songData.isChords ? ", chords and Nashville Numbers Chart" : ""}, translation, and meaning.`,
 

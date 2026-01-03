@@ -7,14 +7,15 @@ import React from 'react';
 
 
 
-export function generateMetadata(): MetaDataProps {
+export function generateMetadata() {
+  const type = "category"
   const title = "Categories";
   const slug = "categories";
   const description = "Explore various categories of songs, artists, and more on Shalom Worship.";
   const image = "";
   const keyword = ["Categories", "Shalom Worship"];
 
-  return { title, slug, image, keyword, metaDescription: description };
+  return MetaData({type, title, slug, image, keyword, metaDescription: description });
 }
 
 const page = async() => {

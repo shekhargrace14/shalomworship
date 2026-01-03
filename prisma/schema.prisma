@@ -136,6 +136,7 @@ model genre {
   title     String
   image     String
   color     String?
+  about     String?
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
   song      SongGenre[] // Explicit relation
@@ -159,6 +160,7 @@ model scripture {
   image     String
   slug      String?
   color     String?
+  about     String?
   createdAt DateTime        @default(now())
   updatedAt DateTime        @updatedAt
   song      SongScripture[] // Explicit relation
@@ -168,9 +170,10 @@ model album {
   id        String      @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   image     String?
-  video    String?  
+  video     String?  
   slug      String
   color     String?
+  about     String?
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
   song      SongAlbum[]
@@ -183,6 +186,7 @@ model season {
   image     String
   slug      String
   color     String?
+  about     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   artist    artist   @relation(fields: [artistId], references: [id])

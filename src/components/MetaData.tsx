@@ -1,5 +1,5 @@
 
-export const MetaData = ({ title, keyword, metaDescription, slug, image }: any) => {
+export const MetaData = ({type, title, keyword, metaDescription, slug, image }: any) => {
 
   if (!title) {
     return {
@@ -19,14 +19,14 @@ export const MetaData = ({ title, keyword, metaDescription, slug, image }: any) 
     robots:
       "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     alternates: {
-      canonical: `https://www.shalomworship.com/song/${encodeURIComponent(
-        slug
-      )}`,
+        canonical: `https://www.shalomworship.com/${type}/${encodeURIComponent(
+          slug
+        )}`,
     },
     openGraph: {
       title: title,
       description: metaDescription || "No description available",
-      url: `https://www.shalomworship.com/song/${encodeURIComponent(
+      url: `https://www.shalomworship.com/${type}/${encodeURIComponent(
         slug
       )}`,
       images: [{ url: image || "/default-image.jpg" }],

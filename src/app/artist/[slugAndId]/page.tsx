@@ -21,14 +21,15 @@ export async function generateMetadata({ params }: any) {
   const id = slugAndId.split('-').pop(); // extract id from slug-id
   const artist = await fetchArtistById(id);
   // console.log(artist[0]);
+  const type = "artist"
   const title = artist && artist[0]?.title
   const keyword = ["Yeshu"]
-  // const metaDescription = await artist[0]?.metaDescription
+  const metaDescription = artist && artist[0]?.about
   const slug = artist && artist[0]?.slug
   // console.log(slug);
   const image = artist && artist[0]?.image
 
-  return await MetaData({ title, slug, image, keyword});
+  return await MetaData({type, title, slug, image, keyword});
 }
 
 const Page = async ({ params }: any) => {
@@ -82,8 +83,13 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
               <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-foreground">
                 {data?.title || "Artist"}
               </h1>
-              <p className="text-sm  text-foreground">Artist</p>
+
             </div>
+          </div>
+          <div>
+
+              <p className="text-base  text-foreground">About</p>
+              <p className="text-sm  text-foreground">{data?.about || "Artist"}</p>
           </div>
         </div>
 

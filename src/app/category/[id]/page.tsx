@@ -18,13 +18,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
   const category = await fetchCategoryBySlug(slugParams);
-  const title = (category?.[0]?.title ?? "Unknown")
 
+  const type = "category"
+  const title = (category?.[0]?.title ?? "Unknown")
+  const metaDescription = category?.[0]?.about
   const slug = await category?.[0]?.slug ?? ''
   const image = await category?.[0]?.image ?? ''
 
 
-  return await MetaData({ title, slug, image });
+  return await MetaData({type, title, metaDescription, slug, image });
 }
 
 

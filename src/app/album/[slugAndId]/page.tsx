@@ -16,20 +16,22 @@ export async function generateStaticParams() {
   });
 }
 
-// export async function generateMetadata({ params }: any) {
-//   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-//   const id = slugAndId.split('-').pop(); // extract id from slug-id
-//   const album = await fetchAlbumBySlug(id);
-//   console.log(artist[0]);
-//   const title = album && album[0]?.title
-//   const keyword = ["Yeshu"]
-//   const metaDescription = await artist[0]?.metaDescription
-//   const slug = album && album[0]?.slug
-//   console.log(slug);
-//   const image = album && album[0]?.image
+export async function generateMetadata({ params }: any) {
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
+  const id = slugAndId.split('-').pop(); // extract id from slug-id
+  const album = await fetchAlbumById(id);
+  console.log(album);
 
-//   return await MetaData({ title, slug, image, keyword});
-// }
+  const type = "album"
+  const title = album && album?.title
+  // const keyword = ["Yeshu"]
+  const metaDescription = album && album?.about
+  const slug = album && album?.slug
+  console.log(slug);
+  const image = album && album?.image
+
+  return MetaData({type, title, slug, image, metaDescription});
+}
 
 const Page = async ({ params }: any) => {
 

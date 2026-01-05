@@ -24,15 +24,17 @@ export function buildSongMetadata({
 
     const canonicalUrl = `https://www.shalomworship.com/song/${song.slug}-${song.id}`;
 
+     const category = song.category.map((c:any) => c.category.title)
+
     // Title
-    const title = `${song.title} ${langName} Lyrics${song.isChords ? ", Chords" : ""
+    const title = `${song.title} - ${song.searchVariant ? song.searchVariant : "" } ${langName} Lyrics${song.isChords ? ", Chords" : ""
         }${song.isTranslation ? ", Translation" : ""}${song.isChords ? ", Meaning & Nashville Number Chart" : ""
         } – ${primaryArtist} | Shalom Worship`;
 
     // Description
-    const description = `${song.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics in ${langName}${song.isChords ? ", chords and Nashville Numbers Chart" : ""
-        }${song.isTranslation ? ", translation" : ""}${song.excerpt ? ` – ${song.excerpt}` : ""
-        }.`;
+    const description = `${song.title} is a ${langName} Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}. This page provides the ${langName} lyrics${song.isChords ? ", chords, and Nashville Number System" : ""}${song.isTranslation ? ", along with translations" : ""},  
+    ${song?.searchVariant ? `and this song is widely known by the refrain "${song?.searchVariant}".` : ""}
+    `;
 
     // OG Image fallback
     const image = song.image || `https://img.youtube.com/vi/${song.videoId}/maxresdefault.jpg`;

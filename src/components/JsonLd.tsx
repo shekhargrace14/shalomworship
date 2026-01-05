@@ -13,6 +13,7 @@ export default async function JsonLd({ id }: { id: string }) {
   const lang = songData.language ?? "en";
   const langName = getLanguageName(lang);
   const key = songData.key;
+  const category = songData.category.map(c => c.category.title)
 
   const safeImage = songData.image || "https://www.shalomworship.com/default-song.jpg";
   const safeVideoId = songData.videoId || "";
@@ -50,13 +51,19 @@ export default async function JsonLd({ id }: { id: string }) {
 
     name: songData.title,
     inLanguage: lang,
-    alternateName: `${songData.title} Lyrics in ${langName}`,
+    alternateName: songData?.searchVariant,
     ...(key && { "musicalKey": key }),
     genre: "Gospel",
-    iswcCode : "",
+    iswcCode: "",
 
-    description: `${songData.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics${songData.isChords ? ", chords and Nashville Numbers Chart" : ""}, translation, and meaning.`,
-
+    // description: `${songData.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics${songData.isChords ? ", chords and Nashville Numbers Chart" : ""}, translation, and meaning.`,
+description: [
+  `${songData.title} is a ${langName} Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}.`,
+  `This page provides the ${langName} lyrics${songData.isChords ? ", chords, and Nashville Number System" : ""}${songData.isTranslation ? ", along with translations" : ""},`,
+  songData?.searchVariant
+    ? `and this song is widely known by the refrain "${songData.searchVariant}".`
+    : null
+].filter(Boolean).join(" "),
     lyrics: {
       "@type": "CreativeWork",
       text: lyricSnippet ? `${lyricSnippet}...` : undefined,
@@ -70,9 +77,9 @@ export default async function JsonLd({ id }: { id: string }) {
     //   name: primaryArtist,
     // },
     creator: artistNames.map(name => ({
-  "@type": "MusicGroup",
-  name
-})),
+      "@type": "MusicGroup",
+      name
+    })),
 
 
     about: [
@@ -94,32 +101,32 @@ export default async function JsonLd({ id }: { id: string }) {
 
     recordedAs: safeVideoId
       ? {
-          "@type": "MusicRecording",
-          name: `${songData.title} (Audio)`,
-          url: `https://www.youtube.com/watch?v=${safeVideoId}`,
-          inLanguage: lang,
-          "identifier": `${safeVideoId}`,
-        }
+        "@type": "MusicRecording",
+        name: `${songData.title} (Audio)`,
+        url: `https://www.youtube.com/watch?v=${safeVideoId}`,
+        inLanguage: lang,
+        "identifier": `${safeVideoId}`,
+      }
       : undefined,
 
     isPartOf: safeCategory
       ? {
-          "@type": "MusicPlaylist",
-          name: safeCategory.title,
-          url: `https://www.shalomworship.com/category/${safeCategory.slug}`,
-        }
+        "@type": "MusicPlaylist",
+        name: safeCategory.title,
+        url: `https://www.shalomworship.com/category/${safeCategory.slug}`,
+      }
       : undefined,
 
     inAlbum: safeAlbum
       ? {
-          "@type": "MusicAlbum",
-          name: safeAlbum.title,
-          url: `https://www.shalomworship.com/album/${safeAlbum.slug}-${safeAlbum.id}`,
-          image: {
-            "@type": "ImageObject",
-            url: safeAlbum.image || "",
-          },
-        }
+        "@type": "MusicAlbum",
+        name: safeAlbum.title,
+        url: `https://www.shalomworship.com/album/${safeAlbum.slug}-${safeAlbum.id}`,
+        image: {
+          "@type": "ImageObject",
+          url: safeAlbum.image || "",
+        },
+      }
       : undefined,
 
     datePublished: songData.createdAt?.toISOString?.() || undefined,
@@ -147,7 +154,7 @@ export default async function JsonLd({ id }: { id: string }) {
       ],
     },
 
-    keywords: songData.keyword?.join(", ") || undefined,
+    // keywords: songData.keyword?.join(", ") || undefined,
 
     publisher: {
       "@type": "Organization",

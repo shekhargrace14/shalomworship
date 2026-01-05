@@ -28,6 +28,7 @@ model song {
   // SEO
   slug            String
   about           String?
+  searchVariant   String?
   keyword         String[]
   metaDescription String
   excerpt         String?

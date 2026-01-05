@@ -21,14 +21,17 @@ export default async function Home() {
     <>
       <div className=" p-4 overflow-y-auto custom-scrollbar ">
         <Menu />
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>New Year 2026 Songs</Link> </h2>
-        <CategorySongs params={"renewal"} />
-        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"><Link href={"/artist"}>Your Favorite Artist</Link></h2>
-        <ArtistSection number={"-6"} artists={artists} />
+        {/* <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>New Year 2026 Songs</Link> </h2> */}
+        {/* <CategorySongs params={"renewal"} /> */}
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/song"}>Trending Songs</Link> </h2>
         <SongSection number={"-8"} songs={songs} />
         {/* <h2 className="text-xl font-extrabold mt-4 md:mt-8 hover:underline text-white"> <Link href={"/song"}>Chords</Link> </h2> */}
         {/* <SongSection number={"-10"} songs={songs} chords="true" /> */}
+       
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"><Link href={"/artist"}>Your Favorite Artist</Link></h2>
+        <ArtistSection number={"-6"} artists={artists} />
+       
+
         <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> <Link href={"/category"}>Category</Link></h2>
         <CategorySection number={"-10"} categories={categories} />
 

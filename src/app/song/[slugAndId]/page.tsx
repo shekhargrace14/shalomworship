@@ -29,6 +29,8 @@ import { Metadata } from "next";
 import { buildSongMetadata } from "@/utils/seo";
 import CategorySongs from "@/components/CategorySongs";
 import InContentAd from "@/components/ads/InContentAd";
+import { formatBold } from "@/utils/formatBold";
+import { title } from "process";
 
 async function fetchSongData({ id }: any) {
 
@@ -76,7 +78,7 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
-  // console.log(songData, "song  ")
+  console.log(songData, "song  ")
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -100,9 +102,9 @@ const Song = async ({ params }: any) => {
   // console.log(categories);
   const language = songData.language
     const langName = getLanguageName(language);
+    const about = songData.about
 
-  console.log(language, "lang")
-
+    const alternateName = songData.searchVariant
 
   return (
 
@@ -221,8 +223,17 @@ const Song = async ({ params }: any) => {
                 </Link>
               </p>
             )}
-            <div className="hidden`">
-              <p className="text-sm text-foreground ">{songData.about}</p>
+            <div className="">
+              {/* <p className="text-sm text-foreground " dangerouslySetInnerHTML={{
+                __html: formatBold(about),
+              }} ></p> */}
+              <p className="text-xs">
+                <strong>{songData.title}</strong>
+                {`  is a ${langName} Christian worship song by `}
+                <strong>{creators.map(c=>c.title)}</strong>
+                {`, commonly sung in moments of ${categories}. This page provides the ${langName} lyrics${songData.isChords ? ", chords, and Nashville Number System" : ""}${songData.isTranslation ? ", along with translations" : ""},`}
+                {songData?.searchVariant ? ` and this song is widely known by the refrain "${alternateName}".` : ""}
+              </p>
             </div>
           </div>
         </div>

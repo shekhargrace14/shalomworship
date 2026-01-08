@@ -5,8 +5,16 @@ import withPWA from "next-pwa";
 const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return redirects;
+async redirects() {
+    // console.log('🔁 Redirects loaded:', redirects.length);
+    // console.log(
+    //   redirects.slice(0, 5).map(r => `${r.source} → ${r.destination}`)
+    // );
+
+    return redirects.map((r) => ({
+      ...r,
+      permanent: true,
+    }));
   },
   images: {
     remotePatterns: [

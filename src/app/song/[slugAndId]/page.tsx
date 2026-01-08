@@ -78,7 +78,7 @@ const Song = async ({ params }: any) => {
   const songData = await fetchSongData({ id });
   if (!songData)
     return <p className="text-white">No Song Found in page song...</p>;
-  console.log(songData, "song  ")
+  // console.log(songData, "song  ")
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -101,10 +101,10 @@ const Song = async ({ params }: any) => {
   const categories = songData?.category.map(c => c.category.slug)
   // console.log(categories);
   const language = songData.language
-    const langName = getLanguageName(language);
-    const about = songData.about
+  const langName = getLanguageName(language);
+  const about = songData.about
 
-    const alternateName = songData.searchVariant
+  const alternateName = songData.searchVariant
 
   return (
 
@@ -206,14 +206,14 @@ const Song = async ({ params }: any) => {
               <Dot className="text-foreground" />
               <p className="font-light text-sm leading-4 text-foreground">
                 <Link href={`/language/${language}`}>
-                {langName}
+                  {langName}
                 </Link>
               </p>
               <Dot className="text-foreground" />
               <div className=" ">
                 <ShareButton title={songData.title} />
               </div>
-              
+
             </div>
             {songData.album && songData.album.length > 0 && (
               <p className="text-sm text-foreground">
@@ -230,9 +230,15 @@ const Song = async ({ params }: any) => {
               <p className="text-xs">
                 <strong>{songData.title}</strong>
                 {`  is a ${langName} Christian worship song by `}
-                <strong>{creators.map(c=>c.title)}</strong>
-                {`, commonly sung in moments of ${categories}. This page provides the ${langName} lyrics${songData.isChords ? ", chords, and Nashville Number System" : ""}${songData.isTranslation ? ", along with translations" : ""},`}
-                {songData?.searchVariant ? ` and this song is widely known by the refrain "${alternateName}".` : ""}
+                <strong>{creators.map(c => c.title)}</strong>
+                {`, commonly sung in moments of ${categories}. This page provides the ${langName} lyrics${songData.isChords ? ", chords, and Nashville Number System" : ""}${songData.isTranslation ? ", along with translations" : "."}`}
+                {songData?.searchVariant && (
+                  <>
+                    {' and this song is widely known by the refrain "'}
+                    <strong>{alternateName}</strong>
+                    {'".'}
+                  </>
+                )}
               </p>
             </div>
           </div>

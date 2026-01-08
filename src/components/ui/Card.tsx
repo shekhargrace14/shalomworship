@@ -47,7 +47,7 @@ const Card: React.FC<any> = ({ item }) => {
               </Avatar>
               <div>
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>
-                <p className="text-sm leading-none text-foreground">{creators[0]?.title}</p>
+                <p className="text-xs leading-none text-foreground">{creators[0]?.title}</p>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ export function buildSongMetadata({
      const category = song.category.map((c:any) => c.category.title)
 
     // Title
-    const title = `${song.title} - ${song.searchVariant ? song.searchVariant : "" } ${langName} Lyrics${song.isChords ? ", Chords" : ""
+    const title = `${song.title} ${song.searchVariant ? `- ${song.searchVariant}`  : "" } ${langName} Lyrics${song.isChords ? ", Chords" : ""
         }${song.isTranslation ? ", Translation" : ""}${song.isChords ? ", Meaning & Nashville Number Chart" : ""
         } – ${primaryArtist} | Shalom Worship`;
 

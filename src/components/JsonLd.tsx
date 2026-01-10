@@ -57,13 +57,14 @@ export default async function JsonLd({ id }: { id: string }) {
     iswcCode: "",
 
     // description: `${songData.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics${songData.isChords ? ", chords and Nashville Numbers Chart" : ""}, translation, and meaning.`,
-description: [
-  `${songData.title} is a ${langName} Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}.`,
-  `This page provides the ${langName} lyrics${songData.isChords ? ", chords, and Nashville Number System" : ""}${songData.isTranslation ? ", along with translations" : ""},`,
-  songData?.searchVariant
-    ? `and this song is widely known by the refrain "${songData.searchVariant}".`
-    : null
-].filter(Boolean).join(" "),
+    description: [
+      `${songData.title} is a Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}.`,
+      `This page provides the lyrics${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`,songData?.searchVariant
+        ? `This this song is widely known by the refrain "${songData.searchVariant}".`
+        : null
+    ].filter(Boolean).join(" "),  
+
+
     lyrics: {
       "@type": "CreativeWork",
       text: lyricSnippet ? `${lyricSnippet}...` : undefined,

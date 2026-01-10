@@ -229,15 +229,21 @@ const Song = async ({ params }: any) => {
               }} ></p> */}
               <p className="text-xs">
                 <strong>{songData.title}</strong>
-                {`  is a ${langName} Christian worship song by `}
+                {`  is a Christian worship song by `}
                 <strong>{creators.map(c => c.title)}</strong>
-                {`, commonly sung in moments of ${categories}. This page provides the ${langName} lyrics${songData.isChords ? ", chords, and Nashville Number System" : ""}${songData.isTranslation ? ", along with translations" : "."}`}
+                
+                {`, commonly sung in moments of `}
+              
+                <strong>{categories}</strong>
+              {`. This page provides the lyrics ${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
+                
                 {songData?.searchVariant && (
                   <>
-                    {' and this song is widely known by the refrain "'}
+                    {' This song is widely known by the refrain "'}
                     <strong>{alternateName}</strong>
                     {'".'}
                   </>
+                  
                 )}
               </p>
             </div>

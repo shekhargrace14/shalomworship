@@ -24,16 +24,17 @@ export function buildSongMetadata({
 
     const canonicalUrl = `https://www.shalomworship.com/song/${song.slug}-${song.id}`;
 
-     const category = song.category.map((c:any) => c.category.title)
+    const category = song.category.map((c: any) => c.category.title)
 
     // Title
-    const title = `${song.title} ${song.searchVariant ? `- ${song.searchVariant}`  : "" } ${langName} Lyrics${song.isChords ? ", Chords" : ""
-        }${song.isTranslation ? ", Translation" : ""}${song.isChords ? ", Meaning & Nashville Number Chart" : ""
-        } – ${primaryArtist} | Shalom Worship`;
+    const title = 
+        `${song.title} Lyrics ${song.searchVariant ? `- ${song.searchVariant}` : ""}
+        ${song.isChords ? " Chords & Nashville Number Chart" : ""}  | ${primaryArtist} | Shalom Worship`;
 
     // Description
-    const description = `${song.title} is a ${langName} Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}. This page provides the ${langName} lyrics${song.isChords ? ", chords, and Nashville Number System" : ""}${song.isTranslation ? ", along with translations" : ""},  
-    ${song?.searchVariant ? `and this song is widely known by the refrain "${song?.searchVariant}".` : ""}
+    const description =
+    `${song.title} is a Christian worship song by ${primaryArtist}, commonly sung in moments of 
+    ${category}. This page provides the lyrics${song.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.${song?.searchVariant ?` This song is widely known by the refrain "${song?.searchVariant}".` : ""}
     `;
 
     // OG Image fallback
@@ -67,7 +68,7 @@ export function buildSongMetadata({
             url: canonicalUrl,
             type: "music.song",
             siteName: "Shalom Worship",
-            images: [{ url: image, width: 1200, height: 630 }], 
+            images: [{ url: image, width: 1200, height: 630 }],
         },
 
         twitter: {
@@ -84,6 +85,6 @@ export function buildSongMetadata({
             "article:published_time": publishedTime,
             "article:modified_time": modifiedTime,
         },
-        
+
     };
 }

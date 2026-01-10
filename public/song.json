@@ -7,7 +7,247 @@
   "version": "version_3",
   "language": "en",
   "lines": [
- 
+ [
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "యేసు నామం జయం జయం",
+      "en": "Yesu Naamam Jayam Jayam"
+    },
+    "translation": {
+      "en": "Jesus' Name Victory, Victory"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "సాతాను శక్తుల లయం లయం (4)",
+      "en": "Satanu Shaktul Layam Layam (4)"
+    },
+    "translation": {
+      "en": "Satan's Powers Destruction, Destruction (4)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "యేసు నామము జయము జయము",
+      "en": "Yesu Naamamu Jayamu Jayamu"
+    },
+    "translation": {
+      "en": "Jesus' Name Victory, Victory"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "సాతాను శక్తుల్ లయము లయము (2)",
+      "en": "Saathaanu Shakthul Layamu Layamu (2)"
+    },
+    "translation": {
+      "en": "Satan's Powers Destruction, Destruction (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Halleluiah Hosanna Halleluiah – Halleluiah Amen (2)"
+    },
+    "translation": {
+      "en": "Hallelujah Hosanna Hallelujah - Hallelujah Amen (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "అన్ని నామముల కన్న పై నామము – యేసుని నామము",
+      "en": "Anni Naamamula Kanna Pai Naamamu – Yesuni Naamamu"
+    },
+    "translation": {
+      "en": "Name Above All Names – Jesus' Name"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "ఎన్ని తరములకైన ఘనపరచ దగినది – క్రీస్తేసు నామము (2)",
+      "en": "Enni Tharamulakaina Ghanaparacha Daginadi – Kreesthesu Naamamu (2)"
+    },
+    "translation": {
+      "en": "Worthy To Be Praised For All Generations – Christ's Name (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "పాపముల నుండి విడిపించును – యేసుని నామము (2)",
+      "en": "Paapamula Nundi Vidipinchunu – Yesuni Naamamu (2)"
+    },
+    "translation": {
+      "en": "Delivers From Sins – Jesus' Name (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "నిత్య నరకాగ్నిలో నుండి రక్షించును – క్రీస్తేసు నామము (2)",
+      "en": "Nithya Narakaagnilo Nundi Rakshinchunu – Kreesthesu Naamamu (2)"
+    },
+    "translation": {
+      "en": "Saves From Eternal Hellfire – Christ's Name (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "యేసు నామము",
+      "en": "Yesu Naamamu"
+    },
+    "translation": {
+      "en": "Jesus' Name"
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "ఎల్ల వేళలందు కష్ట కాలమందు",
+      "en": "Ella Velalandu Kashta Kaalamandhu"
+    },
+    "translation": {
+      "en": "In All Times, In Difficult Times"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "వల్లభుండ యేసున్ స్తుతింతున్",
+      "en": "Vallabhunda Yesun Sthuthinthun"
+    },
+    "translation": {
+      "en": "I Will Praise Lord Jesus"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "ఎల్లను నీవే నా కెల్లెడల వల్లపదదే వివరింప",
+      "en": "Ellanu Neeve Naa Kelledala Vallapadhade Vivarimpa"
+    },
+    "translation": {
+      "en": "You Alone Are My Everything, Explain My Lord's Greatness"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "విమోచకుడా – విమోచన నీవే",
+      "en": "Vimoochakudaa – Vimoochana Neeve"
+    },
+    "translation": {
+      "en": "Redeemer – You Are The Redemption"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "రక్షకుడవు – నా రక్షణ నీవే",
+      "en": "Rakshakudavu – Naa Rakshana Neeve"
+    },
+    "translation": {
+      "en": "You Are The Savior – You Are My Salvation"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "ఎల్ల వేళలందు",
+      "en": "Ella Velalandu"
+    },
+    "translation": {
+      "en": "In All Times"
+    },
+    "break": "break"
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "తంబురతోను నాట్యముతోను (2)",
+      "en": "Thamburathonu Naatyamuthonu (2)"
+    },
+    "translation": {
+      "en": "With Tambura And Dance (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "తంతి వాద్యములతో ఆ ఆ",
+      "en": "Thanthi Vaadyamulatho Aa Aa"
+    },
+    "translation": {
+      "en": "With String Instruments Ah Ah"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "తంతి వాద్యములతో ఎల్లప్పుడు దేవుని స్తుతియించుడి",
+      "en": "Thanthi Vaadyamulatho Ellappudu Devuni Sthuthiyinchudi"
+    },
+    "translation": {
+      "en": "With String Instruments Always Praise God"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "దేవుని స్తుతియించుడి",
+      "en": "Devuni Sthuthiyinchudi"
+    },
+    "translation": {
+      "en": "Praise God"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "ఎల్లప్పుడు దేవుని స్తుతియించుడి",
+      "en": "Ellappudu Devuni Sthuthiyinchudi"
+    },
+    "translation": {
+      "en": "Always Praise God"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "te": "సకల ప్రాణులు యెహోవాన్ స్తుతించుడి (2)",
+      "en": "Sakala Praanulu Yehovan Sthuthinchudi (2)"
+    },
+    "translation": {
+      "en": "All Living Beings Praise Yahweh (2)"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Halleluiah Amen Aa Aa"
+    },
+    "translation": {
+      "en": "Hallelujah Amen Ah Ah"
+    }
+  },
+  {
+    "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+    "lyrics": {
+      "en": "Halleluiah Amen Ellappudu Devuni Sthuthiyinchudi (2)"
+    },
+    "translation": {
+      "en": "Hallelujah Amen Always Praise God (2)"
+    }
+  }
+]
   ]
   
 }

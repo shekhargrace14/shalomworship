@@ -28,7 +28,7 @@ model song {
   // SEO
   slug            String
   about           String?
-  searchVariant   String?
+  searchVariant   String[]
   keyword         String[]
   metaDescription String
   excerpt         String?
@@ -150,9 +150,17 @@ model category {
   about     String?
   color     String?
   slug      String?
+  catType   catType? @default(theme)
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
   song      SongCategory[] // Explicit relation
+}
+
+enum catType {
+  theme
+  mood
+  activity
+  occasion
 }
 
 model scripture {

@@ -7,9 +7,10 @@ type LinesProps = {
   song: any;
   isChords: boolean;
   isTranslations: boolean;
+  language: any;
 };
 
-const LinesVersion3 = ({ id, song, isChords, isTranslations }: LinesProps) => {
+const LinesVersion3 = ({ id, song, isChords, isTranslations, language }: LinesProps) => {
   const [activeTab, setActiveTab] = useState<"chords" | "nashville" | "lyrics" | "translation">("chords");
 
   // Single toggle function for all tabs
@@ -89,6 +90,7 @@ const LinesVersion3 = ({ id, song, isChords, isTranslations }: LinesProps) => {
         isChord={isTabActive("chords") && isChords}
         isNashville={isTabActive("nashville") && isChords}
         isTranslation={isTabActive("translation") && isTranslations}
+        Songlanguage={language}
       />
     </>
   )

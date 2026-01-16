@@ -31,6 +31,7 @@ import CategorySongs from "@/components/CategorySongs";
 import InContentAd from "@/components/ads/InContentAd";
 import { formatBold } from "@/utils/formatBold";
 import { title } from "process";
+import VideoPlayer from "@/components/VideoPlayer";
 
 async function fetchSongData({ id }: any) {
 
@@ -104,7 +105,7 @@ const Song = async ({ params }: any) => {
   const langName = getLanguageName(language);
   const about = songData.about
 
-  const alternateName = songData.searchVariant
+  const searchVariants = songData.searchVariant
 
   return (
 
@@ -121,7 +122,8 @@ const Song = async ({ params }: any) => {
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
             {songData.videoId ?
-              <YouTubeEmbed videoId={songData.videoId} title={songData?.title} />
+              // <YouTubeEmbed videoId={songData.videoId} title={songData?.title} />
+              <VideoPlayer videoId={songData.videoId} title={songData.title}/>
               :
               <Image
                 src={songData.image || "/default-image.jpg"}
@@ -224,26 +226,55 @@ const Song = async ({ params }: any) => {
               </p>
             )}
             <div className="">
-              {/* <p className="text-sm text-foreground " dangerouslySetInnerHTML={{
-                __html: formatBold(about),
-              }} ></p> */}
               <p className="text-xs">
                 <strong>{songData.title}</strong>
                 {`  is a Christian worship song by `}
                 <strong>{creators.map(c => c.title)}</strong>
-                
+
                 {`, commonly sung in moments of `}
-              
-                <strong>{categories}</strong>
-              {`. This page provides the lyrics ${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
-                
-                {songData?.searchVariant && (
+
+                <strong>
+
+                  {songData.category && songData.category.length > 0 ? (
+                    songData.category.length > 1 ? (
+                      songData.category.map((category, index) => (
+                        <span
+                          key={index}
+                          className="text-xs leading-4 text-foreground"
+                        >
+                          <Link href={`/category/${category?.category.slug}`}>
+                            {category?.category.title}
+                          </Link>
+                          {index < songData.category.length - 1 ? ", " : ""}
+                        </span>
+                      ))
+                    ) : (
+                      
+                        <Link
+                          href={`/category/${songData.category[0]?.category.slug}`}
+                        >
+                          {songData.category[0]?.category.title}
+                        </Link>
+                      
+                    )
+                  ) : (
+                    <p className="font-light text-sm leading-4 text-foreground">
+                      Unknown category
+                    </p>
+                  )}
+                </strong>
+
+
+
+                {`. This page provides the lyrics ${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
+
+                {songData?.searchVariant[0] && (
                   <>
                     {' This song is widely known by the refrain "'}
-                    <strong>{alternateName}</strong>
+                    <strong>{searchVariants[0]}</strong>
                     {'".'}
                   </>
-                  
+
                 )}
               </p>
             </div>
@@ -269,6 +300,7 @@ const Song = async ({ params }: any) => {
           song={songData}
           isChords={!!songData.isChords}
           isTranslations={!!songData.isTranslation}
+          language={songData.language}
         /> : null}
         <section className="w-full text-foreground mt-12">
           {/* <div >{songData.content }</div> */}

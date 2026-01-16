@@ -1,4 +1,5 @@
 // components/JsonLdScript.tsx
+import { songs } from "@/lib/actions/song";
 import { fetchSongById } from "@/lib/query/query";
 import { getLanguageName } from "@/utils/getLanguageName";
 
@@ -7,6 +8,7 @@ export default async function JsonLd({ id }: { id: string }) {
   if (!songData) return null;
 
   // -------- SAFE VALUES --------
+  const alternateNames = songData.searchVariant.map(s=> s)
   const artistNames = songData.artist?.map(a => a.artist.title) || [];
   const primaryArtist = artistNames[0] || "Unknown Artist";
 
@@ -50,8 +52,8 @@ export default async function JsonLd({ id }: { id: string }) {
     "identifier": `${songData.slug}-${songData.id}`,
 
     name: songData.title,
+    alternateName: alternateNames,
     inLanguage: lang,
-    alternateName: songData?.searchVariant,
     ...(key && { "musicalKey": key }),
     genre: "Gospel",
     iswcCode: "",

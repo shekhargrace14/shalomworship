@@ -11,7 +11,7 @@ const Social = () => {
         alt={"Whatsapp"}
         width={50}
         height={50}
-        className=""
+        className="w-14"
         priority={true}
       /> 
       <div>

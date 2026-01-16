@@ -12,7 +12,8 @@ import Script from "next/script";
 export const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-inter"
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

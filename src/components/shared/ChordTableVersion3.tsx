@@ -1,4 +1,5 @@
 "use client";
+import { getLanguageName } from '@/utils/getLanguageName';
 import { getKeyByShift, transposeChord } from '@/utils/transpose';
 import { ChevronRight, Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
@@ -22,9 +23,10 @@ type ChordTableProps = {
   isTranslation: boolean;
   isNashville: boolean;
   songData?: Song | null;
+  Songlanguage?: any
 };
 
-const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslation, isNashville, songData }) => {
+const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslation, isNashville, songData, Songlanguage }) => {
   const [song, setSong] = useState<Song | null>(null);
   const [shift, setShift] = useState(0);
 
@@ -64,6 +66,8 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
 
   const isRoman = romanLanguages.includes(song.language || "en");
 
+  const langName = getLanguageName(Songlanguage);
+
   // console.log(isRoman, "isRoman language");
 
   const getLyrics = (line: chordLyric, lang: string) =>
@@ -92,7 +96,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
       </h2>
       <div
         className={`space-y-6 font-mono ${isRoman ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-2"
-          } grid items-start`}
+          } grid items-start gap-4`}
       >
         {song.lines.map((section, sectionIdx) => (
           <div key={sectionIdx} className="mb-6">
@@ -118,7 +122,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                           </p>
                         </div> */}
                         <div className="min-w-8 text-sm">
-                          <div className=" bg-card text-foreground font-medium inline-flex items-start p-[2px] px-1 rounded">
+                          <div className=" bg-card text-foreground font-medium inline-flex items-start p-0.5 px-1 rounded">
 
                             <div className="w-fit">
                               {c.number}
@@ -144,7 +148,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                         {addSpaces(c.space)}
 
                         <div className="min-w-8 text-sm">
-                          <div className=" bg-card text-foreground font-medium inline-flex items-start p-[2px] px-1 rounded">
+                          <div className=" bg-card text-foreground font-medium inline-flex items-start p-0.5 px-1 rounded">
 
                             <div className="w-fit">
                               {transposeChord([c.root], fromKey, toKey)[0]}
@@ -183,6 +187,9 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
           </div>
         ))}
         {/* second section */}
+        <h2 className="block lg:hidden text-xl md:text-2xl font-semibold mb-0 text-foreground">
+          {song.title}{" "}{langName} Lyrics
+        </h2>
         {!isRoman &&
 
           (song.lines.map((section, sectionIdx) => (
@@ -197,16 +204,16 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
 
                   {/* {getLyrics(line, song.language || "hi")} */}
 
-                    {Object.entries(line.lyrics || {})
-                      .filter(([lang]) =>
-                        // Include only non-Roman languages (you can expand this list)
-                        ["hi", "ta", "te", "ml", "bn", "gu", "kn", "pa","ur","sa","mr"].includes(lang)
-                      )
-                      .map(([lang, lyric]) => (
-                        <p key={lang} className="text-foreground leading-relaxed">
-                          {lyric}
-                        </p>
-                      ))}
+                  {Object.entries(line.lyrics || {})
+                    .filter(([lang]) =>
+                      // Include only non-Roman languages (you can expand this list)
+                      ["hi", "ta", "te", "ml", "bn", "gu", "kn", "pa", "ur", "sa", "mr"].includes(lang)
+                    )
+                    .map(([lang, lyric]) => (
+                      <p key={lang} className="text-foreground leading-relaxed">
+                        {lyric}
+                      </p>
+                    ))}
 
                   {/* Translation */}
                   {isTranslation && line.translation?.en && (

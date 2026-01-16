@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import slugify from "slugify";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
+import { Dot } from "lucide-react";
 
 const Card: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
@@ -23,6 +24,7 @@ const Card: React.FC<any> = ({ item }) => {
 
   const slug = slugify(`${item.slug}`, { lower: true });
 
+
   return (
 
     <>
@@ -35,7 +37,7 @@ const Card: React.FC<any> = ({ item }) => {
               alt={item.title || "Song Image"}
               width={700}
               height={500}
-            /> 
+            />
             {/* <YouTubeThumbnail videoId={item.videoId} alt={item.title}/> */}
           </div>
           <div className="w-full p-2">
@@ -47,7 +49,11 @@ const Card: React.FC<any> = ({ item }) => {
               </Avatar>
               <div>
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>
-                <p className="text-xs leading-none text-foreground">{creators[0]?.title}</p>
+                <div className="flex items-center">
+                  <p className="text-xs leading-none text-foreground">{creators[0]?.title}</p>
+                  <Dot className="text-foreground" />
+                  <p className="text-xs leading-none text-foreground">{item?.language}</p>
+                </div>
               </div>
             </div>
           </div>

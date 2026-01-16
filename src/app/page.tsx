@@ -1,3 +1,4 @@
+
 import ArtistSection from "@/components/ArtistSection";
 import CardSection from "@/components/AlbumSection";
 import CategorySection from "@/components/CategorySection";

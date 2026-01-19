@@ -1,11 +1,12 @@
 import InContentAd from "@/components/ads/InContentAd";
-import AlbumSection from "@/components/AlbumSection";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
-import { fetchArtistById, fetchArtists } from "@/lib/query/query";
+import { fetchArtistById, fetchArtists, fetchSongById } from "@/lib/query/query";
 import Image from "next/image";
 import slugify from "slugify";
+import { notFound, redirect } from 'next/navigation';
+import { parseSlugAndId } from "@/utils/parseSlugAndId";
 
 export async function generateStaticParams() {
   const artists = await fetchArtists(); // Fetch all songs from your data source
@@ -17,9 +18,16 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: any) {
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId.split('-').pop(); // extract id from slug-id
+  const slugAndId =  params.slugAndId; // this is the [slugAndId] part
+  // 
+  const { id } = parseSlugAndId(params.slugAndId);
+
+  if (!id || !isValidObjectId(id)) {
+    return {};
+  }
+
   const artist = await fetchArtistById(id);
+  if (!artist || artist.length === 0) return {};
   // console.log(artist[0]);
   const type = "artist"
   const title = artist && artist[0]?.title
@@ -29,45 +37,44 @@ export async function generateMetadata({ params }: any) {
   // console.log(slug);
   const image = artist && artist[0]?.image
 
-  return await MetaData({type, title, slug, image, keyword});
+  return MetaData({ type, title, slug, image, keyword });
 }
 
+
+const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
+
+
 const Page = async ({ params }: any) => {
+  const slugAndId =  params.slugAndId; // this is the [slugAndId] part
+  // const id =  slugAndId.split('-').pop(); // extract id from slug-id
+  const { slug, id } = parseSlugAndId(params.slugAndId);
 
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  const id = await slugAndId.split('-').pop(); // extract id from slug-id
+    const artistData = await fetchArtistById(id);
 
-  // console.log(id, "artistData artist page data");
+    if (!artistData || artistData.length === 0) {
+      const song = await fetchSongById(id)
+      // console.log(song, "song in artist")
+      if (song) {
+        // redirect(`/song/${slugAndId}`)
+        redirect(`/song/${slug}-${id}`);
 
-  const artistData = await fetchArtistById(id);
+      }
+      notFound()
+    }
+
   const data = artistData && artistData[0];
-  // console.log(data, "artist page id");
-  
-  // const album = artistData?.[0]?.album || [];
-const color = artistData?.[0]?.color ?? "#121212"; // fallback color
-  
+  const color = artistData?.[0]?.color ?? "#121212"; // fallback color
 
-  // console.log(color, "artist color page data");
-
-  if (!artistData || artistData.length === 0) {
-    // console.error(`No artist found for slug: ${artistSlug}`);
-    return (
-      <p className="text-foreground text-center">Name
-        Sorry, no artist was found for this ID.
-      </p>
-    );
-  }
   return (
     <>
-      {/* hello {data.name} */}
       <div className="bg-background  rounded-lg ">
-        <div         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
-        }}>
+        <div className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
+          }}>
           <Menu />
           <InContentAd />
-          
+
           <div className=" flex items-center gap-4 w-full ">
             <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
               <Image
@@ -88,8 +95,8 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
           </div>
           <div>
 
-              <p className="text-base  text-foreground">About</p>
-              <p className="text-sm  text-foreground">{data?.about || "Artist"}</p>
+            <p className="text-base  text-foreground">About</p>
+            <p className="text-sm  text-foreground">{data?.about || "Artist"}</p>
           </div>
         </div>
 
@@ -104,7 +111,6 @@ const color = artistData?.[0]?.color ?? "#121212"; // fallback color
             ))}
           </div>
         </section>
-        {/* <Processor params={data.song} /> */}
       </div>
     </>
   );

@@ -8,7 +8,6 @@ import TrendingSection from "@/components/TrendingSection";
 import { fetchAlbums, fetchArtists, fetchCategory, fetchSongs, } from "@/lib/query/query";
 import Link from "next/link";
 import AlbumSection from "@/components/AlbumSection";
-import CategorySongs from "@/components/CategorySongs";
 
 export default async function Home() {
   const [songs, artists, categories, album] = await Promise.all([

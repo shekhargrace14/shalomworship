@@ -4,6 +4,7 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
 import { fetchCategory, fetchCategoryBySlug } from "@/lib/query/query";
+import { notFound } from "next/navigation";
 import slugify from "slugify";
 
 export async function generateStaticParams() {
@@ -26,18 +27,21 @@ export async function generateMetadata({ params }: any) {
   const image = await category?.[0]?.image ?? ''
 
 
-  return await MetaData({type, title, metaDescription, slug, image });
+  return await MetaData({ type, title, metaDescription, slug, image });
 }
 
 
 const Page = async ({ params }: any) => {
   const categorySlug = params.id;
+
   const categoryData = await fetchCategoryBySlug(categorySlug);
+
+  if (!categoryData) {
+    notFound(); // or 410
+  }
+
   const data = categoryData?.[0];
   const color = categoryData?.[0]?.color ?? "#121212"; // fallback color
-  // console.log(color, "category page color");
-
-  //   console.log(categoryData, "categoryData  page data");
 
   // console.log(data?.song, "categoryData song page data");
   return (
@@ -61,7 +65,7 @@ const Page = async ({ params }: any) => {
         </div>
         <h2 className="text-xl font-semibold m-4 text-foreground">Songs on {data?.title}{" "}Category</h2>
         <section className="w-full px-2">
-        <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2  row-span-full ">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2  row-span-full ">
             {data?.song?.reverse().map((item) => (
               <div key={item.songId}>
                 <Processor item={item.songId} />

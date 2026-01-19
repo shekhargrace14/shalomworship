@@ -1,6 +1,7 @@
 // components/JsonLdScript.tsx
 import { songs } from "@/lib/actions/song";
 import { fetchSongById } from "@/lib/query/query";
+import { getYouTubeMetadata } from "@/lib/youtube";
 import { getLanguageName } from "@/utils/getLanguageName";
 
 export default async function JsonLd({ id }: { id: string }) {
@@ -8,9 +9,12 @@ export default async function JsonLd({ id }: { id: string }) {
   if (!songData) return null;
 
   // -------- SAFE VALUES --------
-  const alternateNames = songData.searchVariant.map(s=> s)
-  const artistNames = songData.artist?.map(a => a.artist.title) || [];
+  const alternateNames = songData.searchVariant.map(s => s)
+  const artist = songData.artist
+  const artistNames = artist?.map(a => a.artist.title) || [];
+  const primaryArtistUrl = artist[0].artist.link || [];
   const primaryArtist = artistNames[0] || "Unknown Artist";
+  // console.log(artist[0].artist.link, "json ld isssssss")
 
   const lang = songData.language ?? "en";
   const langName = getLanguageName(lang);
@@ -21,6 +25,21 @@ export default async function JsonLd({ id }: { id: string }) {
   const safeVideoId = songData.videoId || "";
   const safeCategory = songData.category?.[0]?.category;
   const safeAlbum = songData.album?.[0]?.album;
+  const aboutData = [
+      {
+        "@type": "Thing",
+        "name": `${langName} Christian Worship Lyrics`,
+        "description": `Full lyrics and resources for ${langName} worship songs.`
+      },
+      {
+        "@type": "Thing",
+        "name": "Christian Song Chords",
+      }
+    ]
+    const youtubeData =await getYouTubeMetadata(songData.videoId)
+
+    // console.log(youtubeData, "youtubeData")
+    
 
   // -------- LYRICS SNIPPET --------
   function getLyricSnippet(data: any, lang: string): string {
@@ -51,7 +70,8 @@ export default async function JsonLd({ id }: { id: string }) {
     "@id": `https://www.shalomworship.com/song/${songData.slug}-${songData.id}`,
     "identifier": `${songData.slug}-${songData.id}`,
 
-    name: songData.title,
+    // name: `${songData.title} lyrics ${songData.isChords ? "chords and nashville number" : ""} ` ,
+    name: songData.title ,
     alternateName: alternateNames,
     inLanguage: lang,
     ...(key && { "musicalKey": key }),
@@ -61,10 +81,10 @@ export default async function JsonLd({ id }: { id: string }) {
     // description: `${songData.title} ${langName} Christian worship song by ${primaryArtist}. Read lyrics${songData.isChords ? ", chords and Nashville Numbers Chart" : ""}, translation, and meaning.`,
     description: [
       `${songData.title} is a Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}.`,
-      `This page provides the lyrics${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`,songData?.searchVariant
+      `This page provides the lyrics${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`, songData?.searchVariant[0]
         ? `This this song is widely known by the refrain "${songData.searchVariant}".`
         : null
-    ].filter(Boolean).join(" "),  
+    ].filter(Boolean).join(" "),
 
 
     lyrics: {
@@ -75,20 +95,41 @@ export default async function JsonLd({ id }: { id: string }) {
     lyricist: { "@type": "Person", name: primaryArtist },
     composer: { "@type": "Person", name: primaryArtist },
 
-    // byArtist: {
-    //   "@type": "MusicGroup",
-    //   name: primaryArtist,
-    // },
     creator: artistNames.map(name => ({
-      "@type": "MusicGroup",
+      "@type": "Person",
       name
     })),
+    "subjectOf": {
+      "@type": "VideoObject",
+      "name": `${songData.title} Official Video`,
+      "description": `Official worship video for ${songData.title} by ${primaryArtist}`,
+      "thumbnailUrl": safeImage,
+      "uploadDate": youtubeData?.uploadDate,
+      "duration": youtubeData?.duration,
+      "contentUrl": `https://www.youtube.com/watch?v=${songData.videoId}`,
+      "embedUrl": `https://www.youtube.com/embed/${songData.videoId}`,
+      "interactionCount": youtubeData?.viewCount
+    },
 
 
     about: [
-      ...artistNames.map(n => ({ "@type": "MusicGroup", name: n })),
-      { "@type": "Thing", name: `${langName} Christian Worship` },
+      {
+
+        "@type": "Thing",
+        "name": `${langName} Christian Worship Lyrics`, // Adding 'Lyrics' is key
+        "sameAs": "https://en.wikipedia.org/wiki/Contemporary_Christian_music" // High-authority link
+      },
+      {
+        "@type": "Thing",
+        "name": "Worship Chords and Tabs", // Targets the 23k impression 'chord' intent
+      },
+      {
+        "@type": "Thing",
+        "name": `${langName} Gospel Songs`,
+      },
+      ...aboutData
     ],
+    
 
     image: {
       "@type": "ImageObject",

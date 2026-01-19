@@ -1,23 +1,13 @@
-
-import Category from "@/components/category";
-import CategoryCard from "@/components/CategoryCard";
 import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
 import ShareButton from "@/components/ShareButton";
-import Lines from "@/components/shared/LinesVersion2";
-import PlayButton from "@/components/ui/Play";
-import Play from "@/components/ui/Play";
 import Social from "@/components/ui/Social";
-import YouTubeEmbed from "@/components/YouTubeEmbed";
-import { category } from "@/lib/actions/category";
-import { fetchSongById, fetchSongs } from "@/lib/query/query";
+import { fetchArtistById, fetchSongById, fetchSongs } from "@/lib/query/query";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
-
 import { Dot } from "lucide-react";
-import { FAQ } from "@/components/FAQ";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
 import LinesVersion2 from "@/components/shared/LinesVersion2";
 // import JsonLd from "@/components/Jsonld";
@@ -29,14 +19,12 @@ import { Metadata } from "next";
 import { buildSongMetadata } from "@/utils/seo";
 import CategorySongs from "@/components/CategorySongs";
 import InContentAd from "@/components/ads/InContentAd";
-import { formatBold } from "@/utils/formatBold";
-import { title } from "process";
 import VideoPlayer from "@/components/VideoPlayer";
+import { notFound, redirect } from "next/navigation";
+
 
 async function fetchSongData({ id }: any) {
-
   const res = await fetchSongById(id); "use client";
-
   const data = res;
   return data || null;
 }
@@ -53,33 +41,41 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const slugAndId = params.slugAndId;
   const { id } = parseSlugAndId(slugAndId);
-
+  if (!id || !isValidObjectId(id)) {
+    return {};
+  }
   const song = await fetchSongById(id);
-
+  if (!song) return {};
   return buildSongMetadata({
     song,
     slugAndId,
   });
 }
 
+const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
+
 const Song = async ({ params }: any) => {
-  // const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  // const id = slugAndId?.split('-').pop(); // extract id from slug-id
+  const slugAndId = params.slugAndId; // this is the [slugAndId] part
 
-  const { id } = parseSlugAndId(params?.slugAndId);
+  // const parts = slugAndId.split('-');
+
+  const {slug, id } = parseSlugAndId(params.slugAndId);
+
+  // const id = parts.pop();              // last part
+  // const slug = parts.join('-');        // remaining parts joined back
+
+  // console.log(slugAndId, "song page slugandid")  
 
 
-  if (!id) {
-    return <p className="text-white">Invalid song ID.</p>;
-  }
+    const songData = await fetchSongData({ id });
 
-  // const id = await params.id;
-  // console.log(id, " id of song page params");
-  // console.log(slug, " slug of song page params");
-  const songData = await fetchSongData({ id });
-  if (!songData)
-    return <p className="text-white">No Song Found in page song...</p>;
-  // console.log(songData, "song  ")
+    if (!songData) {
+      const artist = await fetchArtistById(id)
+      if (artist) {
+        redirect(`/artist/${slug}-${id}`)
+      }
+      notFound()
+    }
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -88,23 +84,17 @@ const Song = async ({ params }: any) => {
     if (item.isCreator) {
       creators.push(a);
     }
-    // if (item.artist?.type === "individual" && item.isArtist === true) {
     if (item.isArtist) {
       artists.push(a);
     }
   });
 
-  // console.log(artists, " artists of song page params");
-
   const albumTitle = songData?.album?.[0]?.album?.title || "";
   const albumSlug = songData?.album?.[0]?.album?.slug + "-" + songData?.album?.[0]?.album?.id || "";
-
   const categories = songData?.category.map(c => c.category.slug)
-  // console.log(categories);
   const language = songData.language
   const langName = getLanguageName(language);
-  const about = songData.about
-
+  // const about = songData.about
   const searchVariants = songData.searchVariant
 
   return (
@@ -123,7 +113,7 @@ const Song = async ({ params }: any) => {
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
             {songData.videoId ?
               // <YouTubeEmbed videoId={songData.videoId} title={songData?.title} />
-              <VideoPlayer videoId={songData.videoId} title={songData.title}/>
+              <VideoPlayer videoId={songData.videoId} title={songData.title} />
               :
               <Image
                 src={songData.image || "/default-image.jpg"}
@@ -249,13 +239,13 @@ const Song = async ({ params }: any) => {
                         </span>
                       ))
                     ) : (
-                      
-                        <Link
-                          href={`/category/${songData.category[0]?.category.slug}`}
-                        >
-                          {songData.category[0]?.category.title}
-                        </Link>
-                      
+
+                      <Link
+                        href={`/category/${songData.category[0]?.category.slug}`}
+                      >
+                        {songData.category[0]?.category.title}
+                      </Link>
+
                     )
                   ) : (
                     <p className="font-light text-sm leading-4 text-foreground">

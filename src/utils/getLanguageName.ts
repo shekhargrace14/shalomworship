@@ -4,6 +4,7 @@ import { $Enums } from "@prisma/client";
 // We accept string keys instead of forcing exact enum literals.
 // This is simpler and avoids weird TS edge cases.
 const LANGUAGE_NAMES: Record<string, string> = {
+  bn: "Bengali",
   en: "English",
   es: "Spanish",
   hi: "Hindi",

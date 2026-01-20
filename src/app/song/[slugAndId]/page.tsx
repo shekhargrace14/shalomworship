@@ -21,6 +21,7 @@ import CategorySongs from "@/components/CategorySongs";
 import InContentAd from "@/components/ads/InContentAd";
 import VideoPlayer from "@/components/VideoPlayer";
 import { notFound, redirect } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
 
 
 async function fetchSongData({ id }: any) {
@@ -39,7 +40,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const slugAndId = params.slugAndId;
+  const slugAndId = await params.slugAndId;
   const { id } = parseSlugAndId(slugAndId);
   if (!id || !isValidObjectId(id)) {
     return {};
@@ -55,11 +56,11 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
 
 const Song = async ({ params }: any) => {
-  const slugAndId = params.slugAndId; // this is the [slugAndId] part
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
 
   // const parts = slugAndId.split('-');
 
-  const {slug, id } = parseSlugAndId(params.slugAndId);
+  const { slug, id } = parseSlugAndId(params.slugAndId);
 
   // const id = parts.pop();              // last part
   // const slug = parts.join('-');        // remaining parts joined back
@@ -67,15 +68,15 @@ const Song = async ({ params }: any) => {
   // console.log(slugAndId, "song page slugandid")  
 
 
-    const songData = await fetchSongData({ id });
+  const songData = await fetchSongData({ id });
 
-    if (!songData) {
-      const artist = await fetchArtistById(id)
-      if (artist) {
-        redirect(`/artist/${slug}-${id}`)
-      }
-      notFound()
+  if (!songData) {
+    const artist = await fetchArtistById(id)
+    if (artist) {
+      redirect(`/artist/${slug}-${id}`)
     }
+    notFound()
+  }
 
   const artists: any[] = [];
   const creators: any[] = [];
@@ -176,9 +177,10 @@ const Song = async ({ params }: any) => {
                       className="font-light text-sm leading-4 text-foreground"
                     >
                       <Link href={`/category/${category?.category.slug}`}>
-                        {category?.category.title}
+                        <Badge variant="secondary">{category?.category.title}</Badge>
+                        {/* {category?.category.title} */}
                       </Link>
-                      {index < songData.category.length - 1 ? ", " : ""}
+                      {/* {index < songData.category.length - 1 ? ", " : ""} */}
                     </span>
                   ))
                 ) : (
@@ -196,11 +198,13 @@ const Song = async ({ params }: any) => {
                 </p>
               )}
               <Dot className="text-foreground" />
-              <p className="font-light text-sm leading-4 text-foreground">
-                <Link href={`/language/${language}`}>
-                  {langName}
-                </Link>
-              </p>
+
+              {/* <p className="font-light text-sm leading-4 text-foreground"> */}
+              <Link href={`/language/${language}`}>
+                <Badge variant="secondary">{langName}</Badge>
+                {/* {langName} */}
+              </Link>
+              {/* </p> */}
               <Dot className="text-foreground" />
               <div className=" ">
                 <ShareButton title={songData.title} />

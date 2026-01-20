@@ -12,7 +12,7 @@ export default async function JsonLd({ id }: { id: string }) {
   const alternateNames = songData.searchVariant.map(s => s)
   const artist = songData.artist
   const artistNames = artist?.map(a => a.artist.title) || [];
-  const primaryArtistUrl = artist[0].artist.link || [];
+  const primaryArtistUrl = artist[0]?.artist.link || [];
   const primaryArtist = artistNames[0] || "Unknown Artist";
   // console.log(artist[0].artist.link, "json ld isssssss")
 
@@ -26,20 +26,20 @@ export default async function JsonLd({ id }: { id: string }) {
   const safeCategory = songData.category?.[0]?.category;
   const safeAlbum = songData.album?.[0]?.album;
   const aboutData = [
-      {
-        "@type": "Thing",
-        "name": `${langName} Christian Worship Lyrics`,
-        "description": `Full lyrics and resources for ${langName} worship songs.`
-      },
-      {
-        "@type": "Thing",
-        "name": "Christian Song Chords",
-      }
-    ]
-    const youtubeData =await getYouTubeMetadata(songData.videoId)
+    {
+      "@type": "Thing",
+      "name": `${langName} Christian Worship Lyrics`,
+      "description": `Full lyrics and resources for ${langName} worship songs.`
+    },
+    {
+      "@type": "Thing",
+      "name": "Christian Song Chords",
+    }
+  ]
+  const youtubeData = await getYouTubeMetadata(songData.videoId)
 
-    // console.log(youtubeData, "youtubeData")
-    
+  // console.log(youtubeData, "youtubeData")
+
 
   // -------- LYRICS SNIPPET --------
   function getLyricSnippet(data: any, lang: string): string {
@@ -71,7 +71,7 @@ export default async function JsonLd({ id }: { id: string }) {
     "identifier": `${songData.slug}-${songData.id}`,
 
     // name: `${songData.title} lyrics ${songData.isChords ? "chords and nashville number" : ""} ` ,
-    name: songData.title ,
+    name: songData.title,
     alternateName: alternateNames,
     inLanguage: lang,
     ...(key && { "musicalKey": key }),
@@ -82,7 +82,7 @@ export default async function JsonLd({ id }: { id: string }) {
     description: [
       `${songData.title} is a Christian worship song by ${primaryArtist}, commonly sung in moments of ${category}.`,
       `This page provides the lyrics${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`, songData?.searchVariant[0]
-        ? `This this song is widely known by the refrain "${songData.searchVariant}".`
+        ? `This this song is widely known by the refrain "${songData.searchVariant[0]}".`
         : null
     ].filter(Boolean).join(" "),
 
@@ -129,7 +129,7 @@ export default async function JsonLd({ id }: { id: string }) {
       },
       ...aboutData
     ],
-    
+
 
     image: {
       "@type": "ImageObject",

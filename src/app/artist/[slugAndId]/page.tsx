@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: any) {
-  const slugAndId =  params.slugAndId; // this is the [slugAndId] part
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   // 
   const { id } = parseSlugAndId(params.slugAndId);
 
@@ -45,7 +45,7 @@ const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
 
 
 const Page = async ({ params }: any) => {
-  const slugAndId =  params.slugAndId; // this is the [slugAndId] part
+  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   // const id =  slugAndId.split('-').pop(); // extract id from slug-id
   const { slug, id } = parseSlugAndId(params.slugAndId);
 

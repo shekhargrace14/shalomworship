@@ -108,6 +108,7 @@ enum VersionType {
   version_3
 }
 enum LanguageType {
+  bn
   en
   es
   gu

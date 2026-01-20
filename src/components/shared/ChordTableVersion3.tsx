@@ -187,9 +187,12 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
           </div>
         ))}
         {/* second section */}
+        {!isChord && !isNashville ?
+        <>
         <h2 className="block lg:hidden text-xl md:text-2xl font-semibold mb-0 text-foreground">
           {song.title}{" "}{langName} Lyrics
         </h2>
+        
         {!isRoman &&
 
           (song.lines.map((section, sectionIdx) => (
@@ -227,6 +230,11 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
           )))
 
         }
+        </>
+  
+        : "" 
+
+           }
 
       </div>
     </div>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import slugify from "slugify";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 import { Dot } from "lucide-react";
+import { Badge } from "./badge";
 
 const Card: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
@@ -49,10 +50,10 @@ const Card: React.FC<any> = ({ item }) => {
               </Avatar>
               <div>
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>
-                <div className="flex items-center">
+                <div className="flex items-center gap-1">
                   <p className="text-xs leading-none text-foreground">{creators[0]?.title}</p>
-                  <Dot className="text-foreground" />
-                  <p className="text-xs leading-none text-foreground">{item?.language}</p>
+                  {/* <p className="text-xs leading-none text-foreground">{item?.language}</p> */}
+                  <Badge variant="secondary">{item?.language}</Badge>
                 </div>
               </div>
             </div>

@@ -220,7 +220,7 @@ const Song = async ({ params }: any) => {
               </p>
             )}
             <div className="">
-              <p className="text-xs">
+              <p className="text-xs text-foreground">
                 <strong>{songData.title}</strong>
                 {`  is a Christian worship song by `}
                 <strong>{creators.map(c => c.title)}</strong>
@@ -256,20 +256,18 @@ const Song = async ({ params }: any) => {
                       Unknown category
                     </p>
                   )}
-                </strong>
+                </strong >
 
+                  {`. This page provides the lyrics ${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
 
+                  {songData?.searchVariant[0] && (
+                    <>
+                      {' This song is widely known by the refrain "'}
+                      <strong>{searchVariants[0]}</strong>
+                      {'".'}
+                    </>
 
-                {`. This page provides the lyrics ${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
-
-                {songData?.searchVariant[0] && (
-                  <>
-                    {' This song is widely known by the refrain "'}
-                    <strong>{searchVariants[0]}</strong>
-                    {'".'}
-                  </>
-
-                )}
+                  )}
               </p>
             </div>
           </div>

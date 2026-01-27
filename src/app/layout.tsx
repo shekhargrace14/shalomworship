@@ -18,8 +18,7 @@ export const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Shalom Worship",
-  description:
-    "Shalom Worship is a faith-based music ministry dedicated to spreading worship through heartfelt songs and lyrics.",
+  description: "Shalom Worship is a faith-based music Platform dedicated to spreading worship through heartfelt songs and lyrics.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.shalomworship.com/"
   ),
@@ -32,7 +31,6 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  // themeColor: "#000000",
 
 
   openGraph: {
@@ -75,6 +73,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  themeColor: "#05B1AC",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -92,6 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        {/* ahref analytics */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></script>
 
         {/* REMOVE AMP — this was breaking SEO */}
 

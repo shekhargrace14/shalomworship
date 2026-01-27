@@ -214,6 +214,11 @@ const redirects = [
     destination: "/song/tera-pyaar-67850879db79640f312960a6",
     permanent: true,
   },
+      {
+    source: "/tera-pyaar-lyrics-bridge-music-ft-philemon-anand-sheenu-mariam-hemant-sharma/",
+    destination: "/song/tera-pyaar-67850879db79640f312960a6",
+    permanent: true,
+  },
   {
     source: "/post/woh-hi-hai-khuda-lyrics-ft-robinson-shalu-sheenu-mariam-philemon-anand-sofia-shalu",
     destination: "/song/woh-hi-hai-khuda-6969e5509ff232478dd49eb0",
@@ -269,11 +274,11 @@ const redirects = [
     destination: "/song/anand-ki-bharpuri-678a2417fd0f75781ee4fa9f",
     permanent: true,
   },
-  // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
+  {
+    source: "/song/vandana-68c1d008f158be37678854f2",
+    destination: "/song/vandana-rajat-bk-68c1d008f158be37678854f2",
+    permanent: true,
+  },
   // {
   //   source: "",
   //   destination: "",

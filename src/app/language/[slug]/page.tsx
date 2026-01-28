@@ -1,6 +1,8 @@
 import Menu from "@/components/layout/Menu"
 import Processor from "@/components/Processor"
-import { fetchSongs } from "@/lib/query/query"
+import { fetchSongs } from "@/lib/actions/fetchSongs"
+import { CONTENT_VISIBILITY } from "@/lib/contentVisibility"
+// import { fetchSongs } from "@/lib/query/query"
 import { getLanguageName } from "@/utils/getLanguageName"
 
 
@@ -17,7 +19,7 @@ const page = async ({ params }: any) => {
     // console.log(params.slug)
     const lang = params.slug
 
-    const songs = await fetchSongs()
+    const songs = await fetchSongs([...CONTENT_VISIBILITY.public])
     const data = songs.filter((s: any) => s.language == lang)
     // console.log(data)
 

@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { IoIosClose, IoIosSearch } from "react-icons/io";
 import Search from "../ui/Search";
 import { usePathname } from "next/navigation";
-import SearchCopy from "../ui/Searchcopy";
 import { Search as Sicon, Slash, X } from "lucide-react";
 
 const Searchbar = () => {

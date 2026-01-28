@@ -28,7 +28,7 @@ export function buildSongMetadata({
 
     // Title
     const title = 
-        `${song.title} Lyrics ${song.searchVariant[0] ? `- ${song.searchVariant[0]}` : ""}
+        `${song.title} Lyrics ${song.searchVariantInTitle ? `- ${song.searchVariant[0]}` : ""}
         ${song.isChords ? " Chords & Nashville Number Chart" : ""}  | ${primaryArtist} | Shalom Worship`;
 
     // Description

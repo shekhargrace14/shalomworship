@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/table"
 // import { fetchSongs } from "@/lib/api/songs";
 
-import { fetchSongs } from "@/lib/query/query";
 
 import type { Song } from "@/types";
 import { Edit, Edit2 } from "lucide-react";
@@ -17,9 +16,7 @@ import Link from "next/link";
 
 
 const Page = async () => {
-  const data = await fetchSongs()
-  const songs = await data
-  console.log(songs)
+ 
 
   return (
     <div className=''>

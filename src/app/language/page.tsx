@@ -1,11 +1,13 @@
 import Menu from '@/components/layout/Menu';
-import { fetchSongs } from '@/lib/query/query'
+import { fetchSongs } from '@/lib/actions/fetchSongs';
+import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
+// import { fetchSongs } from '@/lib/query/query'
 import { getLanguageName } from '@/utils/getLanguageName';
 import Link from 'next/link';
 import React from 'react'
 
 const page = async () => {
-  const songs = await fetchSongs()
+  const songs = await fetchSongs([...CONTENT_VISIBILITY.public])
   const data = [...new Set(songs.map((s) => s.language))];
 
   const langName = data.map(d => ({ "name": getLanguageName(d), "slug": d }))

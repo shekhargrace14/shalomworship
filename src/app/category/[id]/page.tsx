@@ -3,6 +3,8 @@ import InContentAd from "@/components/ads/InContentAd";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
+import { fetchCategoryBySlugWithSongs } from "@/lib/actions/fetchCategoryBySlugWithSongs";
+import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { fetchCategory, fetchCategoryBySlug } from "@/lib/query/query";
 import { notFound } from "next/navigation";
 import slugify from "slugify";
@@ -34,7 +36,7 @@ export async function generateMetadata({ params }: any) {
 const Page = async ({ params }: any) => {
   const categorySlug = params.id;
 
-  const categoryData = await fetchCategoryBySlug(categorySlug);
+  const categoryData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
 
   if (!categoryData) {
     notFound(); // or 410
@@ -44,6 +46,8 @@ const Page = async ({ params }: any) => {
   const color = categoryData?.[0]?.color ?? "#121212"; // fallback color
 
   // console.log(data?.song, "categoryData song page data");
+  // const newData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
+  
   return (
     <>
       <div className="bg-background  rounded-lg">

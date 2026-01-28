@@ -2,7 +2,7 @@ import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
 import ShareButton from "@/components/ShareButton";
 import Social from "@/components/ui/Social";
-import { fetchArtistById, fetchSongById, fetchSongs } from "@/lib/query/query";
+import { fetchArtistById, fetchSongById } from "@/lib/query/query";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
@@ -22,6 +22,8 @@ import InContentAd from "@/components/ads/InContentAd";
 import VideoPlayer from "@/components/VideoPlayer";
 import { notFound, redirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
+import { fetchSongs } from "@/lib/actions/fetchSongs";
+import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 
 
 async function fetchSongData({ id }: any) {
@@ -31,7 +33,7 @@ async function fetchSongData({ id }: any) {
 }
 
 export async function generateStaticParams() {
-  const songs = await fetchSongs(); // Fetch all songs from your data source
+  const songs = await fetchSongs([...CONTENT_VISIBILITY.public]); // Fetch all songs from your data source
   return songs.map(song => {
     const slug = slugify(`${song.title}`, { lower: true }) + '-' + song.id.toString();
     // console.log(slug, ""); // Log the slug here
@@ -219,6 +221,7 @@ const Song = async ({ params }: any) => {
                 </Link>
               </p>
             )}
+            {songData.category[0] ?
             <div className="">
               <p className="text-xs text-foreground">
                 <strong>{songData.title}</strong>
@@ -270,6 +273,7 @@ const Song = async ({ params }: any) => {
                   )}
               </p>
             </div>
+             : ""}
           </div>
         </div>
       </div>

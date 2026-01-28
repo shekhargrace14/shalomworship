@@ -12,18 +12,14 @@ import { album } from "../actions/album";
 import { albumById } from "../actions/albumById";
 
 
-const fetchSongs = async () => {
-  const res = await songs();
-  return res;
-};
 
-
-const useGetSongs = () => {
+export const useGetSongs = () => {
   return useQuery({
     queryKey: ["songs"],
     queryFn: async () => await songs(),
   });
 };
+
 
 // Song By Id
 
@@ -38,6 +34,8 @@ const useGetSongById = (id:string) => {
     queryFn: async () => await songById(id),
   });
 };
+
+
 
 // Song By Slug
 
@@ -90,6 +88,8 @@ const useGetArtistById = (id:string) =>{
     queryFn : async ()=> await artistById(id)
   })
 }
+
+
 
 
 
@@ -158,9 +158,9 @@ export const useGetAlbumById = (id:string) =>{
 
 
 export { 
-  fetchSongById, fetchSongs, 
+  fetchSongById,
   fetchSongBySlug, useGetSongBySlug,
-  useGetSongById, useGetSongs, 
+  useGetSongById,
 
   fetchArtists, useGetArtists, 
   fetchArtistBySlug, useGetArtistBySlug,

@@ -1,44 +1,45 @@
+// new songById
+
 "use server";
 
+import { artistFullSelect, songFullSelect, albumFullSelect, categoryFullSelect } from "@/prisma/selectors";
 import prisma from "../db";
 
-export async function songById(id:string) {
+export async function songById(id: string) {
   try {
-    const song =  prisma.song.findUnique({
-      where: { id : id },
-      include: {
+    const song = prisma.song.findUnique({
+      where: { id: id },
+      select: {
         author: true,
         creator: true,
+        ...songFullSelect,
+
         artist: {
-          include: {
+          select: {
+            isCreator: true,
+            isArtist: true,
             artist: {
-              select: {
-        id: true,
-        title: true,
-        slug: true,
-        image: true,
-        type: true, // ✅ Add this to get the artist classification
-        link: true,
-        color: true,
-        createdAt: true,
-        updatedAt: true,
-      }
+              select: artistFullSelect
             }
           },
         },
         genre: {
-          include: {
+          select: {
             genre: true,
           },
         },
         category: {
-          include: {
-            category: true,
+          select: {
+            category: {
+              select : categoryFullSelect
+            }
           },
         },
-         album: {
-          include: {
-            album: true,
+        album: {
+          select: {
+            album: {
+              select: albumFullSelect
+            }
           },
         },
       },
@@ -55,3 +56,4 @@ export async function songById(id:string) {
     return null;
   }
 }
+

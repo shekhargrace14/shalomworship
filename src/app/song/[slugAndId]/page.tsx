@@ -133,7 +133,8 @@ const Song = async ({ params }: any) => {
             <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
               {songData.title}{" "}
             </h1>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
+
               {creators.length > 0 ? (
                 creators.map((creator, index) => (
                   <Link key={index} href={`/artist/${slugify(creators[0]?.slug, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">

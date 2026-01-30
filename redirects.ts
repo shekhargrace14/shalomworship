@@ -178,6 +178,11 @@ const redirects = [
     destination: "/song/dhanyawad-ke-saath-676ee13aa5e92f8809b16aef",
     permanent: true,
   },
+    {
+    source: "/song/danyawad-ke-saath-676ee13aa5e92f8809b16aef",
+    destination: "/song/dhanyawad-ke-saath-676ee13aa5e92f8809b16aef",
+    permanent: true,
+  },
   {
     source: "/post/ho-teri-stuti-aur-aradhana-lyrics",
     destination: "/song/ho-teri-stuti-69444a04b208c7319911a97e",
@@ -241,7 +246,12 @@ const redirects = [
   },
   {
     source: "/post/chattan-acoustic-lyrics-by-bridge-music-feat-prakruthi-angelina-sam-alex-pasula",
-    destination: "/song/chattan-678a2998fd0f75781ee4face",
+    destination: "/song/chattan-bridge-music-678a2998fd0f75781ee4face",
+    permanent: true,
+  },
+    {
+    source: "/post/chattan-acoustic-lyrics-by-bridge-music-feat-prakruthi-angelina-sam-alex-pasula",
+    destination: "/song/chattan-bridge-music-678a2998fd0f75781ee4face",
     permanent: true,
   },
   {
@@ -279,11 +289,11 @@ const redirects = [
     destination: "/song/vandana-rajat-bk-68c1d008f158be37678854f2",
     permanent: true,
   },
-  // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
+  {
+    source: "/category/war",
+    destination: "/category/warfare",
+    permanent: true,
+  },
   // {
   //   source: "",
   //   destination: "",

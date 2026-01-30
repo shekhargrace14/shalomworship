@@ -188,10 +188,8 @@ const Song = async ({ params }: any) => {
                   ))
                 ) : (
                   <p className="font-light text-sm leading-4 text-foreground ">
-                    <Link
-                      href={`/category/${songData.category[0]?.category.slug}`}
-                    >
-                      {songData.category[0]?.category.title}
+                    <Link href={`/category/${songData.category[0]?.category.slug}`}>
+                      <Badge variant="secondary">{songData.category[0]?.category.title}</Badge>
                     </Link>
                   </p>
                 )

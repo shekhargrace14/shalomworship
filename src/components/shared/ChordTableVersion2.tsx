@@ -83,7 +83,7 @@ const ChordTableVersion2: React.FC<ChordTableProps> = ({ id, isChord,songData })
                   {isChord && (
                     <tr className=''>
                       {transposedChords.map((chord: string, i: number) => (
-                      <td key={i} className="font-bold text-left text-foreground">{chord}</td>
+                      <td key={i} className="font-bold text-left text-accent">{chord}</td>
                       ))}
                     </tr>
                   )}

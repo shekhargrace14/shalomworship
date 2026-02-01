@@ -106,7 +106,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 {line.label && <h4 className="font-semibold mt-4">{line.label}</h4>}
                 {/* Nashville row */}
                 {isNashville && Array.isArray(line.chords) && line.chords.length > 0 && (
-                  <div className="whitespace-pre flex flex-wrap">
+                  <div className="whitespace-pre flex flex-wrap mt-2">
                     {line.chords.map((c, i) => (
 
                       <span key={i} className="flex">
@@ -124,10 +124,10 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                         <div className="min-w-8 text-sm">
                           <div className=" bg-card text-foreground font-medium inline-flex items-start p-0.5 px-1 rounded">
 
-                            <div className="w-fit">
+                            <div className="w-fit text-accent">
                               {c.number}
                             </div>
-                            <p className="text-xs">
+                            <p className="text-xs text-accent">
                               {c.quality}
                             </p>
                           </div>
@@ -142,7 +142,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                 {/* Chords row */}
 
                 {isChord && Array.isArray(line.chords) && line.chords.length > 0 && (
-                  <div className="whitespace-pre flex flex-wrap">
+                  <div className="whitespace-pre flex flex-wrap mt-2">
                     {line.chords.map((c, i) => (
                       <span key={i} className="flex">
                         {addSpaces(c.space)}
@@ -150,10 +150,10 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                         <div className="min-w-8 text-sm">
                           <div className=" bg-card text-foreground font-medium inline-flex items-start p-0.5 px-1 rounded">
 
-                            <div className="w-fit">
+                            <div className="w-fit text-accent">
                               {transposeChord([c.root], fromKey, toKey)[0]}
                             </div>
-                            <p className="text-xs">
+                            <p className="text-xs text-accent">
                               {c.quality}
                             </p>
                           </div>

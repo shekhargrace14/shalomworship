@@ -27,7 +27,6 @@ const Card: React.FC<any> = ({ item }) => {
 
 
   return (
-
     <>
       <Link href={`/song/${slug}-${item.id}`}>
         {/* <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg"> */}

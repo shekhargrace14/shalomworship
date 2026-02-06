@@ -13,7 +13,7 @@ const CategorySongs = async ({ params }: any) => {
   const id = params;
   const categoryData = await fetchCategoryBySlugWithSongs(id,[...CONTENT_VISIBILITY.public,] )
   const songs = categoryData[0]?.song
-  console.log(categoryData[0].song, "categoryData categoryData")
+  // console.log(categoryData[0].song, "categoryData categoryData")
 
   return (
     // <>hello</>

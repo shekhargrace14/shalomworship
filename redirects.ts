@@ -1,25 +1,4 @@
 const redirects = [
-  {
-    source: "/song/tu-raaj-kare-6786163b4a380bbf080a361c",
-    destination: "/song/tu-raj-kare-6786163b4a380bbf080a361c",
-    permanent: true,
-  },
-  {
-    source: "/song/tu-raaj-kare-jaago-music-6786163b4a380bbf080a361c",
-    destination: "/song/tu-raj-kare-6786163b4a380bbf080a361c",
-    permanent: true,
-  },
-    {
-    source: "/post/tu-raaj-kare-lyrics-sheldon-bangera",
-    destination: "/song/tu-raj-kare-6786163b4a380bbf080a361c",
-    permanent: true,
-  },
-
-    {
-    source: "/post/tu-raj-kare-lyrics-jaago-music",
-    destination: "/song/tu-raj-kare-6786163b4a380bbf080a361c",
-    permanent: true,
-  },
 
   {
     source: "/song/kaun-hai-jaago-music-6789e1792a1507be50d92a6e",

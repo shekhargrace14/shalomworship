@@ -55,7 +55,6 @@ export function Mastercard({
             artists.push(item.artist);
         }
     });
-    console.log(item?.slug, ":item");
     const slug = slugify(`${songSlug}`, { lower: true });
 
     return (

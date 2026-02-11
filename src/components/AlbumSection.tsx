@@ -14,7 +14,7 @@ const AlbumSection: React.FC<any> = ({number, album, type}) => {
   return (
     <>
       <section className="w-full my-2">
-        <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 ">
+        <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-2 ">
           {album?.slice(number)
             .reverse()
             .map((item: Artist) => (

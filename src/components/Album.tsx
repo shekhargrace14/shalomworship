@@ -25,6 +25,7 @@ const Album: React.FC<any> = ({ item }) => {
               alt={item.title || "Song Image"}
               width={700}
               height={500}
+              className="h-40 object-contain"
             /> 
             {/* <YouTubeThumbnail videoId={item.videoId} alt={item.title}/> */}
           </div>

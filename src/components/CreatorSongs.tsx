@@ -3,6 +3,7 @@ import Processor from "@/components/Processor";
 import { fetchArtistByIdWithSongs } from "@/lib/actions/fetchArtistByIdWithSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { fetchArtistBySlug } from "@/lib/query/query";
+import SongSection from "./SongSection";
 
 
 
@@ -24,7 +25,7 @@ const CreatorSongs = async ({ params }: any) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
         {data.song.reverse().map((item) => (
           <div key={item.songId}>
-            <Processor item={item.songId} />
+            <Processor item={item.songId} variant="imageTop" />
           </div>
         ))}
       </div>

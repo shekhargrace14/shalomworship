@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { IoMdClose, IoMdHome } from "react-icons/io";
-import Searchbar from "../shared/Searchbar";
+// import Searchbar from "../shared/Searchbar";
 import { FaHamburger } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
 import { useState } from "react";
@@ -24,7 +24,7 @@ const Header = () => {
       </div>
       <div className="md:relative w-10/12 sm:w-8/12 lg:w-5/12">
         {/* <Link href="/search"> */}
-        <Searchbar />
+        {/* <Searchbar /> */}
         {/* </Link> */}
       </div>
       {/* <Link href="/songDB"><div className="">  SongDB</div></Link> */}

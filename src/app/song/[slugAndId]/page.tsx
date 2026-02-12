@@ -35,18 +35,18 @@ async function fetchSongData({ id }: any) {
 export async function generateStaticParams() {
   const songs = await fetchSongs([...CONTENT_VISIBILITY.public]); // Fetch all songs from your data source
   return songs.map(song => {
-    const slug = slugify(`${song.title}`, { lower: true }) + '-' + song.id.toString();
+    const slugAndId = slugify(`${song.title}`, { lower: true }) + '-' + song.id.toString();
     // console.log(slug, ""); // Log the slug here
-    return { slug };
+    return { slugAndId };
   });
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const slugAndId = await params.slugAndId;
   const { id } = parseSlugAndId(slugAndId);
-  if (!id || !isValidObjectId(id)) {
-    return {};
-  }
+  // if (!id || !isValidObjectId(id)) {
+  //   return {};
+  // }
   const song = await fetchSongById(id);
   if (!song) return {};
   return buildSongMetadata({
@@ -55,34 +55,24 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   });
 }
 
-const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
+// const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
 
 const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-
-  // const parts = slugAndId.split('-');
-
   const { slug, id } = parseSlugAndId(params.slugAndId);
-
-  // const id = parts.pop();              // last part
-  // const slug = parts.join('-');        // remaining parts joined back
-
-  // console.log(slugAndId, "song page slugandid")  
-
-
   const songData = await fetchSongData({ id });
 
-  if (!songData) {
-    const artist = await fetchArtistById(id)
-    if (artist) {
-      redirect(`/artist/${slug}-${id}`)
-    }
-    notFound()
-  }
+  // if (!songData) {
+  //   const artist = await fetchArtistById(id)
+  //   if (artist) {
+  //     redirect(`/artist/${slug}-${id}`)
+  //   }
+  //   notFound()
+  // }
 
   const artists: any[] = [];
   const creators: any[] = [];
-  songData.artist.forEach((item) => {
+  songData?.artist.forEach((item) => {
     const a = item.artist
     if (item.isCreator) {
       creators.push(a);
@@ -94,11 +84,11 @@ const Song = async ({ params }: any) => {
 
   const albumTitle = songData?.album?.[0]?.album?.title || "";
   const albumSlug = songData?.album?.[0]?.album?.slug + "-" + songData?.album?.[0]?.album?.id || "";
-  const categories = songData?.category.map(c => c.category.slug)
-  const language = songData.language
+  const categories = songData?.category?.map(c => c.category.slug) ?? []
+  const language = songData?.language
   const langName = getLanguageName(language);
-  // const about = songData.about
-  const searchVariants = songData.searchVariant
+  // const about = songData?.about
+  const searchVariants = songData?.searchVariant || ""
 
   return (
 
@@ -107,20 +97,20 @@ const Song = async ({ params }: any) => {
       <div
         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
         style={{
-          backgroundImage: `linear-gradient(to bottom, ${songData.color}, transparent)`
+          backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`
         }}
       >
         <Menu />
         <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
-            {songData.videoId ?
-              // <YouTubeEmbed videoId={songData.videoId} title={songData?.title} />
-              <VideoPlayer videoId={songData.videoId} title={songData.title} />
+            {songData?.videoId ?
+              // <YouTubeEmbed videoId={songData?.videoId} title={songData?.title} />
+              <VideoPlayer videoId={songData?.videoId} title={songData?.title} />
               :
               <Image
-                src={songData.image || "/default-image.jpg"}
-                alt={songData.title || "Song Image"}
+                src={songData?.image || "/default-image.jpg"}
+                alt={songData?.title || "Song Image"}
                 width={200}
                 height={100}
                 className="bg-gray-800 object-cover h-full w-full"
@@ -131,7 +121,7 @@ const Song = async ({ params }: any) => {
           </div>
           <div className="sm:w-8/12 grid gap-2">
             <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
-              {songData.title}{" "}
+              {songData?.title}{" "}
             </h1>
             <div className="flex flex-wrap gap-2">
 
@@ -172,9 +162,9 @@ const Song = async ({ params }: any) => {
               )}
             </div>
             <div className="flex gap-2 flex-wrap items-center" >
-              {songData.category && songData.category.length > 0 ? (
-                songData.category.length > 1 ? (
-                  songData.category.map((category, index) => (
+              {songData?.category && songData?.category.length > 0 ? (
+                songData?.category.length > 1 ? (
+                  songData?.category.map((category, index) => (
                     <span
                       key={index}
                       className="font-light text-sm leading-4 text-foreground"
@@ -183,13 +173,13 @@ const Song = async ({ params }: any) => {
                         <Badge variant="secondary">{category?.category.title}</Badge>
                         {/* {category?.category.title} */}
                       </Link>
-                      {/* {index < songData.category.length - 1 ? ", " : ""} */}
+                      {/* {index < songData?.category.length - 1 ? ", " : ""} */}
                     </span>
                   ))
                 ) : (
                   <p className="font-light text-sm leading-4 text-foreground ">
-                    <Link href={`/category/${songData.category[0]?.category.slug}`}>
-                      <Badge variant="secondary">{songData.category[0]?.category.title}</Badge>
+                    <Link href={`/category/${songData?.category[0]?.category.slug}`}>
+                      <Badge variant="secondary">{songData?.category[0]?.category.title}</Badge>
                     </Link>
                   </p>
                 )
@@ -200,19 +190,16 @@ const Song = async ({ params }: any) => {
               )}
               <Dot className="text-foreground" />
 
-              {/* <p className="font-light text-sm leading-4 text-foreground"> */}
-              <Link href={`/language/${language}`}>
+              {/* <Link href={`/language/${language}`}>
                 <Badge variant="secondary">{langName}</Badge>
-                {/* {langName} */}
-              </Link>
-              {/* </p> */}
-              <Dot className="text-foreground" />
+              </Link> */}
+              {/* <Dot className="text-foreground" /> */}
               <div className=" ">
-                <ShareButton title={songData.title} />
+                <ShareButton title={songData?.title} />
               </div>
 
             </div>
-            {songData.album && songData.album.length > 0 && (
+            {songData?.album && songData?.album.length > 0 && (
               <p className="text-sm text-foreground">
                 Album :{" "}
                 <Link href={`/album/${albumSlug}`}>
@@ -220,47 +207,47 @@ const Song = async ({ params }: any) => {
                 </Link>
               </p>
             )}
-            {songData.category[0] ?
-            <div className="">
-              <p className="text-xs text-foreground">
-                <strong>{songData.title}</strong>
-                {`  is a Christian worship song by `}
-                <strong>{creators.map(c => c.title)}</strong>
+            {songData?.category[0] ?
+              <div className="">
+                <p className="text-xs text-foreground">
+                  <strong>{songData?.title}</strong>
+                  {`  is a Christian worship song by `}
+                  <strong>{creators.map(c => c.title)}</strong>
 
-                {`, commonly sung in moments of `}
+                  {`, commonly sung in moments of `}
 
-                <strong>
+                  <strong>
 
-                  {songData.category && songData.category.length > 0 ? (
-                    songData.category.length > 1 ? (
-                      songData.category.map((category, index) => (
-                        <span
-                          key={index}
-                          className="text-xs leading-4 text-foreground"
+                    {songData?.category && songData?.category.length > 0 ? (
+                      songData?.category.length > 1 ? (
+                        songData?.category.map((category, index) => (
+                          <span
+                            key={index}
+                            className="text-xs leading-4 text-foreground"
+                          >
+                            <Link href={`/category/${category?.category.slug}`}>
+                              {category?.category.title}
+                            </Link>
+                            {index < songData?.category.length - 1 ? ", " : ""}
+                          </span>
+                        ))
+                      ) : (
+
+                        <Link
+                          href={`/category/${songData?.category[0]?.category.slug}`}
                         >
-                          <Link href={`/category/${category?.category.slug}`}>
-                            {category?.category.title}
-                          </Link>
-                          {index < songData.category.length - 1 ? ", " : ""}
-                        </span>
-                      ))
+                          {songData?.category[0]?.category.title}
+                        </Link>
+
+                      )
                     ) : (
+                      <p className="font-light text-sm leading-4 text-foreground">
+                        Unknown category
+                      </p>
+                    )}
+                  </strong >
 
-                      <Link
-                        href={`/category/${songData.category[0]?.category.slug}`}
-                      >
-                        {songData.category[0]?.category.title}
-                      </Link>
-
-                    )
-                  ) : (
-                    <p className="font-light text-sm leading-4 text-foreground">
-                      Unknown category
-                    </p>
-                  )}
-                </strong >
-
-                  {`. This page provides the lyrics ${songData.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
+                  {`. This page provides the lyrics ${songData?.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
 
                   {songData?.searchVariant[0] && (
                     <>
@@ -270,35 +257,35 @@ const Song = async ({ params }: any) => {
                     </>
 
                   )}
-              </p>
-            </div>
-             : ""}
+                </p>
+              </div>
+              : ""}
           </div>
         </div>
       </div>
       <main className="mx-auto p-4 pt-4 relative">
-        {songData.version === "version_1" ? <div>
+        {songData?.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
-              {songData.title} lyrics
+              {songData?.title} lyrics
             </h2>
-            <div dangerouslySetInnerHTML={{ __html: songData.content }} />
+            <div dangerouslySetInnerHTML={{ __html: songData?.content }} />
           </section>
         </div> : null}
-        {songData.version === "version_2" ? <LinesVersion2
-          id={songData.id}
+        {songData?.version === "version_2" ? <LinesVersion2
+          id={songData?.id}
           song={songData}
-          isChords={!!songData.isChords}
+          isChords={!!songData?.isChords}
         /> : null}
-        {songData.version === "version_3" ? <LinesVersion3
-          id={songData.id}
+        {songData?.version === "version_3" ? <LinesVersion3
+          id={songData?.id}
           song={songData}
-          isChords={!!songData.isChords}
-          isTranslations={!!songData.isTranslation}
-          language={songData.language}
+          isChords={!!songData?.isChords}
+          isTranslations={!!songData?.isTranslation}
+          language={songData?.language}
         /> : null}
         <section className="w-full text-foreground mt-12">
-          {/* <div >{songData.content }</div> */}
+          {/* <div >{songData?.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">
 
             {creators.length > 0 ? (
@@ -330,16 +317,16 @@ const Song = async ({ params }: any) => {
         </section>
         <Social />
         {/* <FAQ
-          title={songData.title}  
+          title={songData?.title}  
           artist={artists}
           category={creators}
           scripture={creators}
-          meaning={songData.title}  
+          meaning={songData?.title}  
         /> */}
         <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">Songs Based on&nbsp;
-          {songData.category && songData.category.length > 0 ? (
-            songData.category.length > 1 ? (
-              songData.category.map((category, index) => (
+          {songData?.category && songData?.category.length > 0 ? (
+            songData?.category.length > 1 ? (
+              songData?.category.map((category, index) => (
                 <span
                   key={index}
                 // className="font-light text-sm leading-4 text-foreground"
@@ -347,14 +334,14 @@ const Song = async ({ params }: any) => {
                   <Link href={`/category/${category?.category.slug}`}>
                     {category?.category.title}
                   </Link>
-                  {index < songData.category.length - 1 ? ", " : ""}
+                  {index < songData?.category.length - 1 ? ", " : ""}
                 </span>
               ))
             ) : (
               <Link
-                href={`/category/${songData.category[0]?.category.slug}`}
+                href={`/category/${songData?.category[0]?.category.slug}`}
               >
-                {songData.category[0]?.category.title}
+                {songData?.category[0]?.category.title}
               </Link>
             )
           ) : (
@@ -365,7 +352,7 @@ const Song = async ({ params }: any) => {
         </h2>
 
         {categories.length > 0 ? (
-          categories.map((id, index) => (
+          categories?.map((id:any) => (
             <Fragment key={id}>
               <CategorySongs params={id} />
             </Fragment>

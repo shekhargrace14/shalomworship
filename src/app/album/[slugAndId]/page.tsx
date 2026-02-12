@@ -10,9 +10,9 @@ import slugify from "slugify";
 export async function generateStaticParams() {
   const artists = await fetchArtists(); // Fetch all songs from your data source
   return artists.map(artist => {
-    const slug = slugify(`${artist.title}`, { lower: true }) + '-' + artist.id.toString();
+    const slugAndId = slugify(`${artist.title}`, { lower: true }) + '-' + artist.id.toString();
     // console.log(slug, ""); // Log the slug here
-    return { slug };
+    return { slugAndId };
   });
 }
 
@@ -20,14 +20,14 @@ export async function generateMetadata({ params }: any) {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const id = slugAndId.split('-').pop(); // extract id from slug-id
   const album = await fetchAlbumById(id);
-  console.log(album);
+  // console.log(album);
 
   const type = "album"
   const title = album && album?.title
   // const keyword = ["Yeshu"]
   const metaDescription = album && album?.about
   const slug = album && album?.slug
-  console.log(slug);
+  // console.log(slug);
   const image = album && album?.image
 
   return MetaData({type, title, slug, image, metaDescription});

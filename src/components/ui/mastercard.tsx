@@ -83,7 +83,7 @@ export function Mastercard({
                                 <h3 className="text-base sm:text-base font-semibold leading-tight line-clamp-1 text-md text-foreground ">{title}</h3>
                                 <p className="text-xs leading-none text-muted-foreground">{creators[0]?.title}</p>
                             </div>
-                            <Badge variant="secondary">{language}</Badge>
+                            {/* <Badge variant="secondary">{language}</Badge> */}
                         </div>
                     )}
                 </div>

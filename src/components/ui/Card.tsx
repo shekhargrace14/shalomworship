@@ -51,7 +51,7 @@ const Card: React.FC<any> = ({ item }) => {
                 <div className="flex items-center gap-1">
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>
                   {/* <p className="text-xs leading-none text-foreground">{item?.language}</p> */}
-                  <Badge variant="secondary">{item?.language}</Badge>
+                  {/* <Badge variant="secondary">{item?.language}</Badge> */}
                 </div>
                   <p className="text-xs leading-none text-foreground">{creators[0]?.title}</p>
               </div>

@@ -17,10 +17,10 @@ import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 export async function generateStaticParams() {
   const artists = await fetchArtists(); // Fetch all songs from your data source
   return artists.map((artist) => {
-    const slug =
+    const slugAndId =
       slugify(`${artist.title}`, { lower: true }) + "-" + artist.id.toString();
     // console.log(slug, ""); // Log the slug here
-    return { slug };
+    return { slugAndId };
   });
 }
 
@@ -29,9 +29,9 @@ export async function generateMetadata({ params }: any) {
   //
   const { id } = parseSlugAndId(params.slugAndId);
 
-  if (!id || !isValidObjectId(id)) {
-    return {};
-  }
+  // if (!id || !isValidObjectId(id)) {
+  //   return {};
+  // }
 
   const artist = await fetchArtistByIdWithSongs(id, [
     ...CONTENT_VISIBILITY.public,
@@ -58,15 +58,13 @@ const Page = async ({ params }: any) => {
 
   const artistData = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
 
-  if (!artistData) {
-    const song = await fetchSongById(id);
-    // console.log(song, "song in artist")
-    if (song) {
-      // redirect(`/song/${slugAndId}`)
-      redirect(`/song/${slug}-${id}`);
-    }
-    notFound();
-  }
+  // if (!artistData) {
+  //   const song = await fetchSongById(id);
+  //   if (song) {
+  //     redirect(`/song/${slug}-${id}`);
+  //   }
+  //   notFound();
+  // }
 
   const data = artistData;
   const color = artistData?.color ?? "#121212"; // fallback color

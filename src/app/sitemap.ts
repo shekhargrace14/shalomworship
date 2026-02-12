@@ -1,4 +1,4 @@
-// import { fetchSongs } from "@/app/reactQuery/query";
+export const dynamic = "force-static";
 
 import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";

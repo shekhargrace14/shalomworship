@@ -1,6 +1,5 @@
 // new songById
 
-"use server";
 
 import { artistFullSelect, songFullSelect, albumFullSelect, categoryFullSelect } from "@/prisma/selectors";
 import prisma from "../db";

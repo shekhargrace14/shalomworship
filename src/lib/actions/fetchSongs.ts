@@ -1,4 +1,4 @@
-"use server"
+
 
 import { StatusType } from "@prisma/client";
 import prisma from "../db";

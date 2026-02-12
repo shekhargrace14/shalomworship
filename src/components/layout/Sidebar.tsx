@@ -6,7 +6,6 @@ import Link from "next/link";
 import { fetchArtists, useGetArtists} from "@/lib/query/query";
 import Artist from "../shared/Artist";
 import { usePathname } from "next/navigation";
-import Menu from "../dashboard/Menu";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -19,10 +18,7 @@ const Sidebar = () => {
       </Link>
       <section>
         <div className="px-2 mt-2">
-          {idDashboard ? 
-          <Menu/> :
           <Artist artists={artists.data ?? []} />
-          }
         </div>
       </section>
     </nav>

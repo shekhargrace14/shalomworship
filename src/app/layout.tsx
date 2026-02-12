@@ -102,11 +102,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Header />
             </div>
 
-            <aside className="hidden md:block md:col-span-3 row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
+            {/* <aside className="hidden md:block md:col-span-3 row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
               <Sidebar />
-            </aside>
+            </aside> */}
 
-            <main className="col-span-12 md:col-span-9 row-span-11 rounded-lg overflow-auto custom-scrollbar">
+            <main className="w-7xl m-auto col-span-12 md:col-span-12 row-span-11 rounded-lg overflow-auto custom-scrollbar">
               {/* <PwaRegister /> */}
               {children}
             </main>

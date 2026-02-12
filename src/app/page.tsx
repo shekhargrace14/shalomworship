@@ -12,6 +12,7 @@ import AlbumSection from "@/components/AlbumSection";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { Mastercard } from "@/components/ui/mastercard";
+import { getAllAlbums, getAllArtists, getAllCategories, getAllSongs } from "@/lib/static";
 
 
 type Song = {
@@ -21,11 +22,11 @@ type Song = {
 };
 export default async function Home() {
   const [upcomingSongs, publicSongs, artists, categories, album] = await Promise.all([
-    fetchSongs([...CONTENT_VISIBILITY.upcoming,]),
-    fetchSongs([...CONTENT_VISIBILITY.public,]),
-    fetchArtists(),
-    fetchCategory(),
-    fetchAlbums()
+    getAllSongs([...CONTENT_VISIBILITY.upcoming]),
+    getAllSongs([...CONTENT_VISIBILITY.public]),
+    getAllArtists(),
+    getAllCategories(),
+    getAllAlbums()
   ]);
   // console.log(songs)
   return (

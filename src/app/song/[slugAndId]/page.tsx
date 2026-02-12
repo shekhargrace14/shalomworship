@@ -24,19 +24,13 @@ import { notFound, redirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
+import { getAllSongs, getSong } from "@/lib/static";
 
-
-async function fetchSongData({ id }: any) {
-  const res = await fetchSongById(id); "use client";
-  const data = res;
-  return data || null;
-}
 
 export async function generateStaticParams() {
-  const songs = await fetchSongs([...CONTENT_VISIBILITY.public]); // Fetch all songs from your data source
+  const songs = await getAllSongs([...CONTENT_VISIBILITY.discoverable]); // Fetch all songs from your data source
   return songs.map(song => {
-    const slugAndId = slugify(`${song.title}`, { lower: true }) + '-' + song.id.toString();
-    // console.log(slug, ""); // Log the slug here
+    const slugAndId = `${song?.slug}-${song?.id}`
     return { slugAndId };
   });
 }
@@ -44,10 +38,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const slugAndId = await params.slugAndId;
   const { id } = parseSlugAndId(slugAndId);
-  // if (!id || !isValidObjectId(id)) {
-  //   return {};
-  // }
-  const song = await fetchSongById(id);
+
+  const song = await getSong(id,[...CONTENT_VISIBILITY.discoverable]);
+
   if (!song) return {};
   return buildSongMetadata({
     song,
@@ -55,21 +48,12 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   });
 }
 
-// const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
 
 const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const { slug, id } = parseSlugAndId(params.slugAndId);
-  const songData = await fetchSongData({ id });
-
-  // if (!songData) {
-  //   const artist = await fetchArtistById(id)
-  //   if (artist) {
-  //     redirect(`/artist/${slug}-${id}`)
-  //   }
-  //   notFound()
-  // }
-
+  const songData = await getSong(id,[...CONTENT_VISIBILITY.discoverable]);
+  
   const artists: any[] = [];
   const creators: any[] = [];
   songData?.artist.forEach((item) => {
@@ -87,7 +71,6 @@ const Song = async ({ params }: any) => {
   const categories = songData?.category?.map(c => c.category.slug) ?? []
   const language = songData?.language
   const langName = getLanguageName(language);
-  // const about = songData?.about
   const searchVariants = songData?.searchVariant || ""
 
   return (

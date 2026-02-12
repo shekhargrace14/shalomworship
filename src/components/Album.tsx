@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import { FaUser } from "react-icons/fa";
 import Link from "next/link";
@@ -8,8 +8,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 
 const Album: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
-  const artists = item.artist || [];
-  // console.log(artists, "album artists");
+  const artist = item?.artist;
+  const creator = artist[0]?.artist
+
+  // console.log(creator,creator?.title,creator?.image, "album item");
+  // console.log(creator[0]?.artist?.title, "album creator");
 
   const slug = slugify(`${item.slug}`, { lower: true });
 
@@ -21,8 +24,8 @@ const Album: React.FC<any> = ({ item }) => {
         <div className="rounded-lg">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image
-              src={item.image}
-              alt={item.title || "Song Image"}
+              src={item?.image}
+              alt={item?.title || "Song Image"}
               width={700}
               height={500}
               className="h-40 object-contain"
@@ -33,12 +36,12 @@ const Album: React.FC<any> = ({ item }) => {
             <div className="flex items-center gap-2">
               {/* <Avatar src={creators[0]?.image || "/default-avatar.jpg"} size={34} /> */}
               <Avatar>
-                <AvatarImage src={artists[0]?.image || "/default-avatar.jpg"} />
+                <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
                 <AvatarFallback>SW</AvatarFallback>
               </Avatar>
               <div>
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>
-                <p className="text-sm leading-none text-foreground">{artists[0]?.title}</p>
+                <p className="text-sm leading-none text-foreground">{creator?.title}</p>
               </div>
             </div>
           </div>

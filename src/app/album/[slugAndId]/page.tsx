@@ -3,62 +3,38 @@ import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
 import { fetchAlbumById, fetchArtistById, fetchArtists } from "@/lib/query/query";
+import { getAlbum, getAllAlbums } from "@/lib/static";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
 export async function generateStaticParams() {
-  const artists = await fetchArtists(); // Fetch all songs from your data source
+  const artists = await getAllAlbums(); // Fetch all songs from your data source
   return artists.map(artist => {
-    const slugAndId = slugify(`${artist.title}`, { lower: true }) + '-' + artist.id.toString();
-    // console.log(slug, ""); // Log the slug here
+    const slugAndId = slugify(`${artist.slug}`, { lower: true }) + '-' + artist.id.toString();
     return { slugAndId };
   });
 }
 
 export async function generateMetadata({ params }: any) {
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId.split('-').pop(); // extract id from slug-id
-  const album = await fetchAlbumById(id);
-  // console.log(album);
-
+  const slugAndId = await params.slugAndId; 
+  const id = slugAndId.split('-').pop(); 
+  const album = await getAlbum(id);
   const type = "album"
   const title = album && album?.title
-  // const keyword = ["Yeshu"]
-  const metaDescription = album && album?.about
   const slug = album && album?.slug
-  // console.log(slug);
-  const image = album && album?.image
-
-  return MetaData({type, title, slug, image, metaDescription});
+  return MetaData({type, title, slug});
 }
 
 const Page = async ({ params }: any) => {
-
-  const slugAndId = params.slugAndId; // this is the [slugAndId] part
-  const id = slugAndId.split('-').pop(); // extract id from slug-id
-
-  // console.log(id, "albumData album page data");
-
-  const albumData = await fetchAlbumById(id);
-  const data = albumData;
-  const albumArtists = data?.artist[0].artist.title || [];
+  const slugAndId = params.slugAndId;
+  const id = slugAndId.split('-').pop();
+  const album = await getAlbum(id);
+  const data = album;
+  const albumArtists = data?.artist[0]?.artist.title || [];
   // console.log(data, " album artists page data");
   const slug = data?.artist[0].artist.slug + "-" + data?.artist[0].artist.id;
 
-  // const color = albumData?.[0]?.color ?? "#121212"; 
-
-
-  // console.log(color, "artist color page data");
-
-  // if (!albumData || albumData.length === 0) {
-  //   console.error(`No artist found for slug: ${artistSlug}`);
-  //   return (
-  //     <p className="text-foreground text-center">Name
-  //       Sorry, no album was found for this ID.
-  //     </p>
-  //   );
-  // }
   return (
     <>
       {/* hello {data.name} */}

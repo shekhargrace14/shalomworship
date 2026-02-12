@@ -2,6 +2,7 @@ import CategorySection from '@/components/CategorySection';
 import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import { fetchCategory } from '@/lib/query/query';
+import { getAllCategories } from '@/lib/static';
 import { MetaDataProps } from '@/types';
 import React from 'react';
 
@@ -20,7 +21,7 @@ export function generateMetadata() {
 
 const page = async() => {
   
-  const categories = await fetchCategory();
+  const categories = await getAllCategories();
 
   return (
     <div className='p-4'>

@@ -5,8 +5,8 @@ import withPWA from "next-pwa";
 const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-async redirects() {
+  ...(isDev ? {} : { output: "export" }),
+  async redirects() {
 
     return redirects.map((r) => ({
       ...r,

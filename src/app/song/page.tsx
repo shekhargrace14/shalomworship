@@ -3,6 +3,7 @@ import { MetaData } from "@/components/MetaData";
 import SongSection from "@/components/SongSection";
 import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
+import { getAllSongs } from "@/lib/static";
 // import { fetchPublicSongs, fetchSongs } from "@/lib/query/query";
 import { MetaDataProps } from "@/types";
 import { Metadata } from "next";
@@ -20,8 +21,8 @@ export function generateMetadata() {
 }
 
 const page = async () => {
-  // const songs = await fetchSongs();
-  const songs = await fetchSongs([...CONTENT_VISIBILITY.public]);
+  const songs = await getAllSongs([...CONTENT_VISIBILITY.public]);
+
   return (
     <div className=' h-[90vh] overflow-y-auto custom-scrollbar p-4'>
       <Menu />

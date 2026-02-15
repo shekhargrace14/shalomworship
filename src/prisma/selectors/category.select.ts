@@ -1,13 +1,17 @@
 // prisma/selectors/album.select.ts
-export const categoryMiniSelect = {
+export const categoryBasicSelect = {
   id: true,
   title: true,
   slug: true,
+  createdAt: true,
+  updatedAt: true,
+  color: true,
+
 };
 
 export const categoryFullSelect = {
-  ...categoryMiniSelect,
+  ...categoryBasicSelect,
   image: true,
   color: true,
-  createdAt: true,
+  song: true,
 };

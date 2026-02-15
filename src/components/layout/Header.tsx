@@ -1,14 +1,9 @@
 "use client";
 import Link from "next/link";
-import { IoMdClose, IoMdHome } from "react-icons/io";
-// import Searchbar from "../shared/Searchbar";
-import { FaHamburger } from "react-icons/fa";
-import { IoMenuSharp } from "react-icons/io5";
 import { useState } from "react";
-import Sidebar from "./Sidebar";
 import Image from "next/image";
 import { ModeToggle } from "../ModeToggle";
-import { Button } from "../ui/button";
+import { HeaderSearch } from "../search/HeaderSearch";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -23,20 +18,11 @@ const Header = () => {
         </Link>
       </div>
       <div className="md:relative w-10/12 sm:w-8/12 lg:w-5/12">
-        {/* <Link href="/search"> */}
         {/* <Searchbar /> */}
-        {/* </Link> */}
+        <HeaderSearch/>
       </div>
-      {/* <Link href="/songDB"><div className="">  SongDB</div></Link> */}
-      {/* <div className="hidden lg:block md:w-4/12 "> */}
       <div className="md:w-4/12 flex justify-end gap-4">
-        {/* <Button variant="outline" asChild>
-          <Link href="#">
-            Contribute
-          </Link>
-        </Button> */}
         <ModeToggle />
-
       </div>
     </header>
   );

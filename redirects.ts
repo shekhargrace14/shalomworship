@@ -32,7 +32,7 @@ const redirects = [
     destination: "/song/sonay-chandi-6968649fe518a03c9e1cd8db",
     permanent: true,
   },
-    {
+  {
     source: "/post/sonay-chandi-lyrics-sound-of-worship",
     destination: "/song/sonay-chandi-6968649fe518a03c9e1cd8db",
     permanent: true,
@@ -57,7 +57,7 @@ const redirects = [
     destination: "/song/wafadar-677e7382d30260ca3e36584a",
     permanent: true,
   },
-    {
+  {
     source: "/post/wafadar-lyrics-bridge-music-ft-rohan-mane-john-erry-abeyson-job",
     destination: "/song/wafadar-677e7382d30260ca3e36584a",
     permanent: true,
@@ -92,7 +92,7 @@ const redirects = [
     destination: "/song/teri-aaradhana-ho-6785512ce93342f9207f8202",
     permanent: true,
   },
-    {
+  {
     source: "/teri-aaradhana-ft-jessy-robin-robinson-shalu-philemon-anand-sofia-shalu-one-tribe-production",
     destination: "/song/teri-aaradhana-67855bdfe93342f9207f827c",
     permanent: true,
@@ -137,7 +137,7 @@ const redirects = [
     destination: "/song/zindagi-tere-naam-6969d4c79ff232478dd49de9",
     permanent: true,
   },
-    {
+  {
     source: "/post/zindagi-tere-naam-by-shashank-patel-chords",
     destination: "/song/zindagi-tere-naam-6969d4c79ff232478dd49de9",
     permanent: true,
@@ -157,7 +157,7 @@ const redirects = [
     destination: "/song/dhanyawad-ke-saath-676ee13aa5e92f8809b16aef",
     permanent: true,
   },
-    {
+  {
     source: "/song/danyawad-ke-saath-676ee13aa5e92f8809b16aef",
     destination: "/song/dhanyawad-ke-saath-676ee13aa5e92f8809b16aef",
     permanent: true,
@@ -193,12 +193,12 @@ const redirects = [
     destination: "/song/tera-pyaar-67850879db79640f312960a6",
     permanent: true,
   },
-    {
+  {
     source: "/post/tera-pyaar-chords-bridge-music-ft-philemon-anand-sheenu-mariam-hemant-sharma",
     destination: "/song/tera-pyaar-67850879db79640f312960a6",
     permanent: true,
   },
-      {
+  {
     source: "/tera-pyaar-lyrics-bridge-music-ft-philemon-anand-sheenu-mariam-hemant-sharma/",
     destination: "/song/tera-pyaar-67850879db79640f312960a6",
     permanent: true,
@@ -228,7 +228,7 @@ const redirects = [
     destination: "/song/chattan-bridge-music-678a2998fd0f75781ee4face",
     permanent: true,
   },
-    {
+  {
     source: "/post/chattan-acoustic-lyrics-by-bridge-music-feat-prakruthi-angelina-sam-alex-pasula",
     destination: "/song/chattan-bridge-music-678a2998fd0f75781ee4face",
     permanent: true,
@@ -273,31 +273,71 @@ const redirects = [
     destination: "/category/warfare",
     permanent: true,
   },
+  {
+    source: "/song/living-hope-696644ca25db87b61f35cf3e",
+    destination: "/song/living-hope-phil-wickham-696644ca25db87b61f35cf3e",
+    permanent: true,
+  },
+  {
+    source: "/song/joganiya-689f2fefdebbb81d1d0908be",
+    destination: "/song/joganiya-rubina-bk-689f2fefdebbb81d1d0908be",
+    permanent: true,
+  },
+  {
+    source: "/song/rang-liya-689240fcb445466d0b044da2",
+    destination: "/song/rang-liya-folj-ankit-sajwan-ministries-689240fcb445466d0b044da2",
+    permanent: true,
+  },
+  {
+    source: "/song/zindagee-6898e2e8aa885aea80eb4445",
+    destination: "/song/zindagee-rubina-bk-6898e2e8aa885aea80eb4445",
+    permanent: true,
+  },
+  {
+    source: "/song/tere-bina-687535e2a45578664ad81386",
+    destination: "/song/tere-bina-rubina-bk-687535e2a45578664ad81386",
+    permanent: true,
+  },
+  {
+    source: "/song/jashan-691ab22854a299951c5584e3",
+    destination: "/song/jashan-rajat-bk-691ab22854a299951c5584e3",
+    permanent: true,
+  },
+  {
+    source: "/song/vandana-rajat-bk-68c1d008f158be37678854f2",
+    destination: "/song/vandana-rubina-bk-68c1d008f158be37678854f2",
+    permanent: true,
+  },
+  {
+    source: "/song/vandana-68730b99267962ca7256fd8f",
+    destination: "/song/vandana-folj-ankit-sajwan-ministries-68730b99267962ca7256fd8f",
+    permanent: true,
+  },
+  {
+    source: "/song/vandanam-69653aff25db87b61f35ce6a",
+    destination: "/song/vandanam-bridge-music-69653aff25db87b61f35ce6a",
+    permanent: true,
+  },
+  {
+    source: "/song/tuta-6958b7cef60a8ac73cc476bc",
+    destination: "/song/tuta-zayvan-6958b7cef60a8ac73cc476bc",
+    permanent: true,
+  },
   // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
+  //         source: "/song/yeshu-tere-hi-liye-696869cfe518a03c9e1cd92b",
+  //         destination: "/song/yeshu-tere-hi-liye-zarurat-ministries-696869cfe518a03c9e1cd92b",
+  //         permanent: true,
+  //       },
   // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
+  //         source: "/song/zinda-khuda-68727a9a68c3f6aa220967e2",
+  //         destination: "/song/zinda-khuda-sheldon-bangera-68727a9a68c3f6aa220967e2",
+  //         permanent: true,
+  //       },
   // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
-  // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
-  // {
-  //   source: "",
-  //   destination: "",
-  //   permanent: true,
-  // },
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
 ];
 export default redirects;
 

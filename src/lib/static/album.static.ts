@@ -1,4 +1,4 @@
-import { albumFullSelect, albumMiniSelect, artistFullSelect } from "@/prisma/selectors";
+import { albumFullSelect, artistFullSelect } from "@/prisma/selectors";
 import prisma from "./prisma";
 
 export async function getAllAlbums() {

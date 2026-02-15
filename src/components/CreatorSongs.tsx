@@ -1,24 +1,13 @@
-// import { fetchArtistBySlug, useGetArtistById } from "@/app/reactQuery/query";
 import Processor from "@/components/Processor";
-import { fetchArtistByIdWithSongs } from "@/lib/actions/fetchArtistByIdWithSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { fetchArtistBySlug } from "@/lib/query/query";
-import SongSection from "./SongSection";
-
-
+import { getArtist} from "@/lib/static";
 
 const CreatorSongs = async ({ params }: any) => {
-
-
   const id = params;
-  const artistData = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
+  const artistData = await getArtist(id, [...CONTENT_VISIBILITY.public,]);
+  // console.log(artistData,"artistData")
   const data = artistData ?? { song: [] };
 
-  // console.log(id, "artist page slug");
-  // console.log(data.song, "artist.song  data");
-  // console.log(params, "CreatorSongs params");
-
-  // console.log(artistData, "artistData artist page data");
   return (
     // <>hello</>
     <section className="w-full">

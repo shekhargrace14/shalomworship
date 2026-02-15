@@ -2,7 +2,6 @@ import CreatorSongs from "@/components/CreatorSongs";
 import Menu from "@/components/layout/Menu";
 import ShareButton from "@/components/ShareButton";
 import Social from "@/components/ui/Social";
-import { fetchArtistById, fetchSongById } from "@/lib/query/query";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
@@ -10,7 +9,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 import { Dot } from "lucide-react";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
 import LinesVersion2 from "@/components/shared/LinesVersion2";
-// import JsonLd from "@/components/Jsonld";
 import { Fragment } from "react";
 import JsonLd from "@/components/JsonLd";
 import { parseSlugAndId } from "@/utils/parseSlugAndId";
@@ -22,13 +20,16 @@ import InContentAd from "@/components/ads/InContentAd";
 import VideoPlayer from "@/components/VideoPlayer";
 import { notFound, redirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getAllSongs, getSong } from "@/lib/static";
+import { getAllSongs, getAllSongsBasic, getSong } from "@/lib/static";
+import { AutoPopup } from "@/components/AutoPopup";
 
+async function getSongById(id: string) {
+  return getSong(id, [...CONTENT_VISIBILITY.discoverable]);
+}
 
 export async function generateStaticParams() {
-  const songs = await getAllSongs([...CONTENT_VISIBILITY.discoverable]); // Fetch all songs from your data source
+  const songs = await getAllSongsBasic([...CONTENT_VISIBILITY.discoverable]);
   return songs.map(song => {
     const slugAndId = `${song?.slug}-${song?.id}`
     return { slugAndId };
@@ -36,10 +37,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const slugAndId = await params.slugAndId;
+  const slugAndId = params.slugAndId;
   const { id } = parseSlugAndId(slugAndId);
 
-  const song = await getSong(id,[...CONTENT_VISIBILITY.discoverable]);
+  const song = await getSongById(id);
 
   if (!song) return {};
   return buildSongMetadata({
@@ -52,8 +53,8 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const { slug, id } = parseSlugAndId(params.slugAndId);
-  const songData = await getSong(id,[...CONTENT_VISIBILITY.discoverable]);
-  
+  const songData = await getSongById(id);
+
   const artists: any[] = [];
   const creators: any[] = [];
   songData?.artist.forEach((item) => {
@@ -84,6 +85,7 @@ const Song = async ({ params }: any) => {
         }}
       >
         <Menu />
+        <AutoPopup />
         <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
@@ -299,13 +301,6 @@ const Song = async ({ params }: any) => {
           </div>
         </section>
         <Social />
-        {/* <FAQ
-          title={songData?.title}  
-          artist={artists}
-          category={creators}
-          scripture={creators}
-          meaning={songData?.title}  
-        /> */}
         <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">Songs Based on&nbsp;
           {songData?.category && songData?.category.length > 0 ? (
             songData?.category.length > 1 ? (
@@ -335,7 +330,7 @@ const Song = async ({ params }: any) => {
         </h2>
 
         {categories.length > 0 ? (
-          categories?.map((id:any) => (
+          categories?.map((id: any) => (
             <Fragment key={id}>
               <CategorySongs params={id} />
             </Fragment>

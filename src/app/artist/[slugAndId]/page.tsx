@@ -2,21 +2,16 @@ import InContentAd from "@/components/ads/InContentAd";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
-import {
-  fetchArtistById,
-  fetchArtists,
-  fetchSongById,
-} from "@/lib/query/query";
+
 import Image from "next/image";
 import slugify from "slugify";
 import { notFound, redirect } from "next/navigation";
 import { parseSlugAndId } from "@/utils/parseSlugAndId";
-import { fetchArtistByIdWithSongs } from "@/lib/actions/fetchArtistByIdWithSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getAllArtists, getArtist } from "@/lib/static";
+import { getAllArtists, getAllArtistsBasic, getArtist } from "@/lib/static";
 
 export async function generateStaticParams() {
-  const artists = await getAllArtists();
+  const artists = await getAllArtistsBasic();
   return artists.map((artist) => {
     const slugAndId =
       slugify(`${artist.title}`, { lower: true }) + "-" + artist.id.toString();
@@ -27,15 +22,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: any) {
   const slugAndId = await params.slugAndId;
   const { id } = parseSlugAndId(params.slugAndId);
-  const artist = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
+  // const artist = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);  
+  const artist = await getArtist(id, [...CONTENT_VISIBILITY.public,]);
   if (!artist) return {};
   const type = "artist";
   const title = artist && artist?.title;
-  const keyword = ["Yeshu"];
-  const metaDescription = artist && artist?.about;
+  // const metaDescription = artist && artist?.about;
   const slug = artist && artist?.slug;
   const image = artist && artist?.image;
-  return MetaData({ type, title, slug, image, keyword });
+  return MetaData({ type, title, slug, image });
 }
 
 
@@ -46,7 +41,7 @@ const Page = async ({ params }: any) => {
   const artistData = await getArtist(id, [...CONTENT_VISIBILITY.public,]);
   const data = artistData;
   const color = artistData?.color ?? "#121212";
-  const upcomingSongs = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.upcoming,]);
+  const upcomingSongs = await getArtist(id, [...CONTENT_VISIBILITY.upcoming,]);
   const upcomingSongsData = upcomingSongs?.song.map((song: any) => song);
 
   return (
@@ -84,7 +79,7 @@ const Page = async ({ params }: any) => {
           <div>
             <p className="text-base  text-foreground">About</p>
             <p className="text-sm  text-foreground">
-              {data?.about || "Artist"}
+              {/* {data?.about || "Artist"} */}
             </p>
           </div>
         </div>

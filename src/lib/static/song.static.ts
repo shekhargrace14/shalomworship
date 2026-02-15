@@ -1,4 +1,4 @@
-import { albumFullSelect, artistFullSelect, categoryFullSelect, songFullSelect } from "@/prisma/selectors";
+import { albumFullSelect, artistFullSelect, categoryBasicSelect, categoryFullSelect, songBaseSelect, songContentSelect, songFullSelect, songMediaSelect } from "@/prisma/selectors";
 import prisma from "./prisma";
 import { StatusType } from "@prisma/client";
 
@@ -15,7 +15,6 @@ export async function getAllSongs(statuses: StatusType[]) {
     if (SONG_LIST_CACHE.has(key)) {
         return SONG_LIST_CACHE.get(key)!;
     }
-
     try {
         const songs = await prisma.song.findMany({
             where: {
@@ -28,7 +27,11 @@ export async function getAllSongs(statuses: StatusType[]) {
                 ...songFullSelect,
                 artist: {
                     select: {
-                        artist: true,
+                        isCreator: true,
+                        isArtist: true,
+                        artist: {
+                            select: artistFullSelect
+                        }
                     },
                 },
 
@@ -44,11 +47,22 @@ export async function getAllSongs(statuses: StatusType[]) {
     } catch (error) {
         console.log("Error in songServerAction ", error)
         return []
-
     }
-
 }
 
+export async function getAllSongsBasic(statuses: StatusType[]) {
+    return prisma.song.findMany({
+        where: { status: { in: statuses } },
+        select: songBaseSelect
+    });
+}
+
+export async function getAllSongsDisplay(statuses: StatusType[]) {
+    return prisma.song.findMany({
+        where: { status: { in: statuses } },
+        select: songBaseSelect
+    });
+}
 /**
  * Full song – used ONLY by /song/[slugAndId]
  */
@@ -80,7 +94,7 @@ export async function getSong(
             category: {
                 select: {
                     category: {
-                        select: categoryFullSelect
+                        select: categoryBasicSelect
                     }
                 },
             },
@@ -92,5 +106,19 @@ export async function getSong(
                 },
             },
         },
+    });
+}
+export async function getSongDisplay(
+    id: string,
+    statuses: StatusType[]
+) {
+    return prisma.song.findUnique({
+        where: { id: id, status: { in: statuses } },
+        select: {
+            author: true,
+            creator: true,
+            ...songBaseSelect,
+            ...songMediaSelect
+        }
     });
 }

@@ -161,8 +161,8 @@ model category {
   image     String?
   about     String?
   color     String?
-  slug      String?
-  catType   catType? @default(theme)
+  slug      String?       @unique   // ✅ UNIQUE URL
+  catType   catType?      @default(theme)
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
   song      SongCategory[] // Explicit relation

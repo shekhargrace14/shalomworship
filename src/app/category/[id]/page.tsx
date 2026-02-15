@@ -3,30 +3,29 @@ import InContentAd from "@/components/ads/InContentAd";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
-import { fetchCategoryBySlugWithSongs } from "@/lib/actions/fetchCategoryBySlugWithSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { fetchCategory, fetchCategoryBySlug } from "@/lib/query/query";
+import { getAllCategoriesBasic, getCategory } from "@/lib/static";
 import { notFound } from "next/navigation";
 import slugify from "slugify";
 
 export async function generateStaticParams() {
-  const categories = await fetchCategory(); // Fetch all songs from your data source
+  const categories = await getAllCategoriesBasic(); 
   return (categories ?? []).map(category => {
     const id = category?.slug;
     return { id };
   });
 }
 
-
 export async function generateMetadata({ params }: any) {
   const slugParams = await params.id;
-  const category = await fetchCategoryBySlug(slugParams);
+  // const category = await fetchCategoryBySlug(slugParams);
+  const category = await getCategory(slugParams,[...CONTENT_VISIBILITY.discoverable]);
 
   const type = "category"
-  const title = (category?.[0]?.title ?? "Unknown")
-  const metaDescription = category?.[0]?.about
-  const slug = await category?.[0]?.slug ?? ''
-  const image = await category?.[0]?.image ?? ''
+  const title = (category?.title ?? "Unknown")
+  const metaDescription = category?.about
+  const slug = await category?.slug ?? ''
+  const image = await category?.image ?? ''
 
 
   return await MetaData({ type, title, metaDescription, slug, image });
@@ -36,14 +35,15 @@ export async function generateMetadata({ params }: any) {
 const Page = async ({ params }: any) => {
   const categorySlug = params.id;
 
-  const categoryData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
+  // const categoryData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
+  const categoryData = await getCategory(categorySlug,[...CONTENT_VISIBILITY.public,] )
 
   if (!categoryData) {
     notFound(); // or 410
   }
 
-  const data = categoryData?.[0];
-  const color = categoryData?.[0]?.color ?? "#121212"; // fallback color
+  const data = categoryData;
+  const color = categoryData?.color ?? "#121212"; // fallback color
 
   // console.log(data?.song, "categoryData song page data");
   // const newData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
@@ -71,8 +71,8 @@ const Page = async ({ params }: any) => {
         <section className="w-full px-2">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2  row-span-full ">
             {data?.song?.reverse().map((item) => (
-              <div key={item.songId}>
-                <Processor item={item.songId} />
+              <div key={item.song.id}>
+                <Processor item={item.song.id} />
               </div>
             ))}
           </div>

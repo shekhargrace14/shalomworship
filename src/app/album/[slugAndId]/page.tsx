@@ -2,7 +2,6 @@ import InContentAd from "@/components/ads/InContentAd";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
-import { fetchAlbumById, fetchArtistById, fetchArtists } from "@/lib/query/query";
 import { getAlbum, getAllAlbums } from "@/lib/static";
 import Image from "next/image";
 import Link from "next/link";

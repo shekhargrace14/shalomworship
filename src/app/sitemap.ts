@@ -1,18 +1,14 @@
 export const dynamic = "force-static";
 
-import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { fetchArtists, fetchCategory } from "@/lib/query/query";
-// export const dynamic = 'force-dynamic';
-
-// import { fetchArtists, fetchSongs } from "./reactQuery/query";
+import { getAllArtists, getAllArtistsBasic, getAllCategoriesBasic, getAllSongsBasic } from "@/lib/static";
 export default async function generateSitemap() {
   const baseUrl = process.env.BASE_URL || "https://www.shalomworship.com";
 
   try {
-    const posts = await fetchSongs([...CONTENT_VISIBILITY.public]);
-    const artists = await fetchArtists();
-    const categories = await fetchCategory();
+    const posts = await getAllSongsBasic([...CONTENT_VISIBILITY.public]);
+    const artists = await getAllArtistsBasic();
+    const categories = await getAllCategoriesBasic();
     
 
     const postsUrls =

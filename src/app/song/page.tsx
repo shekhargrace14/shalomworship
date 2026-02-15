@@ -1,12 +1,8 @@
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import SongSection from "@/components/SongSection";
-import { fetchSongs } from "@/lib/actions/fetchSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { getAllSongs } from "@/lib/static";
-// import { fetchPublicSongs, fetchSongs } from "@/lib/query/query";
-import { MetaDataProps } from "@/types";
-import { Metadata } from "next";
 import React from "react";
 
 

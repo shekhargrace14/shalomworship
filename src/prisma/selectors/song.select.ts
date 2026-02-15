@@ -13,7 +13,6 @@ export const songContentSelect = {
   lines: true,
   isChords: true,
   isTranslation: true,
-  language: true,
   version: true,
 };
 
@@ -30,6 +29,8 @@ export const songMediaSelect = {
   videoId: true,
   audio: true,
   color: true,
+  language: true,
+
 };
 
 export const songSeoSelect = {

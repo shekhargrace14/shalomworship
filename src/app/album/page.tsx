@@ -1,8 +1,6 @@
 import AlbumSection from '@/components/AlbumSection';
 import CardSection from '@/components/AlbumSection';
 import Menu from '@/components/layout/Menu';
-import Processor from '@/components/Processor';
-import { fetchAlbums } from '@/lib/query/query';
 import { getAllAlbums } from '@/lib/static';
 
 const page = async () => {

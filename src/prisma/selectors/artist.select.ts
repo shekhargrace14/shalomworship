@@ -3,6 +3,8 @@ export const artistBaseSelect = {
   id: true,
   title: true,
   slug: true,
+  createdAt: true,
+  updatedAt: true,
 };
 
 export const artistMetaSelect = {
@@ -12,15 +14,10 @@ export const artistMetaSelect = {
   type: true,
 };
 
-export const artistTimestampsSelect = {
-  createdAt: true,
-  updatedAt: true,
-};
 
 export const artistFullSelect = {
   ...artistBaseSelect,
   ...artistMetaSelect,
-  ...artistTimestampsSelect,
 };
 
 export const artistMiniSelect = {

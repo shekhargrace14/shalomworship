@@ -1,5 +1,6 @@
 import { StatusType } from "@prisma/client";
 import prisma from "./prisma";
+import { artistBaseSelect, artistFullSelect } from "@/prisma/selectors";
 
 export async function getAllArtists() {
   try {
@@ -9,16 +10,26 @@ export async function getAllArtists() {
     throw new Error("Failed to fetch artists"); // properly throw
   }
 }
-
+export async function getAllArtistsBasic() {
+  try {
+    return await prisma.artist.findMany({
+      select: artistBaseSelect
+    });
+  } catch (error) {
+    console.error("Error from artist server action:", error);
+    throw new Error("Failed to fetch artists"); // properly throw
+  }
+}
 export async function getArtist(
   artistId: string,
   statuses: StatusType[]
 ) {
-  try{
+  try {
 
     return prisma.artist.findUnique({
       where: { id: artistId },
-      include: {
+      select: {
+        ...artistFullSelect,
         song: {
           where: {
             song: {
@@ -31,7 +42,7 @@ export async function getArtist(
         },
       },
     })
-  }catch(error){
+  } catch (error) {
     console.log("issue with query at aritst.static.ts")
   }
 }

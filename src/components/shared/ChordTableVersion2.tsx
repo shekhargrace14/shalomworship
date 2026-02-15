@@ -1,7 +1,6 @@
 // components/ChordTable.tsx
 
 "use client";
-import { fetchSongById } from '@/lib/query/query';
 import { getKeyByShift, transposeChord } from '@/utils/transpose';
 import { Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';

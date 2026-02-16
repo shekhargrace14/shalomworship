@@ -1,95 +1,87 @@
-"use client"
-import Menu from '@/components/layout/Menu';
-import { useSongSearch } from '@/lib/search/useSongSearch';
-import { usePathname, useRouter } from "next/navigation";
+"use client";
+
+import Menu from "@/components/layout/Menu";
+import { useSongSearch } from "@/lib/search/useSongSearch";
+import Image from "next/image";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-import React, { useEffect, useState } from 'react'
-
-const page = () => {
-  const router = useRouter();
-  const { search } = useSongSearch();
+export default function SearchPage() {
+  const { search, ready } = useSongSearch();
   const params = useSearchParams();
   const q = params.get("q") ?? "";
 
   const [query, setQuery] = useState(q);
   const [results, setResults] = useState<any[]>([]);
-  const [active, setActive] = useState(0);
-  const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    if (!query) {
-      setResults([]);
-      return;
-    }
-    setResults(search(query, 8));
-    setActive(0);
-  }, [query]);
+  /**
+   * 🔹 Sync URL → state
+   * Handles:
+   * - direct load
+   * - back / forward navigation
+   */
   useEffect(() => {
     setQuery(q);
   }, [q]);
 
-  function onKeyDown(e: React.KeyboardEvent) {
-    if (!open) return;
+  /**
+   * 🔹 Run search when:
+   * - query changes
+   * - search index becomes ready
+   */
+  useEffect(() => {
+    if (!ready || !query) {
+      setResults([]);
+      return;
+    }
 
-    if (e.key === "ArrowDown") {
-      setActive((i) => Math.min(i + 1, results.length - 1));
-    }
-    if (e.key === "ArrowUp") {
-      setActive((i) => Math.max(i - 1, 0));
-    }
-    if (e.key === "Enter") {
-      if (results[active]) {
-        router.push(`/song/${results[active].slug}`);
-      } else {
-        router.push(`/search?q=${encodeURIComponent(query)}`);
-      }
-      setOpen(false);
-    }
-    if (e.key === "Escape") {
-      setOpen(false);
-    }
-  }
-  console.log(results, "results")
+    setResults(search(query, 20));
+  }, [query, ready]);
+
   return (
-    // <div className="bg-background  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
-    <div className=' h-[90vh] overflow-y-auto custom-scrollbar p-4'>
+    <div className="h-[90vh] overflow-y-auto custom-scrollbar ">
+      {/* <Menu /> */}
 
-
-    <Menu/>
-      {results.length > 0 ? (
-        <div className=" mt-2  p-2 rounded-lg bg-muted shadow ">
-          {results.map((r, i) => (
-            <div
-              key={r.id}
-              className={`px-2 py-1 cursor-pointer hover:bg-ring rounded-md ${i === active ? "bg-muted" : ""
-                }`}
-              onMouseDown={() =>
-                router.push(`/song/${r.slug}`)
-              }
-            >
-              <div className="flex gap-2 items-end gap-2 ">
-                <div className="font-medium">{r.title}</div>
-              </div>
-              <div className="text-xs opacity-70">
-                {r.artist}
-                {r.status === "upcoming" && " • Coming Soon"}
-              </div>
-            </div>
-          ))}
-          {/* <div
-            className="p-2 text-right text-sm text-primary cursor-pointer hover:bg-ring rounded-md"
-            onMouseDown={() =>
-              router.push(`/search?q=${encodeURIComponent(query)}`)
-            }
-          >
-            View all results →
-          </div> */}
+      {query && results.length === 0 && ready && (
+        <div className="mt-4 mx-2 text-muted-foreground ">
+          No results found for "<b>{query}"</b>
         </div>
-      ) : " No search  "}
+      )}
+  {results.length > 0 &&(
+
+    
+    <h2 className="p-2">Search result of "{query}"</h2>
+  )}
+      {results.length > 0 && (
+        <div className="p-2 rounded-lg bg-muted shadow  w-full sm:w-3/5 ">
+          {results.map((r) => (
+            <Link
+              key={r.id}
+              href={`/song/${r.slug}`}
+              className="block"
+            >
+              <div className="px-2 py-2 rounded-md flex gap-3 hover:bg-ring cursor-pointer">
+                <Image
+                  src={r.image}
+                  alt={r.title}
+                  width={60}
+                  height={60}
+                  className="rounded-md object-cover"
+                />
+
+                <div className="flex flex-col">
+                  <div className="font-medium">{r.title}</div>
+                  <div className="text-xs opacity-70">
+                    {r.artist}
+                    {r.status === "upcoming" && " • Coming Soon"}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
-
-  )
+  );
 }
-
-export default page

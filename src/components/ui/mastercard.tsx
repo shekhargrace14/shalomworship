@@ -3,6 +3,7 @@ import { Badge } from "./badge";
 import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
 import Link from "next/link";
 import slugify from "slugify";
+import Image from "next/image";
 
 type CardVariant =
     | "imageTop"
@@ -67,13 +68,15 @@ export function Mastercard({
                 )}
                 >
                     {image && variant !== "compact" && (
-                        <img
+                        <Image
                             src={image}
                             alt={title ?? ""}
                             className={cn(
                                 "object-cover",
                                 imageVariants[variant]
                             )}
+                            width={4}
+                            height={4}
                         />
                     )}
 

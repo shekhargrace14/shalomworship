@@ -97,6 +97,7 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
+  /* --ring: #737373; */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -162,14 +163,14 @@
   width: 6px; /* Width of the scrollbar */
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f2f3; /* Track color */
+  background: #f1f2f300; /* Track color */
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #05B1AC; /* Thumb color */
+  background: #737373; /* Thumb color */
   border-radius: 4px; /* Rounded corners */
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #05B1AC; /* Hover color */
+  background: #737373; /* Hover color */
 }
 
 /* scroll bar css ends  */

@@ -323,14 +323,24 @@ const redirects = [
     destination: "/song/tuta-zayvan-6958b7cef60a8ac73cc476bc",
     permanent: true,
   },
+  {
+    source: "/song/yeshu-tere-hi-liye-696869cfe518a03c9e1cd92b",
+    destination: "/song/yeshu-tere-hi-liye-zarurat-ministries-696869cfe518a03c9e1cd92b",
+    permanent: true,
+  },
+  {
+    source: "/song/zinda-khuda-68727a9a68c3f6aa220967e2",
+    destination: "/song/zinda-khuda-sheldon-bangera-68727a9a68c3f6aa220967e2",
+    permanent: true,
+  },
+  {
+    source: "/song/virasat-6978fedd821c316b5d651c0b",
+    destination: "/song/virasat-bridge-music-6978fedd821c316b5d651c0b",
+    permanent: true,
+  },
   // {
-  //         source: "/song/yeshu-tere-hi-liye-696869cfe518a03c9e1cd92b",
-  //         destination: "/song/yeshu-tere-hi-liye-zarurat-ministries-696869cfe518a03c9e1cd92b",
-  //         permanent: true,
-  //       },
-  // {
-  //         source: "/song/zinda-khuda-68727a9a68c3f6aa220967e2",
-  //         destination: "/song/zinda-khuda-sheldon-bangera-68727a9a68c3f6aa220967e2",
+  //         source: "",
+  //         destination: "",
   //         permanent: true,
   //       },
   // {
@@ -338,6 +348,87 @@ const redirects = [
   //         destination: "",
   //         permanent: true,
   //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+
+  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },  // {
+  //         source: "",
+  //         destination: "",
+  //         permanent: true,
+  //       },
+
 ];
 export default redirects;
 

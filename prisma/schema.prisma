@@ -104,11 +104,11 @@ enum ArtistType {
   band
   label
   channel
-}
+} 
 enum VersionType {
-  version_1
   version_2
   version_3
+  version_4
 }
 
 enum StatusType {

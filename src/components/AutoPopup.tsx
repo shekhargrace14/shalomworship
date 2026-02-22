@@ -13,11 +13,11 @@ export function AutoPopup() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const seen = localStorage.getItem("welcome-popup")
+    const seen = sessionStorage.getItem("welcome-popup")
 
     if (!seen) {
       setOpen(true)
-      localStorage.setItem("welcome-popup", "true")
+      sessionStorage.setItem("welcome-popup", "true")
 
       const timer = setTimeout(() => {
         setOpen(false)

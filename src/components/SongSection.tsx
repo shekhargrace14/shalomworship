@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "./ui/Card";
 import { Mastercard } from "./ui/mastercard";
 
 type Song = {

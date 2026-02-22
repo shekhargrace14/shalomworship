@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
-import { Dot } from "lucide-react";
+import { Bookmark, Dot } from "lucide-react";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
 import LinesVersion2 from "@/components/shared/LinesVersion2";
 import { Fragment } from "react";
@@ -18,11 +18,13 @@ import { buildSongMetadata } from "@/utils/seo";
 import CategorySongs from "@/components/CategorySongs";
 import InContentAd from "@/components/ads/InContentAd";
 import VideoPlayer from "@/components/VideoPlayer";
-import { notFound, redirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { getAllSongs, getAllSongsBasic, getSong } from "@/lib/static";
 import { AutoPopup } from "@/components/AutoPopup";
+import BookmarkSong from "@/components/setlist/Bookmark";
+import { LyricsRenderer } from "@/components/song/LyricsRenderer";
+
 
 async function getSongById(id: string) {
   return getSong(id, [...CONTENT_VISIBILITY.discoverable]);
@@ -86,6 +88,7 @@ const Song = async ({ params }: any) => {
       >
         <Menu />
         <AutoPopup />
+
         <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
@@ -104,10 +107,25 @@ const Song = async ({ params }: any) => {
 
             }
           </div>
-          <div className="sm:w-8/12 grid gap-2">
-            <h1 className="text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
+          <div className=" relative sm:w-8/12 grid gap-2">
+            <h1 className=" text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
               {songData?.title}{" "}
             </h1>
+            <div className="absolute top-2 right-2 inline ">
+              {songData && (
+                <BookmarkSong
+                  song={{
+                    id: songData.id,
+                    slug: songData ? `${songData.slug}-${songData.id}` : "",
+                    title: songData.title ?? "",
+                    image: songData.image ?? "",
+                    artist: creators?.map((creator: any) => creator.title).join(", ") ?? "",
+                    status: songData.status ?? "publish",
+                    language: songData.language ?? "",
+                  }}
+                />
+              )}
+            </div>
             <div className="flex flex-wrap gap-2">
 
               {creators.length > 0 ? (
@@ -249,14 +267,14 @@ const Song = async ({ params }: any) => {
         </div>
       </div>
       <main className="mx-auto p-4 pt-4 relative">
-        {songData?.version === "version_1" ? <div>
+        {/* {songData?.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
               {songData?.title} lyrics
             </h2>
             <div dangerouslySetInnerHTML={{ __html: songData?.content }} />
           </section>
-        </div> : null}
+        </div> : null} */}
         {songData?.version === "version_2" ? <LinesVersion2
           id={songData?.id}
           song={songData}

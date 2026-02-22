@@ -7,614 +7,453 @@
   "version": "version_3",
   "language": "en",
   "lines": [
- [
-  {
-    "label": "Intro",
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": "22" }
+    [
+      { "label": { "hi": "अंतरा 1", "en": "Verse 1" } },
+      {
+        "chords": [
+          { "root": "", "number": null, "quality": "", "space": null }
+        ],
+        "lyrics": {
+          "hi": "निर्जल देश में नदियाँ बहाएगा",
+          "en": "Nirjal Desh Mein Nadiyaan Bahaayega"
+        },
+        "translation": {
+          "en": "He Will Make Rivers Flow In A Waterless Land"
+        }
+      },
+      {
+        "chords": [
+          { "root": "", "number": null, "quality": "", "space": null }
+        ],
+        "lyrics": {
+          "hi": "जंगल के बीच में नया मार्ग बनाएगा (X2)",
+          "en": "Jangal Ke Beech Mein Naya Maarg Banaayega (X2)"
+        },
+        "translation": {
+          "en": "He Will Make A New Way In The Middle Of The Jungle (X2)"
+        },
+        "break": "break"
+      }
     ],
-    "lyrics": {
-      "hi": "मैं चल तो रहा",
-      "en": "Main Chal To Raha"
-    },
-    "translation": {
-      "en": "I Keep Walking On"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": 38 }
-    ],
-    "lyrics": {
-      "hi": "फिर क्यों हूँ भटका सा",
-      "en": "Phir Kyun Hoon Bhatka Sa"
-    },
-    "translation": {
-      "en": "Yet Why Am I So Lost?"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 28 }
-    ],
-    "lyrics": {
-      "hi": "क्यों तारीकी राहों को लेती है छुपा",
-      "en": "Kyun Taareeki Raahon Ko Leti Hai Chhupa"
-    },
-    "translation": {
-      "en": "Why Does Darkness Hide The Roads"
-    }
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 12 }
-    ],
-    "lyrics": {
-      "hi": "मेरे खुदा",
-      "en": "Mere Khuda"
-    },
-    "translation": {
-      "en": "My God"
-    },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 30 }
-    ],
-    "lyrics": {
-      "hi": "समझ में न सका",
-      "en": "Samajh Mein Na Saka"
-    },
-    "translation": {
-      "en": "I Could Not Understand"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": 24 }
-    ],
-    "lyrics": {
-      "hi": "जो मैंने की खता",
-      "en": "Jo Maine Ki Khata"
-    },
-    "translation": {
-      "en": "The Mistakes I Had Made"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 32 }
-    ],
-    "lyrics": {
-      "hi": "चाहूँ तेरा फज़ल तू मुझको ले छुड़ा",
-      "en": "Chaahun Tera Fazal Tu Mujhko Le Chhoda"
-    },
-    "translation": {
-      "en": "I Long For Your Grace—Deliver Me Now"
-    }
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 10 }
-    ],
-    "lyrics": {
-      "hi": "मेरे खुदा",
-      "en": "Mere Khuda"
-    },
-    "translation": {
-      "en": "My God"
-    },
-    "break": "break"
-  },
-  {
-    "label": "Chorus",
-    "chords": [
-       { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "G", "number": 1, "quality": "", "space": 34 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "D", "number": 5, "quality": "", "space": 8 },
-       { "root": "E", "number": 3, "quality": "m", "space": 12  },
-       { "root": "B", "number": 6, "quality": "m", "space": 4 }  
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "G", "number": 1, "quality": "", "space": 34 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    },
-    "break": "break"
-  },
-  {
-    "label": "Verse",
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": null }
-    ],
-    "indent":5,
-    "lyrics": {
-      "hi": "राहें जो मैंने चुनी",
-      "en": "Raahen Jo Maine Chuni"
-    },
-    "translation": {
-      "en": "The Paths That I Chose"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": null }  
 
-    ],
-     "indent":5,
-    "lyrics": {
-      "hi": "लगती थीं मुझको हसीन",
-      "en": "Lagti Thin Mujhko Haseen"
-    },
-    "translation": {
-      "en": "Once Seemed Beautiful To Me"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": null }
-    ],
-     "indent":5,
-    "lyrics": {
-      "hi": "छोड़ के तुझको लगा",
-      "en": "Chhod Ke Tujhko Laga"
-    },
-    "translation": {
-      "en": "Leaving You Behind"
-    }
-  },
-  {
-    "chords": [
-      { "root": "D", "number": 5, "quality": "", "space": null }
-    ],
-     "indent":5,
-    "lyrics": {
-      "hi": "जैसे हो सब कुछ सही",
-      "en": "Jaise Ho Sab Kuchh Sahi"
-    },
-    "translation": {
-      "en": "I Thought Everything Would Be Right"
-    }
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": null }
-    ],
-    "indent":5,
-    "lyrics": {
-      "hi": "पर यह सितम था मेरा",
-      "en": "Par Yeh Sitam Tha Mera"
-    },
-    "translation": {
-      "en": "But This Suffering Was My Own"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": null }  
-
-    ],
-     "indent":5,
-    "lyrics": {
-      "hi": "जो मैंने खुद पे किया",
-      "en": "Jo Maine Khud Pe Kiya"
-    },
-    "translation": {
-      "en": "An Affliction I Gave To Myself"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": null }
-    ],
-     "indent":5,
-    "lyrics": {
-      "hi": "सोचा के सब कुछ पा लूँ",
-      "en": "Socha Ke Sab Kuchh Paalun"
-    },
-    "translation": {
-      "en": "I Thought I Would Gain It All"
-    }
-  },
-  {
-    "chords": [
-      { "root": "D", "number": 5, "quality": "", "space": null }
-    ],
-     "indent":5,
-    "lyrics": {
-      "hi": "पास रहा कुछ नहीं",
-      "en": "Paas Raha Kuchh Nahi"
-    },
-    "translation": {
-      "en": "Yet Nothing Remained With Me"
-    },
-    "break": "break"
-  },
-  {
-    "label": "Tag",
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": "30" }
-    ],
-    "lyrics": {
-      "hi": "पर अब मैं आ गया",
-      "en": "Par Ab Main Aa Gaya"
-    },
-    "translation": {
-      "en": "But Now I Have Come Home"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": 28 }
-    ],
-    "lyrics": {
-      "hi": "मानूँ सारी खता",
-      "en": "Maanu Saari Khata"
-    },
-    "translation": {
-      "en": "Accepting Every Fault"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 34 },
-      { "root": "D", "number": 5, "quality": "", "space": 26 }
-    ],
-    "lyrics": {
-      "hi": "क़दमों में तेरे सर अब मेरा है झुका",
-      "en": "Kadmon Mein Tere Sar Ab Mera Hai Jhuka"
-    },
-    "translation": {
-      "en": "My Head Bowed At Your Feet"
-    }
-  },
-  {
-    "chords": [
-             { "root": "E", "number": 3, "quality": "m", "space": 12  }
-    ],
-    "lyrics": {
-      "hi": "मेरे खुदा",
-      "en": "Mere Khuda"
-    },
-    "translation": {
-      "en": "My God"
-    },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 18 }
-    ],
-    "lyrics": {
-      "hi": "अब बहुत हुआ",
-      "en": "Ab Bahut Hua"
-    },
-    "translation": {
-      "en": "This Ends Now"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": 28 }
-    ],
-    "lyrics": {
-      "hi": "गुनाह में जीना",
-      "en": "Gunaah Mein Jeena"
-    },
-    "translation": {
-      "en": "Living In Sin"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 30 },
-      { "root": "D", "number": 5, "quality": "", "space": 26 }
-    ],
-    "lyrics": {
-      "hi": "पूरा करूँगा वो जो मक़सद है मेरा",
-      "en": "Poora Karunga Woh Jo Maqsad Hai Mera"
-    },
-    "translation": {
-      "en": "I Will Live The Story You Began In Me"
-    }
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 12 }
-    ],
-    "lyrics": {
-      "hi": "मेरे खुदा",
-      "en": "Mere Khuda"
-    },
-    "translation": {
-      "en": "My God"
-    },
-    "break": "break"
-  },
     {
-    "label": "Chorus",
-    "chords": [
-       { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "G", "number": 1, "quality": "", "space": 34 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
+      "label": "Verse 1",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "निर्जल देश में नदियाँ बहाएगा",
+        "en": "Nirjal Desh Mein Nadiyaan Bahaayega"
+      },
+      "translation": {
+        "en": "He Will Make Rivers Flow In A Waterless Land"
+      }
     },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "जंगल के बीच में नया मार्ग बनाएगा (X2)",
+        "en": "Jangal Ke Beech Mein Naya Maarg Banaayega (X2)"
+      },
+      "translation": {
+        "en": "He Will Make A New Way In The Middle Of The Jungle (X2)"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Pre-Chorus",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "क्या तुम देख पा रहे हो",
+        "en": "Kya Tum Dekh Pa Rahe Ho"
+      },
+      "translation": {
+        "en": "Can You See It"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ होने वाला है",
+        "en": "Kuchh Hone Wala Hai"
+      },
+      "translation": {
+        "en": "Something Is About To Happen"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "तुम्हारे ज़िन्दगी में",
+        "en": "Tumhare Zindagi Mein"
+      },
+      "translation": {
+        "en": "In Your Life"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "आशिष आने वाला है",
+        "en": "Aashish Aane Wala Hai"
+      },
+      "translation": {
+        "en": "Blessing Is About To Come"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Chorus",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "परमेश्वर नया कर रहा है",
+        "en": "Parmeshwar Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "God Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "अब यहाँ कर रहा है (X2)",
+        "en": "Ab Yahan Kar Raha Hai (X2)"
+      },
+      "translation": {
+        "en": "He Is Doing It Now Here (X2)"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Verse 1",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "वह तेरे वंश पर आशिष बरसाएगा",
+        "en": "Woh Tere Vansh Par Aashish Barsaayega"
+      },
+      "translation": {
+        "en": "He Will Rain Blessings On Your Descendants"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "तेरी संतान पर आत्मा उंडेलेगा (X2)",
+        "en": "Teri Santaan Par Aatma Undelega (X2)"
+      },
+      "translation": {
+        "en": "He Will Pour Out His Spirit On Your Offspring (X2)"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Pre-Chorus",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "क्या तुम देख पा रहे हो",
+        "en": "Kya Tum Dekh Pa Rahe Ho"
+      },
+      "translation": {
+        "en": "Can You See It"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ होने वाला है",
+        "en": "Kuchh Hone Wala Hai"
+      },
+      "translation": {
+        "en": "Something Is About To Happen"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "तुम्हारे ज़िन्दगी में",
+        "en": "Tumhare Zindagi Mein"
+      },
+      "translation": {
+        "en": "In Your Life"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "आशिष आने वाला है",
+        "en": "Aashish Aane Wala Hai"
+      },
+      "translation": {
+        "en": "Blessing Is About To Come"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Chorus",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "परमेश्वर नया कर रहा है",
+        "en": "Parmeshwar Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "God Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "अब यहाँ कर रहा है (X2)",
+        "en": "Ab Yahan Kar Raha Hai (X2)"
+      },
+      "translation": {
+        "en": "He Is Doing It Now Here (X2)"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Tag",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "बंद जो दरवाज़े हैं अब खुल रहे हैं",
+        "en": "Band Jo Darwaaze Hain Ab Khul Rahe Hain"
+      },
+      "translation": {
+        "en": "The Doors That Are Closed Are Now Opening"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "बांझ को बच्चों की आनंद से भरता है",
+        "en": "Banjh Ko Bachchon Ki Aanand Se Bharta Hai"
+      },
+      "translation": {
+        "en": "He Fills The Barren One With The Joy Of Children"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "जो आँखों ने न देखा जो कानों ने न सुना",
+        "en": "Jo Aankhon Ne Na Dekha Jo Kaanon Ne Na Suna"
+      },
+      "translation": {
+        "en": "What No Eye Has Seen Nor Ear Has Heard"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "येशु नाम से अब होने वाला है",
+        "en": "Yeshu Naam Se Ab Hone Wala Hai"
+      },
+      "translation": {
+        "en": "Is Now Going To Happen In Jesus' Name"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Chorus",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "परमेश्वर नया कर रहा है",
+        "en": "Parmeshwar Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "God Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "अब यहाँ कर रहा है (X2)",
+        "en": "Ab Yahan Kar Raha Hai (X2)"
+      },
+      "translation": {
+        "en": "He Is Doing It Now Here (X2)"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Bridge",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "मेरे घर में परिवार में",
+        "en": "Mere Ghar Mein Parivaar Mein"
+      },
+      "translation": {
+        "en": "In My Home And Family"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "मेरे बच्चों के भविष्य में",
+        "en": "Mere Bachchon Ke Bhavishya Mein"
+      },
+      "translation": {
+        "en": "In The Future Of My Children"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "मेरी कलीसिया और सेवा में",
+        "en": "Meri Kalisiya Aur Sewa Mein"
+      },
+      "translation": {
+        "en": "In My Church And Ministry"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "इस नगर में हर शहर में",
+        "en": "Is Nagar Mein Har Shehar Mein"
+      },
+      "translation": {
+        "en": "In This City And Every Town"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "सब राज्यों में मेरे देश में",
+        "en": "Sab Raajyon Mein Mere Desh Mein"
+      },
+      "translation": {
+        "en": "In All States And In My Country"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "इस दुनिया के हर कोने में",
+        "en": "Is Duniya Ke Har Kone Mein"
+      },
+      "translation": {
+        "en": "In Every Corner Of This World"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      },
+      "break": "break"
+    },
+    {
+      "label": "Chorus",
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "कुछ नया कर रहा है",
+        "en": "Kuchh Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "He Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "परमेश्वर नया कर रहा है",
+        "en": "Parmeshwar Naya Kar Raha Hai"
+      },
+      "translation": {
+        "en": "God Is Doing Something New"
+      }
+    },
+    {
+      "chords": [{ "root": "", "number": null, "quality": "", "space": null }],
+      "lyrics": {
+        "hi": "अब यहाँ कर रहा है (X2)",
+        "en": "Ab Yahan Kar Raha Hai (X2)"
+      },
+      "translation": {
+        "en": "He Is Doing It Now Here (X2)"
+      }
     }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "D", "number": 5, "quality": "", "space": 8 },
-       { "root": "E", "number": 3, "quality": "m", "space": 12  },
-       { "root": "B", "number": 6, "quality": "m", "space": 4 }  
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "G", "number": 1, "quality": "", "space": 34 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    },
-    "break": "break"
-  },
-  {
-    "label": "Tag",
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": "30" }
-    ],
-    "lyrics": {
-      "hi": "पर अब मैं आ गया",
-      "en": "Par Ab Main Aa Gaya"
-    },
-    "translation": {
-      "en": "But Now I Have Come Home"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": 28 }
-    ],
-    "lyrics": {
-      "hi": "मानूँ सारी खता",
-      "en": "Maanu Saari Khata"
-    },
-    "translation": {
-      "en": "Accepting Every Fault"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 34 },
-      { "root": "D", "number": 5, "quality": "", "space": 26 }
-    ],
-    "lyrics": {
-      "hi": "क़दमों में तेरे सर अब मेरा है झुका",
-      "en": "Kadmon Mein Tere Sar Ab Mera Hai Jhuka"
-    },
-    "translation": {
-      "en": "My Head Bowed At Your Feet"
-    }
-  },
-  {
-    "chords": [
-      { "root": "E", "number": 3, "quality": "m", "space": 10  }
-    ],
-    "lyrics": {
-      "hi": "मेरे पिता",
-      "en": "Mere Pita"
-    },
-    "translation": {
-      "en": "Abba Father"
-    },
-    "break": "break"
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 18 }
-    ],
-    "lyrics": {
-      "hi": "अब बहुत हुआ",
-      "en": "Ab Bahut Hua"
-    },
-    "translation": {
-      "en": "This Ends Now"
-    }
-  },
-  {
-    "chords": [
-      { "root": "B", "number": 6, "quality": "m", "space": 28 }
-    ],
-    "lyrics": {
-      "hi": "गुनाह में जीना",
-      "en": "Gunaah Mein Jeena"
-    },
-    "translation": {
-      "en": "Living In Sin"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 30 },
-      { "root": "D", "number": 5, "quality": "", "space": 26 }
-    ],
-    "lyrics": {
-      "hi": "पूरा करूँगा वो जो मक़सद है मेरा",
-      "en": "Poora Karunga Woh Jo Maqsad Hai Mera"
-    },
-    "translation": {
-      "en": "I Will Live The Story You Began In Me"
-    }
-  },
-  {
-    "chords": [
-      { "root": "G", "number": 1, "quality": "", "space": 10 }
-    ],
-    "lyrics": {
-      "hi": "मेरे पिता",
-      "en": "Mere Pita"
-    },
-    "translation": {
-      "en": "Abba Father"
-    },
-    "break": "break"
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {
-    "label": "Chorus",
-    "chords": [
-       { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "G", "number": 1, "quality": "", "space": 34 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "D", "number": 5, "quality": "", "space": 8 },
-       { "root": "E", "number": 3, "quality": "m", "space": 12  },
-       { "root": "B", "number": 6, "quality": "m", "space": 4 }  
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-       { "root": "G", "number": 1, "quality": "", "space": 34 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    }
-  },
-  {
-    "chords": [
-      { "root": "C", "number": 4, "quality": "", "space": 10 },
-      { "root": "D", "number": 5, "quality": "", "space": 8 },
-      { "root": "G", "number": 1, "quality": "", "space": 18 }
-    ],
-    "lyrics": {
-      "hi": "लौट आया हूँ मुझे गले लगा",
-      "en": "Laut Aaya Hoon Mujhe Gale Laga"
-    },
-    "translation": {
-      "en": "I’ve Come Back Home - Hold Me Close"
-    },
-    "break": "break"
-  }
-]
-
   ]
-  
 }

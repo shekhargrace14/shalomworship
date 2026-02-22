@@ -1,9 +1,20 @@
 import Link from "next/link";
 import React from "react";
+// import {
+//   Menubar,
+//   MenubarContent,
+//   MenubarGroup,
+//   MenubarItem,
+//   MenubarMenu,
+//   MenubarSeparator,
+//   MenubarShortcut,
+//   MenubarTrigger,
+// } from "@/components/ui/menubar"
 
 const Menu = () => {
   const menuItems = [
     // { title: "All", link: "/" },
+    { title: "Setlist(Beta)", link: "/setlist" },
     { title: "Song", link: "/song" },
     { title: "Artist", link: "/artist" },
     { title: "Category", link: "/category" },
@@ -19,6 +30,18 @@ const Menu = () => {
         </Link>
       ))}
     </div>
+
+    // <Menubar>
+    //   {menuItems.map((menuItem, index) => (
+    //     <Link href={menuItem.link} key={index}>
+    //       <MenubarMenu>
+    //         <MenubarTrigger>{menuItem.title}</MenubarTrigger>
+
+    //       </MenubarMenu>
+    //     </Link>
+    //   ))}
+
+    // </Menubar>
   );
 };
 

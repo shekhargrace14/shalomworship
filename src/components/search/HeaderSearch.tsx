@@ -1,0 +1,196 @@
+"use client";
+
+import { Plus, Search, X } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { Input } from "../ui/input";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useSongSearch } from "@/lib/search/useSongSearch";
+import Image from "next/image";
+import { useSetlistsContext } from "@/lib/setlist/SetlistsContext";
+import BookmarkSong from "../setlist/Bookmark";
+
+interface HeaderSearchProps {
+  redirectCheck: boolean;
+  setlistId?: string;
+}
+
+export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const { search, ready } = useSongSearch();
+  // const { setlists, addSong, removeSong } = useSetlists();
+  const { setlists, addSong, removeSong } = useSetlistsContext();
+
+  const [query, setQuery] = useState("");
+  const debounced = useDebounce(query, 300);
+
+  const [results, setResults] = useState<any[]>([]);
+  const [active, setActive] = useState(-1);
+  const [open, setOpen] = useState(false);
+
+  // 🔹 Build suggestions (debounced)
+  useEffect(() => {
+    if (!ready || debounced.length < 2) {
+      setResults([]);
+      setOpen(false);
+      return;
+    }
+    const res = search(debounced);
+    setResults(res);
+    setActive(-1);
+    setOpen(res.length > 0);  
+
+    // ✅ ADD { scroll: false } HERE
+    {
+      redirectCheck &&
+        router.replace(`/search?q=${encodeURIComponent(debounced)}`, { scroll: false });
+    }
+  }, [debounced, ready, router]);
+
+  // 🔹 Reset input when leaving search page
+  useEffect(() => {
+    if (pathname !== "/search") {
+      setQuery("");
+      setOpen(false);
+    }
+  }, [pathname]);
+
+  // Auto-focus on page load / return
+  useEffect(() => {
+    const id = requestAnimationFrame(() => {
+      inputRef.current?.focus();
+    });
+    return () => cancelAnimationFrame(id);
+  }, [pathname]); // ✅ correct
+
+
+  function onKeyDown(e: React.KeyboardEvent) {
+    if (!open) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault(); // 🔴 critical
+      setActive((i) => Math.min(i + 1, results.length - 1));
+      inputRef.current?.focus();
+
+    }
+
+    if (e.key === "ArrowUp") {
+      setActive((i) => Math.max(i - 1, -1));
+    }
+    if (e.key === "Enter") {
+      if (active >= 0 && results[active]) {
+        router.push(`/song/${results[active].slug}`);
+      } else {
+        router.push(`/search?q=${encodeURIComponent(query)}`);
+      }
+      setOpen(false);
+    }
+  }
+  const hideDropdownOnSearchPage = pathname !== "/search"
+
+  return (
+    <div className="relative w-full max-w-lg">
+      <div
+        className="
+              relative flex items-center
+              rounded-md border border-input
+              bg-background
+              transition-all
+              focus-within:border-primary
+              focus-within:ring-2
+              focus-within:ring-primary/40
+              focus-within:shadow-md
+            "
+      >
+        {!redirectCheck ? 
+       <Plus
+       size={20}
+          className={`ml-2 text-muted-foreground  bg-input/30 `}
+       /> 
+      :
+        <Search
+          size={20}
+          className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
+          onMouseDown={() => {
+            if (query.trim()) {
+              router.push(`/search?q=${encodeURIComponent(query)}`);
+            }
+          }}
+        />
+      }
+
+        <Input type="search"
+          ref={inputRef}
+          placeholder="Search songs, artists, scriptures..."
+          className=" border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pl-2 "
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setOpen(true);
+          }}
+          onFocus={() => query && setOpen(true)}
+          onKeyDown={onKeyDown}
+        />
+        {query && (
+          <X size={20}
+            className=" mr-2 text-2xl text-foreground cursor-pointer"
+            onClick={() => {
+              setQuery("");
+              setOpen(false);
+            }}
+          />
+        )}
+      </div>
+      {/* 🔹 Suggestions dropdown */}
+      {!redirectCheck && hideDropdownOnSearchPage && open && results.length > 0 && (
+        <div className={` absolute max-h-[50vh] max-w-lg overflow-y-auto custom-scrollbar  z-50 mt-2 p-1 w-full rounded-md bg-card shadow`}>
+          {results.map((song, i) => {
+            // const isAdded = addedSongIds.has(song.id);
+            return (
+              <div
+                key={song.id}
+                className={` px-1 py-1 hover:bg-ring rounded-md flex gap-2 justify-between items-center 
+                ${i === active ? "bg-ring" : ""}
+                ${redirectCheck ? "cursor-pointer" : ""}
+            `}
+                onMouseDown={() => {
+                  if (redirectCheck) {
+                    router.push(`/song/${song.slug}`);
+                    setOpen(false);
+                  }
+                }}
+
+              >
+                <div className="flex gap-2">
+                  <Image
+                    src={song.image}
+                    alt={song.title}
+                    className="w-20 object-cover rounded-md"
+                    width={40}
+                    height={40}
+                  />
+                  <div className="flex flex-col ">
+                    <div className="font-medium">{song.title}</div>
+                    <div className="text-xs opacity-70">
+                      {song.artist}
+                      {song.status === "upcoming" && " • Coming Soon"}
+                    </div>
+                  </div>
+                </div>
+                <BookmarkSong setlistId={setlistId} song={song} />
+              </div>
+            )
+          }
+
+
+
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+

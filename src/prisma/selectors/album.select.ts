@@ -1,13 +1,14 @@
 // prisma/selectors/album.select.ts
-export const albumMiniSelect = {
+export const albumBasicSelect = {
   id: true,
   title: true,
   slug: true,
+  createdAt: true,
+  updatedAt: true,
 };
 
 export const albumFullSelect = {
-  ...albumMiniSelect,
+  ...albumBasicSelect,
   image: true,
   color: true,
-  createdAt: true,
 };

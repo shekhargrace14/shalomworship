@@ -3,10 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { QueryProvider } from "@/lib/query/query-provider";
 import Header from "@/components/layout/Header";
-import Sidebar from "@/components/layout/Sidebar";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
+import OldSidebar from "@/components/OldSidebar";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { SetlistsProvider } from "@/lib/setlist/SetlistsContext";
 // import PwaRegister from "./pwa-register";
 
 export const inter = Inter({
@@ -96,22 +98,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* REMOVE AMP — this was breaking SEO */}
 
-        <QueryProvider>
-          <ThemeProvider attribute="class" defaultTheme="system">
-            <div className="col-span-12 row-span-1">
-              <Header />
-            </div>
+        {/* <QueryProvider> */}
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <TooltipProvider delayDuration={200}>
+            <SetlistsProvider>
 
-            <aside className="hidden md:block md:col-span-3 row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
-              <Sidebar />
-            </aside>
+              <div className="col-span-12 row-span-1">
+                <Header />
+              </div>
 
-            <main className="col-span-12 md:col-span-9 row-span-11 rounded-lg overflow-auto custom-scrollbar">
-              {/* <PwaRegister /> */}
-              {children}
-            </main>
-          </ThemeProvider>
-        </QueryProvider>
+              <aside className="hidden lg:block lg:col-span-3 row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
+                <OldSidebar />
+              </aside>
+
+              <main className="col-span-12 lg:col-span-9 row-span-11 rounded-lg overflow-auto custom-scrollbar">
+                {/* <PwaRegister /> */}
+                {children}
+              </main>
+
+
+            </SetlistsProvider>
+          </TooltipProvider>
+        </ThemeProvider>
+        {/* </QueryProvider> */}
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
 import { Share2 } from "lucide-react";
 import { IoShareSocialOutline } from "react-icons/io5";
 interface ShareButtonProps {
-  title: string;
+  title: any;
   // add other props if needed
 }
 

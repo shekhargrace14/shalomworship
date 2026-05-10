@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import ChordTable from './ChordTableVersion2';
 import ChordTableVersion2 from './ChordTableVersion2';
-// import ChordTable from '../ChordTable'
 
 type LinesProps = {
   id: string;

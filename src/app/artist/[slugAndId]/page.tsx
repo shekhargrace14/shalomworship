@@ -2,82 +2,47 @@ import InContentAd from "@/components/ads/InContentAd";
 import Menu from "@/components/layout/Menu";
 import { MetaData } from "@/components/MetaData";
 import Processor from "@/components/Processor";
-import {
-  fetchArtistById,
-  fetchArtists,
-  fetchSongById,
-} from "@/lib/query/query";
+
 import Image from "next/image";
 import slugify from "slugify";
 import { notFound, redirect } from "next/navigation";
 import { parseSlugAndId } from "@/utils/parseSlugAndId";
-import { fetchArtistByIdWithSongs } from "@/lib/actions/fetchArtistByIdWithSongs";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
+import { getAllArtists, getAllArtistsBasic, getArtist } from "@/lib/static";
 
 export async function generateStaticParams() {
-  const artists = await fetchArtists(); // Fetch all songs from your data source
+  const artists = await getAllArtistsBasic();
   return artists.map((artist) => {
-    const slug =
+    const slugAndId =
       slugify(`${artist.title}`, { lower: true }) + "-" + artist.id.toString();
-    // console.log(slug, ""); // Log the slug here
-    return { slug };
+    return { slugAndId };
   });
 }
 
 export async function generateMetadata({ params }: any) {
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  //
+  const slugAndId = await params.slugAndId;
   const { id } = parseSlugAndId(params.slugAndId);
-
-  if (!id || !isValidObjectId(id)) {
-    return {};
-  }
-
-  const artist = await fetchArtistByIdWithSongs(id, [
-    ...CONTENT_VISIBILITY.public,
-  ]);
+  // const artist = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);  
+  const artist = await getArtist(id, [...CONTENT_VISIBILITY.public,]);
   if (!artist) return {};
-  console.log(artist);
   const type = "artist";
   const title = artist && artist?.title;
-  const keyword = ["Yeshu"];
-  const metaDescription = artist && artist?.about;
+  // const metaDescription = artist && artist?.about;
   const slug = artist && artist?.slug;
-  // console.log(slug);
   const image = artist && artist?.image;
-
-  return MetaData({ type, title, slug, image, keyword });
+  return MetaData({ type, title, slug, image });
 }
 
-const isValidObjectId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
 
 const Page = async ({ params }: any) => {
-  const slugAndId = await params.slugAndId; // this is the [slugAndId] part
-  // const id =  slugAndId.split('-').pop(); // extract id from slug-id
+  const slugAndId = await params.slugAndId; 
   const { slug, id } = parseSlugAndId(params.slugAndId);
-
-  const artistData = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
-
-  if (!artistData) {
-    const song = await fetchSongById(id);
-    // console.log(song, "song in artist")
-    if (song) {
-      // redirect(`/song/${slugAndId}`)
-      redirect(`/song/${slug}-${id}`);
-    }
-    notFound();
-  }
-
+  // const artistData = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
+  const artistData = await getArtist(id, [...CONTENT_VISIBILITY.public,]);
   const data = artistData;
-  const color = artistData?.color ?? "#121212"; // fallback color
-
-  const upcomingSongs = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.upcoming,]);
+  const color = artistData?.color ?? "#121212";
+  const upcomingSongs = await getArtist(id, [...CONTENT_VISIBILITY.upcoming,]);
   const upcomingSongsData = upcomingSongs?.song.map((song: any) => song);
-  // console.log(data.song);
-  // const publicSongs = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
-  // const publicSongsData = publicSongs?.song.map((song: any) => song);
-  // console.log(publicSongsData, "publicSongsData")
-  // console.log(upcomingSongsData, "upcomingSongsData")
 
   return (
     <>
@@ -114,7 +79,7 @@ const Page = async ({ params }: any) => {
           <div>
             <p className="text-base  text-foreground">About</p>
             <p className="text-sm  text-foreground">
-              {data?.about || "Artist"}
+              {/* {data?.about || "Artist"} */}
             </p>
           </div>
         </div>

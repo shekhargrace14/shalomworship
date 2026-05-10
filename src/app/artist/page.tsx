@@ -1,10 +1,8 @@
 import Menu from "@/components/layout/Menu";
-import { fetchArtists, fetchCategory } from "@/lib/query/query";
 import React from "react";
-import { MetaDataProps } from "@/types";
-import CardSection from "@/components/AlbumSection";
 import ArtistSection from "@/components/ArtistSection";
 import { MetaData } from "@/components/MetaData";
+import { getAllArtists } from "@/lib/static";
 
 
 
@@ -28,7 +26,9 @@ export function generateMetadata(){
 
 }
 const page = async () => {
-  const artists = await fetchArtists();
+  // const artists = await fetchArtists();
+  const artists = await getAllArtists();
+  
 
   // console.log(artists, "fetched artists");
 

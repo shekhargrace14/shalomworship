@@ -3,6 +3,7 @@ import { Badge } from "./badge";
 import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
 import Link from "next/link";
 import slugify from "slugify";
+import Image from "next/image";
 
 type CardVariant =
     | "imageTop"
@@ -55,7 +56,6 @@ export function Mastercard({
             artists.push(item.artist);
         }
     });
-    console.log(item?.slug, ":item");
     const slug = slugify(`${songSlug}`, { lower: true });
 
     return (
@@ -68,13 +68,15 @@ export function Mastercard({
                 )}
                 >
                     {image && variant !== "compact" && (
-                        <img
+                        <Image
                             src={image}
                             alt={title ?? ""}
                             className={cn(
                                 "object-cover",
                                 imageVariants[variant]
                             )}
+                            width={4}
+                            height={4}
                         />
                     )}
 
@@ -84,7 +86,7 @@ export function Mastercard({
                                 <h3 className="text-base sm:text-base font-semibold leading-tight line-clamp-1 text-md text-foreground ">{title}</h3>
                                 <p className="text-xs leading-none text-muted-foreground">{creators[0]?.title}</p>
                             </div>
-                            <Badge variant="secondary">{language}</Badge>
+                            {/* <Badge variant="secondary">{language}</Badge> */}
                         </div>
                     )}
                 </div>

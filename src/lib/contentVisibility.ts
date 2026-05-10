@@ -6,6 +6,7 @@ type StatusArray = readonly StatusType[];
  */
 export const CONTENT_VISIBILITY: Record<string, StatusArray>  = {
   public: [StatusType.publish, StatusType.archived],
+  discoverable:[StatusType.publish, StatusType.archived, StatusType.upcoming],
   listing: [StatusType.publish],
   sitemap: [StatusType.publish],
   upcoming: [StatusType.upcoming],

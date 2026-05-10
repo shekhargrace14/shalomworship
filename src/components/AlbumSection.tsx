@@ -1,6 +1,5 @@
 import React from "react";
 import ArtistCard from "./ArtistCard";
-import Card from "./ui/Card";
 import Album from "./Album";
 
 type Artist = {

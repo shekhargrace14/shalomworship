@@ -1,84 +1,87 @@
-// "use client";
-// import { useEffect, useState } from "react";
-// import { useDebounce } from "@/hooks/useDebounce"; // optional custom hook
-// import { useGetSongs, useGetArtists, useGetCategory } from "@/lib/query/query";
-// import { ArtistProps, Category, CategoryType, Song, SongType } from "@/types";
-// import { ArtistType } from "@prisma/client";
+"use client";
 
-// import { useSearchParams } from "next/navigation";
-// import Section from "@/components/searchComp/Section";
-// import Menu from "@/components/layout/Menu";
+import Menu from "@/components/layout/Menu";
+import { useSongSearch } from "@/lib/search/useSongSearch";
+import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function SearchPage() {
-//     const searchParams = useSearchParams();
-//     const query = searchParams.get("q");
-//     console.log(query)
+  const { search, ready } = useSongSearch();
+  const params = useSearchParams();
+  const q = params.get("q") ?? "";
 
+  const [query, setQuery] = useState(q);
+  const [results, setResults] = useState<any[]>([]);
 
-//     const debouncedSearch = useDebounce(query, 300);
+  /**
+   * 🔹 Sync URL → state
+   * Handles:
+   * - direct load
+   * - back / forward navigation
+   */
+  useEffect(() => {
+    setQuery(q);
+  }, [q]);
 
-//     const { data: songData } = useGetSongs();
-//     const { data: artistData } = useGetArtists();
-//     const { data: categoryData } = useGetCategory();
+  /**
+   * 🔹 Run search when:
+   * - query changes
+   * - search index becomes ready
+   */
+  useEffect(() => {
+    if (!ready || !query) {
+      setResults([]);
+      return;
+    }
 
-//     const [filteredSongs, setFilteredSongs] = useState<SongType[]>([]);
-//     const [filteredArtists, setFilteredArtists] = useState<ArtistProps[]>([]);
-//     const [filteredCategories, setFilteredCategories] = useState<CategoryType[]>([]);
+    setResults(search(query, 20));
+  }, [query, ready]);
 
-//     useEffect(() => {
-//         // if (!debouncedSearch) {
-//         //     setFilteredSongs([]);
-//         //     setFilteredArtists([]);
-//         //     setFilteredCategories([]);
-//         //     return;
-//         // }
+  return (
+    <div className="h-[90vh] overflow-y-auto custom-scrollbar ">
+      {/* <Menu /> */}
 
-//         setFilteredSongs(
-//             songData?.filter(song =>
-//                 song.title.toLowerCase().includes((query ?? "").toLowerCase())    
-//                 ||
-//                 song.content.toLowerCase().includes((query ?? "").toLowerCase())    
-//             ) || []
-//         );
+      {query && results.length === 0 && ready && (
+        <div className="mt-4 mx-2 text-muted-foreground ">
+          No results found for "<b>{query}"</b>
+        </div>
+      )}
+  {results.length > 0 &&(
 
-//         setFilteredArtists(
-//             artistData?.filter(artist =>
-//                 artist.name.toLowerCase().includes((query ?? "").toLowerCase())
-//             ) || []
-//         );
+    
+    <h2 className="p-2">Search result of "{query}"</h2>
+  )}
+      {results.length > 0 && (
+        <div className="p-2 rounded-lg bg-muted shadow  w-full sm:w-3/5 ">
+          {results.map((r) => (
+            <Link
+              key={r.id}
+              href={`/song/${r.slug}`}
+              className="block"
+            >
+              <div className="px-2 py-2 rounded-md flex gap-3 hover:bg-ring cursor-pointer">
+                <Image
+                  src={r.image}
+                  alt={r.title}
+                  width={60}
+                  height={60}
+                  className="rounded-md object-cover"
+                />
 
-//         setFilteredCategories(
-//             categoryData?.filter(category =>
-//                 category.name.toLowerCase().includes((query ?? "").toLowerCase())
-//             ) || []
-//         );
-//     }, [query, songData, artistData, categoryData]);
-
-    return (
-        <></>
-//     <div className=' h-[90vh] overflow-y-auto custom-scrollbar p-4'>
-
-//           <Menu />
-//         <div className=" grid grid-cols-1 md:grid-cols-2">
-
-//             <div>
-
-//             <p className="h3">Top result</p>
-
-//             {debouncedSearch && (   
-//                 <>
-//                     <Section title="Songs" data={filteredSongs} />
-//                     {/* <Section title="Artists" data={filteredArtists} />   */}
-//                     {/* <Section title="Categories" data={filteredCategories} /> */}
-
-//                 </>
-//             )}
-//             </div>
-//             <div>
-                
-//             </div>
-
-//         </div>
-        // </div>
-    );
+                <div className="flex flex-col">
+                  <div className="font-medium">{r.title}</div>
+                  <div className="text-xs opacity-70">
+                    {r.artist}
+                    {r.status === "upcoming" && " • Coming Soon"}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }

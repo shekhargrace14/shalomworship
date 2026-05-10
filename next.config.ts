@@ -1,21 +1,15 @@
 import type { NextConfig } from "next";
-import redirects from "./redirects";
 import withPWA from "next-pwa";
 
 const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
-async redirects() {
-    // console.log('🔁 Redirects loaded:', redirects.length);
-    // console.log(
-    //   redirects.slice(0, 5).map(r => `${r.source} → ${r.destination}`)
-    // );
-
-    return redirects.map((r) => ({
-      ...r,
-      permanent: true,
-    }));
-  },
+  ...(isDev ? {} : { output: "export" }),
+  //   return redirects.map((r) => ({
+  //     ...r,
+  //     permanent: true,
+  //   }));
+  // },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "yt3.googleusercontent.com" },

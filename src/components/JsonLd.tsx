@@ -1,11 +1,13 @@
 // components/JsonLdScript.tsx
-import { songs } from "@/lib/actions/song";
-import { fetchSongById } from "@/lib/query/query";
+import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
+// import { fetchSongById } from "@/lib/query/query";
+import { getSong } from "@/lib/static";
 import { getYouTubeMetadata } from "@/lib/youtube";
 import { getLanguageName } from "@/utils/getLanguageName";
 
 export default async function JsonLd({ id }: { id: string }) {
-  const songData = await fetchSongById(id);
+  // const songData = await fetchSongById(id);
+  const songData = await getSong(id,[...CONTENT_VISIBILITY.discoverable])
   if (!songData) return null;
 
   // -------- SAFE VALUES --------

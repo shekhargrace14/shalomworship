@@ -34,11 +34,6 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
     async function fetchSong() {
       const singleSong = await songData;
 
-      // const response = await fetch("/song.json");
-      // const singleSong = await response.json();
-
-      // console.log("singleSong", singleSong);
-
       if (singleSong) {
         const formattedSong: Song = {
           title: singleSong.title,

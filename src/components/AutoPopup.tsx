@@ -1,23 +1,43 @@
 "use client"
 
 import { useEffect, useState } from "react"
+
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+
 import { X } from "lucide-react"
 
-export function AutoPopup() {
+import EventSection from "./event/EventSection"
+
+type Props = {
+  data: any[]
+}
+
+export function AutoPopup({
+  data,
+}: Props) {
+
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const seen = sessionStorage.getItem("welcome-popup")
+
+    if (!data?.length) return
+
+    const seen =
+      sessionStorage.getItem("welcome-popup")
 
     if (!seen) {
+
       setOpen(true)
-      sessionStorage.setItem("welcome-popup", "true")
+
+      sessionStorage.setItem(
+        "welcome-popup",
+        "true"
+      )
 
       const timer = setTimeout(() => {
         setOpen(false)
@@ -25,12 +45,18 @@ export function AutoPopup() {
 
       return () => clearTimeout(timer)
     }
-  }, [])
+
+  }, [data])
+
+  // console.log(data)
 
   return (
-    <Dialog open={open} onOpenChange={setOpen} >
+    <Dialog
+      open={open}
+      onOpenChange={setOpen}
+    >
       <DialogContent className="max-w-md px-4">
-        {/* Manual close button */}
+
         <button
           onClick={() => setOpen(false)}
           className="absolute right-4 top-4 text-muted-foreground hover:text-foreground"
@@ -40,12 +66,17 @@ export function AutoPopup() {
         </button>
 
         <DialogHeader>
-          <DialogTitle>Welcome 👋</DialogTitle>
+          <DialogTitle>
+            Join Us At "Un Filtered Youth Conf' 2026" 
+          </DialogTitle>
         </DialogHeader>
 
-        <p className="text-sm text-muted-foreground">
-          Discover worship songs, lyrics, chords and meanings.
-        </p>
+        <EventSection
+          number="-1"
+          event={[data[0]]}
+          variant="imageOnly"
+        />
+
       </DialogContent>
     </Dialog>
   )

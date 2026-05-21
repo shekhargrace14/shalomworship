@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: any) {
   return MetaData({ type, title, slug, image });
 }
 
-
 const Page = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; 
   const { slug, id } = parseSlugAndId(params.slugAndId);
@@ -41,8 +40,10 @@ const Page = async ({ params }: any) => {
   const artistData = await getArtist(id, [...CONTENT_VISIBILITY.public,]);
   const data = artistData;
   const color = artistData?.color ?? "#121212";
+  const songs = data?.song ? [...data.song].reverse() : [];
+  const hasSongs = songs.length > 0;
   const upcomingSongs = await getArtist(id, [...CONTENT_VISIBILITY.upcoming,]);
-  const upcomingSongsData = upcomingSongs?.song.map((song: any) => song);
+  const upcomingSongsData = upcomingSongs?.song ? [...upcomingSongs.song] : [];
 
   return (
     <>
@@ -92,7 +93,7 @@ const Page = async ({ params }: any) => {
 
             <section className="w-full px-4">
               <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
-                {(upcomingSongsData ?? []).slice().reverse().map((item) => (
+                {upcomingSongsData.slice().reverse().map((item) => (
                   <div key={item.songId}>
                     <Processor item={item?.songId} type="artist" />
                   </div>
@@ -101,13 +102,16 @@ const Page = async ({ params }: any) => {
             </section>
           </>
         ) : null}
-        <h2 className="text-xl font-semibold m-4 text-foreground">
-          Songs from {data?.title || "Artist"}
-        </h2>
+
+        {hasSongs ? (
+          <h2 className="text-xl font-semibold m-4 text-foreground">
+            Songs from {data?.title || "Artist"}
+          </h2>
+        ) : null}
 
         <section className="w-full px-4">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
-            {data?.song.reverse().map((item) => (
+            {songs.map((item) => (
               <div key={item.songId}>
                 <Processor item={item?.songId} type="artist" />
               </div>

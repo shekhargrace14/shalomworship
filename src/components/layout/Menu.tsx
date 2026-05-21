@@ -18,8 +18,8 @@ const Menu = () => {
     { title: "Song", link: "/song" },
     { title: "Artist", link: "/artist" },
     { title: "Category", link: "/category" },
-    // { title: "Language", link: "/language" },
     { title: "Album", link: "/album" },
+    { title: "Event", link: "/event" },
   ];
 
   return (

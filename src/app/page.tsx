@@ -6,9 +6,9 @@ import SongSection from "@/components/SongSection";
 import Link from "next/link";
 import AlbumSection from "@/components/AlbumSection";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getAllAlbums, getAllArtists, getAllCategoriesBasic, getAllSongs } from "@/lib/static";
+import { getAllAlbums, getAllArtists, getAllCategoriesBasic, getAllEvents, getAllSongs } from "@/lib/static";
 import { AutoPopup } from "@/components/AutoPopup";
-
+import EventSection from "@/components/event/EventSection";
 
 type Song = {
   id: string;
@@ -16,24 +16,31 @@ type Song = {
   image: string;
 };
 export default async function Home() {
-  const [upcomingSongs, publicSongs, artists, categories, album] = await Promise.all([
+  const [upcomingSongs, publicSongs, artists, categories, album, event] = await Promise.all([
     getAllSongs([...CONTENT_VISIBILITY.upcoming]),
     getAllSongs([...CONTENT_VISIBILITY.public]),
     getAllArtists(),
     getAllCategoriesBasic(),
-    getAllAlbums()
+    getAllAlbums(),
+    getAllEvents()
   ]);
+  // console.log(event,  "event on page.tsx")
   return (
     <>
       <div className=" p-4 overflow-y-auto custom-scrollbar ">
-        <AutoPopup/>
+        <AutoPopup data={event}/>
         <Menu />
         <div className="w-full flex justify-between items-end ">
+          <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Upcoming Events</h2>
+          {event.length <= 5 ? "" : <p className="text-sm text-muted-foreground"><Link href={"/event"}>Show All</Link></p>}
+        </div>
+        <EventSection number={"-4"} event={event} variant="imageOnly" />
+        {/* <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground"> Upcoming Songs</h2>
           { upcomingSongs.length<=5 ? "": <p className="text-sm text-muted-foreground"><Link href={"/song"}>Show All</Link></p>}
         </div>
-        <SongSection number={"-4"} songs={upcomingSongs} variant="imageOnly" />
-         
+        <SongSection number={"-4"} songs={upcomingSongs} variant="imageOnly" /> */}
+
         <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> Trending Songs </h2>
           <p className="text-sm text-muted-foreground"><Link href={"/song"}>Show All</Link></p>
@@ -52,11 +59,11 @@ export default async function Home() {
         </div>
         <CategorySection number={"-6"} categories={categories} />
 
-        <div className="w-full flex justify-between items-end ">
+        {/* <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Album</h2>
           <p className="text-sm text-muted-foreground"><Link href={"/album"}>Show All</Link></p>
         </div>
-        <AlbumSection number={"-4"} album={album} type="album" />
+        <AlbumSection number={"-4"} album={album} type="album" /> */}
 
         <br />
       </div>

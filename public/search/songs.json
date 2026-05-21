@@ -1,7 +1,7 @@
 [
   {
     "id": "676ee13aa5e92f8809b16aef",
-    "slug": "danyawad-ke-saath-676ee13aa5e92f8809b16aef",
+    "slug": "dhanyawad-ke-saath-676ee13aa5e92f8809b16aef",
     "title": "Dhanyawad ke saath",
     "image": "https://img.youtube.com/vi/WtGfN9YZjMQ/maxresdefault.jpg",
     "status": "publish",
@@ -711,7 +711,7 @@
   },
   {
     "id": "686fb35a389f322ae0eb4be4",
-    "slug": "aradhana-yeshu-tujhe -686fb35a389f322ae0eb4be4",
+    "slug": "aradhana-yeshu-tujhe-686fb35a389f322ae0eb4be4",
     "title": "Aradhana Yeshu Tujhe",
     "image": "https://img.youtube.com/vi/HuA2-o7WfeM/maxresdefault.jpg",
     "status": "publish",
@@ -4713,7 +4713,7 @@
     "id": "6978fedd821c316b5d651c0b",
     "slug": "virasat-bridge-music-6978fedd821c316b5d651c0b",
     "title": "Virasat",
-    "image": "https://img.youtube.com/vi/no90rrvy3tg/maxresdefault.jpg",
+    "image": "https://img.youtube.com/vi/no90rrvy3tg/mqdefault.jpg",
     "status": "publish",
     "language": "hi",
     "artist": "Bridge Music",
@@ -5158,5 +5158,45 @@
     "language": "en",
     "artist": "Elevation Worship",
     "artistSlug": "elevation-worship"
+  },
+  {
+    "id": "699b3778610386bef4aa19e5",
+    "slug": "naya-savera-nations-of-worship-699b3778610386bef4aa19e5",
+    "title": "NAYA SAVERA",
+    "image": "https://img.youtube.com/vi/6WfCPZEtRhk/maxresdefault.jpg",
+    "status": "publish",
+    "language": "hi",
+    "artist": "Nations of Worship",
+    "artistSlug": "nations-of-worship"
+  },
+  {
+    "id": "69a049efe76c2390e312da75",
+    "slug": "mera-sirjanhar-one-tribe-production-69a049efe76c2390e312da75",
+    "title": "Mera Sirjanhar",
+    "image": "https://img.youtube.com/vi/0FgtDf4tlFk/mqdefault.jpg",
+    "status": "publish",
+    "language": "hi",
+    "artist": "One Tribe Production",
+    "artistSlug": "one-tribe-production"
+  },
+  {
+    "id": "69a487ab728f67f7aae31bf5",
+    "slug": "rehem-brandon-das-69a487ab728f67f7aae31bf5",
+    "title": "Rehem",
+    "image": "https://img.youtube.com/vi/AgyVqpJhOoE/maxresdefault.jpg",
+    "status": "publish",
+    "language": "hi",
+    "artist": "Brandon Das",
+    "artistSlug": "brandon-das"
+  },
+  {
+    "id": "69a48f06728f67f7aae31c1f",
+    "slug": "main-gaaoon-tera-dhanyawad-anugrah-ministries-69a48f06728f67f7aae31c1f",
+    "title": "Main Gaaoon Tera Dhanyawad",
+    "image": "https://img.youtube.com/vi/1uIF3ykHlew/maxresdefault.jpg",
+    "status": "publish",
+    "language": "hi",
+    "artist": "Anugrah Ministries",
+    "artistSlug": "anugrah-ministries"
   }
 ]

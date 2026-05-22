@@ -77,9 +77,7 @@ const Song = async ({ params }: any) => {
   const searchVariants = songData?.searchVariant || ""
 
 
-    const [event] = await Promise.all([
-      getAllEvents()
-    ]);
+    const event = await getAllEvents()
 
   return (
 

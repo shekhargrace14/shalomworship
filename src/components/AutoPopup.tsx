@@ -76,7 +76,6 @@ export function AutoPopup({
           event={[data[0]]}
           variant="imageOnly"
         />
-
       </DialogContent>
     </Dialog>
   )

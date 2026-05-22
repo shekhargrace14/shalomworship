@@ -20,7 +20,7 @@ import InContentAd from "@/components/ads/InContentAd";
 import VideoPlayer from "@/components/VideoPlayer";
 import { Badge } from "@/components/ui/badge";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getAllSongs, getAllSongsBasic, getSong } from "@/lib/static";
+import { getAllEvents, getAllSongs, getAllSongsBasic, getSong } from "@/lib/static";
 import { AutoPopup } from "@/components/AutoPopup";
 import BookmarkSong from "@/components/setlist/Bookmark";
 import { LyricsRenderer } from "@/components/song/LyricsRenderer";
@@ -76,6 +76,9 @@ const Song = async ({ params }: any) => {
   const langName = getLanguageName(language);
   const searchVariants = songData?.searchVariant || ""
 
+
+    const event = await getAllEvents()
+
   return (
 
     <div className="bg-background  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
@@ -87,7 +90,7 @@ const Song = async ({ params }: any) => {
         }}
       >
         <Menu />
-        <AutoPopup />
+        <AutoPopup data={event}/>
 
         <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">

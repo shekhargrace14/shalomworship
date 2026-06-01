@@ -81,7 +81,7 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="antialiased h-screen grid grid-cols-12 grid-rows-12 gap-x-4 bg-background">
+      <body className="antialiased h-screen grid grid-cols-12 grid-rows-[auto_1fr] gap-x-4 bg-background">
         {/* Google Analytics */}
         {process.env.NODE_ENV === "production" && (
           <GoogleAnalytics gaId="G-H4QZJK5XEN" />

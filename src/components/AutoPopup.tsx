@@ -12,20 +12,19 @@ import {
 import { X } from "lucide-react"
 
 import EventSection from "./event/EventSection"
+import Social from "./ui/Social"
 
 type Props = {
-  data: any[]
+  data?: any[]
 }
 
-export function AutoPopup({
-  data,
-}: Props) {
+export function AutoPopup() {
 
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
 
-    if (!data?.length) return
+    // if (!data?.length) return
 
     const seen =
       sessionStorage.getItem("welcome-popup")
@@ -46,7 +45,7 @@ export function AutoPopup({
       return () => clearTimeout(timer)
     }
 
-  }, [data])
+  }, [])
 
   // console.log(data)
 
@@ -67,15 +66,12 @@ export function AutoPopup({
 
         <DialogHeader>
           <DialogTitle>
-            Join Us At "Un Filtered Youth Conf' 2026" 
+            Join Our Community 
           </DialogTitle>
         </DialogHeader>
 
-        <EventSection
-          number="-1"
-          event={[data[0]]}
-          variant="imageOnly"
-        />
+        <Social />
+
       </DialogContent>
     </Dialog>
   )

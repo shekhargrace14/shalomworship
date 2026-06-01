@@ -76,9 +76,6 @@ const Song = async ({ params }: any) => {
   const langName = getLanguageName(language);
   const searchVariants = songData?.searchVariant || ""
 
-
-    const event = await getAllEvents()
-
   return (
 
     <div className="bg-background  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
@@ -90,7 +87,7 @@ const Song = async ({ params }: any) => {
         }}
       >
         <Menu />
-        <AutoPopup data={event}/>
+        <AutoPopup/>
 
         <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">

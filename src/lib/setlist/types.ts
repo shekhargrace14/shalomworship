@@ -4,7 +4,7 @@ export type SetlistSong = {
   title: string;
   image: string;
   artist: string;
-  status: "publish" | "archived" | "upcoming" | "draft";
+  status: "publish" | "archived" | "upcoming" | "draft" | "cancelled" | "completed";
   language: string;
 };
 

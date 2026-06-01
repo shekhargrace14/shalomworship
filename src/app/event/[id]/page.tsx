@@ -32,7 +32,7 @@ const Page = async ({ params }: any) => {
   const event = await getEvent(id)
   // console.log(event)
   const data = event;
-  const date = new Date(data?.date || "").toLocaleString(
+  const date = new Date(data?.createdAt || "").toLocaleString(
     "en-IN",
     {
       timeZone: "Asia/Kolkata",
@@ -124,7 +124,7 @@ const Page = async ({ params }: any) => {
         {/* <h2 className="text-xl m-4 text-foreground">About The "<span className="font-semibold ">{data?.title || "Event"}" </span></h2> */}
         <section className="w-full px-4 mb-4">
           <div className="flex flex-col gap-4 ">
-            <p className="mb-4">Organisted by <span className="font-semibold ">Holy City Fellowship Church</span></p>
+            {/* <p className="mb-4">Organisted by <span className="font-semibold "></span></p> */}
             <Image
               src={data?.link || ""}
               alt={data?.title || ""}

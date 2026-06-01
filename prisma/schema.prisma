@@ -12,6 +12,8 @@ model song {
   id                   String        @id @default(auto()) @map("_id") @db.ObjectId
   title                String
   content              String
+  lyrics               Json?
+  type                 StatusType?
   lines                Json?
   isChords             Boolean?      @default(false)
   isTranslation        Boolean?      @default(false)
@@ -106,10 +108,32 @@ enum ArtistType {
   channel
 }
 
+enum SongSectionType {
+  INTRO
+  VERSE
+  PRE_CHORUS
+  CHORUS
+  POST_CHORUS
+  BRIDGE
+  INTERLUDE
+  INSTRUMENTAL
+  SOLO
+  RAP
+  HOOK
+  REFRAIN
+  BREAKDOWN
+  OUTRO
+  ENDING
+  SPOKEN
+  ADLIB
+  OTHER
+}
+
 enum VersionType {
   version_2
   version_3
   version_4
+  version_5
 }
 
 enum StatusType {
@@ -117,6 +141,8 @@ enum StatusType {
   publish
   upcoming
   archived
+  cancelled
+  completed
 }
 
 enum LanguageType {
@@ -201,7 +227,7 @@ model album {
   updatedAt    DateTime      @updatedAt
   song         SongAlbum[]
   artist       ArtistAlbum[]
-  artistEvents EventArtist[]
+
 }
 
 model event {
@@ -209,7 +235,8 @@ model event {
   title     String
   image     String?
   video     String?
-  date      DateTime?
+  startDate DateTime?
+  endDate   DateTime?
   venue     String?
   details   Json?
   registration String?
@@ -217,6 +244,7 @@ model event {
   slug      String          @unique
   color     String?
   about     String?
+  status    StatusType @default(draft)
   createdAt DateTime      @default(now())
   updatedAt DateTime      @updatedAt
   artist    EventArtist[]
@@ -295,8 +323,6 @@ model EventArtist {
   id       String  @id @default(auto()) @map("_id") @db.ObjectId
   eventId  String? @db.ObjectId
   artistId String  @db.ObjectId
-  albumId  String  @db.ObjectId
-  album    album   @relation(fields: [albumId], references: [id])
   event    event?  @relation(fields: [eventId], references: [id])
   artist   artist  @relation(fields: [artistId], references: [id])
 }

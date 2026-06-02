@@ -23,7 +23,21 @@ jobs:
         run: |
           zip -r mongodb-backup.zip backup
 
-      - name: Upload Backup
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Upload to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp mongodb-backup.zip \
+            s3://${{ secrets.R2_BUCKET_NAME }}/mongodb-backup-$(date +%Y-%m-%d-%H-%M).zip \
+            --endpoint-url=${{ secrets.R2_ENDPOINT }}
+
+      - name: Upload Backup Artifact
         uses: actions/upload-artifact@v4
         with:
           name: mongodb-backup

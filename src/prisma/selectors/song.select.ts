@@ -11,6 +11,7 @@ export const songBaseSelect = {
 export const songContentSelect = {
   content: true,
   lines: true,
+  lyrics:true,
   isChords: true,
   isTranslation: true,
   version: true,

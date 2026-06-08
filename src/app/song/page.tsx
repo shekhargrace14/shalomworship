@@ -19,6 +19,7 @@ export function generateMetadata() {
 const page = async () => {
   const songs = await getAllSongs([...CONTENT_VISIBILITY.public]);
 
+  // console.log(songs)
   return (
     <div className=' h-[90vh] overflow-y-auto custom-scrollbar p-4'>
       <Menu />

@@ -5,15 +5,15 @@ type StatusArray = readonly StatusType[];
  * What statuses are visible WHERE
  */
 export const CONTENT_VISIBILITY: Record<string, StatusArray>  = {
-  public: [StatusType.publish, StatusType.archived],
-  discoverable:[StatusType.publish, StatusType.archived, StatusType.upcoming],
-  listing: [StatusType.publish],
-  sitemap: [StatusType.publish],
-  upcoming: [StatusType.upcoming],
+  public: [StatusType.PUBLISH, StatusType.ARCHIVE],
+  discoverable:[StatusType.PUBLISH, StatusType.ARCHIVE, StatusType.UPCOMING],
+  listing: [StatusType.PUBLISH],
+  sitemap: [StatusType.PUBLISH],
+  upcoming: [StatusType.UPCOMING],
   admin: [
-    StatusType.draft,
-    StatusType.upcoming,
-    StatusType.publish,
-    StatusType.archived,
+    StatusType.DRAFT,
+    StatusType.UPCOMING,
+    StatusType.PUBLISH,
+    StatusType.ARCHIVE,
   ],
 } as const;

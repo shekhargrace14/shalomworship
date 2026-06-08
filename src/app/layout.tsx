@@ -10,12 +10,35 @@ import OldSidebar from "@/components/OldSidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SetlistsProvider } from "@/lib/setlist/SetlistsContext";
 // import PwaRegister from "./pwa-register";
+import { JetBrains_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google";
+
+// FONTS
+
+export const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+  display: "swap",
+});
+
+export const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto-mono",
+  display: "swap",
+});
 
 export const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
+});
+
+export const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
 });
 
 export const metadata: Metadata = {
@@ -80,47 +103,34 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased h-screen grid grid-cols-12 grid-rows-[auto_1fr] gap-x-4 bg-background">
-        {/* Google Analytics */}
-        {process.env.NODE_ENV === "production" && (
-          <GoogleAnalytics gaId="G-H4QZJK5XEN" />
-        )}
-
-        {/* Google Ads (Auto Ads) */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        {/* ahref analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></script>
-
-        {/* REMOVE AMP — this was breaking SEO */}
-
-        {/* <QueryProvider> */}
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable}`}>
+      <body className="h-screen overflow-hidden bg-background antialiased">
         <ThemeProvider attribute="class" defaultTheme="system">
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
 
-              <div className="col-span-12 row-span-1">
-                <Header />
+              <div className="grid h-full grid-cols-12 grid-rows-[auto_1fr]">
+
+                {/* Header */}
+                <header className="col-span-12">
+                  <Header />
+                </header>
+
+                {/* Sidebar */}
+                <aside className="hidden lg:block lg:col-span-3 overflow-y-auto border-r">
+                  <OldSidebar />
+                </aside>
+
+                {/* Main */}
+                <main className="col-span-12 lg:col-span-9 overflow-y-auto">
+                  {children}
+                </main>
+
               </div>
-
-              <aside className="hidden lg:block lg:col-span-3 row-span-11 rounded-lg overflow-y-auto custom-scrollbar">
-                <OldSidebar />
-              </aside>
-
-              <main className="col-span-12 lg:col-span-9 row-span-11 rounded-lg overflow-auto custom-scrollbar">
-                {/* <PwaRegister /> */}
-                {children}
-              </main>
-
 
             </SetlistsProvider>
           </TooltipProvider>
         </ThemeProvider>
-        {/* </QueryProvider> */}
       </body>
     </html>
   );

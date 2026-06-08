@@ -29,7 +29,8 @@ export default async function Home() {
     <>
       <div className=" p-4 overflow-y-auto custom-scrollbar ">
         <AutoPopup />
-        {/* <Menu />
+        <Menu />
+        {/* 
         <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Upcoming Events</h2>
           {event.length <= 5 ? "" : <p className="text-sm text-muted-foreground"><Link href={"/event"}>Show All</Link></p>}

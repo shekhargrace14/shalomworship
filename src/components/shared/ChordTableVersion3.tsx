@@ -1,6 +1,6 @@
 "use client";
 import { getLanguageName } from '@/utils/getLanguageName';
-import { getKeyByShift, transposeChord } from '@/utils/transpose';
+import { getKeyByShift, transposeChord } from '@/utils/transposeOne';
 import { ChevronRight, Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -133,14 +133,13 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
                     ))}
                   </div>
                 )}
-
                 {/* Chords row */}
 
                 {isChord && Array.isArray(line.chords) && line.chords.length > 0 && (
                   <div className="whitespace-pre flex flex-wrap mt-2">
                     {line.chords.map((c, i) => (
                       <span key={i} className="flex">
-                        {addSpaces(c.space)}
+                        {addSpaces(c.space)} 
 
                         <div className="min-w-8 text-sm">
                           <div className=" bg-card text-foreground font-medium inline-flex items-start p-0.5 px-1 rounded">

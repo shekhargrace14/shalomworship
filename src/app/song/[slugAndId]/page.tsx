@@ -24,6 +24,7 @@ import { getAllEvents, getAllSongs, getAllSongsBasic, getSong } from "@/lib/stat
 import { AutoPopup } from "@/components/AutoPopup";
 import BookmarkSong from "@/components/setlist/Bookmark";
 import { LyricsRenderer } from "@/components/song/LyricsRenderer";
+import LinesVersion4 from "@/components/shared/LinesVersion4";
 
 
 async function getSongById(id: string) {
@@ -120,7 +121,7 @@ const Song = async ({ params }: any) => {
                     title: songData.title ?? "",
                     image: songData.image ?? "",
                     artist: creators?.map((creator: any) => creator.title).join(", ") ?? "",
-                    status: songData.status ?? "publish",
+                    status: songData.status ?? "PUBLISH",
                     language: songData.language ?? "",
                   }}
                 />
@@ -287,6 +288,15 @@ const Song = async ({ params }: any) => {
           isTranslations={!!songData?.isTranslation}
           language={songData?.language}
         /> : null}
+        {songData?.version === "version_4" 
+          ? <LinesVersion4
+          id={songData?.id}
+          song={songData}
+          isChords={!!songData?.isChords}
+          isTranslations={!!songData?.isTranslation}
+          language={songData?.language}
+        /> 
+          : null}
         <section className="w-full text-foreground mt-12">
           {/* <div >{songData?.content }</div> */}
           <div className="flex gap-2 items-baseline flex-wrap my-4">

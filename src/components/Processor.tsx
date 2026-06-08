@@ -23,7 +23,15 @@ export default async function Processor({item : id, variant }:any){
     return(
         <>
         {/* <Card item={item}/> */}
-        <Mastercard key={item?.id} id={item?.id} item={item} variant={variant} image={item?.image} title={item?.title} language={item?.language} slug={item?.slug}/>
+        <Mastercard 
+            key={item?.id} 
+            id={item?.id} 
+            item={item} 
+            variant={variant} 
+            image={item?.image} 
+            title={item?.title} 
+            language={item?.language} 
+            slug={item?.slug ?? ""}/>
         </>
     )
 }

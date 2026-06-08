@@ -1,7 +1,7 @@
 // components/ChordTable.tsx
 
 "use client";
-import { getKeyByShift, transposeChord } from '@/utils/transpose';
+import { getKeyByShift, transposeChord } from '@/utils/transposeOne';
 import { Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 // import { transposeChord, getKeyByShift } from '../utils/nashville';

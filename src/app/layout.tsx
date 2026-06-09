@@ -124,7 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
 
-              <div className="grid h-full grid-cols-12 grid-rows-[auto_1fr]"> 
+              <div className="grid h-full grid-cols-12 grid-rows-[auto_minmax(0,1fr)]"> 
 
                 {/* Header */}
                 <header className="col-span-12">
@@ -132,12 +132,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </header>
 
                 {/* Sidebar */}
-                <aside className="hidden lg:block lg:col-span-3 overflow-y-auto border-r">
-                  <OldSidebar />
+                <aside className="hidden lg:block lg:col-span-3 overflow-y-auto min-h-0">
+                  <OldSidebar />-
                 </aside>
 
                 {/* Main */}
-                <main className="col-span-12 lg:col-span-9 overflow-y-auto">
+                <main className="col-span-12 lg:col-span-9 overflow-y-auto min-h-0">
                   {children}
                 </main>
 

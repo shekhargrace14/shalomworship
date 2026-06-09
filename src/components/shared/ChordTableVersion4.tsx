@@ -55,10 +55,24 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
 
   const [shift, setShift] = useState(0);
 
+  function stepShift(
+    currentShift: number,
+    step: 1 | -1
+  ) {
+    const nextShift = currentShift + step;
+    if (nextShift > 11) {
+      return 0;
+    }
+    if (nextShift < -11) {
+      return 0;
+    }
+    return nextShift;
+  }
+
   if (!songData) return <p>Loading...</p>;
 
-  const fromKey = songData.key || 'C';
-  const toKey = generateToKey(fromKey, shift);
+  const key = songData.key || 'C';
+  const toKey = generateToKey(key, shift);
   const langName = getLanguageName(Songlanguage);
   const isHindi = songData.language === "hi";
 
@@ -105,9 +119,9 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
                     ) : (
                       // 2. STANDARD MODE: Transpose standard chord roots and qualities
                       <>
-                        {transpose(chord.root, fromKey, toKey)}
+                        {transpose(chord.root, shift)}
                         {chord.quality !== "major" && chord.quality}
-                        {chord.bass && `/${transpose(chord.bass, fromKey, toKey)}`}
+                        {chord.bass && `/${transpose(chord.bass, shift)}`}
                       </>
                     )}
                   </div>
@@ -133,14 +147,23 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
 
       {/* Transpose Button */}
       {isChord && (
-        <div className="mb-8 flex gap-4 items-center">Transpose:
-          <button onClick={() => setShift(shift - 1)} className="px-3 py-1 bg-background text-foreground rounded border border-border cursor-pointer">
-            <Minus size={14} />
-          </button>
-          <span className="text-foreground flex items-center">{fromKey} <ChevronRight size={18} /> {toKey}</span>
-          <button onClick={() => setShift(shift + 1)} className="px-3 py-1 bg-background text-foreground rounded border border-border cursor-pointer">
-            <Plus size={14} />
-          </button>
+        <div className="mb-8 flex gap-4 items-center ">Transpose:
+
+          <div className="flex rounded-full border-2 border-border">
+
+            <button onClick={() => setShift(prev => stepShift(prev, -1))} className="w-8 h-8 bg-border rounded-full text-foreground cursor-pointer flex items-center justify-center">
+              <Minus size={14} />
+            </button>
+
+            <span className="w-8 text-foreground flex items-center justify-center">{key} </span>
+            <span className="min-w-10 text-foreground inline-flex items-center justify-center">{shift > 0 ? `+${shift}` : `${shift}`}</span>
+            <span className="w-8 text-foreground flex items-center justify-center">{toKey}</span>
+
+            <button onClick={() => setShift(prev => stepShift(prev, 1))} className="w-8 h-8 bg-border rounded-full text-foreground cursor-pointer flex items-center justify-center">
+              <Plus size={14} />
+            </button>
+          </div>
+
         </div>
       )}
       {/* Main*/}
@@ -149,7 +172,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
         {/* left - romans  */}
         <div className="">
           {songData?.lyrics?.arrangement?.map((section) => (
-            
+
             <div key={section.id} className="left mb-6 block border-l-2 border-muted pl-4 rounded-md py-2">
 
               {/* Section Header */}
@@ -230,7 +253,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
                 ))
               )}
             </div>
-            
+
           ))}
         </div>
 

@@ -1,3 +1,6 @@
+// C  C#  D  D#  E  F  F#  G  G#  A  A#  B
+// 0   1  2   3  4  5   6  7   8  9  10 11
+
 const SHARP_SCALE = [
   "C", "C#", "D", "D#", "E", "F",
   "F#", "G", "G#", "A", "A#", "B"
@@ -84,28 +87,12 @@ export function generateToKey(
 
 export default function transpose(
   chord: string,
-  fromKey: string,
-  toKey: string
+  shift: number,
 ) {
   // Validate notes
-  if (
-    NOTE_TO_INDEX[chord] === undefined ||
-    NOTE_TO_INDEX[fromKey] === undefined ||
-    NOTE_TO_INDEX[toKey] === undefined
-  ) {
+  if ( NOTE_TO_INDEX[chord] === undefined ) {
     return chord;
   }
-
-  const scale = prefersFlats(toKey)
-    ? FLAT_SCALE
-    : SHARP_SCALE;
-
-  // Get indexes from lookup table
-  const fromIndex = NOTE_TO_INDEX[fromKey];
-  const toIndex = NOTE_TO_INDEX[toKey];
-
-  // Calculate shift
-  const shift = toIndex - fromIndex;
 
   // Get chord index
   const chordIndex = NOTE_TO_INDEX[chord];
@@ -113,8 +100,5 @@ export default function transpose(
   // Apply shift
   const newIndex = (chordIndex + shift + 12) % 12;
 
-  // Convert index back to note
-  const transposedChord = scale[newIndex];
-
-  return transposedChord;
+return SHARP_SCALE[newIndex];
 }

@@ -105,11 +105,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable}`}>
       <body className="h-screen overflow-hidden bg-background antialiased">
+        {/* Google Analytics */}
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-H4QZJK5XEN" />
+        )}
+
+        {/* Google Ads (Auto Ads) */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        {/* ahref analytics */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></script>
+
+        {/* REMOVE AMP — this was breaking SEO */}
         <ThemeProvider attribute="class" defaultTheme="system">
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
 
-              <div className="grid h-full grid-cols-12 grid-rows-[auto_1fr]">
+              <div className="grid h-full grid-cols-12 grid-rows-[auto_1fr]"> 
 
                 {/* Header */}
                 <header className="col-span-12">

@@ -13,6 +13,8 @@ import { X } from "lucide-react"
 
 import EventSection from "./event/EventSection"
 import Social from "./ui/Social"
+import Link from "next/link"
+import { Button } from "./ui/button"
 
 type Props = {
   data?: any[]
@@ -54,7 +56,7 @@ export function AutoPopup() {
       open={open}
       onOpenChange={setOpen}
     >
-      <DialogContent className="max-w-md px-4">
+      <DialogContent className="max-w-md px-4 flex flex-col items-center">
 
         <button
           onClick={() => setOpen(false)}
@@ -66,11 +68,31 @@ export function AutoPopup() {
 
         <DialogHeader>
           <DialogTitle>
-            Join Our Community 
+            Connect with us
           </DialogTitle>
         </DialogHeader>
 
-        <Social />
+        {/* Email */}
+        <a
+          href="mailto:connect@shalomworship.com"
+          className="
+            text-sm
+            text-muted-foreground
+            transition-colors
+            hover:text-foreground
+          "
+        >
+          connect@shalomworship.com
+        </a>
+
+
+        <Link
+          href="/submission"
+          className="text-sm font-medium transition-colors hover:text-primary cursor-pointer">
+          <Button>
+            Contact Us
+          </Button>
+        </Link>
 
       </DialogContent>
     </Dialog>

@@ -5208,5 +5208,25 @@
     "language": "hi",
     "artist": "Bridge Music",
     "artistSlug": "bridge-music"
+  },
+  {
+    "id": "6a2c116b0d046b2705147479",
+    "slug": "haazir-bridge-music-6a2c116b0d046b2705147479",
+    "title": "Haazir",
+    "image": "https://img.youtube.com/vi/GSM3qsQ8P6A/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "artist": "Bridge Music",
+    "artistSlug": "bridge-music"
+  },
+  {
+    "id": "6a302adf13a2066ab8d78d6f",
+    "slug": "tumsa-6a302adf13a2066ab8d78d6f",
+    "title": "Tumsa",
+    "image": "https://img.youtube.com/vi/CvovCsiCPn0/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "artist": "Yeshua Ministries",
+    "artistSlug": "yeshua-ministries"
   }
 ]

@@ -125,22 +125,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system">
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
-              <div className="h-full flex flex-col gap-0">
+              <div className="flex h-full flex-col ">
                 {/* Header */}
-                <header className="h-20 shrink-0">
+                <header className="h-20 shrink-0 flex">
                   <Header />
                 </header>
-                <div className="flex-1 min-h-0">
-                  <div className="flex h-full gap-2">
-                    <aside className="hidden lg:block w-1/4 shrink-0 overflow-y-auto rounded-xl ">
-                      <OldSidebar />
-                    </aside>
-                    <main className="flex-1 overflow-y-auto rounded-xl">
-                      {children}
-                      <Footer/>
-                    </main>
+                <div className="flex-1 min-h-0 flex">
 
-                  </div>
+                  <aside className="hidden lg:block w-1/4 shrink-0 overflow-y-auto rounded-xl ">
+                    <OldSidebar />
+                  </aside>
+
+                  <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
+                    <div className="flex-1">
+                      {children}
+                    </div>
+                    <Footer />
+                  </main>
 
                 </div>
               </div>

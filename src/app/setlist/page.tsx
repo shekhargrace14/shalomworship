@@ -21,9 +21,9 @@ export default function SetlistPage() {
 
   // 🟢 If id exists → show setlist
   return (
-    <div className="bg-background rounded-lg h-[90vh] overflow-y-auto custom-scrollbar mt-2">
+    <>
       <Menu />
       <ShowSetlist id={setlistId} />
-    </div>
+    </>
   );
 }

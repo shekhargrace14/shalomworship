@@ -69,7 +69,7 @@ const Page = async ({ params }: any) => {
               hidden sm:block
               object-center
                 absolute inset-0
-                h-full w-full
+                h-auto w-full
                 object-cover
               "
             />
@@ -96,7 +96,7 @@ const Page = async ({ params }: any) => {
                     alt={data?.title || "Artist Image"}
                     width={100}
                     height={100}
-                    className="bg-card object-cover h-full w-full"
+                    className="bg-card object-cover h-auto w-full"
                     priority={true}
                   />
                 </div>
@@ -130,12 +130,7 @@ const Page = async ({ params }: any) => {
               alt={data?.title || ""}
               width={100}
               height={100}
-              className="
-              object-center
-                 inset-0
-                h-full w-full
-                object-cover
-              "
+              className="object-center inset-0 h-auto w-full object-cover"
             />
             <Button asChild className="w-fit bg-red-500 text-white mt-4 hover:bg-red-700">
               <Link

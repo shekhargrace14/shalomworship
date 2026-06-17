@@ -11,7 +11,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title = "YouTube V
   return (
     <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
       <iframe
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute top-0 left-0 w-full h-auto"
         src={`https://www.youtube.com/embed/${videoId}`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

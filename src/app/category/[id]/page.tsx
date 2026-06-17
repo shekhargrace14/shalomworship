@@ -57,7 +57,7 @@ const Page = async ({ params }: any) => {
             backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
           }}>
           <Menu />
-          <InContentAd />
+          {/* <InContentAd /> */}
           <div className=" flex items-center gap-4 w-full ">
             <div className="sm:w-8/12 grid">
               <h1 className="sm:text-4xl text-4xl font-semibold mb-1 text-foreground">

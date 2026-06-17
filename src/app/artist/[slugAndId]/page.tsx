@@ -55,10 +55,10 @@ const Page = async ({ params }: any) => {
           }}
         >
           <Menu />
-          <InContentAd />
+          {/* <InContentAd /> */}
 
           <div className=" flex items-center gap-4 w-full ">
-            <div className="h-full w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
+            <div className="w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
               <Image
                 src={
                   data?.image ||
@@ -67,7 +67,7 @@ const Page = async ({ params }: any) => {
                 alt={data?.title || "Artist Image"}
                 width={150}
                 height={100}
-                className="bg-card object-cover h-full w-full"
+                className="bg-card object-cover h-auto w-full"
                 priority={true}
               />
             </div>

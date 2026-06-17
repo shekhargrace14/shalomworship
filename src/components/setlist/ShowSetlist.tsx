@@ -119,7 +119,7 @@ const ShowSetlist = ({ id }: { id: string }) => {
 
             </section>
 
-            <main className='flex gap-4 flex-col mt-4 '>
+            <div className='flex gap-4 flex-col mt-4 '>
                 {
                     theSetlist.songs.length === 0 && (
                         <p className='pt-4 border-t'>Add the song</p>
@@ -169,7 +169,7 @@ const ShowSetlist = ({ id }: { id: string }) => {
                         </div>
                     ))
                 }
-            </main>
+            </div>
 
             <Dialog>
                 <DialogTrigger>

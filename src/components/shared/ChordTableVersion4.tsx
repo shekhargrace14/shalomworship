@@ -167,7 +167,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
         </div>
       )}
       {/* Main*/}
-      <main className={`space-y-6 ${!isChord && !isNashville && isHindi ? "grid grid-cols-1 lg:grid-cols-2 gap-4" : "block"} items-start`}>
+      <div className={`space-y-6 ${!isChord && !isNashville && isHindi ? "grid grid-cols-1 lg:grid-cols-2 gap-4" : "block"} items-start`}>
 
         {/* left - romans  */}
         <div className="">
@@ -322,7 +322,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
         )}
 
 
-      </main>
+      </div>
     </div>
   );
 };

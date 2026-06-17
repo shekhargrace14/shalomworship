@@ -48,7 +48,7 @@ const Artist = ({ artists }: ArtistProps) => {
                       alt={item?.title || "Artist Name"}
                       width={60}
                       height={60}
-                      className=" object-cover h-full"
+                      className=" object-cover h-auto"
                       priority={false} // removing this because its rendering in head
                     />
 

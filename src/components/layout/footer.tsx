@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "../ui/button"
 
 export default function Footer() {
   return (
@@ -47,7 +48,9 @@ export default function Footer() {
             hover:text-primary
           "
         >
-          Contact Us
+          <Button variant="outline">
+            Contact Us
+          </Button>
         </Link>
       </div>
     </footer>

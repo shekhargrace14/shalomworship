@@ -1,5 +1,4 @@
 import AlbumSection from '@/components/AlbumSection';
-import CardSection from '@/components/AlbumSection';
 import Menu from '@/components/layout/Menu';
 import { getAllAlbums } from '@/lib/static';
 

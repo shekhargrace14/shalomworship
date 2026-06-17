@@ -13,7 +13,6 @@ import { SetlistsProvider } from "@/lib/setlist/SetlistsContext";
 import { JetBrains_Mono } from "next/font/google";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import Footer from "@/components/layout/footer";
-// import Footer from "@/components/layout/Footer";
 
 // FONTS
 

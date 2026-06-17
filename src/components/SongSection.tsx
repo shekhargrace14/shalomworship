@@ -1,6 +1,5 @@
 import React from "react";
 import { MasterCard } from "./mastercard";
-// import { MasterCard } from "./ui/mastercard"; 
 
 type Song = {
   id: string;

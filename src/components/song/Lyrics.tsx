@@ -25,7 +25,7 @@
 //   SelectTrigger,
 //   SelectValue,
 // } from "@/components/ui/select"
-// import { Card, CardContent } from "../ui/Card"
+// import { Card, CardContent } from "../ui/card"
 
 // type LyricsBlock =
 //   | TitleBlock

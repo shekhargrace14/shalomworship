@@ -24,7 +24,6 @@ import {
 } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 import { SubmissionType } from "@prisma/client"
-// import { Card } from "./ui/card"
 
 const Type =
   Object.values(SubmissionType)

@@ -26,8 +26,8 @@ export default async function Home() {
   ]);
   // console.log(event,  "event on page.tsx")
   return (
-    <>
-      <div className=" p-4 overflow-y-auto custom-scrollbar ">
+    <div className="p-4">
+
         <AutoPopup />
         <Menu />
         {/* 
@@ -67,8 +67,7 @@ export default async function Home() {
         <AlbumSection number={"-4"} album={album} type="album" /> */}
 
         <br />
-      </div>
-    </>
+    </div>
   );
 }
 

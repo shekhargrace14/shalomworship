@@ -12,6 +12,8 @@ import { SetlistsProvider } from "@/lib/setlist/SetlistsContext";
 // import PwaRegister from "./pwa-register";
 import { JetBrains_Mono } from "next/font/google";
 import { Roboto, Roboto_Mono } from "next/font/google";
+import Footer from "@/components/layout/footer";
+// import Footer from "@/components/layout/footer_111";
 
 // FONTS
 
@@ -104,7 +106,7 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable}`}>
-      <body className="h-screen overflow-hidden bg-background antialiased">
+      <body className="h-dvh overflow-hidden">
         {/* Google Analytics */}
         {process.env.NODE_ENV === "production" && (
           <GoogleAnalytics gaId="G-H4QZJK5XEN" />
@@ -123,26 +125,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system">
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
-
-              <div className="grid h-full grid-cols-12 grid-rows-[auto_minmax(0,1fr)]"> 
-
+              <div className="flex h-full flex-col ">
                 {/* Header */}
-                <header className="col-span-12">
+                <header className="h-20 shrink-0 flex">
                   <Header />
                 </header>
+                <div className="flex-1 min-h-0 flex">
 
-                {/* Sidebar */}
-                <aside className="hidden lg:block lg:col-span-3 overflow-y-auto min-h-0">
-                  <OldSidebar />-
-                </aside>
+                  <aside className="hidden lg:block w-1/4 shrink-0 overflow-y-auto rounded-xl ">
+                    <OldSidebar />
+                  </aside>
 
-                {/* Main */}
-                <main className="col-span-12 lg:col-span-9 overflow-y-auto min-h-0">
-                  {children}
-                </main>
+                  <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
+                    <div className="flex-1">
+                      {children}
+                    </div>
+                    <Footer />
+                  </main>
 
+                </div>
               </div>
-
             </SetlistsProvider>
           </TooltipProvider>
         </ThemeProvider>

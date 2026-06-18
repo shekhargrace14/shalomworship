@@ -9,15 +9,10 @@ const page = async () => {
 
     // console.log("event data in event page:", event);
     return (
-        <div>
-            <div className="p-4">
-                <Menu />
-                <EventSection event={event} type="event"/>
-                
-            </div>
-
+        <div className="p-4">
+            <Menu />
+            <EventSection event={event} type="event" />
         </div>
     )
 }
-
 export default page

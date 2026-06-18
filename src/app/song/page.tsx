@@ -21,8 +21,9 @@ const page = async () => {
 
   // console.log(songs)
   return (
-    <div className=' h-[90vh] overflow-y-auto custom-scrollbar p-4'>
-      <Menu />
+        <div className="p-4">
+    
+    <Menu />
       <SongSection songs={songs} />
     </div>
   );

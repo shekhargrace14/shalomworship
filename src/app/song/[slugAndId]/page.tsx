@@ -79,7 +79,7 @@ const Song = async ({ params }: any) => {
 
   return (
 
-    <div className="bg-background  rounded-lg h-[90vh] overflow-y-auto custom-scrollbar">
+    <div className="bg-background  rounded-lg">
       <JsonLd id={id} />
       <div
         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
@@ -90,9 +90,9 @@ const Song = async ({ params }: any) => {
         <Menu />
         <AutoPopup/>
 
-        <InContentAd />
+        {/* <InContentAd /> */}
         <div className=" sm:flex items-center gap-4 w-full">
-          <div className="h-full sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
+          <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
             {songData?.videoId ?
               // <YouTubeEmbed videoId={songData?.videoId} title={songData?.title} />
               <VideoPlayer videoId={songData?.videoId} title={songData?.title} />
@@ -102,7 +102,7 @@ const Song = async ({ params }: any) => {
                 alt={songData?.title || "Song Image"}
                 width={200}
                 height={100}
-                className="bg-gray-800 object-cover h-full w-full"
+                className="bg-gray-800 object-cover h-auto w-full"
                 priority={true}
               />
 
@@ -267,7 +267,7 @@ const Song = async ({ params }: any) => {
           </div>
         </div>
       </div>
-      <main className="mx-auto p-4 pt-4 relative">
+      <div className="mx-auto p-4 pt-4 relative">
         {/* {songData?.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
@@ -388,7 +388,7 @@ const Song = async ({ params }: any) => {
             No creator specified
           </p>
         )}
-      </main>
+      </div>
     </div>
   );
 };

@@ -1,15 +1,5 @@
 import Link from "next/link";
 import React from "react";
-// import {
-//   Menubar,
-//   MenubarContent,
-//   MenubarGroup,
-//   MenubarItem,
-//   MenubarMenu,
-//   MenubarSeparator,
-//   MenubarShortcut,
-//   MenubarTrigger,
-// } from "@/components/ui/menubar"
 
 const Menu = () => {
   const menuItems = [
@@ -31,17 +21,6 @@ const Menu = () => {
       ))}
     </div>
 
-    // <Menubar>
-    //   {menuItems.map((menuItem, index) => (
-    //     <Link href={menuItem.link} key={index}>
-    //       <MenubarMenu>
-    //         <MenubarTrigger>{menuItem.title}</MenubarTrigger>
-
-    //       </MenubarMenu>
-    //     </Link>
-    //   ))}
-
-    // </Menubar>
   );
 };
 

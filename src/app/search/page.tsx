@@ -40,7 +40,7 @@ export default function SearchPage() {
   }, [query, ready]);
 
   return (
-    <div className="h-[90vh] overflow-y-auto custom-scrollbar ">
+    <>
       {/* <Menu /> */}
 
       {query && results.length === 0 && ready && (
@@ -48,11 +48,11 @@ export default function SearchPage() {
           No results found for "<b>{query}"</b>
         </div>
       )}
-  {results.length > 0 &&(
+      {results.length > 0 && (
 
-    
-    <h2 className="p-2">Search result of "{query}"</h2>
-  )}
+
+        <h2 className="p-2">Search result of "{query}"</h2>
+      )}
       {results.length > 0 && (
         <div className="p-2 rounded-lg bg-muted shadow  w-full sm:w-3/5 ">
           {results.map((r) => (
@@ -82,6 +82,6 @@ export default function SearchPage() {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 }

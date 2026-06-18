@@ -111,11 +111,12 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
                   >
                     {isNashville ? (
                       // 1. NASHVILLE MODE: Degree number handles quality natively.
-                      <>
+                      <div className='flex'>
                         {chord.nashville}
+                        <p className=''>{chord.quality !== "major" && chord.quality}</p>
                         {/* If a bass note exists, map it to its Nashville degree number */}
                         {/* {chord.bassNumber && `/${chord.bassNumber}`} */}
-                      </>
+                      </div>
                     ) : (
                       // 2. STANDARD MODE: Transpose standard chord roots and qualities
                       <>

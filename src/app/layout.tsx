@@ -106,7 +106,7 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable}`}>
-      <body className="h-screen overflow-hidden">
+      <body className="h-dvh overflow-hidden">
         {/* Google Analytics */}
         {process.env.NODE_ENV === "production" && (
           <GoogleAnalytics gaId="G-H4QZJK5XEN" />
@@ -145,8 +145,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 </div>
               </div>
-
-
             </SetlistsProvider>
           </TooltipProvider>
         </ThemeProvider>

@@ -25,7 +25,7 @@ const Header = () => {
       <div className="md:w-4/12 flex justify-end items-center gap-4">
         <Link
           href="/submission"
-          className="
+          className="hidden sm:block
             text-sm
             font-medium
             transition-colors

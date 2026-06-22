@@ -24,17 +24,24 @@ import {
 } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 import { SubmissionType } from "@prisma/client"
+import { useRouter } from "next/navigation"
+import { toast } from "sonner"
+import { FieldError } from "./ui/field"
+import { Loader2 } from "lucide-react"
 
 const Type =
   Object.values(SubmissionType)
 
 export default function SubmissionForm() {
+
+  const router = useRouter();
   const [formData, setFormData] = useState({
     type: "CONTACT",
     name: "",
     email: "",
     title: "",
     message: "",
+    subject: "",
   })
 
   const handleChange = (
@@ -43,24 +50,25 @@ export default function SubmissionForm() {
     >
   ) => {
     const { name, value } = e.target
+    
 
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }))
   }
-
+const [loading, setLoading] = useState(false);
   const handleSubmit = async (
     e: React.FormEvent
   ) => {
     e.preventDefault()
 
-    // console.log(formData)
+    console.log(formData)
 
     // POST /api/submission
     const payload = formData
     try {
-
+      setLoading(true);
       const res = await fetch(
         "https://dashboard.shalomworship.com/api/submission",
         {
@@ -77,27 +85,29 @@ export default function SubmissionForm() {
         }
       )
 
-      const data =
-        await res.json()
+      const data = await res.json()
 
       if (!res.ok) {
         throw new Error(
-          data.message ||
-          "Failed to submit"
+          data.message || "Failed to submit"
         )
       }
 
-      // console.log(data)
+      toast.success("Message Sent")
+      router.push("/success");
 
-      alert(
-        "Submission sent successfully"
-      )
-
-    } catch (error) {
+    } catch (error: any) {
 
       console.error(error)
 
+      toast.error(
+        error.message || "Failed to send"
+      )
+
     }
+    finally {
+    setLoading(false);
+  }
   }
 
   return (
@@ -149,22 +159,36 @@ export default function SubmissionForm() {
               </SelectContent>
             </Select>
           </div>
+          {/* Subject */}
+          <div className="space-y-2">
+            <Label>Subject  <span className="text-destructive">*</span></Label>
+
+            <Input
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Enter subject"
+              required
+            />
+            <FieldError></FieldError>
+          </div>
 
           {/* NAME + EMAIL */}
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label>Name</Label>
+              <Label>Name  <span className="text-destructive">*</span></Label>
 
               <Input
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="John Doe"
+                required
               />
             </div>
 
             <div className="space-y-2">
-              <Label>Email</Label>
+              <Label>Email  <span className="text-destructive">*</span></Label>
 
               <Input
                 name="email"
@@ -172,13 +196,15 @@ export default function SubmissionForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="john@example.com"
+                required
+
               />
             </div>
           </div>
 
           {/* TITLE */}
           <div className="space-y-2">
-            <Label>Title</Label>
+            <Label>Title </Label>
 
             <Input
               name="title"
@@ -190,7 +216,7 @@ export default function SubmissionForm() {
 
           {/* MESSAGE */}
           <div className="space-y-2">
-            <Label>Message</Label>
+            <Label>Message  <span className="text-destructive">*</span></Label>
 
             <Textarea
               name="message"
@@ -198,14 +224,25 @@ export default function SubmissionForm() {
               onChange={handleChange}
               rows={6}
               placeholder="Describe your request..."
+              required
+
             />
           </div>
 
           <Button
             type="submit"
-            className="w-full"
+            className="w-full cursor-pointer"
+            disabled={loading}
           >
-            Submit
+            {loading ? (
+    <>
+      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      Sending...
+    </>
+  ) : (
+    "Send Reply"
+  )}
+
           </Button>
         </form>
       </CardContent>

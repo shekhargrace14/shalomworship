@@ -13,6 +13,7 @@ import { SetlistsProvider } from "@/lib/setlist/SetlistsContext";
 import { JetBrains_Mono } from "next/font/google";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import Footer from "@/components/layout/footer";
+import { Toaster } from "sonner";
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -139,6 +140,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
                     <div className="flex-1">
                       {children}
+                      <Toaster />
                     </div>
                     <Footer />
                   </main>

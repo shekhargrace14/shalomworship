@@ -168,6 +168,7 @@ const [loading, setLoading] = useState(false);
               value={formData.subject}
               onChange={handleChange}
               placeholder="Enter subject"
+              required
             />
             <FieldError></FieldError>
           </div>
@@ -203,7 +204,7 @@ const [loading, setLoading] = useState(false);
 
           {/* TITLE */}
           <div className="space-y-2">
-            <Label>Title <span className="text-destructive">*</span></Label>
+            <Label>Title </Label>
 
             <Input
               name="title"

@@ -5228,5 +5228,15 @@
     "language": "hi",
     "artist": "Yeshua Ministries",
     "artistSlug": "yeshua-ministries"
+  },
+  {
+    "id": "6a3415a691828ad16c40e74f",
+    "slug": "daud-ke-samaan-sheldon-bangera-6a3415a691828ad16c40e74f",
+    "title": " Daud Ke Samaan",
+    "image": "https://img.youtube.com/vi/3KJVmoIGSNM/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "artist": "Sheldon Bangera",
+    "artistSlug": "sheldon-bangera"
   }
 ]

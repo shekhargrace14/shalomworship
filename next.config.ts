@@ -29,4 +29,5 @@ export default withPWA({
   register: true,
   skipWaiting: true,
   disable: isDev,
+  buildExcludes: [/app-build-manifest\.json$/],
 })(nextConfig);

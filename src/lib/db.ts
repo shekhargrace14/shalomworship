@@ -1,15 +1,17 @@
-// declare global {
-//   var prismaGlobal: PrismaClient | undefined;
-// }
+import { openDB } from "idb";
 
-// import { PrismaClient } from "@prisma/client";
+export async function getDB() {
+  if (typeof window === "undefined") {
+    throw new Error("IndexedDB only available in browser");
+  }
 
-// const prismaClientSingleton = () => {
-//   return new PrismaClient();
-// };
-
-// const prisma = globalThis.prismaGlobal ?? prismaClientSingleton();
-
-// export default prisma;
-
-// if (process.env.NODE_ENV !== "production") globalThis.prismaGlobal = prisma;
+  return openDB("shalom-db", 1, {
+    upgrade(db) {
+      if (!db.objectStoreNames.contains("songs")) {
+        db.createObjectStore("songs", {
+          keyPath: "id",
+        });
+      }
+    },
+  });
+}

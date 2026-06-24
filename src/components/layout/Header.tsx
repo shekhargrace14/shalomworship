@@ -20,7 +20,9 @@ const Header = () => {
       </div>
       <div className="md:relative w-10/12 sm:w-8/12 lg:w-5/12">
         {/* <Searchbar /> */}
-        <HeaderSearch redirectCheck={true} />
+        <HeaderSearch 
+          // redirectCheck={true} 
+        />
       </div>
       <div className="md:w-4/12 flex justify-end items-center gap-4">
         <Link

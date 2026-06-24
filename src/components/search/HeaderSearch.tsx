@@ -11,7 +11,7 @@ import { useSetlistsContext } from "@/lib/setlist/SetlistsContext";
 import BookmarkSong from "../setlist/Bookmark";
 
 interface HeaderSearchProps {
-  redirectCheck: boolean;
+  redirectCheck?: boolean;
   setlistId?: string;
 }
 
@@ -41,14 +41,8 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
     const res = search(debounced);
     setResults(res);
     setActive(-1);
-    setOpen(res.length > 0);  
-
-    // ✅ ADD { scroll: false } HERE
-    {
-      redirectCheck &&
-        router.replace(`/search?q=${encodeURIComponent(debounced)}`, { scroll: false });
-    }
-  }, [debounced, ready, router]);
+    setOpen(res.length > 0);
+  }, [debounced, ready]);
 
   // 🔹 Reset input when leaving search page
   useEffect(() => {
@@ -67,28 +61,42 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
   }, [pathname]); // ✅ correct
 
 
-  function onKeyDown(e: React.KeyboardEvent) {
-    if (!open) return;
+function onKeyDown(e: React.KeyboardEvent) {
+if (e.key === "Enter") {
+  e.preventDefault();
 
-    if (e.key === "ArrowDown") {
-      e.preventDefault(); // 🔴 critical
-      setActive((i) => Math.min(i + 1, results.length - 1));
-      inputRef.current?.focus();
-
-    }
-
-    if (e.key === "ArrowUp") {
-      setActive((i) => Math.max(i - 1, -1));
-    }
-    if (e.key === "Enter") {
-      if (active >= 0 && results[active]) {
-        router.push(`/song/${results[active].slug}`);
-      } else {
-        router.push(`/search?q=${encodeURIComponent(query)}`);
-      }
-      setOpen(false);
-    }
+  if (active >= 0 && results[active]) {
+    router.push(`/song/${results[active].slug}`);
+    setOpen(false);
+    return;
   }
+
+  // Offline: stay on current page and use dropdown results
+  if (!navigator.onLine) {
+    setOpen(true);
+    return;
+  }
+
+  if (query.trim()) {
+    router.push(`/search?q=${encodeURIComponent(query)}`);
+  }
+
+  setOpen(false);
+  return;
+}
+
+  if (!open) return;
+
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    setActive((i) => Math.min(i + 1, results.length - 1));
+  }
+
+  if (e.key === "ArrowUp") {
+    e.preventDefault();
+    setActive((i) => Math.max(i - 1, -1));
+  }
+}
   const hideDropdownOnSearchPage = pathname !== "/search"
 
   return (
@@ -105,22 +113,22 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
               focus-within:shadow-md
             "
       >
-        {!redirectCheck ? 
-       <Plus
-       size={20}
-          className={`ml-2 text-muted-foreground  bg-input/30 `}
-       /> 
-      :
-        <Search
-          size={20}
-          className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
-          onMouseDown={() => {
-            if (query.trim()) {
-              router.push(`/search?q=${encodeURIComponent(query)}`);
-            }
-          }}
-        />
-      }
+        {!redirectCheck ?
+          <Plus
+            size={20}
+            className={`ml-2 text-muted-foreground  bg-input/30 `}
+          />
+          :
+          <Search
+            size={20}
+            className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
+            onMouseDown={() => {
+              if (query.trim()) {
+                router.push(`/search?q=${encodeURIComponent(query)}`);
+              }
+            }}
+          />
+        }
 
         <Input type="search"
           ref={inputRef}
@@ -156,11 +164,9 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
                 ${i === active ? "bg-ring" : ""}
                 ${redirectCheck ? "cursor-pointer" : ""}
             `}
-                onMouseDown={() => {
-                  if (redirectCheck) {
+                onClick={() => {
                     router.push(`/song/${song.slug}`);
                     setOpen(false);
-                  }
                 }}
 
               >

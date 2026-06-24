@@ -61,49 +61,49 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
   }, [pathname]); // ✅ correct
 
 
-function onKeyDown(e: React.KeyboardEvent) {
-if (e.key === "Enter") {
-  e.preventDefault();
+  function onKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "Enter") {
+      e.preventDefault();
 
-  if (active >= 0 && results[active]) {
-    router.push(`/song/${results[active].slug}`);
-    setOpen(false);
-    return;
+      if (active >= 0 && results[active]) {
+        router.push(`/song/${results[active].slug}`);
+        setOpen(false);
+        return;
+      }
+
+      // Offline: stay on current page and use dropdown results
+      if (!navigator.onLine) {
+        setOpen(true);
+        return;
+      }
+
+      if (query.trim()) {
+        router.push(`/search?q=${encodeURIComponent(query)}`);
+      }
+
+      setOpen(false);
+      return;
+    }
+
+    if (!open) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActive((i) => Math.min(i + 1, results.length - 1));
+    }
+
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActive((i) => Math.max(i - 1, -1));
+    }
   }
-
-  // Offline: stay on current page and use dropdown results
-  if (!navigator.onLine) {
-    setOpen(true);
-    return;
-  }
-
-  if (query.trim()) {
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-  }
-
-  setOpen(false);
-  return;
-}
-
-  if (!open) return;
-
-  if (e.key === "ArrowDown") {
-    e.preventDefault();
-    setActive((i) => Math.min(i + 1, results.length - 1));
-  }
-
-  if (e.key === "ArrowUp") {
-    e.preventDefault();
-    setActive((i) => Math.max(i - 1, -1));
-  }
-}
   const hideDropdownOnSearchPage = pathname !== "/search"
 
   return (
-    <div className="relative w-full max-w-lg">
+    <div className=" w-full max-w-lg">
       <div
         className="
-              relative flex items-center
+              flex items-center
               rounded-md border border-input
               bg-background
               transition-all
@@ -113,22 +113,15 @@ if (e.key === "Enter") {
               focus-within:shadow-md
             "
       >
-        {!redirectCheck ?
-          <Plus
-            size={20}
-            className={`ml-2 text-muted-foreground  bg-input/30 `}
-          />
-          :
-          <Search
-            size={20}
-            className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
-            onMouseDown={() => {
-              if (query.trim()) {
-                router.push(`/search?q=${encodeURIComponent(query)}`);
-              }
-            }}
-          />
-        }
+        <Search
+          size={20}
+          className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
+          onMouseDown={() => {
+            if (query.trim()) {
+              router.push(`/search?q=${encodeURIComponent(query)}`);
+            }
+          }}
+        />
 
         <Input type="search"
           ref={inputRef}
@@ -153,20 +146,19 @@ if (e.key === "Enter") {
         )}
       </div>
       {/* 🔹 Suggestions dropdown */}
-      {!redirectCheck && hideDropdownOnSearchPage && open && results.length > 0 && (
-        <div className={` absolute max-h-[50vh] max-w-lg overflow-y-auto custom-scrollbar  z-50 mt-2 p-1 w-full rounded-md bg-card shadow`}>
+      {hideDropdownOnSearchPage && open && results.length > 0 && (
+        <div className={` absolute max-h-[80vh] w-screen md:w-lg left-2 md:left-auto overflow-y-auto custom-scrollbar  z-50 mt-2 p-1 rounded-md bg-card shadow`}>
           {results.map((song, i) => {
-            // const isAdded = addedSongIds.has(song.id);
             return (
               <div
                 key={song.id}
                 className={` px-1 py-1 hover:bg-ring rounded-md flex gap-2 justify-between items-center 
-                ${i === active ? "bg-ring" : ""}
-                ${redirectCheck ? "cursor-pointer" : ""}
-            `}
+                  ${i === active ? "bg-ring" : ""}
+                  ${redirectCheck ? "cursor-pointer" : ""}
+                `}
                 onClick={() => {
-                    router.push(`/song/${song.slug}`);
-                    setOpen(false);
+                  router.push(`/song/${song.slug}`);
+                  setOpen(false);
                 }}
 
               >
@@ -190,9 +182,6 @@ if (e.key === "Enter") {
               </div>
             )
           }
-
-
-
           )}
         </div>
       )}

@@ -16,6 +16,7 @@ import Footer from "@/components/layout/footer";
 import { Toaster } from "sonner";
 import PwaRegister from "./pwa-register";
 import SongSync from "@/components/song-sync";
+import NetworkStatus from "@/components/NetworkStatus";
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
               <div className="flex h-full flex-col ">
+              <NetworkStatus/>
                 {/* Header */}
                 <header className="h-20 shrink-0 flex">
                   <Header />

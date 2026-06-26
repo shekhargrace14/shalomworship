@@ -97,10 +97,9 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
       setActive((i) => Math.max(i - 1, -1));
     }
   }
-  const hideDropdownOnSearchPage = pathname !== "/search"
 
   return (
-    <div className=" w-full max-w-lg">
+    <div className=" w-full max-w-l">
       <div
         className="
               flex items-center
@@ -115,7 +114,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
       >
         <Search
           size={20}
-          className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
+          className={`ml-2 text-muted-foreground  ${query ? "cursor-pointer" : ""} `}
           onMouseDown={() => {
             if (query.trim()) {
               router.push(`/search?q=${encodeURIComponent(query)}`);
@@ -126,7 +125,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
         <Input type="search"
           ref={inputRef}
           placeholder="Search songs, artists, scriptures..."
-          className=" border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pl-2 "
+          className=" border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pl-2 bg-none"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -146,7 +145,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
         )}
       </div>
       {/* 🔹 Suggestions dropdown */}
-      {hideDropdownOnSearchPage && open && results.length > 0 && (
+      {open && results.length > 0 && (
         <div className={` absolute max-h-[80vh] w-screen md:w-lg left-2 md:left-auto overflow-y-auto custom-scrollbar  z-50 mt-2 p-1 rounded-md bg-card shadow`}>
           {results.map((song, i) => {
             return (

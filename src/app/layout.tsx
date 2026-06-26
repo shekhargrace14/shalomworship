@@ -15,6 +15,8 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import Footer from "@/components/layout/footer";
 import { Toaster } from "sonner";
 import PwaRegister from "./pwa-register";
+import SongSync from "@/components/song-sync";
+import NetworkStatus from "@/components/NetworkStatus";
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -128,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <TooltipProvider delayDuration={200}>
             <SetlistsProvider>
               <div className="flex h-full flex-col ">
+              <NetworkStatus/>
                 {/* Header */}
                 <header className="h-20 shrink-0 flex">
                   <Header />
@@ -141,6 +144,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
                     <div className="flex-1">
                       <PwaRegister/>
+                      <SongSync />
                       {children}
                       <Toaster />
                     </div>

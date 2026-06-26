@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.shalomworship.app",
+      "sha256_cert_fingerprints": [
+        "8E:A7:7B:ED:C3:B0:F7:54:20:AF:C1:87:93:B9:F1:31:F5:32:88:F1:FE:A6:BC:7E:1E:CE:6B:A6:1C:17:A3:75"
+      ]
+    }
+  }
+]

@@ -11,7 +11,7 @@ import { useSetlistsContext } from "@/lib/setlist/SetlistsContext";
 import BookmarkSong from "../setlist/Bookmark";
 
 interface HeaderSearchProps {
-  redirectCheck: boolean;
+  redirectCheck?: boolean;
   setlistId?: string;
 }
 
@@ -41,14 +41,8 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
     const res = search(debounced);
     setResults(res);
     setActive(-1);
-    setOpen(res.length > 0);  
-
-    // ✅ ADD { scroll: false } HERE
-    {
-      redirectCheck &&
-        router.replace(`/search?q=${encodeURIComponent(debounced)}`, { scroll: false });
-    }
-  }, [debounced, ready, router]);
+    setOpen(res.length > 0);
+  }, [debounced, ready]);
 
   // 🔹 Reset input when leaving search page
   useEffect(() => {
@@ -68,34 +62,47 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
 
 
   function onKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+
+      if (active >= 0 && results[active]) {
+        router.push(`/song/${results[active].slug}`);
+        setOpen(false);
+        return;
+      }
+
+      // Offline: stay on current page and use dropdown results
+      if (!navigator.onLine) {
+        setOpen(true);
+        return;
+      }
+
+      if (query.trim()) {
+        router.push(`/search?q=${encodeURIComponent(query)}`);
+      }
+
+      setOpen(false);
+      return;
+    }
+
     if (!open) return;
 
     if (e.key === "ArrowDown") {
-      e.preventDefault(); // 🔴 critical
+      e.preventDefault();
       setActive((i) => Math.min(i + 1, results.length - 1));
-      inputRef.current?.focus();
-
     }
 
     if (e.key === "ArrowUp") {
+      e.preventDefault();
       setActive((i) => Math.max(i - 1, -1));
     }
-    if (e.key === "Enter") {
-      if (active >= 0 && results[active]) {
-        router.push(`/song/${results[active].slug}`);
-      } else {
-        router.push(`/search?q=${encodeURIComponent(query)}`);
-      }
-      setOpen(false);
-    }
   }
-  const hideDropdownOnSearchPage = pathname !== "/search"
 
   return (
-    <div className="relative w-full max-w-lg">
+    <div className=" w-full max-w-l">
       <div
         className="
-              relative flex items-center
+              flex items-center
               rounded-md border border-input
               bg-background
               transition-all
@@ -105,27 +112,20 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
               focus-within:shadow-md
             "
       >
-        {!redirectCheck ? 
-       <Plus
-       size={20}
-          className={`ml-2 text-muted-foreground  bg-input/30 `}
-       /> 
-      :
         <Search
           size={20}
-          className={`ml-2 text-muted-foreground bg-input/30 ${query ? "cursor-pointer" : ""} `}
+          className={`ml-2 text-muted-foreground  ${query ? "cursor-pointer" : ""} `}
           onMouseDown={() => {
             if (query.trim()) {
               router.push(`/search?q=${encodeURIComponent(query)}`);
             }
           }}
         />
-      }
 
         <Input type="search"
           ref={inputRef}
           placeholder="Search songs, artists, scriptures..."
-          className=" border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pl-2 "
+          className=" border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pl-2 bg-none"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -145,22 +145,19 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
         )}
       </div>
       {/* 🔹 Suggestions dropdown */}
-      {!redirectCheck && hideDropdownOnSearchPage && open && results.length > 0 && (
-        <div className={` absolute max-h-[50vh] max-w-lg overflow-y-auto custom-scrollbar  z-50 mt-2 p-1 w-full rounded-md bg-card shadow`}>
+      {open && results.length > 0 && (
+        <div className={` absolute max-h-[80vh] w-screen md:w-lg left-2 md:left-auto overflow-y-auto custom-scrollbar  z-50 mt-2 p-1 rounded-md bg-card shadow`}>
           {results.map((song, i) => {
-            // const isAdded = addedSongIds.has(song.id);
             return (
               <div
                 key={song.id}
                 className={` px-1 py-1 hover:bg-ring rounded-md flex gap-2 justify-between items-center 
-                ${i === active ? "bg-ring" : ""}
-                ${redirectCheck ? "cursor-pointer" : ""}
-            `}
-                onMouseDown={() => {
-                  if (redirectCheck) {
-                    router.push(`/song/${song.slug}`);
-                    setOpen(false);
-                  }
+                  ${i === active ? "bg-ring" : ""}
+                  ${redirectCheck ? "cursor-pointer" : ""}
+                `}
+                onClick={() => {
+                  router.push(`/song/${song.slug}`);
+                  setOpen(false);
                 }}
 
               >
@@ -184,9 +181,6 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
               </div>
             )
           }
-
-
-
           )}
         </div>
       )}

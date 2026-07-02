@@ -1,4 +1,4 @@
-import CategorySection from '@/components/CategorySection';
+import CategorySection from '@/components/category/category-section';
 import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import { getAllCategoriesBasic } from '@/lib/static';

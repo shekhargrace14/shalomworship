@@ -1,4 +1,5 @@
-import AlbumSection from '@/components/AlbumSection';
+// import AlbumSection from '@/components/AlbumSection';
+import AlbumSection from '@/components/album/album-section';
 import Menu from '@/components/layout/Menu';
 import { getAllAlbums } from '@/lib/static';
 

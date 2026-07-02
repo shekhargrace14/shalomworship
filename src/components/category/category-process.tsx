@@ -2,7 +2,7 @@ import Processor from "@/components/Processor";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { getCategory } from "@/lib/static";
 
-const CategorySongs = async ({ params }: any) => {
+const CategoryProcess = async ({ params }: any) => {
   const id = params;
   const categoryData = await getCategory(id,[...CONTENT_VISIBILITY.public,] )
   // console.log(categoryData,"categoryData")
@@ -21,4 +21,4 @@ const CategorySongs = async ({ params }: any) => {
   );
 };
 
-export default CategorySongs;
+export default CategoryProcess;

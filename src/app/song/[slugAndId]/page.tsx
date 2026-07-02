@@ -5,7 +5,7 @@ import Social from "@/components/ui/Social";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { Bookmark, Dot } from "lucide-react";
 import LinesVersion3 from "@/components/shared/LinesVersion3";
 import LinesVersion2 from "@/components/shared/LinesVersion2";
@@ -15,17 +15,20 @@ import { parseSlugAndId } from "@/utils/parseSlugAndId";
 import { getLanguageName } from "@/utils/getLanguageName";
 import { Metadata } from "next";
 import { buildSongMetadata } from "@/utils/seo";
-import CategorySongs from "@/components/CategorySongs";
 import InContentAd from "@/components/ads/InContentAd";
 import VideoPlayer from "@/components/VideoPlayer";
 import { Badge } from "@/components/ui/badge";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getAllEvents, getAllSongs, getAllSongsBasic, getSong } from "@/lib/static";
+import {
+  getAllSongsBasic,
+  getSong,
+} from "@/lib/static";
 import { AutoPopup } from "@/components/AutoPopup";
 import BookmarkSong from "@/components/setlist/Bookmark";
 import { LyricsRenderer } from "@/components/song/LyricsRenderer";
 import LinesVersion4 from "@/components/shared/LinesVersion4";
-
+import CategoryProcess from "@/components/category/category-process";
+import { song } from "@prisma/client";
 
 async function getSongById(id: string) {
   return getSong(id, [...CONTENT_VISIBILITY.discoverable]);
@@ -33,8 +36,8 @@ async function getSongById(id: string) {
 
 export async function generateStaticParams() {
   const songs = await getAllSongsBasic([...CONTENT_VISIBILITY.discoverable]);
-  return songs.map(song => {
-    const slugAndId = `${song?.slug}-${song?.id}`
+  return songs.map((song) => {
+    const slugAndId = `${song?.slug}-${song?.id}`;
     return { slugAndId };
   });
 }
@@ -52,51 +55,41 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   });
 }
 
-
 const Song = async ({ params }: any) => {
   const slugAndId = await params.slugAndId; // this is the [slugAndId] part
   const { slug, id } = parseSlugAndId(params.slugAndId);
   const songData = await getSongById(id);
-
-  const artists: any[] = [];
-  const creators: any[] = [];
-  songData?.artist.forEach((item) => {
-    const a = item.artist
-    if (item.isCreator) {
-      creators.push(a);
-    }
-    if (item.isArtist) {
-      artists.push(a);
-    }
-  });
-
-  const albumTitle = songData?.album?.[0]?.album?.title || "";
-  const albumSlug = songData?.album?.[0]?.album?.slug + "-" + songData?.album?.[0]?.album?.id || "";
-  const categories = songData?.category?.map(c => c.category.slug) ?? []
-  const language = songData?.language
+  const channel = songData?.channel;
+  const credits = songData?.credits
+  const categories = songData?.category?.map((c) => c.category.slug) ?? [];
+  const language = songData?.language;
   const langName = getLanguageName(language);
-  const searchVariants = songData?.searchVariant || ""
+  const searchVariants = songData?.searchVariant || "";
+
+  // console.log(songData, "songData")
 
   return (
-
     <div className="bg-background  rounded-lg">
       <JsonLd id={id} />
       <div
         className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
         style={{
-          backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`
+          backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`,
         }}
       >
         <Menu />
-        <AutoPopup/>
+        <AutoPopup />
 
         {/* <InContentAd /> */}
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
-            {songData?.videoId ?
+            {songData?.videoId ? (
               // <YouTubeEmbed videoId={songData?.videoId} title={songData?.title} />
-              <VideoPlayer videoId={songData?.videoId} title={songData?.title} />
-              :
+              <VideoPlayer
+                videoId={songData?.videoId}
+                title={songData?.title}
+              />
+            ) : (
               <Image
                 src={songData?.image || "/default-image.jpg"}
                 alt={songData?.title || "Song Image"}
@@ -105,8 +98,7 @@ const Song = async ({ params }: any) => {
                 className="bg-gray-800 object-cover h-auto w-full"
                 priority={true}
               />
-
-            }
+            )}
           </div>
           <div className=" relative sm:w-8/12 grid gap-2">
             <h1 className=" text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">
@@ -120,52 +112,58 @@ const Song = async ({ params }: any) => {
                     slug: songData ? `${songData.slug}-${songData.id}` : "",
                     title: songData.title ?? "",
                     image: songData.image ?? "",
-                    artist: creators?.map((creator: any) => creator.title).join(", ") ?? "",
+                    channel: songData?.channel?.title ?? "",
                     status: songData.status ?? "PUBLISH",
                     language: songData.language ?? "",
                   }}
                 />
               )}
             </div>
+
+            {/* CHANNEL */}
             <div className="flex flex-wrap gap-2">
+              {channel ? (
+                <Link
+                  href={`/channel/${slugify(channel.slug, { lower: true })}-${channel.id}`}
+                  className="flex items-center gap-2"
+                >
+                  <Avatar>
+                    <AvatarImage
+                      src={channel.avatar || "/default-avatar.jpg"}
+                    />
+                    <AvatarFallback>SW</AvatarFallback>
+                  </Avatar>
 
-              {creators.length > 0 ? (
-                creators.map((creator, index) => (
-                  <Link key={index} href={`/artist/${slugify(creators[0]?.slug, { lower: true })}-${creator?.id}`} className="flex items-center gap-2">
-                    {/* <Avatar src={creator?.image || "/default-avatar.jpg"} size={34} /> */}
-                    <Avatar>
-                      <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
-                      <AvatarFallback>SW</AvatarFallback>
-                    </Avatar>
-
-                    <span className="font-semibold text-lg leading-4 text-foreground ">
-                      {creator?.title}
-                      {index < creators.length - 1 ? ", " : ""}
-                    </span>
-                  </Link>
-                ))
+                  <span className="font-semibold text-lg leading-4 text-foreground ">
+                    {channel.title}
+                    {/* {index < creators.length - 1 ? ", " : ""} */}
+                  </span>
+                </Link>
               ) : (
                 <p className="font-semibold text-sm leading-4 text-foreground ">
                   No creator specified
                 </p>
               )}
             </div>
-            <div className=" flex flex-wrap gap-2">
 
-              {artists.length > 0 ? (
-                artists.map((artist, index) => (
-                  <Link key={index} href={`/artist/${slugify(artist?.title, { lower: true })}-${artist?.id}`}>
+            {/* CREDITS */}
+            <div className=" flex flex-wrap gap-2">
+              {credits && (
+                credits?.map((channel, index) => (
+                  <Link
+                    key={channel.channel.id}
+                    href={`/channel/${slugify(channel.channel?.title, { lower: true })}-${channel.channel?.id}`}
+                  >
                     <div className=" text-base leading-4 text-foreground ">
-                      {artist?.title}
-                      {index < artists.length - 1 ? ", " : ""}
+                      {channel.channel.title}
+                      {index < credits?.length - 1 ? ", " : ""}
                     </div>
                   </Link>
                 ))
-              ) : (
-                <p className="font-light text-sm leading-4 text-foreground"></p>
               )}
             </div>
-            <div className="flex gap-2 flex-wrap items-center" >
+
+            <div className="flex gap-2 flex-wrap items-center">
               {songData?.category && songData?.category.length > 0 ? (
                 songData?.category.length > 1 ? (
                   songData?.category.map((category, index) => (
@@ -174,16 +172,20 @@ const Song = async ({ params }: any) => {
                       className="font-light text-sm leading-4 text-foreground"
                     >
                       <Link href={`/category/${category?.category.slug}`}>
-                        <Badge variant="secondary">{category?.category.title}</Badge>
-                        {/* {category?.category.title} */}
+                        <Badge variant="secondary" className="hover:bg-background">
+                          {category?.category.title}
+                        </Badge>
                       </Link>
-                      {/* {index < songData?.category.length - 1 ? ", " : ""} */}
                     </span>
                   ))
                 ) : (
                   <p className="font-light text-sm leading-4 text-foreground ">
-                    <Link href={`/category/${songData?.category[0]?.category.slug}`}>
-                      <Badge variant="secondary">{songData?.category[0]?.category.title}</Badge>
+                    <Link
+                      href={`/category/${songData?.category[0]?.category.slug}`}
+                    >
+                      <Badge variant="secondary">
+                        {songData?.category[0]?.category.title}
+                      </Badge>
                     </Link>
                   </p>
                 )
@@ -194,34 +196,33 @@ const Song = async ({ params }: any) => {
               )}
               <Dot className="text-foreground" />
 
-              {/* <Link href={`/language/${language}`}>
+              <Link href={`/language/${language}`}>
                 <Badge variant="secondary">{langName}</Badge>
-              </Link> */}
+              </Link>
               {/* <Dot className="text-foreground" /> */}
               <div className=" ">
                 <ShareButton title={songData?.title} />
               </div>
-
             </div>
-            {songData?.album && songData?.album.length > 0 && (
+            {/* {songData?.album && songData?.album.length > 0 && (
               <p className="text-sm text-foreground">
                 Album :{" "}
                 <Link href={`/album/${albumSlug}`}>
                   <strong> {albumTitle} </strong>
                 </Link>
               </p>
-            )}
-            {songData?.category[0] ?
+            )} */}
+            {songData?.category[0] ? (
               <div className="">
                 <p className="text-xs text-foreground">
                   <strong>{songData?.title}</strong>
                   {`  is a Christian worship song by `}
-                  <strong>{creators.map(c => c.title)}</strong>
+
+                  <strong>{channel?.title}</strong>
 
                   {`, commonly sung in moments of `}
 
                   <strong>
-
                     {songData?.category && songData?.category.length > 0 ? (
                       songData?.category.length > 1 ? (
                         songData?.category.map((category, index) => (
@@ -236,20 +237,18 @@ const Song = async ({ params }: any) => {
                           </span>
                         ))
                       ) : (
-
                         <Link
                           href={`/category/${songData?.category[0]?.category.slug}`}
                         >
                           {songData?.category[0]?.category.title}
                         </Link>
-
                       )
                     ) : (
                       <p className="font-light text-sm leading-4 text-foreground">
                         Unknown category
                       </p>
                     )}
-                  </strong >
+                  </strong>
 
                   {`. This page provides the lyrics ${songData?.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.`}
 
@@ -259,11 +258,12 @@ const Song = async ({ params }: any) => {
                       <strong>{searchVariants[0]}</strong>
                       {'".'}
                     </>
-
                   )}
                 </p>
               </div>
-              : ""}
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
@@ -276,66 +276,40 @@ const Song = async ({ params }: any) => {
             <div dangerouslySetInnerHTML={{ __html: songData?.content }} />
           </section>
         </div> : null} */}
-        {songData?.version === "version_2" ? <LinesVersion2
-          id={songData?.id}
-          song={songData}
-          isChords={!!songData?.isChords}
-        /> : null}
-        {songData?.version === "version_3" ? <LinesVersion3
-          id={songData?.id}
-          song={songData}
-          isChords={!!songData?.isChords}
-          isTranslations={!!songData?.isTranslation}
-          language={songData?.language}
-        /> : null}
-        {songData?.version === "version_4" 
-          ? <LinesVersion4
-          id={songData?.id}
-          song={songData}
-          isChords={!!songData?.isChords}
-          isTranslations={!!songData?.isTranslation}
-          language={songData?.language}
-        /> 
-          : null}
-        <section className="w-full text-foreground mt-12">
-          {/* <div >{songData?.content }</div> */}
-          <div className="flex gap-2 items-baseline flex-wrap my-4">
+        {songData?.version === "version_2" ? (
+          <LinesVersion2
+            id={songData?.id}
+            song={songData}
+            isChords={!!songData?.isChords}
+          />
+        ) : null}
+        {songData?.version === "version_3" ? (
+          <LinesVersion3
+            id={songData?.id}
+            song={songData}
+            isChords={!!songData?.isChords}
+            isTranslations={!!songData?.isTranslation}
+            language={songData?.language}
+          />
+        ) : null}
+        {songData?.version === "version_4" ? (
+          <LinesVersion4
+            id={songData?.id}
+            song={songData}
+            isChords={!!songData?.isChords}
+            isTranslations={!!songData?.isTranslation}
+            language={songData?.language}
+          />
+        ) : null}
 
-            {creators.length > 0 ? (
-              creators.map((creator, index) => (
-                <span
-                  key={index}
-                  className="text-base font-semibold leading-4 text-foreground"
-                >
-                  Credits - &nbsp;
-                  {creator.link ? (
-                    <Link href={creator.link} target="_blank">
-                      {creator.title}
-                      {index < creators.length - 1 ? ", " : ""}
-                    </Link>
-                  ) : (
-                    <>
-                      {creator.title}
-                      {index < creators.length - 1 ? ", " : ""}
-                    </>
-                  )}
-                </span>
-              ))
-            ) : (
-              <p className="font-light text-sm leading-4 text-foreground">
-                No creator specified
-              </p>
-            )}
-          </div>
-        </section>
         <Social />
-        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">Songs Based on&nbsp;
+        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">
+          Songs Based on&nbsp;
           {songData?.category && songData?.category.length > 0 ? (
             songData?.category.length > 1 ? (
               songData?.category.map((category, index) => (
                 <span
                   key={index}
-                // className="font-light text-sm leading-4 text-foreground"
                 >
                   <Link href={`/category/${category?.category.slug}`}>
                     {category?.category.title}
@@ -344,9 +318,7 @@ const Song = async ({ params }: any) => {
                 </span>
               ))
             ) : (
-              <Link
-                href={`/category/${songData?.category[0]?.category.slug}`}
-              >
+              <Link href={`/category/${songData?.category[0]?.category.slug}`}>
                 {songData?.category[0]?.category.title}
               </Link>
             )
@@ -360,7 +332,7 @@ const Song = async ({ params }: any) => {
         {categories.length > 0 ? (
           categories?.map((id: any) => (
             <Fragment key={id}>
-              <CategorySongs params={id} />
+              <CategoryProcess params={id} />
             </Fragment>
           ))
         ) : (
@@ -370,19 +342,16 @@ const Song = async ({ params }: any) => {
         )}
 
         <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">
-          Popular songs &nbsp;
-          {/* <Link className="underline" href={`/artist/${creators[0]?.id}- ${ slugify( creators[0]?.name), {lower: true}}`}> */}
-          {/* <Link className="underline" href={`/artist/${slugify(creators[0]?.name, { lower: true })}-${creators[0]?.id}`}>
-            {creators[0]?.name}
-          </Link> */}
+          Popular songs by&nbsp;
+          <Link className="underline" href={`/channel/${slugify(songData?.channel?.title ?? "", { lower: true })}-${channel?.id}`}>
+            {channel?.title}
+          </Link>
         </h2>
 
-        {creators.length > 0 ? (
-          creators.map((creator, index) => (
-            <Fragment key={creator.id}>
-              <CreatorSongs params={creator.id} />
+        {channel ? (
+            <Fragment key={channel.id}>
+              <CreatorSongs params={channel.id} />
             </Fragment>
-          ))
         ) : (
           <p className="font-light text-sm leading-4 text-foreground">
             No creator specified

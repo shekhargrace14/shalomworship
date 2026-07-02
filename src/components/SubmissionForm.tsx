@@ -50,20 +50,20 @@ export default function SubmissionForm() {
     >
   ) => {
     const { name, value } = e.target
-    
+
 
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }))
   }
-const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (
     e: React.FormEvent
   ) => {
     e.preventDefault()
 
-    console.log(formData)
+    // console.log(formData)
 
     // POST /api/submission
     const payload = formData
@@ -106,8 +106,8 @@ const [loading, setLoading] = useState(false);
 
     }
     finally {
-    setLoading(false);
-  }
+      setLoading(false);
+    }
   }
 
   return (
@@ -235,13 +235,13 @@ const [loading, setLoading] = useState(false);
             disabled={loading}
           >
             {loading ? (
-    <>
-      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-      Sending...
-    </>
-  ) : (
-    "Send Reply"
-  )}
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              "Send Reply"
+            )}
 
           </Button>
         </form>

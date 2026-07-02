@@ -30,9 +30,8 @@ const Page = async ({ params }: any) => {
   const id = slugAndId.split('-').pop();
   const album = await getAlbum(id);
   const data = album;
-  const albumArtists = data?.artist[0]?.artist.title || [];
-  // console.log(data, " album artists page data");
-  const slug = data?.artist[0].artist.slug + "-" + data?.artist[0].artist.id;
+  // console.log(data, "ablum")
+
 
   return (
     <>
@@ -59,14 +58,14 @@ const Page = async ({ params }: any) => {
               <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-foreground">
                 {data?.title || "Artist"}
               </h1>
-              <p className="text-sm  text-foreground">Album by  <Link href={`/artist/${slug}`}>{albumArtists}</Link> </p>
+              {/* <p className="text-sm  text-foreground">Album by  <Link href={`/channel/${slug}`}>{albumArtists}</Link> </p> */}
             </div>
           </div>
         </div>
         <h2 className="text-xl font-semibold m-4 text-foreground">Songs from {data?.title || "Artist"}</h2>
         <section className="w-full px-4">
           <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 ">
-            {data?.song.map((item) => (
+            {data?.songs.map((item) => (
               <div key={item.songId}>
                 <Processor item={item?.songId} type="album" />
               </div>

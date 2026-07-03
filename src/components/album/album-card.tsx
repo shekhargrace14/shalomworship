@@ -8,11 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
 
 const Album: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
-  const artist = item?.artist;
-  const creator = artist[0]?.artist
 
-  // console.log(creator,creator?.title,creator?.image, "album item");
-  // console.log(creator[0]?.artist?.title, "album creator");
 
   const slug = slugify(`${item.slug}`, { lower: true });
 
@@ -36,12 +32,12 @@ const Album: React.FC<any> = ({ item }) => {
             <div className="flex items-center gap-2">
               {/* <Avatar src={creators[0]?.image || "/default-avatar.jpg"} size={34} /> */}
               <Avatar>
-                <AvatarImage src={creator?.image || "/default-avatar.jpg"} />
+                {/* <AvatarImage src={creator?.image || "/default-avatar.jpg"} /> */}
                 <AvatarFallback>SW</AvatarFallback>
               </Avatar>
               <div>
                 <h3 className="line-clamp-1 text-md text-foreground">{item.title}</h3>
-                <p className="text-sm leading-none text-foreground">{creator?.title}</p>
+                {/* <p className="text-sm leading-none text-foreground">{creator?.title}</p> */}
               </div>
             </div>
           </div>

@@ -16,13 +16,14 @@ interface HeaderSearchProps {
 }
 
 export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
+
   const inputRef = useRef<HTMLInputElement>(null);
 
   const router = useRouter();
   const pathname = usePathname();
   const { search, ready } = useSongSearch();
   // const { setlists, addSong, removeSong } = useSetlists();
-  const { setlists, addSong, removeSong } = useSetlistsContext();
+  // const { setlists, addSong, removeSong } = useSetlistsContext();
 
   const [query, setQuery] = useState("");
   const debounced = useDebounce(query, 300);
@@ -171,8 +172,8 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
                   />
                   <div className="flex flex-col ">
                     <div className="font-medium">{song.title}</div>
-                    <div className="text-xs opacity-70">
-                      {song.artist}
+                    <div className="text-xs text-gray-500">
+                      {song?.channel}
                       {song.status === "upcoming" && " • Coming Soon"}
                     </div>
                   </div>

@@ -1,8 +1,8 @@
 import Menu from "@/components/layout/Menu";
 import React from "react";
-import ArtistSection from "@/components/ArtistSection";
 import { MetaData } from "@/components/MetaData";
-import { getAllArtists } from "@/lib/static";
+import ChannelSection from "@/components/channel/channel-section";
+import { getAllChannels } from "@/lib/static";
 
 
 
@@ -26,8 +26,7 @@ export function generateMetadata(){
 
 }
 const page = async () => {
-  // const artists = await fetchArtists();
-  const artists = await getAllArtists();
+  const channels = await getAllChannels();
   
 
   // console.log(artists, "fetched artists");
@@ -35,7 +34,7 @@ const page = async () => {
   return (
     <div className="p-4">
       <Menu />
-      <ArtistSection artists={artists} />
+      <ChannelSection channels={channels} />
     </div>
   );
 };

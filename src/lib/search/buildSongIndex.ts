@@ -3,14 +3,20 @@ import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import fs from "fs";
 import path from "path";
 
+import type { song, channel } from "@prisma/client";
+
+
+type SongWithChannel = song & {
+  channel: {
+    title: string;
+    slug: string;
+  } | null;
+};
+
 export async function buildSongSearchIndex() {
   const songs = await getAllSongs([...CONTENT_VISIBILITY.discoverable]);
 
-  const index = songs.map((song) => {
-    const creator = song?.artist?.find(
-      (item: any) => item.isCreator === true
-    )?.artist;
-
+  const index = songs.map((song:SongWithChannel) => {
     return {
       id: song.id,
       slug: `${song.slug}-${song.id}`,
@@ -18,8 +24,8 @@ export async function buildSongSearchIndex() {
       image: song.image,
       status: song.status,
       language: song.language,
-      artist: creator?.title ?? "", // only creator name
-      artistSlug: creator?.slug ?? "",
+      channel: song?.channel?.title,
+      channelSlug: song?.channel?.slug
     };
   });
 

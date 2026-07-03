@@ -16,10 +16,13 @@ import { cn } from "@/lib/utils";
 // } from "./ui/avatar"
 
 // import { optimizedImage } from "@/utils/optimizedImage"
-import { Badge } from "./ui/badge";
-import { Card, CardContent } from "./ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar";
+// import { Badge } from "./ui/badge";
+// import { Card, CardContent } from "./ui/card";
+// import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar";
 import { channel } from "@prisma/client";
+import { Card, CardContent } from "../ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/Avatar";
+import { Badge } from "../ui/badge";
 // import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar"
 
 export type CardVariant = "imageTop" | "imageLeft" | "compact";
@@ -41,10 +44,10 @@ interface Props {
   variant?: CardVariant;
 
   className?: string;
-  creator?: channel;
+  channel?: channel;
 }
 
-export function MasterCard({
+export default function SongCard({
   id,
   item,
   title,
@@ -53,20 +56,14 @@ export function MasterCard({
   image,
   variant = "imageTop",
   className,
-  creator,
+  channel,
 }: Props) {
-  // console.log(creator);
+  // console.log(channel, "SongCard");
 
   const creators: {
     title: string;
     image?: string;
   }[] = [];
-
-  //   item?.artist?.forEach((artist: any) => {
-  //     if (artist.isCreator) {
-  //       creators.push(artist.artist);
-  //     }
-  //   });
 
   const slug = slugify(songSlug || "", {
     lower: true,
@@ -118,16 +115,24 @@ export function MasterCard({
                 {title}
               </h3>
 
-              {creators[0] && (
+              {channel && (
                 <div className="mt-1 flex items-center gap-2">
                   <Avatar className="h-6 w-6">
-                    {/* <AvatarImage src={creator.image} /> */}
+                    <AvatarImage src={channel.avatar || ""} />
 
-                    <AvatarFallback>{/* {creator.title} */}</AvatarFallback>
+                    <AvatarFallback>
+                      {channel.title
+                        ?.trim()
+                        .split(/\s+/)
+                        .map((word) => word[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase() || "?"}
+                    </AvatarFallback>
                   </Avatar>
 
                   <span className="text-xs text-muted-foreground truncate font-semibold">
-                    {/* {creators[0].title} */}
+                    {channel.title}
                   </span>
                 </div>
               )}

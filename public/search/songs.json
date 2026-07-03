@@ -6,8 +6,8 @@
     "image": "https://img.youtube.com/vi/WtGfN9YZjMQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "6770d66257632a78f32e38cb",
@@ -16,8 +16,8 @@
     "image": "https://img.youtube.com/vi/cDhfFErE72g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "6777b55cb50ef55a40826e2b",
@@ -26,8 +26,8 @@
     "image": "https://img.youtube.com/vi/jIyibvTj3U0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FGAG Worship",
-    "artistSlug": "fgag-worship"
+    "channel": "FGAG Worship",
+    "channelSlug": "fgag-worship"
   },
   {
     "id": "6778c987b965402bde099696",
@@ -36,8 +36,8 @@
     "image": "https://img.youtube.com/vi/KSbO3UwTMh4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "6778cedcb965402bde0996e5",
@@ -46,8 +46,8 @@
     "image": "https://img.youtube.com/vi/f2oxGYpuLkw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "6778d2e8b965402bde099722",
@@ -56,8 +56,8 @@
     "image": "https://img.youtube.com/vi/EmjH-rk1uc8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "6778d4f2b965402bde09974c",
@@ -66,8 +66,8 @@
     "image": "https://img.youtube.com/vi/BDURInx_GUk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "6778d628b965402bde099767",
@@ -76,8 +76,8 @@
     "image": "https://img.youtube.com/vi/XxkNj5hcy5E/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Bethel Music",
-    "artistSlug": "bethel-music"
+    "channel": "Bethel Music",
+    "channelSlug": "bethel-music"
   },
   {
     "id": "677d0b3767f40ebb0045c8e5",
@@ -86,8 +86,8 @@
     "image": "https://img.youtube.com/vi/oujEfZie7jg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "677d2937a98bd826386d9c60",
@@ -96,8 +96,8 @@
     "image": "https://img.youtube.com/vi/4fGd48VdjIA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "677d5e53a98bd826386d9cb1",
@@ -106,8 +106,8 @@
     "image": "https://img.youtube.com/vi/e40AOG7msRg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Akshay Mathews",
-    "artistSlug": "akshay-mathews"
+    "channel": "Akshay Mathews",
+    "channelSlug": "akshay-mathews"
   },
   {
     "id": "677d6755a98bd826386d9cd5",
@@ -116,8 +116,8 @@
     "image": "https://img.youtube.com/vi/J9hfeckNu1k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Live Jam",
-    "artistSlug": "live-jam"
+    "channel": "Live Jam",
+    "channelSlug": "live-jam"
   },
   {
     "id": "677e7382d30260ca3e36584a",
@@ -126,8 +126,8 @@
     "image": "https://img.youtube.com/vi/_IIMEdqfQMc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "677e7931d30260ca3e365887",
@@ -136,8 +136,8 @@
     "image": "https://img.youtube.com/vi/3eltFVrxmS0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "677fc9d96640d26dcbad659e",
@@ -146,8 +146,8 @@
     "image": "https://img.youtube.com/vi/rOFtqw_13pc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "677fe286805eb0cf55b837a1",
@@ -156,8 +156,8 @@
     "image": "https://img.youtube.com/vi/oyEFPpKZues/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "677fe5bb805eb0cf55b837db",
@@ -166,8 +166,8 @@
     "image": "https://img.youtube.com/vi/AUoPG0f0VkU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "DG Music Media Inc.",
-    "artistSlug": "dg-music-media-inc"
+    "channel": "DG Music Media Inc.",
+    "channelSlug": "dg-music-media-inc"
   },
   {
     "id": "677feb78805eb0cf55b8381a",
@@ -176,8 +176,8 @@
     "image": "https://img.youtube.com/vi/ODbkUP3il9g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Christian Singers Music Productions",
-    "artistSlug": "christian-singers-music-productions"
+    "channel": "Christian Singers Music Productions",
+    "channelSlug": "christian-singers-music-productions"
   },
   {
     "id": "6781d8077aa9d89306781cc7",
@@ -186,8 +186,8 @@
     "image": "https://img.youtube.com/vi/kw-FIy8Shk0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "6783e740a759cd40936bf1e6",
@@ -196,8 +196,8 @@
     "image": "https://drive.google.com/uc?export=view&id=1wzzNNej76ezJGfVErelCzvkl_sFU2q22",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "6783f020a759cd40936bf20a",
@@ -206,8 +206,8 @@
     "image": "https://img.youtube.com/vi/05wTDFE2wmg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "6783f5b2a759cd40936bf229",
@@ -216,8 +216,8 @@
     "image": "https://img.youtube.com/vi/6HPS6zaOFSk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "6783fba9a759cd40936bf283",
@@ -226,8 +226,8 @@
     "image": "https://img.youtube.com/vi/QRL6VUaEQ2k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Carmel Community Church",
-    "artistSlug": "carmel-community-church"
+    "channel": "Carmel Community Church",
+    "channelSlug": "carmel-community-church"
   },
   {
     "id": "6783fe0ea759cd40936bf29a",
@@ -236,8 +236,8 @@
     "image": "https://img.youtube.com/vi/rk1vEZ6DMHw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "67840817a759cd40936bf2eb",
@@ -246,8 +246,8 @@
     "image": "https://img.youtube.com/vi/qSKwCgMNK6U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Kenny Salvadi Productions",
-    "artistSlug": "kenny-salvadi-productions"
+    "channel": "Kenny Salvadi Productions",
+    "channelSlug": "kenny-salvadi-productions"
   },
   {
     "id": "67840cb2a759cd40936bf324",
@@ -256,8 +256,8 @@
     "image": "https://img.youtube.com/vi/M_tbpTCd4Gk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "6784ece6db79640f3129605d",
@@ -266,8 +266,8 @@
     "image": "https://img.youtube.com/vi/Sn32V_rS0s8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6784f2f6db79640f31296090",
@@ -276,8 +276,8 @@
     "image": "https://img.youtube.com/vi/nB1j0I-lXOI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Shelley Reddy",
-    "artistSlug": "shelley-reddy"
+    "channel": "Shelley Reddy",
+    "channelSlug": "shelley-reddy"
   },
   {
     "id": "67850879db79640f312960a6",
@@ -286,8 +286,8 @@
     "image": "https://img.youtube.com/vi/fT0oO-6sHoc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "67850c17db79640f312960ec",
@@ -296,8 +296,8 @@
     "image": "https://img.youtube.com/vi/DJBLEc7nDBU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Joseph Raj Allam",
-    "artistSlug": "joseph-raj-allam"
+    "channel": "Joseph Raj Allam",
+    "channelSlug": "joseph-raj-allam"
   },
   {
     "id": "6785512ce93342f9207f8202",
@@ -306,8 +306,8 @@
     "image": "https://img.youtube.com/vi/3MhXoCOO_Rk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "678557cbe93342f9207f823e",
@@ -316,8 +316,8 @@
     "image": "https://img.youtube.com/vi/FSc11mbsbqs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "67855bdfe93342f9207f827c",
@@ -326,8 +326,8 @@
     "image": "https://img.youtube.com/vi/VDVb7oNLvTA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "67856191e93342f9207f82be",
@@ -336,8 +336,8 @@
     "image": "https://img.youtube.com/vi/rPAQ3omjiU8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6785db504a380bbf080a34e9",
@@ -346,8 +346,8 @@
     "image": "https://img.youtube.com/vi/zNiA7xwadG8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "6785e3e44a380bbf080a351a",
@@ -356,8 +356,8 @@
     "image": "https://img.youtube.com/vi/FI6JFtB1wjg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6785f8304a380bbf080a355a",
@@ -366,8 +366,8 @@
     "image": "https://img.youtube.com/vi/eCmtObKBNUA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Vijay Kondapuram",
-    "artistSlug": "vijay-kondapuram"
+    "channel": "Vijay Kondapuram",
+    "channelSlug": "vijay-kondapuram"
   },
   {
     "id": "6786094d4a380bbf080a35c0",
@@ -376,8 +376,8 @@
     "image": "https://img.youtube.com/vi/gNk_hqjtfGk/sddefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Shukriya The Band",
-    "artistSlug": "shukriya-the-band"
+    "channel": "Shukriya The Band",
+    "channelSlug": "shukriya-the-band"
   },
   {
     "id": "6786163b4a380bbf080a361c",
@@ -386,8 +386,8 @@
     "image": "https://img.youtube.com/vi/6M844pWC31M/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "67861a904a380bbf080a364f",
@@ -396,8 +396,8 @@
     "image": "https://img.youtube.com/vi/nkUFLofI4ZU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "6787825ef8508c82b3d2a719",
@@ -406,8 +406,8 @@
     "image": "https://img.youtube.com/vi/C0LNiutZBFw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Highest Praise Church",
-    "artistSlug": "highest-praise-church"
+    "channel": "Highest Praise Church",
+    "channelSlug": "highest-praise-church"
   },
   {
     "id": "678795fef8508c82b3d2a76f",
@@ -416,8 +416,8 @@
     "image": "https://img.youtube.com/vi/AfR_VMXJNPw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "AOC Worship Music",
-    "artistSlug": "aoc-worship-music"
+    "channel": "AOC Worship Music",
+    "channelSlug": "aoc-worship-music"
   },
   {
     "id": "6789e1792a1507be50d92a6e",
@@ -426,8 +426,8 @@
     "image": "https://img.youtube.com/vi/sTPvyH4aiJ0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6789ec672a1507be50d92ab8",
@@ -436,8 +436,8 @@
     "image": "https://img.youtube.com/vi/U7IbuFv7mxQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Ashley Joseph",
-    "artistSlug": "ashley-joseph"
+    "channel": "Ashley Joseph",
+    "channelSlug": "ashley-joseph"
   },
   {
     "id": "6789f03d2a1507be50d92ad5",
@@ -446,8 +446,8 @@
     "image": "https://img.youtube.com/vi/tFjSIYg5qpU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6789fc0f2a1507be50d92af4",
@@ -456,8 +456,8 @@
     "image": "https://img.youtube.com/vi/DRHfPD7bmjs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "678a16a6fd0f75781ee4fa01",
@@ -466,8 +466,8 @@
     "image": "https://img.youtube.com/vi/ZrSuBDEJmho/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Ashish Charan",
-    "artistSlug": "ashish-charan"
+    "channel": "Ashish Charan",
+    "channelSlug": "ashish-charan"
   },
   {
     "id": "678a1c00fd0f75781ee4fa4b",
@@ -476,8 +476,8 @@
     "image": "https://img.youtube.com/vi/gg4yQmmDmj4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "678a2417fd0f75781ee4fa9f",
@@ -486,8 +486,8 @@
     "image": "https://img.youtube.com/vi/o-QrEESCMjM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "678a2998fd0f75781ee4face",
@@ -496,8 +496,8 @@
     "image": "https://img.youtube.com/vi/nPV9Fvo59L0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "678a2e5ffd0f75781ee4fb06",
@@ -506,8 +506,8 @@
     "image": "https://img.youtube.com/vi/9Gn2j7WGTyM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "678b1e62b9c6b7d4a1a9a119",
@@ -516,8 +516,8 @@
     "image": "https://img.youtube.com/vi/k5YUyaw8viY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "678b61b29e9f912cbc7624e5",
@@ -526,8 +526,8 @@
     "image": "https://img.youtube.com/vi/7IIyeXXsbHw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "678b72979e9f912cbc762525",
@@ -536,8 +536,8 @@
     "image": "https://img.youtube.com/vi/KBN_v0GepPY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "678b813a9e9f912cbc76257c",
@@ -546,8 +546,8 @@
     "image": "https://img.youtube.com/vi/oxRtnQXpDZo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "678bdf9fcdaae91a457a34fa",
@@ -556,8 +556,8 @@
     "image": "https://img.youtube.com/vi/IkHgxKemCRk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Chris Tomlin",
-    "artistSlug": "chris-tomlin"
+    "channel": "Chris Tomlin",
+    "channelSlug": "chris-tomlin"
   },
   {
     "id": "679137f2a7879f8d05a3b9e1",
@@ -566,8 +566,8 @@
     "image": "https://img.youtube.com/vi/UrK0_NI20kk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "67971a8309bd45eb795478f2",
@@ -576,8 +576,8 @@
     "image": "https://img.youtube.com/vi/ShgCPY9aedE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6797276b09bd45eb79547943",
@@ -586,8 +586,8 @@
     "image": "https://img.youtube.com/vi/gwI3s1ETZE0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Spikenard",
-    "artistSlug": "spikenard"
+    "channel": "Spikenard",
+    "channelSlug": "spikenard"
   },
   {
     "id": "679b0f273964c5f37dd664a7",
@@ -596,8 +596,8 @@
     "image": "https://img.youtube.com/vi/6xx0d3R2LoU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Bethel Music",
-    "artistSlug": "bethel-music"
+    "channel": "Bethel Music",
+    "channelSlug": "bethel-music"
   },
   {
     "id": "67a79e18cd7c8baff09f9540",
@@ -606,8 +606,8 @@
     "image": "https://img.youtube.com/vi/14fbrRTuevk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Akshay Mathews",
-    "artistSlug": "akshay-mathews"
+    "channel": "Akshay Mathews",
+    "channelSlug": "akshay-mathews"
   },
   {
     "id": "67aa46d4a40798299a92bb04",
@@ -616,8 +616,8 @@
     "image": "https://img.youtube.com/vi/emYkQlbZPME/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Women Who Worship",
-    "artistSlug": "women-who-worship"
+    "channel": "Women Who Worship",
+    "channelSlug": "women-who-worship"
   },
   {
     "id": "67b2cb3b02ad74f246d1794b",
@@ -626,8 +626,8 @@
     "image": "https://img.youtube.com/vi/cIvxiGjhfcQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "67b377404a9a870bfb3a58f2",
@@ -636,8 +636,8 @@
     "image": "https://img.youtube.com/vi/SXXrcXyADEM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Karan Peter",
-    "artistSlug": "karan-peter"
+    "channel": "Karan Peter",
+    "channelSlug": "karan-peter"
   },
   {
     "id": "67b3829c4a9a870bfb3a5934",
@@ -646,8 +646,8 @@
     "image": "https://img.youtube.com/vi/hZcFJvfyTNY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Messiah Music Ministries",
-    "artistSlug": "messiah-music-ministries"
+    "channel": "Messiah Music Ministries",
+    "channelSlug": "messiah-music-ministries"
   },
   {
     "id": "67b386d54a9a870bfb3a5972",
@@ -656,8 +656,8 @@
     "image": "https://img.youtube.com/vi/tZzNkRhv3xk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nehemiah Kulothungan",
-    "artistSlug": "nehemiah-kulothungan"
+    "channel": "Nehemiah Kulothungan",
+    "channelSlug": "nehemiah-kulothungan"
   },
   {
     "id": "67fc69bfc78f82928162d99e",
@@ -666,8 +666,8 @@
     "image": "https://img.youtube.com/vi/APFMQPMVh3Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Keross Music",
-    "artistSlug": "keross-music"
+    "channel": "Keross Music",
+    "channelSlug": "keross-music"
   },
   {
     "id": "67fffb478566752b46e570fd",
@@ -676,8 +676,8 @@
     "image": "https://img.youtube.com/vi/xhyi3H7beEA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "6816de11a2ad25508ec23422",
@@ -686,8 +686,8 @@
     "image": "https://img.youtube.com/vi/ZO_bgeJvbYo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Akshay Mathews",
-    "artistSlug": "akshay-mathews"
+    "channel": "Akshay Mathews",
+    "channelSlug": "akshay-mathews"
   },
   {
     "id": "686177c71d899b366a2d2e83",
@@ -696,8 +696,8 @@
     "image": "https://img.youtube.com/vi/1yvynJWbb0k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Kadosh House",
-    "artistSlug": "kadosh-house"
+    "channel": "Kadosh House",
+    "channelSlug": "kadosh-house"
   },
   {
     "id": "686ea48b5fe43458b67f5680",
@@ -706,8 +706,8 @@
     "image": "https://img.youtube.com/vi/g6n35yiTMgU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "686fb35a389f322ae0eb4be4",
@@ -716,8 +716,8 @@
     "image": "https://img.youtube.com/vi/HuA2-o7WfeM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Gersson Edinbaro",
-    "artistSlug": "gersson-edinbaro"
+    "channel": "Gersson Edinbaro",
+    "channelSlug": "gersson-edinbaro"
   },
   {
     "id": "68712b3a43a0af1dbf04945d",
@@ -726,8 +726,8 @@
     "image": "https://img.youtube.com/vi/PaVoYsMEAao/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "mr",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "68727a9a68c3f6aa220967e2",
@@ -736,8 +736,8 @@
     "image": "https://img.youtube.com/vi/RTQp1YRAMmI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "6872930b68c3f6aa22096833",
@@ -746,8 +746,8 @@
     "image": "https://img.youtube.com/vi/d0UvQHrFA3c/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "68730b99267962ca7256fd8f",
@@ -756,8 +756,8 @@
     "image": "https://img.youtube.com/vi/FKT9-EsfVBI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "6873e9c237be9a25694c860e",
@@ -766,8 +766,8 @@
     "image": "https://img.youtube.com/vi/3ubKsR5zZeI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Kingdom of God Ministries",
-    "artistSlug": "kingdom-of-god-ministries"
+    "channel": "Kingdom of God Ministries",
+    "channelSlug": "kingdom-of-god-ministries"
   },
   {
     "id": "687535e2a45578664ad81386",
@@ -776,8 +776,8 @@
     "image": "https://img.youtube.com/vi/xpedfKDCHuY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rajat BK",
-    "artistSlug": "rajat-bk"
+    "channel": "Rajat BK",
+    "channelSlug": "rajat-bk"
   },
   {
     "id": "6876a2d750da5662f55a678d",
@@ -786,8 +786,8 @@
     "image": "https://img.youtube.com/vi/kjWrUPAcpDo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "6876add250da5662f55a67ef",
@@ -796,8 +796,8 @@
     "image": "https://img.youtube.com/vi/_CYotGyyodw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Kingdom of God Ministries",
-    "artistSlug": "kingdom-of-god-ministries"
+    "channel": "Kingdom of God Ministries",
+    "channelSlug": "kingdom-of-god-ministries"
   },
   {
     "id": "6877db6bc2e0826a7c940aba",
@@ -806,8 +806,8 @@
     "image": "https://img.youtube.com/vi/hjxzy1uCTbo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "68792c739ea6d1f40ee57be8",
@@ -816,8 +816,8 @@
     "image": "https://img.youtube.com/vi/30VJuBKCqfc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "687933e09ea6d1f40ee57c1a",
@@ -826,8 +826,8 @@
     "image": "https://img.youtube.com/vi/qficY1VvyNY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Reenukumar",
-    "artistSlug": "reenukumar"
+    "channel": "Reenukumar",
+    "channelSlug": "reenukumar"
   },
   {
     "id": "687939cc9ea6d1f40ee57c59",
@@ -836,8 +836,8 @@
     "image": "https://img.youtube.com/vi/NDLCtlFUEs0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nehemiah Kulothungan",
-    "artistSlug": "nehemiah-kulothungan"
+    "channel": "Nehemiah Kulothungan",
+    "channelSlug": "nehemiah-kulothungan"
   },
   {
     "id": "6887d2fa7b0879ec9396203d",
@@ -846,8 +846,8 @@
     "image": "https://img.youtube.com/vi/8g0yfxKOwuk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Songs of Worship",
-    "artistSlug": "songs-of-worship"
+    "channel": "Songs of Worship",
+    "channelSlug": "songs-of-worship"
   },
   {
     "id": "6888db6e89b30571380eb88f",
@@ -856,8 +856,8 @@
     "image": "https://img.youtube.com/vi/BdR3r_Fk5nA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "688a6638043047aacbae40e2",
@@ -866,8 +866,8 @@
     "image": "https://img.youtube.com/vi/OMjMNaa4DEg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "688a6bb4043047aacbae40fe",
@@ -876,8 +876,8 @@
     "image": "https://img.youtube.com/vi/jzlgMY750P8/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Reenukumar",
-    "artistSlug": "reenukumar"
+    "channel": "Reenukumar",
+    "channelSlug": "reenukumar"
   },
   {
     "id": "688baa575f4e0ccc84538ec4",
@@ -886,8 +886,8 @@
     "image": "https://img.youtube.com/vi/dJtch6dbE10/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "688ce5c3bf7444bf955b32f3",
@@ -896,8 +896,8 @@
     "image": "https://img.youtube.com/vi/yl320WmYCwM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Thanga Selvam",
-    "artistSlug": "thanga-selvam"
+    "channel": "Thanga Selvam",
+    "channelSlug": "thanga-selvam"
   },
   {
     "id": "688f960aa2e11da22b7a62c2",
@@ -906,8 +906,8 @@
     "image": "https://img.youtube.com/vi/Se5pUTFnwx0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "688fa4ea30d310886c2e490d",
@@ -916,8 +916,8 @@
     "image": "https://img.youtube.com/vi/JKQR8FZcTRM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble Ministries",
-    "artistSlug": "amit-kamble-ministries"
+    "channel": "Amit Kamble Ministries",
+    "channelSlug": "amit-kamble-ministries"
   },
   {
     "id": "689240fcb445466d0b044da2",
@@ -926,8 +926,8 @@
     "image": "https://img.youtube.com/vi/ZmLYSGvbQ9c/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "68924a03b445466d0b044dd1",
@@ -936,8 +936,8 @@
     "image": "https://img.youtube.com/vi/IWnRLwhzY3I/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "68937ab3ba495da24bd02c2f",
@@ -946,8 +946,8 @@
     "image": "https://img.youtube.com/vi/7Qyz0_G4L-o/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "68982adb7e6295403882d0d3",
@@ -956,8 +956,8 @@
     "image": "https://img.youtube.com/vi/zvoq7SL_BXg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "68985efe7e6295403882d116",
@@ -966,8 +966,8 @@
     "image": "https://img.youtube.com/vi/getozwPDpNc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "6898e2e8aa885aea80eb4445",
@@ -976,8 +976,8 @@
     "image": "https://img.youtube.com/vi/Fjt1LgMGnGM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rajat BK",
-    "artistSlug": "rajat-bk"
+    "channel": "Rajat BK",
+    "channelSlug": "rajat-bk"
   },
   {
     "id": "689cd54bd05617fc26d7406f",
@@ -986,8 +986,8 @@
     "image": "https://img.youtube.com/vi/0GW9_fI_Glc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Benny Joshua Ministries",
-    "artistSlug": "benny-joshua-ministries"
+    "channel": "Benny Joshua Ministries",
+    "channelSlug": "benny-joshua-ministries"
   },
   {
     "id": "689f1c52debbb81d1d09086e",
@@ -996,8 +996,8 @@
     "image": "https://img.youtube.com/vi/crZeBjYu3jg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "689f298fdebbb81d1d090892",
@@ -1006,8 +1006,8 @@
     "image": "https://img.youtube.com/vi/bvzAG2JomhI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "689f2fefdebbb81d1d0908be",
@@ -1016,8 +1016,8 @@
     "image": "https://img.youtube.com/vi/obt9hSq3K0Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rajat BK",
-    "artistSlug": "rajat-bk"
+    "channel": "Rajat BK",
+    "channelSlug": "rajat-bk"
   },
   {
     "id": "689f3422debbb81d1d0908e1",
@@ -1026,8 +1026,8 @@
     "image": "https://img.youtube.com/vi/TaOWiqW0peY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "68a0c41701be06ac6c6018a0",
@@ -1036,8 +1036,8 @@
     "image": "https://img.youtube.com/vi/-TkLcz9dATo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Akshay Mathews",
-    "artistSlug": "akshay-mathews"
+    "channel": "Akshay Mathews",
+    "channelSlug": "akshay-mathews"
   },
   {
     "id": "68a0cb3601be06ac6c6018d6",
@@ -1046,8 +1046,8 @@
     "image": "https://img.youtube.com/vi/qQEo3tC8baA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "68a617248c33be2011ef51c0",
@@ -1056,8 +1056,8 @@
     "image": "https://img.youtube.com/vi/l4q2BZ2htH4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "68ab41acea9b90f25706dda7",
@@ -1066,8 +1066,8 @@
     "image": "https://img.youtube.com/vi/SxBmoFrPAiA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "68adfc2bed59dad9d918b566",
@@ -1076,8 +1076,8 @@
     "image": "https://img.youtube.com/vi/SIYN64TsP-k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "TKT Worship",
-    "artistSlug": "tkt-worship"
+    "channel": "TKT Worship",
+    "channelSlug": "tkt-worship"
   },
   {
     "id": "68af3351aa8d17c286810a44",
@@ -1086,8 +1086,8 @@
     "image": "https://img.youtube.com/vi/gOu4I86LoO8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Roney Maben",
-    "artistSlug": "roney-maben"
+    "channel": "Roney Maben",
+    "channelSlug": "roney-maben"
   },
   {
     "id": "68af47fbaa8d17c286810a8d",
@@ -1096,8 +1096,8 @@
     "image": "https://img.youtube.com/vi/N_fMqThQuAs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Raju Dsilva",
-    "artistSlug": "raju-dsilva"
+    "channel": "Raju Dsilva",
+    "channelSlug": "raju-dsilva"
   },
   {
     "id": "68b5bf865ef012a5bc447b09",
@@ -1106,8 +1106,8 @@
     "image": "https://img.youtube.com/vi/eRTy8NX-QHk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "68b5ce8a5ef012a5bc447b4e",
@@ -1116,8 +1116,8 @@
     "image": "https://img.youtube.com/vi/jY8V3gKzbSs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "68b5d8d85ef012a5bc447b78",
@@ -1126,8 +1126,8 @@
     "image": "https://img.youtube.com/vi/wVWKPSOT5AM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "68b5e1af5ef012a5bc447ba1",
@@ -1136,8 +1136,8 @@
     "image": "https://img.youtube.com/vi/r2LnHglXCak/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Giftson Durai",
-    "artistSlug": "giftson-durai "
+    "channel": "Giftson Durai",
+    "channelSlug": "giftson-durai "
   },
   {
     "id": "68b7389c11b570af5b3f5b3a",
@@ -1146,8 +1146,8 @@
     "image": "https://img.youtube.com/vi/JY7ixjP5bzg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Benny Joshua Ministries",
-    "artistSlug": "benny-joshua-ministries"
+    "channel": "Benny Joshua Ministries",
+    "channelSlug": "benny-joshua-ministries"
   },
   {
     "id": "68bc6fa87de5fb2e51d1c505",
@@ -1156,8 +1156,8 @@
     "image": "https://img.youtube.com/vi/X8LzZAeHSrQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Anish Masih",
-    "artistSlug": "anish-masih"
+    "channel": "Anish Masih",
+    "channelSlug": "anish-masih"
   },
   {
     "id": "68bdbc5d850ece7960d2824a",
@@ -1166,8 +1166,8 @@
     "image": "https://img.youtube.com/vi/1MDS1VQnTcc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Anish Masih",
-    "artistSlug": "anish-masih"
+    "channel": "Anish Masih",
+    "channelSlug": "anish-masih"
   },
   {
     "id": "68bdc53a850ece7960d28280",
@@ -1176,8 +1176,8 @@
     "image": "https://img.youtube.com/vi/hTIryLd9rDY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "68c06f84e2b13eca6e512ee6",
@@ -1186,8 +1186,8 @@
     "image": "https://img.youtube.com/vi/oQeIxdQY-kM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "68c073a6e2b13eca6e512f25",
@@ -1196,8 +1196,8 @@
     "image": "https://img.youtube.com/vi/sc_SqDQAd40/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Thanga Selvam",
-    "artistSlug": "thanga-selvam"
+    "channel": "Thanga Selvam",
+    "channelSlug": "thanga-selvam"
   },
   {
     "id": "68c1d008f158be37678854f2",
@@ -1206,8 +1206,8 @@
     "image": "https://img.youtube.com/vi/WkVP5Nzxxv0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rajat BK",
-    "artistSlug": "rajat-bk"
+    "channel": "Rajat BK",
+    "channelSlug": "rajat-bk"
   },
   {
     "id": "68c1d4a8f158be376788551a",
@@ -1216,8 +1216,8 @@
     "image": "https://img.youtube.com/vi/QDZ6LuGXg-8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "68ceee43e4eb1228ea33244d",
@@ -1226,8 +1226,8 @@
     "image": "https://img.youtube.com/vi/xoR12btzFR0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "68d1a66c351f902cbbb36e1a",
@@ -1236,8 +1236,8 @@
     "image": "https://img.youtube.com/vi/Hsc9mk9ZySE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "68dace47bd814968aeec8b29",
@@ -1246,8 +1246,8 @@
     "image": "https://img.youtube.com/vi/wjwZAY3jW8Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Ranjit Jacob Abraham",
-    "artistSlug": "ranjit-jacob-abraham"
+    "channel": "Ranjit Jacob Abraham",
+    "channelSlug": "ranjit-jacob-abraham"
   },
   {
     "id": "68db4b96aadb44588840c0f5",
@@ -1256,8 +1256,8 @@
     "image": "https://img.youtube.com/vi/AvPEbvW_Idc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Giftson Durai",
-    "artistSlug": "giftson-durai "
+    "channel": "Giftson Durai",
+    "channelSlug": "giftson-durai "
   },
   {
     "id": "68db8da092d8be2e9538d9db",
@@ -1266,8 +1266,8 @@
     "image": "https://img.youtube.com/vi/x9lcQ0QYJao/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Tripla Music",
-    "artistSlug": "tripla-music"
+    "channel": "Tripla Music",
+    "channelSlug": "tripla-music"
   },
   {
     "id": "68dc3d5272cc2940295a7fcd",
@@ -1276,8 +1276,8 @@
     "image": "https://img.youtube.com/vi/ff-jbtiby30/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "City Harvest Church",
-    "artistSlug": "city-harvest-church"
+    "channel": "City Harvest Church",
+    "channelSlug": "city-harvest-church"
   },
   {
     "id": "68e0e2f09646c56296459d1b",
@@ -1286,8 +1286,8 @@
     "image": "https://img.youtube.com/vi/vDAyShkFH_g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Gather25",
-    "artistSlug": "gather25"
+    "channel": "Gather25",
+    "channelSlug": "gather25"
   },
   {
     "id": "68e16016687811d46e04dc36",
@@ -1296,8 +1296,8 @@
     "image": "https://img.youtube.com/vi/hCMSz_mKbTo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "68ea98d173498a2648cfa788",
@@ -1306,8 +1306,8 @@
     "image": "https://img.youtube.com/vi/mDxBKE4D85A/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glorify Christ",
-    "artistSlug": "glorify-christ"
+    "channel": "Glorify Christ",
+    "channelSlug": "glorify-christ"
   },
   {
     "id": "68ee5e62135e6f3a693c1617",
@@ -1316,8 +1316,8 @@
     "image": "https://img.youtube.com/vi/eRNhprrP97c/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "KR Records",
-    "artistSlug": "kr-records"
+    "channel": "KR Records",
+    "channelSlug": "kr-records"
   },
   {
     "id": "68ef2795518b42a6de9d2202",
@@ -1326,8 +1326,8 @@
     "image": "https://img.youtube.com/vi/53EDt3S3sKA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble Ministries",
-    "artistSlug": "amit-kamble-ministries"
+    "channel": "Amit Kamble Ministries",
+    "channelSlug": "amit-kamble-ministries"
   },
   {
     "id": "68f0046e0db50c6b8c70f83d",
@@ -1336,8 +1336,8 @@
     "image": "https://img.youtube.com/vi/EREfHHr3wVg/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "68f06a141869e9f2e5dbbe0b",
@@ -1346,8 +1346,8 @@
     "image": "https://img.youtube.com/vi/4q6Jf93xRzo/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "68f0fc961869e9f2e5dbbe6b",
@@ -1356,8 +1356,8 @@
     "image": "https://img.youtube.com/vi/3_Hl3hhFufQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "68f1072a1869e9f2e5dbbebc",
@@ -1366,8 +1366,8 @@
     "image": "https://img.youtube.com/vi/EQfsayqDn0g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "68f280ec4a352041deb67103",
@@ -1376,8 +1376,8 @@
     "image": "https://img.youtube.com/vi/cej4vn4sWtE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "68f517745b4a7d45361b45a6",
@@ -1386,8 +1386,8 @@
     "image": "https://img.youtube.com/vi/1Mv8BHj9lE4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Hemant Sharma",
-    "artistSlug": "hemant-sharma"
+    "channel": "Hemant Sharma",
+    "channelSlug": "hemant-sharma"
   },
   {
     "id": "68f6644ec1d9d73f27d7da8d",
@@ -1396,8 +1396,8 @@
     "image": "https://img.youtube.com/vi/eouIzFfaaus/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ne",
-    "artist": "Living Water Worship",
-    "artistSlug": "living-water-worship"
+    "channel": "Living Water Worship",
+    "channelSlug": "living-water-worship"
   },
   {
     "id": "68f706eff8705215e5382df6",
@@ -1406,8 +1406,8 @@
     "image": "https://img.youtube.com/vi/8GbBCDJh2Wo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Akshay Mathews",
-    "artistSlug": "akshay-mathews"
+    "channel": "Akshay Mathews",
+    "channelSlug": "akshay-mathews"
   },
   {
     "id": "68f77fb4f8705215e5382e20",
@@ -1416,8 +1416,8 @@
     "image": "https://img.youtube.com/vi/CO19nB364k4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Hillsong Worship",
-    "artistSlug": "hillsong-worship"
+    "channel": "Hillsong Worship",
+    "channelSlug": "hillsong-worship"
   },
   {
     "id": "68f78b9e3f2099a2a713ceff",
@@ -1426,8 +1426,8 @@
     "image": "https://img.youtube.com/vi/DeLRlt_rud0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sekel Jeet",
-    "artistSlug": "sekel-jeet"
+    "channel": "Sekel Jeet",
+    "channelSlug": "sekel-jeet"
   },
   {
     "id": "68f795053f2099a2a713cf2d",
@@ -1436,8 +1436,8 @@
     "image": "https://img.youtube.com/vi/vTenFA0_msk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "68f7a0382ae26912100bf480",
@@ -1446,8 +1446,8 @@
     "image": "https://img.youtube.com/vi/9__ceHaHKEE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "68f7a9272ae26912100bf4a6",
@@ -1456,8 +1456,8 @@
     "image": "https://img.youtube.com/vi/Ao9KbwxXI8A/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Oasis Ministry",
-    "artistSlug": "oasis-ministry"
+    "channel": "Oasis Ministry",
+    "channelSlug": "oasis-ministry"
   },
   {
     "id": "68f7ae3e47c2034251416a27",
@@ -1466,8 +1466,8 @@
     "image": "https://img.youtube.com/vi/hOFg0CeSKgY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Oasis Ministry",
-    "artistSlug": "oasis-ministry"
+    "channel": "Oasis Ministry",
+    "channelSlug": "oasis-ministry"
   },
   {
     "id": "68f8769e47c2034251416a5b",
@@ -1476,8 +1476,8 @@
     "image": "https://img.youtube.com/vi/hk2kzCj1L6w/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Montesanto Oficial",
-    "artistSlug": "montesanto-oficial"
+    "channel": "Montesanto Oficial",
+    "channelSlug": "montesanto-oficial"
   },
   {
     "id": "68f8835891f4a190771198e7",
@@ -1486,8 +1486,8 @@
     "image": "https://img.youtube.com/vi/EFPaKEW-TDw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "CeCe Winans",
-    "artistSlug": "cece-winans"
+    "channel": "CeCe Winans",
+    "channelSlug": "cece-winans"
   },
   {
     "id": "68f897c391f4a19077119927",
@@ -1496,8 +1496,8 @@
     "image": "https://img.youtube.com/vi/1UtLVQtJRLU/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "68f89ede80f89343873cf3e5",
@@ -1506,8 +1506,8 @@
     "image": "https://img.youtube.com/vi/R2nxE_L2hg4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "68faea650a10e68c8e1f093f",
@@ -1516,8 +1516,8 @@
     "image": "https://img.youtube.com/vi/_I9LCjx0few/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Hillsong Worship",
-    "artistSlug": "hillsong-worship"
+    "channel": "Hillsong Worship",
+    "channelSlug": "hillsong-worship"
   },
   {
     "id": "68fc4ccfb92b47077cbe54dc",
@@ -1526,8 +1526,8 @@
     "image": "https://img.youtube.com/vi/1dY-X8GGPqo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Hillsong Worship",
-    "artistSlug": "hillsong-worship"
+    "channel": "Hillsong Worship",
+    "channelSlug": "hillsong-worship"
   },
   {
     "id": "68fc604fb92b47077cbe5513",
@@ -1536,8 +1536,8 @@
     "image": "https://img.youtube.com/vi/yNg3ND_YjSc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Hillsong Worship",
-    "artistSlug": "hillsong-worship"
+    "channel": "Hillsong Worship",
+    "channelSlug": "hillsong-worship"
   },
   {
     "id": "68ff0b30d8036d78dba95095",
@@ -1546,8 +1546,8 @@
     "image": "https://img.youtube.com/vi/Ndf4sBIIL8I/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Seph Schlueter",
-    "artistSlug": "seph-schlueter"
+    "channel": "Seph Schlueter",
+    "channelSlug": "seph-schlueter"
   },
   {
     "id": "68ff11fdd8036d78dba950e0",
@@ -1556,8 +1556,8 @@
     "image": "https://img.youtube.com/vi/uhsbiCd868k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "CeCe Winans",
-    "artistSlug": "cece-winans"
+    "channel": "CeCe Winans",
+    "channelSlug": "cece-winans"
   },
   {
     "id": "68ff1463d8036d78dba95110",
@@ -1566,8 +1566,8 @@
     "image": "https://img.youtube.com/vi/433tmC0DxPQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "68ff8ba6d8036d78dba9514c",
@@ -1576,8 +1576,8 @@
     "image": "https://img.youtube.com/vi/SrQiZsQUmAo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "TRIBL",
-    "artistSlug": "tribl"
+    "channel": "TRIBL",
+    "channelSlug": "tribl"
   },
   {
     "id": "68ff960dd8036d78dba951cc",
@@ -1586,8 +1586,8 @@
     "image": "https://img.youtube.com/vi/llaXJ5ouWG4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Leanna Crawford",
-    "artistSlug": "leanna-crawford"
+    "channel": "Leanna Crawford",
+    "channelSlug": "leanna-crawford"
   },
   {
     "id": "68ff9f5ad8036d78dba951eb",
@@ -1596,8 +1596,8 @@
     "image": "https://img.youtube.com/vi/RPKgdvQjMf0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "68ffabbed8036d78dba9521d",
@@ -1606,8 +1606,8 @@
     "image": "https://img.youtube.com/vi/AP9Dv5ifHEg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Joe L Barnes",
-    "artistSlug": "joe-l-barnes"
+    "channel": "Joe L Barnes",
+    "channelSlug": "joe-l-barnes"
   },
   {
     "id": "68ffb11ad8036d78dba9525d",
@@ -1616,8 +1616,8 @@
     "image": "https://img.youtube.com/vi/981YeiMgum0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Bruna Olmeda",
-    "artistSlug": "bruna-olmeda"
+    "channel": "Bruna Olmeda",
+    "channelSlug": "bruna-olmeda"
   },
   {
     "id": "68ffb728d8036d78dba9528b",
@@ -1626,8 +1626,8 @@
     "image": "https://img.youtube.com/vi/IM2nMeXvor0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Josiah Queen",
-    "artistSlug": "josiah-queen"
+    "channel": "Josiah Queen",
+    "channelSlug": "josiah-queen"
   },
   {
     "id": "690030c2bf7bbbd763ea40e3",
@@ -1636,8 +1636,8 @@
     "image": "https://img.youtube.com/vi/NGyEBhXZ2pA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ne",
-    "artist": "Prasan Pariyar Official",
-    "artistSlug": "prasan-pariyar-official"
+    "channel": "Prasan Pariyar Official",
+    "channelSlug": "prasan-pariyar-official"
   },
   {
     "id": "69003f2abf7bbbd763ea4113",
@@ -1646,8 +1646,8 @@
     "image": "https://img.youtube.com/vi/4nS4WNqzUXY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Leanna Crawford",
-    "artistSlug": "leanna-crawford"
+    "channel": "Leanna Crawford",
+    "channelSlug": "leanna-crawford"
   },
   {
     "id": "6900404abf7bbbd763ea413b",
@@ -1656,8 +1656,8 @@
     "image": "https://img.youtube.com/vi/lNVqKwzW7cc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Josiah Queen",
-    "artistSlug": "josiah-queen"
+    "channel": "Josiah Queen",
+    "channelSlug": "josiah-queen"
   },
   {
     "id": "6900427ebf7bbbd763ea415d",
@@ -1666,8 +1666,8 @@
     "image": "https://img.youtube.com/vi/x352fBdYGZk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sons Of Sunday",
-    "artistSlug": "sons-of-sunday"
+    "channel": "Sons Of Sunday",
+    "channelSlug": "sons-of-sunday"
   },
   {
     "id": "69004397bf7bbbd763ea4176",
@@ -1676,8 +1676,8 @@
     "image": "https://img.youtube.com/vi/KeZaADiRHVI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sons Of Sunday",
-    "artistSlug": "sons-of-sunday"
+    "channel": "Sons Of Sunday",
+    "channelSlug": "sons-of-sunday"
   },
   {
     "id": "69005d1abf7bbbd763ea4191",
@@ -1686,8 +1686,8 @@
     "image": "https://img.youtube.com/vi/RS-2VnwKRs8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "69005f17bf7bbbd763ea41c1",
@@ -1696,8 +1696,8 @@
     "image": "https://img.youtube.com/vi/ayEmRj--ecU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Josiah Queen",
-    "artistSlug": "josiah-queen"
+    "channel": "Josiah Queen",
+    "channelSlug": "josiah-queen"
   },
   {
     "id": "690066f3bf7bbbd763ea4209",
@@ -1706,8 +1706,8 @@
     "image": "https://img.youtube.com/vi/VABPXFAPnHA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sons Of Sunday",
-    "artistSlug": "sons-of-sunday"
+    "channel": "Sons Of Sunday",
+    "channelSlug": "sons-of-sunday"
   },
   {
     "id": "6900cbb9bf7bbbd763ea4223",
@@ -1716,8 +1716,8 @@
     "image": "https://img.youtube.com/vi/xVUU38Ni5Zo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Oasis Ministry",
-    "artistSlug": "oasis-ministry"
+    "channel": "Oasis Ministry",
+    "channelSlug": "oasis-ministry"
   },
   {
     "id": "6900cffbbf7bbbd763ea425b",
@@ -1726,8 +1726,8 @@
     "image": "https://img.youtube.com/vi/_1MfaKz_eCQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Gateway Worship Español",
-    "artistSlug": "gateway-worship-espanol"
+    "channel": "Gateway Worship Español",
+    "channelSlug": "gateway-worship-espanol"
   },
   {
     "id": "6900d0e9bf7bbbd763ea4272",
@@ -1736,8 +1736,8 @@
     "image": "https://img.youtube.com/vi/XsD_NIGDRSo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Montesanto Oficial",
-    "artistSlug": "montesanto-oficial"
+    "channel": "Montesanto Oficial",
+    "channelSlug": "montesanto-oficial"
   },
   {
     "id": "6900d5f6bf7bbbd763ea42ac",
@@ -1746,8 +1746,8 @@
     "image": "https://img.youtube.com/vi/Avi4sMPQqzI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "6900d816bf7bbbd763ea42df",
@@ -1756,8 +1756,8 @@
     "image": "https://img.youtube.com/vi/uM2z3UgulSc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "690198ee0b9f56d8258f0892",
@@ -1766,8 +1766,8 @@
     "image": "https://img.youtube.com/vi/_di8N08eDDw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "6901a6390b9f56d8258f08d0",
@@ -1776,8 +1776,8 @@
     "image": "https://img.youtube.com/vi/2wJKiOEdUsk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "6901bfb80b9f56d8258f0909",
@@ -1786,8 +1786,8 @@
     "image": "https://img.youtube.com/vi/r_qSVqzM47g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Ben Fuller",
-    "artistSlug": "ben-fuller"
+    "channel": "Ben Fuller",
+    "channelSlug": "ben-fuller"
   },
   {
     "id": "6901c2990b9f56d8258f0934",
@@ -1796,8 +1796,8 @@
     "image": "https://img.youtube.com/vi/7DXGozXslIg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Micah Tyler",
-    "artistSlug": "micah-tyler"
+    "channel": "Micah Tyler",
+    "channelSlug": "micah-tyler"
   },
   {
     "id": "6901c7ff0b9f56d8258f0955",
@@ -1806,8 +1806,8 @@
     "image": "https://img.youtube.com/vi/KtKBkpbOLPE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Cain",
-    "artistSlug": "cain"
+    "channel": "Cain",
+    "channelSlug": "cain"
   },
   {
     "id": "6901cb810b9f56d8258f0983",
@@ -1816,8 +1816,8 @@
     "image": "https://img.youtube.com/vi/Mnx-Uovcv1g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Jordan Smith",
-    "artistSlug": "jordan-smith"
+    "channel": "Jordan Smith",
+    "channelSlug": "jordan-smith"
   },
   {
     "id": "6901d1b00b9f56d8258f09b3",
@@ -1826,8 +1826,8 @@
     "image": "https://img.youtube.com/vi/0jft6MfWN6k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Terrian Woods",
-    "artistSlug": "terrian-woods"
+    "channel": "Terrian Woods",
+    "channelSlug": "terrian-woods"
   },
   {
     "id": "6902277c0b9f56d8258f09df",
@@ -1836,8 +1836,8 @@
     "image": "https://img.youtube.com/vi/whUhZWn_kT0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Lauren Daigle",
-    "artistSlug": "lauren-daigle"
+    "channel": "Lauren Daigle",
+    "channelSlug": "lauren-daigle"
   },
   {
     "id": "69022ad60b9f56d8258f09ff",
@@ -1846,8 +1846,8 @@
     "image": "https://img.youtube.com/vi/8_uJEMFF0AI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "World Impact Worship",
-    "artistSlug": "world-impact-worship"
+    "channel": "World Impact Worship",
+    "channelSlug": "world-impact-worship"
   },
   {
     "id": "69022e410b9f56d8258f0a27",
@@ -1856,8 +1856,8 @@
     "image": "https://img.youtube.com/vi/joQSZBR-UHs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6902f176122d7e175f719772",
@@ -1866,8 +1866,8 @@
     "image": "https://img.youtube.com/vi/WOE0oZwl-Mw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Leanna Crawford",
-    "artistSlug": "leanna-crawford"
+    "channel": "Leanna Crawford",
+    "channelSlug": "leanna-crawford"
   },
   {
     "id": "6902f498122d7e175f7197ad",
@@ -1876,8 +1876,8 @@
     "image": "https://img.youtube.com/vi/vnRNZNxxflc/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Hallelujah The Band",
-    "artistSlug": "hallelujah-the-band"
+    "channel": "Hallelujah The Band",
+    "channelSlug": "hallelujah-the-band"
   },
   {
     "id": "6902f894122d7e175f7197f0",
@@ -1886,8 +1886,8 @@
     "image": "https://img.youtube.com/vi/5Ld7ILh3fsc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "69030698122d7e175f719817",
@@ -1896,8 +1896,8 @@
     "image": "https://img.youtube.com/vi/a2akpYml-5U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Leanna Crawford",
-    "artistSlug": "leanna-crawford"
+    "channel": "Leanna Crawford",
+    "channelSlug": "leanna-crawford"
   },
   {
     "id": "69030e47122d7e175f719838",
@@ -1906,8 +1906,8 @@
     "image": "https://img.youtube.com/vi/y3XB5-SpFUo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "6903126b122d7e175f719854",
@@ -1916,8 +1916,8 @@
     "image": "https://img.youtube.com/vi/wqDQqx1bSzY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "69031d8b122d7e175f71987b",
@@ -1926,8 +1926,8 @@
     "image": "https://img.youtube.com/vi/Nza2jIhcVGA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Leanna Crawford",
-    "artistSlug": "leanna-crawford"
+    "channel": "Leanna Crawford",
+    "channelSlug": "leanna-crawford"
   },
   {
     "id": "69037959122d7e175f719894",
@@ -1936,8 +1936,8 @@
     "image": "https://img.youtube.com/vi/SkTJ9jklOSE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "69037bac122d7e175f7198b7",
@@ -1946,8 +1946,8 @@
     "image": "https://img.youtube.com/vi/AjrjHgsi3dA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Gerkin Mateo",
-    "artistSlug": "gerkin-mateo"
+    "channel": "Gerkin Mateo",
+    "channelSlug": "gerkin-mateo"
   },
   {
     "id": "690386a6122d7e175f7198d6",
@@ -1956,8 +1956,8 @@
     "image": "https://img.youtube.com/vi/m4K0i_ejQKE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "69039dce122d7e175f7198f2",
@@ -1966,8 +1966,8 @@
     "image": "https://img.youtube.com/vi/kj9wy5RxXmo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6903a534122d7e175f71990e",
@@ -1976,8 +1976,8 @@
     "image": "https://img.youtube.com/vi/F-h6C4LtQ8A/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "ur",
-    "artist": "Arif Bhatti",
-    "artistSlug": "arif-bhatti"
+    "channel": "Arif Bhatti",
+    "channelSlug": "arif-bhatti"
   },
   {
     "id": "6903ab06122d7e175f71993a",
@@ -1986,8 +1986,8 @@
     "image": "https://img.youtube.com/vi/ScbCMaMVHhg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Anil Kant",
-    "artistSlug": "anil-kant"
+    "channel": "Anil Kant",
+    "channelSlug": "anil-kant"
   },
   {
     "id": "6903b0d3122d7e175f71996d",
@@ -1996,8 +1996,8 @@
     "image": "https://img.youtube.com/vi/wlM7ITanAMI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jireh Worship",
-    "artistSlug": "jireh-worship"
+    "channel": "Jireh Worship",
+    "channelSlug": "jireh-worship"
   },
   {
     "id": "6904596e122d7e175f7199ad",
@@ -2006,8 +2006,8 @@
     "image": "https://img.youtube.com/vi/EYirB5ha9vQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Cain",
-    "artistSlug": "cain"
+    "channel": "Cain",
+    "channelSlug": "cain"
   },
   {
     "id": "690495a0122d7e175f7199d3",
@@ -2016,8 +2016,8 @@
     "image": "https://img.youtube.com/vi/weT9hCyMP7s/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Red Worship",
-    "artistSlug": "red-worship"
+    "channel": "Red Worship",
+    "channelSlug": "red-worship"
   },
   {
     "id": "6904a4e1122d7e175f7199f2",
@@ -2026,8 +2026,8 @@
     "image": "https://img.youtube.com/vi/G6feGXeYbkE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "SEU Worship",
-    "artistSlug": "seu-worship"
+    "channel": "SEU Worship",
+    "channelSlug": "seu-worship"
   },
   {
     "id": "6904e8c1122d7e175f719a1d",
@@ -2036,8 +2036,8 @@
     "image": "https://img.youtube.com/vi/wXSwUqIuMSY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "6904ee10122d7e175f719a64",
@@ -2046,8 +2046,8 @@
     "image": "https://img.youtube.com/vi/zhXSKuTUFSk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "NLAG Chennai",
-    "artistSlug": "nlag-chennai"
+    "channel": "NLAG Chennai",
+    "channelSlug": "nlag-chennai"
   },
   {
     "id": "6904f06e122d7e175f719a82",
@@ -2056,8 +2056,8 @@
     "image": "https://img.youtube.com/vi/MOf2bbHRoXk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sekel Jeet",
-    "artistSlug": "sekel-jeet"
+    "channel": "Sekel Jeet",
+    "channelSlug": "sekel-jeet"
   },
   {
     "id": "6904f35c122d7e175f719a99",
@@ -2066,8 +2066,8 @@
     "image": "https://img.youtube.com/vi/wEguKMN79zI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6905889d122d7e175f719ac9",
@@ -2076,8 +2076,8 @@
     "image": "https://img.youtube.com/vi/z1w7YqE9k4U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Christian Singers Music Productions",
-    "artistSlug": "christian-singers-music-productions"
+    "channel": "Christian Singers Music Productions",
+    "channelSlug": "christian-singers-music-productions"
   },
   {
     "id": "6905970d122d7e175f719b2e",
@@ -2086,8 +2086,8 @@
     "image": "https://img.youtube.com/vi/F0C-DdqjWv8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "New Life City Worship India",
-    "artistSlug": "new-life-city-worship-india"
+    "channel": "New Life City Worship India",
+    "channelSlug": "new-life-city-worship-india"
   },
   {
     "id": "690599d5122d7e175f719b5b",
@@ -2096,8 +2096,8 @@
     "image": "https://img.youtube.com/vi/EzSsh5D6qA0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "69059e05122d7e175f719ba3",
@@ -2106,8 +2106,8 @@
     "image": "https://img.youtube.com/vi/9RnzneBWS1o/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6905a031122d7e175f719bd9",
@@ -2116,8 +2116,8 @@
     "image": "https://img.youtube.com/vi/J2YhHxYbJhY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6905a31d122d7e175f719c10",
@@ -2126,8 +2126,8 @@
     "image": "https://img.youtube.com/vi/zLRsS9TM1zg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6905a4dc122d7e175f719c2f",
@@ -2136,8 +2136,8 @@
     "image": "https://img.youtube.com/vi/ex162IRs0nM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "6905a8e8122d7e175f719c6c",
@@ -2146,8 +2146,8 @@
     "image": "https://img.youtube.com/vi/iMOANXvkT2g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Planetshakerstv",
-    "artistSlug": "planetshakerstv"
+    "channel": "Planetshakerstv",
+    "channelSlug": "planetshakerstv"
   },
   {
     "id": "6905bff6122d7e175f719c98",
@@ -2156,8 +2156,8 @@
     "image": "https://img.youtube.com/vi/_aj0muq99po/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jireh Worship",
-    "artistSlug": "jireh-worship"
+    "channel": "Jireh Worship",
+    "channelSlug": "jireh-worship"
   },
   {
     "id": "6905c3a6122d7e175f719ce2",
@@ -2166,8 +2166,8 @@
     "image": "https://img.youtube.com/vi/evENi5Jq1nE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jireh Worship",
-    "artistSlug": "jireh-worship"
+    "channel": "Jireh Worship",
+    "channelSlug": "jireh-worship"
   },
   {
     "id": "6905c944122d7e175f719d22",
@@ -2176,8 +2176,8 @@
     "image": "https://img.youtube.com/vi/yglt2MFBERw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Neriah Production",
-    "artistSlug": "neriah-production"
+    "channel": "Neriah Production",
+    "channelSlug": "neriah-production"
   },
   {
     "id": "6905e2d5122d7e175f719d4d",
@@ -2186,8 +2186,8 @@
     "image": "https://img.youtube.com/vi/uYJ8m1YNHMk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Soloman Lambani",
-    "artistSlug": "soloman-lambani"
+    "channel": "Soloman Lambani",
+    "channelSlug": "soloman-lambani"
   },
   {
     "id": "6905ed88122d7e175f719d8d",
@@ -2196,8 +2196,8 @@
     "image": "https://img.youtube.com/vi/f-0_2-AYBZU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Kenny Salvadi Productions",
-    "artistSlug": "kenny-salvadi-productions"
+    "channel": "Kenny Salvadi Productions",
+    "channelSlug": "kenny-salvadi-productions"
   },
   {
     "id": "6905f1ec122d7e175f719dc5",
@@ -2206,8 +2206,8 @@
     "image": "https://img.youtube.com/vi/Nx_m6KP4AJY/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6905f3df122d7e175f719de1",
@@ -2216,8 +2216,8 @@
     "image": "https://img.youtube.com/vi/qwLhfIFmLO0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sinai Media Ministries",
-    "artistSlug": "sinai-media-ministries"
+    "channel": "Sinai Media Ministries",
+    "channelSlug": "sinai-media-ministries"
   },
   {
     "id": "690792e67d91f7acecb5a9d1",
@@ -2226,8 +2226,8 @@
     "image": "https://img.youtube.com/vi/39NWYf6B1Ok/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshu Ke Geet",
-    "artistSlug": "yeshu-ke-geet"
+    "channel": "Yeshu Ke Geet",
+    "channelSlug": "yeshu-ke-geet"
   },
   {
     "id": "6908da34c2c4ff6dc2da2ca7",
@@ -2236,8 +2236,8 @@
     "image": "https://img.youtube.com/vi/AZsvJf35GPs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "6908e589c2c4ff6dc2da2cd5",
@@ -2246,8 +2246,8 @@
     "image": "https://img.youtube.com/vi/MCFEamstFLc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "6908f9d586b4a443349e8502",
@@ -2256,8 +2256,8 @@
     "image": "https://img.youtube.com/vi/Rm7GrfJgcP8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Mark Tribhuvan",
-    "artistSlug": "mark-tribhuvan"
+    "channel": "Mark Tribhuvan",
+    "channelSlug": "mark-tribhuvan"
   },
   {
     "id": "6908fdb386b4a443349e8525",
@@ -2266,8 +2266,8 @@
     "image": "https://img.youtube.com/vi/yWvBdLdvTFc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Mark Tribhuvan",
-    "artistSlug": "mark-tribhuvan"
+    "channel": "Mark Tribhuvan",
+    "channelSlug": "mark-tribhuvan"
   },
   {
     "id": "6909bc32de1e5b4c59ac6105",
@@ -2276,8 +2276,8 @@
     "image": "https://img.youtube.com/vi/6bHuT417LIQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Arif Bhatti",
-    "artistSlug": "arif-bhatti"
+    "channel": "Arif Bhatti",
+    "channelSlug": "arif-bhatti"
   },
   {
     "id": "6909c0d4de1e5b4c59ac611d",
@@ -2286,8 +2286,8 @@
     "image": "https://img.youtube.com/vi/hcNEuOz_P8A/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "NCS Prime Music",
-    "artistSlug": "ncs-prime-music"
+    "channel": "NCS Prime Music",
+    "channelSlug": "ncs-prime-music"
   },
   {
     "id": "690b76d1322cc58ca43f6789",
@@ -2296,8 +2296,8 @@
     "image": "https://img.youtube.com/vi/5uomAGvthV4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Velpula Evan Mark Ronald",
-    "artistSlug": "velpula-evan-mark-ronald"
+    "channel": "Velpula Evan Mark Ronald",
+    "channelSlug": "velpula-evan-mark-ronald"
   },
   {
     "id": "690b87e6322cc58ca43f67ab",
@@ -2306,8 +2306,8 @@
     "image": "https://img.youtube.com/vi/mrclCxsCT_w/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Thomas Sona",
-    "artistSlug": "thomas-sona"
+    "channel": "Thomas Sona",
+    "channelSlug": "thomas-sona"
   },
   {
     "id": "690b8e71322cc58ca43f67da",
@@ -2316,8 +2316,8 @@
     "image": "https://img.youtube.com/vi/dQaZczuVZuE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Thomas Sona",
-    "artistSlug": "thomas-sona"
+    "channel": "Thomas Sona",
+    "channelSlug": "thomas-sona"
   },
   {
     "id": "690b947d322cc58ca43f6800",
@@ -2326,8 +2326,8 @@
     "image": "https://img.youtube.com/vi/-K13mwCORiM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Thomas Sona",
-    "artistSlug": "thomas-sona"
+    "channel": "Thomas Sona",
+    "channelSlug": "thomas-sona"
   },
   {
     "id": "690b992d322cc58ca43f6832",
@@ -2336,8 +2336,8 @@
     "image": "https://img.youtube.com/vi/3-zVfM9SJQA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Leeland",
-    "artistSlug": "leeland"
+    "channel": "Leeland",
+    "channelSlug": "leeland"
   },
   {
     "id": "690c314ae29250ae320719a9",
@@ -2346,8 +2346,8 @@
     "image": "https://img.youtube.com/vi/O9STcqpo1fA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "690c3b09e29250ae320719bc",
@@ -2356,8 +2356,8 @@
     "image": "https://img.youtube.com/vi/cheg9-JJmVk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "TKT Worship",
-    "artistSlug": "tkt-worship"
+    "channel": "TKT Worship",
+    "channelSlug": "tkt-worship"
   },
   {
     "id": "690c4053e29250ae320719d4",
@@ -2366,8 +2366,8 @@
     "image": "https://img.youtube.com/vi/45juGyQzf14/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Romika Masih",
-    "artistSlug": "romika-masih"
+    "channel": "Romika Masih",
+    "channelSlug": "romika-masih"
   },
   {
     "id": "690c4415e29250ae32071a01",
@@ -2376,8 +2376,8 @@
     "image": "https://img.youtube.com/vi/sCTmqRAnA_Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Shamey Hans",
-    "artistSlug": "shamey-hans"
+    "channel": "Shamey Hans",
+    "channelSlug": "shamey-hans"
   },
   {
     "id": "690c6a34e29250ae32071a28",
@@ -2386,8 +2386,8 @@
     "image": "https://img.youtube.com/vi/kkYAKz8jQ2g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "F2F Music",
-    "artistSlug": "f2f-music"
+    "channel": "F2F Music",
+    "channelSlug": "f2f-music"
   },
   {
     "id": "690ca354e29250ae32071a66",
@@ -2396,8 +2396,8 @@
     "image": "https://img.youtube.com/vi/Xej5sZFraJg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "Robinson Shalu",
-    "artistSlug": "robinson-shalu"
+    "channel": "Robinson Shalu",
+    "channelSlug": "robinson-shalu"
   },
   {
     "id": "690cd3e4e29250ae32071a8d",
@@ -2406,8 +2406,8 @@
     "image": "https://img.youtube.com/vi/Ec1ngMHoVkE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "690cdf9fe29250ae32071ab4",
@@ -2416,8 +2416,8 @@
     "image": "https://img.youtube.com/vi/U4kBMVRZDDg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Geet Production",
-    "artistSlug": "geet-production"
+    "channel": "Geet Production",
+    "channelSlug": "geet-production"
   },
   {
     "id": "690ce4aee29250ae32071ae6",
@@ -2426,8 +2426,8 @@
     "image": "https://img.youtube.com/vi/eRAkyLWaCIo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Velpula Evan Mark Ronald",
-    "artistSlug": "velpula-evan-mark-ronald"
+    "channel": "Velpula Evan Mark Ronald",
+    "channelSlug": "velpula-evan-mark-ronald"
   },
   {
     "id": "690cec6ae29250ae32071b17",
@@ -2436,8 +2436,8 @@
     "image": "https://img.youtube.com/vi/wnGMLvGeVXQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Benny Joshua Ministries",
-    "artistSlug": "benny-joshua-ministries"
+    "channel": "Benny Joshua Ministries",
+    "channelSlug": "benny-joshua-ministries"
   },
   {
     "id": "690d8ec4e29250ae32071b31",
@@ -2446,8 +2446,8 @@
     "image": "https://img.youtube.com/vi/YbGFYaA0SbY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "690d9060e29250ae32071b69",
@@ -2456,8 +2456,8 @@
     "image": "https://img.youtube.com/vi/Gfz7cggPMYU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Arthur Callazans",
-    "artistSlug": "arthur-callazans"
+    "channel": "Arthur Callazans",
+    "channelSlug": "arthur-callazans"
   },
   {
     "id": "690e005489e3631f2b2720c8",
@@ -2466,8 +2466,8 @@
     "image": "https://img.youtube.com/vi/CvCTsXua6yE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Christ Fellowship Worship",
-    "artistSlug": "christ-fellowship-worship"
+    "channel": "Christ Fellowship Worship",
+    "channelSlug": "christ-fellowship-worship"
   },
   {
     "id": "690e1d6289e3631f2b2720eb",
@@ -2476,8 +2476,8 @@
     "image": "https://img.youtube.com/vi/kNcB2lVghzI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Akshay Mathews",
-    "artistSlug": "akshay-mathews"
+    "channel": "Akshay Mathews",
+    "channelSlug": "akshay-mathews"
   },
   {
     "id": "690e2e4789e3631f2b272118",
@@ -2486,8 +2486,8 @@
     "image": "https://img.youtube.com/vi/LAxufT5LIQg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Common Gathering",
-    "artistSlug": "common-gathering"
+    "channel": "Common Gathering",
+    "channelSlug": "common-gathering"
   },
   {
     "id": "690f344915eb2cf8caa0b1a0",
@@ -2496,8 +2496,8 @@
     "image": "https://img.youtube.com/vi/XD97OG6VVlk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "690f6b269193e8c2fccf22c4",
@@ -2506,8 +2506,8 @@
     "image": "https://img.youtube.com/vi/beImveaTvW4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Jesus Country Music Group",
-    "artistSlug": "jesus-country-music-group"
+    "channel": "Jesus Country Music Group",
+    "channelSlug": "jesus-country-music-group"
   },
   {
     "id": "6910c1a9c4c317979510471d",
@@ -2516,8 +2516,8 @@
     "image": "https://img.youtube.com/vi/Txdi0xJCIrI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6914289ba4e8e98cb568cc43",
@@ -2526,8 +2526,8 @@
     "image": "https://img.youtube.com/vi/xnmvZ_aEWJM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Restoration Worship",
-    "artistSlug": "restoration-worship"
+    "channel": "Restoration Worship",
+    "channelSlug": "restoration-worship"
   },
   {
     "id": "691462e0a4e8e98cb568cd1f",
@@ -2536,8 +2536,8 @@
     "image": "https://img.youtube.com/vi/-fUF8aJKEkw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "6914a0e2a4e8e98cb568cd7c",
@@ -2546,8 +2546,8 @@
     "image": "https://img.youtube.com/vi/nbtpbK7SwA0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Caleb Nathaniel",
-    "artistSlug": "caleb-nathaniel"
+    "channel": "Caleb Nathaniel",
+    "channelSlug": "caleb-nathaniel"
   },
   {
     "id": "6914cd3ea4e8e98cb568ce36",
@@ -2556,8 +2556,8 @@
     "image": "https://img.youtube.com/vi/-ZRD0J7bpLk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Outcast Media",
-    "artistSlug": "outcast-media"
+    "channel": "Outcast Media",
+    "channelSlug": "outcast-media"
   },
   {
     "id": "6915762da4e8e98cb568ce5e",
@@ -2566,8 +2566,8 @@
     "image": "https://img.youtube.com/vi/q5clUfsV3ZI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "69157e02a4e8e98cb568cea0",
@@ -2576,8 +2576,8 @@
     "image": "https://img.youtube.com/vi/SzdHj13bohQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Leb Shana",
-    "artistSlug": "leb-shana"
+    "channel": "Leb Shana",
+    "channelSlug": "leb-shana"
   },
   {
     "id": "69161f4554a299951c558409",
@@ -2586,8 +2586,8 @@
     "image": "https://img.youtube.com/vi/m0Kxdv9_3-0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "LifeBridge",
-    "artistSlug": "lifebridge"
+    "channel": "LifeBridge",
+    "channelSlug": "lifebridge"
   },
   {
     "id": "69171cf854a299951c55844a",
@@ -2596,8 +2596,8 @@
     "image": "https://img.youtube.com/vi/INwzz7gFHgw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6919fe2054a299951c55846c",
@@ -2606,8 +2606,8 @@
     "image": "https://img.youtube.com/vi/yWC8gya18zs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Matti Teji",
-    "artistSlug": "matti-teji"
+    "channel": "Matti Teji",
+    "channelSlug": "matti-teji"
   },
   {
     "id": "691a06f854a299951c55849f",
@@ -2616,8 +2616,8 @@
     "image": "https://img.youtube.com/vi/erIpO1CoC8Y/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "CeCe Winans",
-    "artistSlug": "cece-winans"
+    "channel": "CeCe Winans",
+    "channelSlug": "cece-winans"
   },
   {
     "id": "691a178154a299951c5584c7",
@@ -2626,8 +2626,8 @@
     "image": "https://img.youtube.com/vi/M-DsWxCp4Cw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Friends of GOD Ministries",
-    "artistSlug": "friends-of-god-ministries"
+    "channel": "Friends of GOD Ministries",
+    "channelSlug": "friends-of-god-ministries"
   },
   {
     "id": "691ab22854a299951c5584e3",
@@ -2636,8 +2636,8 @@
     "image": "https://img.youtube.com/vi/99w8bQjlaLw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rajat BK",
-    "artistSlug": "rajat-bk"
+    "channel": "Rajat BK",
+    "channelSlug": "rajat-bk"
   },
   {
     "id": "691ab83e54a299951c5584fd",
@@ -2646,8 +2646,8 @@
     "image": "https://img.youtube.com/vi/QgyE0bDZfRo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Friends of GOD Ministries",
-    "artistSlug": "friends-of-god-ministries"
+    "channel": "Friends of GOD Ministries",
+    "channelSlug": "friends-of-god-ministries"
   },
   {
     "id": "691abb1d54a299951c558513",
@@ -2656,8 +2656,8 @@
     "image": "https://img.youtube.com/vi/YgqgxPZfk6c/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Friends of GOD Ministries",
-    "artistSlug": "friends-of-god-ministries"
+    "channel": "Friends of GOD Ministries",
+    "channelSlug": "friends-of-god-ministries"
   },
   {
     "id": "691b342654a299951c55853b",
@@ -2666,8 +2666,8 @@
     "image": "https://img.youtube.com/vi/VvgIxHzfEDo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Karen Espinosa",
-    "artistSlug": "karen-espinosa"
+    "channel": "Karen Espinosa",
+    "channelSlug": "karen-espinosa"
   },
   {
     "id": "691b37c854a299951c55856f",
@@ -2676,8 +2676,8 @@
     "image": "https://img.youtube.com/vi/VWsLGE_J5lA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Mark Tribhuvan",
-    "artistSlug": "mark-tribhuvan"
+    "channel": "Mark Tribhuvan",
+    "channelSlug": "mark-tribhuvan"
   },
   {
     "id": "691ca4ce8dd2431928c4bf0c",
@@ -2686,8 +2686,8 @@
     "image": "https://img.youtube.com/vi/axhzpqgF8YY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "The Belonging Co",
-    "artistSlug": "the-belonging-co"
+    "channel": "The Belonging Co",
+    "channelSlug": "the-belonging-co"
   },
   {
     "id": "691cac868dd2431928c4bf49",
@@ -2696,8 +2696,8 @@
     "image": "https://img.youtube.com/vi/AnW5PGX_TMs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Friends of GOD Ministries",
-    "artistSlug": "friends-of-god-ministries"
+    "channel": "Friends of GOD Ministries",
+    "channelSlug": "friends-of-god-ministries"
   },
   {
     "id": "691de2f3729e92c74bbff5bb",
@@ -2706,8 +2706,8 @@
     "image": "https://img.youtube.com/vi/jiErbpZHfbk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Skillet",
-    "artistSlug": "skillet"
+    "channel": "Skillet",
+    "channelSlug": "skillet"
   },
   {
     "id": "691de4b4729e92c74bbff5dc",
@@ -2716,8 +2716,8 @@
     "image": "https://img.youtube.com/vi/Fk7MKGLEaZ0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Danny Gokey",
-    "artistSlug": "danny-gokey"
+    "channel": "Danny Gokey",
+    "channelSlug": "danny-gokey"
   },
   {
     "id": "691f5c8a729e92c74bbff601",
@@ -2726,8 +2726,8 @@
     "image": "https://img.youtube.com/vi/Cs8Iq7cxou0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Anne Wilson",
-    "artistSlug": "anne-wilson"
+    "channel": "Anne Wilson",
+    "channelSlug": "anne-wilson"
   },
   {
     "id": "691f5e5e729e92c74bbff62d",
@@ -2736,8 +2736,8 @@
     "image": "https://img.youtube.com/vi/uYHpJnfy2lQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Casting Crowns",
-    "artistSlug": "casting-crowns"
+    "channel": "Casting Crowns",
+    "channelSlug": "casting-crowns"
   },
   {
     "id": "691f5fd0729e92c74bbff652",
@@ -2746,8 +2746,8 @@
     "image": "https://img.youtube.com/vi/rYQ5yXCc_CA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "691f6137729e92c74bbff678",
@@ -2756,8 +2756,8 @@
     "image": "https://img.youtube.com/vi/jNr4YT5JGr0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "691f63f0729e92c74bbff6aa",
@@ -2766,8 +2766,8 @@
     "image": "https://img.youtube.com/vi/nxDKchUybN0/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Crowder",
-    "artistSlug": "crowder"
+    "channel": "Crowder",
+    "channelSlug": "crowder"
   },
   {
     "id": "691f6511729e92c74bbff6d9",
@@ -2776,8 +2776,8 @@
     "image": "https://img.youtube.com/vi/6CP08HOcWGY/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "691fcca1729e92c74bbff6f9",
@@ -2786,8 +2786,8 @@
     "image": "https://img.youtube.com/vi/sPiFsJDgIq8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "692005a1729e92c74bbff716",
@@ -2796,8 +2796,8 @@
     "image": "https://img.youtube.com/vi/5kVoRK4HRic/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "692007a4729e92c74bbff74c",
@@ -2806,8 +2806,8 @@
     "image": "https://img.youtube.com/vi/21uM37m9Oy0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6920a5863b54b3e8564f7290",
@@ -2816,8 +2816,8 @@
     "image": "https://img.youtube.com/vi/4_M4eBEYjrE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6920ae583b54b3e8564f72ab",
@@ -2826,8 +2826,8 @@
     "image": "https://img.youtube.com/vi/DK_cb8HOxb4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Charity Gayle",
-    "artistSlug": "charity-gayle"
+    "channel": "Charity Gayle",
+    "channelSlug": "charity-gayle"
   },
   {
     "id": "692462fa3b54b3e8564f72ea",
@@ -2836,8 +2836,8 @@
     "image": "https://img.youtube.com/vi/ztA2OHbKuhk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Kenny Salvadi Productions",
-    "artistSlug": "kenny-salvadi-productions"
+    "channel": "Kenny Salvadi Productions",
+    "channelSlug": "kenny-salvadi-productions"
   },
   {
     "id": "692490a13b54b3e8564f7306",
@@ -2846,8 +2846,8 @@
     "image": "https://img.youtube.com/vi/vyUFIQSfk6A/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "69249f5f3b54b3e8564f731c",
@@ -2856,8 +2856,8 @@
     "image": "https://img.youtube.com/vi/Ov0AbUEo-Ro/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Kenny Salvadi Productions",
-    "artistSlug": "kenny-salvadi-productions"
+    "channel": "Kenny Salvadi Productions",
+    "channelSlug": "kenny-salvadi-productions"
   },
   {
     "id": "69253edd3b54b3e8564f733d",
@@ -2866,8 +2866,8 @@
     "image": "https://img.youtube.com/vi/ePn5Vzx7teg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "6925c41bd045ecd2960186ac",
@@ -2876,8 +2876,8 @@
     "image": "https://img.youtube.com/vi/rVgT-wx9aVc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "6925caaed045ecd2960186ee",
@@ -2886,8 +2886,8 @@
     "image": "https://img.youtube.com/vi/cUAOnBwvtyk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "69270705d045ecd29601873b",
@@ -2896,8 +2896,8 @@
     "image": "https://img.youtube.com/vi/T1LRsp8qBY0/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Forrest Frank",
-    "artistSlug": "forrest-frank"
+    "channel": "Forrest Frank",
+    "channelSlug": "forrest-frank"
   },
   {
     "id": "692731d2d045ecd29601875f",
@@ -2906,8 +2906,8 @@
     "image": "https://img.youtube.com/vi/cbIgEno37Z0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Ravinder Vottepu",
-    "artistSlug": "ravinder-vottepu"
+    "channel": "Ravinder Vottepu",
+    "channelSlug": "ravinder-vottepu"
   },
   {
     "id": "692733eed045ecd29601877c",
@@ -2916,8 +2916,8 @@
     "image": "https://img.youtube.com/vi/ZWZPCMu4oaU/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "ur",
-    "artist": "Hallelujah The Band",
-    "artistSlug": "hallelujah-the-band"
+    "channel": "Hallelujah The Band",
+    "channelSlug": "hallelujah-the-band"
   },
   {
     "id": "69273596d045ecd296018799",
@@ -2926,8 +2926,8 @@
     "image": "https://img.youtube.com/vi/MQ3SY9iTCkE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Gopal Masih",
-    "artistSlug": "gopal-masih"
+    "channel": "Gopal Masih",
+    "channelSlug": "gopal-masih"
   },
   {
     "id": "6928920cae0959bd492f4733",
@@ -2936,8 +2936,8 @@
     "image": "https://img.youtube.com/vi/vTnk_0_pjmE/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "692895dcae0959bd492f4777",
@@ -2946,8 +2946,8 @@
     "image": "https://img.youtube.com/vi/SC_oL9Rl99Q/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "69299204ae0959bd492f47b8",
@@ -2956,8 +2956,8 @@
     "image": "https://img.youtube.com/vi/i-ajM6XIyZQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "6929971cae0959bd492f47e9",
@@ -2966,8 +2966,8 @@
     "image": "https://img.youtube.com/vi/3EyWAum9a9c/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Brandon Lake",
-    "artistSlug": "brandon-lake"
+    "channel": "Brandon Lake",
+    "channelSlug": "brandon-lake"
   },
   {
     "id": "6929a3c4ae0959bd492f4824",
@@ -2976,8 +2976,8 @@
     "image": "https://img.youtube.com/vi/LLnUI9OQ59g/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Shamey Hans",
-    "artistSlug": "shamey-hans"
+    "channel": "Shamey Hans",
+    "channelSlug": "shamey-hans"
   },
   {
     "id": "6929cdf5ae0959bd492f4865",
@@ -2986,8 +2986,8 @@
     "image": "https://img.youtube.com/vi/wBfNMzArJrY/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Arif Bhatti",
-    "artistSlug": "arif-bhatti"
+    "channel": "Arif Bhatti",
+    "channelSlug": "arif-bhatti"
   },
   {
     "id": "6929d797ae0959bd492f487c",
@@ -2996,8 +2996,8 @@
     "image": "https://img.youtube.com/vi/cbDK5TTsJ6E/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pt",
-    "artist": "Get Worship",
-    "artistSlug": "get-worship"
+    "channel": "Get Worship",
+    "channelSlug": "get-worship"
   },
   {
     "id": "6929db8bc6208386434a7cd8",
@@ -3006,8 +3006,8 @@
     "image": "https://img.youtube.com/vi/U14DEkV2iUI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Brandon Lake",
-    "artistSlug": "brandon-lake"
+    "channel": "Brandon Lake",
+    "channelSlug": "brandon-lake"
   },
   {
     "id": "692b2fc4d1d8b1ff4499a4e5",
@@ -3016,8 +3016,8 @@
     "image": "https://img.youtube.com/vi/A6q2oBT4lhs/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "692b3190d1d8b1ff4499a501",
@@ -3026,8 +3026,8 @@
     "image": "https://img.youtube.com/vi/6Pr2Z4ndGBw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "692b4083d1d8b1ff4499a541",
@@ -3036,8 +3036,8 @@
     "image": "https://img.youtube.com/vi/EhB-aPh1aXk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Essential Worship",
-    "artistSlug": "essential-worship"
+    "channel": "Essential Worship",
+    "channelSlug": "essential-worship"
   },
   {
     "id": "692ca147cdbe193e3163951a",
@@ -3046,8 +3046,8 @@
     "image": "https://img.youtube.com/vi/b7lgyCMh-28/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Friends In Faith",
-    "artistSlug": "friends-in-faith"
+    "channel": "Friends In Faith",
+    "channelSlug": "friends-in-faith"
   },
   {
     "id": "69329e3dda2773c8132bcc73",
@@ -3056,8 +3056,8 @@
     "image": "https://img.youtube.com/vi/k1Og72NKoGc/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "The Revival Project India",
-    "artistSlug": "the-revival-project-india"
+    "channel": "The Revival Project India",
+    "channelSlug": "the-revival-project-india"
   },
   {
     "id": "693565b0da2773c8132bcca2",
@@ -3066,8 +3066,8 @@
     "image": "https://img.youtube.com/vi/ZSFAHWVYIa4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "69356f94e86477c98989e836",
@@ -3076,8 +3076,8 @@
     "image": "https://img.youtube.com/vi/sjr3YFMABjQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Essential Worship",
-    "artistSlug": "essential-worship"
+    "channel": "Essential Worship",
+    "channelSlug": "essential-worship"
   },
   {
     "id": "693571f7e86477c98989e856",
@@ -3086,8 +3086,8 @@
     "image": "https://img.youtube.com/vi/bvjAjXR6N8U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "We The Kingdom",
-    "artistSlug": "we-the-kingdom"
+    "channel": "We The Kingdom",
+    "channelSlug": "we-the-kingdom"
   },
   {
     "id": "69357ca3e86477c98989e880",
@@ -3096,8 +3096,8 @@
     "image": "https://img.youtube.com/vi/S2ZixrPrhQE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ur",
-    "artist": "Daim Gill",
-    "artistSlug": "daim-gill"
+    "channel": "Daim Gill",
+    "channelSlug": "daim-gill"
   },
   {
     "id": "6935a150e86477c98989e893",
@@ -3106,8 +3106,8 @@
     "image": "https://img.youtube.com/vi/kdOtN02xMYo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glorify Christ",
-    "artistSlug": "glorify-christ"
+    "channel": "Glorify Christ",
+    "channelSlug": "glorify-christ"
   },
   {
     "id": "6939a4f705089bf0e1598065",
@@ -3116,8 +3116,8 @@
     "image": "https://img.youtube.com/vi/VSV8Y84uTtg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sharad Simon",
-    "artistSlug": "sharad-simon"
+    "channel": "Sharad Simon",
+    "channelSlug": "sharad-simon"
   },
   {
     "id": "6939a5be05089bf0e1598078",
@@ -3126,8 +3126,8 @@
     "image": "https://img.youtube.com/vi/G94z31tmy4I/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "John Gawai",
-    "artistSlug": "john-gawai"
+    "channel": "John Gawai",
+    "channelSlug": "john-gawai"
   },
   {
     "id": "6939aa2c05089bf0e15980bc",
@@ -3136,8 +3136,8 @@
     "image": "https://img.youtube.com/vi/sCUvH5Cp1ko/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "GRACE AHMEDABAD",
-    "artistSlug": "grace-ahmedabad"
+    "channel": "GRACE AHMEDABAD",
+    "channelSlug": "grace-ahmedabad"
   },
   {
     "id": "6939ac9905089bf0e15980e3",
@@ -3146,8 +3146,8 @@
     "image": "https://img.youtube.com/vi/ja2mUmEfopE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "TRIBL",
-    "artistSlug": "tribl"
+    "channel": "TRIBL",
+    "channelSlug": "tribl"
   },
   {
     "id": "6939aef705089bf0e15980fd",
@@ -3156,8 +3156,8 @@
     "image": "https://img.youtube.com/vi/2QV_vZre9kI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Uttam Parimal",
-    "artistSlug": "uttam-parimal"
+    "channel": "Uttam Parimal",
+    "channelSlug": "uttam-parimal"
   },
   {
     "id": "6939b7a0a161a3163197b91a",
@@ -3166,8 +3166,8 @@
     "image": "https://img.youtube.com/vi/0s04z34mtKA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glorify Christ music",
-    "artistSlug": "glorify-christ-music"
+    "channel": "Glorify Christ music",
+    "channelSlug": "glorify-christ-music"
   },
   {
     "id": "6939be09a161a3163197b937",
@@ -3176,8 +3176,8 @@
     "image": "https://img.youtube.com/vi/BS-RzT0qx4E/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "mr",
-    "artist": "King Of King's Worship Nasik",
-    "artistSlug": "king-of-kings-worship-nasik"
+    "channel": "King Of King's Worship Nasik",
+    "channelSlug": "king-of-kings-worship-nasik"
   },
   {
     "id": "693c1b2da161a3163197b973",
@@ -3186,8 +3186,8 @@
     "image": "https://img.youtube.com/vi/W-TDHR-fdLg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "693c3870a161a3163197b992",
@@ -3196,8 +3196,8 @@
     "image": "https://img.youtube.com/vi/3RiIc7MZrN4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "693c39bba161a3163197b9a8",
@@ -3206,8 +3206,8 @@
     "image": "https://img.youtube.com/vi/HwqSS3PGzxI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Tate Butts",
-    "artistSlug": "tate-butts"
+    "channel": "Tate Butts",
+    "channelSlug": "tate-butts"
   },
   {
     "id": "693c3ceea161a3163197b9cc",
@@ -3216,8 +3216,8 @@
     "image": "https://img.youtube.com/vi/876-gQHwKtc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Lizzie Morgan",
-    "artistSlug": "lizzie-morgan"
+    "channel": "Lizzie Morgan",
+    "channelSlug": "lizzie-morgan"
   },
   {
     "id": "693c4354a161a3163197b9e1",
@@ -3226,8 +3226,8 @@
     "image": "https://img.youtube.com/vi/Nz7yHWBayJg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pt",
-    "artist": "Get Worship",
-    "artistSlug": "get-worship"
+    "channel": "Get Worship",
+    "channelSlug": "get-worship"
   },
   {
     "id": "693d99f7a161a3163197b9f7",
@@ -3236,8 +3236,8 @@
     "image": "https://img.youtube.com/vi/NRz9PGk6U2U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "693d9cada161a3163197ba13",
@@ -3246,8 +3246,8 @@
     "image": "https://img.youtube.com/vi/sRpaDwrudC8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Azariah Abid Rogers",
-    "artistSlug": "azariah-abid-rogers"
+    "channel": "Azariah Abid Rogers",
+    "channelSlug": "azariah-abid-rogers"
   },
   {
     "id": "693d9ed0a161a3163197ba2a",
@@ -3256,8 +3256,8 @@
     "image": "https://img.youtube.com/vi/yKycTgGmxtQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Messiah Music Ministries",
-    "artistSlug": "messiah-music-ministries"
+    "channel": "Messiah Music Ministries",
+    "channelSlug": "messiah-music-ministries"
   },
   {
     "id": "693da259a161a3163197ba43",
@@ -3266,8 +3266,8 @@
     "image": "https://img.youtube.com/vi/oRnHlsG8-4s/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Tauren Wells",
-    "artistSlug": "tauren-wells"
+    "channel": "Tauren Wells",
+    "channelSlug": "tauren-wells"
   },
   {
     "id": "693da97fa161a3163197ba58",
@@ -3276,8 +3276,8 @@
     "image": "https://img.youtube.com/vi/FzNnchcTze8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nitin Baisane",
-    "artistSlug": "nitin-baisane"
+    "channel": "Nitin Baisane",
+    "channelSlug": "nitin-baisane"
   },
   {
     "id": "693daec3a161a3163197ba96",
@@ -3286,8 +3286,8 @@
     "image": "https://img.youtube.com/vi/SAz9V-oyUX0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Citipointe Worship",
-    "artistSlug": "citipointe-worship"
+    "channel": "Citipointe Worship",
+    "channelSlug": "citipointe-worship"
   },
   {
     "id": "6940345fa161a3163197baf6",
@@ -3296,8 +3296,8 @@
     "image": "https://img.youtube.com/vi/nGEH7eo99-w/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "6940578aa161a3163197bb1a",
@@ -3306,8 +3306,8 @@
     "image": "https://img.youtube.com/vi/y29m-YkIfOo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ne",
-    "artist": "New Life Worship, Kathmandu",
-    "artistSlug": "new-life-worship-kathmandu"
+    "channel": "New Life Worship, Kathmandu",
+    "channelSlug": "new-life-worship-kathmandu"
   },
   {
     "id": "694059d8a161a3163197bb4a",
@@ -3316,8 +3316,8 @@
     "image": "https://img.youtube.com/vi/NesSgnqw6kU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "CrossTalks Studios",
-    "artistSlug": "crosstalks-studios"
+    "channel": "CrossTalks Studios",
+    "channelSlug": "crosstalks-studios"
   },
   {
     "id": "69405d38a161a3163197bb6c",
@@ -3326,8 +3326,8 @@
     "image": "https://img.youtube.com/vi/ctZ0nbaLlmQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "7 Trumpets",
-    "artistSlug": "7-trumpets"
+    "channel": "7 Trumpets",
+    "channelSlug": "7-trumpets"
   },
   {
     "id": "69406093a161a3163197bb88",
@@ -3336,8 +3336,8 @@
     "image": "https://img.youtube.com/vi/Yvh_un1Cyvw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "TRIBL",
-    "artistSlug": "tribl"
+    "channel": "TRIBL",
+    "channelSlug": "tribl"
   },
   {
     "id": "6940628ba161a3163197bbbe",
@@ -3346,8 +3346,8 @@
     "image": "https://img.youtube.com/vi/EUrSozqPeKA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "694065b8a161a3163197bc08",
@@ -3356,8 +3356,8 @@
     "image": "https://img.youtube.com/vi/ytnDYgMv33w/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Philippa Hanna",
-    "artistSlug": "philippa-hanna"
+    "channel": "Philippa Hanna",
+    "channelSlug": "philippa-hanna"
   },
   {
     "id": "694067d8a161a3163197bc3b",
@@ -3366,8 +3366,8 @@
     "image": "https://img.youtube.com/vi/d1ALFB0T7gg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Philippa Hanna",
-    "artistSlug": "philippa-hanna"
+    "channel": "Philippa Hanna",
+    "channelSlug": "philippa-hanna"
   },
   {
     "id": "69406d42be0601933f2c6dee",
@@ -3376,8 +3376,8 @@
     "image": "https://img.youtube.com/vi/0fJO4AL_PEQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "694160afb87fc24688c4511e",
@@ -3386,8 +3386,8 @@
     "image": "https://img.youtube.com/vi/a_trv5TsnjI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Zach Williams",
-    "artistSlug": "zach-williams"
+    "channel": "Zach Williams",
+    "channelSlug": "zach-williams"
   },
   {
     "id": "69416296b87fc24688c4513a",
@@ -3396,8 +3396,8 @@
     "image": "https://img.youtube.com/vi/gBweBZWHQXw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Cageless Birds",
-    "artistSlug": "cageless-birds"
+    "channel": "Cageless Birds",
+    "channelSlug": "cageless-birds"
   },
   {
     "id": "6942b92ec95b6613c188535f",
@@ -3406,8 +3406,8 @@
     "image": "https://img.youtube.com/vi/wgjb5-fkYhM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble Ministries",
-    "artistSlug": "amit-kamble-ministries"
+    "channel": "Amit Kamble Ministries",
+    "channelSlug": "amit-kamble-ministries"
   },
   {
     "id": "6943c46eb208c7319911a95c",
@@ -3416,8 +3416,8 @@
     "image": "https://img.youtube.com/vi/G6y_-dYCMz0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "New Creation Worship",
-    "artistSlug": "new-creation-worship"
+    "channel": "New Creation Worship",
+    "channelSlug": "new-creation-worship"
   },
   {
     "id": "69444a04b208c7319911a97e",
@@ -3426,8 +3426,8 @@
     "image": "https://img.youtube.com/vi/XqzSW4An8u8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rex Media House",
-    "artistSlug": "rex-media-house"
+    "channel": "Rex Media House",
+    "channelSlug": "rex-media-house"
   },
   {
     "id": "69445210b208c7319911a9b6",
@@ -3436,8 +3436,8 @@
     "image": "https://img.youtube.com/vi/aoY40UJfZVk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rex Media House",
-    "artistSlug": "rex-media-house"
+    "channel": "Rex Media House",
+    "channelSlug": "rex-media-house"
   },
   {
     "id": "69455af3f8c1f2899b591eb4",
@@ -3446,8 +3446,8 @@
     "image": "https://img.youtube.com/vi/CpqY6bxnOlc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "gu",
-    "artist": "Soloman Lambani",
-    "artistSlug": "soloman-lambani"
+    "channel": "Soloman Lambani",
+    "channelSlug": "soloman-lambani"
   },
   {
     "id": "69455f20f8c1f2899b591ed3",
@@ -3456,8 +3456,8 @@
     "image": "https://img.youtube.com/vi/0z0CBOudQVw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "694560dff8c1f2899b591eed",
@@ -3466,8 +3466,8 @@
     "image": "https://img.youtube.com/vi/Ht0aibQy7gY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Citipointe Worship",
-    "artistSlug": "citipointe-worship"
+    "channel": "Citipointe Worship",
+    "channelSlug": "citipointe-worship"
   },
   {
     "id": "694564b2f8c1f2899b591f31",
@@ -3476,8 +3476,8 @@
     "image": "https://img.youtube.com/vi/aww_j4mGf9I/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Youth Revival Ministries",
-    "artistSlug": "youth-revival-ministries"
+    "channel": "Youth Revival Ministries",
+    "channelSlug": "youth-revival-ministries"
   },
   {
     "id": "6945673ef8c1f2899b591f45",
@@ -3486,8 +3486,8 @@
     "image": "https://img.youtube.com/vi/y_H4M07BieA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Red Rocks Worship",
-    "artistSlug": "red-rocks-worship"
+    "channel": "Red Rocks Worship",
+    "channelSlug": "red-rocks-worship"
   },
   {
     "id": "694774d5f8c1f2899b591f79",
@@ -3496,8 +3496,8 @@
     "image": "https://img.youtube.com/vi/K1XSvj-DmrE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Zarurat Ministries",
-    "artistSlug": "zarurat-ministries"
+    "channel": "Zarurat Ministries",
+    "channelSlug": "zarurat-ministries"
   },
   {
     "id": "6947a728f8c1f2899b591fa4",
@@ -3506,8 +3506,8 @@
     "image": "https://img.youtube.com/vi/mXeSkCmbU98/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Velpula Evan Mark Ronald",
-    "artistSlug": "velpula-evan-mark-ronald"
+    "channel": "Velpula Evan Mark Ronald",
+    "channelSlug": "velpula-evan-mark-ronald"
   },
   {
     "id": "6947a945f8c1f2899b591fb9",
@@ -3516,8 +3516,8 @@
     "image": "https://img.youtube.com/vi/pnTaewOmizE/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Daniel Praneeth",
-    "artistSlug": "daniel-praneeth"
+    "channel": "Daniel Praneeth",
+    "channelSlug": "daniel-praneeth"
   },
   {
     "id": "69491776b3fc5a300a8faf1d",
@@ -3526,8 +3526,8 @@
     "image": "https://img.youtube.com/vi/5AtzO2z7lag/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "ONE Global",
-    "artistSlug": "one-global"
+    "channel": "ONE Global",
+    "channelSlug": "one-global"
   },
   {
     "id": "69498a5fb3fc5a300a8faf70",
@@ -3536,8 +3536,8 @@
     "image": "https://img.youtube.com/vi/IVmyBtt0HcQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Benny Hinn",
-    "artistSlug": "benny-hinn"
+    "channel": "Benny Hinn",
+    "channelSlug": "benny-hinn"
   },
   {
     "id": "694a5e7db3fc5a300a8fafb0",
@@ -3546,8 +3546,8 @@
     "image": "https://img.youtube.com/vi/VF7bsx7mYZg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sekel Jeet",
-    "artistSlug": "sekel-jeet"
+    "channel": "Sekel Jeet",
+    "channelSlug": "sekel-jeet"
   },
   {
     "id": "694ad6c3b3fc5a300a8fafcd",
@@ -3556,8 +3556,8 @@
     "image": "https://img.youtube.com/vi/JiPmRQOZE84/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Aakhikh",
-    "artistSlug": "aakhikh"
+    "channel": "Aakhikh",
+    "channelSlug": "aakhikh"
   },
   {
     "id": "694c2284ac80c30388617fc7",
@@ -3566,8 +3566,8 @@
     "image": "https://img.youtube.com/vi/tS6Z4i0Q0u8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "bn",
-    "artist": "Shukriya The Band",
-    "artistSlug": "shukriya-the-band"
+    "channel": "Shukriya The Band",
+    "channelSlug": "shukriya-the-band"
   },
   {
     "id": "69501b191ca9f21245aea9d5",
@@ -3576,8 +3576,8 @@
     "image": "https://img.youtube.com/vi/SL6t3nCb37Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "Rex Media House",
-    "artistSlug": "rex-media-house"
+    "channel": "Rex Media House",
+    "channelSlug": "rex-media-house"
   },
   {
     "id": "69501f631ca9f21245aeaa04",
@@ -3586,8 +3586,8 @@
     "image": "https://img.youtube.com/vi/J9bKWfOgZdg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rex Media House",
-    "artistSlug": "rex-media-house"
+    "channel": "Rex Media House",
+    "channelSlug": "rex-media-house"
   },
   {
     "id": "695021ea1ca9f21245aeaa37",
@@ -3596,8 +3596,8 @@
     "image": "https://img.youtube.com/vi/5JwkVDPyeAw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "Rex Media House",
-    "artistSlug": "rex-media-house"
+    "channel": "Rex Media House",
+    "channelSlug": "rex-media-house"
   },
   {
     "id": "69502a861ca9f21245aeaa8c",
@@ -3606,8 +3606,8 @@
     "image": "https://img.youtube.com/vi/5NKV2CmuB0U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Songs of Worship",
-    "artistSlug": "songs-of-worship"
+    "channel": "Songs of Worship",
+    "channelSlug": "songs-of-worship"
   },
   {
     "id": "6950fb971ca9f21245aeaac1",
@@ -3616,8 +3616,8 @@
     "image": "https://img.youtube.com/vi/Q0LG6kjJZrM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Arul Thomas",
-    "artistSlug": "arul-thomas"
+    "channel": "Arul Thomas",
+    "channelSlug": "arul-thomas"
   },
   {
     "id": "6958b7cef60a8ac73cc476bc",
@@ -3626,8 +3626,8 @@
     "image": "https://img.youtube.com/vi/qqJOzwfrmCQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Zayvan",
-    "artistSlug": "zayvan"
+    "channel": "Zayvan",
+    "channelSlug": "zayvan"
   },
   {
     "id": "6958bb43f60a8ac73cc476e6",
@@ -3636,8 +3636,8 @@
     "image": "https://img.youtube.com/vi/xs4tIjv7xBc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Worship Waves Studio",
-    "artistSlug": "worship-waves-studio"
+    "channel": "Worship Waves Studio",
+    "channelSlug": "worship-waves-studio"
   },
   {
     "id": "6959467df60a8ac73cc4770a",
@@ -3646,8 +3646,8 @@
     "image": "https://img.youtube.com/vi/AMkfjPeUevw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Ameeth Evans",
-    "artistSlug": "ameeth-evans"
+    "channel": "Ameeth Evans",
+    "channelSlug": "ameeth-evans"
   },
   {
     "id": "69594847f60a8ac73cc47726",
@@ -3656,8 +3656,8 @@
     "image": "https://img.youtube.com/vi/Y8eF5hsyFmk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jesus Calls",
-    "artistSlug": "jesus-calls"
+    "channel": "Jesus Calls",
+    "channelSlug": "jesus-calls"
   },
   {
     "id": "69595109f60a8ac73cc477a8",
@@ -3666,8 +3666,8 @@
     "image": "https://img.youtube.com/vi/sIaT8Jl2zpI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Lauren Daigle",
-    "artistSlug": "lauren-daigle"
+    "channel": "Lauren Daigle",
+    "channelSlug": "lauren-daigle"
   },
   {
     "id": "695bf525865b980f7f0e52ff",
@@ -3676,8 +3676,8 @@
     "image": "https://img.youtube.com/vi/SjDDJ_9wr0U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "695bfe18865b980f7f0e5319",
@@ -3686,8 +3686,8 @@
     "image": "https://img.youtube.com/vi/N486E6gjbYg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "695c02fe865b980f7f0e5336",
@@ -3696,8 +3696,8 @@
     "image": "https://img.youtube.com/vi/mHn6JTFcabg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Planetshakerstv",
-    "artistSlug": "planetshakerstv"
+    "channel": "Planetshakerstv",
+    "channelSlug": "planetshakerstv"
   },
   {
     "id": "695c06ca865b980f7f0e5353",
@@ -3706,8 +3706,8 @@
     "image": "https://img.youtube.com/vi/VkGHuPT92b8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Rina David",
-    "artistSlug": "rina-david"
+    "channel": "Rina David",
+    "channelSlug": "rina-david"
   },
   {
     "id": "695c092d865b980f7f0e5376",
@@ -3716,8 +3716,8 @@
     "image": "https://img.youtube.com/vi/OOd37fJBRig/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "695c0be8865b980f7f0e5397",
@@ -3726,8 +3726,8 @@
     "image": "https://img.youtube.com/vi/uSYT2hUazd8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Khokhar Studio",
-    "artistSlug": "khokhar-studio"
+    "channel": "Khokhar Studio",
+    "channelSlug": "khokhar-studio"
   },
   {
     "id": "695d50bc865b980f7f0e53c0",
@@ -3736,8 +3736,8 @@
     "image": "https://img.youtube.com/vi/1gUWOfImdgI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Engedi Music",
-    "artistSlug": "engedi-music"
+    "channel": "Engedi Music",
+    "channelSlug": "engedi-music"
   },
   {
     "id": "695f5003865b980f7f0e5480",
@@ -3746,8 +3746,8 @@
     "image": "https://img.youtube.com/vi/qI3CYhAqWYg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "pa",
-    "artist": "Geet Production",
-    "artistSlug": "geet-production"
+    "channel": "Geet Production",
+    "channelSlug": "geet-production"
   },
   {
     "id": "695ffbf7e888f695f59e7a68",
@@ -3756,8 +3756,8 @@
     "image": "https://img.youtube.com/vi/1KhWnCRbPyo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "New Life City Worship India",
-    "artistSlug": "new-life-city-worship-india"
+    "channel": "New Life City Worship India",
+    "channelSlug": "new-life-city-worship-india"
   },
   {
     "id": "696001d5e888f695f59e7a81",
@@ -3766,8 +3766,8 @@
     "image": "https://img.youtube.com/vi/faeN7z_HMgw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Shukriya The Band",
-    "artistSlug": "shukriya-the-band"
+    "channel": "Shukriya The Band",
+    "channelSlug": "shukriya-the-band"
   },
   {
     "id": "6960cafde888f695f59e7ab6",
@@ -3776,8 +3776,8 @@
     "image": "https://img.youtube.com/vi/-IaDsSclbf8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "69629296863920d610284ace",
@@ -3786,8 +3786,8 @@
     "image": "https://img.youtube.com/vi/vlxEgOsK_zg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "696295586c4161f5cc624bb0",
@@ -3796,8 +3796,8 @@
     "image": "https://img.youtube.com/vi/IFi64SKCJjE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Katy Nichole",
-    "artistSlug": "katy-nichole"
+    "channel": "Katy Nichole",
+    "channelSlug": "katy-nichole"
   },
   {
     "id": "696298956c4161f5cc624be0",
@@ -3806,8 +3806,8 @@
     "image": "https://img.youtube.com/vi/gJiGrCUJFBg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Daniel George",
-    "artistSlug": "daniel-george"
+    "channel": "Daniel George",
+    "channelSlug": "daniel-george"
   },
   {
     "id": "69629d0513c327810523bb45",
@@ -3816,8 +3816,8 @@
     "image": "https://img.youtube.com/vi/_KIjo0gD3xk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6962a1b413c327810523bb5b",
@@ -3826,8 +3826,8 @@
     "image": "https://img.youtube.com/vi/B41BMoXUrX4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6962a3b013c327810523bb6f",
@@ -3836,8 +3836,8 @@
     "image": "https://img.youtube.com/vi/uYb15wAGo9A/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Kenny Salvadi Productions",
-    "artistSlug": "kenny-salvadi-productions"
+    "channel": "Kenny Salvadi Productions",
+    "channelSlug": "kenny-salvadi-productions"
   },
   {
     "id": "6963d65b17162f1f46af5cf4",
@@ -3846,8 +3846,8 @@
     "image": "https://img.youtube.com/vi/wPOY0rtr0_Q/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "6963d8bc17162f1f46af5d0b",
@@ -3856,8 +3856,8 @@
     "image": "https://img.youtube.com/vi/XxwEgQo9Wp8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Emmanuel Gollar",
-    "artistSlug": "emmanuel-gollar"
+    "channel": "Emmanuel Gollar",
+    "channelSlug": "emmanuel-gollar"
   },
   {
     "id": "6964994325db87b61f35cdbf",
@@ -3866,8 +3866,8 @@
     "image": "https://img.youtube.com/vi/u_ZWEO36jok/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Crowder",
-    "artistSlug": "crowder"
+    "channel": "Crowder",
+    "channelSlug": "crowder"
   },
   {
     "id": "69649e3325db87b61f35ce0c",
@@ -3876,8 +3876,8 @@
     "image": "https://img.youtube.com/vi/8RIZlNYl4ok/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Cain",
-    "artistSlug": "cain"
+    "channel": "Cain",
+    "channelSlug": "cain"
   },
   {
     "id": "696538bf25db87b61f35ce39",
@@ -3886,8 +3886,8 @@
     "image": "https://img.youtube.com/vi/O8bmFoV-mZ0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Vijay Kondapuram",
-    "artistSlug": "vijay-kondapuram"
+    "channel": "Vijay Kondapuram",
+    "channelSlug": "vijay-kondapuram"
   },
   {
     "id": "69653aff25db87b61f35ce6a",
@@ -3896,8 +3896,8 @@
     "image": "https://img.youtube.com/vi/0x_oznFXk0c/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "69654a8125db87b61f35ceb4",
@@ -3906,8 +3906,8 @@
     "image": "https://img.youtube.com/vi/Rf8Zzn4nOzc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "69662c1525db87b61f35cecf",
@@ -3916,8 +3916,8 @@
     "image": "https://img.youtube.com/vi/UshTkEHMsgk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Vijay Kondapuram",
-    "artistSlug": "vijay-kondapuram"
+    "channel": "Vijay Kondapuram",
+    "channelSlug": "vijay-kondapuram"
   },
   {
     "id": "6966375025db87b61f35cf05",
@@ -3926,8 +3926,8 @@
     "image": "https://img.youtube.com/vi/koCI7ySUpPI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Heaven's Culture Music",
-    "artistSlug": "heavens-culture-music"
+    "channel": "Heaven's Culture Music",
+    "channelSlug": "heavens-culture-music"
   },
   {
     "id": "696644ca25db87b61f35cf3e",
@@ -3936,8 +3936,8 @@
     "image": "https://img.youtube.com/vi/u-1fwZtKJSM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "6966475225db87b61f35cf65",
@@ -3946,8 +3946,8 @@
     "image": "https://img.youtube.com/vi/d7en3AgjbKs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Casting Crowns",
-    "artistSlug": "casting-crowns"
+    "channel": "Casting Crowns",
+    "channelSlug": "casting-crowns"
   },
   {
     "id": "696648a925db87b61f35cf96",
@@ -3956,8 +3956,8 @@
     "image": "https://img.youtube.com/vi/huFra1mnIVE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Kari Jobe",
-    "artistSlug": "kari-jobe"
+    "channel": "Kari Jobe",
+    "channelSlug": "kari-jobe"
   },
   {
     "id": "696649f025db87b61f35cfb6",
@@ -3966,8 +3966,8 @@
     "image": "https://img.youtube.com/vi/Zev5tHjCB_s/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Chris Tomlin",
-    "artistSlug": "chris-tomlin"
+    "channel": "Chris Tomlin",
+    "channelSlug": "chris-tomlin"
   },
   {
     "id": "69664ee825db87b61f35cfda",
@@ -3976,8 +3976,8 @@
     "image": "https://img.youtube.com/vi/EruXNSaSJAc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Hillsong UNITED",
-    "artistSlug": "hillsong-united"
+    "channel": "Hillsong UNITED",
+    "channelSlug": "hillsong-united"
   },
   {
     "id": "696650fe25db87b61f35d01e",
@@ -3986,8 +3986,8 @@
     "image": "https://img.youtube.com/vi/dQl4izxPeNU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Hillsong Worship",
-    "artistSlug": "hillsong-worship"
+    "channel": "Hillsong Worship",
+    "channelSlug": "hillsong-worship"
   },
   {
     "id": "696672cb25db87b61f35d04a",
@@ -3996,8 +3996,8 @@
     "image": "https://img.youtube.com/vi/1AnSHYjQ3tc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "6966748525db87b61f35d080",
@@ -4006,8 +4006,8 @@
     "image": "https://img.youtube.com/vi/uVQNiM4NbCA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Heaven's Culture Music",
-    "artistSlug": "heavens-culture-music"
+    "channel": "Heaven's Culture Music",
+    "channelSlug": "heavens-culture-music"
   },
   {
     "id": "69667a4325db87b61f35d0e0",
@@ -4016,8 +4016,8 @@
     "image": "https://img.youtube.com/vi/Xrtfj4HmQGQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Vijay Kondapuram",
-    "artistSlug": "vijay-kondapuram"
+    "channel": "Vijay Kondapuram",
+    "channelSlug": "vijay-kondapuram"
   },
   {
     "id": "69673a5225db87b61f35d121",
@@ -4026,8 +4026,8 @@
     "image": "https://img.youtube.com/vi/lBEgx4PyTIc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Robert Stoll",
-    "artistSlug": "robert-stoll"
+    "channel": "Robert Stoll",
+    "channelSlug": "robert-stoll"
   },
   {
     "id": "6967498025db87b61f35d15e",
@@ -4036,8 +4036,8 @@
     "image": "https://img.youtube.com/vi/PB6tSfdvRz0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "69674c2125db87b61f35d198",
@@ -4046,8 +4046,8 @@
     "image": "https://img.youtube.com/vi/zBg9LBcoR1k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Leo Rakesh",
-    "artistSlug": "leo-rakesh"
+    "channel": "Leo Rakesh",
+    "channelSlug": "leo-rakesh"
   },
   {
     "id": "69674ebc25db87b61f35d1c8",
@@ -4056,8 +4056,8 @@
     "image": "https://img.youtube.com/vi/LJKoFkjhFWk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "John Jebaraj",
-    "artistSlug": "john-jebaraj"
+    "channel": "John Jebaraj",
+    "channelSlug": "john-jebaraj"
   },
   {
     "id": "6967521c25db87b61f35d210",
@@ -4066,8 +4066,8 @@
     "image": "https://img.youtube.com/vi/iwilemB3_Ew/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Hope Amplified Music",
-    "artistSlug": "hope-amplified-music"
+    "channel": "Hope Amplified Music",
+    "channelSlug": "hope-amplified-music"
   },
   {
     "id": "6967709225db87b61f35d257",
@@ -4076,8 +4076,8 @@
     "image": "https://img.youtube.com/vi/32FwH9RF94U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "6967723925db87b61f35d282",
@@ -4086,8 +4086,8 @@
     "image": "https://img.youtube.com/vi/BlwQTx6cY5U/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "6967c6b2e518a03c9e1cd7ce",
@@ -4096,8 +4096,8 @@
     "image": "https://img.youtube.com/vi/6AFhXAUhLow/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Grace Tracks",
-    "artistSlug": "grace-tracks"
+    "channel": "Grace Tracks",
+    "channelSlug": "grace-tracks"
   },
   {
     "id": "6967cb94e518a03c9e1cd7f8",
@@ -4106,8 +4106,8 @@
     "image": "https://img.youtube.com/vi/yqdm2SJWEDI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Giftson Durai",
-    "artistSlug": "giftson-durai "
+    "channel": "Giftson Durai",
+    "channelSlug": "giftson-durai "
   },
   {
     "id": "6967d0bee518a03c9e1cd81e",
@@ -4116,8 +4116,8 @@
     "image": "https://img.youtube.com/vi/E9YFOFghJRo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "6967d54ce518a03c9e1cd854",
@@ -4126,8 +4126,8 @@
     "image": "https://img.youtube.com/vi/wDXyPbe994E/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Merge Music",
-    "artistSlug": "merge-music"
+    "channel": "Merge Music",
+    "channelSlug": "merge-music"
   },
   {
     "id": "69685e5ce518a03c9e1cd888",
@@ -4136,8 +4136,8 @@
     "image": "https://img.youtube.com/vi/OGcBj8wplX4/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Shelley Reddy",
-    "artistSlug": "shelley-reddy"
+    "channel": "Shelley Reddy",
+    "channelSlug": "shelley-reddy"
   },
   {
     "id": "6968649fe518a03c9e1cd8db",
@@ -4146,8 +4146,8 @@
     "image": "https://img.youtube.com/vi/oAd18ePtRfc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Songs of Worship",
-    "artistSlug": "songs-of-worship"
+    "channel": "Songs of Worship",
+    "channelSlug": "songs-of-worship"
   },
   {
     "id": "696869cfe518a03c9e1cd92b",
@@ -4156,8 +4156,8 @@
     "image": "https://img.youtube.com/vi/68JZomj3LFk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Zarurat Ministries",
-    "artistSlug": "zarurat-ministries"
+    "channel": "Zarurat Ministries",
+    "channelSlug": "zarurat-ministries"
   },
   {
     "id": "69686fdae518a03c9e1cd967",
@@ -4166,8 +4166,8 @@
     "image": "https://img.youtube.com/vi/F7KU2UlGUi4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Zarurat Ministries",
-    "artistSlug": "zarurat-ministries"
+    "channel": "Zarurat Ministries",
+    "channelSlug": "zarurat-ministries"
   },
   {
     "id": "69687489e518a03c9e1cd99d",
@@ -4176,8 +4176,8 @@
     "image": "https://img.youtube.com/vi/yfqB20XsfSE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Joel Winston",
-    "artistSlug": "joel-winston"
+    "channel": "Joel Winston",
+    "channelSlug": "joel-winston"
   },
   {
     "id": "696878a3e518a03c9e1cd9e0",
@@ -4186,8 +4186,8 @@
     "image": "https://img.youtube.com/vi/W7IqTmN11Gw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6969d0c59ff232478dd49db5",
@@ -4196,8 +4196,8 @@
     "image": "https://img.youtube.com/vi/-_yDR8Hx5cY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Mark Tribhuvan",
-    "artistSlug": "mark-tribhuvan"
+    "channel": "Mark Tribhuvan",
+    "channelSlug": "mark-tribhuvan"
   },
   {
     "id": "6969d4c79ff232478dd49de9",
@@ -4206,8 +4206,8 @@
     "image": "https://img.youtube.com/vi/ho-KNus_y_M/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "House of Destiny Nagpur",
-    "artistSlug": "house-of-destiny-nagpur"
+    "channel": "House of Destiny Nagpur",
+    "channelSlug": "house-of-destiny-nagpur"
   },
   {
     "id": "6969da1a9ff232478dd49e2b",
@@ -4216,8 +4216,8 @@
     "image": "https://img.youtube.com/vi/U1MJICNKsjc/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Songs of Worship",
-    "artistSlug": "songs-of-worship"
+    "channel": "Songs of Worship",
+    "channelSlug": "songs-of-worship"
   },
   {
     "id": "6969df5c9ff232478dd49e56",
@@ -4226,8 +4226,8 @@
     "image": "https://img.youtube.com/vi/JL6w5HYm-u4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6969e2579ff232478dd49e87",
@@ -4236,8 +4236,8 @@
     "image": "https://img.youtube.com/vi/Io-Utt8KRww/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Tali Angh",
-    "artistSlug": "tali-angh"
+    "channel": "Tali Angh",
+    "channelSlug": "tali-angh"
   },
   {
     "id": "6969e5509ff232478dd49eb0",
@@ -4246,8 +4246,8 @@
     "image": "https://img.youtube.com/vi/ANkK7CEb7EA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Robinson Shalu",
-    "artistSlug": "robinson-shalu"
+    "channel": "Robinson Shalu",
+    "channelSlug": "robinson-shalu"
   },
   {
     "id": "6969fc439ff232478dd49ee1",
@@ -4256,8 +4256,8 @@
     "image": "https://img.youtube.com/vi/kWGmZoBEOxw/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "696a02b79ff232478dd49f17",
@@ -4266,8 +4266,8 @@
     "image": "https://img.youtube.com/vi/fp26y4YeSWA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Sounds of Zion",
-    "artistSlug": "sounds-of-zion"
+    "channel": "Sounds of Zion",
+    "channelSlug": "sounds-of-zion"
   },
   {
     "id": "696a0e569ff232478dd49f4a",
@@ -4276,8 +4276,8 @@
     "image": "https://img.youtube.com/vi/9DnXa6OzBiU/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "696a14159ff232478dd49f8a",
@@ -4286,8 +4286,8 @@
     "image": "https://img.youtube.com/vi/Aixxtg7NLXw/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "696a1b079ff232478dd49fe4",
@@ -4296,8 +4296,8 @@
     "image": "https://img.youtube.com/vi/_OYLMlNnCKI/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Prince Robinson",
-    "artistSlug": "prince-robinson"
+    "channel": "Prince Robinson",
+    "channelSlug": "prince-robinson"
   },
   {
     "id": "696a78d99ff232478dd4a05a",
@@ -4306,8 +4306,8 @@
     "image": "https://img.youtube.com/vi/expfRcVAmlE/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Way to Paradise",
-    "artistSlug": "way-to-paradise"
+    "channel": "Way to Paradise",
+    "channelSlug": "way-to-paradise"
   },
   {
     "id": "696a81ea9ff232478dd4a0a4",
@@ -4316,8 +4316,8 @@
     "image": "https://img.youtube.com/vi/mQERMsjcnZI/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Way to Paradise",
-    "artistSlug": "way-to-paradise"
+    "channel": "Way to Paradise",
+    "channelSlug": "way-to-paradise"
   },
   {
     "id": "696a84b39ff232478dd4a0da",
@@ -4326,8 +4326,8 @@
     "image": "https://img.youtube.com/vi/R3Zb0_8EA9A/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "kn",
-    "artist": "Way to Paradise",
-    "artistSlug": "way-to-paradise"
+    "channel": "Way to Paradise",
+    "channelSlug": "way-to-paradise"
   },
   {
     "id": "696bbd3dc67963e7ae1953d5",
@@ -4336,8 +4336,8 @@
     "image": "https://img.youtube.com/vi/MxPhc-OgsGM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "Mokshraag",
-    "artistSlug": "mokshraag"
+    "channel": "Mokshraag",
+    "channelSlug": "mokshraag"
   },
   {
     "id": "696bcfd6c67963e7ae195408",
@@ -4346,8 +4346,8 @@
     "image": "https://img.youtube.com/vi/uAAfxffCY0Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Madhan Mosses",
-    "artistSlug": "madhan-mosses"
+    "channel": "Madhan Mosses",
+    "channelSlug": "madhan-mosses"
   },
   {
     "id": "696bd1bcc67963e7ae195438",
@@ -4356,8 +4356,8 @@
     "image": "https://img.youtube.com/vi/sF_1qSwb_JI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Emmanuel Gollar",
-    "artistSlug": "emmanuel-gollar"
+    "channel": "Emmanuel Gollar",
+    "channelSlug": "emmanuel-gollar"
   },
   {
     "id": "696f28a62c3fc3d7613c2a52",
@@ -4366,8 +4366,8 @@
     "image": "https://img.youtube.com/vi/y5urO6yS91c/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Worship Waves Studio",
-    "artistSlug": "worship-waves-studio"
+    "channel": "Worship Waves Studio",
+    "channelSlug": "worship-waves-studio"
   },
   {
     "id": "696f7d092c3fc3d7613c2aab",
@@ -4376,8 +4376,8 @@
     "image": "https://img.youtube.com/vi/7n2X4-7yhrk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Terrian Woods",
-    "artistSlug": "terrian-woods"
+    "channel": "Terrian Woods",
+    "channelSlug": "terrian-woods"
   },
   {
     "id": "696fa1a4edd43992b5521705",
@@ -4386,8 +4386,8 @@
     "image": "https://img.youtube.com/vi/8I6nWEP3pGE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "bn",
-    "artist": "Shukriya The Band",
-    "artistSlug": "shukriya-the-band"
+    "channel": "Shukriya The Band",
+    "channelSlug": "shukriya-the-band"
   },
   {
     "id": "696fadc78bca8ea653a06ea6",
@@ -4396,8 +4396,8 @@
     "image": "https://img.youtube.com/vi/eGXLYpZNd2I/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "696fb08a8bca8ea653a06ec7",
@@ -4406,8 +4406,8 @@
     "image": "https://img.youtube.com/vi/3U8_QAdvw3M/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Megan Woods",
-    "artistSlug": "megan-woods"
+    "channel": "Megan Woods",
+    "channelSlug": "megan-woods"
   },
   {
     "id": "696fb3858bca8ea653a06f05",
@@ -4416,8 +4416,8 @@
     "image": "https://img.youtube.com/vi/fHQtr8LZKj8/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Naomi Raine",
-    "artistSlug": "naomi-raine"
+    "channel": "Naomi Raine",
+    "channelSlug": "naomi-raine"
   },
   {
     "id": "696fbb318bca8ea653a06f3d",
@@ -4426,8 +4426,8 @@
     "image": "https://img.youtube.com/vi/J7QHIjxqeFk/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "696fc0e38bca8ea653a06f74",
@@ -4436,8 +4436,8 @@
     "image": "https://img.youtube.com/vi/k3nmIEqNvIo/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "696fc9718bca8ea653a06fa9",
@@ -4446,8 +4446,8 @@
     "image": "https://img.youtube.com/vi/qFdPShADQbM/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sounds of Zion",
-    "artistSlug": "sounds-of-zion"
+    "channel": "Sounds of Zion",
+    "channelSlug": "sounds-of-zion"
   },
   {
     "id": "69704e618bca8ea653a06fe7",
@@ -4456,8 +4456,8 @@
     "image": "https://img.youtube.com/vi/xwXP0pXGQyU/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Josiah Queen",
-    "artistSlug": "josiah-queen"
+    "channel": "Josiah Queen",
+    "channelSlug": "josiah-queen"
   },
   {
     "id": "697050fd8bca8ea653a07015",
@@ -4466,8 +4466,8 @@
     "image": "https://img.youtube.com/vi/Ok3CunjHKLI/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Rhythm",
-    "artistSlug": "elevation-rhythm"
+    "channel": "Elevation Rhythm",
+    "channelSlug": "elevation-rhythm"
   },
   {
     "id": "697055cb8bca8ea653a0705a",
@@ -4476,8 +4476,8 @@
     "image": "https://img.youtube.com/vi/-Bn1kUR7fY4/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Sounds of Zion",
-    "artistSlug": "sounds-of-zion"
+    "channel": "Sounds of Zion",
+    "channelSlug": "sounds-of-zion"
   },
   {
     "id": "6972359c8bca8ea653a070aa",
@@ -4486,8 +4486,8 @@
     "image": "https://img.youtube.com/vi/6FJTuOWsMDE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Gateway Worship",
-    "artistSlug": "gateway-worship"
+    "channel": "Gateway Worship",
+    "channelSlug": "gateway-worship"
   },
   {
     "id": "697238518bca8ea653a070f2",
@@ -4496,8 +4496,8 @@
     "image": "https://img.youtube.com/vi/qtvQNzPHn-w/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "69723d018bca8ea653a07129",
@@ -4506,8 +4506,8 @@
     "image": "https://img.youtube.com/vi/2LapBD802O0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Brandon Lake",
-    "artistSlug": "brandon-lake"
+    "channel": "Brandon Lake",
+    "channelSlug": "brandon-lake"
   },
   {
     "id": "6973a81c8bca8ea653a071b0",
@@ -4516,8 +4516,8 @@
     "image": "https://img.youtube.com/vi/_rGfOxlfakU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "6973aade8bca8ea653a071dc",
@@ -4526,8 +4526,8 @@
     "image": "https://img.youtube.com/vi/2EBWJNCzJyA/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Giftson Durai",
-    "artistSlug": "giftson-durai "
+    "channel": "Giftson Durai",
+    "channelSlug": "giftson-durai "
   },
   {
     "id": "6973aebe8bca8ea653a07218",
@@ -4536,8 +4536,8 @@
     "image": "https://img.youtube.com/vi/edZVnKxKEUU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "6973c32b8bca8ea653a0724d",
@@ -4546,8 +4546,8 @@
     "image": "https://img.youtube.com/vi/JdCkPewFsc8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Phil Wickham",
-    "artistSlug": "phil-wickham"
+    "channel": "Phil Wickham",
+    "channelSlug": "phil-wickham"
   },
   {
     "id": "6973c6c48bca8ea653a07285",
@@ -4556,8 +4556,8 @@
     "image": "https://img.youtube.com/vi/cp7H-VIT9Qk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "The Belonging Co",
-    "artistSlug": "the-belonging-co"
+    "channel": "The Belonging Co",
+    "channelSlug": "the-belonging-co"
   },
   {
     "id": "6973ca888bca8ea653a072b2",
@@ -4566,8 +4566,8 @@
     "image": "https://img.youtube.com/vi/FcS2rFqTAbc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Zach Williams",
-    "artistSlug": "zach-williams"
+    "channel": "Zach Williams",
+    "channelSlug": "zach-williams"
   },
   {
     "id": "6974fac68bca8ea653a072e9",
@@ -4576,8 +4576,8 @@
     "image": "https://img.youtube.com/vi/bAynSbZHoyI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Joseph Raj Allam",
-    "artistSlug": "joseph-raj-allam"
+    "channel": "Joseph Raj Allam",
+    "channelSlug": "joseph-raj-allam"
   },
   {
     "id": "6974ffb28bca8ea653a07318",
@@ -4586,8 +4586,8 @@
     "image": "https://img.youtube.com/vi/E3O2MupRlPM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "697505288bca8ea653a07337",
@@ -4596,8 +4596,8 @@
     "image": "https://img.youtube.com/vi/vqKgOnDN7TY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Benny Joshua",
-    "artistSlug": "benny-joshua"
+    "channel": "Benny Joshua",
+    "channelSlug": "benny-joshua"
   },
   {
     "id": "6975f926cfa56b32335239f0",
@@ -4606,8 +4606,8 @@
     "image": "https://img.youtube.com/vi/tcV5rLY1jh4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "69760c5ccfa56b3233523a34",
@@ -4616,8 +4616,8 @@
     "image": "https://img.youtube.com/vi/YlrJKskFLWg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "bn",
-    "artist": "Shukriya The Band",
-    "artistSlug": "shukriya-the-band"
+    "channel": "Shukriya The Band",
+    "channelSlug": "shukriya-the-band"
   },
   {
     "id": "69761052cfa56b3233523a51",
@@ -4626,8 +4626,8 @@
     "image": "https://img.youtube.com/vi/Ferax0dSAyI/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sinach",
-    "artistSlug": "sinach"
+    "channel": "Sinach",
+    "channelSlug": "sinach"
   },
   {
     "id": "697616d1cfa56b3233523a9b",
@@ -4636,8 +4636,8 @@
     "image": "https://img.youtube.com/vi/b2gj2a3NlnM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "69762356cfa56b3233523ada",
@@ -4646,8 +4646,8 @@
     "image": "https://img.youtube.com/vi/YYUH0Chiiis/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "6976420bcfa56b3233523b11",
@@ -4656,8 +4656,8 @@
     "image": "https://img.youtube.com/vi/h23FELZcvBA/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "697647f1cfa56b3233523b3c",
@@ -4666,8 +4666,8 @@
     "image": "https://img.youtube.com/vi/HD2ZS4AJ3cQ/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Vishal Samuel",
-    "artistSlug": "vishal-samuel"
+    "channel": "Vishal Samuel",
+    "channelSlug": "vishal-samuel"
   },
   {
     "id": "6977346fe6585322069e071b",
@@ -4676,8 +4676,8 @@
     "image": "https://img.youtube.com/vi/A6XaBndyRpQ/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Glory to God India",
-    "artistSlug": "glory-to-god-india"
+    "channel": "Glory to God India",
+    "channelSlug": "glory-to-god-india"
   },
   {
     "id": "6978eb84821c316b5d651b85",
@@ -4686,8 +4686,8 @@
     "image": "https://img.youtube.com/vi/9itwXci3oN0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Eden's Echo",
-    "artistSlug": "edens-echo"
+    "channel": "Eden's Echo",
+    "channelSlug": "edens-echo"
   },
   {
     "id": "6978edc7821c316b5d651ba8",
@@ -4696,8 +4696,8 @@
     "image": "https://img.youtube.com/vi/Wjhz3G2zXi0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nelson Sisters",
-    "artistSlug": "nelson-sisters"
+    "channel": "Nelson Sisters",
+    "channelSlug": "nelson-sisters"
   },
   {
     "id": "6978f34b821c316b5d651be3",
@@ -4706,8 +4706,8 @@
     "image": "https://img.youtube.com/vi/wWBeziOJ8pk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "kn",
-    "artist": "Jonas Soans",
-    "artistSlug": "jonas-soans"
+    "channel": "Jonas Soans",
+    "channelSlug": "jonas-soans"
   },
   {
     "id": "6978fedd821c316b5d651c0b",
@@ -4716,8 +4716,8 @@
     "image": "https://img.youtube.com/vi/no90rrvy3tg/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "697a3cd0efda256a973182a1",
@@ -4726,8 +4726,8 @@
     "image": "https://img.youtube.com/vi/bDz04GAvNo4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Tripla Music",
-    "artistSlug": "tripla-music"
+    "channel": "Tripla Music",
+    "channelSlug": "tripla-music"
   },
   {
     "id": "697a5dadefda256a973182d9",
@@ -4736,8 +4736,8 @@
     "image": "https://img.youtube.com/vi/AgEExSbZ7RU/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Vinod Kumar",
-    "artistSlug": "vinod-kumar"
+    "channel": "Vinod Kumar",
+    "channelSlug": "vinod-kumar"
   },
   {
     "id": "697b1aedefda256a9731830a",
@@ -4746,8 +4746,8 @@
     "image": "https://img.youtube.com/vi/T2laDNuHm04/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Amit Kamble",
-    "artistSlug": "amit-kamble"
+    "channel": "Amit Kamble",
+    "channelSlug": "amit-kamble"
   },
   {
     "id": "697c97d6efda256a97318382",
@@ -4756,8 +4756,8 @@
     "image": "https://img.youtube.com/vi/SBJKNimFRbE/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Karen Espinosa",
-    "artistSlug": "karen-espinosa"
+    "channel": "Karen Espinosa",
+    "channelSlug": "karen-espinosa"
   },
   {
     "id": "697c9b7aefda256a973183b9",
@@ -4766,8 +4766,8 @@
     "image": "https://img.youtube.com/vi/3dqaEmb5wMY/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Seph Schlueter",
-    "artistSlug": "seph-schlueter"
+    "channel": "Seph Schlueter",
+    "channelSlug": "seph-schlueter"
   },
   {
     "id": "697caaa5efda256a973183e7",
@@ -4776,8 +4776,8 @@
     "image": "https://img.youtube.com/vi/cfOdWyDpeb0/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Kaestrings",
-    "artistSlug": "kaestrings"
+    "channel": "Kaestrings",
+    "channelSlug": "kaestrings"
   },
   {
     "id": "697cb2e7efda256a97318420",
@@ -4786,8 +4786,8 @@
     "image": "https://img.youtube.com/vi/4LC-1zwZz8g/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "697cb65defda256a9731845f",
@@ -4796,8 +4796,8 @@
     "image": "https://img.youtube.com/vi/yY2iZDmzC20/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Prathap Darshi",
-    "artistSlug": "prathap-darshi"
+    "channel": "Prathap Darshi",
+    "channelSlug": "prathap-darshi"
   },
   {
     "id": "697cb90eefda256a9731848c",
@@ -4806,8 +4806,8 @@
     "image": "https://img.youtube.com/vi/u6yxJ4fGP2s/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "We The Kingdom",
-    "artistSlug": "we-the-kingdom"
+    "channel": "We The Kingdom",
+    "channelSlug": "we-the-kingdom"
   },
   {
     "id": "697cbbddefda256a973184c1",
@@ -4816,8 +4816,8 @@
     "image": "https://img.youtube.com/vi/BenW0q_Zk_k/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "We The Kingdom",
-    "artistSlug": "we-the-kingdom"
+    "channel": "We The Kingdom",
+    "channelSlug": "we-the-kingdom"
   },
   {
     "id": "697cbecbefda256a973184f0",
@@ -4826,8 +4826,8 @@
     "image": "https://img.youtube.com/vi/dRQGKf3_7kg/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "We The Kingdom",
-    "artistSlug": "we-the-kingdom"
+    "channel": "We The Kingdom",
+    "channelSlug": "we-the-kingdom"
   },
   {
     "id": "697ce7abefda256a97318521",
@@ -4836,8 +4836,8 @@
     "image": "https://img.youtube.com/vi/Tr_Pv8Hp_lo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Terrian Woods",
-    "artistSlug": "terrian-woods"
+    "channel": "Terrian Woods",
+    "channelSlug": "terrian-woods"
   },
   {
     "id": "697cea80efda256a97318545",
@@ -4846,8 +4846,8 @@
     "image": "https://img.youtube.com/vi/pSuitPbgCc8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "697ced80efda256a9731856d",
@@ -4856,8 +4856,8 @@
     "image": "https://img.youtube.com/vi/4rzKTBM1XXM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Friends of GOD Ministries",
-    "artistSlug": "friends-of-god-ministries"
+    "channel": "Friends of GOD Ministries",
+    "channelSlug": "friends-of-god-ministries"
   },
   {
     "id": "697d0898efda256a97318609",
@@ -4866,8 +4866,8 @@
     "image": "https://img.youtube.com/vi/6AJMIhg5h1s/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Common Gathering",
-    "artistSlug": "common-gathering"
+    "channel": "Common Gathering",
+    "channelSlug": "common-gathering"
   },
   {
     "id": "697e426ce8678fb74c508459",
@@ -4876,8 +4876,8 @@
     "image": "https://img.youtube.com/vi/WohxEnsKOOk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Karen Espinosa",
-    "artistSlug": "karen-espinosa"
+    "channel": "Karen Espinosa",
+    "channelSlug": "karen-espinosa"
   },
   {
     "id": "697efeb0080b3edf731c3190",
@@ -4886,8 +4886,8 @@
     "image": "https://img.youtube.com/vi/2jsHT6KoCJg/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Praiselin Stephen",
-    "artistSlug": "praiselin-stephen"
+    "channel": "Praiselin Stephen",
+    "channelSlug": "praiselin-stephen"
   },
   {
     "id": "697f2193080b3edf731c31c4",
@@ -4896,8 +4896,8 @@
     "image": "https://img.youtube.com/vi/H5goTvAeAJo/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "te",
-    "artist": "Grace Tracks",
-    "artistSlug": "grace-tracks"
+    "channel": "Grace Tracks",
+    "channelSlug": "grace-tracks"
   },
   {
     "id": "69823192b3f21c84804b75fa",
@@ -4906,8 +4906,8 @@
     "image": "https://img.youtube.com/vi/7hAKYyF2SVc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "es",
-    "artist": "Jonathan Napoles",
-    "artistSlug": "jonathan-napoles"
+    "channel": "Jonathan Napoles",
+    "channelSlug": "jonathan-napoles"
   },
   {
     "id": "6983819595e718e331202fbd",
@@ -4916,8 +4916,8 @@
     "image": "https://img.youtube.com/vi/LXUK1NzjCno/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Crossroads Church",
-    "artistSlug": "crossroads-church"
+    "channel": "Crossroads Church",
+    "channelSlug": "crossroads-church"
   },
   {
     "id": "69838b8f95e718e331202fde",
@@ -4926,8 +4926,8 @@
     "image": "https://img.youtube.com/vi/4v_WiS2DurY/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "69838f4295e718e331203023",
@@ -4936,8 +4936,8 @@
     "image": "https://img.youtube.com/vi/Jr8JasqBaJM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6983928195e718e33120305d",
@@ -4946,8 +4946,8 @@
     "image": "https://img.youtube.com/vi/WG8Y7riQhNM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6983940895e718e331203088",
@@ -4956,8 +4956,8 @@
     "image": "https://img.youtube.com/vi/vYFxLu5o1Ig/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "698397c695e718e3312030c2",
@@ -4966,8 +4966,8 @@
     "image": "https://img.youtube.com/vi/oR8qOHS4NpU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "69839aa195e718e3312030fe",
@@ -4976,8 +4976,8 @@
     "image": "https://img.youtube.com/vi/iQ-xgBJvlhE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6985f0e1439ca22d634683a7",
@@ -4986,8 +4986,8 @@
     "image": "https://img.youtube.com/vi/RCMAGMxNvlQ/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
   },
   {
     "id": "698615e3439ca22d634683ca",
@@ -4996,8 +4996,8 @@
     "image": "https://img.youtube.com/vi/TNtOIu2vn9k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Worship Waves Studio",
-    "artistSlug": "worship-waves-studio"
+    "channel": "Worship Waves Studio",
+    "channelSlug": "worship-waves-studio"
   },
   {
     "id": "69861841439ca22d634683f5",
@@ -5006,8 +5006,8 @@
     "image": "https://img.youtube.com/vi/pnPyut4Ao8M/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nelson Sisters",
-    "artistSlug": "nelson-sisters"
+    "channel": "Nelson Sisters",
+    "channelSlug": "nelson-sisters"
   },
   {
     "id": "698620b6439ca22d63468422",
@@ -5016,8 +5016,8 @@
     "image": "https://img.youtube.com/vi/KwbJrwStU-g/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "FOLJ | Ankit Sajwan Ministries",
-    "artistSlug": "ankit-sajwan-ministries"
+    "channel": "FOLJ | Ankit Sajwan Ministries",
+    "channelSlug": "ankit-sajwan-ministries"
   },
   {
     "id": "698625a9439ca22d6346844d",
@@ -5026,8 +5026,8 @@
     "image": "https://img.youtube.com/vi/IdSggjWk-rI/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Red Sea Films",
-    "artistSlug": "red-sea-films"
+    "channel": "Red Sea Films",
+    "channelSlug": "red-sea-films"
   },
   {
     "id": "69862d1b439ca22d634684ac",
@@ -5036,8 +5036,8 @@
     "image": "https://img.youtube.com/vi/Yl1va8-frPg/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Tommee Profitt",
-    "artistSlug": "tommee-profitt"
+    "channel": "Tommee Profitt",
+    "channelSlug": "tommee-profitt"
   },
   {
     "id": "698632f6439ca22d634684e8",
@@ -5046,8 +5046,8 @@
     "image": "https://img.youtube.com/vi/zOCbWOw0PPE/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "6986de1bb1385a90d6526a4d",
@@ -5056,8 +5056,8 @@
     "image": "https://img.youtube.com/vi/ydTSwVFidjU/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Arize Music",
-    "artistSlug": "arize-music"
+    "channel": "Arize Music",
+    "channelSlug": "arize-music"
   },
   {
     "id": "69873ad69bc94d827e692dc9",
@@ -5066,8 +5066,8 @@
     "image": "https://yt3.ggpht.com/bC4ZOFgTbQOG0Cf4e3BkiJ2pCJ2ylph3ZShzEKN1vcYqNxrvEYOICvzWpdf_cos3EDV0zNfKdoDX=s1600-rw-nd-v1",
     "status": "UPCOMING",
     "language": "en",
-    "artist": "Shelley Reddy",
-    "artistSlug": "shelley-reddy"
+    "channel": "Shelley Reddy",
+    "channelSlug": "shelley-reddy"
   },
   {
     "id": "698744719bc94d827e692ddd",
@@ -5076,8 +5076,8 @@
     "image": "https://img.youtube.com/vi/FczIo0WVjQc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Jaago Music",
-    "artistSlug": "jaago-music"
+    "channel": "Jaago Music",
+    "channelSlug": "jaago-music"
   },
   {
     "id": "69888757adb1cb3370d4eb23",
@@ -5086,8 +5086,8 @@
     "image": "https://img.youtube.com/vi/ykJO5XCCFfE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ml",
-    "artist": "Rex Media House",
-    "artistSlug": "rex-media-house"
+    "channel": "Rex Media House",
+    "channelSlug": "rex-media-house"
   },
   {
     "id": "69888b4badb1cb3370d4eb45",
@@ -5096,8 +5096,8 @@
     "image": "https://img.youtube.com/vi/awkO61T6i0k/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Bethel Music",
-    "artistSlug": "bethel-music"
+    "channel": "Bethel Music",
+    "channelSlug": "bethel-music"
   },
   {
     "id": "69889089adb1cb3370d4eb79",
@@ -5106,8 +5106,8 @@
     "image": "https://img.youtube.com/vi/9xR0GBwnKe4/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "ta",
-    "artist": "Jenn Anand",
-    "artistSlug": "jenn-anand"
+    "channel": "Jenn Anand",
+    "channelSlug": "jenn-anand"
   },
   {
     "id": "698894bcadb1cb3370d4eba0",
@@ -5116,8 +5116,8 @@
     "image": "https://img.youtube.com/vi/tMVRIHfKW7Y/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Lizzie Morgan",
-    "artistSlug": "lizzie-morgan"
+    "channel": "Lizzie Morgan",
+    "channelSlug": "lizzie-morgan"
   },
   {
     "id": "698897e5adb1cb3370d4ebd6",
@@ -5126,8 +5126,8 @@
     "image": "https://img.youtube.com/vi/K3D5y4nplKs/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Sean Rodriguez",
-    "artistSlug": "sean-rodriguez"
+    "channel": "Sean Rodriguez",
+    "channelSlug": "sean-rodriguez"
   },
   {
     "id": "69889b90adb1cb3370d4ebf3",
@@ -5136,8 +5136,8 @@
     "image": "https://img.youtube.com/vi/_kDPYIXOlnc/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Filadelfia Music",
-    "artistSlug": "filadelfia-music"
+    "channel": "Filadelfia Music",
+    "channelSlug": "filadelfia-music"
   },
   {
     "id": "698ad90a073e6e9b91158872",
@@ -5146,8 +5146,8 @@
     "image": "https://yt3.ggpht.com/5nW34vPuljLbN0hoXJXySSMWy1amO-4an2ku08e4EkbmbajYV6bYaD-hY_uDHwxC62gawMsQMoIOXw=s1600-rw-nd-v1",
     "status": "UPCOMING",
     "language": "hi",
-    "artist": "Romika Masih",
-    "artistSlug": "romika-masih"
+    "channel": "Romika Masih",
+    "channelSlug": "romika-masih"
   },
   {
     "id": "6997fe0eb61289d29fbe5e7e",
@@ -5156,8 +5156,8 @@
     "image": "https://img.youtube.com/vi/Xvm4_fWkXe8/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "en",
-    "artist": "Elevation Worship",
-    "artistSlug": "elevation-worship"
+    "channel": "Elevation Worship",
+    "channelSlug": "elevation-worship"
   },
   {
     "id": "699b3778610386bef4aa19e5",
@@ -5166,8 +5166,8 @@
     "image": "https://img.youtube.com/vi/6WfCPZEtRhk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Nations of Worship",
-    "artistSlug": "nations-of-worship"
+    "channel": "Nations of Worship",
+    "channelSlug": "nations-of-worship"
   },
   {
     "id": "69a049efe76c2390e312da75",
@@ -5176,8 +5176,8 @@
     "image": "https://img.youtube.com/vi/0FgtDf4tlFk/mqdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "One Tribe Production",
-    "artistSlug": "one-tribe-production"
+    "channel": "One Tribe Production",
+    "channelSlug": "one-tribe-production"
   },
   {
     "id": "69a487ab728f67f7aae31bf5",
@@ -5186,8 +5186,8 @@
     "image": "https://img.youtube.com/vi/AgyVqpJhOoE/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Brandon Das",
-    "artistSlug": "brandon-das"
+    "channel": "Brandon Das",
+    "channelSlug": "brandon-das"
   },
   {
     "id": "69a48f06728f67f7aae31c1f",
@@ -5196,8 +5196,8 @@
     "image": "https://img.youtube.com/vi/1uIF3ykHlew/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Anugrah Ministries",
-    "artistSlug": "anugrah-ministries"
+    "channel": "Anugrah Ministries",
+    "channelSlug": "anugrah-ministries"
   },
   {
     "id": "6a1fd4227e9e0e1c156e6a47",
@@ -5206,8 +5206,8 @@
     "image": "https://img.youtube.com/vi/it4Dusu2Hl0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "6a2c116b0d046b2705147479",
@@ -5216,8 +5216,8 @@
     "image": "https://img.youtube.com/vi/GSM3qsQ8P6A/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Bridge Music",
-    "artistSlug": "bridge-music"
+    "channel": "Bridge Music",
+    "channelSlug": "bridge-music"
   },
   {
     "id": "6a302adf13a2066ab8d78d6f",
@@ -5226,8 +5226,8 @@
     "image": "https://img.youtube.com/vi/CvovCsiCPn0/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Yeshua Ministries",
-    "artistSlug": "yeshua-ministries"
+    "channel": "Yeshua Ministries",
+    "channelSlug": "yeshua-ministries"
   },
   {
     "id": "6a3415a691828ad16c40e74f",
@@ -5236,7 +5236,17 @@
     "image": "https://img.youtube.com/vi/3KJVmoIGSNM/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
-    "artist": "Sheldon Bangera",
-    "artistSlug": "sheldon-bangera"
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
+  },
+  {
+    "id": "6a3f9997cd9479ba8ec9a241",
+    "slug": "rubarooh-peter-torne-6a3f9997cd9479ba8ec9a241",
+    "title": "Rubarooh",
+    "image": "https://img.youtube.com/vi/y3wU2ZQC8lI/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Peter Torne",
+    "channelSlug": "peter-torne"
   }
 ]

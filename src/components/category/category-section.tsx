@@ -1,5 +1,6 @@
 import React from "react";
-import CategoryCard from "./CategoryCard";
+import CategoryCard from "./category-card";
+// import CategoryCard from "./CategoryCard";
 
 type Category = {
   id: string;

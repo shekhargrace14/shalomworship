@@ -1,8 +1,9 @@
 export * from "./song.static";
-export * from "./artist.static";
+// export * from "./artist.static";
+export * from "./channel.static";
 export * from "./category.static";
 export * from "./album.static";
-export * from "./event.static";
+// export * from "./event.static";
 
 
 

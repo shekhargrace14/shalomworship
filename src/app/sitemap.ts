@@ -1,13 +1,13 @@
 export const dynamic = "force-static";
 
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getAllArtists, getAllArtistsBasic, getAllCategoriesBasic, getAllSongsBasic } from "@/lib/static";
+import { getAllChannels, getAllChannelsBasic, getAllCategoriesBasic, getAllSongsBasic } from "@/lib/static";
 export default async function generateSitemap() {
   const baseUrl = process.env.BASE_URL || "https://www.shalomworship.com";
 
   try {
     const posts = await getAllSongsBasic([...CONTENT_VISIBILITY.public]);
-    const artists = await getAllArtistsBasic();
+    const channels = await getAllChannelsBasic();
     const categories = await getAllCategoriesBasic();
     
 
@@ -17,10 +17,10 @@ export default async function generateSitemap() {
         lastModified: post.updatedAt || new Date().toISOString(),
       })) ?? [];
 
-    const artistsUrls =
-      artists?.map((artist) => ({
-        url: `${baseUrl}/artist/${artist.slug}-${artist.id}`,
-        lastModified: artist.updatedAt || new Date().toISOString(),
+    const channelsUrls =
+      channels?.map((channel) => ({
+        url: `${baseUrl}/channel/${channel.slug}-${channel.id}`,
+        lastModified: channel.updatedAt || new Date().toISOString(),
       })) ?? [];
 
       const categoriesUrls =
@@ -35,7 +35,7 @@ export default async function generateSitemap() {
         lastModified: new Date().toISOString(),
       },
       ...postsUrls,
-      ...artistsUrls,
+      ...channelsUrls,
       ...categoriesUrls,
     ];
   } catch (error:any) {

@@ -12,10 +12,19 @@ export default async function JsonLd({ id }: { id: string }) {
 
   // -------- SAFE VALUES --------
   const alternateNames = songData.searchVariant.map(s => s)
-  const artist = songData.artist
-  const artistNames = artist?.map(a => a.artist.title) || [];
-  const primaryArtistUrl = artist[0]?.artist.link || [];
-  const primaryArtist = artistNames[0] || "Unknown Artist";
+
+//   const artist = songData.artist
+  const channel = songData.channel
+
+//   const artistNames = artist?.map(a => a.artist.title) || [];
+  const channelName = channel?.title;
+
+//   const primaryArtistUrl = artist[0]?.artist.link || [];
+  const primaryArtistUrl = channel?.slug ;
+
+//   const primaryArtist = artistNames[0] || "Unknown Artist";
+  const primaryArtist = channelName || "Unknown Artist";
+
   // console.log(artist[0].artist.link, "json ld isssssss")
 
   const lang = songData.language ?? "en";
@@ -26,7 +35,7 @@ export default async function JsonLd({ id }: { id: string }) {
   const safeImage = songData.image || "https://www.shalomworship.com/default-song.jpg";
   const safeVideoId = songData.videoId || "";
   const safeCategory = songData.category?.[0]?.category;
-  const safeAlbum = songData.album?.[0]?.album;
+  const safeAlbum = songData.albums?.[0]?.album;
   const aboutData = [
     {
       "@type": "Thing",
@@ -97,10 +106,10 @@ export default async function JsonLd({ id }: { id: string }) {
     lyricist: { "@type": "Person", name: primaryArtist },
     composer: { "@type": "Person", name: primaryArtist },
 
-    creator: artistNames.map(name => ({
+    creator: {
       "@type": "Person",
-      name
-    })),
+      channelName
+    },
     "subjectOf": {
       "@type": "VideoObject",
       "name": `${songData.title} Official Video`,

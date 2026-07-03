@@ -48,9 +48,24 @@ export const songStatsSelect = {
   like: true,
 };
 
+// Original creator / owner of the song
+export const songCredits = {
+  channelId: true,
+  channel: true,
+  credits :true,
+}
+
+// Classification
+
+export const songClassification = {
+  albums :true,
+  seasons: true, 
+}
+
 export const songFullSelect = {
   ...songBaseSelect,
   ...songContentSelect,
+  ...songCredits,
   ...songMusicSelect,
   ...songMediaSelect,
   ...songSeoSelect,

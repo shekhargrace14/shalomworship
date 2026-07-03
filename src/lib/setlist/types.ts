@@ -3,7 +3,7 @@ export type SetlistSong = {
   slug: string;
   title: string;
   image: string;
-  artist: string;
+  channel: string;
   status: "PUBLISH" | "ARCHIVE" | "UPCOMING" | "DRAFT" | "CANCELLED" | "COMPLETE" | "TRASH" | "REVIEW";
   language: string;
 };

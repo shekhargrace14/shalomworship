@@ -1,8 +1,8 @@
-// import { fetchSongById, fetchSongBySlug } from "@/app/reactQuery/query"
-// import { Mastercard } from "./ui/mastercard"
+
 import { getSong, getSongDisplay } from "@/lib/static";
 import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
 import { MasterCard } from "./mastercard";
+import SongCard from "./song/song-card";
 
 type Song = {
   id: string;
@@ -16,15 +16,10 @@ type Song = {
 };
 
 export default async function Processor({item : id, variant }:any){
-    // console.log(item,"Processor log props")
     const item = await getSongDisplay(id,[...CONTENT_VISIBILITY.discoverable]);
-    // const item = await getSong(id,[...CONTENT_VISIBILITY.discoverable]);
-    // console.log(item,"Processor log song")
-
     return(
         <>
-        {/* <Card item={item}/> */}
-        <MasterCard 
+        <SongCard 
             key={item?.id} 
             id={item?.id} 
             item={item} 

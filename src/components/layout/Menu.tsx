@@ -6,10 +6,10 @@ const Menu = () => {
     // { title: "All", link: "/" },
     { title: "Setlist(Beta)", link: "/setlist" },
     { title: "Song", link: "/song" },
-    { title: "Artist", link: "/artist" },
+    { title: "Channel", link: "/channel" },
     { title: "Category", link: "/category" },
     { title: "Album", link: "/album" },
-    { title: "Event", link: "/event" },
+    // { title: "Event", link: "/event" },
   ];
 
   return (

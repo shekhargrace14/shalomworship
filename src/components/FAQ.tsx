@@ -23,7 +23,7 @@ export function FAQ({ title, artist, category, writer, meaning, scripture, band 
   // Helper: render array of objects as comma-separated text
   const renderList = (items?: NamedItem[]) =>
     items?.map((item) => item.name).join(", ")
-  console.log(artist , "artist on faq")
+  // console.log(artist , "artist on faq")
 
   const faqItems = [
     {

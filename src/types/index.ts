@@ -1,4 +1,13 @@
-import { Prisma, song, artist, category } from "@prisma/client";
+import { Prisma, song, channel, category } from "@prisma/client";
+
+
+// EXAMPLE - 
+type SongWithChannel = song & {
+  channel: channel | null;
+};
+
+
+
 
 // Generic API response
 export type ApiResponse<T> = {
@@ -6,13 +15,6 @@ export type ApiResponse<T> = {
   data: T;
 };
 
-export type ArtistProps = artist;
-// export type ArtistProps = {
-//   id: string;
-//   name: string;
-//   image: string | null;
-//   type:string ;
-// };
 
 
 export type ChordLyric = { chord: string; lyrics: string };

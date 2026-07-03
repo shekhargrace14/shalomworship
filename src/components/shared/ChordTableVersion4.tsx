@@ -74,7 +74,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
   const key = songData.key || 'C';
   const toKey = generateToKey(key, shift);
   const langName = getLanguageName(Songlanguage);
-  const isHindi = songData.language === "hi";
+  // const isHindi = songData.language === "hi";
 
 
   const position = (count: number) => '\u00A0'.repeat(count);
@@ -168,7 +168,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
         </div>
       )}
       {/* Main*/}
-      <div className={`space-y-6 ${!isChord && !isNashville && isHindi ? "grid grid-cols-1 lg:grid-cols-2 gap-4" : "block"} items-start`}>
+      <div className={`space-y-6 ${!isChord && !isNashville ? "grid grid-cols-1 lg:grid-cols-2 gap-4" : "block"} items-start`}>
 
         {/* left - romans  */}
         <div className="">
@@ -259,7 +259,7 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
         </div>
 
         {/* right - native */}
-        {!isChord && !isNashville && isHindi && (
+        {!isChord && !isNashville && (
           <div className="right">
 
             {/* mobile H2 for non-romans languages */}

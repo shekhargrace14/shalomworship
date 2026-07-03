@@ -90,7 +90,7 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
             : "Lyrics"}
       </h2>
       <div
-        className={`space-y-6 font-mono ${isRoman ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-2"
+        className={`space-y-6 font-sans ${isRoman ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-2"
           } grid items-start gap-4`}
       >
         {song.lines.map((section, sectionIdx) => (

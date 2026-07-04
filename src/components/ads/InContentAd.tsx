@@ -5,30 +5,21 @@ import { useEffect } from "react";
 export default function InContentAd() {
   useEffect(() => {
     try {
-      // Push ads only if AdSense is available
       // @ts-ignore
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error("AdSense error", e);
+    } catch (error) {
+      console.error("AdSense error:", error);
     }
   }, []);
 
   return (
-    <div
-      style={{
-        margin: "24px 0",
-        display: "flex",
-        justifyContent: "center",
-        minHeight: "90px",
-      }}
-    >
+    <div className="my-6 flex w-full justify-center mx-auto clear-both">
       <ins
         className="adsbygoogle"
-        style={{ display: "block", width: "80%" }}
-        data-ad-client="ca-pub-7686801812294972"   // <-- replace later
-        data-ad-slot="7232236064"                   // <-- replace later
-        data-ad-format="auto"
-        data-full-width-responsive="true"
+        style={{ display: "block", minHeight: "250px" }}
+        data-ad-client="ca-pub-7686801812294972"
+        data-ad-slot="7232236064"
+        data-ad-format="rectangle"
       />
     </div>
   );

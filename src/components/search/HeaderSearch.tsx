@@ -152,7 +152,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
             return (
               <div
                 key={song.id}
-                className={` px-1 py-1 hover:bg-ring rounded-md flex gap-2 justify-between items-center 
+                className={`group px-1 py-1 hover:bg-ring rounded-md flex gap-2 justify-between items-center 
                   ${i === active ? "bg-ring" : ""}
                   ${redirectCheck ? "cursor-pointer" : ""}
                 `}
@@ -162,7 +162,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
                 }}
 
               >
-                <div className="flex gap-2">
+                <div className="flex gap-2 ">
                   <Image
                     src={song.image}
                     alt={song.title}
@@ -172,7 +172,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
                   />
                   <div className="flex flex-col ">
                     <div className="font-medium">{song.title}</div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-500 group-hover:text-foreground">
                       {song?.channel}
                       {song.status === "upcoming" && " • Coming Soon"}
                     </div>

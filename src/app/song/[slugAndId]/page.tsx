@@ -50,8 +50,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   if (!song) return {};
   return buildSongMetadata({
-    song,
-    slugAndId,
+    song
   });
 }
 
@@ -80,7 +79,7 @@ const Song = async ({ params }: any) => {
         <Menu />
         <AutoPopup />
 
-        {/* <InContentAd /> */}
+        <InContentAd />
         <div className=" sm:flex items-center gap-4 w-full">
           <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
             {songData?.videoId ? (

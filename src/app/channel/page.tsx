@@ -8,12 +8,11 @@ import { getAllChannels } from "@/lib/static";
 
 
 export function generateMetadata(){
-  // const type = "artist"
-  const title = "Artists";
-  const slug = "artists";
+  const title = "Channels";
+  const slug = "channels";
   const description = "Explore various artists and their works on Shalom Worship.";
   const image = "";
-  const keyword = ["Artists", "Shalom Worship"];
+  const keyword = ["Channels", "Shalom Worship"];
 
   return MetaData({
     // type,
@@ -28,9 +27,6 @@ export function generateMetadata(){
 const page = async () => {
   const channels = await getAllChannels();
   
-
-  // console.log(artists, "fetched artists");
-
   return (
     <div className="p-4">
       <Menu />

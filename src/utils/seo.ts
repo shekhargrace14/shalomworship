@@ -14,7 +14,7 @@ export function buildSongMetadata({ song }: { song: any }): Metadata {
   const lang = song.language || "en";
   const langName = getLanguageName(lang);
   // const artists = song.artist?.map((a: any) => a.artist.title) || [];
-  const channel = song.channel.title;
+  const channel = song?.channel?.title;
 
   const canonicalUrl = `https://www.shalomworship.com/song/${song.slug}-${song.id}`;
 

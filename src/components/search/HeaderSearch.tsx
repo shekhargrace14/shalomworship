@@ -178,7 +178,7 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
                     </div>
                   </div>
                 </div>
-                <BookmarkSong setlistId={setlistId} song={song} />
+                {/* <BookmarkSong setlistId={setlistId} song={song} /> */}
               </div>
             )
           }

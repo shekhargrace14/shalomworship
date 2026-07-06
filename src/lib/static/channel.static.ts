@@ -30,7 +30,13 @@ export async function getChannel(
       where: { id: channelId },
       select: {
         ...channelFullSelect,
-        songs:true
+        songs:{
+          // include:{
+          //   song:{
+          //     statuses:{in:statuses},
+          //   }
+          // }
+        }
         
       },
     })

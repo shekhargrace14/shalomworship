@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    body { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh;
+      background: transparent;
+      overflow: hidden;
+    }
+    .ad-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .adsbygoogle {
+      display: block !important;
+    }
+  </style>
+  
+  <!-- FIX 1: The mandatory AdSense core engine script -->
+  <script 
+    async 
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972" 
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <div class="ad-container" id="ad-box">
+    <!-- FIX 2: Elements will be built dynamically based on URL properties -->
+  </div>
+
+  <script>
+    // Parse the parameters sent by the parent Next.js page component
+    const urlParams = new URLSearchParams(window.location.search);
+    const client = urlParams.get('client') || 'ca-pub-7686801812294972';
+    const slot = urlParams.get('slot') || '7232236064';
+    const width = urlParams.get('width') || '300';
+    const height = urlParams.get('height') || '250';
+
+    // Construct the ad layout slot imperatively
+    const insElement = document.createElement('ins');
+    insElement.className = 'adsbygoogle';
+    insElement.style.width = width + 'px';
+    insElement.style.height = height + 'px';
+    insElement.setAttribute('data-ad-client', client);
+    insElement.setAttribute('data-ad-slot', slot);
+    insElement.setAttribute('data-ad-format', 'rectangle');
+
+    document.getElementById('ad-box').appendChild(insElement);
+
+    // Boot up the banner instance safely inside the frame sandbox context
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error("Internal sandbox layout generation failure:", e);
+    }
+  </script>
+</body>
+</html>

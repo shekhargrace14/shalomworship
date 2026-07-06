@@ -43,8 +43,8 @@ const Page = async ({ params }: any) => {
   const color = channelData?.color ?? "#121212";
   const songs = data?.songs ? [...data.songs].reverse() : [];
   const hasSongs = songs.length > 0;
-  const upcomingSongs = await getChannel(id, [...CONTENT_VISIBILITY.upcoming,]);
-  const upcomingSongsData = upcomingSongs?.songs ? [...upcomingSongs.songs] : [];
+  // const upcomingSongs = await getChannel(id, [...CONTENT_VISIBILITY.upcoming]);
+  // const upcomingSongsData = upcomingSongs?.songs ? [...upcomingSongs.songs] : [];
 
   return (
     <>
@@ -86,7 +86,7 @@ const Page = async ({ params }: any) => {
           </div>
         </div>
 
-        {(upcomingSongsData?.length ?? 0) > 0 ? (
+        {/* {(upcomingSongsData?.length ?? 0) > 0 ? (
           <>
             <h2 className="text-xl font-semibold m-4 text-foreground">
               Upcoming Songs from {data?.title || "Artist"}
@@ -102,7 +102,7 @@ const Page = async ({ params }: any) => {
               </div>
             </section>
           </>
-        ) : null}
+        ) : null} */}
 
         {hasSongs ? (
           <h2 className="text-xl font-semibold m-4 text-foreground">

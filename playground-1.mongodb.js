@@ -2,15 +2,15 @@ db.SongCategory.aggregate([
   {
     $group: {
       _id: {
-        songId: "$songId",
-        categoryId: "$categoryId"
+        songId: '$songId',
+        categoryId: '$categoryId',
       },
-      count: { $sum: 1 }
-    }
+      count: { $sum: 1 },
+    },
   },
   {
     $match: {
-      count: { $gt: 1 }
-    }
-  }
-])
+      count: { $gt: 1 },
+    },
+  },
+]);

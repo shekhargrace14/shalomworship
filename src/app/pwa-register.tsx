@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export default function PwaRegister() {
   useEffect(() => {
-    if ("serviceWorker" in navigator) {
+    if ('serviceWorker' in navigator) {
       navigator.serviceWorker
-        .register("/sw.js")
+        .register('/sw.js')
         .then(() => {
-          console.log("SW Registered");
+          console.log('SW Registered');
         })
         .catch(console.error);
     }

@@ -2,7 +2,7 @@
   "name": "shalomworship",
   "pages_build_output_dir": ".vercel/output/static",
   "compatibility_flags": [
-    "nodejs_compat" // This is what Prisma needs to work!
+    "nodejs_compat", // This is what Prisma needs to work!
   ],
-  "compatibility_date": "2024-11-01"
+  "compatibility_date": "2024-11-01",
 }

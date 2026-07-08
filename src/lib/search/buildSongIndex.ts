@@ -1,10 +1,9 @@
-import { getAllSongs } from "@/lib/static/song.static";
-import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import fs from "fs";
-import path from "path";
+import { getAllSongs } from '@/lib/static/song.static';
+import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
+import fs from 'fs';
+import path from 'path';
 
-import type { song, channel } from "@prisma/client";
-
+import type { song, channel } from '@prisma/client';
 
 type SongWithChannel = song & {
   channel: {
@@ -16,7 +15,7 @@ type SongWithChannel = song & {
 export async function buildSongSearchIndex() {
   const songs = await getAllSongs([...CONTENT_VISIBILITY.discoverable]);
 
-  const index = songs.map((song:SongWithChannel) => {
+  const index = songs.map((song: SongWithChannel) => {
     return {
       id: song.id,
       slug: `${song.slug}-${song.id}`,
@@ -25,11 +24,11 @@ export async function buildSongSearchIndex() {
       status: song.status,
       language: song.language,
       channel: song?.channel?.title,
-      channelSlug: song?.channel?.slug
+      channelSlug: song?.channel?.slug,
     };
   });
 
-  const outputPath = path.join(process.cwd(), "public/search/songs.json");
+  const outputPath = path.join(process.cwd(), 'public/search/songs.json');
 
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(index, null, 2));

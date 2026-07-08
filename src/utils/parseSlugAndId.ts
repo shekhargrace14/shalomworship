@@ -17,23 +17,19 @@ const OBJECT_ID_REGEX = /^[0-9a-fA-F]{24}$/;
  *
  * Throws error ONLY if the id is invalid.
  */
-export function parseSlugAndId(
-  param: string | string[] | undefined
-): { slug: string; id: string } {
-
+export function parseSlugAndId(param: string | string[] | undefined): { slug: string; id: string } {
   // Normalize input (Next.js Turbopack sometimes sends array or undefined)
-  const raw =
-    Array.isArray(param) ? param[0] ?? "" : (param ?? "");
+  const raw = Array.isArray(param) ? (param[0] ?? '') : (param ?? '');
 
-  if (!raw || typeof raw !== "string") {
+  if (!raw || typeof raw !== 'string') {
     throw new Error(`slugAndId param is missing or invalid: ${String(param)}`);
   }
 
   // Remove whitespace & trailing slashes
-  const cleaned = raw.trim().replace(/\/+$/, "");
+  const cleaned = raw.trim().replace(/\/+$/, '');
 
   // Split into parts, remove empty values
-  const parts = cleaned.split("-").filter(Boolean);
+  const parts = cleaned.split('-').filter(Boolean);
 
   if (parts.length < 2) {
     throw new Error(`Unexpected slugAndId format: "${raw}"`);
@@ -47,7 +43,7 @@ export function parseSlugAndId(
   }
 
   // Everything before the id is the slug
-  const slug = parts.slice(0, -1).join("-");
+  const slug = parts.slice(0, -1).join('-');
 
   return { slug, id: idCandidate };
 }

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 
 function reorder<T>(list: T[], from: number, to: number): T[] {
   const updated = [...list];
@@ -7,10 +7,7 @@ function reorder<T>(list: T[], from: number, to: number): T[] {
   return updated;
 }
 
-export function useDragReorder<T>(
-  data: T[],
-  onReorder: (newData: T[]) => void
-) {
+export function useDragReorder<T>(data: T[], onReorder: (newData: T[]) => void) {
   const dragFrom = useRef<number | null>(null);
   const dragTo = useRef<number | null>(null);
 
@@ -23,12 +20,7 @@ export function useDragReorder<T>(
   };
 
   const onDragEnd = () => {
-    if (
-      dragFrom.current === null ||
-      dragTo.current === null ||
-      dragFrom.current === dragTo.current
-    )
-      return;
+    if (dragFrom.current === null || dragTo.current === null || dragFrom.current === dragTo.current) return;
 
     const updated = reorder(data, dragFrom.current, dragTo.current);
     onReorder(updated);

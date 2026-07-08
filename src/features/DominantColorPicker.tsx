@@ -51,7 +51,7 @@ const DominantColorPicker: React.FC<Props> = ({ url, onColorExtracted }) => {
 
       if (maxColor) {
         const [r, g, b] = maxColor.split(',').map(Number);
-        const hex = `#${[r, g, b].map(x => x.toString(16).padStart(2, '0')).join('')}`;
+        const hex = `#${[r, g, b].map((x) => x.toString(16).padStart(2, '0')).join('')}`;
         onColorExtracted(hex); // ✅ callback to parent
       }
     };

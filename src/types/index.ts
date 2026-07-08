@@ -1,13 +1,9 @@
-import { Prisma, song, channel, category } from "@prisma/client";
+import { Prisma, song, channel, category } from '@prisma/client';
 
-
-// EXAMPLE - 
+// EXAMPLE -
 type SongWithChannel = song & {
   channel: channel | null;
 };
-
-
-
 
 // Generic API response
 export type ApiResponse<T> = {
@@ -15,10 +11,8 @@ export type ApiResponse<T> = {
   data: T;
 };
 
-
-
 export type ChordLyric = { chord: string; lyrics: string };
-// export type SongType = song; 
+// export type SongType = song;
 export type Song = {
   id: string;
   _id: string;
@@ -41,11 +35,11 @@ export type Category = {
   // Add other properties if needed
 };
 export type MetaDataProps = {
-  title: string
-  slug: string
-  keyword?: string[]
-  metaDescription?: string
-  image?: string
-}
+  title: string;
+  slug: string;
+  keyword?: string[];
+  metaDescription?: string;
+  image?: string;
+};
 
 // declare module "next-pwa";

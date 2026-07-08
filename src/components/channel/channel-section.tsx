@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import ArtistCard from "./ArtistCard";
-import { channel } from "@prisma/client";
-import ChannelCard from "./channel-card";
+import { channel } from '@prisma/client';
+import ChannelCard from './channel-card';
 
 type Props = {
   number?: number;

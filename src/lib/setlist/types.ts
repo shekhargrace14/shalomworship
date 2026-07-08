@@ -4,7 +4,7 @@ export type SetlistSong = {
   title: string;
   image: string;
   channel: string;
-  status: "PUBLISH" | "ARCHIVE" | "UPCOMING" | "DRAFT" | "CANCELLED" | "COMPLETE" | "TRASH" | "REVIEW";
+  status: 'PUBLISH' | 'ARCHIVE' | 'UPCOMING' | 'DRAFT' | 'CANCELLED' | 'COMPLETE' | 'TRASH' | 'REVIEW';
   language: string;
 };
 
@@ -12,7 +12,7 @@ export type Setlist = {
   id: string;
   name: string;
   description: string;
-  eventAt:number;
+  eventAt: number;
   songs: SetlistSong[];
   createdAt: number;
   updatedAt: number;

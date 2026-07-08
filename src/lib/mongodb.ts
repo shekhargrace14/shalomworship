@@ -1,8 +1,8 @@
-import { MongoClient } from "mongodb";
+import { MongoClient } from 'mongodb';
 
 const uri = process.env.DATABASE_URL as string; // get from .env.local
 const options = {};
-        
+
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 

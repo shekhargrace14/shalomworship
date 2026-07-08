@@ -1,16 +1,16 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
-import Image from "next/image";
-import { ModeToggle } from "../ModeToggle";
-import { HeaderSearch } from "../search/HeaderSearch";
-import { Button } from "../ui/button";
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
+import Image from 'next/image';
+import { ModeToggle } from '../ModeToggle';
+import { HeaderSearch } from '../search/HeaderSearch';
+import { Button } from '../ui/button';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
-    setMenuOpen((toggle) => !toggle)
-  }
+    setMenuOpen((toggle) => !toggle);
+  };
   return (
     <header className="relative w-full py-0 px-4  text-foreground   flex justify-between items-center gap-2 ">
       <div className="w-2/12 md:w-4/12 lg:w-3/12 ">
@@ -20,8 +20,8 @@ const Header = () => {
       </div>
       <div className="w-10/12 sm:w-8/12 lg:w-5/12">
         {/* <Searchbar /> */}
-        <HeaderSearch 
-          // redirectCheck={true} 
+        <HeaderSearch
+        // redirectCheck={true}
         />
       </div>
       <div className="md:w-4/12 flex justify-end items-center gap-4">
@@ -35,9 +35,7 @@ const Header = () => {
             cursor-pointer
           "
         >
-          <Button variant="outline">
-            Contact Us
-          </Button>
+          <Button variant="outline">Contact Us</Button>
         </Link>
         <ModeToggle />
       </div>

@@ -1,17 +1,17 @@
 // src/utils/seo.ts
 
-import type { Metadata } from "next";
-import { getLanguageName } from "./getLanguageName";
+import type { Metadata } from 'next';
+import { getLanguageName } from './getLanguageName';
 
 export function buildSongMetadata({ song }: { song: any }): Metadata {
   if (!song) {
     return {
-      title: "Song Not Found - Shalom Worship",
-      description: "The song you are looking for does not exist.",
+      title: 'Song Not Found - Shalom Worship',
+      description: 'The song you are looking for does not exist.',
     };
   }
 
-  const lang = song.language || "en";
+  const lang = song.language || 'en';
   const langName = getLanguageName(lang);
   // const artists = song.artist?.map((a: any) => a.artist.title) || [];
   const channel = song?.channel?.title;
@@ -21,18 +21,16 @@ export function buildSongMetadata({ song }: { song: any }): Metadata {
   const category = song.category.map((c: any) => c.category.title);
 
   // Title
-  const title = `${song.title} Lyrics ${song.searchVariantInTitle ? `- ${song.searchVariant[0]}` : ""}
-        ${song.isChords ? " Chords & Nashville Number Chart" : ""}  | ${channel} | Shalom Worship`;
+  const title = `${song.title} Lyrics ${song.searchVariantInTitle ? `- ${song.searchVariant[0]}` : ''}
+        ${song.isChords ? ' Chords & Nashville Number Chart' : ''}  | ${channel} | Shalom Worship`;
 
   // Description
   const description = `${song.title} is a Christian worship song by ${channel}, commonly sung in moments of 
-    ${category}. This page provides the lyrics${song.isChords ? ", chords & Nashville Number System" : ""}, prepared for congregational worship and personal devotion.${song?.searchVariant ? ` This song is widely known by the refrain "${song?.searchVariant}".` : ""}
+    ${category}. This page provides the lyrics${song.isChords ? ', chords & Nashville Number System' : ''}, prepared for congregational worship and personal devotion.${song?.searchVariant ? ` This song is widely known by the refrain "${song?.searchVariant}".` : ''}
     `;
 
   // OG Image fallback
-  const image =
-    song.image ||
-    `https://img.youtube.com/vi/${song.videoId}/maxresdefault.jpg`;
+  const image = song.image || `https://img.youtube.com/vi/${song.videoId}/maxresdefault.jpg`;
 
   // Keywords
   // const keywords = [
@@ -45,7 +43,7 @@ export function buildSongMetadata({ song }: { song: any }): Metadata {
   // ];
   const authors = song?.channel;
 
-  const publishedTime = song?.createdAt?.toISOString?.() || "";
+  const publishedTime = song?.createdAt?.toISOString?.() || '';
   const modifiedTime = song?.updatedAt?.toISOString?.() || publishedTime;
 
   return {
@@ -60,13 +58,13 @@ export function buildSongMetadata({ song }: { song: any }): Metadata {
       title,
       description,
       url: canonicalUrl,
-      type: "music.song",
-      siteName: "Shalom Worship",
+      type: 'music.song',
+      siteName: 'Shalom Worship',
       images: [{ url: image, width: 1200, height: 630 }],
     },
 
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [image],
@@ -74,9 +72,9 @@ export function buildSongMetadata({ song }: { song: any }): Metadata {
 
     other: {
       // For JSON-LD auto-injection by the component
-      "structured-data": "ready",
-      "article:published_time": publishedTime,
-      "article:modified_time": modifiedTime,
+      'structured-data': 'ready',
+      'article:published_time': publishedTime,
+      'article:modified_time': modifiedTime,
     },
   };
 }

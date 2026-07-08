@@ -15,7 +15,6 @@ export const channelMetaSelect = {
   type: true,
 };
 
-
 export const channelFullSelect = {
   ...channelBaseSelect,
   ...channelMetaSelect,

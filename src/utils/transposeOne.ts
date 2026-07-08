@@ -5,11 +5,11 @@ const SHARP_NOTES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#',
 const FLAT_NOTES = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
 
 const ENHARMONICS: Record<string, string> = {
-  'Db': 'C#',
-  'Eb': 'D#',
-  'Gb': 'F#',
-  'Ab': 'G#',
-  'Bb': 'A#',
+  Db: 'C#',
+  Eb: 'D#',
+  Gb: 'F#',
+  Ab: 'G#',
+  Bb: 'A#',
 };
 
 function normalizeNote(note: string): string {
@@ -33,15 +33,13 @@ function getKeyByShift(key: string, shift: number): string {
 function normalizeChord(chord: string): [string, string, string?] {
   const clean = chord.trim().replace(/\s+/g, '');
   const match = clean.match(/^([A-G][#b]?)(.*?)(?:\/([A-G][#b]?))?$/);
-  if (!match) throw new Error("Invalid chord: " + chord);
+  if (!match) throw new Error('Invalid chord: ' + chord);
   const [, root, suffix, bass] = match;
   return [root, suffix, bass];
 }
 
 function transposeChord(chords: string[], fromKey: string, toKey: string): string[] {
-  const shift =
-    NOTE_INDEXES.indexOf(normalizeNote(toKey.replace('m', ''))) -
-    NOTE_INDEXES.indexOf(normalizeNote(fromKey.replace('m', '')));
+  const shift = NOTE_INDEXES.indexOf(normalizeNote(toKey.replace('m', ''))) - NOTE_INDEXES.indexOf(normalizeNote(fromKey.replace('m', '')));
 
   return chords.map((chordRaw) => {
     const chord = chordRaw.trim();
@@ -58,9 +56,7 @@ function transposeChord(chords: string[], fromKey: string, toKey: string): strin
         transposedBass = bassIndex !== -1 ? NOTE_INDEXES[(bassIndex + shift + 12) % 12] : bass;
       }
 
-      return transposedBass
-        ? `${transposedRoot}${suffix}/${transposedBass}`
-        : `${transposedRoot}${suffix}`;
+      return transposedBass ? `${transposedRoot}${suffix}/${transposedBass}` : `${transposedRoot}${suffix}`;
     } catch {
       console.warn(`Skipping invalid chord: "${chordRaw}"`);
       return chordRaw;

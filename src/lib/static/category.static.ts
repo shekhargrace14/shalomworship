@@ -1,7 +1,6 @@
-import { StatusType } from "@prisma/client";
-import prisma from "./prisma";
-import { categoryBasicSelect } from "@/prisma/selectors";
-
+import { StatusType } from '@prisma/client';
+import prisma from './prisma';
+import { categoryBasicSelect } from '@/prisma/selectors';
 
 export async function getAllCategories() {
   try {
@@ -9,27 +8,23 @@ export async function getAllCategories() {
       include: {
         song: true, // Fetch all songs related to the artist
       },
-    })
+    });
   } catch (error) {
-    console.log(error, "error from category server action")
+    console.log(error, 'error from category server action');
   }
 }
 
 export async function getAllCategoriesBasic() {
   try {
     return await prisma.category.findMany({
-      select: categoryBasicSelect
-    })
+      select: categoryBasicSelect,
+    });
   } catch (error) {
-    console.log(error, "error from category server action")
+    console.log(error, 'error from category server action');
   }
 }
 
-
-export async function getCategory(
-  categorySlug: string,
-  statuses: StatusType[]
-) {
+export async function getCategory(categorySlug: string, statuses: StatusType[]) {
   return prisma.category.findUnique({
     where: { slug: categorySlug },
     include: {

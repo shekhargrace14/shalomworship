@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -9,18 +9,18 @@ async function main() {
     const title = song.title as any;
 
     // Case 1: JSON title → extract primary
-    if (title && typeof title === "object" && "primary" in title) {
+    if (title && typeof title === 'object' && 'primary' in title) {
       await prisma.song.update({
         where: { id: song.id },
         data: {
-          title: String(title.primary ?? ""),
+          title: String(title.primary ?? ''),
         },
       });
       continue;
     }
 
     // Case 2: already string → do nothing
-    if (typeof title === "string") {
+    if (typeof title === 'string') {
       continue;
     }
 
@@ -28,17 +28,17 @@ async function main() {
     await prisma.song.update({
       where: { id: song.id },
       data: {
-        title: "",
+        title: '',
       },
     });
   }
 
-  console.log("✅ Title reverted to string successfully");
+  console.log('✅ Title reverted to string successfully');
 }
 
 main()
   .catch((e) => {
-    console.error("❌ Migration failed", e);
+    console.error('❌ Migration failed', e);
     process.exit(1);
   })
   .finally(async () => {

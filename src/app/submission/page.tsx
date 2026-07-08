@@ -1,6 +1,6 @@
-import Menu from '@/components/layout/Menu'
-import SubmissionForm from '@/components/SubmissionForm'
-import React from 'react'
+import Menu from '@/components/layout/Menu';
+import SubmissionForm from '@/components/SubmissionForm';
+import React from 'react';
 
 const page = () => {
   return (
@@ -8,7 +8,7 @@ const page = () => {
       <Menu />
       <SubmissionForm />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

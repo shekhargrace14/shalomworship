@@ -1,29 +1,29 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { nanoid } from "nanoid";
-import { Setlist, SetlistSong } from "./types";
+import { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
+import { Setlist, SetlistSong } from './types';
 
-const KEY = "setlists";
+const KEY = 'setlists';
 
 export function useSetlists() {
-  const [setlists, setSetlists,] = useState<Setlist[]>([]);
+  const [setlists, setSetlists] = useState<Setlist[]>([]);
   const [ready, setReady] = useState(false);
 
-function reorderSongs(setlistId: string, newSongs: SetlistSong[]) {
-  const next = setlists.map(s => {
-    if (s.id !== setlistId) return s;
+  function reorderSongs(setlistId: string, newSongs: SetlistSong[]) {
+    const next = setlists.map((s) => {
+      if (s.id !== setlistId) return s;
 
-    return {
-      ...s,
-      songs: newSongs,
-      updatedAt: Date.now(),
-    };
-  });
+      return {
+        ...s,
+        songs: newSongs,
+        updatedAt: Date.now(),
+      };
+    });
 
-  setSetlists(next);
-  localStorage.setItem(KEY, JSON.stringify(next));
-}
+    setSetlists(next);
+    localStorage.setItem(KEY, JSON.stringify(next));
+  }
 
   useEffect(() => {
     const raw = localStorage.getItem(KEY);
@@ -45,8 +45,7 @@ function reorderSongs(setlistId: string, newSongs: SetlistSong[]) {
     setReady(true); // hydration complete check
   }, []);
 
-
-  function createSetlist(name: string, description: string,) {
+  function createSetlist(name: string, description: string) {
     const next: Setlist[] = [
       ...setlists,
       {
@@ -57,35 +56,32 @@ function reorderSongs(setlistId: string, newSongs: SetlistSong[]) {
         eventAt: Date.now(),
         createdAt: Date.now(),
         updatedAt: Date.now(),
-      }];
+      },
+    ];
     setSetlists(next);
     localStorage.setItem(KEY, JSON.stringify(next));
   }
 
   function deleteSetlist(id: string) {
-    const next = setlists.filter(s => s.id !== id);
+    const next = setlists.filter((s) => s.id !== id);
     setSetlists(next);
     localStorage.setItem(KEY, JSON.stringify(next));
   }
 
   function clearSetlist(setlistId: string) {
-  const next = setlists.map(s =>
-    s.id === setlistId
-      ? { ...s, songs: [], updatedAt: Date.now() }
-      : s
-  );
+    const next = setlists.map((s) => (s.id === setlistId ? { ...s, songs: [], updatedAt: Date.now() } : s));
 
-  setSetlists(next);
-  localStorage.setItem(KEY, JSON.stringify(next));
-}
+    setSetlists(next);
+    localStorage.setItem(KEY, JSON.stringify(next));
+  }
 
   function addSong(setlistId: string, song: SetlistSong) {
     if (!ready) return; // ⛔ CRITICAL
 
-    const next = setlists.map(s => {
+    const next = setlists.map((s) => {
       if (s.id !== setlistId) return s;
 
-      if (s.songs.some(x => x.id === song.id)) return s;
+      if (s.songs.some((x) => x.id === song.id)) return s;
 
       return {
         ...s,
@@ -99,12 +95,12 @@ function reorderSongs(setlistId: string, newSongs: SetlistSong[]) {
   }
 
   function removeSong(setlistId: string, songId: string) {
-    const next = setlists.map(s => {
+    const next = setlists.map((s) => {
       if (s.id !== setlistId) return s;
 
       return {
         ...s,
-        songs: s.songs.filter(song => song.id !== songId),
+        songs: s.songs.filter((song) => song.id !== songId),
         updatedAt: Date.now(),
       };
     });

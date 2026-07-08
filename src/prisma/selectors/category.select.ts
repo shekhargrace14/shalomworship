@@ -6,7 +6,6 @@ export const categoryBasicSelect = {
   createdAt: true,
   updatedAt: true,
   color: true,
-
 };
 
 export const categoryFullSelect = {

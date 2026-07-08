@@ -1,5 +1,5 @@
-"use client";
-import React, { useRef, useState, useEffect } from "react";
+'use client';
+import React, { useRef, useState, useEffect } from 'react';
 
 const DEFAULT_SPEED_PX_PER_SEC = 60; // fixed for now; we'll add a slider later.
 
@@ -8,9 +8,7 @@ export default function AutoScrollControls() {
   const rafId = useRef<number | null>(null);
   const lastTs = useRef<number | null>(null);
 
-  const atBottom = (): boolean =>
-    window.innerHeight + window.scrollY >=
-    document.documentElement.scrollHeight - 1;
+  const atBottom = (): boolean => window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
 
   const step = (ts: number) => {
     if (lastTs.current === null) lastTs.current = ts;
@@ -47,18 +45,10 @@ export default function AutoScrollControls() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-3 py-2 shadow">
-      <button
-        onClick={start}
-        disabled={isScrolling}
-        className="rounded-full px-4 py-2 text-sm font-medium disabled:opacity-50 border"
-      >
+      <button onClick={start} disabled={isScrolling} className="rounded-full px-4 py-2 text-sm font-medium disabled:opacity-50 border">
         ▶ Play
       </button>
-      <button
-        onClick={stop}
-        disabled={!isScrolling}
-        className="rounded-full px-4 py-2 text-sm font-medium disabled:opacity-50 border"
-      >
+      <button onClick={stop} disabled={!isScrolling} className="rounded-full px-4 py-2 text-sm font-medium disabled:opacity-50 border">
         ⏸ Pause
       </button>
     </div>

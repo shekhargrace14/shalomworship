@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import Fuse from "fuse.js";
-import { SongSearchItem } from "./types";
-import { getSongsFromDB } from "./search";
+import { useEffect, useState } from 'react';
+import Fuse from 'fuse.js';
+import { SongSearchItem } from './types';
+import { getSongsFromDB } from './search';
 
 export function useSongSearch() {
   const [fuse, setFuse] = useState<Fuse<SongSearchItem> | null>(null);
@@ -33,12 +33,12 @@ export function useSongSearch() {
       if (dbSongs.length > 0) {
         songs = dbSongs;
       } else {
-        songs = await fetch("/search/songs.json").then((r) => r.json());
+        songs = await fetch('/search/songs.json').then((r) => r.json());
       }
       // console.log("Fuse Ready", songs.length);
       setFuse(
         new Fuse(songs, {
-          keys: ["title", "channel"],
+          keys: ['title', 'channel'],
           threshold: 0.3,
         }),
       );

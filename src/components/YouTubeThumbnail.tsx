@@ -1,10 +1,9 @@
 // import Image from 'next/image'
 // import React from 'react'
 
-
 // const YouTubeThumbnail = ({videoId, alt, priority = false }) => {
 
-//     return (    
+//     return (
 
 //         <Image
 //             src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` || '/user.png' }
@@ -29,5 +28,3 @@
 //   sddefault: 'sddefault.jpg',    // 640x480
 //   maxresdefault: 'maxresdefault.jpg' // 1280x720
 // };
-
-

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "postinstall": "prisma generate",
-    "build": "prisma generate && tsx scripts/build-search.ts && next build",
+    "format": "prettier --write .",
+    "build": "prisma generate && npm run format && tsx scripts/build-search.ts && next build",
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages"
@@ -47,6 +48,7 @@
     "mongodb": "^6.19.0",
     "next": "^15.4.2",
     "next-themes": "^0.4.6",
+    "prettier": "^3.9.4",
     "radix-ui": "^1.4.3",
     "react": "^19.2.1",
     "react-day-picker": "^9.13.2",
@@ -54,7 +56,7 @@
     "react-hook-form": "^7.63.0",
     "react-icons": "^5.5.0",
     "react-lite-youtube-embed": "^3.3.3",
-    "slugify": "^1.6.6",
+    "slugify": "^1.6.9",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.11",

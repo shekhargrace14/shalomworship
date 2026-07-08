@@ -5281,12 +5281,42 @@
   },
   {
     "id": "6a4a9afe8a98acd9abb9637b",
-    "slug": "le-chal-mujhe-2.0-yeshua-ministries-6a4a9afe8a98acd9abb9637b",
+    "slug": "le-chal-mujhe-20-yeshua-ministries-6a4a9afe8a98acd9abb9637b",
     "title": "Le Chal Mujhe 2.0",
     "image": "https://img.youtube.com/vi/p3clhZljGVY/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
     "channel": "Yeshua Ministries",
     "channelSlug": "yeshua-ministries"
+  },
+  {
+    "id": "6a4ba9d471126f2eb94143e9",
+    "slug": "daya-kar-anil-kant-6a4ba9d471126f2eb94143e9",
+    "title": "Daya Kar",
+    "image": "",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Anil Kant",
+    "channelSlug": "anil-kant"
+  },
+  {
+    "id": "6a4e65807508602007b0d931",
+    "slug": "hazoori-sheldon-bangera-6a4e65807508602007b0d931",
+    "title": "Hazoori",
+    "image": "",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Sheldon Bangera",
+    "channelSlug": "sheldon-bangera"
+  },
+  {
+    "id": "6a4e90b3403bbb66a953d9fe",
+    "slug": "tera-pyar-shamey-hans-6a4e90b3403bbb66a953d9fe",
+    "title": "Tera Pyar",
+    "image": "",
+    "status": "PUBLISH",
+    "language": "pa",
+    "channel": "Shamey Hans",
+    "channelSlug": "shamey-hans"
   }
 ]

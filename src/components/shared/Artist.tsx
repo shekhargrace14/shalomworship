@@ -1,14 +1,14 @@
-"use client";
-import React from "react";
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
 type ArtistProps = {
   artists: {
     id: string;
     title: string;
-    type: "individual" | "band" | "label" | "channel" | null;
+    type: 'individual' | 'band' | 'label' | 'channel' | null;
     link: string | null;
     image: string | null;
     slug: string | null;
@@ -18,13 +18,11 @@ type ArtistProps = {
   }[];
 };
 
-
 const Artist = ({ artists }: ArtistProps) => {
   // const artistData = useGetArtistById(id);
   // const artistData = useGetArtists();
   const urlSlug = usePathname();
-  // console.log(artistData.data, "ArtistData log")  
-
+  // console.log(artistData.data, "ArtistData log")
 
   return (
     <section className="w-full flex flex-col gap-2">
@@ -34,34 +32,24 @@ const Artist = ({ artists }: ArtistProps) => {
           .reverse()
           .map((item) => (
             <Link key={item.id} href={`/artist/${item.slug}-${item.id}`}>
-
-              <div
-                className={`rounded-lg bg-card ${urlSlug.includes(item.id)
-                  ? "bg-[#2e2a2a]"
-                  : "bg-[rgb(0,0,0)]"
-                  }`}
-              >
+              <div className={`rounded-lg bg-card ${urlSlug.includes(item.id) ? 'bg-[#2e2a2a]' : 'bg-[rgb(0,0,0)]'}`}>
                 <div className="lg:container mx-auto p-2 flex gap-4">
                   <div className=" flex items-center md:w-2/12 rounded-full overflow-hidden sm:lg-0 md:mb-0">
                     <Image
-                      src={item?.image || "/user.png"}
-                      alt={item?.title || "Artist Name"}
+                      src={item?.image || '/user.png'}
+                      alt={item?.title || 'Artist Name'}
                       width={60}
                       height={60}
                       className=" object-cover h-auto"
                       priority={false} // removing this because its rendering in head
                     />
-
                   </div>
                   <div className="md:w-10/12 flex flex-col justify-center">
-                    <h3 className="line-clamp-1 font-semibold text-base text-card-foreground">
-                      {item?.title}
-                    </h3>
+                    <h3 className="line-clamp-1 font-semibold text-base text-card-foreground">{item?.title}</h3>
                     <p className=" text-sm text-card-foreground">Artist</p>
                   </div>
                 </div>
               </div>
-
             </Link>
           ))
       ) : (

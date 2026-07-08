@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import { useState } from "react"
+import { useState } from 'react';
 
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
 // import {
 //   Card,
 //   CardContent,
@@ -10,129 +10,89 @@ import { Button } from "@/components/ui/button"
 //   CardTitle,
 //   CardDescription,
 // } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
-import { SubmissionType } from "@prisma/client"
-import { useRouter } from "next/navigation"
-import { toast } from "sonner"
-import { FieldError } from "./ui/field"
-import { Loader2 } from "lucide-react"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { SubmissionType } from '@prisma/client';
+import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
+import { FieldError } from './ui/field';
+import { Loader2 } from 'lucide-react';
 
-const Type =
-  Object.values(SubmissionType)
+const Type = Object.values(SubmissionType);
 
 export default function SubmissionForm() {
-
   const router = useRouter();
   const [formData, setFormData] = useState({
-    type: "CONTACT",
-    name: "",
-    email: "",
-    title: "",
-    message: "",
-    subject: "",
-  })
+    type: 'CONTACT',
+    name: '',
+    email: '',
+    title: '',
+    message: '',
+    subject: '',
+  });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement
-    >
-  ) => {
-    const { name, value } = e.target
-
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
 
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }))
-  }
+    }));
+  };
   const [loading, setLoading] = useState(false);
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
     // console.log(formData)
 
     // POST /api/submission
-    const payload = formData
+    const payload = formData;
     try {
       setLoading(true);
-      const res = await fetch(
-        "https://dashboard.shalomworship.com/api/submission",
-        {
-          method: "POST",
+      const res = await fetch('https://dashboard.shalomworship.com/api/submission', {
+        method: 'POST',
 
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
+        headers: {
+          'Content-Type': 'application/json',
+        },
 
-          body: JSON.stringify(
-            formData
-          ),
-        }
-      )
+        body: JSON.stringify(formData),
+      });
 
-      const data = await res.json()
+      const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(
-          data.message || "Failed to submit"
-        )
+        throw new Error(data.message || 'Failed to submit');
       }
 
-      toast.success("Message Sent")
-      router.push("/success");
-
+      toast.success('Message Sent');
+      router.push('/success');
     } catch (error: any) {
+      console.error(error);
 
-      console.error(error)
-
-      toast.error(
-        error.message || "Failed to send"
-      )
-
-    }
-    finally {
+      toast.error(error.message || 'Failed to send');
+    } finally {
       setLoading(false);
     }
-  }
+  };
 
   return (
     <Card className="max-w-full mx-auto m-4">
       <CardHeader>
-        <CardTitle>
-          Submit Request
-        </CardTitle>
+        <CardTitle>Submit Request</CardTitle>
 
-        <CardDescription>
-          Send us your feedback,
-          request, suggestion, or report.
-        </CardDescription>
+        <CardDescription>Send us your feedback, request, suggestion, or report.</CardDescription>
       </CardHeader>
 
       <CardContent>
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* TYPE */}
           <div className="space-y-2">
-            <Label>
-              Submission Type
-            </Label>
+            <Label>Submission Type</Label>
 
             <Select
               value={formData.type}
@@ -150,55 +110,40 @@ export default function SubmissionForm() {
               <SelectContent>
                 <SelectGroup>
                   {Type?.map((item) => (
-
-                    <SelectItem key={item} value={item}>{item}</SelectItem>
+                    <SelectItem key={item} value={item}>
+                      {item}
+                    </SelectItem>
                   ))}
-
                 </SelectGroup>
-
               </SelectContent>
             </Select>
           </div>
           {/* Subject */}
           <div className="space-y-2">
-            <Label>Subject  <span className="text-destructive">*</span></Label>
+            <Label>
+              Subject <span className="text-destructive">*</span>
+            </Label>
 
-            <Input
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Enter subject"
-              required
-            />
+            <Input name="subject" value={formData.subject} onChange={handleChange} placeholder="Enter subject" required />
             <FieldError></FieldError>
           </div>
 
           {/* NAME + EMAIL */}
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label>Name  <span className="text-destructive">*</span></Label>
+              <Label>
+                Name <span className="text-destructive">*</span>
+              </Label>
 
-              <Input
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="John Doe"
-                required
-              />
+              <Input name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
             </div>
 
             <div className="space-y-2">
-              <Label>Email  <span className="text-destructive">*</span></Label>
+              <Label>
+                Email <span className="text-destructive">*</span>
+              </Label>
 
-              <Input
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="john@example.com"
-                required
-
-              />
+              <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" required />
             </div>
           </div>
 
@@ -206,46 +151,30 @@ export default function SubmissionForm() {
           <div className="space-y-2">
             <Label>Title </Label>
 
-            <Input
-              name="title"
-              value={formData.title}
-              onChange={handleChange}
-              placeholder="Enter title"
-            />
+            <Input name="title" value={formData.title} onChange={handleChange} placeholder="Enter title" />
           </div>
 
           {/* MESSAGE */}
           <div className="space-y-2">
-            <Label>Message  <span className="text-destructive">*</span></Label>
+            <Label>
+              Message <span className="text-destructive">*</span>
+            </Label>
 
-            <Textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={6}
-              placeholder="Describe your request..."
-              required
-
-            />
+            <Textarea name="message" value={formData.message} onChange={handleChange} rows={6} placeholder="Describe your request..." required />
           </div>
 
-          <Button
-            type="submit"
-            className="w-full cursor-pointer"
-            disabled={loading}
-          >
+          <Button type="submit" className="w-full cursor-pointer" disabled={loading}>
             {loading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Sending...
               </>
             ) : (
-              "Send Reply"
+              'Send Reply'
             )}
-
           </Button>
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -11,7 +11,7 @@ export const songBaseSelect = {
 export const songContentSelect = {
   content: true,
   lines: true,
-  lyrics:true,
+  lyrics: true,
   isChords: true,
   isTranslation: true,
   version: true,
@@ -31,7 +31,6 @@ export const songMediaSelect = {
   audio: true,
   color: true,
   language: true,
-
 };
 
 export const songSeoSelect = {
@@ -52,15 +51,15 @@ export const songStatsSelect = {
 export const songCredits = {
   channelId: true,
   channel: true,
-  credits :true,
-}
+  credits: true,
+};
 
 // Classification
 
 export const songClassification = {
-  albums :true,
-  seasons: true, 
-}
+  albums: true,
+  seasons: true,
+};
 
 export const songFullSelect = {
   ...songBaseSelect,

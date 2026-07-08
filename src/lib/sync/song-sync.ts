@@ -1,22 +1,21 @@
-
-import { getDB } from "../db";
+import { getDB } from '../db';
 
 export async function syncSongs() {
-  const res = await fetch("/search/songs.json");
+  const res = await fetch('/search/songs.json');
 
   const songs = await res.json();
 
   const db = await getDB();
 
-  const tx = db.transaction("songs", "readwrite");
+  const tx = db.transaction('songs', 'readwrite');
 
-  await tx.objectStore("songs").clear();
+  await tx.objectStore('songs').clear();
 
   for (const song of songs) {
-    await tx.objectStore("songs").put(song);
+    await tx.objectStore('songs').put(song);
   }
 
-  await tx.done;    
+  await tx.done;
 
-  console.log("Songs synced");
+  console.log('Songs synced');
 }

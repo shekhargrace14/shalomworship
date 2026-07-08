@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 export default function Success() {
   const router = useRouter();
@@ -9,9 +9,7 @@ export default function Success() {
     <div>
       <h1>Form Submitted Successfully</h1>
 
-      <button onClick={() => router.back()}>
-        Go Back
-      </button>
+      <button onClick={() => router.back()}>Go Back</button>
     </div>
   );
 }

@@ -1,21 +1,21 @@
 // import CategorySection from "@/components/CategorySection";
-import Menu from "@/components/layout/Menu";
+import Menu from '@/components/layout/Menu';
 // import SongSection from "@/components/SongSection";
-import Link from "next/link";
+import Link from 'next/link';
 // import AlbumSection from "@/components/AlbumSection";
-import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
+import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
 import {
   getAllAlbums,
   getAllChannels,
   getAllCategoriesBasic,
   // getAllEvents,
   getAllSongs,
-} from "@/lib/static";
-import { AutoPopup } from "@/components/AutoPopup";
-import EventSection from "@/components/event/EventSection";
-import ChannelSection from "@/components/channel/channel-section";
-import SongSection from "@/components/song/song-section";
-import CategorySection from "@/components/category/category-section";
+} from '@/lib/static';
+import { AutoPopup } from '@/components/AutoPopup';
+import EventSection from '@/components/event/EventSection';
+import ChannelSection from '@/components/channel/channel-section';
+import SongSection from '@/components/song/song-section';
+import CategorySection from '@/components/category/category-section';
 
 type Song = {
   id: string;
@@ -24,21 +24,20 @@ type Song = {
 };
 export default async function Home() {
   const [
-    upcomingSongs, 
-    publicSongs, 
-    channels, 
-    categories, 
-    // album, 
+    upcomingSongs,
+    publicSongs,
+    channels,
+    categories,
+    // album,
     // event
-  ] =
-    await Promise.all([
-      getAllSongs([...CONTENT_VISIBILITY.upcoming]),
-      getAllSongs([...CONTENT_VISIBILITY.public]),
-      getAllChannels(),
-      getAllCategoriesBasic(),
-      // getAllAlbums(),
-      // getAllEvents(),
-    ]);
+  ] = await Promise.all([
+    getAllSongs([...CONTENT_VISIBILITY.upcoming]),
+    getAllSongs([...CONTENT_VISIBILITY.public]),
+    getAllChannels(),
+    getAllCategoriesBasic(),
+    // getAllAlbums(),
+    // getAllEvents(),
+  ]);
 
   // console.log(event,  "event on page.tsx")
   return (
@@ -58,35 +57,28 @@ export default async function Home() {
         <SongSection number={"-4"} songs={upcomingSongs} variant="imageOnly" /> */}
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground">
-          {" "}
-          Trending Songs{" "}
-        </h2>
+        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> Trending Songs </h2>
         <p className="text-sm text-muted-foreground">
-          <Link href={"/song"}>Show All</Link>
+          <Link href={'/song'}>Show All</Link>
         </p>
       </div>
       <SongSection number={-4} songs={publicSongs} />
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">
-          Your Favorite Artist
-        </h2>
+        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Your Favorite Artist</h2>
         <p className="text-sm text-muted-foreground">
-          <Link href={"/channel"}>Show All</Link>
+          <Link href={'/channel'}>Show All</Link>
         </p>
       </div>
       <ChannelSection number={-6} channels={channels} />
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">
-          Categories
-        </h2>
+        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Categories</h2>
         <p className="text-sm text-muted-foreground">
-          <Link href={"/category"}>Show All</Link>
+          <Link href={'/category'}>Show All</Link>
         </p>
       </div>
-      <CategorySection number={"-6"} categories={categories} />
+      <CategorySection number={'-6'} categories={categories} />
 
       {/* <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Album</h2>

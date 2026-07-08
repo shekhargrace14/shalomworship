@@ -1,8 +1,8 @@
-import Processor from "@/components/Processor";
-import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getChannel } from "@/lib/static";
-import { song } from "@prisma/client";
-import SongCard, { CardVariant } from "./song/song-card";
+import Processor from '@/components/Processor';
+import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
+import { getChannel } from '@/lib/static';
+import { song } from '@prisma/client';
+import SongCard, { CardVariant } from './song/song-card';
 
 const CreatorSongs = async ({ params }: any) => {
   const id = params;
@@ -20,7 +20,7 @@ const CreatorSongs = async ({ params }: any) => {
               key={item.id}
               id={item.id}
               item={item}
-              variant={"imageTop" as CardVariant}
+              variant={'imageTop' as CardVariant}
               image={item.image ?? undefined}
               title={item.title}
               language={item.language ?? undefined}

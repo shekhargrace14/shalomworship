@@ -1,12 +1,12 @@
-import Processor from "@/components/Processor";
-import { CONTENT_VISIBILITY } from "@/lib/contentVisibility";
-import { getCategory } from "@/lib/static";
+import Processor from '@/components/Processor';
+import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
+import { getCategory } from '@/lib/static';
 
 const CategoryProcess = async ({ params }: any) => {
   const id = params;
-  const categoryData = await getCategory(id,[...CONTENT_VISIBILITY.public,] )
+  const categoryData = await getCategory(id, [...CONTENT_VISIBILITY.public]);
   // console.log(categoryData,"categoryData")
-  const songs = categoryData?.song
+  const songs = categoryData?.song;
 
   return (
     <section className="w-full">

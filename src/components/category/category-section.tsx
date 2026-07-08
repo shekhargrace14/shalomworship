@@ -1,5 +1,5 @@
-import React from "react";
-import CategoryCard from "./category-card";
+import React from 'react';
+import CategoryCard from './category-card';
 // import CategoryCard from "./CategoryCard";
 
 type Category = {
@@ -7,14 +7,16 @@ type Category = {
   title: string;
   image: string;
 };
-const CategorySection: React.FC<any> = ({number, categories,}) => {
-
+const CategorySection: React.FC<any> = ({ number, categories }) => {
   return (
     <div className="py-2">
       <section className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 rounded-lg">
-        {categories?.slice(number).reverse().map((category: Category) => (
-          <CategoryCard key={category.id} category={category} />
-        ))}
+        {categories
+          ?.slice(number)
+          .reverse()
+          .map((category: Category) => (
+            <CategoryCard key={category.id} category={category} />
+          ))}
       </section>
     </div>
   );

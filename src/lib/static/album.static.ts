@@ -1,5 +1,5 @@
-import { albumFullSelect } from "@/prisma/selectors";
-import prisma from "./prisma";
+import { albumFullSelect } from '@/prisma/selectors';
+import prisma from './prisma';
 
 export async function getAllAlbums() {
   return await prisma.album.findMany({
@@ -39,7 +39,7 @@ export async function getAlbum(id: string) {
 
         songs: {
           orderBy: {
-            trackNo: "asc",
+            trackNo: 'asc',
           },
 
           include: {
@@ -49,7 +49,7 @@ export async function getAlbum(id: string) {
       },
     });
   } catch (error) {
-    console.error("Error from albumById server action:", error);
-    throw new Error("Failed to fetch album by ID");
+    console.error('Error from albumById server action:', error);
+    throw new Error('Failed to fetch album by ID');
   }
 }

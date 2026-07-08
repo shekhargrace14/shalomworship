@@ -1,26 +1,23 @@
-"use client";
-import React from "react";
-import { FaUser } from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
-import slugify from "slugify";
-import { channel } from "@prisma/client";
+'use client';
+import React from 'react';
+import { FaUser } from 'react-icons/fa';
+import Link from 'next/link';
+import Image from 'next/image';
+import slugify from 'slugify';
+import { channel } from '@prisma/client';
 
-const ChannelCard = ({ item }:any) => {
-
-
-  const slug = slugify(`${item.slug}`, {lower: true,}) 
+const ChannelCard = ({ item }: any) => {
+  const slug = slugify(`${item.slug}`, { lower: true });
 
   return (
-    
     <>
       <Link href={`/channel/${slug}-${item.id}`}>
         <div className="bg-card rounded-lg ">
           <div className="rounded-lg overflow-hidden h-5/6">
             <Image
               // src="/user.png"
-              src={item.avatar || "/user.png"}
-              alt={item.title || "Song Image"}
+              src={item.avatar || '/user.png'}
+              alt={item.title || 'Song Image'}
               width={400}
               height={400}
               className="rounded-lg"

@@ -1,31 +1,22 @@
-
-import React from "react";
-import { FaUser } from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
-import slugify from "slugify";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
+import React from 'react';
+import { FaUser } from 'react-icons/fa';
+import Link from 'next/link';
+import Image from 'next/image';
+import slugify from 'slugify';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 const Album: React.FC<any> = ({ item }) => {
   // console.log(item, "card item")
 
-
   const slug = slugify(`${item.slug}`, { lower: true });
 
   return (
-
     <>
       <Link href={`/album/${slug}-${item.id}`}>
         {/* <div className=" hover:bg-[#1f1f1f] p-2 rounded-lg"> */}
         <div className="rounded-lg">
           <div className="rounded-lg overflow-hidden h-5/6">
-            <Image
-              src={item?.image}
-              alt={item?.title || "Song Image"}
-              width={700}
-              height={500}
-              className="h-40 object-contain"
-            /> 
+            <Image src={item?.image} alt={item?.title || 'Song Image'} width={700} height={500} className="h-40 object-contain" />
             {/* <YouTubeThumbnail videoId={item.videoId} alt={item.title}/> */}
           </div>
           <div className="w-full p-2">

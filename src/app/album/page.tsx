@@ -4,20 +4,18 @@ import Menu from '@/components/layout/Menu';
 import { getAllAlbums } from '@/lib/static';
 
 const page = async () => {
-    // const album = await fetchAlbums();
-    const album = await getAllAlbums();
+  // const album = await fetchAlbums();
+  const album = await getAllAlbums();
 
-    // console.log("album data in album page:", album);
-    return (
-        <div>
-            <div className="p-4">
-                <Menu />
-                <AlbumSection album={album} type="album"/>
-                
-            </div>
+  // console.log("album data in album page:", album);
+  return (
+    <div>
+      <div className="p-4">
+        <Menu />
+        <AlbumSection album={album} type="album" />
+      </div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default page
+export default page;

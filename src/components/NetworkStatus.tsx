@@ -1,6 +1,6 @@
- "use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export default function NetworkStatus() {
   const [online, setOnline] = useState(true);
@@ -23,24 +23,16 @@ export default function NetworkStatus() {
       setVisible(true);
     };
 
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
     return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
     };
   }, []);
 
   if (!visible) return null;
 
-  return (
-  <div
-    className={`fixed inset-x-0 top-0 z-[9999] flex h-8 items-center justify-center text-sm font-medium text-white transition-colors duration-300 ${
-      online ? "bg-green-500" : "bg-red-500"
-    }`}
-  >
-    {online ? "You are Online" : "No internet connection"}
-  </div>
-  );
+  return <div className={`fixed inset-x-0 top-0 z-[9999] flex h-8 items-center justify-center text-sm font-medium text-white transition-colors duration-300 ${online ? 'bg-green-500' : 'bg-red-500'}`}>{online ? 'You are Online' : 'No internet connection'}</div>;
 }

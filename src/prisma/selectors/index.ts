@@ -1,8 +1,8 @@
 // prisma/selectors/index.ts
-export * from "./song.select";
+export * from './song.select';
 // export * from "./artist.select";
-export * from "./channel.select";
-export * from "./album.select";
-export * from "./category.select";
-export * from "./event.select";
-export * from "./season.select";
+export * from './channel.select';
+export * from './album.select';
+export * from './category.select';
+export * from './event.select';
+export * from './season.select';

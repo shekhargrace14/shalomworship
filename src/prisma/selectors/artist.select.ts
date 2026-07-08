@@ -14,7 +14,6 @@ export const artistMetaSelect = {
   type: true,
 };
 
-
 export const artistFullSelect = {
   ...artistBaseSelect,
   ...artistMetaSelect,

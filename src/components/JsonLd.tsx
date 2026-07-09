@@ -104,7 +104,7 @@ export default async function JsonLd({ id }: { id: string }) {
 
     creator: {
       '@type': 'Person',
-      name:channelName,
+      name: channelName,
     },
     subjectOf: {
       '@type': 'VideoObject',

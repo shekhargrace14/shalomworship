@@ -6,6 +6,7 @@
     "dev": "next dev",
     "postinstall": "prisma generate",
     "format": "prettier --write .",
+    "prebuild": "tsx scripts/generate-cloudflare-redirects.ts",
     "build": "prisma generate && npm run format && tsx scripts/build-search.ts && next build",
     "start": "next start",
     "lint": "next lint",

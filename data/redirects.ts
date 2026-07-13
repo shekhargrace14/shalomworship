@@ -931,7 +931,7 @@ export const redirects = [
   },
   {
     source: '/song/yeshu-ka-main-deewaana-hoon-6974fac68bca8ea653a072e9',
-    destination: '/song/deewaana-joseph-raj-allam-6974fac68bca8ea653a072e9',
+    destination: '/song/deewana-joseph-raj-allam-6974fac68bca8ea653a072e9',
     statusCode: 301,
   },
 ];

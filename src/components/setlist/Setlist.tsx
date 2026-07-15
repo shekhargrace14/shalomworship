@@ -7,6 +7,7 @@ import { useSetlistsContext } from '@/lib/setlist/SetlistsContext';
 import { Badge } from '../ui/badge';
 
 const Setlist = ({ setlist }: any) => {
+  console.log(setlist);
   const { deleteSetlist } = useSetlistsContext();
 
   const [expanded, setExpanded] = useState(false);
@@ -24,7 +25,7 @@ const Setlist = ({ setlist }: any) => {
             </Badge>
             <Badge>
               {' '}
-              <CalendarDays /> {new Date(setlist.createdAt).getDate()}
+              <CalendarDays /> {new Date(setlist.eventAt).getDate()}
             </Badge>
           </div>
         </section>
@@ -42,7 +43,7 @@ const Setlist = ({ setlist }: any) => {
               <ul className="list-decimal ml-6">
                 {setlist.songs.map((song: any) => (
                   <li className=" hover-bg-background">
-                    <Link key={song.id} href={`/song/${song.slug}`}>
+                    <Link key={song.id} href={`/song/${song.slug}#lyrics`}>
                       {song.title}
                     </Link>
                   </li>
@@ -56,15 +57,6 @@ const Setlist = ({ setlist }: any) => {
                 <Pen />
               </Link>
             </Button>
-            {/* <Button variant="ghost"
-                            onClick={(e) => {
-                                e.stopPropagation();      // 🛑 stop bubbling
-                                e.preventDefault();       // 🛑 stop Link navigation
-                                deleteSetlist(setlist.id);
-                            }}
-                        >
-                            <Trash />
-                        </Button> */}
           </div>
         </div>
       )}

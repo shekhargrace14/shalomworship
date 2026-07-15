@@ -10,13 +10,27 @@ export function useSetlists() {
   const [setlists, setSetlists] = useState<Setlist[]>([]);
   const [ready, setReady] = useState(false);
 
-  function reorderSongs(setlistId: string, newSongs: SetlistSong[]) {
-    const next = setlists.map((s) => {
-      if (s.id !== setlistId) return s;
+  function reorderSongs(setlistId: string, songId: string, direction: 'up' | 'down') {
+    const next = setlists.map((setlist) => {
+      if (setlist.id !== setlistId) return setlist;
+
+      const songs = [...setlist.songs];
+
+      const index = songs.findIndex((song) => song.id === songId);
+
+      if (index === -1) return setlist;
+
+      if (direction === 'up' && index > 0) {
+        [songs[index - 1], songs[index]] = [songs[index], songs[index - 1]];
+      }
+
+      if (direction === 'down' && index < songs.length - 1) {
+        [songs[index], songs[index + 1]] = [songs[index + 1], songs[index]];
+      }
 
       return {
-        ...s,
-        songs: newSongs,
+        ...setlist,
+        songs,
         updatedAt: Date.now(),
       };
     });
@@ -27,25 +41,29 @@ export function useSetlists() {
 
   useEffect(() => {
     const raw = localStorage.getItem(KEY);
-    if (!raw) return;
 
-    try {
-      const parsed = JSON.parse(raw);
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw);
 
-      const normalized = parsed.map((s: any) => ({
-        ...s,
-        songs: Array.isArray(s.songs) ? s.songs : [], // ✅ fix legacy data
-      }));
+        const normalized = parsed.map((s: any) => ({
+          ...s,
+          songs: Array.isArray(s.songs) ? s.songs : [],
+        }));
 
-      setSetlists(normalized);
-      localStorage.setItem(KEY, JSON.stringify(normalized));
-    } catch {
+        setSetlists(normalized);
+        localStorage.setItem(KEY, JSON.stringify(normalized));
+      } catch {
+        setSetlists([]);
+      }
+    } else {
       setSetlists([]);
     }
-    setReady(true); // hydration complete check
+
+    setReady(true);
   }, []);
 
-  function createSetlist(name: string, description: string) {
+  function createSetlist(name: string, description: string, eventAt: Date) {
     const next: Setlist[] = [
       ...setlists,
       {
@@ -53,7 +71,7 @@ export function useSetlists() {
         name,
         description,
         songs: [],
-        eventAt: Date.now(),
+        eventAt,
         createdAt: Date.now(),
         updatedAt: Date.now(),
       },

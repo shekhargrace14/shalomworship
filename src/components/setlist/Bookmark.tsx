@@ -22,6 +22,8 @@ const BookmarkSong = ({ song, setlistId }: BookmarkSongProps) => {
 
   const isAddedAnywhere = setlists.some((s) => s.songs.some((x) => x.id === song.id));
 
+  // console.log(setlists, " setlists -BookmarkSong")
+
   // ─────────────────────────────────────────────
   // CONTEXT B: Song page → picker
   // ─────────────────────────────────────────────
@@ -96,11 +98,20 @@ const BookmarkSong = ({ song, setlistId }: BookmarkSongProps) => {
   // ─────────────────────────────────────────────
   const currentSetlist = setlists.find((s) => s.id === setlistId);
   const isAdded = currentSetlist?.songs.some((x) => x.id === song.id);
-
   return (
-    <button type="button" disabled={!ready} onClick={() => (isAdded ? removeSong(setlistId, song.id) : addSong(setlistId, song))}>
-      <Bookmark className={`cursor-pointer ${isAdded ? 'text-accent' : 'text-muted-foreground'} ${!ready ? 'opacity-50' : ''} `} stroke="currentColor" fill={isAdded ? 'currentColor' : 'none'} />
-    </button>
+    <>
+      {currentSetlist && (
+        <button
+          type="button"
+          disabled={!ready}
+          onClick={() => {
+            isAdded ? removeSong(setlistId, song.id) : addSong(setlistId, song);
+          }}
+        >
+          <Bookmark className={`cursor-pointer ${isAdded ? 'text-accent' : 'text-muted-foreground'} ${!ready ? 'opacity-50' : ''} `} stroke="currentColor" fill={isAdded ? 'currentColor' : 'none'} />
+        </button>
+      )}
+    </>
   );
 };
 

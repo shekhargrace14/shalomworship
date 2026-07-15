@@ -26,6 +26,8 @@ import { LyricsRenderer } from '@/components/song/LyricsRenderer';
 import LinesVersion4 from '@/components/shared/LinesVersion4';
 import CategoryProcess from '@/components/category/category-process';
 import { song } from '@prisma/client';
+import SubmissionForm from '@/components/SubmissionForm';
+import ScrollToHash from '@/components/ScrollToHash';
 
 async function getSongById(id: string) {
   return getSong(id, [...CONTENT_VISIBILITY.discoverable]);
@@ -220,7 +222,8 @@ const Song = async ({ params }: any) => {
           </div>
         </div>
       </div>
-      <div className="mx-auto p-4 pt-4 relative">
+      <ScrollToHash />
+      <div className="mx-auto p-4 pt-4 relative" id="lyrics">
         {/* {songData?.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
@@ -233,10 +236,11 @@ const Song = async ({ params }: any) => {
         {songData?.version === 'version_3' ? <LinesVersion3 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
         {songData?.version === 'version_4' ? <LinesVersion4 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
 
+        <SubmissionForm type="song" issue="BUG_REPORT" item={songData} />
         <Social />
         <InContentAd />
 
-        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground">
+        <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground" id="lyrics">
           Songs Based on&nbsp;
           {songData?.category && songData?.category.length > 0 ? (
             songData?.category.length > 1 ? (

@@ -5,18 +5,31 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
 import { useSetlistsContext } from '@/lib/setlist/SetlistsContext';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { Calendar } from '../ui/calendar';
+import { CalendarIcon, ChevronDownIcon } from 'lucide-react';
+import { format } from 'date-fns';
+import { toast } from 'sonner';
 const Create = () => {
   const { createSetlist } = useSetlistsContext();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [eventAt, setEventAt] = useState('');
   const [open, setOpen] = useState(false);
+  const [eventAt, setEventAt] = React.useState<Date>();
+  // const [date, setDate] = React.useState<Date>();
 
   function handleCreate() {
     if (!title.trim()) return; // prevent empty title
-    createSetlist(title.trim(), description.trim());
+    if (!eventAt) {
+      toast.error('Please select an event date.');
+
+      // alert('Please select an event date.');
+      return;
+    }
+    createSetlist(title.trim(), description.trim(), eventAt);
     setTitle('');
     setDescription('');
+    setEventAt(undefined);
     setOpen(false);
   }
   return (
@@ -31,8 +44,6 @@ const Create = () => {
           <DialogTitle></DialogTitle>
         </DialogHeader>
         <FieldSet>
-          {/* <FieldLegend>Profile</FieldLegend> */}
-          {/* <FieldDescription>This appears on invoices and emails.</FieldDescription> */}
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="Title">Setlist Title</FieldLabel>
@@ -48,6 +59,26 @@ const Create = () => {
               />
               <FieldDescription>This will be Setlist Title.</FieldDescription>
             </Field>
+
+            {/* DATE */}
+            <Field>
+              <FieldLabel htmlFor="date-picker">Event Date</FieldLabel>
+
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button id="date-picker" variant="outline" className="w-full justify-between font-normal">
+                    {eventAt ? format(eventAt, 'EEEE • MMMM d, yyyy') : 'Pick a date'}
+
+                    <CalendarIcon className="h-4 w-4 opacity-60" />
+                  </Button>
+                </PopoverTrigger>
+
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar mode="single" selected={eventAt} onSelect={setEventAt} initialFocus />
+                </PopoverContent>
+              </Popover>
+            </Field>
+
             <Field>
               <FieldLabel htmlFor="Description">Description</FieldLabel>
               <Textarea
@@ -59,12 +90,7 @@ const Create = () => {
                   setDescription(e.target.value);
                 }}
               />
-              {/* <FieldError>Choose another username.</FieldError> */}
             </Field>
-            {/* <Field orientation="horizontal">
-                                    <Switch id="newsletter" />
-                                    <FieldLabel htmlFor="newsletter">Subscribe to the newsletter</FieldLabel>
-                                </Field> */}
           </FieldGroup>
         </FieldSet>
         <Button className="cursor-pointer" onClick={handleCreate}>

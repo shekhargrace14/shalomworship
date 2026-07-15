@@ -12,7 +12,7 @@ export type Setlist = {
   id: string;
   name: string;
   description: string;
-  eventAt: number;
+  eventAt: Date;
   songs: SetlistSong[];
   createdAt: number;
   updatedAt: number;

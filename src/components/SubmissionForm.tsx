@@ -16,21 +16,28 @@ import { Textarea } from '@/components/ui/textarea';
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { SubmissionType } from '@prisma/client';
+import { song, SubmissionType } from '@prisma/client';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { FieldError } from './ui/field';
-import { Loader2 } from 'lucide-react';
+import { Flag, FlagTriangleRight, Loader2 } from 'lucide-react';
 
 const Type = Object.values(SubmissionType);
+type Props = {
+  type: string;
+  issue: SubmissionType;
+  show?: boolean;
+  item?: any;
+};
 
-export default function SubmissionForm() {
+export default function SubmissionForm({ type, issue, show, item }: Props) {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(show);
   const [formData, setFormData] = useState({
-    type: 'CONTACT',
+    type: issue || 'CONTACT',
     name: '',
     email: '',
-    title: '',
+    title: (item && `Song Correction - "${item?.title}" by ${item?.channel?.title}`) || '',
     message: '',
     subject: '',
   });
@@ -44,6 +51,29 @@ export default function SubmissionForm() {
     }));
   };
   const [loading, setLoading] = useState(false);
+  function getTitle(type: string) {
+    switch (type) {
+      case 'song':
+        return 'Report';
+
+      case 'artist':
+        return 'Artist';
+
+      case 'album':
+        return 'Album';
+
+      case 'event':
+        return 'Event';
+
+      case 'playlist':
+        return 'Playlist';
+
+      default:
+        return 'Connect';
+    }
+  }
+  const title = getTitle(type);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -81,100 +111,106 @@ export default function SubmissionForm() {
   };
 
   return (
-    <Card className="max-w-full mx-auto m-4">
-      <CardHeader>
-        <CardTitle>Submit Request</CardTitle>
-
+    <Card className="max-w-full mx-auto my-4">
+      <CardHeader
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+        }}
+      >
+        <CardTitle className="flex gap-1 items-end">
+          {title} {issue === 'BUG_REPORT' ? <FlagTriangleRight size={20} strokeWidth={1} fill="red" /> : ''}
+        </CardTitle>
         <CardDescription>Send us your feedback, request, suggestion, or report.</CardDescription>
       </CardHeader>
+      {isOpen && (
+        <CardContent>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* TYPE */}
+            <div className="space-y-2">
+              <Label>Submission Type</Label>
 
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* TYPE */}
-          <div className="space-y-2">
-            <Label>Submission Type</Label>
+              <Select
+                value={formData.type}
+                onValueChange={(value) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    type: value as SubmissionType,
+                  }))
+                }
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select status" />
+                </SelectTrigger>
 
-            <Select
-              value={formData.type}
-              onValueChange={(value) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  type: value as SubmissionType,
-                }))
-              }
-            >
-              <SelectTrigger>
-                <SelectValue placeholder="Select status" />
-              </SelectTrigger>
-
-              <SelectContent>
-                <SelectGroup>
-                  {Type?.map((item) => (
-                    <SelectItem key={item} value={item}>
-                      {item}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
-          {/* Subject */}
-          <div className="space-y-2">
-            <Label>
-              Subject <span className="text-destructive">*</span>
-            </Label>
-
-            <Input name="subject" value={formData.subject} onChange={handleChange} placeholder="Enter subject" required />
-            <FieldError></FieldError>
-          </div>
-
-          {/* NAME + EMAIL */}
-          <div className="grid md:grid-cols-2 gap-4">
+                <SelectContent>
+                  <SelectGroup>
+                    {Type?.map((item) => (
+                      <SelectItem key={item} value={item}>
+                        {item}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+            {/* Subject */}
             <div className="space-y-2">
               <Label>
-                Name <span className="text-destructive">*</span>
+                Subject <span className="text-destructive">*</span>
               </Label>
 
-              <Input name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
+              <Input name="subject" value={formData.subject} onChange={handleChange} placeholder="Enter subject" required />
+              <FieldError></FieldError>
             </div>
 
+            {/* NAME + EMAIL */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label>
+                  Name <span className="text-destructive">*</span>
+                </Label>
+
+                <Input name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
+              </div>
+
+              <div className="space-y-2">
+                <Label>
+                  Email <span className="text-destructive">*</span>
+                </Label>
+
+                <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" required />
+              </div>
+            </div>
+
+            {/* TITLE */}
+            <div className="space-y-2">
+              <Label>Title </Label>
+
+              <Input name="title" value={formData.title} onChange={handleChange} placeholder="Enter title" />
+            </div>
+
+            {/* MESSAGE */}
             <div className="space-y-2">
               <Label>
-                Email <span className="text-destructive">*</span>
+                Message <span className="text-destructive">*</span>
               </Label>
 
-              <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" required />
+              <Textarea name="message" value={formData.message} onChange={handleChange} rows={6} placeholder="Describe your request..." required />
             </div>
-          </div>
 
-          {/* TITLE */}
-          <div className="space-y-2">
-            <Label>Title </Label>
-
-            <Input name="title" value={formData.title} onChange={handleChange} placeholder="Enter title" />
-          </div>
-
-          {/* MESSAGE */}
-          <div className="space-y-2">
-            <Label>
-              Message <span className="text-destructive">*</span>
-            </Label>
-
-            <Textarea name="message" value={formData.message} onChange={handleChange} rows={6} placeholder="Describe your request..." required />
-          </div>
-
-          <Button type="submit" className="w-full cursor-pointer" disabled={loading}>
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Sending...
-              </>
-            ) : (
-              'Send Reply'
-            )}
-          </Button>
-        </form>
-      </CardContent>
+            <Button type="submit" className="w-full cursor-pointer" disabled={loading}>
+              {loading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                'Send Reply'
+              )}
+            </Button>
+          </form>
+        </CardContent>
+      )}
     </Card>
   );
 }

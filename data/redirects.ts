@@ -934,4 +934,25 @@ export const redirects = [
     destination: '/song/deewana-joseph-raj-allam-6974fac68bca8ea653a072e9',
     statusCode: 301,
   },
+  {
+    source: '/song/kaafi-hai-688ce5c3bf7444bf955b32f3',
+    destination: '/song/kaafi-hai-thanga-selvam-688ce5c3bf7444bf955b32f3',
+    statusCode: 301,
+  },
+  {
+    source: '/song/ek-68c073a6e2b13eca6e512f25',
+    destination: '/song/ek-thanga-selvam-68c073a6e2b13eca6e512f25',
+    statusCode: 301,
+  },
+  {
+    source: '/song/rang-liya-folj-ankit-sajwan-ministries-689240fcb445466d0b044da2',
+    destination: '/song/rang-liya-folj-or-ankit-sajwan-ministries-689240fcb445466d0b044da2',
+    statusCode: 301,
+  },
 ];
+
+//     {
+//     source: ,
+//     destination: ,
+//     statusCode: 301,
+//   },

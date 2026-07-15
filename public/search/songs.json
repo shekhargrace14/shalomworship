@@ -891,7 +891,7 @@
   },
   {
     "id": "688ce5c3bf7444bf955b32f3",
-    "slug": "kaafi-hai-688ce5c3bf7444bf955b32f3",
+    "slug": "kaafi-hai-thanga-selvam-688ce5c3bf7444bf955b32f3",
     "title": "Kaafi Hai",
     "image": "https://img.youtube.com/vi/yl320WmYCwM/maxresdefault.jpg",
     "status": "PUBLISH",
@@ -921,7 +921,7 @@
   },
   {
     "id": "689240fcb445466d0b044da2",
-    "slug": "rang-liya-folj-ankit-sajwan-ministries-689240fcb445466d0b044da2",
+    "slug": "rang-liya-folj-or-ankit-sajwan-ministries-689240fcb445466d0b044da2",
     "title": "Rang Liya",
     "image": "https://img.youtube.com/vi/ZmLYSGvbQ9c/maxresdefault.jpg",
     "status": "PUBLISH",
@@ -1191,7 +1191,7 @@
   },
   {
     "id": "68c073a6e2b13eca6e512f25",
-    "slug": "ek-68c073a6e2b13eca6e512f25",
+    "slug": "ek-thanga-selvam-68c073a6e2b13eca6e512f25",
     "title": "Ek",
     "image": "https://img.youtube.com/vi/sc_SqDQAd40/maxresdefault.jpg",
     "status": "PUBLISH",
@@ -5063,9 +5063,9 @@
     "id": "69873ad69bc94d827e692dc9",
     "slug": "yeshu-tu-aur-main-shelley-reddy-69873ad69bc94d827e692dc9",
     "title": "Yeshu Tu Aur Main",
-    "image": "https://yt3.ggpht.com/bC4ZOFgTbQOG0Cf4e3BkiJ2pCJ2ylph3ZShzEKN1vcYqNxrvEYOICvzWpdf_cos3EDV0zNfKdoDX=s1600-rw-nd-v1",
-    "status": "UPCOMING",
-    "language": "en",
+    "image": "https://img.youtube.com/vi/f6ctxh4LZwM/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
     "channel": "Shelley Reddy",
     "channelSlug": "shelley-reddy"
   },
@@ -5162,7 +5162,7 @@
   {
     "id": "699b3778610386bef4aa19e5",
     "slug": "naya-savera-nations-of-worship-699b3778610386bef4aa19e5",
-    "title": "NAYA SAVERA",
+    "title": "Naya Savera",
     "image": "https://img.youtube.com/vi/6WfCPZEtRhk/maxresdefault.jpg",
     "status": "PUBLISH",
     "language": "hi",
@@ -5358,5 +5358,35 @@
     "language": "hi",
     "channel": "Aaghaaz",
     "channelSlug": "aaghaaz"
+  },
+  {
+    "id": "6a550a4ae65ad33a3c538983",
+    "slug": "tu-hi-meri-chattan-reenukumar-6a550a4ae65ad33a3c538983",
+    "title": " Tu Hi Meri Chattan",
+    "image": "https://img.youtube.com/vi/PKosfj81Sg8/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Reenukumar",
+    "channelSlug": "reenukumar"
+  },
+  {
+    "id": "6a551bd56300a0fd47f6c5ae",
+    "slug": "nee-aatmatho-vijay-kondapuram-6a551bd56300a0fd47f6c5ae",
+    "title": "Nee Aatmatho",
+    "image": "https://img.youtube.com/vi/NmD-venVBAU/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "te",
+    "channel": "Vijay Kondapuram",
+    "channelSlug": "vijay-kondapuram"
+  },
+  {
+    "id": "6a5527ca299f01665df4f610",
+    "slug": "baarish-zayvan-6a5527ca299f01665df4f610",
+    "title": "Baarish",
+    "image": "https://img.youtube.com/vi/OmG7ZahnkN4/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Zayvan",
+    "channelSlug": "zayvan"
   }
 ]

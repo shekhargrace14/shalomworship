@@ -1,16 +1,5 @@
 'use client';
 
-import { useSetlists } from '@/lib/setlist/useSetlists';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog';
-import { Pen, Trash, X } from 'lucide-react';
-import { Textarea } from '../ui/textarea';
-
-import { Field, FieldContent, FieldDescription, FieldError, FieldGroup, FieldLabel, FieldLegend, FieldSeparator, FieldSet, FieldTitle } from '@/components/ui/field';
-import { Switch } from '../ui/switch';
-import Link from 'next/link';
 import Menu from '../layout/Menu';
 import { HeaderSearch } from '../search/HeaderSearch';
 import { useSetlistsContext } from '@/lib/setlist/SetlistsContext';

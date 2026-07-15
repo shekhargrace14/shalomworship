@@ -7,8 +7,8 @@ import { Input } from '../ui/input';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useSongSearch } from '@/lib/search/useSongSearch';
 import Image from 'next/image';
-import { useSetlistsContext } from '@/lib/setlist/SetlistsContext';
 import BookmarkSong from '../setlist/Bookmark';
+import Link from 'next/link';
 
 interface HeaderSearchProps {
   redirectCheck?: boolean;
@@ -21,8 +21,6 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
   const router = useRouter();
   const pathname = usePathname();
   const { search, ready } = useSongSearch();
-  // const { setlists, addSong, removeSong } = useSetlists();
-  // const { setlists, addSong, removeSong } = useSetlistsContext();
 
   const [query, setQuery] = useState('');
   const debounced = useDebounce(query, 300);
@@ -155,23 +153,29 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
                 className={`group px-1 py-1 hover:bg-ring rounded-md flex gap-2 justify-between items-center 
                   ${i === active ? 'bg-ring' : ''}
                   ${redirectCheck ? 'cursor-pointer' : ''}
-                `}
-                onClick={() => {
-                  router.push(`/song/${song.slug}`);
-                  setOpen(false);
-                }}
+                  `}
               >
-                <div className="flex gap-2 ">
-                  <Image src={song.image} alt={song.title} className="w-20 object-cover rounded-md" width={40} height={40} />
-                  <div className="flex flex-col ">
-                    <div className="font-medium">{song.title}</div>
-                    <div className="text-xs text-gray-500 group-hover:text-foreground">
-                      {song?.channel}
-                      {song.status === 'upcoming' && ' • Coming Soon'}
+                <Link
+                  href={`/song/${song.slug}`}
+                  className="w-full"
+                  onClick={(e) => {
+                    // e.stopPropagation();
+                    // router.push(`/song/${song.slug}`);
+                    setOpen(false);
+                  }}
+                >
+                  <div className="flex gap-2 ">
+                    <Image src={song.image} alt={song.title} className="w-20 object-cover rounded-md" width={40} height={40} />
+                    <div className="flex flex-col ">
+                      <div className="font-medium">{song.title}</div>
+                      <div className="text-xs text-gray-500 group-hover:text-foreground">
+                        {song?.channel}
+                        {song.status === 'upcoming' && ' • Coming Soon'}
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* <BookmarkSong setlistId={setlistId} song={song} /> */}
+                </Link>
+                {setlistId && <BookmarkSong setlistId={setlistId} song={song} />}
               </div>
             );
           })}

@@ -9,19 +9,27 @@ import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { Calendar } from '../ui/calendar';
 import { CalendarIcon, ChevronDownIcon } from 'lucide-react';
 import { format } from 'date-fns';
+import { toast } from 'sonner';
 const Create = () => {
   const { createSetlist } = useSetlistsContext();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [open, setOpen] = useState(false);
-  const [date, setDate] = React.useState<Date>();
+  const [eventAt, setEventAt] = React.useState<Date>();
+  // const [date, setDate] = React.useState<Date>();
 
   function handleCreate() {
     if (!title.trim()) return; // prevent empty title
-    createSetlist(title.trim(), description.trim(), date);
+    if (!eventAt) {
+      toast.error('Please select an event date.');
+
+      // alert('Please select an event date.');
+      return;
+    }
+    createSetlist(title.trim(), description.trim(), eventAt);
     setTitle('');
     setDescription('');
-    setDate(undefined);
+    setEventAt(undefined);
     setOpen(false);
   }
   return (
@@ -59,14 +67,14 @@ const Create = () => {
               <Popover>
                 <PopoverTrigger asChild>
                   <Button id="date-picker" variant="outline" className="w-full justify-between font-normal">
-                    {date ? format(date, 'EEEE • MMMM d, yyyy') : 'Pick a date'}
+                    {eventAt ? format(eventAt, 'EEEE • MMMM d, yyyy') : 'Pick a date'}
 
                     <CalendarIcon className="h-4 w-4 opacity-60" />
                   </Button>
                 </PopoverTrigger>
 
                 <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
+                  <Calendar mode="single" selected={eventAt} onSelect={setEventAt} initialFocus />
                 </PopoverContent>
               </Popover>
             </Field>

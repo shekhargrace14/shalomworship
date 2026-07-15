@@ -63,7 +63,7 @@ export function useSetlists() {
     setReady(true);
   }, []);
 
-  function createSetlist(name: string, description: string, eventAt?: Date) {
+  function createSetlist(name: string, description: string, eventAt: Date) {
     const next: Setlist[] = [
       ...setlists,
       {

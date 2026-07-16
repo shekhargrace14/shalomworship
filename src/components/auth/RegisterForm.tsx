@@ -28,7 +28,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
     }
     try {
       const res = await fetch('https://dashboard.shalomworship.com/api/auth/signup', {
-      // const res = await fetch('http://localhost:3001/api/auth/signup', {
+        // const res = await fetch('http://localhost:3001/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

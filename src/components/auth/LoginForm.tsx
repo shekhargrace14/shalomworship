@@ -24,7 +24,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
     setLoading(true);
     try {
       const res = await fetch('https://dashboard.shalomworship.com/api/auth/login', {
-      // const res = await fetch('http://localhost:3001/api/auth/login', {
+        // const res = await fetch('http://localhost:3001/api/auth/login', {
         method: 'POST',
         credentials: 'include',
         headers: {

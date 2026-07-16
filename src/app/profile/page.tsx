@@ -51,7 +51,7 @@ export default function Page() {
   useEffect(() => {
     async function loadUser() {
       const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
-      // const res = await fetch('http://localhost:3001/api/auth/me', {
+        // const res = await fetch('http://localhost:3001/api/auth/me', {
         credentials: 'include',
       });
 

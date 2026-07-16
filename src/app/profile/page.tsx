@@ -16,6 +16,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { user } from '@prisma/client';
+import { API_URL } from '@/lib/config';
 
 const menuItems = [
   {
@@ -47,7 +48,6 @@ const menuItems = [
 
 export default function Page() {
   const [user, setUser] = useState<user | null>(null);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   useEffect(() => {
     async function loadUser() {

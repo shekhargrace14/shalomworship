@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/useAuthStore';
+import { API_URL } from '@/lib/config';
 
 export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
   const router = useRouter();
@@ -18,7 +19,6 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const setUser = useAuthStore((state) => state.setUser);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

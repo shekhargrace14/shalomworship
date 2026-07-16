@@ -2,11 +2,11 @@
 
 import { useEffect } from 'react';
 import { useAuthStore } from '@/store/useAuthStore';
+import { API_URL } from '@/lib/config';
 
 export default function AuthHydrator({ children }: { children: React.ReactNode }) {
   const setUser = useAuthStore((s) => s.setUser);
   const setLoading = useAuthStore((s) => s.setLoading);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   useEffect(() => {
     async function loadUser() {

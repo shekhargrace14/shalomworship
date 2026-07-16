@@ -9,6 +9,7 @@ import { Toaster } from '../ui/sonner';
 import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
+import { API_URL } from '@/lib/config';
 
 export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const router = useRouter();
@@ -18,7 +19,6 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const setUser = useAuthStore((state) => state.setUser);
-  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();

@@ -6,12 +6,14 @@ import { useAuthStore } from '@/store/useAuthStore';
 export default function AuthHydrator({ children }: { children: React.ReactNode }) {
   const setUser = useAuthStore((s) => s.setUser);
   const setLoading = useAuthStore((s) => s.setLoading);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   useEffect(() => {
     async function loadUser() {
       try {
-        const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
-          // const res = await fetch('http://localhost:3001/api/auth/me', {
+        // const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
+        // const res = await fetch('http://localhost:3001/api/auth/me', {
+        const res = await fetch(`${API_URL}/api/auth/me`, {
           credentials: 'include',
         });
 

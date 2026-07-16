@@ -18,13 +18,15 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const setUser = useAuthStore((state) => state.setUser);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('https://dashboard.shalomworship.com/api/auth/login', {
-        // const res = await fetch('http://localhost:3001/api/auth/login', {
+      // const res = await fetch('https://dashboard.shalomworship.com/api/auth/login', {
+      // const res = await fetch('http://localhost:3001/api/auth/login', {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
         credentials: 'include',
         headers: {

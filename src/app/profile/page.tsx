@@ -47,11 +47,13 @@ const menuItems = [
 
 export default function Page() {
   const [user, setUser] = useState<user | null>(null);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   useEffect(() => {
     async function loadUser() {
-      const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
-        // const res = await fetch('http://localhost:3001/api/auth/me', {
+      // const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
+      // const res = await fetch('http://localhost:3001/api/auth/me', {
+      const res = await fetch(`${API_URL}/api/auth/me`, {
         credentials: 'include',
       });
 

@@ -18,6 +18,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const setUser = useAuthStore((state) => state.setUser);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -27,8 +28,9 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
       return;
     }
     try {
-      const res = await fetch('https://dashboard.shalomworship.com/api/auth/signup', {
-        // const res = await fetch('http://localhost:3001/api/auth/signup', {
+      // const res = await fetch('https://dashboard.shalomworship.com/api/auth/signup', {
+      // const res = await fetch('http://localhost:3001/api/auth/signup', {
+      const res = await fetch(`${API_URL}/api/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

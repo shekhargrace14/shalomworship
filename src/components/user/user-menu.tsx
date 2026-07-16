@@ -21,21 +21,10 @@ type UserMenuProps = {
 export default function UserMenu({ user }: UserMenuProps) {
   const isLoggedIn = !!user;
   const router = useRouter();
-  //   const handleLogout = async () => {
-  //     await fetch('http://localhost:3001/api/auth/logout', {
-  //       method: 'POST',
-  //       credentials: 'include',
-  //     });
-
-  //     router.push('/');
-  //   };
-
   const handleLogout = async () => {
     try {
       await logout();
-
       toast.success('Logged out successfully');
-
       router.push('/');
     } catch (error) {
       toast.error('Failed to logout');

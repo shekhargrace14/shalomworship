@@ -10,7 +10,8 @@ export default function AuthHydrator({ children }: { children: React.ReactNode }
   useEffect(() => {
     async function loadUser() {
       try {
-        const res = await fetch('http://localhost:3001/api/auth/me', {
+      const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
+        // const res = await fetch('http://localhost:3001/api/auth/me', {
           credentials: 'include',
         });
 

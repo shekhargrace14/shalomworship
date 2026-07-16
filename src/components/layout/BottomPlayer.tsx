@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Play, Pause } from 'lucide-react';
-import { usePlayerStore } from '@/stores/playerStore';
+import { usePlayerStore } from '@/store/playerStore';
 import Image from 'next/image';
 
 export default function BottomPlayer() {

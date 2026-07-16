@@ -1,0 +1,133 @@
+'use client';
+
+import Link from 'next/link';
+import { User, LogOut, LogIn, UserPlus, ListMusic, Settings, ChevronDown } from 'lucide-react';
+
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/Avatar';
+import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
+import { logout } from '@/lib/auth/logout';
+
+type UserMenuProps = {
+  user?: {
+    id: string;
+    name: string;
+    email: string;
+    image?: string | null;
+  } | null;
+};
+
+export default function UserMenu({ user }: UserMenuProps) {
+  const isLoggedIn = !!user;
+  const router = useRouter();
+  //   const handleLogout = async () => {
+  //     await fetch('http://localhost:3001/api/auth/logout', {
+  //       method: 'POST',
+  //       credentials: 'include',
+  //     });
+
+  //     router.push('/');
+  //   };
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+
+      toast.success('Logged out successfully');
+
+      router.push('/');
+    } catch (error) {
+      toast.error('Failed to logout');
+    }
+  };
+
+  const initials =
+    user?.name
+      ?.trim()
+      .split(/\s+/)
+      .map((w) => w[0])
+      .join('')
+      .slice(0, 2)
+      .toUpperCase() ?? 'GU';
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button className="flex items-center gap-2 rounded-full border bg-card px-2 py-1 transition hover:bg-accent cursor-pointer">
+          <Avatar className="h-9 w-9">
+            <AvatarImage src={user?.image ?? ''} />
+            <AvatarFallback>{initials}</AvatarFallback>
+          </Avatar>
+
+          <ChevronDown className="h-4 w-4 text-muted-foreground" />
+        </button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent align="end" className="w-64">
+        {isLoggedIn ? (
+          <>
+            <DropdownMenuLabel>
+              <div className="flex flex-col">
+                <span className="font-semibold">{user?.name}</span>
+                <span className="text-xs text-muted-foreground">{user?.email}</span>
+              </div>
+            </DropdownMenuLabel>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuGroup>
+              <DropdownMenuItem asChild>
+                <Link href="/profile">
+                  <User className="mr-2 h-4 w-4" />
+                  My Profile
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link href="/setlists">
+                  <ListMusic className="mr-2 h-4 w-4" />
+                  My Setlists
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link href="/dashboard">
+                  <Settings className="mr-2 h-4 w-4" />
+                  Dashboard
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuItem className="text-destructive cursor-pointer" onClick={handleLogout}>
+              <LogOut className="mr-2 h-4 w-4" />
+              Logout
+            </DropdownMenuItem>
+          </>
+        ) : (
+          <>
+            <DropdownMenuLabel>Welcome 👋</DropdownMenuLabel>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuItem asChild>
+              <Link href="/auth/login">
+                <LogIn className="mr-2 h-4 w-4" />
+                Login
+              </Link>
+            </DropdownMenuItem>
+
+            <DropdownMenuItem asChild>
+              <Link href="/auth/signup">
+                <UserPlus className="mr-2 h-4 w-4" />
+                Create Account
+              </Link>
+            </DropdownMenuItem>
+          </>
+        )}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}

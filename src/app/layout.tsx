@@ -17,6 +17,7 @@ import { Toaster } from 'sonner';
 import PwaRegister from './pwa-register';
 import SongSync from '@/components/song-sync';
 import NetworkStatus from '@/components/NetworkStatus';
+import AuthHydrator from '@/components/hydrator/hydrator-auth';
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -133,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <div className="flex-1">
                       <PwaRegister />
                       <SongSync />
-                      {children}
+                      <AuthHydrator>{children}</AuthHydrator>
                       <Toaster />
                     </div>
                     <Footer />

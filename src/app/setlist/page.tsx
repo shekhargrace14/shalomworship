@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 // import CreateSetlist from "@/components/setlist/CreateSetlist";
-import ShowSetlist from '@/components/setlist/ShowSetlist';
+// import ShowSetlist from '@/components/setlist/ShowSetlist';
 import Menu from '@/components/layout/Menu';
 import { CreateSetlist } from '@/components/setlist/CreateSetlist';
 
@@ -23,7 +23,7 @@ export default function SetlistPage() {
   return (
     <>
       <Menu />
-      <ShowSetlist id={setlistId} />
+      {/* <ShowSetlist id={setlistId} /> */}
     </>
   );
 }

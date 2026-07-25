@@ -1,4 +1,3 @@
-import Menu from '@/components/layout/Menu';
 import React from 'react';
 import { MetaData } from '@/components/MetaData';
 import ChannelSection from '@/components/channel/channel-section';
@@ -25,7 +24,6 @@ const page = async () => {
 
   return (
     <div className="p-4">
-      <Menu />
       <ChannelSection channels={channels} />
     </div>
   );

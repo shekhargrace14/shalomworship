@@ -14,7 +14,6 @@ const Header = () => {
     setMenuOpen((toggle) => !toggle);
   };
   const user = useAuthStore((state) => state.user);
-  // console.log(user, '-header.tsx');
   return (
     <header className="relative w-full py-0 px-4  text-foreground   flex justify-between items-center gap-2 ">
       <div className="w-2/12 md:w-4/12 lg:w-3/12 ">

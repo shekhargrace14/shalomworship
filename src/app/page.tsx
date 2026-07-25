@@ -16,6 +16,7 @@ import EventSection from '@/components/event/EventSection';
 import ChannelSection from '@/components/channel/channel-section';
 import SongSection from '@/components/song/song-section';
 import CategorySection from '@/components/category/category-section';
+import UserWelcome from '@/components/user/user-welcome';
 
 type Song = {
   id: string;
@@ -39,11 +40,10 @@ export default async function Home() {
     // getAllEvents(),
   ]);
 
-  // console.log(event,  "event on page.tsx")
   return (
     <div className="p-4">
       <AutoPopup />
-      <Menu />
+      <UserWelcome />
       {/* 
         <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Upcoming Events</h2>

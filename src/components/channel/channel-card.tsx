@@ -1,13 +1,17 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaUser } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 import slugify from 'slugify';
-import { channel } from '@prisma/client';
+import { useChannelStore } from '@/store/useChannelStore';
 
 const ChannelCard = ({ item }: any) => {
   const slug = slugify(`${item.slug}`, { lower: true });
+  // console.log(item.id, 'ChannelCard');
+
+  const currentChannel = useChannelStore((state) => state.currentChannel);
+  // console.log(currentChannel, 'currentChannel at ChannelCard');
 
   return (
     <>

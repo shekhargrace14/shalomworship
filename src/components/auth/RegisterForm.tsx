@@ -32,6 +32,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
       // const res = await fetch('http://localhost:3001/api/auth/signup', {
       const res = await fetch(`${API_URL}/api/auth/signup`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },

@@ -7,6 +7,13 @@ export const channelBaseSelect = {
   updatedAt: true,
 };
 
+export const channelTeamSelect = {
+  createdBy: true,
+  owner: true,
+  ownerId: true,
+  team: true,
+};
+
 export const channelMetaSelect = {
   avatar: true,
   banner: true,
@@ -17,6 +24,7 @@ export const channelMetaSelect = {
 
 export const channelFullSelect = {
   ...channelBaseSelect,
+  ...channelTeamSelect,
   ...channelMetaSelect,
 };
 

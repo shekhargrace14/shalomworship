@@ -48,7 +48,10 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
         toast.success(data.message || 'Login Successful');
       }
 
-      router.refresh(); // or // window.location.href = "/dashboard"
+      // router.refresh(); // this is not refreshing the page as below one does.
+      // or //
+      window.location.href = '/';
+
       router.push('/');
     } catch (error: any) {
       toast.error(error + 'something went wrong');

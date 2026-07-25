@@ -45,7 +45,7 @@ export async function getAllSongs(statuses: StatusType[]) {
     SONG_LIST_CACHE.set(key, songs);
     return songs;
   } catch (error) {
-    console.log('Error in songServerAction ', error);
+    console.error('Error in songServerAction ', error);
     return [];
   }
 }

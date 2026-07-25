@@ -36,6 +36,6 @@ export async function getChannel(channelId: string, statuses: StatusType[]) {
       },
     });
   } catch (error) {
-    console.log('issue with query at aritst.static.ts');
+    console.error('issue with query at aritst.static.ts');
   }
 }

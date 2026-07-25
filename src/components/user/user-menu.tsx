@@ -74,9 +74,16 @@ export default function UserMenu({ user }: UserMenuProps) {
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/setlists">
+                <Link href="/user/setlist">
                   <ListMusic className="mr-2 h-4 w-4" />
                   My Setlists
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link href="/user/channel">
+                  <ListMusic className="mr-2 h-4 w-4" />
+                  My Channels
                 </Link>
               </DropdownMenuItem>
 

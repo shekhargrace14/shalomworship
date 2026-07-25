@@ -4,7 +4,8 @@ import React from 'react';
 const Menu = () => {
   const menuItems = [
     // { title: "All", link: "/" },
-    { title: 'Setlist(Beta)', link: '/setlist' },
+    // { title: 'Setlist(Beta)', link: '/setlist' },
+    { title: 'Setlist', link: '/user/setlist' },
     { title: 'Song', link: '/song' },
     { title: 'Channel', link: '/channel' },
     { title: 'Category', link: '/category' },

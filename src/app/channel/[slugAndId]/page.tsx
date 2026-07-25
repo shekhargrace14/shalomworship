@@ -1,5 +1,4 @@
 import InContentAd from '@/components/ads/InContentAd';
-import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import Processor from '@/components/Processor';
 
@@ -54,7 +53,6 @@ const Page = async ({ params }: any) => {
             backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`,
           }}
         >
-          <Menu />
           {/* <InContentAd /> */}
 
           <div className=" flex items-center gap-4 w-full ">

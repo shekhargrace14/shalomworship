@@ -1,6 +1,5 @@
 // import AlbumSection from '@/components/AlbumSection';
 import AlbumSection from '@/components/album/album-section';
-import Menu from '@/components/layout/Menu';
 import { getAllAlbums } from '@/lib/static';
 
 const page = async () => {
@@ -11,7 +10,6 @@ const page = async () => {
   return (
     <div>
       <div className="p-4">
-        <Menu />
         <AlbumSection album={album} type="album" />
       </div>
     </div>

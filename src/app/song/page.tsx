@@ -1,4 +1,3 @@
-import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import SongSection from '@/components/song/song-section';
 import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
@@ -27,7 +26,6 @@ const page = async () => {
   // console.log(songs)
   return (
     <div className="p-4">
-      <Menu />
       <SongSection songs={songs} />
     </div>
   );

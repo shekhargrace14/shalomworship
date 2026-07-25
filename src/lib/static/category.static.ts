@@ -10,7 +10,7 @@ export async function getAllCategories() {
       },
     });
   } catch (error) {
-    console.log(error, 'error from category server action');
+    console.error(error, 'error from category server action');
   }
 }
 
@@ -20,7 +20,7 @@ export async function getAllCategoriesBasic() {
       select: categoryBasicSelect,
     });
   } catch (error) {
-    console.log(error, 'error from category server action');
+    console.error(error, 'error from category server action');
   }
 }
 

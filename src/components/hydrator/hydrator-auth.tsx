@@ -20,7 +20,7 @@ export default function AuthHydrator({ children }: { children: React.ReactNode }
         const data = await res.json();
 
         if (data.success) {
-          setUser(data.user);
+          setUser(data.data);
         } else {
           setUser(null);
         }

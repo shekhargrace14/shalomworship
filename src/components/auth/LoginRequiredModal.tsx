@@ -1,36 +1,24 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { LogIn, UserPlus } from "lucide-react";
-import Link from "next/link";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { LogIn, UserPlus } from 'lucide-react';
+import Link from 'next/link';
 
 interface LoginRequiredModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-export function LoginRequiredModal({
-  open,
-  onOpenChange,
-}: LoginRequiredModalProps) {
+export function LoginRequiredModal({ open, onOpenChange }: LoginRequiredModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Create an Account</DialogTitle>
           <DialogDescription>
-            To create, edit, and manage your setlists, you'll need a Shalom
-            Worship account.
+            To create, edit, and manage your setlists, you'll need a Shalom Worship account.
             <br />
             <br />
-            Sign in if you already have an account, or create a free account to
-            get started.
+            Sign in if you already have an account, or create a free account to get started.
           </DialogDescription>
         </DialogHeader>
 

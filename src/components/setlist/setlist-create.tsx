@@ -17,19 +17,19 @@ import { useSetlistStore } from '@/store/useSetlistStore';
 import { useChannelStore } from '@/store/useChannelStore';
 
 interface SetlistCreateProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-export default function SetlistCreate({open ,onOpenChange}:SetlistCreateProps) {
+export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps) {
   // const [open, setOpen] = useState(open);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const [title, setTitle] = useState('');
   const [eventAt, setEventAt] = useState<Date>();
-  const channel = useChannelStore((s)=>s.currentChannel)
-  const channelId = channel?.id
+  const channel = useChannelStore((s) => s.currentChannel);
+  const channelId = channel?.id;
   // const [visibility, setVisibility] = useState("PRIVATE");
 
   const addSetlist = useSetlistStore((state) => state.addSetlist);

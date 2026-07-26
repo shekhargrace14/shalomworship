@@ -1,17 +1,16 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Plus } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useAuthStore } from "@/store/useAuthStore";
-import SetlistCreate from "../setlist-create";
-import { LoginRequiredModal } from "@/components/auth/LoginRequiredModal";
-
+import { useState } from 'react';
+import { Plus } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useAuthStore } from '@/store/useAuthStore';
+import SetlistCreate from '../setlist-create';
+import { LoginRequiredModal } from '@/components/auth/LoginRequiredModal';
 
 export function SetlistButton() {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
-  console.log(isAuthenticated)
+  console.log(isAuthenticated);
 
   const [openLogin, setOpenLogin] = useState(false);
   const [openCreate, setOpenCreate] = useState(false);
@@ -31,15 +30,9 @@ export function SetlistButton() {
         Create Setlist
       </Button>
 
-      <LoginRequiredModal
-        open={openLogin}
-        onOpenChange={setOpenLogin}
-      />
+      <LoginRequiredModal open={openLogin} onOpenChange={setOpenLogin} />
 
-      <SetlistCreate
-        open={openCreate}
-        onOpenChange={setOpenCreate}
-      />
+      <SetlistCreate open={openCreate} onOpenChange={setOpenCreate} />
     </>
   );
 }

@@ -24,7 +24,7 @@ const OldSidebar = () => {
             Setlists<span className="text-base text-muted-foreground">(beta)</span>{' '}
           </p>
         </Link>
-        <SetlistButton/>
+        <SetlistButton />
       </div>
 
       <SetlistList data={setlists} orientation="vertical" />

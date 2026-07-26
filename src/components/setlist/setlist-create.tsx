@@ -14,18 +14,22 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { useSetlistStore } from '@/store/useSetlistStore';
+import { useChannelStore } from '@/store/useChannelStore';
 
-type Props = {
-  channelId: string;
-};
+interface SetlistCreateProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
 
-export default function SetlistCreate({ channelId }: Props) {
+export default function SetlistCreate({open ,onOpenChange}:SetlistCreateProps) {
+  // const [open, setOpen] = useState(open);
   const router = useRouter();
-  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const [title, setTitle] = useState('');
   const [eventAt, setEventAt] = useState<Date>();
+  const channel = useChannelStore((s)=>s.currentChannel)
+  const channelId = channel?.id
   // const [visibility, setVisibility] = useState("PRIVATE");
 
   const addSetlist = useSetlistStore((state) => state.addSetlist);
@@ -50,14 +54,12 @@ export default function SetlistCreate({ channelId }: Props) {
 
       const data = await res.json();
 
-      // setSetlists(data.data)
-
       if (!res.ok || !data.success) {
         throw new Error(data.message);
       }
       addSetlist(data.data);
       toast.success(data.message);
-      router.push(`/user/setlist/${data.data.id}`);
+      router.push(`/user/setlist/view?id=${data.data.id}`);
     } catch (error: any) {
       toast.error(error.message || 'Failed to create setlist');
     } finally {
@@ -66,13 +68,13 @@ export default function SetlistCreate({ channelId }: Props) {
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      {/* <DialogTrigger asChild>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
           Create Setlist
         </Button>
-      </DialogTrigger>
+      </DialogTrigger> */}
 
       <DialogContent className="sm:max-w-md">
         <DialogHeader>

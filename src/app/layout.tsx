@@ -136,7 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                   <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
                     <div className="flex-1 bg-card rounded-xl">
-                      <Menu />
+                      {/* <Menu /> */}
                       <PwaRegister />
                       <SongSync />
                       <HydratorChannel>

@@ -63,8 +63,6 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
 
   const langName = getLanguageName(Songlanguage);
 
-  // console.log(isRoman, "isRoman language");
-
   const getLyrics = (line: chordLyric, lang: string) => line.lyrics?.[lang as keyof typeof line.lyrics] || '';
   return (
     <div>

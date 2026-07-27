@@ -33,6 +33,13 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
   // const [visibility, setVisibility] = useState("PRIVATE");
 
   const addSetlist = useSetlistStore((state) => state.addSetlist);
+  if (!channelId) {
+    return (
+      <>
+        <p>channel id not set</p>
+      </>
+    );
+  }
 
   async function handleCreate() {
     if (!title.trim()) return;

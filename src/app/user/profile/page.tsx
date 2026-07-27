@@ -3,12 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Heart, ListMusic, Tv, LayoutDashboard, LogOut, ChevronRight } from 'lucide-react';
-
-// import {
-//   Avatar,
-//   AvatarFallback,
-//   AvatarImage,
-// } from ".../ui/avatar";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,57 +11,70 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { user } from '@prisma/client';
 import { API_URL } from '@/lib/config';
+import { Spinner } from '@/components/ui/spinner';
+import { useAuthStore } from '@/store/useAuthStore';
 
 const menuItems = [
-  {
-    title: 'Favorites',
-    description: "Songs you've liked",
-    icon: Heart,
-    href: '/favorites',
-  },
+  // {
+  //   title: 'Favorites',
+  //   description: "Songs you've liked",
+  //   icon: Heart,
+  //   href: '/favorites',
+  // },
   {
     title: 'My Setlists',
     description: 'Manage your worship setlists',
     icon: ListMusic,
-    href: '/setlists',
+    href: '/user/setlist',
   },
   {
     title: 'My Channels',
     description: 'View your channels',
     icon: Tv,
-    href: '/channels',
+    href: '/user/channel',
   },
-  {
-    title: 'Dashboard',
-    description: 'Open creator dashboard',
-    icon: LayoutDashboard,
-    href: 'https://dashboard.shalomworship.com',
-    external: true,
-  },
+  // {
+  //   title: 'Dashboard',
+  //   description: 'Open creator dashboard',
+  //   icon: LayoutDashboard,
+  //   href: 'https://dashboard.shalomworship.com',
+  //   external: true,
+  // },
 ];
 
-export default function Page() {
-  const [user, setUser] = useState<user | null>(null);
+const page = () => {
+  // const [user, setUser] = useState<user | null>(null);
+
+  const setUser = useAuthStore((s) => s.setUser);
+  const user = useAuthStore((s) => s.user);
 
   useEffect(() => {
     async function loadUser() {
-      // const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
-      // const res = await fetch('http://localhost:3001/api/auth/me', {
-      const res = await fetch(`${API_URL}/api/auth/me`, {
-        credentials: 'include',
-      });
+      try {
+        const res = await fetch(`${API_URL}/api/auth/me`, {
+          credentials: 'include',
+        });
 
-      const data = await res.json();
+        if (!res.ok) {
+          setUser(null);
+          return;
+        }
 
-      // console.log(data.user, "user data");
-
-      setUser(data.user);
+        const data = await res.json();
+        setUser(data.data);
+      } catch (err) {
+        console.error(err);
+        setUser(null);
+      }
     }
 
     loadUser();
-  }, []);
+  }, [setUser]);
 
-  // console.log(user, 'user-profile');
+
+  if (!user) {
+    return <Spinner />;
+  }
 
   return (
     <div className="mx-auto max-w-3xl p-6 space-y-6">
@@ -87,8 +94,11 @@ export default function Page() {
                 <p>{user?.role}</p>
               </CardDescription>
             </div>
-
-            <Button variant="outline">Edit Profile</Button>
+            <Link href={`/user/profile/edit`}>
+              <Button className="cursor-pointer" variant="outline">
+                Edit Profile
+              </Button>
+            </Link>
           </div>
         </CardHeader>
       </Card>
@@ -97,7 +107,11 @@ export default function Page() {
         <CardContent className="p-0">
           {menuItems.map((item, index) => (
             <div key={item.title}>
-              <Link href={item.href} target={item.external ? '_blank' : undefined} className="flex items-center justify-between p-4 transition-colors hover:bg-accent">
+              <Link
+                href={item.href}
+                // target={item.external ? '_blank' : undefined}
+                className="flex items-center justify-between p-4 transition-colors hover:bg-accent"
+              >
                 <div className="flex items-center gap-4">
                   <div className="rounded-lg border p-2">
                     <item.icon className="h-5 w-5" />
@@ -131,4 +145,5 @@ export default function Page() {
       </Button>
     </div>
   );
-}
+};
+export default page;

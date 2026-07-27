@@ -29,7 +29,6 @@ const Page = async ({ params }: any) => {
   const id = slugAndId.split('-').pop();
   const album = await getAlbum(id);
   const data = album;
-  // console.log(data, "ablum")
 
   return (
     <>

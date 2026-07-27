@@ -14,12 +14,9 @@ const page = () => {
   const searchParams = useSearchParams();
   const setlistId = searchParams.get('id');
 
-  // console.log(setlistId, 'setlist view page');
   const setCurrentSetlist = useSetlistStore((s) => s.setCurrentSetlist);
   const currentChannel = useChannelStore((s) => s.currentChannel);
   const channelId = currentChannel?.id;
-
-  // console.log(channelId, 'setlist view page');
 
   useEffect(() => {
     async function loadCurrentSetlist() {
@@ -28,13 +25,11 @@ const page = () => {
       if (data.success) {
         setCurrentSetlist(data.data);
       }
-      // console.log(data, 'data view page');
     }
     loadCurrentSetlist();
   }, [setlistId]);
 
   const currentSetlist = useSetlistStore((s) => s.currentSetlist);
-  // console.log(currentSetlist, 'setlist view page');
 
   if (!currentSetlist) {
     return <Spinner />;

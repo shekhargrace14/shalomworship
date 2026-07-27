@@ -8,7 +8,6 @@ import React from 'react';
 const page = () => {
   const currentSetlist = useSetlistStore((state) => state.currentSetlist);
 
-  // console.log(currentSetlist, 'Edit page');
   if (!currentSetlist) {
     return;
   }

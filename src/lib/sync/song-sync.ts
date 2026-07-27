@@ -16,6 +16,4 @@ export async function syncSongs() {
   }
 
   await tx.done;
-
-  // console.log('Songs synced');
 }

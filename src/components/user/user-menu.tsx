@@ -67,7 +67,7 @@ export default function UserMenu({ user }: UserMenuProps) {
 
             <DropdownMenuGroup>
               <DropdownMenuItem asChild>
-                <Link href="/profile">
+                <Link href="/user/profile">
                   <User className="mr-2 h-4 w-4" />
                   My Profile
                 </Link>
@@ -87,12 +87,12 @@ export default function UserMenu({ user }: UserMenuProps) {
                 </Link>
               </DropdownMenuItem>
 
-              <DropdownMenuItem asChild>
+              {/* <DropdownMenuItem asChild>
                 <Link href="/dashboard">
                   <Settings className="mr-2 h-4 w-4" />
                   Dashboard
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
             </DropdownMenuGroup>
 
             <DropdownMenuSeparator />

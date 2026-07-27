@@ -28,14 +28,12 @@ export function useSongSearch() {
       let songs: SongSearchItem[] = [];
 
       const dbSongs = await getSongsFromDB();
-      // console.log("DB Songs", dbSongs.length);
 
       if (dbSongs.length > 0) {
         songs = dbSongs;
       } else {
         songs = await fetch('/search/songs.json').then((r) => r.json());
       }
-      // console.log("Fuse Ready", songs.length);
       setFuse(
         new Fuse(songs, {
           keys: ['title', 'channel'],
@@ -49,16 +47,7 @@ export function useSongSearch() {
     loadSongs();
   }, []);
 
-  // useEffect(() => {
-  //   console.log("Ready changed", ready);
-  // }, [ready]);
-
-  // useEffect(() => {
-  //   console.log("Fuse changed", !!fuse);
-  // }, [fuse]);
-
   function search(query: string, limit = 20): SongSearchItem[] {
-    // console.log({
     //   query,
     //   ready,
     //   hasFuse: !!fuse,

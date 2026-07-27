@@ -36,8 +36,6 @@ export function AutoPopup() {
     }
   }, []);
 
-  // console.log(data)
-
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-md px-4 flex flex-col items-center">

@@ -22,8 +22,6 @@ const BookmarkSong = ({ song, setlistId }: BookmarkSongProps) => {
 
   const isAddedAnywhere = setlists.some((s) => s.songs.some((x) => x.id === song.id));
 
-  // console.log(setlists, " setlists -BookmarkSong")
-
   // ─────────────────────────────────────────────
   // CONTEXT B: Song page → picker
   // ─────────────────────────────────────────────

@@ -14,7 +14,6 @@ export default function SearchPage() {
   const [query, setQuery] = useState(q);
   const [results, setResults] = useState<any[]>([]);
 
-  // console.log("Results", results.length);
   /**
    * 🔹 Sync URL → state
    * Handles:

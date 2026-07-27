@@ -6,13 +6,6 @@ import slugify from 'slugify';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 const Event: React.FC<any> = ({ item }) => {
-  // console.log(item, "card item")
-  // const artist = item?.artist;
-  // const creator = artist[0]?.artist
-
-  // console.log(creator,creator?.title,creator?.image, "album item");
-  // console.log(creator[0]?.artist?.title, "album creator");
-
   return (
     <>
       <Link href={`/event/${item.id}`}>

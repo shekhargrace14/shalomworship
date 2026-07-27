@@ -7,7 +7,6 @@ export async function getYouTubeMetadata(videoId: any) {
 
   const res = await fetch(url);
   const data = await res.json();
-  //   console.log(data, "getYouTubeMetadata data")
 
   if (data.items && data.items.length > 0) {
     const video = data.items[0];

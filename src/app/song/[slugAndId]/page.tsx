@@ -65,8 +65,6 @@ const Song = async ({ params }: any) => {
   const langName = getLanguageName(language);
   const searchVariants = songData?.searchVariant || '';
 
-  // console.log(songData, "songData")
-
   return (
     <div className="bg-background  rounded-lg">
       <JsonLd id={id} />

@@ -51,8 +51,6 @@ type ChordTableProps = {
 };
 
 const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation, isNashville, songData, Songlanguage }) => {
-  // console.log(songData, "song")
-
   const [shift, setShift] = useState(0);
 
   function stepShift(currentShift: number, step: 1 | -1) {
@@ -92,7 +90,6 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
           {chars.map((char, index) => {
             // Scan array indices to match exact chord assignment position
             const chord = line.chords.find((c) => c.position === index);
-            // console.log(chord)
 
             return (
               <div key={index} className="relative inline-flex flex-col items-center min-w-[0.6em]">

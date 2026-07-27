@@ -51,8 +51,6 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
   const currentSetlist = useSetlistStore((s) => s.currentSetlist);
   const setlistId = currentSetlist?.id;
 
-  // console.log(channelId, setlistId, 'params fsdsdsdssd');
-
   type Metadata = {
     title: string;
     theme: string;

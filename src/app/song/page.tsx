@@ -23,7 +23,6 @@ export function generateMetadata() {
 const page = async () => {
   const songs = await getAllSongs([...CONTENT_VISIBILITY.public]);
 
-  // console.log(songs)
   return (
     <div className="p-4">
       <SongSection songs={songs} />

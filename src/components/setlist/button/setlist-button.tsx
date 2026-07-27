@@ -10,8 +10,6 @@ import { LoginRequiredModal } from '@/components/auth/LoginRequiredModal';
 export function SetlistButton() {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
-  console.log(isAuthenticated);
-
   const [openLogin, setOpenLogin] = useState(false);
   const [openCreate, setOpenCreate] = useState(false);
 

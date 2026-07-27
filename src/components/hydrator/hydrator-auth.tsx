@@ -34,7 +34,6 @@ export default function AuthHydrator({ children }: { children: React.ReactNode }
     loadUser();
   }, [setUser, setLoading]);
   // const user = useAuthStore((state)=> state.user)
-  // console.log(user, "auth hydrator")
 
   return <>{children}</>;
 }

@@ -8,10 +8,8 @@ import { useChannelStore } from '@/store/useChannelStore';
 
 const ChannelCard = ({ item }: any) => {
   const slug = slugify(`${item.slug}`, { lower: true });
-  // console.log(item.id, 'ChannelCard');
 
   const currentChannel = useChannelStore((state) => state.currentChannel);
-  // console.log(currentChannel, 'currentChannel at ChannelCard');
 
   return (
     <>

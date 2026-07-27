@@ -16,7 +16,6 @@ interface Props {
 
 export default function SetlistShow({ setlist }: Props) {
   if (!setlist) return null;
-  // console.log(setlist, 'SetlistShow');
 
   const [openSongId, setOpenSongId] = useState<string | null>(null);
 

@@ -41,9 +41,6 @@ const Page = async ({ params }: any) => {
   const data = categoryData;
   const color = categoryData?.color ?? '#121212'; // fallback color
 
-  // console.log(data?.song, "categoryData song page data");
-  // const newData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
-
   return (
     <>
       <div className="bg-background  rounded-lg">

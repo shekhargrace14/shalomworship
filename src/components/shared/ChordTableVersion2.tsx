@@ -18,17 +18,13 @@ type ChordTableProps = {
 };
 
 const ChordTableVersion2: React.FC<ChordTableProps> = ({ id, isChord, songData }) => {
-  // console.log(id, "table id");
-  // console.log(songData, "table songData");
   const [song, setSong] = useState<Song | null>(null);
   const [shift, setShift] = useState(0);
-  // console.log(song, "localSong");
 
   useEffect(() => {
     async function fetchSong() {
       // const singleSong = await fetchSongById(id);
       const singleSong = await songData;
-      // console.log(singleSong, " singleSong fetched song");
 
       if (singleSong) {
         const formattedSong: Song = {
@@ -37,13 +33,10 @@ const ChordTableVersion2: React.FC<ChordTableProps> = ({ id, isChord, songData }
           lines: (singleSong.lines as ChordLyric[][]) || [],
         };
         setSong(formattedSong);
-        // console.log(formattedSong, " singleSong fetched song");
       }
     }
     fetchSong();
   }, [id]);
-
-  // console.log(song?.key, "table song");
 
   // useEffect(() => {
   //   fetch('/song.json').then(res => res.json()).then(setSong);

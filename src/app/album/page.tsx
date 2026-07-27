@@ -6,7 +6,6 @@ const page = async () => {
   // const album = await fetchAlbums();
   const album = await getAllAlbums();
 
-  // console.log("album data in album page:", album);
   return (
     <div>
       <div className="p-4">

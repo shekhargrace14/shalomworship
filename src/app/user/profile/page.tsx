@@ -51,7 +51,7 @@ const page = () => {
   useEffect(() => {
     async function loadUser() {
       try {
-        const res = await fetch(`${API_URL}/api/auth/me`, {
+        const res = await fetch(`/api/auth/me`, {
           credentials: 'include',
         });
 

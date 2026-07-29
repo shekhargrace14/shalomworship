@@ -140,13 +140,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       {/* <Menu /> */}
                       <PwaRegister />
                       <SongSync />
-                      <HydratorChannel>
-                        <HydratorSetlist>
-                          <AuthHydrator>
-                            <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}>{children}</GoogleOAuthProvider>
-                          </AuthHydrator>
-                        </HydratorSetlist>
-                      </HydratorChannel>
+                      <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}>
+                        <HydratorChannel>
+                          <HydratorSetlist>
+                            <AuthHydrator>{children}</AuthHydrator>
+                          </HydratorSetlist>
+                        </HydratorChannel>
+                      </GoogleOAuthProvider>
                       <DevTools />
                       <Toaster />
                     </div>

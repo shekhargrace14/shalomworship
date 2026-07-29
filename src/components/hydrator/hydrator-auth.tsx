@@ -3,17 +3,19 @@
 import { useEffect } from 'react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { API_URL } from '@/lib/config';
+import { useRouter } from 'next/navigation';
 
 export default function AuthHydrator({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
   const setUser = useAuthStore((s) => s.setUser);
   const setLoading = useAuthStore((s) => s.setLoading);
 
   useEffect(() => {
+    console.log('AuthHydrator mounted');
     async function loadUser() {
+      console.log('Fetching /api/auth/me');
       try {
-        // const res = await fetch('https://dashboard.shalomworship.com/api/auth/me', {
-        // const res = await fetch('http://localhost:3001/api/auth/me', {
-        const res = await fetch(`${API_URL}/api/auth/me`, {
+        const res = await fetch(`/api/auth/me`, {
           credentials: 'include',
         });
 
@@ -24,6 +26,7 @@ export default function AuthHydrator({ children }: { children: React.ReactNode }
         } else {
           setUser(null);
         }
+        router.push('/');
       } catch {
         setUser(null);
       } finally {

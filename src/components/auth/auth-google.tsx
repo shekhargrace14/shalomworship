@@ -1,11 +1,16 @@
-import { API_URL } from '@/lib/config';
+'use client';
+import { hydrateChannels } from '@/lib/auth/hydrateChannel';
+import { useAuthStore } from '@/store/useAuthStore';
 import { GoogleLogin } from '@react-oauth/google';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'sonner';
 
 const AuthGoogle = () => {
   const router = useRouter();
+  // const [user, setUser]= useState()
+  const setUser = useAuthStore((s) => s.setUser);
+  // console.log(user, "AuthGoogle")
 
   return (
     <GoogleLogin
@@ -24,6 +29,10 @@ const AuthGoogle = () => {
           });
 
           const data = await res.json();
+          if (data.success) {
+            setUser(data.data);
+            await hydrateChannels();
+          }
 
           if (!data.success) {
             toast.error(data.message);
@@ -33,7 +42,10 @@ const AuthGoogle = () => {
           toast.success(data.message);
 
           router.refresh();
-          router.push('/');
+
+          setTimeout(() => {
+            router.push('/');
+          }, 1100);
         } catch (error) {
           toast.error('Something went wrong');
         }

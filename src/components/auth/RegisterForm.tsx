@@ -31,7 +31,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
     try {
       // const res = await fetch('https://dashboard.shalomworship.com/api/auth/signup', {
       // const res = await fetch('http://localhost:3001/api/auth/signup', {
-      const res = await fetch(`${API_URL}/api/auth/signup`, {
+      const res = await fetch(`/api/auth/signup`, {
         method: 'POST',
         credentials: 'include',
         headers: {

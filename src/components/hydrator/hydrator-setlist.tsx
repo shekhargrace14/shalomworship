@@ -16,7 +16,7 @@ export default function HydratorSetlist({ children }: { children: React.ReactNod
         return;
       }
       try {
-        const res = await fetch(`${API_URL}/api/channel/${channelId}/setlists`);
+        const res = await fetch(`/api/channel/${channelId}/setlists`);
         const data = await res.json();
 
         if (data.success) {

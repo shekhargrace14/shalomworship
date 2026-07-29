@@ -27,7 +27,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
     try {
       // const res = await fetch('https://dashboard.shalomworship.com/api/auth/login', {
       // const res = await fetch('http://localhost:3001/api/auth/login', {
-      const res = await fetch(`${API_URL}/api/auth/login`, {
+      const res = await fetch(`/api/auth/login`, {
         method: 'POST',
         credentials: 'include',
         headers: {

@@ -71,7 +71,6 @@ const page = () => {
     loadUser();
   }, [setUser]);
 
-
   if (!user) {
     return <Spinner />;
   }

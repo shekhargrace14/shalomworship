@@ -22,6 +22,7 @@ import HydratorChannel from '@/components/hydrator/hydrator-channel';
 import Menu from '@/components/layout/Menu';
 import HydratorSetlist from '@/components/hydrator/hydrator-setlist';
 import DevTools from '@/components/monitor';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -141,7 +142,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       <SongSync />
                       <HydratorChannel>
                         <HydratorSetlist>
-                          <AuthHydrator>{children}</AuthHydrator>
+                          <AuthHydrator>
+                            <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}>{children}</GoogleOAuthProvider>
+                          </AuthHydrator>
                         </HydratorSetlist>
                       </HydratorChannel>
                       <DevTools />

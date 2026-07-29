@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { API_URL } from '@/lib/config';
+import AuthGoogle from './auth-google';
 
 export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const router = useRouter();
@@ -64,6 +65,16 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
         <CardDescription>Enter your information below to create your account</CardDescription>
       </CardHeader>
       <CardContent>
+        <FieldGroup>
+          <AuthGoogle />
+          <div className="flex items-center gap-4">
+            <div className="h-px flex-1 bg-border" />
+
+            <span className="text-sm text-muted-foreground">or</span>
+
+            <div className="h-px flex-1 bg-border" />
+          </div>
+        </FieldGroup>
         <form onSubmit={handleSubmit}>
           <FieldGroup>
             <Field>
@@ -75,17 +86,20 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
               <Input id="email" type="email" placeholder="m@example.com" required onChange={(e) => setEmail(e.target.value)} />
               <FieldDescription>We&apos;ll use this to contact you. We will not share your email with anyone else.</FieldDescription>
             </Field>
-            <Field>
-              <FieldLabel htmlFor="password">Password</FieldLabel>
-              <Input id="password" type="password" required onChange={(e) => setPassword(e.target.value)} />
-              <FieldDescription>Must be at least 8 characters long.</FieldDescription>
-            </Field>
-            <Field>
-              <FieldLabel htmlFor="confirm-password">Confirm Password</FieldLabel>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Field>
+                <FieldLabel htmlFor="password">Password</FieldLabel>
+                <Input id="password" type="password" required onChange={(e) => setPassword(e.target.value)} />
+                <FieldDescription>Must be at least 8 characters long.</FieldDescription>
+              </Field>
+              <Field>
+                <FieldLabel htmlFor="confirm-password">Confirm Password</FieldLabel>
 
-              <Input id="confirm-password" type="password" required onChange={(e) => setConfirmPassword(e.target.value)} />
-              <FieldDescription>Please confirm your password.</FieldDescription>
-            </Field>
+                <Input id="confirm-password" type="password" required onChange={(e) => setConfirmPassword(e.target.value)} />
+                <FieldDescription>Please confirm your password.</FieldDescription>
+              </Field>
+            </div>
+
             <FieldGroup>
               <Field>
                 <Button type="submit" disabled={loading}>
@@ -98,9 +112,9 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                     'Create Account'
                   )}
                 </Button>
-                <Button variant="outline" type="button">
+                {/* <Button variant="outline" type="button">
                   Sign up with Google
-                </Button>
+                </Button> */}
                 <FieldDescription className="px-6 text-center">
                   Already have an account? <a href="/auth/login">Sign in</a>
                 </FieldDescription>

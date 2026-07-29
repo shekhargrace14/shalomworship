@@ -254,7 +254,9 @@ model user {
   name     String
   username String?
   email    String  @unique
-  password String
+  password String?
+
+  authProviders AuthProviderAccount[]
 
   verified      Boolean @default(false)
   emailVerified Boolean @default(false)
@@ -282,7 +284,7 @@ model user {
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-}
+} 
 
 model season {
   id    String  @id @default(auto()) @map("_id") @db.ObjectId
@@ -328,6 +330,20 @@ model setlist {
 }
 
 // join model
+model AuthProviderAccount {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  provider AuthProvider
+
+  providerAccountId String
+
+  userId String @db.ObjectId
+  user user @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@unique([provider, providerAccountId])
+}
 
 model ChannelTeam {
   id String @id @default(auto()) @map("_id") @db.ObjectId
@@ -548,6 +564,10 @@ model SeasonSong {
 // }
 
 // ENUMs
+enum AuthProvider {
+  CREDENTIALS
+  GOOGLE
+}
 
 enum CreditRole {
   SINGER

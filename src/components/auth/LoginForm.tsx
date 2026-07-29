@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/useAuthStore';
 import { API_URL } from '@/lib/config';
+import AuthGoogle from './auth-google';
 
 export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
   const router = useRouter();
@@ -69,6 +70,16 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
         </CardHeader>
 
         <CardContent>
+          <FieldGroup>
+            <AuthGoogle />
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-border" />
+
+              <span className="text-sm text-muted-foreground">or</span>
+
+              <div className="h-px flex-1 bg-border" />
+            </div>
+          </FieldGroup>
           <form onSubmit={handleSubmit}>
             <FieldGroup>
               <Field>

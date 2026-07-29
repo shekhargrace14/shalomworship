@@ -11,12 +11,10 @@ export default function HydratorChannel({ children }: { children: React.ReactNod
   const setCurrentChannel = useChannelStore((state) => state.setCurrentChannel);
   const currentChannel = useChannelStore((state) => state.currentChannel);
 
-
   useEffect(() => {
     async function loadChannels() {
       try {
         const res = await fetch(`${API_URL}/api/channel/mine`, {
-          // const res = await fetch(`http://localhost:3001/api/channel/mine`, {
           credentials: 'include',
         });
 

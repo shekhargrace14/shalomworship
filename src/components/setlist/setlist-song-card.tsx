@@ -34,9 +34,9 @@ const SetlistSongCard = ({ id, type }: { id: string; type?: string }) => {
   return (
     <>
       {type === 'metadata' ? (
-        <div className="flex flex-nowrap gap-2 items-center w-full">
+        <div className="ml-2 flex flex-nowrap gap-4 items-center w-full">
           <Link href={`/song/${song?.slug}-${song?.id}`}>
-            <h3 className="text-2xl text-foreground hover:underline">{song?.title}</h3>
+            <h3 className="text-md md:text-2xl text-foreground hover:underline">{song?.title}</h3>
           </Link>
           {song?.key && (
             <Badge variant="outline" className="h-4.5 flex items-center gap-1 border-accent/70 px-2 py-1 bg-primary/10">
@@ -45,12 +45,10 @@ const SetlistSongCard = ({ id, type }: { id: string; type?: string }) => {
           )}
         </div>
       ) : (
-        <div>
-          <div className="w-full p-4 pt-4 relative" id="lyrics">
-            {song?.version === 'version_2' ? <LinesVersion2 id={song?.id} song={song} isChords={!!song?.isChords} /> : null}
-            {song?.version === 'version_3' ? <LinesVersion3 id={song?.id} song={song} isChords={!!song?.isChords} isTranslations={!!song?.isTranslation} language={song?.language} /> : null}
-            {song?.version === 'version_4' ? <LinesVersion4 id={song?.id} song={song} isChords={!!song?.isChords} isTranslations={!!song?.isTranslation} language={song?.language} /> : null}
-          </div>
+        <div className="bg-background" id="lyrics" onClick={(e) => e.stopPropagation()}>
+          {song?.version === 'version_2' ? <LinesVersion2 id={song?.id} song={song} isChords={!!song?.isChords} /> : null}
+          {song?.version === 'version_3' ? <LinesVersion3 id={song?.id} song={song} isChords={!!song?.isChords} isTranslations={!!song?.isTranslation} language={song?.language} /> : null}
+          {song?.version === 'version_4' ? <LinesVersion4 id={song?.id} song={song} isChords={!!song?.isChords} isTranslations={!!song?.isTranslation} language={song?.language} /> : null}
         </div>
       )}
     </>

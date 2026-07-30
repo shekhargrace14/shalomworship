@@ -20,16 +20,11 @@ type Props = {
 const ItemCard = ({ section, updateItemField, removeItem }: Props) => {
   return (
     <div>
-      <div className="space-y-3">
+      <div className="space-y-3 ">
         {section.items.map((item, itemIndex) => (
-          <div key={item.id} className="rounded-xl border bg-muted/20 p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Badge variant="outline">
-                  Item
-                  {itemIndex + 1}
-                </Badge>
-              </div>
+          <div key={item.id} className="relative bg-muted/20 p-4 border-l border-primary rounded-xl">
+            <div className="mb-4 flex items-center justify-end">
+              <span className="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{itemIndex + 1}</span>
 
               <Button type="button" variant="ghost" size="icon" onClick={() => removeItem(section.id, item.id)}>
                 <Trash2 className="h-4 w-4 text-destructive" />

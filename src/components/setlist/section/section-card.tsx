@@ -19,24 +19,8 @@ type Props = {
 
 const SectionCard = ({ section, updateSectionField, addItem, updateItemField, removeItem }: Props) => {
   return (
-    <div>
-      {/* Section Card ////////////// */}
-      <CardContent className="space-y-6 pt-6">
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className="space-y-2">
-            <Label>Section Title</Label>
-            <Input placeholder="Verse 1" value={section.title} onChange={(e) => updateSectionField(section.id, 'title', e.target.value)} />
-          </div>
-
-          <div className="space-y-2">
-            <Label>Section Notes</Label>
-            <Input placeholder="Optional notes for this section" value={section.notes} onChange={(e) => updateSectionField(section.id, 'notes', e.target.value)} />
-          </div>
-        </div>
-
-        <Separator />
-        <ItemList section={section} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
-      </CardContent>
+    <div className="pl-4">
+      <ItemList section={section} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
     </div>
   );
 };

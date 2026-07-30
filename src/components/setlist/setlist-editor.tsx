@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 import { useChannelStore } from '@/store/useChannelStore';
 import { useSetlistStore } from '@/store/useSetlistStore';
 import SectionList from './section/section-list';
+import SetlistCardMetadata from './setlist-card-metadata';
 
 type Props = {
   metadata: Metadata;
@@ -235,38 +236,17 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
     return;
   }
   return (
-    <div>
-      {/* <SetlistEdit channelId={channelId} data={data}/> */}
+    <>
+      <SetlistCardMetadata metadata={metadata} loading={loading} handleSubmit={handleSubmit} canSave={canSave} />
+      <div className="p-4 space-y-8 bg-background">
+        <SetlistMetadata metadata={metadata} setMetadata={setMetadata} loading={loading} canSave={canSave} handleSubmit={handleSubmit} channelId={channelId} />
 
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Channel</span>
-          </div>
-
-          <h1 className="text-3xl font-bold tracking-tight">Edit Setlist</h1>
-
-          <p className="text-muted-foreground">Build a worship setlist with sections, songs, notes, and scripture references.</p>
-        </div>
-
-        <div className="flex gap-2">
-          <Button type="button" variant="outline" onClick={() => router.back()}>
-            Cancel
-          </Button>
-
-          <Button type="button" onClick={handleSubmit} disabled={!canSave || loading}>
-            <Save className="mr-2 h-4 w-4" />
-            {loading ? 'Saving...' : 'Save Setlist'}
-          </Button>
+        <SectionList sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
+        <div className="flex justify-end">
+          <SetlistDelete channelId={channelId} setlistId={setlistId} setlistTitle={metadata.title} />
         </div>
       </div>
-
-      <SetlistMetadata metadata={metadata} setMetadata={setMetadata} loading={loading} canSave={canSave} handleSubmit={handleSubmit} channelId={channelId} />
-
-      <SectionList sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
-
-      <SetlistDelete channelId={channelId} setlistId={setlistId} setlistTitle={metadata.title} />
-    </div>
+    </>
   );
 };
 

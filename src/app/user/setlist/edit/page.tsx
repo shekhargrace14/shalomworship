@@ -12,12 +12,7 @@ const page = () => {
     return;
   }
 
-  return (
-    <div className="p-4">
-      Editor
-      <SetlistEditor data={currentSetlist} />
-    </div>
-  );
+  return <SetlistEditor data={currentSetlist} />;
 };
 
 export default page;

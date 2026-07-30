@@ -43,13 +43,13 @@ export default function UserMenu({ user }: UserMenuProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center gap-2 rounded-full border bg-card px-2 py-1 transition hover:bg-accent cursor-pointer">
+        <button className="flex items-center gap-2 rounded-full  transition hover:bg-accent cursor-pointer">
           <Avatar className="h-9 w-9">
             <AvatarImage src={user?.image ?? ''} />
-            <AvatarFallback>{initials}</AvatarFallback>
+            <AvatarFallback className="bg-primary text-black">{initials}</AvatarFallback>
           </Avatar>
 
-          <ChevronDown className="h-4 w-4 text-muted-foreground" />
+          {/* <ChevronDown className="h-4 w-4 text-muted-foreground" /> */}
         </button>
       </DropdownMenuTrigger>
 

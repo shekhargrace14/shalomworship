@@ -16,7 +16,7 @@ const SetlistList = ({ data, orientation }: Props) => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3  gap-4">
           {data.map((setlist: Setlist) => (
             <SetlistCard key={setlist.id} setlist={setlist} href={`/user/setlist/view?id=${setlist.id}`} />
           ))}

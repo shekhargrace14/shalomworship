@@ -23,6 +23,7 @@ import Menu from '@/components/layout/Menu';
 import HydratorSetlist from '@/components/hydrator/hydrator-setlist';
 import DevTools from '@/components/monitor';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import NavBottom from '@/components/navigation/nav-bottom';
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -135,8 +136,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <OldSidebar />
                   </aside>
 
-                  <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
-                    <div className="flex-1 bg-card rounded-xl">
+                  <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl pb-16 md:pb-0">
+                    <div className="flex-1 bg-card rounded-xl ">
                       {/* <Menu /> */}
                       <PwaRegister />
                       <SongSync />
@@ -144,10 +145,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <HydratorChannel>
                           <HydratorSetlist>
                             <AuthHydrator>{children}</AuthHydrator>
+                            <NavBottom />
                           </HydratorSetlist>
                         </HydratorChannel>
                       </GoogleOAuthProvider>
-                      <DevTools />
+                      {/* <DevTools /> */}
                       <Toaster />
                     </div>
                     <Footer />

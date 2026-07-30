@@ -37,14 +37,10 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
   const router = useRouter();
 
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-6 p-4 md:p-6">
-      <div className="grid gap-6 lg:grid-cols-3">
+    <div className="border-l border-primary rounded-xl mx-auto w-full max-w-6xl space-y-4 ">
+      <div className="grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <CardHeader>
-            <CardTitle>Setlist Details</CardTitle>
-          </CardHeader>
-
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-4 p-4">
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="title">Title</Label>
@@ -126,7 +122,7 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="notes">Footer Notes</Label>
+              <Label htmlFor="notes">Annoncement / Footer Notes</Label>
               <Textarea
                 id="notes"
                 placeholder="Any notes to show at the bottom..."
@@ -142,7 +138,7 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
           </CardContent>
         </Card>
 
-        <Card>
+        {/* <Card>
           <CardHeader>
             <CardTitle>Visibility</CardTitle>
           </CardHeader>
@@ -150,7 +146,7 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <Label>Status</Label>
-              {/* <Select value={visibility} onValueChange={(value) => setVisibility(value as Visibility)}> */}
+              <Select value={visibility} onValueChange={(value) => setVisibility(value as Visibility)}>
               <Select
                 value={metadata.visibility}
                 onValueChange={(value) =>
@@ -180,7 +176,7 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
               <p>Unlisted: accessible with the direct link only.</p>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );

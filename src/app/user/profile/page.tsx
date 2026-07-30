@@ -13,6 +13,7 @@ import { user } from '@prisma/client';
 import { API_URL } from '@/lib/config';
 import { Spinner } from '@/components/ui/spinner';
 import { useAuthStore } from '@/store/useAuthStore';
+import { ModeToggle } from '@/components/ModeToggle';
 
 const menuItems = [
   // {
@@ -101,6 +102,7 @@ const page = () => {
           </div>
         </CardHeader>
       </Card>
+      <ModeToggle />
 
       <Card>
         <CardContent className="p-0">

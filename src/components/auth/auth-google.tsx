@@ -43,9 +43,7 @@ const AuthGoogle = () => {
 
           router.refresh();
 
-          setTimeout(() => {
-            router.push('/');
-          }, 1100);
+          router.push('/');
         } catch (error) {
           toast.error('Something went wrong');
         }

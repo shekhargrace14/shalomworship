@@ -40,7 +40,6 @@ const Header = () => {
         >
           <Button variant="outline">Contact Us</Button>
         </Link>
-        <ModeToggle />
         {/* <UserMenu
           user={{
             id: '1',

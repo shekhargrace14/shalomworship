@@ -77,8 +77,6 @@ export default function SubmissionForm({ type, issue, show, item }: Props) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // console.log(formData)
-
     // POST /api/submission
     const payload = formData;
     try {

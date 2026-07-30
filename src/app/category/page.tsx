@@ -1,5 +1,4 @@
 import CategorySection from '@/components/category/category-section';
-import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import { getAllCategoriesBasic } from '@/lib/static';
 import React from 'react';
@@ -18,7 +17,6 @@ const page = async () => {
   const categories = await getAllCategoriesBasic();
   return (
     <div className="p-4">
-      <Menu />
       <CategorySection categories={categories} />
     </div>
   );

@@ -48,8 +48,6 @@ interface Props {
 }
 
 export default function SongCard({ id, item, title, language, slug: songSlug, image, variant = 'imageTop', className, channel }: Props) {
-  // console.log(channel, "SongCard");
-
   const creators: {
     title: string;
     image?: string;

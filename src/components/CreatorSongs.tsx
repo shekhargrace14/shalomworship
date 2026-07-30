@@ -8,7 +8,6 @@ const CreatorSongs = async ({ params }: any) => {
   const id = params;
   const ChannelData = await getChannel(id, [...CONTENT_VISIBILITY.public]);
   const data = ChannelData?.songs;
-  // console.log(data, "ChannelData");
 
   return (
     // <>hello</>

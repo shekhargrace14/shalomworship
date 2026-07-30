@@ -1,5 +1,4 @@
 import InContentAd from '@/components/ads/InContentAd';
-import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import Processor from '@/components/Processor';
 import { getAlbum, getAllAlbums } from '@/lib/static';
@@ -30,21 +29,19 @@ const Page = async ({ params }: any) => {
   const id = slugAndId.split('-').pop();
   const album = await getAlbum(id);
   const data = album;
-  // console.log(data, "ablum")
 
   return (
     <>
       {/* hello {data.name} */}
       <div className="bg-background  rounded-lg ">
         <div
-          className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+          className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
           style={
             {
               // backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`
             }
           }
         >
-          <Menu />
           {/* <InContentAd /> */}
           <div className=" flex items-center gap-4 w-full ">
             <div className="w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">

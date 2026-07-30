@@ -17,6 +17,13 @@ import { Toaster } from 'sonner';
 import PwaRegister from './pwa-register';
 import SongSync from '@/components/song-sync';
 import NetworkStatus from '@/components/NetworkStatus';
+import AuthHydrator from '@/components/hydrator/hydrator-auth';
+import HydratorChannel from '@/components/hydrator/hydrator-channel';
+import Menu from '@/components/layout/Menu';
+import HydratorSetlist from '@/components/hydrator/hydrator-setlist';
+import DevTools from '@/components/monitor';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import NavBottom from '@/components/navigation/nav-bottom';
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -105,7 +112,7 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable}`}>
-      <body className="h-dvh overflow-hidden">
+      <body className="h-dvh overflow-hidden bg-background">
         {/* Google Analytics */}
         {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-H4QZJK5XEN" />}
 
@@ -129,11 +136,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <OldSidebar />
                   </aside>
 
-                  <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl">
-                    <div className="flex-1">
+                  <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl pb-16 md:pb-0">
+                    <div className="flex-1 bg-card rounded-xl ">
+                      {/* <Menu /> */}
                       <PwaRegister />
                       <SongSync />
-                      {children}
+                      <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}>
+                        <HydratorChannel>
+                          <HydratorSetlist>
+                            <AuthHydrator>{children}</AuthHydrator>
+                            <NavBottom />
+                          </HydratorSetlist>
+                        </HydratorChannel>
+                      </GoogleOAuthProvider>
+                      <DevTools />
                       <Toaster />
                     </div>
                     <Footer />

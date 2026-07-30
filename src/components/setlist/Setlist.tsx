@@ -7,7 +7,6 @@ import { useSetlistsContext } from '@/lib/setlist/SetlistsContext';
 import { Badge } from '../ui/badge';
 
 const Setlist = ({ setlist }: any) => {
-  console.log(setlist);
   const { deleteSetlist } = useSetlistsContext();
 
   const [expanded, setExpanded] = useState(false);

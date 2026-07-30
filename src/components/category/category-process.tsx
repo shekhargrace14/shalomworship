@@ -5,7 +5,6 @@ import { getCategory } from '@/lib/static';
 const CategoryProcess = async ({ params }: any) => {
   const id = params;
   const categoryData = await getCategory(id, [...CONTENT_VISIBILITY.public]);
-  // console.log(categoryData,"categoryData")
   const songs = categoryData?.song;
 
   return (

@@ -1,6 +1,5 @@
 'use client';
 
-import Menu from '@/components/layout/Menu';
 import { useSongSearch } from '@/lib/search/useSongSearch';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +14,6 @@ export default function SearchPage() {
   const [query, setQuery] = useState(q);
   const [results, setResults] = useState<any[]>([]);
 
-  // console.log("Results", results.length);
   /**
    * 🔹 Sync URL → state
    * Handles:
@@ -42,8 +40,6 @@ export default function SearchPage() {
 
   return (
     <>
-      {/* <Menu /> */}
-
       {query && results.length === 0 && ready && (
         <div className="mt-4 mx-2 text-muted-foreground ">
           No results found for "<b>{query}"</b>

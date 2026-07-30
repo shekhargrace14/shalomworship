@@ -18,8 +18,8 @@ export default function Section({ title, data }: { title: string; data: any[] })
             </div>
             <div className="w-4/6 lg:w-full py-2">
               <div className="">
-                <h3 className="line-clamp-1 text-1xl mb-1 text-white">{item.title || item.name}</h3>
-                <p className=" line-clamp-1 text-sm leading-none text-white">{creators[0]?.name}</p>
+                <h3 className="line-clamp-1 text-1xl mb-1 text-foreground">{item.title || item.name}</h3>
+                <p className=" line-clamp-1 text-sm leading-none text-foreground">{creators[0]?.name}</p>
               </div>
             </div>
           </div>

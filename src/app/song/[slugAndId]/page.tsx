@@ -1,5 +1,4 @@
 import CreatorSongs from '@/components/CreatorSongs';
-import Menu from '@/components/layout/Menu';
 import ShareButton from '@/components/ShareButton';
 import Social from '@/components/ui/Social';
 import Image from 'next/image';
@@ -9,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 import { Bookmark, Dot } from 'lucide-react';
 import LinesVersion3 from '@/components/shared/LinesVersion3';
 import LinesVersion2 from '@/components/shared/LinesVersion2';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import JsonLd from '@/components/JsonLd';
 import { parseSlugAndId } from '@/utils/parseSlugAndId';
 import { getLanguageName } from '@/utils/getLanguageName';
@@ -28,6 +27,8 @@ import CategoryProcess from '@/components/category/category-process';
 import { song } from '@prisma/client';
 import SubmissionForm from '@/components/SubmissionForm';
 import ScrollToHash from '@/components/ScrollToHash';
+import { useBackgroundColorStore } from '@/store/useBackgroundColorStore';
+import HydratorBackgroundColor from '@/components/hydrator/hydrator-backgroundColor';
 
 async function getSongById(id: string) {
   return getSong(id, [...CONTENT_VISIBILITY.discoverable]);
@@ -64,18 +65,16 @@ const Song = async ({ params }: any) => {
   const langName = getLanguageName(language);
   const searchVariants = songData?.searchVariant || '';
 
-  // console.log(songData, "songData")
-
   return (
     <div className="bg-background  rounded-lg">
       <JsonLd id={id} />
+      {/* <HydratorBackgroundColor backgroundColor={songData?.color} /> */}
       <div
-        className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+        className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
         style={{
           backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`,
         }}
       >
-        <Menu />
         <AutoPopup />
 
         <InContentAd />
@@ -236,7 +235,7 @@ const Song = async ({ params }: any) => {
         {songData?.version === 'version_3' ? <LinesVersion3 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
         {songData?.version === 'version_4' ? <LinesVersion4 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
 
-        <SubmissionForm type="song" issue="BUG_REPORT" item={songData} />
+        <SubmissionForm type="SONG" issue="BUG_REPORT" item={songData} />
         <Social />
         <InContentAd />
 

@@ -6,8 +6,6 @@ import slugify from 'slugify';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 const Album: React.FC<any> = ({ item }) => {
-  // console.log(item, "card item")
-
   const slug = slugify(`${item.slug}`, { lower: true });
 
   return (

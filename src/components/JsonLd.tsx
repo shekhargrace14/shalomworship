@@ -25,8 +25,6 @@ export default async function JsonLd({ id }: { id: string }) {
   //   const primaryArtist = artistNames[0] || "Unknown Artist";
   const primaryArtist = channelName || 'Unknown Artist';
 
-  // console.log(artist[0].artist.link, "json ld isssssss")
-
   const lang = songData.language ?? 'en';
   const langName = getLanguageName(lang);
   const key = songData.key;
@@ -48,8 +46,6 @@ export default async function JsonLd({ id }: { id: string }) {
     },
   ];
   const youtubeData = await getYouTubeMetadata(songData.videoId);
-
-  // console.log(youtubeData, "youtubeData")
 
   // -------- LYRICS SNIPPET --------
   function getLyricSnippet(data: any, lang: string): string {

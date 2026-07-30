@@ -1,5 +1,4 @@
 import InContentAd from '@/components/ads/InContentAd';
-import Menu from '@/components/layout/Menu';
 import { MetaData } from '@/components/MetaData';
 import Processor from '@/components/Processor';
 import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
@@ -42,19 +41,15 @@ const Page = async ({ params }: any) => {
   const data = categoryData;
   const color = categoryData?.color ?? '#121212'; // fallback color
 
-  // console.log(data?.song, "categoryData song page data");
-  // const newData = await fetchCategoryBySlugWithSongs(categorySlug,[...CONTENT_VISIBILITY.public,] )
-
   return (
     <>
       <div className="bg-background  rounded-lg">
         <div
-          className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+          className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
           style={{
             backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`,
           }}
         >
-          <Menu />
           {/* <InContentAd /> */}
           <div className=" flex items-center gap-4 w-full ">
             <div className="sm:w-8/12 grid">

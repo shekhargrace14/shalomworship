@@ -45,8 +45,6 @@ interface Props {
 }
 
 export function MasterCard({ id, item, title, language, slug: songSlug, image, variant = 'imageTop', className, creator }: Props) {
-  // console.log(creator);
-
   const creators: {
     title: string;
     image?: string;

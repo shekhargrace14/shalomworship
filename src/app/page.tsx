@@ -16,6 +16,7 @@ import EventSection from '@/components/event/EventSection';
 import ChannelSection from '@/components/channel/channel-section';
 import SongSection from '@/components/song/song-section';
 import CategorySection from '@/components/category/category-section';
+import UserWelcome from '@/components/user/user-welcome';
 
 type Song = {
   id: string;
@@ -39,11 +40,10 @@ export default async function Home() {
     // getAllEvents(),
   ]);
 
-  // console.log(event,  "event on page.tsx")
   return (
     <div className="p-4">
       <AutoPopup />
-      <Menu />
+      {/* <UserWelcome /> */}
       {/* 
         <div className="w-full flex justify-between items-end ">
           <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Upcoming Events</h2>
@@ -57,7 +57,9 @@ export default async function Home() {
         <SongSection number={"-4"} songs={upcomingSongs} variant="imageOnly" /> */}
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 md:mt-8 hover:underline text-foreground"> Trending Songs </h2>
+        <Link href={'/song'}>
+          <h2 className="text-xl font-bold hover:underline text-foreground"> Trending Songs </h2>
+        </Link>
         <p className="text-sm text-muted-foreground">
           <Link href={'/song'}>Show All</Link>
         </p>
@@ -65,7 +67,9 @@ export default async function Home() {
       <SongSection number={-4} songs={publicSongs} />
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Your Favorite Artist</h2>
+        <Link href={'/channel'}>
+          <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Your Favorite Artist</h2>
+        </Link>
         <p className="text-sm text-muted-foreground">
           <Link href={'/channel'}>Show All</Link>
         </p>
@@ -73,7 +77,9 @@ export default async function Home() {
       <ChannelSection number={-6} channels={channels} />
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Categories</h2>
+        <Link href={'/category'}>
+          <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Categories</h2>
+        </Link>
         <p className="text-sm text-muted-foreground">
           <Link href={'/category'}>Show All</Link>
         </p>

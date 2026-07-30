@@ -1,6 +1,6 @@
 'use client';
 
-import { usePlayerStore } from '@/stores/playerStore';
+import { usePlayerStore } from '@/store/playerStore';
 import { Pause, Play } from 'lucide-react';
 
 type Props = {

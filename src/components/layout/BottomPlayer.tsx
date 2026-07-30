@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Play, Pause } from 'lucide-react';
-import { usePlayerStore } from '@/stores/playerStore';
+import { usePlayerStore } from '@/store/playerStore';
 import Image from 'next/image';
 
 export default function BottomPlayer() {
@@ -37,7 +37,7 @@ export default function BottomPlayer() {
   if (!audioUrl) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-black text-white px-4 py-2 shadow-md z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-black text-foreground px-4 py-2 shadow-md z-50">
       <div className="grid grid-cols-3 ">
         <audio className="bg-green-400" ref={audioRef} src={audioUrl} onTimeUpdate={handleTimeUpdate} onEnded={() => setPlaying(false)} />
         <div className=" flex  justify-start items-center gap-4">

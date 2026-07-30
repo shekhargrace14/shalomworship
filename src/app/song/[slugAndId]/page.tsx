@@ -70,7 +70,7 @@ const Song = async ({ params }: any) => {
       <JsonLd id={id} />
       {/* <HydratorBackgroundColor backgroundColor={songData?.color} /> */}
       <div
-        className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+        className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
         style={{
           backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`,
         }}

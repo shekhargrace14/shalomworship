@@ -4,7 +4,7 @@ import { channelBaseSelect, channelFullSelect } from '@/prisma/selectors';
 
 export async function getAllChannels() {
   try {
-    return await prisma.channel.findMany({});
+    return await prisma.channel.findMany({ where: { type: { not: 'USER' } } });
   } catch (error) {
     console.error('Error from channel server action:', error);
     throw new Error('Failed to fetch channels'); // properly throw
@@ -13,6 +13,7 @@ export async function getAllChannels() {
 export async function getAllChannelsBasic() {
   try {
     return await prisma.channel.findMany({
+      where: { type: { not: 'USER' } },
       select: channelBaseSelect,
     });
   } catch (error) {

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { User, LogOut, LogIn, UserPlus, ListMusic, Settings, ChevronDown } from 'lucide-react';
+import { User, LogOut, LogIn, UserPlus, ListMusic, Settings, ChevronDown, TvMinimal } from 'lucide-react';
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/Avatar';
@@ -68,28 +68,28 @@ export default function UserMenu({ user }: UserMenuProps) {
             <DropdownMenuGroup>
               <DropdownMenuItem asChild>
                 <Link href="/user/profile">
-                  <User className="mr-2 h-4 w-4" />
+                  <User className="mr-2 h-4 w-4 text-primary" />
                   My Profile
                 </Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
                 <Link href="/user/setlist">
-                  <ListMusic className="mr-2 h-4 w-4" />
+                  <ListMusic className="mr-2 h-4 w-4 text-primary" />
                   My Setlists
                 </Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
                 <Link href="/user/channel">
-                  <ListMusic className="mr-2 h-4 w-4" />
+                  <TvMinimal className="mr-2 h-4 w-4 text-primary" />
                   My Channels
                 </Link>
               </DropdownMenuItem>
 
               {/* <DropdownMenuItem asChild>
                 <Link href="/dashboard">
-                  <Settings className="mr-2 h-4 w-4" />
+                  <Settings className="mr-2 h-4 w-4 text-primary" />
                   Dashboard
                 </Link>
               </DropdownMenuItem> */}
@@ -98,7 +98,7 @@ export default function UserMenu({ user }: UserMenuProps) {
             <DropdownMenuSeparator />
 
             <DropdownMenuItem className="text-destructive cursor-pointer" onClick={handleLogout}>
-              <LogOut className="mr-2 h-4 w-4" />
+              <LogOut className="mr-2 h-4 w-4 text-primary" />
               Logout
             </DropdownMenuItem>
           </>

@@ -36,36 +36,8 @@ export default function SetlistShow({ setlist }: Props) {
 
   return (
     <div className="mx-auto w-full max-w-6xl rounded-2xl p-0 overflow-hidden">
-      {/* <div
-        className="bg-background  p-4  pt-24 md:p-8 md:pt-28"
-        style={{
-          backgroundImage: `linear-gradient(to bottom,  oklch(68.699% 0.11763 191.228), transparent)`,
-        }}
-      >
-        <CardTitle>
-          <h1 className="text-3xl md:text-4xl  tracking-tight ">{setlist.title}</h1>
-          <p className="text-muted-foreground">{setlist.theme}</p>
-        </CardTitle>
-        <CardDescription>
-          <div className="flex justify-between">
-            <div className="flex flex-wrap gap-2 ">
-
-              {setlist.eventAt && (
-                <Badge variant="outline">
-                  <CalendarDays className="mr-1 h-3 w-3" />
-                  {format(new Date(setlist.eventAt), 'EEEE, MMM d')}
-                </Badge>
-              )}
-            </div>
-            <Link href={`/user/setlist/edit/?id=${setlist.id}`}>
-              <Button>Edit Setlist</Button>
-            </Link>
-          </div>
-        </CardDescription>
-      </div> */}
-
       <div
-        className="bg-background p-4 py-8 pt-24 md:pt-40"
+        className="bg-background p-4 py-8 pt-24 md:pt-40 "
         style={{
           backgroundImage: `linear-gradient(to bottom,  oklch(68.699% 0.11763 191.228), transparent)`,
         }}
@@ -76,23 +48,12 @@ export default function SetlistShow({ setlist }: Props) {
             <p className="text-muted-foreground">{setlist.theme}</p>
             <div className="mt-2">
               {setlist.eventAt && (
-                <Badge variant="outline" className="px-2 py-1">
-                  <CalendarDays className="mr-1 h-3 w-3" />
-                  {format(new Date(setlist.eventAt), 'EEEE, MMM d')}
+                <Badge variant="outline" className="h-4 flex items-center gap-1 border-accent/70 px-2 py-2   bg-primary/10">
+                  <CalendarDays className="h-2 w-2 text-accent" />
+                  <span className="text-accent text-[12px]">{format(new Date(setlist.eventAt), 'EEE, MMM d')}</span>
                 </Badge>
               )}
             </div>
-
-            {/* <div className="flex gap-2 justify-end">
-            <Button type="button" variant="outline" onClick={() => router.back()}>
-              Cancel
-            </Button>
-
-            <Button type="button" onClick={handleSubmit} disabled={!canSave || loading}>
-              <Save className="mr-2 h-4 w-4" />
-              {loading ? 'Saving...' : 'Save Setlist'}
-            </Button>
-            */}
           </div>
           <div className="flex justify-end">
             <></>

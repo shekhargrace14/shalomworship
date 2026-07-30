@@ -40,10 +40,6 @@ export default function SetlistCard({ setlist, href, variant }: Props) {
               </Badge>
             )}
           </CardHeader>
-          <CardContent>
-            {/* {setlist.sections.map((section)=>(
-                          ))} */}
-          </CardContent>
         </Card>
       ) : (
         <Card className="transition-all hover:border-primary hover:shadow-md cursor-pointer">

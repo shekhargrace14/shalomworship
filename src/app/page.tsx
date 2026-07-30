@@ -57,7 +57,9 @@ export default async function Home() {
         <SongSection number={"-4"} songs={upcomingSongs} variant="imageOnly" /> */}
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold hover:underline text-foreground"> Trending Songs </h2>
+        <Link href={'/song'}>
+          <h2 className="text-xl font-bold hover:underline text-foreground"> Trending Songs </h2>
+        </Link>
         <p className="text-sm text-muted-foreground">
           <Link href={'/song'}>Show All</Link>
         </p>
@@ -65,7 +67,9 @@ export default async function Home() {
       <SongSection number={-4} songs={publicSongs} />
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Your Favorite Artist</h2>
+        <Link href={'/channel'}>
+          <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Your Favorite Artist</h2>
+        </Link>
         <p className="text-sm text-muted-foreground">
           <Link href={'/channel'}>Show All</Link>
         </p>
@@ -73,7 +77,9 @@ export default async function Home() {
       <ChannelSection number={-6} channels={channels} />
 
       <div className="w-full flex justify-between items-end ">
-        <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Categories</h2>
+        <Link href={'/category'}>
+          <h2 className="text-xl font-bold mt-4 mb-2 md:mt-8 hover:underline text-foreground">Categories</h2>
+        </Link>
         <p className="text-sm text-muted-foreground">
           <Link href={'/category'}>Show All</Link>
         </p>

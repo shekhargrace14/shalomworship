@@ -18,7 +18,7 @@ const OldSidebar = () => {
   // }
   return (
     <div className="p-4 flex flex-col gap-4">
-      <div className="div flex justify-between">
+      <div className="div flex justify-between flex-wrap gap-4">
         <Link href={`/user/setlist`}>
           <p className="text-xl mb-4 font-semibold">
             Setlists<span className="text-base text-muted-foreground">(beta)</span>{' '}

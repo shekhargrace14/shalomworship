@@ -48,7 +48,7 @@ const Page = async ({ params }: any) => {
     <>
       <div className="bg-background  rounded-lg ">
         <div
-          className="flex gap-4 p-4 mb-4 flex-col text-white w-full"
+          className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
           style={{
             backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`,
           }}

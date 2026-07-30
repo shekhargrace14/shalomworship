@@ -81,14 +81,15 @@ export const SetlistDelete = ({ channelId, setlistId, setlistTitle }: Props) => 
             Delete setlist
           </DialogTitle>
           <DialogDescription>
-            This action cannot be undone. <br /> This will permanently delete '{setlistTitle}'.
-            {/* <span className="font-semibold text-foreground">
-              {setlistTitle}
-            </span>
-            . */}
-            <br />
-            <br />
-            Please type "<span className="text-white">{setlistTitle}</span>" to confirm deletion.
+            <div className="flex flex-col items-start">
+              <p>This action cannot be undone.</p>
+              <p>This will permanently delete '{setlistTitle}'.</p>
+              <br />
+
+              <p>
+                Please type "<span className="text-foreground">{setlistTitle}</span>" to confirm deletion.
+              </p>
+            </div>
           </DialogDescription>
         </DialogHeader>
 

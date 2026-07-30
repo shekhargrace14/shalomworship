@@ -9,14 +9,7 @@ export default function NavBottom() {
   const pathname = usePathname();
 
   return (
-    <nav
-      className="
-    fixed 
-    inset-x-0 bottom-0 z-50 border-t bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/70 
-    md:hidden
-    "
-    >
-      {/* <nav className="flex"> */}
+    <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/70 lg:hidden">
       <div
         className="grid h-16 "
         style={{

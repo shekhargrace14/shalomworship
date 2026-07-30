@@ -80,7 +80,7 @@ const page = () => {
     <div className="mx-auto max-w-3xl p-6 space-y-6">
       <Card>
         <CardHeader>
-          <div className="flex items-center gap-4">
+          <div className="flex  flex-wrap items-center gap-4">
             <Avatar className="h-20 w-20">
               <AvatarImage src={user?.image ?? ''} />
               <AvatarFallback>SW</AvatarFallback>

@@ -149,7 +149,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                           </HydratorSetlist>
                         </HydratorChannel>
                       </GoogleOAuthProvider>
-                      {/* <DevTools /> */}
+                      <DevTools />
                       <Toaster />
                     </div>
                     <Footer />

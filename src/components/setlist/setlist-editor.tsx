@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { FormItem, FormSection, ItemType, Metadata, Setlist, Visibility } from '@/types/setlist';
+import { EditableItemField, FormItem, FormSection, FullSetlist, ItemType, Metadata, Setlist, SetlistItem, SetlistSection, Visibility } from '@/types/setlist';
 import { Save } from 'lucide-react';
 import { Button } from '../ui/button';
 import SetlistMetadata from './setlist-metadata';
@@ -14,23 +14,26 @@ import { useSetlistStore } from '@/store/useSetlistStore';
 import SectionList from './section/section-list';
 import SetlistCardMetadata from './setlist-card-metadata';
 
-type Props = {
-  metadata: Metadata;
-  setMetadata: React.Dispatch<React.SetStateAction<Metadata>>;
-  loading: boolean;
-  canSave: boolean;
-  channelId: string;
-  handleSubmit: () => void;
-};
+// type EditableItemField = Pick<FormItem, 'type' | 'songId' | 'song' | 'notes' | 'key' | 'bpm' | 'time' | 'scripture'>;
 
 function createItem(type: ItemType = 'SONG'): FormItem {
   return {
     id: crypto.randomUUID(),
     type,
-    songId: '',
-    song: null,
-    notes: '',
+
     order: 0,
+
+    songId: null,
+    song: null,
+
+    key: '',
+    bpm: 0,
+    timeSignature: '',
+    duration: 0,
+    reference: '',
+    scripture: '',
+
+    notes: '',
   };
 }
 
@@ -51,16 +54,6 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
   const channelId = currentChannel?.id;
   const currentSetlist = useSetlistStore((s) => s.currentSetlist);
   const setlistId = currentSetlist?.id;
-
-  type Metadata = {
-    title: string;
-    theme: string;
-    description: string;
-    scripture: string;
-    notes: string;
-    eventAt: Date | undefined;
-    visibility: Visibility;
-  };
 
   const [metadata, setMetadata] = useState<Metadata>({
     title: data.title ?? '',
@@ -99,19 +92,30 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
 
           // Populate nested sections and items if they exist in the incoming database record
           if (currentSetlist.sections && currentSetlist.sections.length > 0) {
-            const mappedSections = currentSetlist.sections.map((sec: any) => ({
-              id: sec.id || crypto.randomUUID(),
-              title: sec.title || '',
-              notes: sec.notes || '',
-              items:
-                sec.items && sec.items.length > 0
-                  ? sec.items.map((item: any) => ({
-                      id: item.id || crypto.randomUUID(),
-                      type: (item.type as ItemType) || 'SONG',
-                      songId: item.songId || '',
-                      notes: item.notes || '',
-                    }))
-                  : [createItem()],
+            const currentSetlist: FullSetlist = json.data;
+            const mappedSections: FormSection[] = currentSetlist.sections.map((sec: SetlistSection) => ({
+              id: crypto.randomUUID(),
+              title: sec.title ?? '',
+              notes: sec.notes ?? '',
+              order: sec.order,
+              items: sec.items.length
+                ? sec.items.map((item: SetlistItem) => ({
+                    ...item,
+                    id: crypto.randomUUID(),
+
+                    song: null,
+
+                    key: item.key ?? '',
+                    bpm: item.bpm ?? 0,
+                    timeSignature: item.timeSignature ?? '',
+                    duration: item.duration ?? 0,
+
+                    reference: item.reference ?? '',
+                    scripture: item.scripture ?? '',
+
+                    notes: item.notes ?? '',
+                  }))
+                : [createItem()],
             }));
             setSections(mappedSections);
           }
@@ -156,7 +160,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
     );
   }
 
-  function updateItemField(sectionId: string, itemId: string, key: 'type' | 'songId' | 'song' | 'notes', value: FormItem['type'] | FormItem['songId'] | FormItem['song'] | FormItem['notes']) {
+  function updateItemField(sectionId: string, itemId: string, key: keyof EditableItemField, value: EditableItemField[keyof EditableItemField]) {
     setSections((prev) =>
       prev.map((section) =>
         section.id === sectionId
@@ -199,11 +203,23 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
           items: section.items.map((item, itemIndex) => ({
             type: item.type,
             order: itemIndex + 1,
-            songId: item.type === 'SONG' && item.songId.trim() ? item.songId.trim() : null,
+
+            songId: item.type === 'SONG' && item.songId?.trim() ? item.songId.trim() : null,
+
+            key: item.key?.trim() || null,
+            bpm: item.bpm || null,
+            timeSignature: item.timeSignature?.trim() || null,
+            duration: item.duration || null,
+
+            reference: item.reference?.trim() || null,
+            scripture: item.scripture?.trim() || null,
+
             notes: item.notes.trim() || null,
           })),
         })),
       };
+
+      console.log(payload.sections, 'SetlistEditor');
 
       const res = await fetch(`/api/channel/${channelId}/setlists/${setlistId}`, {
         method: 'PATCH',
@@ -220,11 +236,12 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
       }
       toast.success(result.message);
 
-      router.push(`/user/setlist/view?id=${setlistId}`);
-    } catch (error) {
+      // router.push(`/user/setlist/edit?id=${setlistId}`);
+    } catch (error: any) {
       console.error(error);
 
-      alert(error instanceof Error ? error.message : 'Something went wrong');
+      // alert(error instanceof Error ? error.message : 'Something went wrong');
+      toast.error(error.message);
     } finally {
       setLoading(false);
     }

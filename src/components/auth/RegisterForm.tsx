@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { API_URL } from '@/lib/config';
-import AuthGoogle from './auth-google';
+import GoogleSignInButton from './GoogleSignInButton';
 
 export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   const router = useRouter();
@@ -66,7 +66,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
       </CardHeader>
       <CardContent>
         <FieldGroup>
-          <AuthGoogle />
+          <GoogleSignInButton />
           <div className="flex items-center gap-4">
             <div className="h-px flex-1 bg-border" />
 

@@ -1,5 +1,6 @@
 'use client';
 import { getLanguageName } from '@/utils/getLanguageName';
+import { getTransposeShift } from '@/utils/getTransposeShift';
 import { getKeyByShift, transposeChord } from '@/utils/transposeOne';
 import { ChevronRight, Minus, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
@@ -24,12 +25,12 @@ type ChordTableProps = {
   isNashville: boolean;
   songData?: Song | null;
   Songlanguage?: any;
+  setlistKey?: string;
 };
 
-const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslation, isNashville, songData, Songlanguage }) => {
+const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslation, isNashville, songData, Songlanguage, setlistKey }) => {
   const [song, setSong] = useState<Song | null>(null);
   const [shift, setShift] = useState(0);
-
   useEffect(() => {
     async function fetchSong() {
       const singleSong = await songData;
@@ -48,9 +49,17 @@ const ChordTableVersion3: React.FC<ChordTableProps> = ({ id, isChord, isTranslat
     fetchSong();
   }, [id]);
 
-  if (!song) return <p>Loading...</p>;
+  useEffect(() => {
+    if (!song) return;
 
+    const newShift = setlistKey ? getTransposeShift(song.key, setlistKey) : 0;
+
+    setShift(newShift);
+  }, [song, setlistKey]);
+
+  if (!song) return <p>Loading...</p>;
   const fromKey = song.key;
+
   const toKey = getKeyByShift(fromKey, shift);
 
   // helper to create spaces

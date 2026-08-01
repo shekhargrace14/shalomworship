@@ -33,6 +33,7 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
   // const [visibility, setVisibility] = useState("PRIVATE");
 
   const addSetlist = useSetlistStore((state) => state.addSetlist);
+  const setCurrentSetlist = useSetlistStore((state) => state.setCurrentSetlist);
   // if (!channelId) {
   //   return (
   //     <>
@@ -64,9 +65,12 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
       if (!res.ok || !data.success) {
         throw new Error(data.message);
       }
-      addSetlist(data.data);
+      if (res.ok) {
+        setCurrentSetlist(data.data);
+        addSetlist(data.data);
+      }
       toast.success(data.message);
-      router.push(`/user/setlist/view?id=${data.data.id}`);
+      router.push(`/user/setlist/edit?id=${data.data.id}`);
     } catch (error: any) {
       toast.error(error.message || 'Failed to create setlist');
     } finally {

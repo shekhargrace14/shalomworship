@@ -12,7 +12,11 @@ const page = () => {
     return;
   }
 
-  return <SetlistEditor data={currentSetlist} />;
+  return (
+    <>
+      <SetlistEditor data={currentSetlist} />
+    </>
+  );
 };
 
 export default page;

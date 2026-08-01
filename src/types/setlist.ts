@@ -1,9 +1,22 @@
-import { Prisma } from '@prisma/client';
-
 import type { SongSearchItem } from '@/lib/search/types';
 
 export type Visibility = 'PRIVATE' | 'PUBLIC' | 'UNLISTED';
 export type ItemType = 'SONG' | 'NOTE' | 'SCRIPTURE';
+
+export type FullSetlist = {
+  id: string;
+  title: string;
+  theme: string | null;
+  description: string | null;
+  scripture: string | null;
+  eventAt: string | null;
+  visibility: Visibility;
+  channelId: string;
+  sections: SetlistSection[];
+  notes: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+};
 
 export type Setlist = {
   id: string;
@@ -32,17 +45,42 @@ export type FormSection = {
   items: FormItem[];
 };
 
-export type FormItem = {
-  id: string;
-  type: ItemType;
-  songId: string;
-  song: SongSearchItem | null; // UI only
-  notes: string;
+export type SetlistSection = {
+  title: string;
   order: number;
+  notes: string | null;
+  items: SetlistItem[];
+};
+
+export type FormItem = Omit<SetlistItem, 'key' | 'reference' | 'scripture' | 'notes'> & {
+  id: string;
+  song: SongSearchItem | null;
+
+  key: string;
+  reference: string;
+  scripture: string;
+  notes: string;
+};
+
+export type SetlistItem = {
+  type: ItemType;
+  order: number;
+  // Song (only for SONG items)
+  songId: string | null;
+  // Music
+  key: string | null;
+  bpm: number | null;
+  timeSignature: string | null; // e.g. "4/4", "3/4", "6/8"
+  duration: number | null; // seconds
+
+  // Scripture
+  reference: string | null; // e.g. "Genesis 1:1"
+  scripture: string | null; // Full verse or passage
+  // General
+  notes: string | null;
 };
 
 export type Metadata = {
-  id: string;
   title: string;
   theme: string;
   description: string;
@@ -50,7 +88,6 @@ export type Metadata = {
   eventAt: Date | undefined;
   visibility: Visibility;
   notes: string;
-  updatedAt: Date;
 };
 
 export type SetlistContent = {
@@ -66,63 +103,10 @@ export type UpdateSectionField = (sectionId: string, key: keyof Pick<FormSection
 
 export type AddItem = (sectionId: string, type?: ItemType) => void;
 
-type EditableItemField = Pick<FormItem, 'type' | 'songId' | 'song' | 'notes'>;
-
+export type EditableItemField = Pick<FormItem, 'type' | 'songId' | 'song' | 'key' | 'bpm' | 'timeSignature' | 'duration' | 'reference' | 'scripture' | 'notes'>;
 export type UpdateItemField = (sectionId: string, itemId: string, key: keyof EditableItemField, value: EditableItemField[keyof EditableItemField]) => void;
 
 export type RemoveItem = (sectionId: string, itemId: string) => void;
-
-//  -----------------------------------------------
-
-// type FullSetlist = Omit<setlist, 'sections'> & {
-//   sections: SetlistSection[];
-// };
-
-export type FullSetlist = {
-  id: string;
-
-  title: string;
-
-  theme: string | null;
-
-  description: string | null;
-
-  scripture: string | null;
-
-  eventAt: string | null;
-
-  visibility: Visibility;
-
-  channelId: string;
-
-  sections: SetlistSection[];
-
-  notes: string | null;
-
-  createdAt: Date;
-
-  updatedAt: Date;
-};
-
-export type SetlistSection = {
-  title: string;
-
-  order: number;
-
-  notes: string | null;
-
-  items: SetlistItem[];
-};
-
-export type SetlistItem = {
-  type: ItemType;
-
-  order: number;
-
-  songId: string | null;
-
-  notes: string | null;
-};
 
 export type FullSetlistItem = SetlistItem & {
   song?: SongSearchItem;

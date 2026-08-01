@@ -11,9 +11,7 @@ export default function AuthHydrator({ children }: { children: React.ReactNode }
   const setLoading = useAuthStore((s) => s.setLoading);
 
   useEffect(() => {
-    console.log('AuthHydrator mounted');
     async function loadUser() {
-      console.log('Fetching /api/auth/me');
       try {
         const res = await fetch(`/api/auth/me`, {
           credentials: 'include',
@@ -26,7 +24,7 @@ export default function AuthHydrator({ children }: { children: React.ReactNode }
         } else {
           setUser(null);
         }
-        router.push('/');
+        // XXX router.push('/'); Dont xxx nagivate to home public setlist view will also naviatage to home.
       } catch {
         setUser(null);
       } finally {

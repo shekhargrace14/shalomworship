@@ -5,7 +5,7 @@ const SHARP_SCALE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#',
 
 const FLAT_SCALE = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
 
-const NOTE_TO_INDEX: Record<string, number> = {
+export const NOTE_TO_INDEX: Record<string, number> = {
   C: 0,
 
   'C#': 1,

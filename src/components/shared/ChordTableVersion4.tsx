@@ -1,8 +1,10 @@
 'use client';
 import { getLanguageName } from '@/utils/getLanguageName';
+import { getTransposeShift } from '@/utils/getTransposeShift';
 import transpose, { generateToKey } from '@/utils/transpose';
 import { ChevronRight, Minus, Plus } from 'lucide-react';
 import React, { useState } from 'react';
+import { Spinner } from '../ui/spinner';
 
 type ChordItem = {
   id: number;
@@ -48,10 +50,14 @@ type ChordTableProps = {
   isNashville: boolean;
   songData?: Song | null;
   Songlanguage?: any;
+  setlistKey?: string;
 };
 
-const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation, isNashville, songData, Songlanguage }) => {
-  const [shift, setShift] = useState(0);
+const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation, isNashville, songData, Songlanguage, setlistKey }) => {
+  if (!songData) return <Spinner />;
+  const key = songData.key || 'C';
+  const toShiftKeyNumber = setlistKey ? getTransposeShift(key, setlistKey) : 0;
+  const [shift, setShift] = useState(toShiftKeyNumber);
 
   function stepShift(currentShift: number, step: 1 | -1) {
     const nextShift = currentShift + step;
@@ -66,10 +72,8 @@ const ChordTableVersion4: React.FC<ChordTableProps> = ({ isChord, isTranslation,
 
   if (!songData) return <p>Loading...</p>;
 
-  const key = songData.key || 'C';
   const toKey = generateToKey(key, shift);
   const langName = getLanguageName(Songlanguage);
-  // const isHindi = songData.language === "hi";
 
   const position = (count: number) => '\u00A0'.repeat(count);
 

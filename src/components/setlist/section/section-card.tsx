@@ -8,12 +8,13 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { FormSection, UpdateItemField } from '@/types/setlist';
 
 type Props = {
-  section: any;
+  section: FormSection;
   updateSectionField: any;
   addItem: any;
-  updateItemField: any;
+  updateItemField: UpdateItemField;
   removeItem: any;
 };
 

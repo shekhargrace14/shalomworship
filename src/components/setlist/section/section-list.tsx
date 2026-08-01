@@ -3,26 +3,10 @@ import { Button } from '@/components/ui/button';
 import { GripVertical, Plus, Trash2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { AddItem, RemoveItem, UpdateItemField, UpdateSectionField } from '@/types/setlist';
+import { AddItem, FormSection, RemoveItem, UpdateItemField, UpdateSectionField } from '@/types/setlist';
 import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-
-type ItemType = 'SONG' | 'NOTE' | 'SCRIPTURE';
-type Visibility = 'PRIVATE' | 'PUBLIC' | 'UNLISTED';
-
-type FormItem = {
-  id: string;
-  type: ItemType;
-  songId: string;
-  notes: string;
-};
-type FormSection = {
-  id: string;
-  title: string;
-  notes: string;
-  items: FormItem[];
-};
 
 type Props = {
   sections: FormSection[];
@@ -49,9 +33,9 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
       </div>
       <div className="space-y-4">
         {sections.map((section, sectionIndex) => (
-          <>
+          <div key={section.id}>
             <div className="border-l-4 border-primary rounded-t-xl">
-              <div key={section.id} className="overflow-hidden gap-0 rounded-t-xl bg-card px-4 py-6">
+              <div className="overflow-hidden gap-0 rounded-t-xl bg-card px-4 py-6">
                 <div className="flex flex-row items-center justify-end gap-4">
                   {/* <GripVertical className="h-4 w-4 text-muted-foreground" /> */}
 
@@ -75,7 +59,7 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
               </div>
             </div>
             <SectionCard section={section} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
-          </>
+          </div>
         ))}
       </div>
       <div className="flex border border-dashed h-40 rounded-md items-center  justify-center  ">

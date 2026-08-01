@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/Avatar';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { logout } from '@/lib/auth/logout';
+import { AuthDailog } from '../auth/auth-dailog';
 
 type UserMenuProps = {
   user?: {
@@ -25,7 +26,7 @@ export default function UserMenu({ user }: UserMenuProps) {
     try {
       await logout();
       toast.success('Logged out successfully');
-      router.push('/');
+      router.refresh;
     } catch (error) {
       toast.error('Failed to logout');
     }
@@ -113,6 +114,7 @@ export default function UserMenu({ user }: UserMenuProps) {
                 <LogIn className="mr-2 h-4 w-4" />
                 Login
               </Link>
+              {/* <AuthDailog/> */}
             </DropdownMenuItem>
 
             <DropdownMenuItem asChild>

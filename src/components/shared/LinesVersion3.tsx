@@ -8,9 +8,10 @@ type LinesProps = {
   isChords: boolean;
   isTranslations: boolean;
   language: any;
+  setlistKey?: string;
 };
 
-const LinesVersion3 = ({ id, song, isChords, isTranslations, language }: LinesProps) => {
+const LinesVersion3 = ({ id, song, isChords, isTranslations, language, setlistKey }: LinesProps) => {
   const [activeTab, setActiveTab] = useState<'chords' | 'nashville' | 'lyrics' | 'translation'>('chords');
 
   // Single toggle function for all tabs
@@ -56,7 +57,7 @@ const LinesVersion3 = ({ id, song, isChords, isTranslations, language }: LinesPr
       </div>
 
       {/* Pass flags to ChordTable */}
-      <ChordTableVersion3 id={id} songData={song} isChord={isTabActive('chords') && isChords} isNashville={isTabActive('nashville') && isChords} isTranslation={isTabActive('translation') && isTranslations} Songlanguage={language} />
+      <ChordTableVersion3 id={id} songData={song} isChord={isTabActive('chords') && isChords} isNashville={isTabActive('nashville') && isChords} isTranslation={isTabActive('translation') && isTranslations} Songlanguage={language} setlistKey={setlistKey} />
     </>
   );
 };

@@ -1,9 +1,9 @@
 import { useAuthStore } from '@/store/useAuthStore';
 import { API_URL } from '../config';
+import { useChannelStore } from '@/store/useChannelStore';
+import { useSetlistStore } from '@/store/useSetlistStore';
 
 export async function logout() {
-  // const res = await fetch('https://dashboard.shalomworship.com/api/auth/logout', {
-  // const res = await fetch('http://localhost:3001/api/auth/logout', {
   const res = await fetch(`/api/auth/logout`, {
     method: 'POST',
     credentials: 'include',
@@ -12,6 +12,9 @@ export async function logout() {
   if (!res.ok) {
     throw new Error('Logout failed');
   }
-
   useAuthStore.getState().logout();
+  // useChannelStore.getState().logout(); // or clearChannels()
+  // useSetlistStore.getState().clear();  // if applicable
+  window.location.href = '/';
+  // window.location.reload();
 }

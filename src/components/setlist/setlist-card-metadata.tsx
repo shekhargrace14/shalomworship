@@ -1,11 +1,31 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '../ui/button';
 import { Save } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Badge } from '../ui/badge';
+import { Spinner } from '../ui/spinner';
 
 const SetlistCardMetadata = ({ loading, handleSubmit, canSave, metadata }: any) => {
+  const saveButtonRef = useRef<HTMLButtonElement>(null);
+  const [showFloatingSave, setShowFloatingSave] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if (!saveButtonRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowFloatingSave(!entry.isIntersecting);
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    observer.observe(saveButtonRef.current);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div
       className="bg-background p-4 py-8 pt-24 md:pt-40"
@@ -25,10 +45,21 @@ const SetlistCardMetadata = ({ loading, handleSubmit, canSave, metadata }: any) 
             Cancel
           </Button>
 
-          <Button type="button" onClick={handleSubmit} disabled={!canSave || loading}>
+          {/* <Button type="button" onClick={handleSubmit} disabled={!canSave || loading}>
+            <Save className="mr-2 h-4 w-4" />
+            {loading ? 'Saving...' : 'Save Setlist'}
+          </Button> */}
+
+          <Button ref={saveButtonRef} type="button" onClick={handleSubmit} disabled={!canSave || loading}>
             <Save className="mr-2 h-4 w-4" />
             {loading ? 'Saving...' : 'Save Setlist'}
           </Button>
+
+          {showFloatingSave && (
+            <Button type="button" onClick={handleSubmit} disabled={!canSave || loading} className="fixed bottom-20 right-6 z-50 shadow-lg rounded-full">
+              {loading ? <Spinner /> : <Save />}
+            </Button>
+          )}
         </div>
       </div>
     </div>

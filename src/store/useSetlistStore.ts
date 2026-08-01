@@ -8,7 +8,7 @@ interface SetlistStore {
   currentSetlist: Setlist | null;
 
   setChannelAllSetlists: (setlists: Setlist[]) => void;
-  setCurrentSetlist: (setlist: Setlist) => void;
+  setCurrentSetlist: (setlist: Setlist | null) => void;
 
   addSetlist: (setlist: Setlist) => void;
   removeSetlist: (id: string) => void;

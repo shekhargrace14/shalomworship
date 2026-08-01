@@ -11,18 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Separator } from '../ui/separator';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
-
-type Visibility = 'PRIVATE' | 'PUBLIC' | 'UNLISTED';
-
-type Metadata = {
-  title: string;
-  theme: string;
-  description: string;
-  scripture: string;
-  notes: string;
-  eventAt: Date | undefined;
-  visibility: Visibility;
-};
+import { Metadata } from '@/types/setlist';
 
 type Props = {
   metadata: Metadata;

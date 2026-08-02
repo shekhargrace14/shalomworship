@@ -178,18 +178,12 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                         <DialogDescription>
                           Are you sure you want to delete this Item?
                           <br />
-                          <span className="font-medium text-foreground">
-                            This action cannot be undone.
-                          </span>
+                          <span className="font-medium text-foreground">This action cannot be undone.</span>
                         </DialogDescription>
                       </DialogHeader>
 
                       <DialogFooter className="flex justify-end gap-2">
-                        <Button
-                          type="button"
-                          variant="outline"
-                          onClick={() => setOpen(false)}
-                        >
+                        <Button type="button" variant="outline" onClick={() => setOpen(false)}>
                           Cancel
                         </Button>
 
@@ -199,7 +193,7 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                           onClick={() => {
                             removeItem(section.id, item.id);
                             setOpen(false);
-                            toast.success("Item deleted")
+                            toast.success('Item deleted');
                           }}
                         >
                           <Trash2 className="mr-2 h-4 w-4" />

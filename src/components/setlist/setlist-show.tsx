@@ -39,11 +39,9 @@ export default function SetlistShow({ setlist }: Props) {
           backgroundImage: `linear-gradient(to bottom,  oklch(68.699% 0.11763 191.228), transparent)`,
         }}
       >
-                    <div 
-            className="absolute right-4 top-4 "
-            >
-          <ButtonShare/>
-      </div>
+        <div className="absolute right-4 top-4 ">
+          <ButtonShare />
+        </div>
         <div className="flex flex-col md:flex-row justify-between md:items-end  h-40 md:h-fit">
           <div className="">
             <h1 className="text-3xl md:text-4xl tracking-tight font-medium ">{setlist.title}</h1>

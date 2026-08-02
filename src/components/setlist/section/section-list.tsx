@@ -61,18 +61,12 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
                         <DialogDescription>
                           Are you sure you want to delete this section?
                           <br />
-                          <span className="font-medium text-foreground">
-                            This action cannot be undone.
-                          </span>
+                          <span className="font-medium text-foreground">This action cannot be undone.</span>
                         </DialogDescription>
                       </DialogHeader>
 
                       <DialogFooter className="flex justify-end gap-2">
-                        <Button
-                          type="button"
-                          variant="outline"
-                          onClick={() => setOpen(false)}
-                        >
+                        <Button type="button" variant="outline" onClick={() => setOpen(false)}>
                           Cancel
                         </Button>
 
@@ -82,7 +76,7 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
                           onClick={() => {
                             removeSection(section.id);
                             setOpen(false);
-                            toast.success("Section deleted")
+                            toast.success('Section deleted');
                           }}
                         >
                           <Trash2 className="mr-2 h-4 w-4" />
@@ -112,7 +106,13 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
         ))}
       </div>
       <div className="flex border border-dashed h-40 rounded-md items-center  justify-center  ">
-        <Button type="button" variant="outline" onClick={() => { addSection(), handleSubmit() }}>
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => {
+            (addSection(), handleSubmit());
+          }}
+        >
           <Plus className="mr-2 h-4 w-4" />
           Add Section
         </Button>

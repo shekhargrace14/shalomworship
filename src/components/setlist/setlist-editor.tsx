@@ -6,7 +6,7 @@ import { EditableItemField, FormItem, FormSection, FullSetlist, ItemType, Metada
 import { Save } from 'lucide-react';
 import { Button } from '../ui/button';
 import SetlistMetadata from './setlist-edit-metadata';
-import { SetlistButtonDelete} from './button/setlist-button-delete';
+import { SetlistButtonDelete } from './button/setlist-button-delete';
 // import SectionList from './section/section-list';
 import { toast } from 'sonner';
 import { useChannelStore } from '@/store/useChannelStore';

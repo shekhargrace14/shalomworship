@@ -29,7 +29,7 @@ const SetlistCardMetadata = ({ loading, handleSubmit, canSave, metadata }: any) 
           <Button type="button" variant="outline" onClick={() => router.back()}>
             Cancel
           </Button>
-          <SetlistButtonSave loading={loading} handleSubmit={handleSubmit} canSave={canSave}/>
+          <SetlistButtonSave loading={loading} handleSubmit={handleSubmit} canSave={canSave} />
         </div>
       </div>
     </div>

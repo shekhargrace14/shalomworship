@@ -92,7 +92,6 @@ export default function SectionEdit({ channelId, data }: { channelId: string; da
                       id: item.id || crypto.randomUUID(),
                       type: (item.type as ItemType) || 'SONG',
 
-
                       song: item.song || '',
                       key: item.key || '',
                       bpm: item.bpm || '',

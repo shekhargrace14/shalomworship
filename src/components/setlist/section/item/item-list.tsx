@@ -11,7 +11,7 @@ type Props = {
   updateItemField: UpdateItemField;
   removeItem: RemoveItem;
   moveItem: any;
-  handleSubmit: any
+  handleSubmit: any;
 };
 const ItemList = ({ section, addItem, updateItemField, removeItem, moveItem, handleSubmit }: Props) => {
   return (
@@ -27,7 +27,13 @@ const ItemList = ({ section, addItem, updateItemField, removeItem, moveItem, han
         <ItemCard section={section} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
       </div>
       <div className="flex  gap-2 justify-center p-8 border  border-dashed rounded-xl w-full">
-        <Button type="button" variant="outline" onClick={() => {addItem(section.id, 'SONG'), handleSubmit()}}>
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => {
+            (addItem(section.id, 'SONG'), handleSubmit());
+          }}
+        >
           <Plus className="mr-2 h-4 w-4" />
           Add Item
         </Button>

@@ -28,12 +28,12 @@ const menuItems = [
     icon: ListMusic,
     href: '/user/setlist',
   },
-  {
-    title: 'My Channels',
-    description: 'View your channels',
-    icon: Tv,
-    href: '/user/channel',
-  },
+  // {
+  //   title: 'My Channels',
+  //   description: 'View your channels',
+  //   icon: Tv,
+  //   href: '/user/channel',
+  // },
   // {
   //   title: 'Dashboard',
   //   description: 'Open creator dashboard',
@@ -102,7 +102,6 @@ const page = () => {
           </div>
         </CardHeader>
       </Card>
-      <ModeToggle />
 
       <Card>
         <CardContent className="p-0">

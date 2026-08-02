@@ -27,9 +27,7 @@ export function SetlistButton() {
         <Plus className="mr-2 h-4 w-4" />
         Create Setlist
       </Button>
-
       <LoginRequiredModal open={openLogin} onOpenChange={setOpenLogin} />
-
       <SetlistCreate open={openCreate} onOpenChange={setOpenCreate} />
     </>
   );

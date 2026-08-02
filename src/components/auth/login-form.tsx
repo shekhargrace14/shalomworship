@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/useAuthStore';
 import { API_URL } from '@/lib/config';
-import AuthGoogle from './auth-google';
+import GoogleSignInButton from './GoogleSignInButton';
 
 export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
   const router = useRouter();
@@ -25,8 +25,6 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
     e.preventDefault();
     setLoading(true);
     try {
-      // const res = await fetch('https://dashboard.shalomworship.com/api/auth/login', {
-      // const res = await fetch('http://localhost:3001/api/auth/login', {
       const res = await fetch(`/api/auth/login`, {
         method: 'POST',
         credentials: 'include',
@@ -40,20 +38,14 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
       });
 
       const data = await res.json();
-      setUser(data.user);
 
       if (!data.success) {
-        toast(data.message);
+        toast.error(data.message);
         return;
-      } else {
-        toast.success(data.message || 'Login Successful');
       }
-
-      // router.refresh(); // this is not refreshing the page as below one does.
-      // or //
-      window.location.href = '/';
-
-      router.push('/');
+      setUser(data.user);
+      toast.success(data.message);
+      router.refresh();
     } catch (error: any) {
       toast.error(error + 'something went wrong');
     } finally {
@@ -71,7 +63,9 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
 
         <CardContent>
           <FieldGroup>
-            <AuthGoogle />
+            <div className="flex items-center justify-center gap-4 overflow-hidden">
+              <GoogleSignInButton />
+            </div>
             <div className="flex items-center gap-4">
               <div className="h-px flex-1 bg-border" />
 
@@ -99,10 +93,6 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
               <Field>
                 <Button type="submit" disabled={loading}>
                   {loading ? 'Logging in...' : 'Login'}
-                </Button>
-
-                <Button variant="outline" type="button">
-                  Login with Google
                 </Button>
 
                 <FieldDescription className="text-center">

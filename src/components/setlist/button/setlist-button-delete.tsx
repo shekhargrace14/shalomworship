@@ -17,7 +17,7 @@ type Props = {
   setlistTitle: string;
 };
 
-export const SetlistDelete = ({ channelId, setlistId, setlistTitle }: Props) => {
+export const SetlistButtonDelete = ({ channelId, setlistId, setlistTitle }: Props) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('');

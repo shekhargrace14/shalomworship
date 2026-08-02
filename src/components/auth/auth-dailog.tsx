@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { LoginForm } from './login-form';
 
 interface LoginRequiredModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-export function LoginRequiredModal({ open, onOpenChange }: LoginRequiredModalProps) {
+export function AuthDailog({ open, onOpenChange }: LoginRequiredModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-mdxl">
@@ -24,13 +24,13 @@ export function LoginRequiredModal({ open, onOpenChange }: LoginRequiredModalPro
         </DialogHeader>
 
         <LoginForm />
-        <DialogFooter className="" onClick={() => onOpenChange(false)}>
-          {/* <Button asChild variant="outline" className="flex-1" onClick={() => onOpenChange(false)}>
+        <DialogFooter className="">
+          <Button asChild variant="outline" className="flex-1">
             <Link href="/auth/signup">
               <UserPlus className="mr-2 h-4 w-4" />
               Sign Up
             </Link>
-          </Button> */}
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

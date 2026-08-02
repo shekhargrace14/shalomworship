@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { QueryProvider } from '@/lib/query/query-provider';
 import Header from '@/components/layout/Header';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -19,10 +18,8 @@ import SongSync from '@/components/song-sync';
 import NetworkStatus from '@/components/NetworkStatus';
 import AuthHydrator from '@/components/hydrator/hydrator-auth';
 import HydratorChannel from '@/components/hydrator/hydrator-channel';
-import Menu from '@/components/layout/Menu';
 import HydratorSetlist from '@/components/hydrator/hydrator-setlist';
 import DevTools from '@/components/monitor';
-import { GoogleOAuthProvider } from '@react-oauth/google';
 import NavBottom from '@/components/navigation/nav-bottom';
 // import Footer from "@/components/layout/footer_111";
 
@@ -118,8 +115,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Google Ads (Auto Ads) */}
         <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972" crossOrigin="anonymous" strategy="afterInteractive" />
+
         {/* ahref analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></script>
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></Script>
+
+        {/* Google Identity Services script */}
+        <Script src="https://accounts.google.com/gsi/client" strategy="afterInteractive" />
 
         {/* REMOVE AMP — this was breaking SEO */}
         <ThemeProvider attribute="class" defaultTheme="system">
@@ -141,15 +142,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       {/* <Menu /> */}
                       <PwaRegister />
                       <SongSync />
-                      <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}>
-                        <HydratorChannel>
-                          <HydratorSetlist>
-                            <AuthHydrator>{children}</AuthHydrator>
-                            <NavBottom />
-                          </HydratorSetlist>
-                        </HydratorChannel>
-                      </GoogleOAuthProvider>
-                      <DevTools />
+                      <HydratorChannel>
+                        <HydratorSetlist>
+                          <AuthHydrator>{children}</AuthHydrator>
+                          <NavBottom />
+                        </HydratorSetlist>
+                      </HydratorChannel>
+                      {/* <DevTools /> */}
                       <Toaster />
                     </div>
                     <Footer />

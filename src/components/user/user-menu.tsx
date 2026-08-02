@@ -8,6 +8,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/Avatar';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { logout } from '@/lib/auth/logout';
+import { AuthDailog } from '../auth/auth-dailog';
+import { ModeToggle } from '../ModeToggle';
 
 type UserMenuProps = {
   user?: {
@@ -25,7 +27,7 @@ export default function UserMenu({ user }: UserMenuProps) {
     try {
       await logout();
       toast.success('Logged out successfully');
-      router.push('/');
+      router.refresh;
     } catch (error) {
       toast.error('Failed to logout');
     }
@@ -80,12 +82,12 @@ export default function UserMenu({ user }: UserMenuProps) {
                 </Link>
               </DropdownMenuItem>
 
-              <DropdownMenuItem asChild>
+              {/* <DropdownMenuItem asChild>
                 <Link href="/user/channel">
                   <TvMinimal className="mr-2 h-4 w-4 text-primary" />
                   My Channels
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
 
               {/* <DropdownMenuItem asChild>
                 <Link href="/dashboard">
@@ -93,6 +95,9 @@ export default function UserMenu({ user }: UserMenuProps) {
                   Dashboard
                 </Link>
               </DropdownMenuItem> */}
+            </DropdownMenuGroup>
+            <DropdownMenuGroup>
+              <ModeToggle />
             </DropdownMenuGroup>
 
             <DropdownMenuSeparator />
@@ -113,6 +118,7 @@ export default function UserMenu({ user }: UserMenuProps) {
                 <LogIn className="mr-2 h-4 w-4" />
                 Login
               </Link>
+              {/* <AuthDailog/> */}
             </DropdownMenuItem>
 
             <DropdownMenuItem asChild>
@@ -121,6 +127,9 @@ export default function UserMenu({ user }: UserMenuProps) {
                 Create Account
               </Link>
             </DropdownMenuItem>
+            <DropdownMenuGroup>
+              <ModeToggle />
+            </DropdownMenuGroup>
           </>
         )}
       </DropdownMenuContent>

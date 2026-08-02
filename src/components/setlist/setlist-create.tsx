@@ -30,20 +30,12 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
   const [eventAt, setEventAt] = useState<Date>();
   const channel = useChannelStore((s) => s.currentChannel);
   const channelId = channel?.id;
-  // const [visibility, setVisibility] = useState("PRIVATE");
 
   const addSetlist = useSetlistStore((state) => state.addSetlist);
-  // if (!channelId) {
-  //   return (
-  //     <>
-  //       <p>channel id not set</p>
-  //     </>
-  //   );
-  // }
+  const setCurrentSetlist = useSetlistStore((state) => state.setCurrentSetlist);
 
   async function handleCreate() {
     if (!title.trim()) return;
-
     try {
       setLoading(true);
 
@@ -64,9 +56,15 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
       if (!res.ok || !data.success) {
         throw new Error(data.message);
       }
-      addSetlist(data.data);
+      if (res.ok) {
+        setCurrentSetlist(data.data);
+        addSetlist(data.data);
+      }
+      onOpenChange?.(false);
       toast.success(data.message);
-      router.push(`/user/setlist/view?id=${data.data.id}`);
+
+      router.push(`/user/setlist`);
+      window.location.reload();
     } catch (error: any) {
       toast.error(error.message || 'Failed to create setlist');
     } finally {

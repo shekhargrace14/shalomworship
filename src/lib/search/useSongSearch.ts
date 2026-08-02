@@ -9,20 +9,6 @@ export function useSongSearch() {
   const [fuse, setFuse] = useState<Fuse<SongSearchItem> | null>(null);
   const [ready, setReady] = useState(false);
 
-  // useEffect(() => {
-  //   fetch("/search/songs.json")
-  //     .then((r) => r.json())
-  //     .then((data: SongSearchItem[]) => {
-  //       setFuse(
-  //         new Fuse(data, {
-  //           keys: ["title", "artist"],
-  //           threshold: 0.3,
-  //         })
-  //       );
-  //       setReady(true);
-  //     });
-  // }, []);
-
   useEffect(() => {
     async function loadSongs() {
       let songs: SongSearchItem[] = [];

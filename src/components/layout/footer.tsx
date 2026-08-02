@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
 
-import { House, Music2, ListMusic, Heart, User, Mail } from 'lucide-react';
+import { House, Music2, ListMusic, Heart, User, Mail, X } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Separator } from '../ui/separator';
 export default function Footer() {
-  const bottomNavItems = [
+  const contact = [
     {
       title: 'Email',
       href: '/',
@@ -17,6 +17,11 @@ export default function Footer() {
       title: 'WhatsApp',
       href: '/song',
       icon: FaWhatsapp,
+    },
+    {
+      title: 'X',
+      href: '/song',
+      icon: X,
     },
   ];
   return (
@@ -43,7 +48,13 @@ export default function Footer() {
           connect@shalomworship.com
         </a>
       </div>
-      {/* <Separator/> */}
+      {/* <div className="flex">
+        {contact.map((social,index)=>(
+          <Link href={social.href} key={index}>
+          <social.icon className='h-8 w-8'/>
+          </Link>
+        ))}
+      </div> */}
       <div className="container m-auto flex flex-col items-center gap-2 text-center text-sm text-muted-foreground">
         <p>
           © {new Date().getFullYear()} <span className="font-medium text-foreground">Shalom Worship</span>. All rights reserved.

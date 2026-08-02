@@ -25,6 +25,7 @@ export async function buildSongSearchIndex() {
       language: song.language,
       channel: song?.channel?.title,
       channelSlug: song?.channel?.slug,
+      key: song?.key,
     };
   });
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { CalendarDays, Clock, Edit, Globe, Lock, Minimize, Minimize2, Music2, NotebookPen } from 'lucide-react';
+import { CalendarDays, Clock, Edit, Globe, Lock, Minimize, Minimize2, Music2, NotebookPen, Plus } from 'lucide-react';
 import { format } from 'date-fns';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,7 +21,6 @@ interface Props {
 }
 
 export default function SetlistShow({ setlist }: Props) {
-  console.log(setlist, 'ShowSetlist');
   if (!setlist) return null;
   const router = useRouter();
   const [openSongIds, setOpenSongIds] = useState<string[]>([]);
@@ -50,10 +49,10 @@ export default function SetlistShow({ setlist }: Props) {
                   <span className="text-accent text-[12px]">{format(new Date(setlist.eventAt), 'EEE, MMM d')}</span>
                 </Badge>
               )}
-              <Badge variant="outline" className="h-4 flex items-center gap-1 border-accent/70 px-2 py-2   bg-primary/10">
+              {/* <Badge variant="outline" className="h-4 flex items-center gap-1 border-accent/70 px-2 py-2   bg-primary/10">
                 <Clock className="h-2 w-2 text-accent" />
                 <span className="text-accent text-[12px]">35:00</span>
-              </Badge>
+              </Badge> */}
             </div>
           </div>
           <div className="flex justify-end">
@@ -80,117 +79,131 @@ export default function SetlistShow({ setlist }: Props) {
             <p className="text-sm text-muted-foreground italic text-end mt-2">{setlist.scripture}</p>
           </div>
         )}
+        {setlist.sections?.length > 0 ? (
+          <>
+            {setlist.sections?.map((section: any, sectionIndex: number) => (
+              // SECTION
+              <div key={sectionIndex} className="space-y-4">
+                <div
+                  className=" p-4 bg-card border-l-4 border-primary rounded-xl"
+                  onClick={() => {
+                    const songIds = section.items.filter((item: any) => item.type === 'SONG').map((item: any) => item.songId);
 
-        {setlist.sections?.map((section: any, sectionIndex: number) => (
-          // SECTION
-          <div key={sectionIndex} className="space-y-4">
-            <div
-              className=" p-4 bg-card border-l-4 border-primary rounded-xl"
-              onClick={() => {
-                const songIds = section.items.filter((item: any) => item.type === 'SONG').map((item: any) => item.songId);
+                    setOpenSongIds((prev) => {
+                      const allOpen = songIds.every((id: string) => prev.includes(id));
 
-                setOpenSongIds((prev) => {
-                  const allOpen = songIds.every((id: string) => prev.includes(id));
+                      if (allOpen) {
+                        // Close all songs in this section
+                        return prev.filter((id) => !songIds.includes(id));
+                      }
 
-                  if (allOpen) {
-                    // Close all songs in this section
-                    return prev.filter((id) => !songIds.includes(id));
-                  }
+                      // Open all songs in this section
+                      return [...new Set([...prev, ...songIds])];
+                    });
+                  }}
+                >
+                  <h2 className="text-xl tracking-wide">{section.title || 'Songs'}</h2>
+                  {section.notes && <p className="mt-1 text-sm text-muted-foreground">{section.notes}</p>}
+                </div>
+                <div className="space-y-3 ">
+                  {section.items?.map((item: any, itemIndex: number) => (
+                    <div key={itemIndex} className="transition-colors group space-y-4">
+                      <div
+                        ref={(el) => {
+                          songRefs.current[item.songId] = el;
+                        }}
+                        className="pl-2 md:pl-4 w-full flex flex-col gap-8"
+                        onClick={(e) => {
+                          e.stopPropagation();
 
-                  // Open all songs in this section
-                  return [...new Set([...prev, ...songIds])];
-                });
-              }}
-            >
-              <h2 className="text-xl tracking-wide">{section.title || 'Songs'}</h2>
-              {section.notes && <p className="mt-1 text-sm text-muted-foreground">{section.notes}</p>}
-            </div>
-            <div className="space-y-3 ">
-              {section.items?.map((item: any, itemIndex: number) => (
-                <div key={itemIndex} className="transition-colors group space-y-4">
-                  <div
-                    ref={(el) => {
-                      songRefs.current[item.songId] = el;
-                    }}
-                    className="pl-2 md:pl-4 w-full flex flex-col gap-8"
-                    onClick={(e) => {
-                      e.stopPropagation();
-
-                      setOpenSongIds(
-                        (prev) =>
-                          prev.includes(item.songId)
-                            ? prev.filter((id) => id !== item.songId) // close
-                            : [...prev, item.songId], // open
-                      );
-                    }}
-                  >
-                    <div className="relative w-full flex flex-col gap-3 p-4 rounded-t-xl bg-card border-l border-primary group-hover:bg-muted/40 ">
-                      <div className="flex">
-                        <span className="absolute -left-3 top-5.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{item.order}</span>
-                        {item.type === 'SONG' && <SetlistSongCard type="metadata" item={item} />}
-                        {item.type === 'SCRIPTURE' && (
-                          <div className="min-h-7 ml-2 flex flex-nowrap gap-4 items-end w-full">
-                            <h3 className="text-md md:text-2xl text-foreground hover:underline">{item?.type}</h3>
+                          setOpenSongIds(
+                            (prev) =>
+                              prev.includes(item.songId)
+                                ? prev.filter((id) => id !== item.songId) // close
+                                : [...prev, item.songId], // open
+                          );
+                        }}
+                      >
+                        <div className="relative w-full flex flex-col gap-3 p-4 rounded-t-xl bg-card border-l border-primary group-hover:bg-muted/40 ">
+                          <div className="flex">
+                            <span className="absolute -left-3 top-5.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{item.order}</span>
+                            {item.type === 'SONG' && <SetlistSongCard type="metadata" item={item} />}
+                            {item.type === 'SCRIPTURE' && (
+                              <div className="min-h-7 ml-2 flex flex-nowrap gap-4 items-end w-full">
+                                <h3 className="text-md md:text-2xl text-foreground hover:underline">{item?.type}</h3>
+                              </div>
+                            )}
                           </div>
-                        )}
+                          {item.type === 'SONG' && openSongIds.includes(item.songId) && (
+                            <>
+                              <p className="text-sm text-muted-foreground ml-2">{item.notes}</p>
+                              {item.scripture && <p className="text-sm text-muted-foreground ml-2 italic">"{item.scripture}"</p>}
+                              <p className="text-sm text-muted-foreground ml-2 italic text-end">{item.reference}</p>
+                            </>
+                          )}
+                          {item.type === 'SCRIPTURE' && openSongIds.includes(item.songId) && (
+                            <>
+                              <p className="text-sm text-muted-foreground ml-2">{item.notes}</p>
+                              <p className="text-sm text-muted-foreground ml-2 italic">"{item.scripture}"</p>
+                              <p className="text-sm text-muted-foreground ml-2 italic text-end">{item.reference}</p>
+                            </>
+                          )}
+                        </div>
                       </div>
                       {item.type === 'SONG' && openSongIds.includes(item.songId) && (
                         <>
-                          <p className="text-sm text-muted-foreground ml-2">{item.notes}</p>
-                          <p className="text-sm text-muted-foreground ml-2 italic">"{item.scripture}"</p>
-                          <p className="text-sm text-muted-foreground ml-2 italic text-end">{item.reference}</p>
-                        </>
-                      )}
-                      {item.type === 'SCRIPTURE' && openSongIds.includes(item.songId) && (
-                        <>
-                          <p className="text-sm text-muted-foreground ml-2">{item.notes}</p>
-                          <p className="text-sm text-muted-foreground ml-2 italic">"{item.scripture}"</p>
-                          <p className="text-sm text-muted-foreground ml-2 italic text-end">{item.reference}</p>
+                          <SetlistSongCard item={item} />
+                          <div className="flex justify-end">
+                            <Button
+                              className="bg-primary"
+                              onClick={(e) => {
+                                e.stopPropagation();
+
+                                const container = songRefs.current[item.songId];
+                                if (!container) return;
+
+                                setOpenSongIds((prev) => prev.filter((id) => id !== item.songId));
+
+                                setTimeout(() => {
+                                  container.scrollIntoView({
+                                    block: 'start',
+                                    behavior: 'smooth', // or "smooth"
+                                  });
+                                }, 0);
+                              }}
+                            >
+                              <Minimize className="size-4" />
+                            </Button>
+                          </div>
                         </>
                       )}
                     </div>
-                  </div>
-                  {item.type === 'SONG' && openSongIds.includes(item.songId) && (
-                    <>
-                      <SetlistSongCard item={item} />
-                      <div className="flex justify-end">
-                        <Button
-                          className="bg-primary"
-                          onClick={(e) => {
-                            e.stopPropagation();
-
-                            const container = songRefs.current[item.songId];
-                            if (!container) return;
-
-                            setOpenSongIds((prev) => prev.filter((id) => id !== item.songId));
-
-                            setTimeout(() => {
-                              container.scrollIntoView({
-                                block: 'start',
-                                behavior: 'smooth', // or "smooth"
-                              });
-                            }, 0);
-                          }}
-                        >
-                          <Minimize className="size-4" />
-                        </Button>
-                      </div>
-                    </>
-                  )}
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+            ))}
 
-        {/* Footer */}
-        {setlist.notes && (
-          <div className="p-4 bg-card border-l-4 border-primary rounded-xl">
-            <div className="w-full">
-              <h3 className="mb-3 text-lg">Annoucement / Notes</h3>
-              <p className="text-sm text-muted-foreground">{setlist.notes}</p>
+            {/* Footer */}
+            {setlist.notes && (
+              <div className="p-4 bg-card border-l-4 border-primary rounded-xl">
+                <div className="w-full">
+                  <h3 className="mb-3 text-lg">Annoucement / Notes</h3>
+                  <p className="text-sm text-muted-foreground">{setlist.notes}</p>
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <div className="flex border border-dashed h-40 rounded-md items-center  justify-center  ">
+              <Link href={`/user/setlist/edit?id=${setlist.id}`}>
+                <Button type="button" variant="outline">
+                  <Plus className="mr-2 h-4 w-4" />
+                  Add Section
+                </Button>
+              </Link>
             </div>
-          </div>
+          </>
         )}
       </div>
     </div>

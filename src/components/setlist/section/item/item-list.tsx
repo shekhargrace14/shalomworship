@@ -10,11 +10,12 @@ type Props = {
   section: FormSection;
   updateItemField: UpdateItemField;
   removeItem: RemoveItem;
+  moveItem: any;
 };
-const ItemList = ({ section, addItem, updateItemField, removeItem }: Props) => {
+const ItemList = ({ section, addItem, updateItemField, removeItem, moveItem }: Props) => {
   return (
     <div className="space-y-6">
-      <div className=" space-y-4">
+      <div className=" space-y-8 my-8">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-medium">Items</h3>
@@ -22,7 +23,7 @@ const ItemList = ({ section, addItem, updateItemField, removeItem }: Props) => {
           </div>
         </div>
 
-        <ItemCard section={section} updateItemField={updateItemField} removeItem={removeItem} />
+        <ItemCard section={section} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
       </div>
       <div className="flex  gap-2 justify-center p-8 border  border-dashed rounded-xl w-full">
         <Button type="button" variant="outline" onClick={() => addItem(section.id, 'SONG')}>

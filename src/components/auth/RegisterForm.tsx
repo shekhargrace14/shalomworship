@@ -66,7 +66,9 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
       </CardHeader>
       <CardContent>
         <FieldGroup>
-          <GoogleSignInButton />
+          <div className="flex items-center justify-center gap-4 overflow-hidden">
+            <GoogleSignInButton />
+          </div>
           <div className="flex items-center gap-4">
             <div className="h-px flex-1 bg-border" />
 

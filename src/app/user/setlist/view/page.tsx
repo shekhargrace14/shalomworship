@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react';
 const page = () => {
   const searchParams = useSearchParams();
   const setlistId = searchParams.get('id');
+  console.log(setlistId, 'setlist/view/page.tsx');
   const [publicSetlist, setPublicSetlist] = useState();
   const setCurrentSetlist = useSetlistStore((s) => s.setCurrentSetlist);
   useEffect(() => {

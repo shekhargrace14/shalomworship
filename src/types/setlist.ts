@@ -39,9 +39,11 @@ export type Setlist = {
 
 export type FormSection = {
   id: string;
+  order: number;
+
   title: string;
   notes: string;
-  order: number;
+
   items: FormItem[];
 };
 
@@ -54,6 +56,7 @@ export type SetlistSection = {
 
 export type FormItem = Omit<SetlistItem, 'key' | 'reference' | 'scripture' | 'notes'> & {
   id: string;
+  order: number;
   song: SongSearchItem | null;
 
   key: string;
@@ -65,8 +68,10 @@ export type FormItem = Omit<SetlistItem, 'key' | 'reference' | 'scripture' | 'no
 export type SetlistItem = {
   type: ItemType;
   order: number;
+
   // Song (only for SONG items)
-  songId: string | null;
+  song: SongSearchItem | null;
+
   // Music
   key: string | null;
   bpm: number | null;
@@ -103,7 +108,7 @@ export type UpdateSectionField = (sectionId: string, key: keyof Pick<FormSection
 
 export type AddItem = (sectionId: string, type?: ItemType) => void;
 
-export type EditableItemField = Pick<FormItem, 'type' | 'songId' | 'song' | 'key' | 'bpm' | 'timeSignature' | 'duration' | 'reference' | 'scripture' | 'notes'>;
+export type EditableItemField = Pick<FormItem, 'order' | 'id' | 'type' | 'song' | 'key' | 'bpm' | 'timeSignature' | 'duration' | 'reference' | 'scripture' | 'notes'>;
 export type UpdateItemField = (sectionId: string, itemId: string, key: keyof EditableItemField, value: EditableItemField[keyof EditableItemField]) => void;
 
 export type RemoveItem = (sectionId: string, itemId: string) => void;

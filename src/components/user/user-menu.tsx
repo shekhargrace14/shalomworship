@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { logout } from '@/lib/auth/logout';
 import { AuthDailog } from '../auth/auth-dailog';
+import { ModeToggle } from '../ModeToggle';
 
 type UserMenuProps = {
   user?: {
@@ -95,6 +96,9 @@ export default function UserMenu({ user }: UserMenuProps) {
                 </Link>
               </DropdownMenuItem> */}
             </DropdownMenuGroup>
+            <DropdownMenuGroup>
+              <ModeToggle />
+            </DropdownMenuGroup>
 
             <DropdownMenuSeparator />
 
@@ -123,6 +127,9 @@ export default function UserMenu({ user }: UserMenuProps) {
                 Create Account
               </Link>
             </DropdownMenuItem>
+            <DropdownMenuGroup>
+              <ModeToggle />
+            </DropdownMenuGroup>
           </>
         )}
       </DropdownMenuContent>

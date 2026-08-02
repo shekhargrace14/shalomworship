@@ -44,7 +44,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
         return;
       }
       setUser(data.user);
-      router.replace('/');
+      toast.success(data.message);
       router.refresh();
     } catch (error: any) {
       toast.error(error + 'something went wrong');
@@ -63,7 +63,9 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
 
         <CardContent>
           <FieldGroup>
-            <GoogleSignInButton />
+            <div className="flex items-center justify-center gap-4 overflow-hidden">
+              <GoogleSignInButton />
+            </div>
             <div className="flex items-center gap-4">
               <div className="h-px flex-1 bg-border" />
 

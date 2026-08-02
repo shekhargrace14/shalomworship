@@ -1,8 +1,11 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
+import { toast } from 'sonner';
 
 export default function GoogleSignInButton() {
+  const router = useRouter();
   const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,7 +32,11 @@ export default function GoogleSignInButton() {
           }
 
           // Same as your current flow
+
+          toast.success(data.message);
           window.location.reload();
+          window.location.href = '/';
+          // router.push("/"); router.replace("/"); these doest work with window.location.reload();  window.location.href = "/";
         } catch (error) {
           console.error(error);
         }

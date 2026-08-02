@@ -115,8 +115,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Google Ads (Auto Ads) */}
         <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7686801812294972" crossOrigin="anonymous" strategy="afterInteractive" />
+
         {/* ahref analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></script>
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="hnhwlfthgV6eO+yCDb8wKg" async></Script>
 
         {/* Google Identity Services script */}
         <Script src="https://accounts.google.com/gsi/client" strategy="afterInteractive" />

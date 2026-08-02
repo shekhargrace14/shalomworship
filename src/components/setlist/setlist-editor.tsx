@@ -23,7 +23,6 @@ function createItem(type: ItemType = 'SONG'): FormItem {
 
     order: 0,
 
-    songId: null,
     song: null,
 
     key: '',
@@ -95,15 +94,17 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
             const currentSetlist: FullSetlist = json.data;
             const mappedSections: FormSection[] = currentSetlist.sections.map((sec: SetlistSection) => ({
               id: crypto.randomUUID(),
+              order: sec.order,
+
               title: sec.title ?? '',
               notes: sec.notes ?? '',
-              order: sec.order,
               items: sec.items.length
                 ? sec.items.map((item: SetlistItem) => ({
                     ...item,
                     id: crypto.randomUUID(),
+                    order: item.order ?? 0,
 
-                    song: null,
+                    song: item.song,
 
                     key: item.key ?? '',
                     bpm: item.bpm ?? 0,
@@ -180,6 +181,41 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
     );
   }
 
+  function moveItem(sectionId: string, itemId: string, direction: 'up' | 'down') {
+    setSections((prev) =>
+      prev.map((section) => {
+        if (section.id !== sectionId) return section;
+
+        const items = [...section.items];
+
+        const currentIndex = items.findIndex((item) => item.id === itemId);
+
+        if (currentIndex === -1) return section;
+
+        const targetIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
+
+        // Prevent moving past the first/last item
+        if (targetIndex < 0 || targetIndex >= items.length) {
+          return section;
+        }
+
+        // Swap items
+        [items[currentIndex], items[targetIndex]] = [items[targetIndex], items[currentIndex]];
+
+        // Recalculate order
+        const reorderedItems = items.map((item, index) => ({
+          ...item,
+          order: index + 1,
+        }));
+
+        return {
+          ...section,
+          items: reorderedItems,
+        };
+      }),
+    );
+  }
+
   async function handleSubmit() {
     if (!canSave) return;
 
@@ -196,15 +232,17 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
         notes: metadata.notes.trim() || null,
 
         sections: sections.map((section, sectionIndex) => ({
+          id: section.id,
           title: section.title.trim(),
           order: sectionIndex + 1,
           notes: section.notes.trim() || null,
 
           items: section.items.map((item, itemIndex) => ({
+            id: item.id,
             type: item.type,
             order: itemIndex + 1,
 
-            songId: item.type === 'SONG' && item.songId?.trim() ? item.songId.trim() : null,
+            song: item.song,
 
             key: item.key?.trim() || null,
             bpm: item.bpm || null,
@@ -219,7 +257,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
         })),
       };
 
-      console.log(payload.sections, 'SetlistEditor');
+      console.log(payload, 'SetlistEditor');
 
       const res = await fetch(`/api/channel/${channelId}/setlists/${setlistId}`, {
         method: 'PATCH',
@@ -258,7 +296,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
       <div className="p-4 space-y-8 bg-background">
         <SetlistMetadata metadata={metadata} setMetadata={setMetadata} loading={loading} canSave={canSave} handleSubmit={handleSubmit} channelId={channelId} />
 
-        <SectionList sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
+        <SectionList sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
         <div className="flex justify-end">
           <SetlistDelete channelId={channelId} setlistId={setlistId} setlistTitle={metadata.title} />
         </div>

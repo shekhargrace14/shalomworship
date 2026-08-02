@@ -6,4 +6,5 @@ export type SongSearchItem = {
   artist: string;
   status: 'publish' | 'archived' | 'upcoming';
   language: string;
+  key: string;
 };

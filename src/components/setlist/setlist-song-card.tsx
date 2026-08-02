@@ -1,7 +1,5 @@
 'use client';
-import { SongSearchItem } from '@/lib/search/types';
 import { song } from '@prisma/client';
-import { Clock, Dot } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import LinesVersion2 from '../shared/LinesVersion2';
@@ -13,12 +11,9 @@ import { FormItem } from '@/types/setlist';
 import { toast } from 'sonner';
 
 const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
-  console.log(item.key, 'SetlistSongCard');
-  const id = item?.songId;
+  // console.log(item.song, "SetlistSongCard");
+  const id = item?.song?.id;
   const [song, setSong] = useState<song | null>(null);
-
-  const setlistKey = item?.key.replace(/m$/, '');
-  console.log(setlistKey, 'setlistKey SetlistSongCard');
 
   useEffect(() => {
     async function loadSong() {
@@ -39,31 +34,39 @@ const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
 
     loadSong();
   }, [id]);
+
+  const setlistKey = item.key || '';
+  console.log(setlistKey);
+
   return (
     <>
       {type === 'metadata' ? (
         <div className="ml-2 flex flex-nowrap gap-4 w-full items-center justify-between">
-          <Link href={`/song/${song?.slug}-${song?.id}`}>
-            <h3 className="text-md md:text-2xl text-foreground hover:underline ">{song?.title}</h3>
+          <Link href={`/song/${item.song?.slug}-${item.song?.id}`}>
+            <h3 className="text-md md:text-2xl text-foreground hover:underline ">{item.song?.title}</h3>
           </Link>
 
           <div className="flex gap-1 pb-0.5 items-center">
-            {song?.key && (
+            {item?.key && (
               <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
                 <p className="text-xs"> {item.key}</p>
               </Badge>
             )}
-            <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
-              <p className="text-xs">{item.bpm}</p>
-            </Badge>
-            <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
-              <p className="text-xs"> {item.timeSignature}</p>
-            </Badge>
-            <p className="mb-2">.</p>
-            <Badge variant="secondary" className="bg-transparent text-muted-foreground h-4.5 flex min-w-14 items-center justify-start gap-1 px-2 py-1">
+            {item?.bpm && (
+              <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
+                <p className="text-xs">{item.bpm}</p>
+              </Badge>
+            )}
+            {item?.timeSignature && (
+              <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
+                <p className="text-xs"> {item.timeSignature}</p>
+              </Badge>
+            )}
+            {/* <p className="mb-2">.</p> */}
+            {/* <Badge variant="secondary" className="bg-transparent text-muted-foreground h-4.5 flex min-w-14 items-center justify-start gap-1 px-2 py-1">
               <Clock className="h-2 w-2 text-accent" />
               <p className="text-xs text-primary"> {item.duration}</p>
-            </Badge>
+            </Badge> */}
           </div>
         </div>
       ) : (

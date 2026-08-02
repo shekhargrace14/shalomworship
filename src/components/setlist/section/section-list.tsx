@@ -21,8 +21,9 @@ type Props = {
   updateItemField: UpdateItemField;
 
   removeItem: RemoveItem;
+  moveItem: any;
 };
-const SectionList = ({ sections, addSection, removeSection, updateSectionField, addItem, updateItemField, removeItem }: Props) => {
+const SectionList = ({ sections, addSection, removeSection, updateSectionField, addItem, updateItemField, removeItem, moveItem }: Props) => {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -46,19 +47,19 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
                 <div className=" space-y-6  ">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
-                      <Label>Section Title</Label>
+                      <Label className="text-sm text-muted-foreground">Section Title</Label>
                       <Input placeholder="Verse 1" value={section.title} onChange={(e) => updateSectionField(section.id, 'title', e.target.value)} />
                     </div>
 
                     <div className="space-y-2">
-                      <Label>Section Notes</Label>
+                      <Label className="text-sm text-muted-foreground">Section Notes</Label>
                       <Input placeholder="Optional notes for this section" value={section.notes} onChange={(e) => updateSectionField(section.id, 'notes', e.target.value)} />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <SectionCard section={section} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
+            <SectionCard section={section} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
           </div>
         ))}
       </div>

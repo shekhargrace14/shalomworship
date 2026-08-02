@@ -32,10 +32,8 @@ function createItem(type: ItemType = 'SONG'): FormItem {
   return {
     id: crypto.randomUUID(),
     type,
-
     order: 0,
 
-    songId: null,
     song: null,
 
     key: '',
@@ -45,7 +43,6 @@ function createItem(type: ItemType = 'SONG'): FormItem {
 
     reference: '',
     scripture: '',
-
     notes: '',
   };
 }
@@ -151,7 +148,7 @@ export default function SectionEdit({ channelId, data }: { channelId: string; da
     );
   }
 
-  function updateItemField(sectionId: string, itemId: string, key: keyof Pick<FormItem, 'type' | 'songId' | 'notes'>, value: string) {
+  function updateItemField(sectionId: string, itemId: string, key: keyof Pick<FormItem, 'type' | 'song' | 'notes'>, value: string) {
     setSections((prev) =>
       prev.map((section) =>
         section.id === sectionId
@@ -185,7 +182,7 @@ export default function SectionEdit({ channelId, data }: { channelId: string; da
           items: section.items.map((item, itemIndex) => ({
             type: item.type,
             order: itemIndex + 1,
-            songId: item.type === 'SONG' && item.songId?.trim() ? item.songId.trim() : null,
+            song: item.song || '',
             notes: item.notes.trim() || null,
           })),
         })),
@@ -306,18 +303,18 @@ export default function SectionEdit({ channelId, data }: { channelId: string; da
                               </SelectContent>
                             </Select>
                           </div>
-
+                          {/* 
                           {item.type === 'SONG' ? (
                             <div className="space-y-2 md:col-span-2">
                               <Label>Song ID</Label>
-                              <Input placeholder="Paste song id here" value={item.songId || ''} onChange={(e) => updateItemField(section.id, item.id, 'songId', e.target.value)} />
+                              <Input placeholder="Paste song id here" value={item.song || ''} onChange={(e) => updateItemField(section.id, item.id, 'songId', e.target.value)} />
                             </div>
-                          ) : (
-                            <div className="space-y-2 md:col-span-2">
-                              <Label>{item.type === 'NOTE' ? 'Note' : 'Scripture'}</Label>
-                              <Input placeholder={item.type === 'NOTE' ? 'Short note for this item' : 'Bible reference or scripture text'} value={item.notes} onChange={(e) => updateItemField(section.id, item.id, 'notes', e.target.value)} />
-                            </div>
-                          )}
+                          ) : ( */}
+                          <div className="space-y-2 md:col-span-2">
+                            <Label>{item.type === 'NOTE' ? 'Note' : 'Scripture'}</Label>
+                            <Input placeholder={item.type === 'NOTE' ? 'Short note for this item' : 'Bible reference or scripture text'} value={item.notes} onChange={(e) => updateItemField(section.id, item.id, 'notes', e.target.value)} />
+                          </div>
+                          {/* )} */}
 
                           <div className="space-y-2 md:col-span-1">
                             <Label>Order</Label>

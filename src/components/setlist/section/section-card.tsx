@@ -16,12 +16,13 @@ type Props = {
   addItem: any;
   updateItemField: UpdateItemField;
   removeItem: any;
+  moveItem: any;
 };
 
-const SectionCard = ({ section, updateSectionField, addItem, updateItemField, removeItem }: Props) => {
+const SectionCard = ({ section, updateSectionField, addItem, updateItemField, removeItem, moveItem }: Props) => {
   return (
     <div className="pl-4">
-      <ItemList section={section} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} />
+      <ItemList section={section} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
     </div>
   );
 };

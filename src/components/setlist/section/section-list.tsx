@@ -7,6 +7,9 @@ import { AddItem, FormSection, RemoveItem, UpdateItemField, UpdateSectionField }
 import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { toast } from 'sonner';
 
 type Props = {
   sections: FormSection[];
@@ -22,8 +25,10 @@ type Props = {
 
   removeItem: RemoveItem;
   moveItem: any;
+  handleSubmit: any;
 };
-const SectionList = ({ sections, addSection, removeSection, updateSectionField, addItem, updateItemField, removeItem, moveItem }: Props) => {
+const SectionList = ({ sections, addSection, removeSection, updateSectionField, addItem, updateItemField, removeItem, moveItem, handleSubmit }: Props) => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -39,10 +44,53 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
               <div className="overflow-hidden gap-0 rounded-t-xl bg-card px-4 py-6">
                 <div className="flex flex-row items-center justify-end gap-4">
                   {/* <GripVertical className="h-4 w-4 text-muted-foreground" /> */}
+                  <Dialog open={open} onOpenChange={setOpen}>
+                    <DialogTrigger asChild>
+                      <Button type="button" variant="ghost" size="icon">
+                        <Trash2 className="h-4 w-4 text-destructive" />
+                      </Button>
+                    </DialogTrigger>
 
-                  <Button type="button" variant="ghost" size="icon" onClick={() => removeSection(section.id)}>
-                    <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button>
+                    <DialogContent className="sm:max-w-md">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center gap-2">
+                          <Trash2 className="h-5 w-5 text-destructive" />
+                          Delete Section
+                        </DialogTitle>
+
+                        <DialogDescription>
+                          Are you sure you want to delete this section?
+                          <br />
+                          <span className="font-medium text-foreground">
+                            This action cannot be undone.
+                          </span>
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <DialogFooter className="flex justify-end gap-2">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={() => setOpen(false)}
+                        >
+                          Cancel
+                        </Button>
+
+                        <Button
+                          type="button"
+                          variant="destructive"
+                          onClick={() => {
+                            removeSection(section.id);
+                            setOpen(false);
+                            toast.success("Section deleted")
+                          }}
+                        >
+                          <Trash2 className="mr-2 h-4 w-4" />
+                          Delete Section
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </div>
                 <div className=" space-y-6  ">
                   <div className="grid gap-4 md:grid-cols-2">
@@ -59,12 +107,12 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
                 </div>
               </div>
             </div>
-            <SectionCard section={section} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
+            <SectionCard handleSubmit={handleSubmit} section={section} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
           </div>
         ))}
       </div>
       <div className="flex border border-dashed h-40 rounded-md items-center  justify-center  ">
-        <Button type="button" variant="outline" onClick={addSection}>
+        <Button type="button" variant="outline" onClick={() => { addSection(), handleSubmit() }}>
           <Plus className="mr-2 h-4 w-4" />
           Add Section
         </Button>

@@ -82,12 +82,12 @@ export default function UserMenu({ user }: UserMenuProps) {
                 </Link>
               </DropdownMenuItem>
 
-              <DropdownMenuItem asChild>
+              {/* <DropdownMenuItem asChild>
                 <Link href="/user/channel">
                   <TvMinimal className="mr-2 h-4 w-4 text-primary" />
                   My Channels
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
 
               {/* <DropdownMenuItem asChild>
                 <Link href="/dashboard">

@@ -5,8 +5,8 @@ import { useParams, useRouter } from 'next/navigation';
 import { EditableItemField, FormItem, FormSection, FullSetlist, ItemType, Metadata, Setlist, SetlistItem, SetlistSection, Visibility } from '@/types/setlist';
 import { Save } from 'lucide-react';
 import { Button } from '../ui/button';
-import SetlistMetadata from './setlist-metadata';
-import { SetlistDelete } from './setlist-delete';
+import SetlistMetadata from './setlist-edit-metadata';
+import { SetlistButtonDelete} from './button/setlist-button-delete';
 // import SectionList from './section/section-list';
 import { toast } from 'sonner';
 import { useChannelStore } from '@/store/useChannelStore';
@@ -296,9 +296,9 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
       <div className="p-4 space-y-8 bg-background">
         <SetlistMetadata metadata={metadata} setMetadata={setMetadata} loading={loading} canSave={canSave} handleSubmit={handleSubmit} channelId={channelId} />
 
-        <SectionList sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
+        <SectionList handleSubmit={handleSubmit} sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
         <div className="flex justify-end">
-          <SetlistDelete channelId={channelId} setlistId={setlistId} setlistTitle={metadata.title} />
+          <SetlistButtonDelete channelId={channelId} setlistId={setlistId} setlistTitle={metadata.title} />
         </div>
       </div>
     </>

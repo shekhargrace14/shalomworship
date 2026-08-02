@@ -11,29 +11,31 @@ import { FormItem } from '@/types/setlist';
 import { toast } from 'sonner';
 
 const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
-  // console.log(item.song, "SetlistSongCard");
-  const id = item?.song?.id;
   const [song, setSong] = useState<song | null>(null);
+  if (item.song?.id) {
+    const id = item?.song?.id;
+    useEffect(() => {
+      async function loadSong() {
+        try {
+          const res = await fetch(`/api/song/${id}`);
 
-  useEffect(() => {
-    async function loadSong() {
-      try {
-        const res = await fetch(`/api/song/${id}`);
+          if (!res.ok) {
+            toast.error('Failed to fetch song' + item.song?.title);
+            throw new Error('Failed to fetch song');
+          }
 
-        if (!res.ok) {
-          toast.error('Failed to fetch song');
-          throw new Error('Failed to fetch song');
+          const data = await res.json();
+          setSong(data.data);
+        } catch (error) {
+          console.error(error);
         }
-
-        const data = await res.json();
-        setSong(data.data);
-      } catch (error) {
-        console.error(error);
       }
-    }
 
-    loadSong();
-  }, [id]);
+      loadSong();
+    }, [id]);
+  }
+
+
 
   const setlistKey = item.key || '';
   console.log(setlistKey);

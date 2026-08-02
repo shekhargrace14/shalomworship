@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
@@ -24,32 +25,11 @@ type Props = {
 };
 
 const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => {
-  // console.log(section);
-  // const [song, setSong] = useState<song | null>(null);
-  // const [songId, setSongId] = useState<string | null>(null);
-  // useEffect(() => {
-  //   async function loadSong() {
-  //     try {
-  //       const res = await fetch(`/api/song/${songId}`);
-
-  //       if (!res.ok) {
-  //         toast.error('Failed to fetch song');
-  //         throw new Error('Failed to fetch song');
-  //       }
-  //       const data = await res.json();
-  //       setSong(data.data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-
-  //   loadSong();
-  // }, [songId]);
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <div className="space-y-3 ">
         {section.items.map((item, itemIndex) => {
-          // setSongId(item.songId)
           const isFirst = itemIndex === 0;
           const isLast = itemIndex === section.items.length - 1;
           return (
@@ -178,9 +158,56 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                 <Input className="w-full md:w-[80%]" placeholder="Duration" value={item.duration || ''} onChange={(e) => updateItemField(section.id, item.id, 'duration', e.target.value)} />
               </div> */}
                   </div>
-                  <Button type="button" variant="ghost" size="icon" onClick={() => removeItem(section.id, item.id)}>
+                  {/* <Button type="button" variant="ghost" size="icon" onClick={() => removeItem(section.id, item.id)}>
                     <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button>
+                  </Button> */}
+                  <Dialog open={open} onOpenChange={setOpen}>
+                    <DialogTrigger asChild>
+                      <Button type="button" variant="ghost" size="icon">
+                        <Trash2 className="h-4 w-4 text-destructive" />
+                      </Button>
+                    </DialogTrigger>
+
+                    <DialogContent className="sm:max-w-md">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center gap-2">
+                          <Trash2 className="h-5 w-5 text-destructive" />
+                          Delete Item
+                        </DialogTitle>
+
+                        <DialogDescription>
+                          Are you sure you want to delete this Item?
+                          <br />
+                          <span className="font-medium text-foreground">
+                            This action cannot be undone.
+                          </span>
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <DialogFooter className="flex justify-end gap-2">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={() => setOpen(false)}
+                        >
+                          Cancel
+                        </Button>
+
+                        <Button
+                          type="button"
+                          variant="destructive"
+                          onClick={() => {
+                            removeItem(section.id, item.id);
+                            setOpen(false);
+                            toast.success("Item deleted")
+                          }}
+                        >
+                          <Trash2 className="mr-2 h-4 w-4" />
+                          Delete Item
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </CollapsibleContent>
               </div>
             </Collapsible>

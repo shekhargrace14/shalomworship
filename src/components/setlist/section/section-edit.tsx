@@ -92,8 +92,8 @@ export default function SectionEdit({ channelId, data }: { channelId: string; da
                       id: item.id || crypto.randomUUID(),
                       type: (item.type as ItemType) || 'SONG',
 
-                      songId: item.songId || '',
 
+                      song: item.song || '',
                       key: item.key || '',
                       bpm: item.bpm || '',
                       timeSignature: item.timeSignature || '',
@@ -220,10 +220,10 @@ export default function SectionEdit({ channelId, data }: { channelId: string; da
             <p className="text-sm text-muted-foreground">Add verses, choruses, notes, and scripture blocks.</p>
           </div>
 
-          <Button type="button" variant="outline" onClick={addSection}>
+          {/* <Button type="button" variant="outline" onClick={()=>{handleSubmit(), addSection()}}>
             <Plus className="mr-2 h-4 w-4" />
             Add Section
-          </Button>
+          </Button> */}
         </div>
 
         <div className="space-y-4">

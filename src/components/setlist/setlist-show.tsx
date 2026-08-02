@@ -15,6 +15,7 @@ import { useRouter } from 'next/navigation';
 import { useSetlistStore } from '@/store/useSetlistStore';
 import { Spinner } from '../ui/spinner';
 import ShowSetlist from './ShowSetlist';
+import ButtonShare from '../shared/button-share';
 
 interface Props {
   setlist: Setlist | null;
@@ -31,13 +32,18 @@ export default function SetlistShow({ setlist }: Props) {
   const songRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   return (
-    <div className="mx-auto w-full max-w-6xl rounded-2xl p-0 overflow-hidden">
+    <div className="relative mx-auto w-full max-w-6xl rounded-2xl p-0 overflow-hidden">
       <div
         className="bg-background p-4 py-8 pt-24 md:pt-40 "
         style={{
           backgroundImage: `linear-gradient(to bottom,  oklch(68.699% 0.11763 191.228), transparent)`,
         }}
       >
+                    <div 
+            className="absolute right-4 top-4 "
+            >
+          <ButtonShare/>
+      </div>
         <div className="flex flex-col md:flex-row justify-between md:items-end  h-40 md:h-fit">
           <div className="">
             <h1 className="text-3xl md:text-4xl tracking-tight font-medium ">{setlist.title}</h1>
@@ -87,7 +93,7 @@ export default function SetlistShow({ setlist }: Props) {
                 <div
                   className=" p-4 bg-card border-l-4 border-primary rounded-xl"
                   onClick={() => {
-                    const songIds = section.items.filter((item: any) => item.type === 'SONG').map((item: any) => item.songId);
+                    const songIds = section.items.filter((item: any) => item.type === 'SONG').map((item: any) => item.song.id);
 
                     setOpenSongIds((prev) => {
                       const allOpen = songIds.every((id: string) => prev.includes(id));
@@ -105,12 +111,14 @@ export default function SetlistShow({ setlist }: Props) {
                   <h2 className="text-xl tracking-wide">{section.title || 'Songs'}</h2>
                   {section.notes && <p className="mt-1 text-sm text-muted-foreground">{section.notes}</p>}
                 </div>
+
+                {/* ITEMS */}
                 <div className="space-y-3 ">
                   {section.items?.map((item: any, itemIndex: number) => (
                     <div key={itemIndex} className="transition-colors group space-y-4">
                       <div
                         ref={(el) => {
-                          songRefs.current[item.songId] = el;
+                          songRefs.current[item.song?.id] = el;
                         }}
                         className="pl-2 md:pl-4 w-full flex flex-col gap-8"
                         onClick={(e) => {
@@ -118,9 +126,9 @@ export default function SetlistShow({ setlist }: Props) {
 
                           setOpenSongIds(
                             (prev) =>
-                              prev.includes(item.songId)
-                                ? prev.filter((id) => id !== item.songId) // close
-                                : [...prev, item.songId], // open
+                              prev.includes(item.song.id)
+                                ? prev.filter((id) => id !== item.song.id) // close
+                                : [...prev, item.song.id], // open
                           );
                         }}
                       >
@@ -134,14 +142,14 @@ export default function SetlistShow({ setlist }: Props) {
                               </div>
                             )}
                           </div>
-                          {item.type === 'SONG' && openSongIds.includes(item.songId) && (
+                          {item.type === 'SONG' && openSongIds.includes(item?.song?.id) && (
                             <>
                               <p className="text-sm text-muted-foreground ml-2">{item.notes}</p>
                               {item.scripture && <p className="text-sm text-muted-foreground ml-2 italic">"{item.scripture}"</p>}
                               <p className="text-sm text-muted-foreground ml-2 italic text-end">{item.reference}</p>
                             </>
                           )}
-                          {item.type === 'SCRIPTURE' && openSongIds.includes(item.songId) && (
+                          {item.type === 'SCRIPTURE' && openSongIds.includes(item.song.id) && (
                             <>
                               <p className="text-sm text-muted-foreground ml-2">{item.notes}</p>
                               <p className="text-sm text-muted-foreground ml-2 italic">"{item.scripture}"</p>
@@ -150,7 +158,7 @@ export default function SetlistShow({ setlist }: Props) {
                           )}
                         </div>
                       </div>
-                      {item.type === 'SONG' && openSongIds.includes(item.songId) && (
+                      {item.type === 'SONG' && openSongIds.includes(item?.song?.id) && (
                         <>
                           <SetlistSongCard item={item} />
                           <div className="flex justify-end">
@@ -159,10 +167,10 @@ export default function SetlistShow({ setlist }: Props) {
                               onClick={(e) => {
                                 e.stopPropagation();
 
-                                const container = songRefs.current[item.songId];
+                                const container = songRefs.current[item.song.id];
                                 if (!container) return;
 
-                                setOpenSongIds((prev) => prev.filter((id) => id !== item.songId));
+                                setOpenSongIds((prev) => prev.filter((id) => id !== item.song.id));
 
                                 setTimeout(() => {
                                   container.scrollIntoView({

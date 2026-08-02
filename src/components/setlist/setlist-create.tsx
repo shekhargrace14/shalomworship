@@ -36,7 +36,6 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
 
   async function handleCreate() {
     if (!title.trim()) return;
-
     try {
       setLoading(true);
 

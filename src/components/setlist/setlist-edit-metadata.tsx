@@ -12,6 +12,7 @@ import { Separator } from '../ui/separator';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
 import { Metadata } from '@/types/setlist';
+import ButtonShare from '../shared/button-share';
 
 type Props = {
   metadata: Metadata;
@@ -126,46 +127,6 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
             </div>
           </CardContent>
         </Card>
-
-        {/* <Card>
-          <CardHeader>
-            <CardTitle>Visibility</CardTitle>
-          </CardHeader>
-
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <Label>Status</Label>
-              <Select value={visibility} onValueChange={(value) => setVisibility(value as Visibility)}>
-              <Select
-                value={metadata.visibility}
-                onValueChange={(value) =>
-                  setMetadata((prev) => ({
-                    ...prev,
-                    visibility: value as Visibility,
-                  }))
-                }
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select visibility" />
-                </SelectTrigger>
-
-                <SelectContent>
-                  <SelectItem value="PRIVATE">Private</SelectItem>
-                  <SelectItem value="PUBLIC">Public</SelectItem>
-                  <SelectItem value="UNLISTED">Unlisted</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <Separator />
-
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <p>Private: only you and your team can see it.</p>
-              <p>Public: shareable by link and visible if published.</p>
-              <p>Unlisted: accessible with the direct link only.</p>
-            </div>
-          </CardContent>
-        </Card> */}
       </div>
     </div>
   );

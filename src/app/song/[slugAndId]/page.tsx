@@ -19,7 +19,7 @@ import VideoPlayer from '@/components/VideoPlayer';
 import { Badge } from '@/components/ui/badge';
 import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
 import { getAllSongsBasic, getSong } from '@/lib/static';
-import { AutoPopup } from '@/components/AutoPopup';
+import { AutoPopup } from '@/components/dialogs/AutoPopup';
 import BookmarkSong from '@/components/setlist/Bookmark';
 import { LyricsRenderer } from '@/components/song/LyricsRenderer';
 import LinesVersion4 from '@/components/shared/LinesVersion4';

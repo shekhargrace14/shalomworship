@@ -16,6 +16,7 @@ import { useSetlistStore } from '@/store/useSetlistStore';
 import { Spinner } from '../ui/spinner';
 import ShowSetlist from './ShowSetlist';
 import ButtonShare from '../shared/button-share';
+import { SetlistButton } from './button/setlist-button';
 
 interface Props {
   setlist: Setlist | null;
@@ -30,6 +31,7 @@ export default function SetlistShow({ setlist }: Props) {
   const isUserSetlist = channelAllSetlists.some((s) => s.id === setlist.id);
 
   const songRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const isAuthenticated = useAuthStore((store) => store.isAuthenticated);
 
   return (
     <div className="relative mx-auto w-full max-w-6xl rounded-2xl p-0 overflow-hidden">
@@ -60,19 +62,23 @@ export default function SetlistShow({ setlist }: Props) {
             </div>
           </div>
           <div className="flex justify-end">
-            <Button
-              variant={isUserSetlist ? 'default' : 'secondary'}
-              onClick={() => {
-                if (!isUserSetlist) {
-                  toast.info('Editing is currently limited to the logged-in creator of this setlist. Team collaboration will be available soon.');
-                  return;
-                }
-                router.push(`/user/setlist/edit?id=${setlist.id}`);
-              }}
-            >
-              <Edit className="mr-2 h-4 w-4" />
-              Edit Setlist
-            </Button>
+            {isAuthenticated ? (
+              <Button
+                variant={isUserSetlist ? 'default' : 'secondary'}
+                onClick={() => {
+                  if (!isUserSetlist) {
+                    toast.info('Editing is currently limited to the logged-in creator of this setlist. Team collaboration will be available soon.');
+                    return;
+                  }
+                  router.push(`/user/setlist/edit?id=${setlist.id}`);
+                }}
+              >
+                <Edit className="mr-2 h-4 w-4" />
+                Edit Setlist
+              </Button>
+            ) : (
+              <SetlistButton />
+            )}
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ export function SetlistButton() {
     <>
       <Button onClick={handleClick}>
         <Plus className="mr-2 h-4 w-4" />
-        Create Setlist
+        {!isAuthenticated ? 'Create Your Own' : 'Create Setlist'}
       </Button>
       <LoginRequiredModal open={openLogin} onOpenChange={setOpenLogin} />
       <SetlistCreate open={openCreate} onOpenChange={setOpenCreate} />

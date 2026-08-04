@@ -257,8 +257,6 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
         })),
       };
 
-      console.log(payload, 'SetlistEditor');
-
       const res = await fetch(`/api/channel/${channelId}/setlists/${setlistId}`, {
         method: 'PATCH',
         headers: {

@@ -1,15 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { SetlistButton } from '../setlist/button/setlist-button';
 import { X } from 'lucide-react';
-
-import EventSection from './event/EventSection';
-import Social from './ui/Social';
-import Link from 'next/link';
-import { Button } from './ui/button';
 
 type Props = {
   data?: any[];
@@ -43,26 +37,12 @@ export function AutoPopup() {
           <X className="h-4 w-4" />
         </button>
 
-        <DialogHeader>
-          <DialogTitle>Connect with us</DialogTitle>
+        <DialogHeader className="flex flex-col items-center">
+          <DialogTitle>Worship Prepration Made Easy</DialogTitle>
+          <DialogDescription>Try our Setlist feauture</DialogDescription>
+          {/* <SetlistCard setlist={setlist} href={`/user/setlist/view?id=${setlist?.id}`} /> */}
         </DialogHeader>
-
-        {/* Email */}
-        <a
-          href="mailto:connect@shalomworship.com"
-          className="
-            text-sm
-            text-muted-foreground
-            transition-colors
-            hover:text-foreground
-          "
-        >
-          connect@shalomworship.com
-        </a>
-
-        <Link href="/submission" className="text-sm font-medium transition-colors hover:text-primary cursor-pointer">
-          <Button>Contact Us</Button>
-        </Link>
+        <SetlistButton />
       </DialogContent>
     </Dialog>
   );

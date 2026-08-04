@@ -36,7 +36,6 @@ const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
   }
 
   const setlistKey = item.key || '';
-  console.log(setlistKey);
 
   return (
     <>

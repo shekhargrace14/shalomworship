@@ -11,7 +11,7 @@ import {
   // getAllEvents,
   getAllSongs,
 } from '@/lib/static';
-import { AutoPopup } from '@/components/AutoPopup';
+import { AutoPopup } from '@/components/dialogs/AutoPopup';
 import EventSection from '@/components/event/EventSection';
 import ChannelSection from '@/components/channel/channel-section';
 import SongSection from '@/components/song/song-section';

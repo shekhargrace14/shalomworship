@@ -19,7 +19,7 @@ import VideoPlayer from '@/components/VideoPlayer';
 import { Badge } from '@/components/ui/badge';
 import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
 import { getAllSongsBasic, getSong } from '@/lib/static';
-import { AutoPopup } from '@/components/AutoPopup';
+import { AutoPopup } from '@/components/dialogs/AutoPopup';
 import BookmarkSong from '@/components/setlist/Bookmark';
 import { LyricsRenderer } from '@/components/song/LyricsRenderer';
 import LinesVersion4 from '@/components/shared/LinesVersion4';
@@ -90,7 +90,7 @@ const Song = async ({ params }: any) => {
           <div className=" relative sm:w-8/12 grid gap-2">
             <h1 className=" text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
             <div className="absolute top-2 right-2 inline ">
-              {songData && (
+              {/* {songData && (
                 <BookmarkSong
                   song={{
                     id: songData.id,
@@ -102,9 +102,8 @@ const Song = async ({ params }: any) => {
                     language: songData.language ?? '',
                   }}
                 />
-              )}
+              )} */}
             </div>
-
             {/* CHANNEL */}
             <div className="flex flex-wrap gap-2">
               {channel ? (

@@ -22,7 +22,7 @@ type Props = {
 
 const SectionCard = ({ section, updateSectionField, addItem, updateItemField, removeItem, moveItem, handleSubmit }: Props) => {
   return (
-    <div className="pl-4">
+    <div className="md:pl-8">
       <ItemList section={section} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} handleSubmit={handleSubmit} />
     </div>
   );

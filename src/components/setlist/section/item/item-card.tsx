@@ -12,7 +12,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import SearchSong from '@/components/search/search-song';
 import { FormItem, FormSection, ItemType, RemoveItem, UpdateItemField } from '@/types/setlist';
-import { ArrowDown, ArrowUp, Trash2 } from 'lucide-react';
+import { ArrowDown, ArrowUp, EllipsisVertical, Trash2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { song } from '@prisma/client';
 import { toast } from 'sonner';
@@ -25,6 +25,7 @@ type Props = {
 };
 
 const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => {
+  const [openActionId, setOpenActionId] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -38,8 +39,8 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                 <CollapsibleTrigger asChild>
                   <div className="w-full mb-4 flex items-center justify-between">
                     <span className="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{itemIndex + 1}</span>
-                    <h3 className="w-full">{item.type === 'SONG' ? `Song - ${item.song?.title ?? 'Select a song'}` : item.type === 'SCRIPTURE' ? 'Scripture' : 'Note'}</h3>
-                    <div className="w-full flex items-center justify-end gap-3">
+                    <h3 className="w-full line-clamp-1">{item.type === 'SONG' ? `Song - ${item.song?.title ?? 'Select a song'}` : item.type === 'SCRIPTURE' ? 'Scripture' : 'Note'}</h3>
+                    {/* <div className="w-1/4 flex items-center justify-end gap-3 ">
                       <Button
                         type="button"
                         size="icon"
@@ -65,6 +66,89 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                         }}
                       >
                         <ArrowDown />
+                      </Button>
+                    </div> */}
+
+                    <div className="flex items-center justify-end gap-2">
+                      <div className={`flex items-center overflow-hidden transition-all duration-300 ${openActionId === item.id ? 'max-w-40 opacity-100' : 'max-w-0 opacity-0'}`}>
+                        <Dialog open={open} onOpenChange={setOpen}>
+                          <DialogTrigger asChild>
+                            <Button type="button" variant="ghost" size="icon">
+                              <Trash2 className="h-4 w-4 text-destructive" />
+                            </Button>
+                          </DialogTrigger>
+
+                          <DialogContent className="sm:max-w-md">
+                            <DialogHeader>
+                              <DialogTitle className="flex items-center gap-2">
+                                <Trash2 className="h-5 w-5 text-destructive" />
+                                Delete Item
+                              </DialogTitle>
+
+                              <DialogDescription>
+                                Are you sure you want to delete this Item?
+                                <br />
+                                <span className="font-medium text-foreground">This action cannot be undone.</span>
+                              </DialogDescription>
+                            </DialogHeader>
+
+                            <DialogFooter className="flex justify-end gap-2">
+                              <Button type="button" variant="outline" onClick={() => setOpen(false)}>
+                                Cancel
+                              </Button>
+
+                              <Button
+                                type="button"
+                                variant="destructive"
+                                onClick={() => {
+                                  removeItem(section.id, item.id);
+                                  setOpen(false);
+                                  toast.success('Item deleted');
+                                }}
+                              >
+                                <Trash2 className="mr-2 h-4 w-4" />
+                                Delete Item
+                              </Button>
+                            </DialogFooter>
+                          </DialogContent>
+                        </Dialog>
+                        <Button
+                          type="button"
+                          size="icon"
+                          variant="ghost"
+                          disabled={isFirst}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            moveItem(section.id, item.id, 'up');
+                          }}
+                        >
+                          <ArrowUp />
+                        </Button>
+
+                        <Button
+                          type="button"
+                          size="icon"
+                          variant="ghost"
+                          disabled={isLast}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            moveItem(section.id, item.id, 'down');
+                          }}
+                        >
+                          <ArrowDown />
+                        </Button>
+                      </div>
+
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={(e) => {
+                          e.stopPropagation();
+
+                          setOpenActionId((prev) => (prev === item.id ? null : item.id));
+                        }}
+                      >
+                        <EllipsisVertical />
                       </Button>
                     </div>
                   </div>
@@ -120,7 +204,7 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                               <Input placeholder="BPM" value={item.bpm || ''} onChange={(e) => updateItemField(section.id, item.id, 'bpm', e.target.value)} />
                             </div>
                             <div className="space-y-2">
-                              <Label className="text-sm text-muted-foreground">Time Signature</Label>
+                              <Label className="text-sm text-muted-foreground">Time</Label>
                               <Input placeholder="Time" value={item.timeSignature || ''} onChange={(e) => updateItemField(section.id, item.id, 'timeSignature', e.target.value)} />
                             </div>
                           </div>
@@ -161,47 +245,6 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                   {/* <Button type="button" variant="ghost" size="icon" onClick={() => removeItem(section.id, item.id)}>
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button> */}
-                  <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger asChild>
-                      <Button type="button" variant="ghost" size="icon">
-                        <Trash2 className="h-4 w-4 text-destructive" />
-                      </Button>
-                    </DialogTrigger>
-
-                    <DialogContent className="sm:max-w-md">
-                      <DialogHeader>
-                        <DialogTitle className="flex items-center gap-2">
-                          <Trash2 className="h-5 w-5 text-destructive" />
-                          Delete Item
-                        </DialogTitle>
-
-                        <DialogDescription>
-                          Are you sure you want to delete this Item?
-                          <br />
-                          <span className="font-medium text-foreground">This action cannot be undone.</span>
-                        </DialogDescription>
-                      </DialogHeader>
-
-                      <DialogFooter className="flex justify-end gap-2">
-                        <Button type="button" variant="outline" onClick={() => setOpen(false)}>
-                          Cancel
-                        </Button>
-
-                        <Button
-                          type="button"
-                          variant="destructive"
-                          onClick={() => {
-                            removeItem(section.id, item.id);
-                            setOpen(false);
-                            toast.success('Item deleted');
-                          }}
-                        >
-                          <Trash2 className="mr-2 h-4 w-4" />
-                          Delete Item
-                        </Button>
-                      </DialogFooter>
-                    </DialogContent>
-                  </Dialog>
                 </CollapsibleContent>
               </div>
             </Collapsible>

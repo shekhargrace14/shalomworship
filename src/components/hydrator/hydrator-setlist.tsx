@@ -9,6 +9,25 @@ export default function HydratorSetlist({ children }: { children: React.ReactNod
   const channelId = currentChannel?.id;
 
   const setChannelAllSetlists = useSetlistStore((state) => state.setChannelAllSetlists);
+  const channelAllSetlists = useSetlistStore((store) => store.channelAllSetlists);
+  useEffect(() => {
+    if (channelAllSetlists.length > 0) return;
+
+    async function loadDemoSetlist() {
+      try {
+        const res = await fetch('/api/setlist/6a6f2fde024a8d346c639919');
+        const data = await res.json();
+
+        if (data.success) {
+          setChannelAllSetlists([data.data]);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    loadDemoSetlist();
+  }, [channelAllSetlists.length, setChannelAllSetlists]);
 
   useEffect(() => {
     async function loadSetlists() {

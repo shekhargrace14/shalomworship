@@ -1,8 +1,5 @@
 'use client';
 import React from 'react';
-import { SetlistButton } from '@/components/setlist/button/setlist-button';
-import SetlistList from '@/components/setlist/setlist-list';
-import { useSetlistStore } from '@/store/useSetlistStore';
 import ChannelList from '@/components/user/channel/channel-list';
 import { useChannelStore } from '@/store/useChannelStore';
 

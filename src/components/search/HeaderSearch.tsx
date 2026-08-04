@@ -50,13 +50,13 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
     }
   }, [pathname]);
 
-  // Auto-focus on page load / return
-  useEffect(() => {
-    const id = requestAnimationFrame(() => {
-      inputRef.current?.focus();
-    });
-    return () => cancelAnimationFrame(id);
-  }, [pathname]); // ✅ correct
+  // // Auto-focus on page load / return
+  // useEffect(() => {
+  //   const id = requestAnimationFrame(() => {
+  //     inputRef.current?.focus();
+  //   });
+  //   return () => cancelAnimationFrame(id);
+  // }, [pathname]); // ✅ correct
 
   function onKeyDown(e: React.KeyboardEvent) {
     if (e.key === 'Enter') {

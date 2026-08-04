@@ -41,32 +41,31 @@ const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
   return (
     <>
       {type === 'metadata' ? (
-        <div className="ml-2 flex flex-nowrap gap-4 w-full items-center justify-between">
-          <Link href={`/song/${item.song?.slug}-${item.song?.id}`}>
-            <h3 className="text-md md:text-2xl text-foreground hover:underline ">{item.song?.title}</h3>
-          </Link>
+        <div className="w-full ml-2 flex items-center justify-between gap-4">
+          <h3 className="line-clamp-1 text-md md:text-2xl text-foreground hover:underline">
+            <Link href={`/song/${item.song?.slug}`} className="flex-1 min-w-0">
+              {item.song?.title}
+            </Link>
+          </h3>
 
-          <div className="flex gap-1 pb-0.5 items-center">
+          <div className="flex shrink-0 items-center gap-1 pb-0.5">
             {item?.key && (
-              <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
-                <p className="text-xs"> {item.key}</p>
+              <Badge variant="secondary" className="h-4.5 min-w-10">
+                {item.key}
               </Badge>
             )}
+
             {item?.bpm && (
-              <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
-                <p className="text-xs">{item.bpm}</p>
+              <Badge variant="secondary" className="h-4.5 min-w-10">
+                {item.bpm}
               </Badge>
             )}
+
             {item?.timeSignature && (
-              <Badge variant="secondary" className="text-muted-foreground h-4.5 flex min-w-10 items-center gap-1 px-2 py-1">
-                <p className="text-xs"> {item.timeSignature}</p>
+              <Badge variant="secondary" className="h-4.5 min-w-10">
+                {item.timeSignature}
               </Badge>
             )}
-            {/* <p className="mb-2">.</p> */}
-            {/* <Badge variant="secondary" className="bg-transparent text-muted-foreground h-4.5 flex min-w-14 items-center justify-start gap-1 px-2 py-1">
-              <Clock className="h-2 w-2 text-accent" />
-              <p className="text-xs text-primary"> {item.duration}</p>
-            </Badge> */}
           </div>
         </div>
       ) : (

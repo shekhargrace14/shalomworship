@@ -90,7 +90,7 @@ const Song = async ({ params }: any) => {
           <div className=" relative sm:w-8/12 grid gap-2">
             <h1 className=" text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
             <div className="absolute top-2 right-2 inline ">
-              {songData && (
+              {/* {songData && (
                 <BookmarkSong
                   song={{
                     id: songData.id,
@@ -102,9 +102,8 @@ const Song = async ({ params }: any) => {
                     language: songData.language ?? '',
                   }}
                 />
-              )}
+              )} */}
             </div>
-
             {/* CHANNEL */}
             <div className="flex flex-wrap gap-2">
               {channel ? (

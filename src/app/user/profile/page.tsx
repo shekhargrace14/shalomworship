@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Heart, ListMusic, Tv, LayoutDashboard, LogOut, ChevronRight } from 'lucide-react';
+import { Heart, ListMusic, Tv, LayoutDashboard, LogOut, ChevronRight, Plus } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,6 +14,10 @@ import { API_URL } from '@/lib/config';
 import { Spinner } from '@/components/ui/spinner';
 import { useAuthStore } from '@/store/useAuthStore';
 import { ModeToggle } from '@/components/ModeToggle';
+import { LoginRequiredModal } from '@/components/auth/LoginRequiredModal';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
+import { logout } from '@/lib/auth/logout';
 
 const menuItems = [
   // {
@@ -45,6 +49,8 @@ const menuItems = [
 
 const page = () => {
   // const [user, setUser] = useState<user | null>(null);
+  const [openLogin, setOpenLogin] = useState(false);
+  const router = useRouter();
 
   const setUser = useAuthStore((s) => s.setUser);
   const user = useAuthStore((s) => s.user);
@@ -71,9 +77,38 @@ const page = () => {
 
     loadUser();
   }, [setUser]);
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const [openCreate, setOpenCreate] = useState(false);
+
+  const handleClick = () => {
+    if (isAuthenticated) {
+      setOpenCreate(true);
+    } else {
+      setOpenLogin(true);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      toast.success('Logged out successfully');
+      router.refresh;
+    } catch (error) {
+      toast.error('Failed to logout');
+    }
+  };
 
   if (!user) {
-    return <Spinner />;
+    return (
+      <div className="flex flex-col gap-4 h-full items-center justify-center">
+        <div className="flex flex-col gap-4 items-center">
+          <p>Please Login</p>
+          <Button onClick={handleClick}>Login</Button>
+          <h3 className="text-muted-foreground text-sm">You are not logged in</h3>
+        </div>
+        <LoginRequiredModal open={openLogin} onOpenChange={setOpenLogin} />
+      </div>
+    );
   }
 
   return (
@@ -94,11 +129,11 @@ const page = () => {
                 <p>{user?.role}</p>
               </CardDescription>
             </div>
-            <Link href={`/user/profile/edit`}>
+            {/* <Link href={`/user/profile/edit`}>
               <Button className="cursor-pointer" variant="outline">
                 Edit Profile
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </CardHeader>
       </Card>
@@ -133,13 +168,7 @@ const page = () => {
         </CardContent>
       </Card>
 
-      <Button
-        variant="destructive"
-        className="w-full"
-        onClick={() => {
-          // logout
-        }}
-      >
+      <Button variant="destructive" className="w-full" onClick={handleLogout}>
         <LogOut className="mr-2 h-4 w-4" />
         Logout
       </Button>

@@ -26,7 +26,8 @@ export default function UserMenu({ user }: UserMenuProps) {
   const handleLogout = async () => {
     try {
       await logout();
-      toast.success('Logged out successfully');
+      // toast.success('Logged out successfully');
+      toast.success('👋 See You Soon');
       router.refresh;
     } catch (error) {
       toast.error('Failed to logout');

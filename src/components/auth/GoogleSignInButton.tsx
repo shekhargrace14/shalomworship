@@ -31,11 +31,10 @@ export default function GoogleSignInButton() {
             throw new Error(data.message);
           }
 
-          // Same as your current flow
-
-          toast.success(data.message);
-          window.location.reload();
-          window.location.href = '/';
+          toast.success('👋 Welcome Back ' + data.data.name);
+          setTimeout(() => {
+            window.location.href = '/';
+          }, 1000);
           // router.push("/"); router.replace("/"); these doest work with window.location.reload();  window.location.href = "/";
         } catch (error) {
           console.error(error);

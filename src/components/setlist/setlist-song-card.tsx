@@ -9,34 +9,20 @@ import { Badge } from '../ui/badge';
 import SubmissionForm from '../SubmissionForm';
 import { FormItem } from '@/types/setlist';
 import { toast } from 'sonner';
+import { useSongCacheStore } from '@/store/useSongCacheStore';
+import { useCachedSong } from '@/hooks/useCachedSong';
 
 const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
-  const [song, setSong] = useState<song | null>(null);
-  if (item.song?.id) {
-    const id = item?.song?.id;
-    useEffect(() => {
-      async function loadSong() {
-        try {
-          const res = await fetch(`/api/song/${id}`);
+  // const [song, setSong] = useState<song | null>(null);
 
-          if (!res.ok) {
-            toast.error('Failed to fetch song' + item.song?.title);
-            throw new Error('Failed to fetch song');
-          }
+  const { song, loading } = useCachedSong(item.song?.id);
 
-          const data = await res.json();
-          setSong(data.data);
-        } catch (error) {
-          console.error(error);
-        }
-      }
-
-      loadSong();
-    }, [id]);
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
+  console.log(song);
   const setlistKey = item.key || '';
-
   return (
     <>
       {type === 'metadata' ? (

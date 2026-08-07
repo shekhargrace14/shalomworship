@@ -148,7 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                           <NavBottom />
                         </HydratorSetlist>
                       </HydratorChannel>
-                      <DevTools />
+                      {/* <DevTools /> */}
                       <Toaster />
                     </div>
                     <Footer />

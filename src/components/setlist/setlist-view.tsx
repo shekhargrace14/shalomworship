@@ -19,6 +19,7 @@ import { useSetlistStore } from '@/store/useSetlistStore';
 
 import ButtonShare from '../shared/button-share';
 import { SetlistButton } from './button/setlist-button';
+import TiptapContent from '../tiptap/tiptap-content';
 
 interface Props {
   setlist: Setlist | null;
@@ -244,8 +245,12 @@ export default function SetlistShow({ setlist }: Props) {
 
                               {isOpen && (
                                 <div className="space-y-2 ml-2">
-                                  {item.notes && <p className="text-sm text-muted-foreground">{item.notes}</p>}
-
+                                  {item.notes && (
+                                    <p className="text-sm text-muted-foreground">
+                                      {/* {item.notes} */}
+                                      <TiptapContent content={item.notes} />
+                                    </p>
+                                  )}
                                   {item.scripture && <p className="text-sm text-muted-foreground italic">"{item.scripture}"</p>}
 
                                   {item.reference && <p className="text-sm text-muted-foreground italic text-end">{item.reference}</p>}

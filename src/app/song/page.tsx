@@ -24,7 +24,7 @@ const page = async () => {
   const songs = await getAllSongs([...CONTENT_VISIBILITY.public]);
 
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-7xl m-auto w-full">
       <SongSection songs={songs} />
     </div>
   );

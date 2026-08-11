@@ -46,7 +46,7 @@ const Page = async ({ params }: any) => {
 
   return (
     <>
-      <div className="bg-background  rounded-lg ">
+      <div className="bg-background  rounded-lg max-w-7xl m-auto w-full ">
         <div
           className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
           style={{

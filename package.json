@@ -40,6 +40,8 @@
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/router": "^0.0.1-beta.53",
     "@tanstack/virtual-core": "^3.13.10",
+    "@tiptap/react": "^3.29.2",
+    "@tiptap/starter-kit": "^3.29.2",
     "analytics": "^0.8.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

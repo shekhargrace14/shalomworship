@@ -113,3 +113,7 @@ export const channelWithDetails = Prisma.validator<Prisma.channelDefaultArgs>()(
 });
 
 export type ChannelWithDetails = Prisma.channelGetPayload<typeof channelWithDetails>;
+
+// Color palette
+
+export const colorPalette = ['var(--palette-1)', 'var(--palette-2)', 'var(--palette-3)', 'var(--palette-4)', 'var(--palette-5)', 'var(--palette-6)', 'var(--palette-7)', 'var(--palette-8)', 'var(--palette-9)', 'var(--palette-10)', 'var(--palette-11)', 'var(--palette-12)'] as const;

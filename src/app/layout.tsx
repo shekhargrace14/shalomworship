@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import Script from 'next/script';
-import OldSidebar from '@/components/OldSidebar';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { SetlistsProvider } from '@/lib/setlist/SetlistsContext';
 // import PwaRegister from "./pwa-register";
@@ -21,6 +20,7 @@ import HydratorChannel from '@/components/hydrator/hydrator-channel';
 import HydratorSetlist from '@/components/hydrator/hydrator-setlist';
 import DevTools from '@/components/monitor';
 import NavBottom from '@/components/navigation/nav-bottom';
+import NavSidebar from '@/components/navigation/nav-sidebar';
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -49,6 +49,16 @@ export const inter = Inter({
 export const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains-mono',
+});
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -108,7 +118,7 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable} ${geistSans.variable} ${geistMono.variable}`}>
       <body className="h-dvh overflow-hidden bg-background">
         {/* Google Analytics */}
         {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-H4QZJK5XEN" />}
@@ -133,12 +143,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Header />
                 </header>
                 <div className="flex-1 min-h-0 flex">
-                  <aside className="hidden lg:block w-1/4 shrink-0 overflow-y-auto rounded-xl ">
-                    <OldSidebar />
-                  </aside>
+                  {/* <aside className="hidden lg:block w-1/4 shrink-0 overflow-y-auto rounded-xl ">
+                    <NavSidebar />
+                  </aside> */}
 
                   <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl pb-16 md:pb-0">
-                    <div className="flex-1 bg-card rounded-xl ">
+                    <div className="flex-1 bg-background rounded-xl ">
                       {/* <Menu /> */}
                       <PwaRegister />
                       <SongSync />

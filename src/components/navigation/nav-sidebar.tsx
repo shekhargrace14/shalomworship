@@ -1,15 +1,16 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import SetlistCreate from './setlist/setlist-create';
-import { useChannelStore } from '@/store/useChannelStore';
-import SetlistList from './setlist/setlist-list';
 import { useSetlistStore } from '@/store/useSetlistStore';
-import { SetlistButton } from './setlist/button/setlist-button';
+import { useChannelStore } from '@/store/useChannelStore';
+import { SetlistButton } from '../setlist/button/setlist-button';
+import SetlistList from '../setlist/setlist-list';
+// import SetlistList from './setlist/setlist-list';
+// import { SetlistButton } from './setlist/button/setlist-button';
 // import Setlist from './setlist/Setlist';
 // import Setlist from './setlist/button/setlist';
 
-const OldSidebar = () => {
+const NavSidebar = () => {
   const setlists = useSetlistStore((state) => state.channelAllSetlists);
   const currentChannel = useChannelStore((state) => state.currentChannel);
   const channelId = currentChannel?.id;
@@ -39,4 +40,4 @@ const OldSidebar = () => {
   );
 };
 
-export default OldSidebar;
+export default NavSidebar;

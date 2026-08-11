@@ -1,6 +1,6 @@
 'use client';
 
-import { Plus, Search, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Input } from '../ui/input';
@@ -100,13 +100,14 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
       <div
         className="
               flex items-center
-              rounded-md border border-input
+              rounded-full border border-input
               bg-background
               transition-all
               focus-within:border-primary
               focus-within:ring-2
               focus-within:ring-primary/40
               focus-within:shadow-md
+              px-2 py-1
             "
       >
         <Search
@@ -132,7 +133,8 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
           onFocus={() => query && setOpen(true)}
           onKeyDown={onKeyDown}
         />
-        {query && (
+
+        {query ? (
           <X
             size={20}
             className=" mr-2 text-2xl text-foreground cursor-pointer"
@@ -141,6 +143,11 @@ export function HeaderSearch({ redirectCheck, setlistId }: HeaderSearchProps) {
               setOpen(false);
             }}
           />
+        ) : (
+          <kbd className="  w-fit px-2 py-1   flex gap-0.5">
+            <p className="text-sm">⌘</p>
+            <p className="text-xs mt-0.5">K</p>
+          </kbd>
         )}
       </div>
       {/* 🔹 Suggestions dropdown */}

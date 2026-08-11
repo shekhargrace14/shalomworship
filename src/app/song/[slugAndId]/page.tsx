@@ -66,7 +66,7 @@ const Song = async ({ params }: any) => {
   const searchVariants = songData?.searchVariant || '';
 
   return (
-    <div className="bg-background  rounded-lg">
+    <div className="bg-background rounded-lg max-w-7xl m-auto w-full">
       <JsonLd id={id} />
       {/* <HydratorBackgroundColor backgroundColor={songData?.color} /> */}
       <div
@@ -88,7 +88,7 @@ const Song = async ({ params }: any) => {
             )}
           </div>
           <div className=" relative sm:w-8/12 grid gap-2">
-            <h1 className=" text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
+            <h1 className=" text-2xl lg:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
             <div className="absolute top-2 right-2 inline ">
               {/* {songData && (
                 <BookmarkSong

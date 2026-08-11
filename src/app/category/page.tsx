@@ -16,7 +16,7 @@ export function generateMetadata() {
 const page = async () => {
   const categories = await getAllCategoriesBasic();
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-7xl m-auto w-full">
       <CategorySection categories={categories} />
     </div>
   );

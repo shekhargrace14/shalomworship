@@ -16,6 +16,7 @@ import { ArrowDown, ArrowUp, EllipsisVertical, Trash2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { song } from '@prisma/client';
 import { toast } from 'sonner';
+import TiptapEditor from '@/components/tiptap/TiptapEditor';
 
 type Props = {
   section: FormSection;
@@ -26,6 +27,7 @@ type Props = {
 
 const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => {
   const [openActionId, setOpenActionId] = useState<string | null>(null);
+  const [deleteItemId, setDeleteItemId] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -40,40 +42,26 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                   <div className="w-full mb-4 flex items-center justify-between">
                     <span className="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{itemIndex + 1}</span>
                     <h3 className="w-full line-clamp-1">{item.type === 'SONG' ? `Song - ${item.song?.title ?? 'Select a song'}` : item.type === 'SCRIPTURE' ? 'Scripture' : 'Note'}</h3>
-                    {/* <div className="w-1/4 flex items-center justify-end gap-3 ">
-                      <Button
-                        type="button"
-                        size="icon"
-                        variant="ghost"
-                        disabled={isFirst}
-                        onClick={(e) => {
-                          (e.stopPropagation(),
-                            // onItemMoveUp(item.id)
-                            moveItem(section.id, item.id, 'up'));
-                        }}
-                      >
-                        <ArrowUp />
-                      </Button>
-                      <Button
-                        type="button"
-                        size="icon"
-                        variant="ghost"
-                        disabled={isLast}
-                        onClick={(e) => {
-                          (e.stopPropagation(),
-                            // onItemMoveDown(item.id)
-                            moveItem(section.id, item.id, 'down'));
-                        }}
-                      >
-                        <ArrowDown />
-                      </Button>
-                    </div> */}
-
                     <div className="flex items-center justify-end gap-2">
                       <div className={`flex items-center overflow-hidden transition-all duration-300 ${openActionId === item.id ? 'max-w-40 opacity-100' : 'max-w-0 opacity-0'}`}>
-                        <Dialog open={open} onOpenChange={setOpen}>
+                        <Dialog
+                          open={deleteItemId === item.id}
+                          onOpenChange={(open) => {
+                            if (!open) {
+                              setDeleteItemId(null);
+                            }
+                          }}
+                        >
                           <DialogTrigger asChild>
-                            <Button type="button" variant="ghost" size="icon">
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="icon"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setDeleteItemId(item.id);
+                              }}
+                            >
                               <Trash2 className="h-4 w-4 text-destructive" />
                             </Button>
                           </DialogTrigger>
@@ -102,7 +90,8 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                                 variant="destructive"
                                 onClick={() => {
                                   removeItem(section.id, item.id);
-                                  setOpen(false);
+                                  setDeleteItemId(null);
+                                  setOpenActionId(null);
                                   toast.success('Item deleted');
                                 }}
                               >
@@ -155,12 +144,6 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <div className="grid  gap-4 grid-cols-1">
-                    {/* ORDER
-              <div className="space-y-2 ">
-                <Label>Order</Label>
-                <Input value={itemIndex + 1} disabled />
-              </div> */}
-
                     {/* TYPE */}
                     <div className="flex flex-col md:flex-row justify-between space-y-1">
                       <Label className="text-sm text-muted-foreground">Type</Label>
@@ -233,18 +216,11 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                     {/* NOTE */}
                     <div className="flex flex-col md:flex-row justify-between space-y-1">
                       <Label className="text-sm text-muted-foreground">Notes</Label>
-                      <Input className="w-full md:w-[80%]" placeholder="Optional notes for the song..." value={item.notes || ''} onChange={(e) => updateItemField(section.id, item.id, 'notes', e.target.value)} />
+                      <div className="w-full md:w-[80%]">
+                        <TiptapEditor value={item.notes} onChange={(json) => updateItemField(section.id, item.id, 'notes', json)} />
+                      </div>
                     </div>
-
-                    {/* DURATION  */}
-                    {/* <div className="flex flex-col md:flex-row justify-between space-y-1">
-                <Label className="text-sm text-muted-foreground">Duration</Label>
-                <Input className="w-full md:w-[80%]" placeholder="Duration" value={item.duration || ''} onChange={(e) => updateItemField(section.id, item.id, 'duration', e.target.value)} />
-              </div> */}
                   </div>
-                  {/* <Button type="button" variant="ghost" size="icon" onClick={() => removeItem(section.id, item.id)}>
-                    <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button> */}
                 </CollapsibleContent>
               </div>
             </Collapsible>

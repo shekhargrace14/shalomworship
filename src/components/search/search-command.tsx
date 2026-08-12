@@ -1,8 +1,7 @@
 'use client';
 
-import { Dialog } from '@radix-ui/react-dialog';
 import { useEffect, useRef, useState } from 'react';
-import { DialogContent, DialogFooter, DialogHeader } from '../ui/dialog';
+import { Dialog, DialogContent, DialogFooter, DialogHeader } from '../ui/dialog';
 import { Search, X } from 'lucide-react';
 import { Input } from '../ui/input';
 import { useRouter } from 'next/navigation';
@@ -36,11 +35,11 @@ export default function SearchCommand({ open, onOpenChange }: any) {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.metaKey && event.key.toLowerCase() === 'k') {
         event.preventDefault();
-        // setOpen(true);
+        onOpenChange(true);
       }
 
       if (event.key === 'Escape') {
-        // setOpen(false);
+        onOpenChange(false);
       }
     }
 
@@ -49,7 +48,7 @@ export default function SearchCommand({ open, onOpenChange }: any) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [onOpenChange]);
 
   function onKeyDown(e: React.KeyboardEvent) {
     if (e.key === 'Enter') {
@@ -131,6 +130,7 @@ export default function SearchCommand({ open, onOpenChange }: any) {
                 className=" mr-2 text-2xl text-foreground cursor-pointer"
                 onClick={() => {
                   setQuery('');
+                  onOpenChange(false);
                 }}
               />
             )}

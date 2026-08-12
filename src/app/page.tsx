@@ -64,7 +64,7 @@ export default async function Home() {
             </p>
           </div>
           {/* <CategorySection number={'-6'} categories={categories} /> */}
-          <LanguageSection number={-6} languages={language} />
+          <LanguageSection number={6} languages={language} />
         </div>
 
         {/* Songs */}

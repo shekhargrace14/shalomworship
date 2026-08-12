@@ -22,10 +22,9 @@ const Header = () => {
           <Image src="/logo.png" alt="logo" width={36} height={36} className="w-fit h-10 " />
         </Link>
       </div>
-      <div className="w-10/12 sm:w-8/12 lg:w-7/12">
-        <Search />
-      </div>
+      <div className="w-10/12 sm:w-8/12 lg:w-7/12"></div>
       <div className="md:w-4/12  lg:w-3/12 flex justify-end items-center gap-4">
+        <Search isMobile />
         {/* <UserMenu
           user={{
             id: '1',

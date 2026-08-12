@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <div className="mr-4">
-        <SubmissionForm type="contact" issue="CONTACT" show />
+        <SubmissionForm type="contact" issue="CONTACT" isShow />
       </div>
     </div>
   );

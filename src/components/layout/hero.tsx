@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { HeaderSearch } from '../search/HeaderSearch';
 import WebGLBackground from './webgl-hero-background';
 import { Badge } from '../ui/badge';
+import Search from '../search/search';
 
 const suggestions = ['goodness of god', 'maverick city', 'hindi worship', 'I love you Lord'];
 
@@ -48,7 +49,8 @@ export default function Hero() {
             lg:text-7xl
           "
         >
-          Prepare worship.
+          Prepare 
+          worship.
           <br />
           Lead with <span className="text-primary">confidence.</span>
         </h1>
@@ -56,8 +58,9 @@ export default function Hero() {
         {/* Description */}
         <p
           className="
+            w-10/12
             mb-4 mt-6 max-w-2xl
-            text-sm leading-7
+            text-sm md:leading-7
             text-muted-foreground
             sm:text-base
           "
@@ -67,42 +70,18 @@ export default function Hero() {
 
         {/* Search */}
         <div className="w-full max-w-2xl">
-          <HeaderSearch />
+          <Search />
+
         </div>
 
         {/* Search Suggestions */}
-        <div
-          className="
-            mt-5 flex max-w-3xl
-            flex-wrap items-center
-            justify-center gap-2
-            text-sm
-          "
-        >
+        <div className="mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-2 text-sm">
           <span className="mr-1 text-muted-foreground">Try:</span>
-
+    
           {suggestions.map((suggestion) => (
-            <Badge variant="outline" className="px-3 py-2 text-muted-foreground" key={suggestion} onClick={() => handleSuggestion(suggestion)}>
+            <Badge variant="outline" className="px-2 py-1 text-muted-foreground" key={suggestion} onClick={() => handleSuggestion(suggestion)}>
               {suggestion}
             </Badge>
-            // <button
-            //   key={suggestion}
-            //   type="button"
-            //   onClick={() => handleSuggestion(suggestion)}
-            //   className="
-            //     rounded-full
-            //     border border-border
-            //     bg-background/70
-            //     px-3 py-1.5
-            //     text-muted-foreground
-            //     transition
-            //     hover:border-primary/50
-            //     hover:bg-primary/5
-            //     hover:text-foreground
-            //   "
-            // >
-            //   {suggestion}
-            // </button>
           ))}
         </div>
       </div>

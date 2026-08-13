@@ -8,6 +8,7 @@ import { notFound, redirect } from 'next/navigation';
 import { parseSlugAndId } from '@/utils/parseSlugAndId';
 import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
 import { getAllChannelsBasic, getChannel } from '@/lib/static';
+import { Badge } from '@/components/ui/badge';
 // import { getAllArtists, getAllArtistsBasic, getArtist } from "@/lib/static";
 
 export async function generateStaticParams() {
@@ -46,25 +47,28 @@ const Page = async ({ params }: any) => {
 
   return (
     <>
-      <div className="bg-background  rounded-lg ">
+      <div className="bg-background  rounded-lg max-w-7xl m-auto w-full pb-20">
         <div
           className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
           style={{
             backgroundImage: `linear-gradient(to bottom, ${color}, transparent)`,
           }}
         >
-          {/* <InContentAd /> */}
+          <div className="w-full min-h-40">{/* <InContentAd /> */}</div>
 
           <div className=" flex items-center gap-4 w-full ">
             <div className="w-3/12 md:w-2/12 sm:mb-0 mb-2 rounded-lg overflow-hidden  bg-card ">
               <Image src={data?.avatar || 'https://drive.google.com/uc?export=view&id=19Vm_Qd_6F_ehN5SE2jkUYpnk7TMNwM1g'} alt={data?.title || 'Artist Image'} width={150} height={100} className="bg-card object-cover h-auto w-full" priority={true} />
             </div>
             <div className="sm:w-10/12 grid ">
-              <h1 className="sm:text-4xl text-2xl font-semibold mb-1 text-foreground">{data?.title || 'Artist'}</h1>
+              <h1 className="w-full md:w-8/12 text-2xl sm:text-6xl  font-semibold mb-1 text-foreground">{data?.title || 'Artist'}</h1>
+              <Badge variant="outline" className="text-muted-foreground capitalize ">
+                {data?.type}
+              </Badge>
             </div>
           </div>
           <div>
-            <p className="text-base  text-foreground">About</p>
+            {/* <p className="text-base  text-foreground">About</p> */}
             <p className="text-sm  text-foreground">{/* {data?.about || "Artist"} */}</p>
           </div>
         </div>

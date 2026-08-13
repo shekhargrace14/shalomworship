@@ -23,7 +23,7 @@ const page = async () => {
   const channels = await getAllChannels();
 
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-7xl m-auto w-full">
       <ChannelSection channels={channels} />
     </div>
   );

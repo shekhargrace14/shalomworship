@@ -21,7 +21,6 @@ const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
     return <div>Loading...</div>;
   }
 
-  console.log(song);
   const setlistKey = item.key || '';
   return (
     <>

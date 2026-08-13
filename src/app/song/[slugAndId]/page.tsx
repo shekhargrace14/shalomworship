@@ -66,20 +66,19 @@ const Song = async ({ params }: any) => {
   const searchVariants = songData?.searchVariant || '';
 
   return (
-    <div className="bg-background  rounded-lg">
+    <div className="w-full">
       <JsonLd id={id} />
+      <AutoPopup />
       {/* <HydratorBackgroundColor backgroundColor={songData?.color} /> */}
       <div
-        className="flex gap-4 p-4 mb-4 flex-col text-foreground w-full"
+        className="flex  min-h-150 gap-4 p-4 mb-4 flex-col text-foreground w-full"
         style={{
           backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`,
         }}
       >
-        <AutoPopup />
-
-        <InContentAd />
-        <div className=" sm:flex items-center gap-4 w-full">
-          <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden bg-background ">
+        <div className="min-h-28  max-w-7xl m-auto w-full">{/* <InContentAd /> */}</div>
+        <div className=" sm:flex items-center gap-4 w-full rounded-lg max-w-7xl m-auto ">
+          <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden ">
             {songData?.videoId ? (
               // <YouTubeEmbed videoId={songData?.videoId} title={songData?.title} />
               <VideoPlayer videoId={songData?.videoId} title={songData?.title} />
@@ -88,7 +87,7 @@ const Song = async ({ params }: any) => {
             )}
           </div>
           <div className=" relative sm:w-8/12 grid gap-2">
-            <h1 className=" text-2xl md:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
+            <h1 className=" text-2xl lg:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
             <div className="absolute top-2 right-2 inline ">
               {/* {songData && (
                 <BookmarkSong
@@ -221,7 +220,7 @@ const Song = async ({ params }: any) => {
         </div>
       </div>
       <ScrollToHash />
-      <div className="mx-auto p-4 pt-4 relative" id="lyrics">
+      <div className="mx-auto p-4 pt-4 relative rounded-lg max-w-7xl m-auto " id="lyrics">
         {/* {songData?.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
@@ -234,7 +233,7 @@ const Song = async ({ params }: any) => {
         {songData?.version === 'version_3' ? <LinesVersion3 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
         {songData?.version === 'version_4' ? <LinesVersion4 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
 
-        <SubmissionForm type="SONG" issue="BUG_REPORT" item={songData} />
+        <SubmissionForm type="song" issue="BUG_REPORT" item={songData} isShow />
         <Social />
         <InContentAd />
 

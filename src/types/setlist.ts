@@ -1,4 +1,5 @@
 import type { SongSearchItem } from '@/lib/search/types';
+import type { JSONContent } from '@tiptap/core';
 
 export type Visibility = 'PRIVATE' | 'PUBLIC' | 'UNLISTED';
 export type ItemType = 'SONG' | 'NOTE' | 'SCRIPTURE';
@@ -62,7 +63,7 @@ export type FormItem = Omit<SetlistItem, 'key' | 'reference' | 'scripture' | 'no
   key: string;
   reference: string;
   scripture: string;
-  notes: string;
+  notes: JSONContent;
 };
 
 export type SetlistItem = {
@@ -82,7 +83,7 @@ export type SetlistItem = {
   reference: string | null; // e.g. "Genesis 1:1"
   scripture: string | null; // Full verse or passage
   // General
-  notes: string | null;
+  notes: JSONContent | null;
 };
 
 export type Metadata = {

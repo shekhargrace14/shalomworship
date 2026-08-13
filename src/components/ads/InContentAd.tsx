@@ -13,7 +13,7 @@ interface InContentAdProps {
 }
 
 export default function InContentAd({
-  width = 300,
+  width = 1000,
   height = 250,
   className = '',
   adPath = '/static/ads/in-content-ad.html',
@@ -31,7 +31,7 @@ export default function InContentAd({
         src={parameterizedPath}
         className="border-none overflow-hidden select-none"
         style={{
-          width: `${width}px`,
+          width: `100%`,
           height: `${height}px`,
           maxWidth: '100%',
         }}

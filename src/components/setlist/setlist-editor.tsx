@@ -32,7 +32,7 @@ function createItem(type: ItemType = 'SONG'): FormItem {
     reference: '',
     scripture: '',
 
-    notes: '',
+    notes: JSON,
   };
 }
 
@@ -114,7 +114,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
                     reference: item.reference ?? '',
                     scripture: item.scripture ?? '',
 
-                    notes: item.notes ?? '',
+                    notes: item.notes ?? JSON,
                   }))
                 : [createItem()],
             }));
@@ -252,7 +252,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
             reference: item.reference?.trim() || null,
             scripture: item.scripture?.trim() || null,
 
-            notes: item.notes.trim() || null,
+            notes: item.notes || null,
           })),
         })),
       };

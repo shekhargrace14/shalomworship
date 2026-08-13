@@ -26,15 +26,16 @@ const Type = Object.values(SubmissionType);
 type Props = {
   type: string;
   issue: SubmissionType;
-  show?: boolean;
+  isShow?: boolean;
   item?: any;
 };
 
-export default function SubmissionForm({ type, issue, show, item }: Props) {
+export default function SubmissionForm({ type, issue, isShow, item }: Props) {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(show);
+  const [isOpen, setIsOpen] = useState(isShow);
   const [formData, setFormData] = useState({
-    type: issue || 'CONTACT',
+    type: type,
+    issue: issue || 'CONTACT',
     name: '',
     email: '',
     title: (item && `Song Correction - "${item?.title}" by ${item?.channel?.title}`) || '',

@@ -1,5 +1,5 @@
 'use client';
-import SetlistShow from '@/components/setlist/setlist-show';
+import SetlistShow from '@/components/setlist/setlist-view';
 import { Spinner } from '@/components/ui/spinner';
 import { useSetlistStore } from '@/store/useSetlistStore';
 import { Setlist } from '@/types/setlist';

@@ -9,11 +9,11 @@
 
   /* fonts */
   --font-sans: var(--font-geist-sans);
-  /* --font-sans: var(--font-roboto); */
+  --font-mono: var(--font-geist-mono);
 
-  /* --font-mono: var(--font-geist-mono); */
+  /* --font-sans: var(--font-roboto); */
+  /* --font-mono: var(--font-roboto-mono); */
   /* --font-mono: var(--font-jetbrains-mono); */
-  --font-mono: var(--font-roboto-mono);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -84,10 +84,23 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --palette-1: oklch(68.699% 0.11763 191.228);
+  --palette-2: oklch(74% 0.1 90);
+  --palette-3: oklch(72% 0.13 30);
+  --palette-4: oklch(70% 0.1 320);
+  --palette-5: oklch(75% 0.09 250);
+  --palette-6: oklch(72% 0.12 150);
+  --palette-7: oklch(70% 0.11 60);
+  --palette-8: oklch(70% 0.12 280);
+  --palette-9: oklch(73% 0.11 20);
+  --palette-10: oklch(72% 0.1 180);
+  --palette-11: oklch(74% 0.12 340);
+  --palette-12: oklch(70% 0.11 120);
 }
 
 .dark {
-  --background: #131313;
+  --background: #010203;
   --foreground: oklch(0.985 0 0);
   --card: rgba(25, 25, 25, 1);
   --card-foreground: oklch(0.985 0 0);
@@ -195,6 +208,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .h2 {
+    @apply text-3xl font-bold hover:underline text-foreground font-sans mb-2;
   }
 }
 

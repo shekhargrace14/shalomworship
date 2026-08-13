@@ -49,7 +49,7 @@ export default async function LanguageCard({ language, color }: any) {
             {language.symbol}
           </p>
         </div>
-        <span className="text-xl font-bold text-black">{language.name}</span>
+        <span className="text-xl font-bold text-black">{language.title}</span>
       </Card>
     </Link>
   );

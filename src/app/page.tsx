@@ -49,7 +49,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <div className="p-4 max-w-7xl m-auto flex gap-20 flex-col">
+      <div className="p-4 max-w-7xl m-auto flex gap-20 flex-col py-16">
         <AutoPopup />
         {/* <UserWelcome /> */}
 
@@ -64,7 +64,7 @@ export default async function Home() {
             </p>
           </div>
           {/* <CategorySection number={'-6'} categories={categories} /> */}
-          <LanguageSection number={6} languages={language} />
+          <LanguageSection number={4} languages={language} />
         </div>
 
         {/* Songs */}

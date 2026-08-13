@@ -239,7 +239,7 @@ model genre {
 
 model language {
   id         String  @id @default(auto()) @map("_id") @db.ObjectId
-  name       String
+  title       String
   native      String
   symbol      String
   slug       String  @unique

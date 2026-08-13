@@ -6037,5 +6037,16 @@
     "channel": "Fellow Christ",
     "channelSlug": "fellow-christ",
     "key": ""
+  },
+  {
+    "id": "6a7cc7233285c236df8eb779",
+    "slug": "dastak-worship-waves-studio-6a7cc7233285c236df8eb779",
+    "title": "Dastak",
+    "image": "https://img.youtube.com/vi/Ddb1F6zMI-Y/maxresdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Worship Waves Studio",
+    "channelSlug": "worship-waves-studio",
+    "key": ""
   }
 ]

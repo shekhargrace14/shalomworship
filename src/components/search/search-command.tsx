@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from '../ui/dialog';
+import { Dialog, DialogContent } from '../ui/dialog';
 import { Search, X } from 'lucide-react';
 import { Input } from '../ui/input';
 import { useRouter } from 'next/navigation';
@@ -22,8 +22,9 @@ export default function SearchCommand({ open, onOpenChange }: any) {
 
   // 🔹 Build suggestions (debounced)
   useEffect(() => {
-    if (!ready || debounced.length < 2) {
+    if (!ready || debounced.trim().length < 2) {
       setResults([]);
+      setActive(-1);
       return;
     }
     const res = search(debounced);
@@ -50,24 +51,40 @@ export default function SearchCommand({ open, onOpenChange }: any) {
     };
   }, [onOpenChange]);
 
+  // Reset search state whenever the dialog opens, and focus the input.
+  useEffect(() => {
+    if (open) {
+      setQuery('');
+      setResults([]);
+      setActive(-1);
+      requestAnimationFrame(() => {
+        inputRef.current?.focus();
+      });
+    }
+  }, [open]);
+
+  function goToSong(slug: string) {
+    onOpenChange(false);
+    router.push(`/song/${slug}`);
+  }
+
+  function goToSearch() {
+    if (!query.trim()) return;
+    if (!navigator.onLine) return;
+    onOpenChange(false);
+    router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+  }
+
   function onKeyDown(e: React.KeyboardEvent) {
     if (e.key === 'Enter') {
       e.preventDefault();
 
       if (active >= 0 && results[active]) {
-        router.push(`/song/${results[active].slug}`);
+        goToSong(results[active].slug);
         return;
       }
 
-      // Offline: stay on current page and use dropdown results
-      if (!navigator.onLine) {
-        return;
-      }
-
-      if (query.trim()) {
-        router.push(`/search?q=${encodeURIComponent(query)}`);
-      }
-
+      goToSearch();
       return;
     }
 
@@ -83,6 +100,7 @@ export default function SearchCommand({ open, onOpenChange }: any) {
       setActive((i) => Math.max(i - 1, -1));
     }
   }
+
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
@@ -106,7 +124,7 @@ export default function SearchCommand({ open, onOpenChange }: any) {
               className={`ml-2 text-muted-foreground  ${query ? 'cursor-pointer' : ''} `}
               onMouseDown={() => {
                 if (query.trim()) {
-                  router.push(`/search?q=${encodeURIComponent(query)}`);
+                  goToSearch();
                 }
               }}
             />
@@ -120,7 +138,6 @@ export default function SearchCommand({ open, onOpenChange }: any) {
               onChange={(e) => {
                 setQuery(e.target.value);
               }}
-              onFocus={() => query}
               onKeyDown={onKeyDown}
             />
 
@@ -129,8 +146,11 @@ export default function SearchCommand({ open, onOpenChange }: any) {
                 size={20}
                 className=" mr-2 text-2xl text-foreground cursor-pointer"
                 onClick={() => {
+                  // Only clear the query - don't close the whole dialog.
                   setQuery('');
-                  onOpenChange(false);
+                  setResults([]);
+                  setActive(-1);
+                  inputRef.current?.focus();
                 }}
               />
             )}
@@ -147,9 +167,11 @@ export default function SearchCommand({ open, onOpenChange }: any) {
                   <Link
                     href={`/song/${song.slug}`}
                     className="w-full"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      router.push(`/song/${song.slug}`);
+                    onClick={() => {
+                      // Let Link handle the actual navigation - just
+                      // close the dialog alongside it. Calling
+                      // router.push here too would double-navigate.
+                      onOpenChange(false);
                     }}
                   >
                     <div className="flex gap-2 ">

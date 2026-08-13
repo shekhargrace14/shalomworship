@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate overflow-hidden bg-transparent rounded-xl">
       {/* WebGL Background */}
       <div className="absolute inset-0 -z-10">
         <WebGLBackground />
@@ -43,14 +43,13 @@ export default function Hero() {
         <h1
           className="
             max-w-4xl
-            text-4xl font-extrabold tracking-tight
+            text-4xl text-foreground font-extrabold tracking-tight
             sm:text-5xl
             md:text-6xl
             lg:text-7xl
           "
         >
-          Prepare 
-          worship.
+          Prepare worship.
           <br />
           Lead with <span className="text-primary">confidence.</span>
         </h1>
@@ -71,13 +70,12 @@ export default function Hero() {
         {/* Search */}
         <div className="w-full max-w-2xl">
           <Search />
-
         </div>
 
         {/* Search Suggestions */}
         <div className="mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-2 text-sm">
           <span className="mr-1 text-muted-foreground">Try:</span>
-    
+
           {suggestions.map((suggestion) => (
             <Badge variant="outline" className="px-2 py-1 text-muted-foreground" key={suggestion} onClick={() => handleSuggestion(suggestion)}>
               {suggestion}

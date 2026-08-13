@@ -23,6 +23,16 @@ export default function WebGLBackground() {
     const canvas: HTMLCanvasElement = canvasElement;
     const gl: WebGLRenderingContext = webglContext;
 
+    // --------------------------------------------------
+    // Theme background: pure black in dark mode, pure white in light
+    // --------------------------------------------------
+
+    function getBackgroundColor(): [number, number, number] {
+      const isDark = document.documentElement.classList.contains('dark');
+
+      return isDark ? [0, 0, 0] : [1, 1, 1];
+    }
+
     function syncSize() {
       const width = canvas.clientWidth || 1280;
       const height = canvas.clientHeight || 720;
@@ -75,6 +85,9 @@ export default function WebGLBackground() {
       uniform float u_time;
       uniform vec2 u_resolution;
       uniform vec2 u_mouse;
+      uniform vec3 u_backgroundColor;
+      uniform vec3 u_accentColor;
+      uniform float u_accentStrength;
 
       varying vec2 v_texCoord;
 
@@ -90,25 +103,11 @@ export default function WebGLBackground() {
           sin(uv.y * 5.0 + u_time * 0.8) *
           0.5;
 
-        vec3 backgroundColor =
-          vec3(0.07, 0.07, 0.07);
-
-        vec3 accentColor =
-          vec3(0.0, 0.66, 0.63);
-
         float strength =
           smoothstep(
             0.3,
             0.8,
             noise * 0.5 + 0.5
-          );
-
-        float vignette =
-          1.0 -
-          smoothstep(
-            0.2,
-            1.2,
-            length(uv - 0.5) * 1.5
           );
 
         vec2 mouseNorm =
@@ -122,19 +121,22 @@ export default function WebGLBackground() {
             length(uv - mouseNorm)
           );
 
+        // Start from the exact theme color (pure black or pure white).
+        // No vignette / multiplicative darkening here, so edges never
+        // drift toward black in light mode.
         vec3 finalColor =
           mix(
-            backgroundColor,
-            accentColor,
-            strength * 0.15
+            u_backgroundColor,
+            u_accentColor,
+            strength * u_accentStrength
           );
 
-        finalColor +=
-          accentColor *
-          mouseGlow *
-          0.1;
-
-        finalColor *= vignette;
+        finalColor =
+          mix(
+            finalColor,
+            u_accentColor,
+            mouseGlow * u_accentStrength * 0.65
+          );
 
         gl_FragColor =
           vec4(finalColor, 1.0);
@@ -270,7 +272,13 @@ export default function WebGLBackground() {
 
     const uMouse = gl.getUniformLocation(program, 'u_mouse');
 
-    if (uTime === null || uResolution === null || uMouse === null) {
+    const uBackgroundColor = gl.getUniformLocation(program, 'u_backgroundColor');
+
+    const uAccentColor = gl.getUniformLocation(program, 'u_accentColor');
+
+    const uAccentStrength = gl.getUniformLocation(program, 'u_accentStrength');
+
+    if (uTime === null || uResolution === null || uMouse === null || uBackgroundColor === null || uAccentColor === null || uAccentStrength === null) {
       console.error('Could not find required uniforms');
 
       gl.deleteBuffer(buffer);
@@ -309,6 +317,43 @@ export default function WebGLBackground() {
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     // --------------------------------------------------
+    // Theme
+    // --------------------------------------------------
+
+    function updateBackgroundColor() {
+      const isDark = document.documentElement.classList.contains('dark');
+
+      const [r, g, b] = getBackgroundColor();
+
+      gl.uniform3f(uBackgroundColor, r, g, b);
+
+      if (isDark) {
+        // On black: a brighter, more saturated teal reads clearly at a
+        // gentle blend strength.
+        gl.uniform3f(uAccentColor, 0.0, 0.55, 0.5);
+        gl.uniform1f(uAccentStrength, 0.22);
+      } else {
+        // On white: the same low-opacity teal looks washed out, so use a
+        // deeper, more saturated tone and blend it in more strongly.
+        gl.uniform3f(uAccentColor, 0.0, 0.32, 0.29);
+        gl.uniform1f(uAccentStrength, 0.4);
+      }
+    }
+
+    // Initial theme color
+    updateBackgroundColor();
+
+    // Detect .dark class changes on <html>
+    const themeObserver = new MutationObserver(() => {
+      updateBackgroundColor();
+    });
+
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    // --------------------------------------------------
     // Animation
     // --------------------------------------------------
 
@@ -340,6 +385,8 @@ export default function WebGLBackground() {
       window.removeEventListener('mousemove', handleMouseMove);
 
       resizeObserver.disconnect();
+
+      themeObserver.disconnect();
 
       gl.deleteBuffer(buffer);
       gl.deleteProgram(program);

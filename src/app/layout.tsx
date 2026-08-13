@@ -21,6 +21,7 @@ import HydratorSetlist from '@/components/hydrator/hydrator-setlist';
 import DevTools from '@/components/monitor';
 import NavBottom from '@/components/navigation/nav-bottom';
 import NavSidebar from '@/components/navigation/nav-sidebar';
+import WebGLBackground from '@/components/layout/webgl-hero-background';
 // import Footer from "@/components/layout/footer_111";
 
 // FONTS
@@ -119,7 +120,7 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${roboto.variable} ${robotoMono.variable} ${geistSans.variable} ${geistMono.variable}`}>
-      <body className="h-dvh overflow-hidden bg-background">
+      <body className="relative isolate h-dvh overflow-hidden bg-background">
         {/* Google Analytics */}
         {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-H4QZJK5XEN" />}
 
@@ -132,6 +133,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Identity Services script */}
         <Script src="https://accounts.google.com/gsi/client" strategy="afterInteractive" />
 
+        <div className="absolute inset-0 -z-10">
+          <WebGLBackground />
+        </div>
         {/* REMOVE AMP — this was breaking SEO */}
         <ThemeProvider attribute="class" defaultTheme="system">
           <TooltipProvider delayDuration={200}>
@@ -143,9 +147,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Header />
                 </header>
                 <div className="flex-1 min-h-0 flex">
-                  {/* <aside className="hidden lg:block w-1/4 shrink-0 overflow-y-auto rounded-xl ">
+                  <aside className="hidden lg:block w-1/5 shrink-0 overflow-y-auto rounded-xl ">
                     <NavSidebar />
-                  </aside> */}
+                  </aside>
 
                   <main className="flex-1 min-h-0 overflow-y-auto flex flex-col rounded-xl pb-16 md:pb-0">
                     <div className="flex-1 bg-background rounded-xl ">

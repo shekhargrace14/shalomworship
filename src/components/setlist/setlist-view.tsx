@@ -86,7 +86,7 @@ export default function SetlistShow({ setlist }: Props) {
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-6xl rounded-2xl p-0 overflow-hidden">
+    <div className="relative w-full rounded-xl p-0 overflow-hidden">
       {/* ================= HEADER ================= */}
 
       <div

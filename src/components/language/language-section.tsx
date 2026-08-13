@@ -13,7 +13,7 @@ const LanguageSection: React.FC<any> = ({ number, languages }) => {
   return (
     <>
       <section className="w-full my-2">
-        <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 ">
+        <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-2 ">
           {sortedLanguages?.map((item: Props, index: number) => {
             const color = colorPalette[index % colorPalette.length];
             return <LanguageCard key={item.id} language={item} color={color} />;

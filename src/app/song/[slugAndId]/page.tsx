@@ -76,9 +76,7 @@ const Song = async ({ params }: any) => {
           backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`,
         }}
       >
-        <div className="min-h-28  max-w-7xl m-auto w-full">
-          <InContentAd />
-        </div>
+        <div className="min-h-28  max-w-7xl m-auto w-full">{/* <InContentAd /> */}</div>
         <div className=" sm:flex items-center gap-4 w-full rounded-lg max-w-7xl m-auto ">
           <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden ">
             {songData?.videoId ? (
@@ -222,7 +220,7 @@ const Song = async ({ params }: any) => {
         </div>
       </div>
       <ScrollToHash />
-      <div className="mx-auto p-4 pt-4 relative bg-background rounded-lg max-w-7xl m-auto " id="lyrics">
+      <div className="mx-auto p-4 pt-4 relative rounded-lg max-w-7xl m-auto " id="lyrics">
         {/* {songData?.version === "version_1" ? <div>
           <section className="w-full text-foreground">
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">

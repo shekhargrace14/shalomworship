@@ -55,7 +55,7 @@ export default async function Home() {
 
         {/* language */}
         <div className="">
-          <div className="w-full flex justify-between items-end ">
+          <div className="w-full flex justify-between items-center ">
             <Link href={'/language'}>
               <h2 className="h2">Language</h2>
             </Link>
@@ -69,7 +69,7 @@ export default async function Home() {
 
         {/* Songs */}
         <div className="">
-          <div className="w-full flex justify-between items-end ">
+          <div className="w-full flex justify-between items-center ">
             <Link href={'/song'}>
               <h2 className="h2"> Trending Songs </h2>
             </Link>
@@ -82,7 +82,7 @@ export default async function Home() {
 
         {/* Artist */}
         <div className="">
-          <div className="w-full flex justify-between items-end ">
+          <div className="w-full flex justify-between items-center ">
             <Link href={'/channel'}>
               <h2 className="h2">Your Favorite Artist</h2>
             </Link>
@@ -95,7 +95,7 @@ export default async function Home() {
 
         {/* Categories */}
         <div className="">
-          <div className="w-full flex justify-between items-end ">
+          <div className="w-full flex justify-between items-center ">
             <Link href={'/category'}>
               <h2 className="h2">Categories</h2>
             </Link>

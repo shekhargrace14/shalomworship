@@ -66,17 +66,19 @@ const Song = async ({ params }: any) => {
   const searchVariants = songData?.searchVariant || '';
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <JsonLd id={id} />
       <AutoPopup />
       {/* <HydratorBackgroundColor backgroundColor={songData?.color} /> */}
       <div
-        className="flex  min-h-150 gap-4 p-4 mb-4 flex-col text-foreground w-full"
+        className="flex  min-h-150 gap-4 p-4 mb-4 flex-col text-foreground w-full rounded-xl"
         style={{
           backgroundImage: `linear-gradient(to bottom, ${songData?.color}, transparent)`,
         }}
       >
-        <div className="min-h-28  max-w-7xl m-auto w-full">{/* <InContentAd /> */}</div>
+        <div className="min-h-28  max-w-7xl m-auto w-full">
+          <InContentAd />
+        </div>
         <div className=" sm:flex items-center gap-4 w-full rounded-lg max-w-7xl m-auto ">
           <div className="sm:w-4/12 sm:mb-0 mb-2 rounded-lg overflow-hidden ">
             {songData?.videoId ? (
@@ -88,21 +90,7 @@ const Song = async ({ params }: any) => {
           </div>
           <div className=" relative sm:w-8/12 grid gap-2">
             <h1 className=" text-2xl lg:text-4xl font-semibold mb-2 mt-2 text-foreground">{songData?.title} </h1>
-            <div className="absolute top-2 right-2 inline ">
-              {/* {songData && (
-                <BookmarkSong
-                  song={{
-                    id: songData.id,
-                    slug: songData ? `${songData.slug}-${songData.id}` : '',
-                    title: songData.title ?? '',
-                    image: songData.image ?? '',
-                    channel: songData?.channel?.title ?? '',
-                    status: songData.status ?? 'PUBLISH',
-                    language: songData.language ?? '',
-                  }}
-                />
-              )} */}
-            </div>
+            <div className="absolute top-2 right-2 inline "></div>
             {/* CHANNEL */}
             <div className="flex flex-wrap gap-2">
               {channel ? (

@@ -28,11 +28,11 @@ export async function getChannel(channelId: string, statuses: StatusType[]) {
       select: {
         ...channelFullSelect,
         songs: {
-          // include:{
-          //   song:{
-          //     statuses:{in:statuses},
-          //   }
-          // }
+          where: {
+            status: {
+              in: statuses,
+            },
+          },
         },
       },
     });

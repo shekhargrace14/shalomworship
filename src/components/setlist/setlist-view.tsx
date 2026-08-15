@@ -236,7 +236,7 @@ export default function SetlistShow({ setlist }: Props) {
                                   <SetlistSongCard type="metadata" item={item} />
                                 ) : (
                                   <div className="ml-2">
-                                    <h3 className="text-md md:text-xl text-foreground">{item.type}</h3>
+                                    <h3 className="text-md md:text-md text-foreground">{item.type}</h3>
                                   </div>
                                 )}
                               </div>
@@ -262,7 +262,7 @@ export default function SetlistShow({ setlist }: Props) {
                           {/* ================= SONG CONTENT ================= */}
 
                           {item.type === 'SONG' && isOpen && (
-                            <div className="space-y-4">
+                            <div className="space-y-4 ml-6">
                               <SetlistSongCard item={item} />
 
                               {/* Minimize */}

@@ -1,5 +1,6 @@
 import PageHero from '@/components/layout/page-hero';
 import Processor from '@/components/Processor';
+import { CONTENT_VISIBILITY } from '@/lib/contentVisibility';
 import { getAllLanguages, getLanguage } from '@/lib/static';
 import { notFound } from 'next/navigation';
 
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }: PageProps) {
   const { code } = await params;
 
-  const languageData = await getLanguage(code);
+  const languageData = await getLanguage(code, [...CONTENT_VISIBILITY.public]);
   const data = languageData;
   const songs = data?.songs ? [...data.songs].reverse() : [];
   const hasSongs = songs.length > 0;

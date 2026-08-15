@@ -210,7 +210,7 @@
     @apply bg-background text-foreground;
   }
   .h2 {
-    @apply text-3xl font-bold hover:underline text-foreground font-sans mb-2;
+    @apply text-2xl sm:text-3xl font-bold hover:underline text-foreground font-sans mb-2;
   }
 }
 

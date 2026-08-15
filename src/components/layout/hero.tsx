@@ -42,7 +42,6 @@ export default function Hero() {
         {/* Heading */}
         <h1
           className="
-            max-w-4xl
             text-4xl text-foreground font-extrabold tracking-tight
             sm:text-5xl
             md:text-6xl
@@ -57,7 +56,7 @@ export default function Hero() {
         {/* Description */}
         <p
           className="
-            w-10/12
+
             mb-4 mt-6 max-w-2xl
             text-sm md:leading-7
             text-muted-foreground

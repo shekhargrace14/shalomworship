@@ -36,14 +36,11 @@ export async function generateMetadata({ params }: any) {
 const Page = async ({ params }: any) => {
   const slugAndId = await params.slugAndId;
   const { slug, id } = parseSlugAndId(params.slugAndId);
-  // const artistData = await fetchArtistByIdWithSongs(id, [...CONTENT_VISIBILITY.public,]);
   const channelData = await getChannel(id, [...CONTENT_VISIBILITY.public]);
   const data = channelData;
   const color = channelData?.color ?? '#121212';
   const songs = data?.songs ? [...data.songs].reverse() : [];
   const hasSongs = songs.length > 0;
-  // const upcomingSongs = await getChannel(id, [...CONTENT_VISIBILITY.upcoming]);
-  // const upcomingSongsData = upcomingSongs?.songs ? [...upcomingSongs.songs] : [];
 
   return (
     <>

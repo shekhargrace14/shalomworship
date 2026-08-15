@@ -25,7 +25,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="max-w-7xl m-auto w-full space-y-4 px-4 pt-4 md:pt-16 pb-4">
+    <footer className="max-w-7xl m-auto w-full space-y-4 px-4 pt-8 md:pt-16 pb-4">
       <div className="container mx-auto flex flex-col  justify-between gap-4  md:flex-row items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1">

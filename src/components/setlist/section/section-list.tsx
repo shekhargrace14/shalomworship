@@ -90,7 +90,7 @@ const SectionList = ({ sections, addSection, removeSection, updateSectionField, 
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <Label className="text-sm text-muted-foreground">Section Title</Label>
-                      <Input placeholder="Verse 1" value={section.title} onChange={(e) => updateSectionField(section.id, 'title', e.target.value)} />
+                      <Input placeholder="Verse 1" value={section.title || 'Opening Worship'} onChange={(e) => updateSectionField(section.id, 'title', e.target.value)} />
                     </div>
 
                     <div className="space-y-2">

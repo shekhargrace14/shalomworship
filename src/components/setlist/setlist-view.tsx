@@ -26,6 +26,7 @@ interface Props {
 }
 
 export default function SetlistShow({ setlist }: Props) {
+  console.log(setlist, 'SetlistShow');
   if (!setlist) return null;
 
   const router = useRouter();
@@ -97,10 +98,6 @@ export default function SetlistShow({ setlist }: Props) {
       >
         {/* Share */}
 
-        <div className="absolute right-4 top-4">
-          <ButtonShare />
-        </div>
-
         <div className="flex flex-col md:flex-row justify-between md:items-end h-40 md:h-fit">
           {/* Metadata */}
 
@@ -122,7 +119,9 @@ export default function SetlistShow({ setlist }: Props) {
 
           {/* Edit */}
 
-          <div className="flex justify-end">
+          <div className="flex justify-end gap-2">
+            <ButtonShare />
+
             {isAuthenticated ? (
               <Button
                 variant={isUserSetlist ? 'default' : 'secondary'}
@@ -132,7 +131,6 @@ export default function SetlistShow({ setlist }: Props) {
 
                     return;
                   }
-
                   router.push(`/user/setlist/edit?id=${setlist.id}`);
                 }}
               >
@@ -228,32 +226,23 @@ export default function SetlistShow({ setlist }: Props) {
                                   `}
                             >
                               {/* TITLE */}
-
-                              <div className="flex items-center">
+                              <div className="flex  gap-4 justify-between ">
                                 <span className="absolute -left-3 top-5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{item.order}</span>
-
-                                {item.type === 'SONG' ? (
-                                  <SetlistSongCard type="metadata" item={item} />
-                                ) : (
-                                  <div className="ml-2">
-                                    <h3 className="text-md md:text-md text-foreground">{item.type}</h3>
-                                  </div>
-                                )}
+                                <div className="ml-2">
+                                  <h3 className="text-md md:text-md text-foreground">{item.title}</h3>
+                                </div>
+                                <SetlistSongCard type="metadata" item={item} />
                               </div>
-
                               {/* ================= EXPANDED DETAILS ================= */}
-
                               {isOpen && (
                                 <div className="space-y-2 ml-2">
+                                  {item.scripture && <p className="text-sm text-muted-foreground italic">"{item.scripture}"</p>}
+                                  {item.reference && <p className="text-sm text-muted-foreground italic text-end">{item.reference}</p>}
                                   {item.notes && (
-                                    <p className="text-sm text-muted-foreground">
-                                      {/* {item.notes} */}
+                                    <p className="bg-card border-l-2 pl-2 border-orange-400 rounded-sm text-sm text-muted-foreground">
                                       <TiptapContent content={item.notes} />
                                     </p>
                                   )}
-                                  {item.scripture && <p className="text-sm text-muted-foreground italic">"{item.scripture}"</p>}
-
-                                  {item.reference && <p className="text-sm text-muted-foreground italic text-end">{item.reference}</p>}
                                 </div>
                               )}
                             </div>

@@ -17,12 +17,12 @@ const ItemList = ({ section, addItem, updateItemField, removeItem, moveItem, han
   return (
     <div className="space-y-6">
       <div className=" space-y-8 my-8">
-        <div className="flex items-center justify-between">
+        {/* <div className="flex items-center justify-between">
           <div>
             <h3 className="font-medium">Items</h3>
             <p className="text-sm text-muted-foreground">Add songs, notes, or scripture references.</p>
           </div>
-        </div>
+        </div> */}
 
         <ItemCard section={section} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />
       </div>

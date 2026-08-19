@@ -6,7 +6,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/search', '/search/', '/search?', '/private/'],
+        disallow: ['/search', '/search/', '/search?', '/private/', '/dashboard', '/condition'],
       },
     ],
     sitemap: 'https://www.shalomworship.com/sitemap.xml',

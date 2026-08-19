@@ -6070,5 +6070,27 @@
     "channel": "Sumit Pinto",
     "channelSlug": "sumit-pinto",
     "key": ""
+  },
+  {
+    "id": "6a80c7655fbc00c1d4884566",
+    "slug": "mere-pass-hi-rehna-pyaare-yeshu-amit-ghatge-6a80c7655fbc00c1d4884566",
+    "title": "Mere Pass Hi Rehna Pyaare Yeshu",
+    "image": "https://img.youtube.com/vi/UwpqpElMt68/mqdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "Amit Ghatge",
+    "channelSlug": "amit-ghatge",
+    "key": ""
+  },
+  {
+    "id": "6a80ccb06ac93977080df079",
+    "slug": "hallelujah-stuti-mahima-cbn-india-6a80ccb06ac93977080df079",
+    "title": " Hallelujah Stuti Mahima",
+    "image": "https://img.youtube.com/vi/qSXOCDg-MXA/mqdefault.jpg",
+    "status": "PUBLISH",
+    "language": "hi",
+    "channel": "CBN India",
+    "channelSlug": "cbn-india",
+    "key": ""
   }
 ]

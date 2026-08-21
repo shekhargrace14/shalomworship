@@ -17,6 +17,8 @@ import { useEffect, useState } from 'react';
 import { song } from '@prisma/client';
 import { toast } from 'sonner';
 import TiptapEditor from '@/components/tiptap/TiptapEditor';
+import { FormDescription } from '@/components/ui/form';
+import { FieldDescription } from '@/components/ui/field';
 
 type Props = {
   section: FormSection;
@@ -29,6 +31,7 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
   const [openActionId, setOpenActionId] = useState<string | null>(null);
   const [deleteItemId, setDeleteItemId] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
+  const [title, setTitle] = useState<string | null>(null);
   return (
     <div>
       <div className="space-y-3 ">
@@ -41,7 +44,8 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                 <CollapsibleTrigger asChild>
                   <div className="w-full mb-4 flex items-center justify-between">
                     <span className="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{itemIndex + 1}</span>
-                    <h3 className="w-full line-clamp-1">{item.type === 'SONG' ? `Song - ${item.song?.title ?? 'Select a song'}` : item.type === 'SCRIPTURE' ? 'Scripture' : 'Note'}</h3>
+                    {/* <h3 className="w-full line-clamp-1">{item.type === 'SONG' ? `Song - ${item.song?.title ?? 'Select a song'}` : item.type === 'SCRIPTURE' ? 'Scripture' : 'Note'}</h3> */}
+                    <h3 className="w-full line-clamp-1">{item?.title ? item.title : 'Select song or add title'}</h3>
                     <div className="flex items-center justify-end gap-2">
                       <div className={`flex items-center overflow-hidden transition-all duration-300 ${openActionId === item.id ? 'max-w-40 opacity-100' : 'max-w-0 opacity-0'}`}>
                         <Dialog
@@ -142,10 +146,11 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                     </div>
                   </div>
                 </CollapsibleTrigger>
+
                 <CollapsibleContent>
                   <div className="grid  gap-4 grid-cols-1">
                     {/* TYPE */}
-                    <div className="flex flex-col md:flex-row justify-between space-y-1">
+                    {/* <div className="flex flex-col md:flex-row justify-between space-y-1">
                       <Label className="text-sm text-muted-foreground">Type</Label>
                       <Select value={item.type} onValueChange={(value) => updateItemField(section.id, item.id, 'type', value as ItemType)}>
                         <SelectTrigger className="w-full md:w-[80%]">
@@ -157,45 +162,54 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
                           <SelectItem value="SCRIPTURE">Scripture</SelectItem>
                         </SelectContent>
                       </Select>
-                    </div>
-                    {item.type === 'SONG' ? (
-                      <>
-                        {/* SEARCH SONG  */}
-                        <div className="flex flex-col md:flex-row justify-between space-y-1">
-                          <Label className="text-sm text-muted-foreground">Search Song</Label>
-                          {/* <HeaderSearch /> */}
-                          <div className="w-full md:w-[80%]">
-                            <SearchSong
-                              value={item.song?.title || ''}
-                              onSelect={(song) => {
-                                updateItemField(section.id, item.id, 'song', song);
-                              }}
-                            />
-                            <p className="text-muted-foreground text-xs">Song Title: {item.song?.title} </p>
-                          </div>
-                        </div>
-                        <div className="flex flex-col md:flex-row justify-between space-y-1">
-                          <div className=""></div>
+                    </div> */}
 
-                          <div className="w-full md:w-[80%] grid grid-cols-3 gap-4">
-                            <div className="space-y-2">
-                              <Label className="text-sm text-muted-foreground">Key</Label>
-                              <Input placeholder="Key" value={item.key || ''} onChange={(e) => updateItemField(section.id, item.id, 'key', e.target.value)} />
-                            </div>
-                            <div className="space-y-2">
-                              <Label className="text-sm text-muted-foreground">BPM</Label>
-                              <Input placeholder="BPM" value={item.bpm || ''} onChange={(e) => updateItemField(section.id, item.id, 'bpm', e.target.value)} />
-                            </div>
-                            <div className="space-y-2">
-                              <Label className="text-sm text-muted-foreground">Time</Label>
-                              <Input placeholder="Time" value={item.timeSignature || ''} onChange={(e) => updateItemField(section.id, item.id, 'timeSignature', e.target.value)} />
-                            </div>
-                          </div>
+                    {/* SEARCH SONG  */}
+                    <div className="flex flex-col md:flex-row justify-between space-y-1">
+                      <Label className="text-sm text-muted-foreground">Search Song</Label>
+                      {/* <HeaderSearch /> */}
+                      <div className="w-full md:w-[80%]">
+                        <SearchSong
+                          value={item.song?.title || item.title}
+                          onSelect={(song) => {
+                            updateItemField(section.id, item.id, 'song', song);
+                            updateItemField(section.id, item.id, 'title', song.title);
+                          }}
+                        />
+                        {/* <p className="text-muted-foreground text-xs">Song Title: {item.song?.title} </p>   */}
+                      </div>
+                    </div>
+                    <div className="flex flex-col md:flex-row justify-between space-y-1">
+                      <div className=""></div>
+
+                      <div className="w-full md:w-[80%] grid grid-cols-3 gap-4">
+                        <div className="space-y-2">
+                          <Label className="text-sm text-muted-foreground">Key</Label>
+                          <Input placeholder="Key" value={item.key || ''} onChange={(e) => updateItemField(section.id, item.id, 'key', e.target.value)} />
                         </div>
-                      </>
-                    ) : (
-                      ''
-                    )}
+                        <div className="space-y-2">
+                          <Label className="text-sm text-muted-foreground">BPM</Label>
+                          <Input placeholder="BPM" value={item.bpm || ''} onChange={(e) => updateItemField(section.id, item.id, 'bpm', e.target.value)} />
+                        </div>
+                        <div className="space-y-2">
+                          <Label className="text-sm text-muted-foreground">Time</Label>
+                          <Input placeholder="Time" value={item.timeSignature || ''} onChange={(e) => updateItemField(section.id, item.id, 'timeSignature', e.target.value)} />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* TITLE */}
+                    <div className="flex flex-col md:flex-row justify-between space-y-1">
+                      <Label className="text-sm text-muted-foreground">Title</Label>
+                      <Input
+                        className="w-full md:w-[80%]"
+                        placeholder="Title"
+                        value={item.title || ''}
+                        onChange={(e) => {
+                          updateItemField(section.id, item.id, 'title', e.target.value);
+                        }}
+                      />
+                    </div>
 
                     {item.type !== 'NOTE' && (
                       <>

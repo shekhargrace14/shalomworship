@@ -14,7 +14,7 @@ type Props = {
   onSelect: (song: SongSearchItem) => void;
 };
 
-const SearchSong = ({ onSelect }: Props) => {
+const SearchSong = ({ onSelect, value }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const { search, ready } = useSongSearch();
@@ -60,7 +60,7 @@ const SearchSong = ({ onSelect }: Props) => {
           ref={inputRef}
           placeholder="Search songs, artist, scriptures..."
           className=" border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pl-2 bg-none"
-          value={query}
+          value={query || value}
           onChange={(e) => {
             setQuery(e.target.value);
             setOpen(true);

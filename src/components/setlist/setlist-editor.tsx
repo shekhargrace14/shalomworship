@@ -1,40 +1,15 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { EditableItemField, FormItem, FormSection, FullSetlist, ItemType, Metadata, Setlist, SetlistItem, SetlistSection, Visibility } from '@/types/setlist';
-import { Save } from 'lucide-react';
-import { Button } from '../ui/button';
 import SetlistMetadata from './setlist-edit-metadata';
 import { SetlistButtonDelete } from './button/setlist-button-delete';
-// import SectionList from './section/section-list';
 import { toast } from 'sonner';
 import { useChannelStore } from '@/store/useChannelStore';
 import { useSetlistStore } from '@/store/useSetlistStore';
 import SectionList from './section/section-list';
 import SetlistCardMetadata from './setlist-card-metadata';
-
-// type EditableItemField = Pick<FormItem, 'type' | 'songId' | 'song' | 'notes' | 'key' | 'bpm' | 'time' | 'scripture'>;
-
-function createItem(type: ItemType = 'SONG'): FormItem {
-  return {
-    id: crypto.randomUUID(),
-    type,
-
-    order: 0,
-
-    song: null,
-
-    key: '',
-    bpm: 0,
-    timeSignature: '',
-    duration: 0,
-    reference: '',
-    scripture: '',
-
-    notes: JSON,
-  };
-}
 
 function createSection(): FormSection {
   return {
@@ -43,6 +18,23 @@ function createSection(): FormSection {
     notes: '',
     order: 0,
     items: [createItem()],
+  };
+}
+
+function createItem(type: ItemType = 'SONG'): FormItem {
+  return {
+    id: crypto.randomUUID(),
+    type,
+    order: 0,
+    song: null,
+    key: '',
+    bpm: 0,
+    timeSignature: '',
+    duration: 0,
+    reference: '',
+    scripture: '',
+    title: '',
+    notes: JSON,
   };
 }
 
@@ -102,6 +94,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
                 ? sec.items.map((item: SetlistItem) => ({
                     ...item,
                     id: crypto.randomUUID(),
+                    title: item.title ?? '',
                     order: item.order ?? 0,
 
                     song: item.song,
@@ -239,6 +232,7 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
 
           items: section.items.map((item, itemIndex) => ({
             id: item.id,
+            title: item.title || null,
             type: item.type,
             order: itemIndex + 1,
 

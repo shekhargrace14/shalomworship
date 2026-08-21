@@ -61,7 +61,7 @@ export default function TiptapEditor({ value, onChange }: Props) {
       </div>
 
       {/* Editor */}
-      <EditorContent editor={editor} className="min-h-[300px] p-4 prose dark:prose-invert max-w-none" />
+      <EditorContent editor={editor} className="p-2 prose dark:prose-invert max-w-none" />
     </div>
   );
 }

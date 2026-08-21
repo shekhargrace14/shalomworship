@@ -25,13 +25,7 @@ const SetlistSongCard = ({ item, type }: { item: FormItem; type?: string }) => {
   return (
     <>
       {type === 'metadata' ? (
-        <div className="w-full ml-2 flex items-center justify-between gap-4">
-          <h3 className="line-clamp-1 text-md md:text-md text-foreground hover:underline">
-            {/* <Link href={`/song/${item.song?.slug}`} className="flex-1 min-w-0"> */}
-            {item.song?.title}
-            {/* </Link> */}
-          </h3>
-
+        <div className="w-fit ml-2 flex items-center justify-between gap-4">
           <div className="flex shrink-0 items-center gap-1 pb-0.5">
             {item?.key && (
               <Badge variant="secondary" className="h-4.5 min-w-10">

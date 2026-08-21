@@ -118,33 +118,6 @@ export default function SetlistCreate({ open, onOpenChange }: SetlistCreateProps
             </Popover>
           </div>
 
-          {/* <div className="space-y-2">
-            <Label>Visibility</Label>
-
-            <Select
-              value={visibility}
-              onValueChange={setVisibility}
-            >
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-
-              <SelectContent>
-                <SelectItem value="PRIVATE">
-                  Private
-                </SelectItem>
-
-                <SelectItem value="UNLISTED">
-                  Unlisted
-                </SelectItem>
-
-                <SelectItem value="PUBLIC">
-                  Public
-                </SelectItem>
-              </SelectContent>
-            </Select>
-          </div> */}
-
           <Button className="w-full" onClick={handleCreate} disabled={!title || loading}>
             {loading ? 'Creating...' : 'Create Setlist'}
           </Button>

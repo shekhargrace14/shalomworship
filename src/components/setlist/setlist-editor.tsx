@@ -286,6 +286,8 @@ const SetlistEditor = ({ data }: { data: Setlist }) => {
     <>
       <SetlistCardMetadata metadata={metadata} loading={loading} handleSubmit={handleSubmit} canSave={canSave} />
       <div className="p-4 space-y-8 bg-background">
+        <h1 className='text-2xl'>Edit Setlist Details</h1>
+
         <SetlistMetadata metadata={metadata} setMetadata={setMetadata} loading={loading} canSave={canSave} handleSubmit={handleSubmit} channelId={channelId} />
 
         <SectionList handleSubmit={handleSubmit} sections={sections} addSection={addSection} removeSection={removeSection} updateSectionField={updateSectionField} addItem={addItem} updateItemField={updateItemField} removeItem={removeItem} moveItem={moveItem} />

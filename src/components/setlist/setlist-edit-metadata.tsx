@@ -13,6 +13,7 @@ import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
 import { Metadata } from '@/types/setlist';
 import ButtonShare from '../shared/button-share';
+import { useState } from 'react';
 
 type Props = {
   metadata: Metadata;
@@ -25,6 +26,7 @@ type Props = {
 
 const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave }: Props) => {
   const router = useRouter();
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="border-l border-primary rounded-xl mx-auto w-full max-w-6xl space-y-4 ">
@@ -52,79 +54,84 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
                 />
               </div>
             </div>
+            {open && (
+              <>
+                <div className="space-y-2">
+                  <Label htmlFor="description">Description</Label>
+                  <Textarea
+                    id="description"
+                    placeholder="Optional description for the service..."
+                    value={metadata.description}
+                    onChange={(e) =>
+                      setMetadata((prev) => ({
+                        ...prev,
+                        description: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="description">Description</Label>
-              <Textarea
-                id="description"
-                placeholder="Optional description for the service..."
-                value={metadata.description}
-                onChange={(e) =>
-                  setMetadata((prev) => ({
-                    ...prev,
-                    description: e.target.value,
-                  }))
-                }
-              />
-            </div>
-
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="scripture">Scripture</Label>
-                <Input
-                  id="scripture"
-                  placeholder="Psalm 23 / John 3:16"
-                  value={metadata.scripture}
-                  onChange={(e) =>
-                    setMetadata((prev) => ({
-                      ...prev,
-                      scripture: e.target.value,
-                    }))
-                  }
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label>Event Date</Label>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <Button variant="outline" className="w-full justify-between font-normal">
-                      {metadata.eventAt ? format(metadata.eventAt, 'EEEE, PPP') : <span className="text-muted-foreground">Pick a date</span>}
-
-                      <CalendarIcon className="h-4 w-4 opacity-60" />
-                    </Button>
-                  </PopoverTrigger>
-
-                  <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
-                      mode="single"
-                      selected={metadata.eventAt}
-                      onSelect={(date) =>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="scripture">Scripture</Label>
+                    <Input
+                      id="scripture"
+                      placeholder="Psalm 23 / John 3:16"
+                      value={metadata.scripture}
+                      onChange={(e) =>
                         setMetadata((prev) => ({
                           ...prev,
-                          eventAt: date,
+                          scripture: e.target.value,
                         }))
                       }
                     />
-                  </PopoverContent>
-                </Popover>
-              </div>
-            </div>
+                  </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="notes">Annoncement / Footer Notes</Label>
-              <Textarea
-                id="notes"
-                placeholder="Any notes to show at the bottom..."
-                value={metadata.notes}
-                onChange={(e) =>
-                  setMetadata((prev) => ({
-                    ...prev,
-                    notes: e.target.value,
-                  }))
-                }
-              />
-            </div>
+                  <div className="space-y-2">
+                    <Label>Event Date</Label>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button variant="outline" className="w-full justify-between font-normal">
+                          {metadata.eventAt ? format(metadata.eventAt, 'EEEE, PPP') : <span className="text-muted-foreground">Pick a date</span>}
+
+                          <CalendarIcon className="h-4 w-4 opacity-60" />
+                        </Button>
+                      </PopoverTrigger>
+
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={metadata.eventAt}
+                          onSelect={(date) =>
+                            setMetadata((prev) => ({
+                              ...prev,
+                              eventAt: date,
+                            }))
+                          }
+                        />
+                      </PopoverContent>
+                    </Popover>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="notes">Annoncement / Footer Notes</Label>
+                  <Textarea
+                    id="notes"
+                    placeholder="Any notes to show at the bottom..."
+                    value={metadata.notes}
+                    onChange={(e) =>
+                      setMetadata((prev) => ({
+                        ...prev,
+                        notes: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
+              </>
+            )}
+            <p className='text-muted-foreground text-sm w-full text-end' onClick={()=> setOpen((prev)=>!prev)}> {open ? "- Less Details" : "+ More Details"}</p>
+
           </CardContent>
         </Card>
       </div>

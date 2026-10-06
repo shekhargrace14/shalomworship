@@ -9,9 +9,10 @@ interface SearchProps {
   redirectCheck?: boolean;
   isMobile?: boolean;
   setlistId?: string;
+  query?: string;
 }
 
-const Search = ({ redirectCheck, setlistId, isMobile }: SearchProps) => {
+const Search = ({ redirectCheck, setlistId, isMobile, query }: SearchProps) => {
   const isMac = useIsMac();
   const [open, setOpen] = useState(false);
 
@@ -68,7 +69,7 @@ const Search = ({ redirectCheck, setlistId, isMobile }: SearchProps) => {
         </div>
       )}
 
-      <SearchCommand open={open} onOpenChange={setOpen} redirectCheck={redirectCheck} setlistId={setlistId} />
+      <SearchCommand open={open} onOpenChange={setOpen} redirectCheck={redirectCheck} setlistId={setlistId} q={query}/>
     </div>
   );
 };

@@ -14,6 +14,7 @@ export default function Hero() {
   const handleSuggestion = (value: string) => {
     setSearch(value);
   };
+  console.log(search, "Hero")
 
   return (
     <section className="relative isolate overflow-hidden bg-transparent rounded-xl">
@@ -68,11 +69,11 @@ export default function Hero() {
 
         {/* Search */}
         <div className="w-full max-w-2xl">
-          <Search />
+          <Search query={search}/>
         </div>
 
         {/* Search Suggestions */}
-        <div className="mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-2 text-sm">
+        {/* <div className="mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-2 text-sm">
           <span className="mr-1 text-muted-foreground">Try:</span>
 
           {suggestions.map((suggestion) => (
@@ -80,7 +81,7 @@ export default function Hero() {
               {suggestion}
             </Badge>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

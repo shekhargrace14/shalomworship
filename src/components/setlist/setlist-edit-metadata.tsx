@@ -130,8 +130,10 @@ const SetlistMetadata = ({ handleSubmit, loading, metadata, setMetadata, canSave
                 </div>
               </>
             )}
-            <p className='text-muted-foreground text-sm w-full text-end' onClick={()=> setOpen((prev)=>!prev)}> {open ? "- Less Details" : "+ More Details"}</p>
-
+            <p className="text-muted-foreground text-sm w-full text-end" onClick={() => setOpen((prev) => !prev)}>
+              {' '}
+              {open ? '- Less Details' : '+ More Details'}
+            </p>
           </CardContent>
         </Card>
       </div>

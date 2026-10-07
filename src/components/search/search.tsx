@@ -69,7 +69,7 @@ const Search = ({ redirectCheck, setlistId, isMobile, query }: SearchProps) => {
         </div>
       )}
 
-      <SearchCommand open={open} onOpenChange={setOpen} redirectCheck={redirectCheck} setlistId={setlistId} q={query}/>
+      <SearchCommand open={open} onOpenChange={setOpen} redirectCheck={redirectCheck} setlistId={setlistId} q={query} />
     </div>
   );
 };

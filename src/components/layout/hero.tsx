@@ -14,7 +14,7 @@ export default function Hero() {
   const handleSuggestion = (value: string) => {
     setSearch(value);
   };
-  console.log(search, "Hero")
+  console.log(search, 'Hero');
 
   return (
     <section className="relative isolate overflow-hidden bg-transparent rounded-xl">
@@ -69,7 +69,7 @@ export default function Hero() {
 
         {/* Search */}
         <div className="w-full max-w-2xl">
-          <Search query={search}/>
+          <Search query={search} />
         </div>
 
         {/* Search Suggestions */}

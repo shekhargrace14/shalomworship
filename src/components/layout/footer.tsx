@@ -4,7 +4,10 @@ import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
 
 import { House, Music2, ListMusic, Heart, User, Mail, X } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaRegEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { LuInstagram } from 'react-icons/lu';
+
 import { Separator } from '../ui/separator';
 export default function Footer() {
   const contact = [
@@ -35,18 +38,33 @@ export default function Footer() {
           </p>
         </Link>
 
-        {/* Email */}
-        <a
-          href="mailto:connect@shalomworship.com"
-          className="
-            text-sm
-            text-muted-foreground
-            transition-colors
-            hover:text-foreground
-          "
-        >
-          connect@shalomworship.com
-        </a>
+        {/* Connect */}
+        <div className="flex gap-3">
+          {/* Email */}
+          {/* <a href="mailto:connect@shalomworship.com" className="text-sm text-muted-foreground transition-colors hover:text-foreground" aria-label="Email Shalom Worship">
+            connect@shalomworship.com
+          </a> */}
+
+          {/* WhatsApp */}
+          <a href="https://whatsapp.com/channel/0029Vaz9S3ULSmbinqpGry21" target="_blank" aria-label="WhatsApp" className="text-muted-foreground transition-colors hover:text-foreground">
+            <FaWhatsapp />
+          </a>
+
+          {/* X */}
+          <a href="https://x.com/Shalom_Worship_" rel="noopener noreferrer" target="_blank" aria-label="X / Twitter" className="text-muted-foreground transition-colors hover:text-foreground">
+            <FaXTwitter />
+          </a>
+
+          {/* Instagram */}
+          <a href="https://www.instagram.com/shalomworshipofficial/" target="_blank" aria-label="Instagram" className="text-muted-foreground transition-colors hover:text-foreground">
+            <LuInstagram />
+          </a>
+
+          {/* Email icon */}
+          <a href="mailto:connect@shalomworship.com" aria-label="Email" className="text-muted-foreground transition-colors hover:text-foreground">
+            <FaRegEnvelope />
+          </a>
+        </div>
       </div>
       {/* <div className="flex">
         {contact.map((social,index)=>(

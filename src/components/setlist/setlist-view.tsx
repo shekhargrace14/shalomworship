@@ -227,7 +227,7 @@ export default function SetlistShow({ setlist }: Props) {
                             >
                               {/* TITLE */}
                               <div className="flex  gap-4 justify-between ">
-                                <span className="absolute -left-3 top-5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{item.order}</span>
+                                <span className="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{item.order}</span>
                                 <div className="ml-2">
                                   <h3 className="text-md md:text-md text-foreground">{item.title}</h3>
                                 </div>

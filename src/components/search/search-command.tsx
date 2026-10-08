@@ -10,12 +10,12 @@ import Link from 'next/link';
 import { useSongSearch } from '@/lib/search/useSongSearch';
 import { useDebounce } from '@/hooks/useDebounce';
 
-export default function SearchCommand({ open, onOpenChange }: any) {
+export default function SearchCommand({ open, onOpenChange, q }: any) {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [active, setActive] = useState(-1);
   const [results, setResults] = useState<any[]>([]);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(q || '');
   const debounced = useDebounce(query, 300);
 
   const { search, ready } = useSongSearch();

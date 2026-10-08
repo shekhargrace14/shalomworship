@@ -43,7 +43,7 @@ const ItemCard = ({ section, updateItemField, removeItem, moveItem }: Props) => 
               <div key={item.id} className="relative bg-muted/20 p-4 border-l border-primary rounded-xl">
                 <CollapsibleTrigger asChild>
                   <div className="w-full mb-4 flex items-center justify-between">
-                    <span className="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{itemIndex + 1}</span>
+                    <span className="absolute -left-3 top-5.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/80 text-sm font-semibold text-primary-foreground">{itemIndex + 1}</span>
                     {/* <h3 className="w-full line-clamp-1">{item.type === 'SONG' ? `Song - ${item.song?.title ?? 'Select a song'}` : item.type === 'SCRIPTURE' ? 'Scripture' : 'Note'}</h3> */}
                     <h3 className="w-full line-clamp-1">{item?.title ? item.title : 'Select song or add title'}</h3>
                     <div className="flex items-center justify-end gap-2">

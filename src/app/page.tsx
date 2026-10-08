@@ -54,7 +54,7 @@ export default async function Home() {
         {/* <UserWelcome /> */}
 
         {/* language */}
-        <div className="">
+        {/* <div className="">
           <div className="w-full flex justify-between items-center ">
             <Link href={'/language'}>
               <h2 className="h2">Language</h2>
@@ -63,9 +63,8 @@ export default async function Home() {
               <Link href={'/language'}>Show All</Link>
             </p>
           </div>
-          {/* <CategorySection number={'-6'} categories={categories} /> */}
           <LanguageSection number={4} languages={language} />
-        </div>
+        </div> */}
 
         {/* Songs */}
         <div className="">

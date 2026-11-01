@@ -221,9 +221,8 @@ const Song = async ({ params }: any) => {
         {songData?.version === 'version_3' ? <LinesVersion3 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
         {songData?.version === 'version_4' ? <LinesVersion4 id={songData?.id} song={songData} isChords={!!songData?.isChords} isTranslations={!!songData?.isTranslation} language={songData?.language} /> : null}
 
-        <SubmissionForm type="song" issue="BUG_REPORT" item={songData} isShow />
         <Social />
-        <InContentAd />
+        <SubmissionForm type="song" issue="BUG_REPORT" item={songData} isShow />
 
         <h2 className="text-xl font-semibold mb-2 mt-8 text-foreground" id="lyrics">
           Songs Based on&nbsp;
@@ -268,7 +267,6 @@ const Song = async ({ params }: any) => {
         ) : (
           <p className="font-light text-sm leading-4 text-foreground">No creator specified</p>
         )}
-        <InContentAd />
       </div>
     </div>
   );
